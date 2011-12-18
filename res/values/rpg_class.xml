@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="barbarian">Barbarian</string>
-    <string name="bard">Bard</string>
-    <string name="cleric">Cleric</string>
-    <string name="druid">Druid</string>
-    <string name="fighter">Fighter</string>
-    <string name="monk">Monk</string>
-    <string name="paladin">Paladin</string>
-    <string name="ranger">Ranger</string>
-    <string name="rogue">Rogue</string>
-    <string name="sorcerer">Sorcerer</string>
-    <string name="wizard">Wizard</string>
+    <string name="class_barbarian">Barbarian</string>
+    <string name="class_bard">Bard</string>
+    <string name="class_cleric">Cleric</string>
+    <string name="class_druid">Druid</string>
+    <string name="class_fighter">Fighter</string>
+    <string name="class_monk">Monk</string>
+    <string name="class_paladin">Paladin</string>
+    <string name="class_ranger">Ranger</string>
+    <string name="class_rogue">Rogue</string>
+    <string name="class_sorcerer">Sorcerer</string>
+    <string name="class_wizard">Wizard</string>
    
 </resources>

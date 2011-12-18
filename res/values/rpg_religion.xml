@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+              
+    <string name="religion_none">None</string>
+    
+    <string name="religion_boccob">Boccob</string>
+    <string name="religion_boccob_description">God of magic</string>
+    <string name="religion_boccob_alignment">neutral</string>
+    
+    <string name="religion_corellon_larenthian">Corellon Larenthian</string>
+    <string name="religion_corellon_larenthian_description">God of elves</string>
+    <string name="religion_corellon_larenthian_alignment">chaotic good</string>
+    
+    <string name="religion_ehlonna">Ehlonna</string>
+    <string name="religion_ehlonna_description">Goddess of woodlands</string>
+    <string name="religion_ehlonna_alignment">neutral good</string>
+    
+    <string name="religion_erytnul">Erytnul</string>
+    <string name="religion_erytnul_description">god of slaughter</string>
+    <string name="religion_erytnul_alignment">chaotic evil</string>
+    
+    <string name="religion_fharlanghn">Fharlanghn</string>
+    <string name="religion_fharlanghn_description">God of roads</string>
+    <string name="religion_fharlanghn_alignment">neutral</string>
+    
+    <string name="religion_garl_glittergold">Garl Glittergold</string>
+    <string name="religion_garl_glittergold_description">god of gnomes</string>
+    <string name="religion_garl_glittergold_alignment">neutral good</string>
+    
+    <string name="religion_gruumsh">Gruumsh</string>
+    <string name="religion_gruumsh_description">gof of orcs</string>
+    <string name="religion_gruumsh_alignment">chaotic evil</string>
+    
+    <string name="religion_heironeous">Heironeous</string>
+    <string name="religion_heironeous_description">god of valor</string>
+    <string name="religion_heironeous_alignment">lawful good</string>  
+    
+    <string name="religion_hextor">Hextor</string>
+    <string name="religion_hextor_description">god of tyranny</string>
+    <string name="religion_hextor_alignment">lawful evil</string>
+    
+    <string name="religion_kord">Kord</string>
+    <string name="religion_kord_description">god of strength</string>
+    <string name="religion_kord_alignment">chaotic good</string>     
+    
+    <string name="religion_moradin">Moradin</string>
+    <string name="religion_moradin_description">god of dwarves</string>
+    <string name="religion_moradin_alignment">lawful good</string>               
+    
+    <string name="religion_nerull">Nerull</string>
+    <string name="religion_nerull_description">god of death</string>
+    <string name="religion_nerull_alignment">neutral evil</string>
+    
+    <string name="religion_obad_hai">Obad-Hai</string>
+    <string name="religion_obad_hai_description">god of nature</string>
+    <string name="religion_obad_hai_alignment">neutral</string>
+    
+    <string name="religion_olidammara">Olidammara</string>
+    <string name="religion_olidammara_description">god of rouges</string>
+    <string name="religion_olidammara_alignment">chaotic neutral</string>
+    
+    <string name="religion_pelor">Pelor</string>
+    <string name="religion_pelor_description">god of sun</string>
+    <string name="religion_pelor_alignment">neutral good</string>
+
+    <string name="religion_st_cuthbert">St.Cuthbert</string>
+    <string name="religion_st_cuthbert_description">god of retribution</string>
+    <string name="religion_st_cuthbert_alignment">lawful neutral</string>
+    
+    <string name="religion_vecna">Vecna</string>
+    <string name="religion_vecna_description">god of secrets</string>
+    <string name="religion_vecna_alignment">neutral evil</string>
+    
+    <string name="religion_wee_jas">Wee Jas</string>
+    <string name="religion_wee_jas_description">goddess of death</string>
+    <string name="religion_wee_jas_alignment">lawful neutral</string>
+    
+    <string name="religion_yondalla">Yondalla</string>
+    <string name="religion_yondalla_description">goddess of halflings</string>
+    <string name="religion_yondalla_alignment">lawful good</string>
+    
+    <string name="religion_other">Other</string>
+    
+</resources>

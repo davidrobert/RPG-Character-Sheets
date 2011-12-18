@@ -4,13 +4,13 @@ import android.content.Context;
 import br.com.while42.rpgcs.R;
 
 public enum TypeRpgRace {
-	HUMAN(R.string.human),
-	ELF(R.string.elf),
-	DWARF(R.string.dwarf),
-	HALFLING(R.string.halfling), 
-	HALF_ELF(R.string.half_elf),
-	HALF_ORC(R.string.half_orc), 
-	GNOME(R.string.gnome);
+	HUMAN(R.string.race_human),
+	ELF(R.string.race_elf),
+	DWARF(R.string.race_dwarf),
+	HALFLING(R.string.race_halfling), 
+	HALF_ELF(R.string.race_half_elf),
+	HALF_ORC(R.string.race_half_orc), 
+	GNOME(R.string.race_gnome);
 	
 	private int code;
 	
