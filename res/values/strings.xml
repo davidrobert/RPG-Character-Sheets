@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RPG Character Sheets</string>
+    <string name="character_name">name</string>
+    <string name="character_image_description">Character Image</string>
+    <string name="title_activity_edit_character">Edit Character</string>
+
+</resources>
