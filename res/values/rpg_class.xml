@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="barbarian">Barbarian</string>
+    <string name="bard">Bard</string>
+    <string name="cleric">Cleric</string>
+    <string name="druid">Druid</string>
+    <string name="fighter">Fighter</string>
+    <string name="monk">Monk</string>
+    <string name="paladin">Paladin</string>
+    <string name="ranger">Ranger</string>
+    <string name="rogue">Rogue</string>
+    <string name="sorcerer">Sorcerer</string>
+    <string name="wizard">Wizard</string>
+   
+</resources>

@@ -1,6 +1,7 @@
 package br.com.while42.rpgcs.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class RpgCharacter implements Serializable {
 
@@ -10,7 +11,12 @@ public class RpgCharacter implements Serializable {
 	private String image;
 	
 	private String name;
-
+	private RpgRace race;
+	private List<RpgClass> classes;
+	private RpgAlignment alignment;
+	private Sex sex;
+	
+	
 	public long getId() {
 		return id;
 	}
@@ -28,8 +34,31 @@ public class RpgCharacter implements Serializable {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}	
+	public RpgRace getRace() {
+		return race;
 	}
-
+	public void setRace(RpgRace race) {
+		this.race = race;
+	}
+	public List<RpgClass> getClasses() {
+		return classes;
+	}
+	public void setClasses(List<RpgClass> classes) {
+		this.classes = classes;
+	}
+	public RpgAlignment getAlignment() {
+		return alignment;
+	}
+	public void setAlignment(RpgAlignment alignment) {
+		this.alignment = alignment;
+	}
+	public Sex getSex() {
+		return sex;
+	}
+	public void setSex(Sex sex) {
+		this.sex = sex;
+	}
 	
 	@Override
 	public String toString() {

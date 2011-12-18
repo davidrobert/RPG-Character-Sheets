@@ -13,7 +13,7 @@ import br.com.while42.rpgcs.model.RpgCharacter;
 public class CharacterDAO extends SQLiteOpenHelper {
 	
 	private static final int VERSION = 1;
-	private static final String TABLE = "character";
+	private static final String TABLE = "rpg_character";
 	private static final String[] COLS = {"id", "name"};	
 
 	public CharacterDAO(Context context) {

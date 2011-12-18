@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="lawful_good">Lawful Good</string>
+    <string name="neutral_good">Neutral Good</string>
+    <string name="chaotic_good">Chaotic Good</string>
+    
+    <string name="lawful_neutral">Lawful Neutral</string>
+    <string name="true_neutral">True Neutral</string>
+    <string name="chaotic_neutral">Chaotic Neutral</string>
+    
+    <string name="lawful_evil">Lawful Evil</string>
+    <string name="neutral_evil">Neutral Evil</string>
+    <string name="chaotic_evil">Chaotic Evil</string>
+   
+</resources>
