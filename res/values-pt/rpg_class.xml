@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="class_barbarian">Bárbaro</string>
+    <string name="class_bard">Bardo</string>
+    <string name="class_cleric">Clérigo</string>
+    <string name="class_druid">Druida</string>
+    <string name="class_fighter">Guerreiro</string>
+    <string name="class_monk">Monge</string>
+    <string name="class_paladin">Paladino</string>
+    <string name="class_ranger">Ranger</string>
+    <string name="class_rogue">Ladino</string>
+    <string name="class_sorcerer">Mago</string>
+    <string name="class_wizard">Feiticeiro</string>
+   
+</resources>
