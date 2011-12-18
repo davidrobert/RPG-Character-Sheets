@@ -8,7 +8,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import br.com.while42.rpgcs.model.Character;
+import br.com.while42.rpgcs.model.RpgCharacter;
 
 public class CharacterDAO extends SQLiteOpenHelper {
 	
@@ -43,31 +43,31 @@ public class CharacterDAO extends SQLiteOpenHelper {
 
 	}
 	
-public void save(Character character) {			
+public void save(RpgCharacter rpgCharacter) {			
 		
-		ContentValues values = toValues(character);
+		ContentValues values = toValues(rpgCharacter);
 				
-		if (!character.isPersistent()) {
+		if (!rpgCharacter.isPersistent()) {
 			
 			long insert = getWritableDatabase().insert(TABLE, null, values);
-			character.setId(insert);
+			rpgCharacter.setId(insert);
 			
 		} else {
-			String[] whereArgs = new String[] { Long.toString(character.getId()) };
+			String[] whereArgs = new String[] { Long.toString(rpgCharacter.getId()) };
 			getWritableDatabase().update(TABLE, values, "id=?", whereArgs );
 		}
 	}
 		
-	public void delete(Character student) {		
+	public void delete(RpgCharacter student) {		
 		
 		String[] whereArgs = new String[] { Long.toString(student.getId()) };
 		getWritableDatabase().delete(TABLE, "id=?", whereArgs);		
 	}
 	
 	
-	public List<Character> getList() {			
+	public List<RpgCharacter> getList() {			
 		
-		List<Character> characters = new ArrayList<Character>();		
+		List<RpgCharacter> rpgCharacters = new ArrayList<RpgCharacter>();		
 		Cursor cursor = getWritableDatabase().query(TABLE, 
 				COLS,    // Colunas 
 				null,    // where
@@ -78,29 +78,29 @@ public void save(Character character) {
 		
 		while (cursor.moveToNext()) {
 			
-			Character character = new Character();
+			RpgCharacter rpgCharacter = new RpgCharacter();
 			
-			character.setId(cursor.getInt(0));
-			character.setName(cursor.getString(1));
+			rpgCharacter.setId(cursor.getInt(0));
+			rpgCharacter.setName(cursor.getString(1));
 			
-			characters.add(character);
+			rpgCharacters.add(rpgCharacter);
 		}
 		
 		cursor.close();
 		
-		return characters;
+		return rpgCharacters;
 	}
 	
-public ContentValues toValues(Character character) {
+public ContentValues toValues(RpgCharacter rpgCharacter) {
 		
 		ContentValues values = new ContentValues();
 		
-		if (character.isPersistent())
+		if (rpgCharacter.isPersistent())
 		{
-			values.put("id", character.getId());
+			values.put("id", rpgCharacter.getId());
 		}
 		
-		values.put("name", character.getName());
+		values.put("name", rpgCharacter.getName());
 		
 		return values;
 	}

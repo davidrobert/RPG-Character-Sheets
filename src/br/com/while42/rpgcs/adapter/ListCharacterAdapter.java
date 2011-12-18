@@ -10,30 +10,30 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import br.com.while42.rpgcs.R;
-import br.com.while42.rpgcs.model.Character;
+import br.com.while42.rpgcs.model.RpgCharacter;
 
 public class ListCharacterAdapter extends BaseAdapter {
 	private Context context;
-	private List<Character> characters; 
+	private List<RpgCharacter> rpgCharacters; 
 
-	public ListCharacterAdapter(Context context, List<Character> students) {
+	public ListCharacterAdapter(Context context, List<RpgCharacter> students) {
 		this.context = context;
-		this.characters = students;
+		this.rpgCharacters = students;
 	}
 
 	@Override
 	public int getCount() {
-		return characters.size();
+		return rpgCharacters.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		return characters.get(position);
+		return rpgCharacters.get(position);
 	}
 
 	@Override
 	public long getItemId(int position) {
-		return characters.get(position).getId();
+		return rpgCharacters.get(position).getId();
 	}
 
 	@Override
@@ -41,8 +41,8 @@ public class ListCharacterAdapter extends BaseAdapter {
 		ImageView image = new ImageView(context);
 
 		Bitmap bm;
-		if (characters.get(position).getImage() != null) {					
-			bm = BitmapFactory.decodeFile(characters.get(position).getImage());
+		if (rpgCharacters.get(position).getImage() != null) {					
+			bm = BitmapFactory.decodeFile(rpgCharacters.get(position).getImage());
 		} else {					
 			bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.noimage);
 		}

@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model;
 
 import java.io.Serializable;
 
-public class Character implements Serializable {
+public class RpgCharacter implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	

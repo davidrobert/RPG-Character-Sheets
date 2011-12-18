@@ -8,12 +8,12 @@ import android.os.Bundle;
 import android.widget.ListView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.adapter.ListCharacterAdapter;
-import br.com.while42.rpgcs.model.Character;
+import br.com.while42.rpgcs.model.RpgCharacter;
 import br.com.while42.rpgcs.persist.CharacterDAO;
 
 public class ListCharacters extends Activity {
 
-	private List<Character> characters = new ArrayList<Character>();
+	private List<RpgCharacter> rpgCharacters = new ArrayList<RpgCharacter>();
 	private ListCharacterAdapter adapter;
 	private ListView listCharacters;
 	
@@ -22,8 +22,8 @@ public class ListCharacters extends Activity {
 		super.onResume();
 
 		CharacterDAO dao = new CharacterDAO(this);
-		characters.clear();
-		characters.addAll(dao.getList());
+		rpgCharacters.clear();
+		rpgCharacters.addAll(dao.getList());
 		dao.close();
 
 		adapter.notifyDataSetChanged();
@@ -36,7 +36,7 @@ public class ListCharacters extends Activity {
 
 		listCharacters = (ListView) findViewById(R.id_list_characters.listView_characters);    
 		
-		adapter = new ListCharacterAdapter(this, characters);
+		adapter = new ListCharacterAdapter(this, rpgCharacters);
 		listCharacters.setAdapter(adapter);
 	}
 	
