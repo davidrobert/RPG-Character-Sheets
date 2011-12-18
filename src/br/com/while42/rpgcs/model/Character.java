@@ -7,6 +7,8 @@ public class Character implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private long id;
+	private String image;
+	
 	private String name;
 
 	public long getId() {
@@ -14,6 +16,12 @@ public class Character implements Serializable {
 	}
 	public void setId(long id) {
 		this.id = id;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
 	}
 	public String getName() {
 		return name;

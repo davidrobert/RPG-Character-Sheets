@@ -5,16 +5,16 @@ import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.adapter.ListCharacterAdapter;
 import br.com.while42.rpgcs.model.Character;
 import br.com.while42.rpgcs.persist.CharacterDAO;
 
 public class ListCharacters extends Activity {
 
 	private List<Character> characters = new ArrayList<Character>();
-	private ArrayAdapter<Character> adapter;
+	private ListCharacterAdapter adapter;
 	private ListView listCharacters;
 	
 	@Override
@@ -26,7 +26,7 @@ public class ListCharacters extends Activity {
 		characters.addAll(dao.getList());
 		dao.close();
 
-		//adapter.notifyDataSetChanged();
+		adapter.notifyDataSetChanged();
 	}
 	
 	@Override
@@ -34,8 +34,10 @@ public class ListCharacters extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.list_characters);
 
-		listCharacters = (ListView) findViewById(R.id_list_characters.listView_characters);                                      		
-		//listCharacters.setAdapter(adapter);
+		listCharacters = (ListView) findViewById(R.id_list_characters.listView_characters);    
+		
+		adapter = new ListCharacterAdapter(this, characters);
+		listCharacters.setAdapter(adapter);
 	}
 	
 }
