@@ -5,51 +5,25 @@ import br.com.while42.rpgcs.R;
 
 public enum RpgAlignment {
 		
-	LAWFUL_GOOD {
-		public String toString(Context ctx) {
-			return ctx.getString(R.string.lawful_good);
-		}
-	},
-	NEUTRAL_GOOD{
-		public String toString(Context ctx) {
-			return ctx.getString(R.string.neutral_good);
-		}
-	},
-	CHAOTIC_GOOD{
-		public String toString(Context ctx) {
-			return ctx.getString(R.string.chaotic_good);
-		}
-	},
-	LAWFUL_NEUTRAL{
-		public String toString(Context ctx) {
-			return ctx.getString(R.string.lawful_neutral);
-		}
-	},
+	LAWFUL_GOOD(R.string.lawful_good),
+	NEUTRAL_GOOD(R.string.neutral_good),
+	CHAOTIC_GOOD(R.string.chaotic_good),
+	
+	LAWFUL_NEUTRAL(R.string.lawful_neutral),
+	TRUE_NEUTRAL(R.string.true_neutral),
+	CHAOTIC_NEUTRAL(R.string.chaotic_neutral),
 
-	TRUE_NEUTRAL{
-		public String toString(Context ctx) {
-			return ctx.getString(R.string.true_neutral);
-		}
-	},
-	CHAOTIC_NEUTRAL{
-		public String toString(Context ctx) {
-			return ctx.getString(R.string.chaotic_neutral);
-		}
-	},
-
-	LAWFUL_EVIL{
-		public String toString(Context ctx) {
-			return ctx.getString(R.string.lawful_evil);
-		}
-	},
-	NEUTRAL_EVIL{
-		public String toString(Context ctx) {
-			return ctx.getString(R.string.neutral_evil);
-		}
-	},
-	CHAOTIC_EVIAL{
-		public String toString(Context ctx) {
-			return ctx.getString(R.string.chaotic_evil);
-		}
-	};
+	LAWFUL_EVIL(R.string.lawful_evil),
+	NEUTRAL_EVIL(R.string.neutral_evil),
+	CHAOTIC_EVIAL(R.string.chaotic_evil);
+	
+	private int code;
+	
+	private RpgAlignment(int code) {
+		this.code = code;
+	}
+	
+	public String toString(Context ctx) {
+		return ctx.getString(code);
+	}
 }
