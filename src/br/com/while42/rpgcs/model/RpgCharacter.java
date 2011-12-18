@@ -11,10 +11,10 @@ public class RpgCharacter implements Serializable {
 	private String image;
 	
 	private String name;
-	private RpgRace race;
-	private List<RpgClass> classes;
-	private RpgAlignment alignment;
-	private Sex sex;
+	private TypeRpgRace race;
+	private List<TypeRpgClass> classes;
+	private TypeRpgAlignment alignment;
+	private TypeSex typeSex;
 	
 	
 	public long getId() {
@@ -35,29 +35,29 @@ public class RpgCharacter implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}	
-	public RpgRace getRace() {
+	public TypeRpgRace getRace() {
 		return race;
 	}
-	public void setRace(RpgRace race) {
+	public void setRace(TypeRpgRace race) {
 		this.race = race;
 	}
-	public List<RpgClass> getClasses() {
+	public List<TypeRpgClass> getClasses() {
 		return classes;
 	}
-	public void setClasses(List<RpgClass> classes) {
+	public void setClasses(List<TypeRpgClass> classes) {
 		this.classes = classes;
 	}
-	public RpgAlignment getAlignment() {
+	public TypeRpgAlignment getAlignment() {
 		return alignment;
 	}
-	public void setAlignment(RpgAlignment alignment) {
+	public void setAlignment(TypeRpgAlignment alignment) {
 		this.alignment = alignment;
 	}
-	public Sex getSex() {
-		return sex;
+	public TypeSex getSex() {
+		return typeSex;
 	}
-	public void setSex(Sex sex) {
-		this.sex = sex;
+	public void setSex(TypeSex typeSex) {
+		this.typeSex = typeSex;
 	}
 	
 	@Override
