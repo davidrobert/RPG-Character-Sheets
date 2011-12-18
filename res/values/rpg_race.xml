@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="human">Human</string>
+    <string name="elf">Elf</string>
+    <string name="dwarf">Dwarf</string>
+    <string name="halfling">Halfling</string>
+    <string name="half_elf">Half Elf</string>
+    <string name="half_orc">Half Orc</string>
+    <string name="gnome">Gnome</string>
+   
+</resources>
