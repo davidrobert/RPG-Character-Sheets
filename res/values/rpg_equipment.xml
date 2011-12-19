@@ -1,4 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
+    <string name="equipment_gauntlet">Gauntlet</string>
+
+    <!--
+<td>Gauntlet</td>
+<td>Dagger</td>
+<td>Dagger, punching</td>
+<td>Gauntlet, spiked</td>
+<td>Mace, light</td>
+<td>Sickle</td>
+<td>Club</td>
+<td>Halfspear</td>
+<td>Mace, heavy</td>
+<td>Morningstar</td>
+<td>Quarterstaff</td>
+<td>Shortspear</td>
+<td>Crossbow, light</td>
+<td>Bolts (10)</td>
+<td>Dart</td>
+<td>Sling</td>
+<td>Bullets, sling</td>
+<td>Crossbow, heavy</td>
+<td>Javelin</td>
+<td>Axe, throwing</td>
+<td>Hammer, light</td>
+<td>Handaxe</td>
+<td>Lance, light</td>
+<td>Pick, light</td>
+<td>Sap</td>
+<td>Sword, short</td>
+<td>Battleaxe</td>
+<td>Flail, light</td>
+<td>Lance, heavy</td>
+<td>Longsword</td>
+<td>Pick, heavy</td>
+<td>Rapier</td>
+<td>Scimitar</td>
+<td>Trident</td>
+<td>Warhammer</td>
+<td>Falchion</td>
+<td>Flail, heavy</td>
+<td>Glaive</td>
+<td>Greataxe</td>
+<td>Greatclub</td>
+<td>Greatsword</td>
+<td>Guisarme</td>
+<td>Halberd</td>
+<td>Longspear</td>
+<td>Ranseur</td>
+<td>Scythe</td>
+<td>Shortbow</td>
+<td>Shortbow, composite</td>
+<td>Longbow</td>
+<td>Longbow, composite</td>
+<td>Arrows (20)</td>
+<td>Kama, halfling</td>
+<td>Kukri</td>
+<td>Nunchaku, halfling</td>
+<td>Siangham, halfling</td>
+<td>Kama</td>
+<td>Nunchaku</td>
+<td>Siangham</td>
+<td>Sword, bastard</td>
+<td>Waraxe, dwarven</td>
+<td>Hammer, gnome hooked</td>
+<td>Axe, orc double</td>
+<td>Chain, spiked</td>
+<td>Flail, dire</td>
+<td>Sword, two-bladed</td>
+<td>Urgrosh, dwarven</td>    
+    -->
+
+
+    <!--
+<td>Padded armor</td>
+<td>Leather</td>
+<td>Studded leather</td>
+<td>Chain shirt</td>
+<td>Hide</td>
+<td>Scale Mail</td>
+<td>Chainmail</td>
+<td>Breastplate</td>
+<td>Splint mail</td>
+<td>Banded mail</td>
+<td>Half-plate</td>
+<td>Full plate</td>
+<td>Buckler</td>
+<td>Shield, small, wood</td>
+<td>Shield, small, steel</td>
+<td>Shield, large, wood</td>
+<td>Shield, large, steel</td>
+<td>Shield, tower</td>
+<td>Armor spikes</td>
+<td>Gauntlet, locked</td>
+<td>Shield spikes</td>
+    -->
+
+
+    <!--
+<td>Backpack</td>
+<td>Barrel</td>
+<td>Basket</td>
+<td>Bedroll</td>
+<td>Bell</td>
+<td>Blanket</td>
+<td>Block n Tackle</td>
+<td>Bottle</td>
+<td>Bucket</td>
+<td>Caltrops</td>
+<td>Candle (10)</td>
+<td>Canvas</td>
+<td>Case</td>
+<td>Chain (10ft)</td>
+<td>Chalk (10)</td>
+<td>Chest</td>
+<td>Crowbar</td>
+<td>Firewood (10 days)</td>
+<td>Fishhook</td>
+<td>Fishing net</td>
+<td>Flask (3)</td>
+<td>Flint/steel</td>
+<td>Grappling hook</td>
+<td>Hammer</td>
+<td>Ink</td>
+<td>Inkpen</td>
+<td>Jug (3)</td>
+<td>Ladder (20ft)</td>
+<td>Lamp</td>
+<td>Lantern, bullseye</td>
+<td>Lantern, hooded</td>
+<td>Lock</td>
+<td>Manacles</td>
+<td>Mirror</td>
+<td>Mug</td>
+<td>Oil</td>
+<td>Paper</td>
+<td>Parchment</td>
+<td>Pick, miner's</td>
+<td>Pitcher, clay</td>
+<td>Piton</td>
+<td>Pole (10ft)</td>
+<td>Pot, iron</td>
+<td>Pouch, belt</td>
+<td>Ram</td>
+<td>Rations</td>
+<td>Rope (50ft)</td>
+<td>Sack</td>
+<td>Sealing wax</td>
+<td>Sewing needle</td>
+<td>Signal whistle</td>
+<td>Signet ring</td>
+<td>Sledge</td>
+<td>Soap</td>
+<td>Spade</td>
+<td>Spyglass</td>
+<td>Tent</td>
+<td>Torch</td>
+<td>Vial</td>
+<td>Waterskin</td>
+<td>Whetstone</td>
+<td>Acid flask</td>
+<td>Alchemist's fire</td>
+<td>Antitoxin</td>
+<td>Everburning torch</td>
+<td>Holy water</td>
+<td>Smokestick</td>
+<td>Sunrod</td>
+<td>Tranglefoot bag</td>
+<td>Thunderstone</td>
+<td>Tindertwig</td>
+<td>Alchemist's Lab</td>
+<td>Artisan's tools</td>
+<td>Artisan's tools, masterwork</td>
+<td>Climber's kit</td>
+<td>Disguise kit</td>
+<td>Healer's kit</td>
+<td>Holly and Mistletoe</td>
+<td>Holy Symbol, wood</td>
+<td>Holy Symbol, silver</td>
+<td>Hourglass</td>
+<td>Magnifying glass</td>
+<td>Musical instrument</td>
+<td>Musical instrument, masterwork</td>
+<td>Merchant scale</td>
+<td>Spell component pouch</td>
+<td>Spell book</td>
+<td>Thieves' tools</td>
+<td>Thieves' tools, masterwork</td>
+<td>Tool, masterwork</td>
+<td>Water clock</td>    
+    -->
+
+
+    <!--
+ <td>Artisan's outfit</td>
+<td>Cleric's vestments</td>
+<td>Cold weather outfit</td>
+<td>Coutier's outfit</td>
+<td>Entertainer's outfit</td>
+<td>Explorer's outfit</td>
+<td>Monk's outfit</td>
+<td>Noble's outfit</td>
+<td>Peasant's outfit</td>
+<td>Royal outfit</td>
+<td>Scholar's outfit</td>
+<td>Traveler's outfit</td>
+    -->
+
+<!-- 
+<td>Bit and Bridle</td>
+<td>Guard dog</td>
+<td>Riding dog</td>
+<td>Donkey</td>
+<td>Feed per day</td>
+<td>Horse, heavy</td>
+<td>Horse, light</td>
+<td>Pony</td>
+<td>Warhorse, heavy</td>
+<td>Warhorse, light</td>
+<td>Warpony</td>
+<td>Military saddle</td>
+<td>Pack saddle</td>
+<td>Riding saddle</td>
+<td>Exotic military saddle</td>
+<td>Exotic pack saddle</td>
+<td>Exotic riding saddle</td>
+<td>Saddlebags</td>
+<td>Carriage</td>
+<td>Cart</td>
+<td>Galley</td>
+<td>Keelboat</td>
+<td>Longship</td>
+<td>Rowboat</td>
+<td>Sailing ship</td>
+<td>Sled</td>
+<td>Wagon</td>
+<td>Warship</td
+ -->
 </resources>

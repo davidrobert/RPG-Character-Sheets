@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tool_artisans_tools_masterwork">Artisan\'s tools_masterwork</string>
+    <string name="tool_climbers_kit">Climber\'s kit</string>
+    <string name="tool_Disguise_kit">Disguise kit</string>
+    <string name="tool_healers_kit">Healer\'s kit</string>
+    <string name="tool_holly_and_mistletoe">Holly and Mistletoe</string>
+    <string name="tool_holy_symbol_wood">Holy Symbol_wood</string>
+    <string name="tool_holy_symbol_silver">Holy Symbol_silver</string>
+    <string name="tool_hourglass">Hourglass</string>
+    <string name="tool_magnifying_glass">Magnifying glass</string>
+    <string name="tool_musical_instrument">Musical instrument</string>
+    <string name="tool_musical_instrument_masterwork">Musical instrument_masterwork</string>
+    <string name="tool_merchant_scale">Merchant scale</string>
+    <string name="tool_spell_component_pouch">Spell component pouch</string>
+    <string name="tool_spell_book">Spell book</string>
+    <string name="tool_thieves_tools">Thieves\' tools</string>
+    <string name="tool_thieves_tools_masterwork">Thieves\' tools_masterwork</string>
+    <string name="tool_tool_masterwork">Tool_masterwork</string>
+    <string name="tool_water_clock">Water clock  </string>
+
+</resources>
