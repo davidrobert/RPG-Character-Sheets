@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+              
+    <string name="religion_none">None</string>
+    <string name="religion_none_description"></string>
+    <string name="religion_none_alignment"></string>
+    
+    <string name="religion_boccob">Boccob</string>
+    <string name="religion_boccob_description">God of magic</string>
+    <string name="religion_boccob_alignment">Neutral</string>
+    
+    <string name="religion_corellon_larenthian">Corellon Larenthian</string>
+    <string name="religion_corellon_larenthian_description">God of elves</string>
+    <string name="religion_corellon_larenthian_alignment">Chaotic Good</string>
+    
+    <string name="religion_ehlonna">Ehlonna</string>
+    <string name="religion_ehlonna_description">Goddess of woodlands</string>
+    <string name="religion_ehlonna_alignment">Neutral Good</string>
+    
+    <string name="religion_erytnul">Erytnul</string>
+    <string name="religion_erytnul_description">God of Slaughter</string>
+    <string name="religion_erytnul_alignment">Chaotic Evil</string>
+    
+    <string name="religion_fharlanghn">Fharlanghn</string>
+    <string name="religion_fharlanghn_description">God of roads</string>
+    <string name="religion_fharlanghn_alignment">Neutral</string>
+    
+    <string name="religion_garl_glittergold">Garl Glittergold</string>
+    <string name="religion_garl_glittergold_description">God of Gnomes</string>
+    <string name="religion_garl_glittergold_alignment">Neutral Good</string>
+    
+    <string name="religion_gruumsh">Gruumsh</string>
+    <string name="religion_gruumsh_description">God of Orcs</string>
+    <string name="religion_gruumsh_alignment">Chaotic Evil</string>
+    
+    <string name="religion_heironeous">Heironeous</string>
+    <string name="religion_heironeous_description">God of Valor</string>
+    <string name="religion_heironeous_alignment">Lawful Good</string>  
+    
+    <string name="religion_hextor">Hextor</string>
+    <string name="religion_hextor_description">God of Tyranny</string>
+    <string name="religion_hextor_alignment">Lawful Evil</string>
+    
+    <string name="religion_kord">Kord</string>
+    <string name="religion_kord_description">God of Strength</string>
+    <string name="religion_kord_alignment">Chaotic Good</string>     
+    
+    <string name="religion_moradin">Moradin</string>
+    <string name="religion_moradin_description">God of Dwarves</string>
+    <string name="religion_moradin_alignment">Lawful Good</string>               
+    
+    <string name="religion_nerull">Nerull</string>
+    <string name="religion_nerull_description">God of Death</string>
+    <string name="religion_nerull_alignment">Neutral Evil</string>
+    
+    <string name="religion_obad_hai">Obad-Hai</string>
+    <string name="religion_obad_hai_description">God of Nature</string>
+    <string name="religion_obad_hai_alignment">Neutral</string>
+    
+    <string name="religion_olidammara">Olidammara</string>
+    <string name="religion_olidammara_description">God of Rouges</string>
+    <string name="religion_olidammara_alignment">Chaotic Neutral</string>
+    
+    <string name="religion_pelor">Pelor</string>
+    <string name="religion_pelor_description">God of Sun</string>
+    <string name="religion_pelor_alignment">Neutral Good</string>
+
+    <string name="religion_st_cuthbert">St.Cuthbert</string>
+    <string name="religion_st_cuthbert_description">God of Retribution</string>
+    <string name="religion_st_cuthbert_alignment">Lawful Neutral</string>
+    
+    <string name="religion_vecna">Vecna</string>
+    <string name="religion_vecna_description">God of Secrets</string>
+    <string name="religion_vecna_alignment">Neutral Evil</string>
+    
+    <string name="religion_wee_jas">Wee Jas</string>
+    <string name="religion_wee_jas_description">Goddess of Death</string>
+    <string name="religion_wee_jas_alignment">Lawful Neutral</string>
+    
+    <string name="religion_yondalla">Yondalla</string>
+    <string name="religion_yondalla_description">Goddess of Halflings</string>
+    <string name="religion_yondalla_alignment">Lawful Good</string>
+    
+    <string name="religion_other">Other</string>
+    <string name="religion_other_description"></string>
+    <string name="religion_other_alignment"></string>
+    
+</resources>

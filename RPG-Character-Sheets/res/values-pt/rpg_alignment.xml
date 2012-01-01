@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="alignment_lawful_good">Leal Bom</string>
+    <string name="alignment_neutral_good">Neutro Bom</string>
+    <string name="alignment_chaotic_good">Caótico Bom</string>
+    
+    <string name="alignment_lawful_neutral">Leal Neutro</string>
+    <string name="alignment_true_neutral">Neutro</string>
+    <string name="alignment_chaotic_neutral">Caótico Neutro</string>
+    
+    <string name="alignment_lawful_evil">Leal Mau</string>
+    <string name="alignment_neutral_evil">Neutro Mau</string>
+    <string name="alignment_chaotic_evil">Caótico Mau</string>
+   
+</resources>

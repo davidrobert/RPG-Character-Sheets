@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<string name="skill_appraise">Avaliação</string>
+	<string name="skill_balance">Equilíbrio</string>
+	<string name="skill_bluff">Blefar</string>
+	<string name="skill_climb">Escalar</string>
+	<string name="skill_concetration">Concentração</string>
+	<string name="skill_craft">Ofícios</string>
+	<string name="skill_decide_script">Decifrar Escrita</string>
+	<string name="skill_diplomacy">Diplomacia</string>
+	<string name="skill_disable_device">Operar Mecanismo</string>
+	<string name="skill_disguise">Disfarces</string>
+	<string name="skill_escape_artist">Arte de Fuga</string>
+	<string name="skill_forgery">Falsificação</string>
+	<string name="skill_gather_information">Obter Informação</string>
+	<string name="skill_handle_animal">Adestrar Animal</string>
+	<string name="skill_heal">Cura</string>
+	<string name="skill_hide">Esconder-se</string>
+	<string name="skill_intimidate">Intimidação</string>
+	<string name="skill_jump">Saltar</string>
+	<string name="skill_knowledge_arcana">Conhecimento Arcano</string>
+	<string name="skill_knowledge_architecture">Conhecimento Arquitetura</string>
+	<string name="skill_knowledge_dungeoneering">Conhecimento Masmorra</string>
+	<string name="skill_knowledge_geography">Conhecimento Geografia</string>
+	<string name="skill_knowledge_history">Conhecimento História</string>
+	<string name="skill_knowledge_local">Conhecimento Local</string>
+	<string name="skill_knowledge_nature">Conhecimento Natureza</string>
+	<string name="skill_knowledge_nobility">Conhecimento Nobreza</string>
+	<string name="skill_knowledge_religion">Conhecimento Religião</string>
+	<string name="skill_knowledge_planes">Conhecimento Planos</string>
+	<string name="skill_listen">Ouvir</string>
+	<string name="skill_move_silently">Furtividade</string>
+	<string name="skill_open_lock">Abrir Fechaduras</string>
+	<string name="skill_perform">Atuação</string>
+	<string name="skill_profession">Profissão</string>
+	<string name="skill_ride">Cavalgar</string>
+	<string name="skill_search">Procurar</string>
+	<string name="skill_sense_motive">Sentir Movimentação</string>
+	<!--<string name="skill_sleight_of_hand">Sleight of Hand</string>-->
+	<string name="skill_speak_language">Falar Idioma</string>
+	<string name="skill_spellcraft">Indentificar Magia</string>
+	<string name="skill_spot">Observar</string>
+	<string name="skill_survival">Sobrevivência</string>
+	<string name="skill_swim">Natação</string>
+	<!--<string name="skill_tumble">Tumble</string>-->
+	<string name="skill_use_magic_device">Usar Instrumento Mágico</string>
+	<string name="skill_use_rope">Usar Cordas</string>
+	
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="character_name">name</string>
+    <string name="character_image_description">Character Image</string>
+
+</resources>
