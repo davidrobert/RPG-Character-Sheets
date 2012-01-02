@@ -19,7 +19,7 @@ public class StrengthModifier {
 		
 		for (strenth = 2; strenth <= MAX_STRENTH; strenth += 2) {
 			m.put(strenth, ++modifier);
-			m.put(strenth+1, ++modifier);
+			m.put(strenth+1, modifier);
 		}		
 		
 		strengthModifier = Collections.unmodifiableMap(m);

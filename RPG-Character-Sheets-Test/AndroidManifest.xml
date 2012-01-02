@@ -7,6 +7,7 @@
     <uses-sdk android:minSdkVersion="12" />
 
     <instrumentation
+        android:label="Tests for RPG-Character-Sheets"
         android:name="android.test.InstrumentationTestRunner"
         android:targetPackage="br.com.while42.rpgcs" />
 
