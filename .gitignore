@@ -1,2 +1,4 @@
-bin/
-gen/
+RPG-Character-Sheets/bin/
+RPG-Character-Sheets/gen/
+RPG-Character-Sheets-Test/bin/
+RPG-Character-Sheets-Test/gen/
