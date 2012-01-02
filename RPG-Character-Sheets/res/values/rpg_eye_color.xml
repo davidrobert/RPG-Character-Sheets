@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <string name="eye_color_yellow">Yellow</string>
+    <string name="eye_color_amber">Amber</string>
+    <string name="eye_color_brown">Brown</string>
+    <string name="eye_color_hazel">Hazel</string>
+    <string name="eye_color_green">Green</string>
+    <string name="eye_color_blue">Blue</string>
+    <string name="eye_color_gray">Gray</string>
+    <string name="eye_color_aqua">Aqua</string>
+    <string name="eye_color_red">Red</string>
+    <string name="eye_color_purple">Purple</string>
+    <string name="eye_color_pale_brown">Pale Brown</string>
+    <string name="eye_color_pale_blue">Pale Blue</string>
+    <string name="eye_color_pale_green">Pale Green</string>
+    <string name="eye_color_pale_gray">Pale Gray</string>
+    <string name="eye_color_deep_blue">Deep Blue</string>
+    <string name="eye_color_violet_red">Violet Red</string>
+    <string name="eye_color_orange">Orange</string>
+    <string name="eye_color_spring_green">Spring Green</string>
+    <string name="eye_color_sea_green">Sea Green</string>
+    <string name="eye_color_emerald_green">Emerald Green</string>
+    
+</resources>
