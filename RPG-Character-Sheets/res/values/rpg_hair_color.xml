@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hair_color_black">Black</string>
+    <string name="hair_color_gray">Gray</string>
+    <string name="hair_color_platinum">Platinum</string>
+    <string name="hair_color_white">White</string>
+    <string name="hair_color_dark_blonde">Dark Blonde</string>
+    <string name="hair_color_blonde">Blonde</string>
+    <string name="hair_color_bleach_blonde">Bleach Blonde</string>
+    <string name="hair_color_dark_redhead">Dark Redhead</string>
+    <string name="hair_color_redhead">Redhead</string>
+    <string name="hair_color_light_redhead">Light Redhead</string>
+    <string name="hair_color_brunette">Brunette</string>
+    <string name="hair_color_auburn">Auburn</string>
+    <string name="hair_color_yellow">Yellow</string>
+    <string name="hair_color_amber">Amber</string>
+    <string name="hair_color_brown">Brown</string>
+    <string name="hair_color_hazel">Hazel</string>
+    <string name="hair_color_green">Green</string>
+    <string name="hair_color_blue">Blue</string>
+    <string name="hair_color_silver">Silver</string>
+    <string name="hair_color_aqua">Aqua</string>
+    <string name="hair_color_red">Red</string>
+    <string name="hair_color_purple">Purple</string>
+    <string name="hair_color_pale_brown">Pale Brown</string>
+    <string name="hair_color_pale_blue">Pale Blue</string>
+    <string name="hair_color_pale_green">Pale Green</string>
+    <string name="hair_color_pale_gray">Pale Gray</string>
+    <string name="hair_color_deep_blue">Deep Blue</string>
+    <string name="hair_color_violet_red">Violet Red</string>
+    <string name="hair_color_orange">Orange</string>
+    <string name="hair_color_spring_green">Spring Green</string>
+    <string name="hair_color_sea_green">Sea Green</string>
+    <string name="hair_color_emerald_green">Emerald Green</string>
+
+    
+</resources>

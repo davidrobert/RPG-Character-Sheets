@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="size_fine">Minúsculo</string>
+    <string name="size_diminutive">Diminuto</string>
+    <string name="size_tiny">Miúdo</string>
+    <string name="size_small">Pequeno</string>
+    <string name="size_medium">Médio</string>
+    <string name="size_large">Grande</string>
+    <string name="size_huge">Enorme</string>
+    <string name="size_gargantuan">Imenso</string>
+    <string name="size_colossal">Colossal</string>
+    
+</resources>
