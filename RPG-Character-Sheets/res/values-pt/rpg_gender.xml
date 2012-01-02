@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="gender_men">Homem</string>
+    <string name="gender_woman">Mulher</string>
+    
+</resources>
