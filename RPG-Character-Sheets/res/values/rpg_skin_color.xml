@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="skin_color_pale">Pale</string>
+    <string name="skin_color_fair">Fair</string>
+    <string name="skin_color_light">Light</string>
+    <string name="skin_color_light_tan">Light Tan</string>
+    <string name="skin_color_tan">Tan</string>
+    <string name="skin_color_dark_tan">Dark Tan</string>
+    <string name="skin_color_brown">Brown</string>
+    <string name="skin_color_dark_brown">Dark Brown</string>
+    <string name="skin_color_black">Black</string>
+    <string name="skin_color_gray">Gray</string>
+    <string name="skin_color_white">White</string>
+    <string name="skin_color_gold">Gold</string>
+    <string name="skin_color_silver">Silver</string>
+    <string name="skin_color_bronze">Bronze</string>
+    <string name="skin_color_red">Red</string>
+    <string name="skin_color_orange">Orange</string>
+    <string name="skin_color_yellow">Yellow</string>
+    <string name="skin_color_green">Green</string>
+    <string name="skin_color_blue">Blue</string>
+    <string name="skin_color_purple">Purple</string>
+    <string name="skin_color_pale_yellow">Pale Yellow</string>
+    <string name="skin_color_dark_red">Dark Red</string>
+    <string name="skin_color_red_orange">Red Orange</string>
+    <string name="skin_color_light_red">Light Red</string>
+    <string name="skin_color_amber">Amber</string>
+    <string name="skin_color_olive">Olive</string>
+    <string name="skin_color_aqua">Aqua</string>
+    <string name="skin_color_pale_brown">Pale Brown</string>
+    <string name="skin_color_pale_blue">Pale Blue</string>
+    <string name="skin_color_pale_green">Pale Green</string>
+    <string name="skin_color_pale_gray">Pale Gray</string>
+    <string name="skin_color_deep_blue">Deep Blue</string>
+    <string name="skin_color_violet_red">Violet Red</string>
+    <string name="skin_color_spring_green">Spring Green</string>
+    <string name="skin_color_sea_green">Sea Green</string>
+    <string name="skin_color_emerald_green">Emerald Green</string>
+ 
+</resources>
