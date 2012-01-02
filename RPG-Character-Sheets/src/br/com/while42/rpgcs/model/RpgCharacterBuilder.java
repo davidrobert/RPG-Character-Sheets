@@ -20,7 +20,7 @@ public class RpgCharacterBuilder {
 	private TypeHairColor hair;
 	private TypeSkinColor skin;
 	
-	// Ability
+	// StrengthModifier
 	private int strength;
 	private int dextery;
 	private int constitution;
