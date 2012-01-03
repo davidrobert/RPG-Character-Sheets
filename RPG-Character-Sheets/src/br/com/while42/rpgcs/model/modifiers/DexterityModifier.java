@@ -8,7 +8,7 @@ public class DexterityModifier {
 	public static final int MAX_DEXTERITY = 33;
 	
 	private static final int START_MODIFIER = -5;
-	private static final int LIMIT_SINGLE_MODIFIER = 1;
+	private static final int LIMIT_SINGLE_MODIFIER = 3;
 	
 	private final static Map<Integer, Integer> dexterityModifier;
 	static {

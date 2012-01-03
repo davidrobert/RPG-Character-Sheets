@@ -3,7 +3,7 @@ package br.com.while42.rpgcs.model.attributes;
 import br.com.while42.rpgcs.R;
 import android.content.Context;
 
-public enum TypeRPGLanguage {
+public enum TypeRpgLanguage {
 
 	ABYSSAL(R.string.language_abyssal),
 	AQUAN(R.string.language_aquan), 	
@@ -27,7 +27,7 @@ public enum TypeRPGLanguage {
 
 	private int code;
 
-	private TypeRPGLanguage(int code) {
+	private TypeRpgLanguage(int code) {
 		this.code = code;
 	}
 
