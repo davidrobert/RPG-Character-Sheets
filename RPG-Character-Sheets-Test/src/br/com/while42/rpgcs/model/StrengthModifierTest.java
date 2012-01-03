@@ -1,11 +1,28 @@
 package br.com.while42.rpgcs.model;
 
+import br.com.while42.rpgcs.model.modifiers.StrengthModifier;
 import junit.framework.Assert;
 import android.test.AndroidTestCase;
 
 public class StrengthModifierTest extends AndroidTestCase {
 	
-	public void testGet() throws Throwable {
+	public void testGetNegative() throws Throwable {
+		new StrengthModifier().get(-1);	
+	}
+	
+	public void testGetZero() throws Throwable {
+		new StrengthModifier().get(0);	
+	}
+	
+	public void testGetBelowTheMinimum() throws Throwable {
+		new StrengthModifier().get(StrengthModifier.MIN_STRENTH - 1);	
+	}
+	
+	public void testGetAboveTheMax() throws Throwable {
+		new StrengthModifier().get(StrengthModifier.MAX_STRENTH + 1);	
+	}
+	
+	public void testGetBasic() throws Throwable {
 		Assert.assertEquals(0, new StrengthModifier().get(10));	
 	}
 	

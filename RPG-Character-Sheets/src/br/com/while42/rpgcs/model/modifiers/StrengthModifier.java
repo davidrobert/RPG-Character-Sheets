@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model;
+package br.com.while42.rpgcs.model.modifiers;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class StrengthModifier {
 
-	private static final int MIN_STRENTH = 1;
-	private static final int MAX_STRENTH = 47;
+	public static final int MIN_STRENTH = 1;
+	public static final int MAX_STRENTH = 47;
 	
 	private final static Map<Integer, Integer> strengthModifier;
 	static {
@@ -26,6 +26,8 @@ public class StrengthModifier {
 	}
 	
 	public int get(int strenth) {
+		if (strenth < MIN_STRENTH || strenth > MAX_STRENTH)
+			throw new IllegalArgumentException();
 		return strengthModifier.get(strenth);
 	}
 }

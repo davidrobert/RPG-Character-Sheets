@@ -3,6 +3,11 @@ package br.com.while42.rpgcs.model;
 import java.io.Serializable;
 import java.util.HashMap;
 
+import br.com.while42.rpgcs.model.attributes.TypeGender;
+import br.com.while42.rpgcs.model.attributes.TypeRpgAlignment;
+import br.com.while42.rpgcs.model.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.attributes.TypeRpgRace;
+
 public class RpgCharacter implements Serializable {
 
 	private static final long serialVersionUID = 1L;

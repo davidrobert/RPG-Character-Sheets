@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model;
+package br.com.while42.rpgcs.model.attributes;
 
 import android.content.Context;
 import br.com.while42.rpgcs.R;
