@@ -7,19 +7,35 @@ import android.test.AndroidTestCase;
 public class StrengthModifierTest extends AndroidTestCase {
 	
 	public void testGetNegative() throws Throwable {
-		new StrengthModifier().get(-1);	
+		try {
+			new StrengthModifier().get(-1);
+		} catch (IllegalArgumentException expected) {
+			assertTrue(expected instanceof IllegalArgumentException);
+		}
 	}
-	
+
 	public void testGetZero() throws Throwable {
-		new StrengthModifier().get(0);	
+		try {
+			new StrengthModifier().get(0);
+		} catch (IllegalArgumentException expected) {
+			assertTrue(expected instanceof IllegalArgumentException);
+		}
 	}
-	
+
 	public void testGetBelowTheMinimum() throws Throwable {
-		new StrengthModifier().get(StrengthModifier.MIN_STRENTH - 1);	
+		try {
+			new StrengthModifier().get(StrengthModifier.MIN_STRENTH - 1);
+		} catch (IllegalArgumentException expected) {
+			assertTrue(expected instanceof IllegalArgumentException);
+		}
 	}
 	
 	public void testGetAboveTheMax() throws Throwable {
-		new StrengthModifier().get(StrengthModifier.MAX_STRENTH + 1);	
+		try {
+			new StrengthModifier().get(StrengthModifier.MAX_STRENTH + 1);	
+		} catch (IllegalArgumentException expected) {
+			assertTrue(expected instanceof IllegalArgumentException);
+		}
 	}
 	
 	public void testGetBasic() throws Throwable {
