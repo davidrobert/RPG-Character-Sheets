@@ -1,6 +1,5 @@
 package br.com.while42.rpgcs.model.attributes;
 
-import android.content.Context;
 import br.com.while42.rpgcs.R;
 
 public enum TypeRpgAlignment {
@@ -17,13 +16,13 @@ public enum TypeRpgAlignment {
 	NEUTRAL_EVIL(R.string.alignment_neutral_evil),
 	CHAOTIC_EVIAL(R.string.alignment_chaotic_evil);
 	
-	private int code;
+	private int nameCode;
 	
-	private TypeRpgAlignment(int code) {
-		this.code = code;
+	private TypeRpgAlignment(int nameCode) {
+		this.nameCode = nameCode;
 	}
 	
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 }

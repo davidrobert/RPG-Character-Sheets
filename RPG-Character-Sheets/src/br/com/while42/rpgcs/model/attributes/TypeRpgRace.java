@@ -1,6 +1,5 @@
 package br.com.while42.rpgcs.model.attributes;
 
-import android.content.Context;
 import br.com.while42.rpgcs.R;
 
 public enum TypeRpgRace {
@@ -12,13 +11,13 @@ public enum TypeRpgRace {
 	HALF_ORC(R.string.race_half_orc), 
 	GNOME(R.string.race_gnome);
 	
-	private int code;
+	private int nameCode;
 	
-	private TypeRpgRace(int code) {
-		this.code = code;
+	private TypeRpgRace(int nameCode) {
+		this.nameCode = nameCode;
 	}
 	
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 }

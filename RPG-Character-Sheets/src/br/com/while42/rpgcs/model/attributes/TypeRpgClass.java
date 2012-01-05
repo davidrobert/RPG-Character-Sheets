@@ -1,6 +1,5 @@
 package br.com.while42.rpgcs.model.attributes;
 
-import android.content.Context;
 import br.com.while42.rpgcs.R;
 
 public enum TypeRpgClass {
@@ -16,13 +15,13 @@ public enum TypeRpgClass {
 	SORCERER(R.string.class_sorcerer),
 	WIZARD(R.string.class_wizard);
 
-	private int code;
+	private int nameCode;
 
-	private TypeRpgClass(int code) {
-		this.code = code;
+	private TypeRpgClass(int nameCode) {
+		this.nameCode = nameCode;
 	}
 
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 }

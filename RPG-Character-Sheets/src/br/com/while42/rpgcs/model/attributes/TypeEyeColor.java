@@ -1,7 +1,6 @@
 package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
-import android.content.Context;
 
 public enum TypeEyeColor {
 	Yellow(R.string.eye_color_yellow),
@@ -25,14 +24,14 @@ public enum TypeEyeColor {
 	Sea_Green(R.string.eye_color_sea_green),
 	Emerald_Green(R.string.eye_color_emerald_green);
 	
-	private int code;
+	private int nameCode;
 
-	private TypeEyeColor(int code) {
-		this.code = code;
+	private TypeEyeColor(int nameCode) {
+		this.nameCode = nameCode;
 	}
 
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 
 }

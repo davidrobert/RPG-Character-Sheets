@@ -1,7 +1,6 @@
 package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
-import android.content.Context;
 
 public enum TypeSkinColor {
 	PALE(R.string.skin_color_pale),
@@ -41,13 +40,13 @@ public enum TypeSkinColor {
 	SEA_GREEN(R.string.skin_color_sea_green),
 	EMERALD_GREEN(R.string.skin_color_emerald_green);
 	
-	private int code;
+	private int nameCode;
 
-	private TypeSkinColor(int code) {
-		this.code = code;
+	private TypeSkinColor(int nameCode) {
+		this.nameCode = nameCode;
 	}
 
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 }

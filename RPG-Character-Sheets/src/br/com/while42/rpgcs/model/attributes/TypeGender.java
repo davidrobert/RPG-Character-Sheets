@@ -1,19 +1,18 @@
 package br.com.while42.rpgcs.model.attributes;
 
-import android.content.Context;
 import br.com.while42.rpgcs.R;
 
 public enum TypeGender {
 	MEN(R.string.gender_men),
 	WOMAN(R.string.gender_woman);
 
-	private int code;
+	private int nameCode;
 
-	private TypeGender(int code) {
-		this.code = code;
+	private TypeGender(int nameCode) {
+		this.nameCode = nameCode;
 	}
 
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 }

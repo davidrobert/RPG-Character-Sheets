@@ -1,7 +1,6 @@
 package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
-import android.content.Context;
 
 public enum TypeHairColor {
 	BLACK(R.string.hair_color_black),
@@ -37,13 +36,13 @@ public enum TypeHairColor {
 	SEA_GREEN(R.string.hair_color_sea_green),
 	EMERALD_GREEN(R.string.hair_color_emerald_green);
 	
-	private int code;
+	private int nameCode;
 
-	private TypeHairColor(int code) {
-		this.code = code;
+	private TypeHairColor(int nameCode) {
+		this.nameCode = nameCode;
 	}
 
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 }

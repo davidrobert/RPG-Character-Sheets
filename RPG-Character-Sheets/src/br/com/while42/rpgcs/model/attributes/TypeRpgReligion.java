@@ -1,7 +1,6 @@
 package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
-import android.content.Context;
 
 public enum TypeRpgReligion {
 	
@@ -30,25 +29,25 @@ public enum TypeRpgReligion {
 	YONDALLA(R.string.religion_yondalla, R.string.religion_yondalla_description, R.string.religion_yondalla_alignment),
 	OTHER(R.string.religion_other, R.string.religion_other_description, R.string.religion_other_alignment);
 
-	private int code;
+	private int nameCode;
 	private int description;
 	private int alignment;
 	
-	private TypeRpgReligion(int code, int description, int alignment) {
-		this.code = code;
+	private TypeRpgReligion(int nameCode, int description, int alignment) {
+		this.nameCode = nameCode;
 		this.description = description;
 		this.alignment = alignment;
 	}
 
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 	
-	public String getDescription(Context ctx) {
-		return ctx.getString(description);
+	public int getDescriptionCode() {
+		return description;
 	}
 	
-	public String getAlignment(Context ctx) {
-		return ctx.getString(alignment);
+	public int getAlignmentCode() {
+		return alignment;
 	}
 }

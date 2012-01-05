@@ -1,7 +1,6 @@
 package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
-import android.content.Context;
 
 public enum TypeRpgSkill {
 	APPRAISE(R.string.skill_appraise),
@@ -50,13 +49,13 @@ public enum TypeRpgSkill {
 	USE_MAGIC_DEVICE(R.string.skill_use_magic_device),
 	USE_ROPE(R.string.skill_use_rope);
 
-	private int code;
+	private int nameCode;
 
-	private TypeRpgSkill(int code) {
-		this.code = code;
+	private TypeRpgSkill(int nameCode) {
+		this.nameCode = nameCode;
 	}
 
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 }

@@ -1,7 +1,6 @@
 package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
-import android.content.Context;
 
 public enum TypeRpgSize {
 	FINE(R.string.size_fine), 
@@ -14,13 +13,13 @@ public enum TypeRpgSize {
 	GARGANTUAN(R.string.size_gargantuan), 
 	COLOSSAL(R.string.size_gargantuan);
 	
-	private int code;
+	private int nameCode;
 
-	private TypeRpgSize(int code) {
-		this.code = code;
+	private TypeRpgSize(int nameCode) {
+		this.nameCode = nameCode;
 	}
 
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 }

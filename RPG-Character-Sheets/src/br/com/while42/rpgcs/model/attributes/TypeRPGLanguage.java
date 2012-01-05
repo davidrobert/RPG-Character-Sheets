@@ -1,7 +1,6 @@
 package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
-import android.content.Context;
 
 public enum TypeRpgLanguage {
 
@@ -25,13 +24,13 @@ public enum TypeRpgLanguage {
 	SYLVAN(R.string.language_sylvan), 	
 	TERRAN(R.string.language_terran); 			
 
-	private int code;
+	private int nameCode;
 
-	private TypeRpgLanguage(int code) {
-		this.code = code;
+	private TypeRpgLanguage(int nameCode) {
+		this.nameCode = nameCode;
 	}
 
-	public String toString(Context ctx) {
-		return ctx.getString(code);
+	public int getNameCode() {
+		return nameCode;
 	}
 }
