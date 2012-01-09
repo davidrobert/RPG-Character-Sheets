@@ -3,6 +3,7 @@ package br.com.while42.rpgcs.model.attributes;
 import br.com.while42.rpgcs.R;
 
 public enum TypeRpgClass {
+	NONE(R.string.class_none),
 	BARBARIAN(R.string.class_barbarian), 
 	BARD(R.string.class_bard),
 	CLERIC(R.string.class_cleric),

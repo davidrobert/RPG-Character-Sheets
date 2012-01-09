@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
+    <string name="class_none">Nenhuma</string>
     <string name="class_barbarian">Bárbaro</string>
     <string name="class_bard">Bardo</string>
     <string name="class_cleric">Clérigo</string>
