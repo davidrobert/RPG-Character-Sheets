@@ -32,7 +32,7 @@ public class ListCharacters extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.list_characters);
+		setContentView(R.layout.edit_character);
 
 		listCharacters = (ListView) findViewById(R.id_list_characters.listView_characters);    
 		
