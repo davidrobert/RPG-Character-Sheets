@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="edit_description_image">Imagem do Personagem</string>
+    <string name="edit_label_name">NBome</string>
+    
+    <string name="edit_label_class">Classe</string>
+    <string name="edit_label_level">Nível</string>
+    <string name="edit_label_race">Raça</string>
+    <string name="edit_label_alignment">Alinhamento</string>
+    <string name="edit_label_religion">Divindade</string>
+    
+    <string name="edit_label_size">Tamanho</string>
+    <string name="edit_label_age">Idade</string>
+    <string name="edit_label_gender">Sexo</string>
+    <string name="edit_label_height">Altura</string>
+    <string name="edit_label_weight">Peso</string>    
+    <string name="edit_label_eye">Olhos</string>
+    <string name="edit_label_hair">Cabelo</string>
+    <string name="edit_label_skin">Pele</string>
+
+</resources>
