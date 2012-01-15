@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="edit_description_image">Player Image</string>
     <string name="edit_label_name">Name</string>
+    
+    <string name="edit_label_class">Class</string>
+    <string name="edit_label_level">Level</string>
     <string name="edit_label_race">Race</string>
     <string name="edit_label_alignment">Alignment</string>
+    <string name="edit_label_religion">Religion</string>
+    
+    <string name="edit_label_size">Size</string>
+    <string name="edit_label_age">Age</string>
     <string name="edit_label_gender">Gender</string>
-    <string name="edit_label_class">Class</string>
+    <string name="edit_label_height">Height</string>
+    <string name="edit_label_weight">Weight</string>    
+    <string name="edit_label_eye">Eye</string>
+    <string name="edit_label_hair">Hair</string>
+    <string name="edit_label_skin">Skin</string>
 
 </resources>

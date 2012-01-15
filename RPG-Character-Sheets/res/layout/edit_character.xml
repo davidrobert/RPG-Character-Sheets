@@ -5,11 +5,16 @@
 
     <TableRow>
 
+        <!-- Image -->
+
         <ImageButton
             android:id="@+id_edit/imagebutton_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/edit_description_image"
             android:src="@android:drawable/btn_star" />
+
+        <!-- Name -->
 
         <TextView
             android:id="@+id_edit/textview_name"
@@ -22,37 +27,15 @@
             android:id="@+id_edit/edittext_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName" 
-            android:width="200dp" >
-
-            <requestFocus />
+            android:layout_span="20"
+            android:inputType="textPersonName"
+            android:width="20dp" >
         </EditText>
-        
-        <TextView
-            android:id="@+id_edit/textview_gender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/edit_label_gender"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </TableRow>
 
-        <ExpandableListView
-            android:id="@+id_edit/expandablelistview_gender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-        </ExpandableListView>
+    <TableRow>
 
-        <TextView
-            android:id="@+id_edit/textview_alignment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/edit_label_alignment"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <ExpandableListView
-            android:id="@+id_edit/expandablelistview_alignment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-        </ExpandableListView>
+        <!-- Class -->
 
         <TextView
             android:id="@+id_edit/textview_class"
@@ -61,13 +44,192 @@
             android:text="@string/edit_label_class"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <ExpandableListView
-            android:id="@+id_edit/expandablelistview_class"
+        <Spinner
+            android:id="@+id_edit/spinner_class"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-        </ExpandableListView>
-        
-        
+        </Spinner>
+
+        <!-- Race -->
+
+        <TextView
+            android:id="@+id_edit/textview_race"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_race"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_race"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <!-- Alignment -->
+
+        <TextView
+            android:id="@+id_edit/textview_alignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_alignment"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_alignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <!-- Religion -->
+
+        <TextView
+            android:id="@+id_edit/textview_religion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_religion"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_religion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+    </TableRow>
+
+    <TableRow>
+
+        <!-- Size -->
+
+        <TextView
+            android:id="@+id_edit/textview_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_size"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Age -->
+
+        <TextView
+            android:id="@+id_edit/textview_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_age"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Gender -->
+
+        <TextView
+            android:id="@+id_edit/textview_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_gender"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Height -->
+
+        <TextView
+            android:id="@+id_edit/textview_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_height"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Weight -->
+
+        <TextView
+            android:id="@+id_edit/textview_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_weight"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Eye -->
+
+        <TextView
+            android:id="@+id_edit/textview_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_eye"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_eye"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Hair -->
+
+        <TextView
+            android:id="@+id_edit/textview_hair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_hair"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_hair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Skin -->
+
+        <TextView
+            android:id="@+id_edit/textview_skin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_skin"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_skin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+    </TableRow>
+
+    <TableRow>
+
+        <!-- Abilitys -->
     </TableRow>
 
 </TableLayout>
