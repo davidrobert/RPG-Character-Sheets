@@ -19,7 +19,7 @@ public class RpgCharacter implements Serializable {
 	private TypeRpgRace race;
 	private HashMap<TypeRpgClass, Integer> classes;
 	private TypeRpgAlignment alignment;
-	private TypeGender sex;
+	private TypeGender gender;
 	
 	public long getId() {
 		return id;
@@ -58,11 +58,11 @@ public class RpgCharacter implements Serializable {
 	public void setAlignment(TypeRpgAlignment alignment) {
 		this.alignment = alignment;
 	}
-	public TypeGender getSex() {
-		return sex;
+	public TypeGender getGender() {
+		return gender;
 	}
-	public void setSex(TypeGender sex) {
-		this.sex = sex;
+	public void setSex(TypeGender gender) {
+		this.gender = gender;
 	}
 	
 	@Override
