@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="edit_label_name">Name</string>
+    <string name="edit_label_race">Race</string>
+    <string name="edit_label_alignment">Alignment</string>
+    <string name="edit_label_gender">Gender</string>
+    <string name="edit_label_class">Class</string>
+
+</resources>

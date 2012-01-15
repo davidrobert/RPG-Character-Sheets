@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableRow>
+
+        <ImageButton
+            android:id="@+id_edit/imagebutton_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_star" />
+
+        <TextView
+            android:id="@+id_edit/textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_name"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id_edit/edittext_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" 
+            android:width="200dp" >
+
+            <requestFocus />
+        </EditText>
+        
+        <TextView
+            android:id="@+id_edit/textview_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_gender"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ExpandableListView
+            android:id="@+id_edit/expandablelistview_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ExpandableListView>
+
+        <TextView
+            android:id="@+id_edit/textview_alignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_alignment"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ExpandableListView
+            android:id="@+id_edit/expandablelistview_alignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ExpandableListView>
+
+        <TextView
+            android:id="@+id_edit/textview_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_class"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ExpandableListView
+            android:id="@+id_edit/expandablelistview_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ExpandableListView>
+        
+        
+    </TableRow>
+
+</TableLayout>
