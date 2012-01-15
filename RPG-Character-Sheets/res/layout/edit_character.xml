@@ -230,6 +230,116 @@
     <TableRow>
 
         <!-- Abilitys -->
+
+        <FrameLayout
+            android:id="@+id_edit/bbbbbb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TableLayout
+                android:id="@+id_edit/aaaaaa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_strength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_strength_abbreviation"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_strength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_dexterity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_dexterity_abbreviation"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_dexterity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_constitution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_constitution_abbreviation"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_constitution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_intelligence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_intelligence_abbreviation"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_intelligence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_wisdom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_wisdom_abbreviation"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_wisdom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_charisma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_charisma_abbreviation"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_charisma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                
+            </TableLayout>
+        </FrameLayout>
     </TableRow>
 
 </TableLayout>
