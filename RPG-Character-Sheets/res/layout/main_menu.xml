@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id_menu/textView1"
+        android:id="@+id_menu/textview_appname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
@@ -15,7 +15,7 @@
     
 
     <Button
-        android:id="@+id_menu/button1"
+        android:id="@+id_menu/button_newcharacter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_new_character" 
@@ -25,7 +25,7 @@
          />
 
     <Button
-        android:id="@+id_menu/button2"
+        android:id="@+id_menu/button_loadcharacter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_load_character"
@@ -35,7 +35,7 @@
          />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id_menu/button_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_exit_character"
