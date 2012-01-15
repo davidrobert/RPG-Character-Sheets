@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
 
-public enum TypeRpgAlignment {
+public enum TypeRpgAlignment implements TypeCode {
 		
 	LAWFUL_GOOD(R.string.alignment_lawful_good),
 	NEUTRAL_GOOD(R.string.alignment_neutral_good),

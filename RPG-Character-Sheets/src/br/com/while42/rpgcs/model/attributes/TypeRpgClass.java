@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
 
-public enum TypeRpgClass {
+public enum TypeRpgClass implements TypeCode {
 	NONE(R.string.class_none),
 	BARBARIAN(R.string.class_barbarian), 
 	BARD(R.string.class_bard),

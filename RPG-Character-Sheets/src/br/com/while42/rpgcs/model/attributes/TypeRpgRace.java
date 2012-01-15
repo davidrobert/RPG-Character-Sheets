@@ -10,7 +10,7 @@ import br.com.while42.rpgcs.model.race.Halfling;
 import br.com.while42.rpgcs.model.race.Human;
 import br.com.while42.rpgcs.model.race.Race;
 
-public enum TypeRpgRace {
+public enum TypeRpgRace implements TypeCode {
 	HUMAN(R.string.race_human, new Human()),
 	ELF(R.string.race_elf, new Elf()),
 	DWARF(R.string.race_dwarf, new Dwarf()),

@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
 
-public enum TypeRpgLanguage {
+public enum TypeRpgLanguage implements TypeCode {
 
 	ABYSSAL(R.string.language_abyssal),
 	AQUAN(R.string.language_aquan), 	

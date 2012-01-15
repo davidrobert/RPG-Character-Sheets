@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
 
-public enum TypeEyeColor {
+public enum TypeEyeColor implements TypeCode {
 	Yellow(R.string.eye_color_yellow),
 	Amber(R.string.eye_color_amber),
 	Brown(R.string.eye_color_brown),

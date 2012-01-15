@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
 
-public enum TypeRpgReligion {
+public enum TypeRpgReligion implements TypeCode {
 	
 	NONE(R.string.religion_none, R.string.religion_none_description, R.string.religion_none_alignment),
 	BOCCOB(R.string.religion_boccob, R.string.religion_boccob_description, R.string.religion_boccob_alignment),

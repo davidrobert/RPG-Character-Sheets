@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
 
-public enum TypeSkinColor {
+public enum TypeSkinColor implements TypeCode {
 	PALE(R.string.skin_color_pale),
 	FAIR(R.string.skin_color_fair),
 	LIGHT(R.string.skin_color_light),

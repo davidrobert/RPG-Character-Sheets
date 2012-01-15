@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
 
-public enum TypeRpgSize {
+public enum TypeRpgSize implements TypeCode {
 	FINE(R.string.size_fine), 
 	DIMINUTTIVE(R.string.size_diminutive), 
 	TINY(R.string.size_tiny), 

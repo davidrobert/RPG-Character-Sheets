@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
 
-public enum TypeHairColor {
+public enum TypeHairColor implements TypeCode {
 	BLACK(R.string.hair_color_black),
 	GRAY(R.string.hair_color_gray),
 	PLATINUM(R.string.hair_color_platinum),

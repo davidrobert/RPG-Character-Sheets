@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
 
-public enum TypeRpgSkill {
+public enum TypeRpgSkill implements TypeCode {
 	APPRAISE(R.string.skill_appraise),
 	BALANCE(R.string.skill_balance),
 	BLUFF(R.string.skill_bluff),
