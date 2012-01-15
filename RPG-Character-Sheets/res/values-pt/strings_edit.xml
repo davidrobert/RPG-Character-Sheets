@@ -2,7 +2,7 @@
 <resources>
 
     <string name="edit_description_image">Imagem do Personagem</string>
-    <string name="edit_label_name">NBome</string>
+    <string name="edit_label_name">Nome</string>
     
     <string name="edit_label_class">Classe</string>
     <string name="edit_label_level">Nível</string>
