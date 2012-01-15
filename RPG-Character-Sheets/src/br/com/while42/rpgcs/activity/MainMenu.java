@@ -32,6 +32,21 @@ public class MainMenu extends Activity {
 			}
 		});
 		
+		loadCharacter.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO: Falta implementar
+			}
+		});
+		
+		exit.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 		
 	}
 }
