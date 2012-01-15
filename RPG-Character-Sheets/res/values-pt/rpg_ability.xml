@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
     <string name="ability_strength">Força</string>
     <string name="ability_dexterity">Destreza</string>
     <string name="ability_constitution">Constituição</string>
@@ -8,4 +8,11 @@
     <string name="ability_wisdom">Sabedoria</string>
     <string name="ability_charisma">Carisma</string>
     
+    <string name="ability_strength_abbreviation">FOR</string>
+    <string name="ability_dexterity_abbreviation">DES</string>
+    <string name="ability_constitution_abbreviation">CON</string>
+    <string name="ability_intelligence_abbreviation">INT</string>
+    <string name="ability_wisdom_abbreviation">SAB</string>
+    <string name="ability_charisma_abbreviation">CAR</string>
+
 </resources>

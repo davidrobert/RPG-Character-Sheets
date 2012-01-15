@@ -8,4 +8,11 @@
     <string name="ability_wisdom">Wisdom</string>
     <string name="ability_charisma">Charisma</string>
     
+    <string name="ability_strength_abbreviation">STR</string>
+    <string name="ability_dexterity_abbreviation">DEX</string>
+    <string name="ability_constitution_abbreviation">CON</string>
+    <string name="ability_intelligence_abbreviation">INT</string>
+    <string name="ability_wisdom_abbreviation">WIS</string>
+    <string name="ability_charisma_abbreviation">CHA</string>
+    
 </resources>
