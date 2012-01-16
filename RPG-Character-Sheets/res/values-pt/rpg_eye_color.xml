@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <string name="eye_color_yellow">Amarelo</string>
+    <string name="eye_color_amber">Âmbar</string>
+    <string name="eye_color_brown">Marrom</string>
+    <string name="eye_color_hazel">Castanho</string>
+    <string name="eye_color_green">Verde</string>
+    <string name="eye_color_blue">Azul</string>
+    <string name="eye_color_gray">Cinza</string>
+    <string name="eye_color_aqua">Aqua</string>
+    <string name="eye_color_red">Vermelho</string>
+    <string name="eye_color_purple">Roxo</string>
+    <string name="eye_color_pale_brown">Morrom Pálido</string>
+    <string name="eye_color_pale_blue">Azul Pálido</string>
+    <string name="eye_color_pale_green">Verde Pálido</string>
+    <string name="eye_color_pale_gray">Cinza Pálido</string>
+    <string name="eye_color_deep_blue">Azul Profundo</string>
+    <string name="eye_color_violet_red">Vermelho Violeta</string>
+    <string name="eye_color_orange">Laranja</string>
+    <string name="eye_color_spring_green">Verde Primavera</string>
+    <string name="eye_color_sea_green">Verde Marinho</string>
+    <string name="eye_color_emerald_green">Verde Esperalda</string>
+    
+</resources>

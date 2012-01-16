@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="skin_color_pale">Pardo</string>
+    <string name="skin_color_fair">Branco</string>
+    <string name="skin_color_light">Claro</string>
+    <string name="skin_color_light_tan">Castanho Claro</string>
+    <string name="skin_color_tan">Castanho</string>
+    <string name="skin_color_dark_tan">Castanho Escuro</string>
+    <string name="skin_color_brown">Marrom</string>
+    <string name="skin_color_dark_brown">Marrom Escuro</string>
+    <string name="skin_color_black">Preto</string>
+    <string name="skin_color_gray">Cinza</string>
+    <string name="skin_color_white">Branco</string>
+    <string name="skin_color_gold">Dourado</string>
+    <string name="skin_color_silver">Prata</string>
+    <string name="skin_color_bronze">Bronze</string>
+    <string name="skin_color_red">Vermelho</string>
+    <string name="skin_color_orange">Laranja</string>
+    <string name="skin_color_yellow">Amarelo</string>
+    <string name="skin_color_green">Verde</string>
+    <string name="skin_color_blue">Azul</string>
+    <string name="skin_color_purple">Roxo</string>
+    <string name="skin_color_pale_yellow">Amarelo Pálido</string>
+    <string name="skin_color_dark_red">Vermelho Escuro</string>
+    <string name="skin_color_red_orange">Vermelho Alaranjado</string>
+    <string name="skin_color_light_red">Vermelho Claro</string>
+    <string name="skin_color_amber">Âmbar</string>
+    <string name="skin_color_olive">Verde Oliva</string>
+    <string name="skin_color_aqua">Aqua</string>
+    <string name="skin_color_pale_brown">Marrom Pálido</string>
+    <string name="skin_color_pale_blue">Azul Pálido</string>
+    <string name="skin_color_pale_green">Verde Pálido</string>
+    <string name="skin_color_pale_gray">Cinza Pálido</string>
+    <string name="skin_color_deep_blue">Azul Profundo</string>
+    <string name="skin_color_violet_red">Vermelho Violeta</string>
+    <string name="skin_color_spring_green">Verde Primavera</string>
+    <string name="skin_color_sea_green">Verde Marinho</string>
+    <string name="skin_color_emerald_green">Verde Esmeralda</string>
+ 
+</resources>

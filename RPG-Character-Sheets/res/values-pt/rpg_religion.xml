@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
               
-    <string name="religion_none">None</string>
+    <string name="religion_none">Nenhuma</string>
     <string name="religion_none_description"></string>
     <string name="religion_none_alignment"></string>
     
