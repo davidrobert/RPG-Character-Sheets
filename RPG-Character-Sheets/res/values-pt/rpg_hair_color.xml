@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hair_color_black">Preto</string>
+    <string name="hair_color_gray">Cinza</string>
+    <string name="hair_color_platinum">Platina</string>
+    <string name="hair_color_white">Branco</string>
+    <string name="hair_color_dark_blonde">Loiro Escuro</string>
+    <string name="hair_color_blonde">Loiro</string>
+    <string name="hair_color_bleach_blonde">Bleach Blonde</string>
+    <string name="hair_color_dark_redhead">Dark Redhead</string>
+    <string name="hair_color_redhead">Ruivo</string>
+    <string name="hair_color_light_redhead">Ruivo Claro</string>
+    <string name="hair_color_brunette">Moreno</string>
+    <string name="hair_color_auburn">Castanho Avermelhado</string>
+    <string name="hair_color_yellow">Amarelo</string>
+    <string name="hair_color_amber">Âmbar</string>
+    <string name="hair_color_brown">Marrom</string>
+    <string name="hair_color_hazel">Castanho</string>
+    <string name="hair_color_green">Verde</string>
+    <string name="hair_color_blue">Azul</string>
+    <string name="hair_color_silver">Prata</string>
+    <string name="hair_color_aqua">Aqua</string>
+    <string name="hair_color_red">Vermelho</string>
+    <string name="hair_color_purple">Roxo</string>
+    <string name="hair_color_pale_brown">Marrom Pálido</string>
+    <string name="hair_color_pale_blue">Azul Pálido</string>
+    <string name="hair_color_pale_green">Verde Pálido</string>
+    <string name="hair_color_pale_gray">Cinza Pálido</string>
+    <string name="hair_color_deep_blue">Azul Marinho</string>
+    <string name="hair_color_violet_red">Vermelho Violeta</string>
+    <string name="hair_color_orange">Laranja</string>
+    <string name="hair_color_spring_green">Verde Primavera</string>
+    <string name="hair_color_sea_green">Verde Marinho</string>
+    <string name="hair_color_emerald_green">Verde Esmeralda</string>
+
+    
+</resources>
