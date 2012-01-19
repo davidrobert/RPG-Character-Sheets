@@ -1,5 +1,8 @@
 package br.com.while42.rpgcs.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -40,12 +43,17 @@ public class EditCharacter extends Activity {
 	private Spinner skin;
 
 	private void setOptionsSpinner(Spinner spinner, TypeCode[] types ) {
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
 
+		List<Element> items = new ArrayList<Element>();
 		for (TypeCode g : types) {
-			adapter.add(getString(g.getNameCode()));
+			items.add(new Element(getString(g.getNameCode()), g.getNameCode()));			
 		}
+		
+		ArrayAdapter<Element> adapter = new ArrayAdapter<Element>(this, android.R.layout.simple_spinner_item, items);
+		
+		// TODO: Rever este ponto
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);		
 
 		spinner.setAdapter(adapter);
 	}
