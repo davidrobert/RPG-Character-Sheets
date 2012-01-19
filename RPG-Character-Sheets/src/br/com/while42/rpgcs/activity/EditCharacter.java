@@ -91,7 +91,8 @@ public class EditCharacter extends Activity {
 		setOptionsSpinner(eye, TypeEyeColor.values());
 		setOptionsSpinner(hair, TypeHairColor.values());
 		setOptionsSpinner(skin, TypeSkinColor.values());
-				
+		
+		// TODO: ...
 	}
 
 }
