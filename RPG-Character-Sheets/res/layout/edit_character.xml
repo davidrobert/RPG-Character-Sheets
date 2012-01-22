@@ -232,12 +232,12 @@
         <!-- Abilitys -->
 
         <FrameLayout
-            android:id="@+id_edit/bbbbbb"
+            android:id="@+id_edit/framelayout_abilitys"
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
             <TableLayout
-                android:id="@+id_edit/aaaaaa"
+                android:id="@+id_edit/tablelayout_abilitys"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
@@ -341,5 +341,11 @@
             </TableLayout>
         </FrameLayout>
     </TableRow>
+
+    <Button
+        android:id="@+id_edit/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_button_save" />
 
 </TableLayout>

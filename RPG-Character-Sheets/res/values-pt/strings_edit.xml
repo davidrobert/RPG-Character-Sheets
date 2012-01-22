@@ -18,5 +18,7 @@
     <string name="edit_label_eye">Olhos</string>
     <string name="edit_label_hair">Cabelo</string>
     <string name="edit_label_skin">Pele</string>
+    
+    <string name="edit_button_save">Salvar</string>
 
 </resources>

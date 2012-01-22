@@ -3,9 +3,6 @@ package br.com.while42.rpgcs.model;
 import java.io.Serializable;
 import java.util.HashMap;
 
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.Spinner;
 import br.com.while42.rpgcs.model.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.attributes.TypeGender;
 import br.com.while42.rpgcs.model.attributes.TypeHairColor;
@@ -24,7 +21,7 @@ public class RpgCharacter implements Serializable {
 	private String image;
 	
 	private String name;
-	private HashMap<TypeRpgClass, Integer> classes;
+	private HashMap<TypeRpgClass, Integer> classes = new HashMap<TypeRpgClass, Integer>();
 	private TypeRpgRace race;	
 	private TypeRpgAlignment alignment;
 	private TypeRpgReligion religion;
@@ -37,6 +34,8 @@ public class RpgCharacter implements Serializable {
 	private TypeEyeColor eye;
 	private TypeHairColor hair;
 	private TypeSkinColor skin;	
+	
+	
 	
 	@Override
 	public String toString() {
@@ -77,6 +76,14 @@ public class RpgCharacter implements Serializable {
 
 	public void setClasses(HashMap<TypeRpgClass, Integer> classes) {
 		this.classes = classes;
+	}
+	
+	public void addClasse(TypeRpgClass classe, Integer level) {
+		classes.put(classe, level);
+	}
+	
+	public void clearClasses() {
+		classes.clear();
 	}
 
 	public TypeRpgRace getRace() {
@@ -150,4 +157,5 @@ public class RpgCharacter implements Serializable {
 	public void setSkin(TypeSkinColor skin) {
 		this.skin = skin;
 	}
+
 }

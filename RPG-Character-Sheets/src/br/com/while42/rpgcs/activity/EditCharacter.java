@@ -5,7 +5,11 @@ import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -23,18 +27,21 @@ import br.com.while42.rpgcs.model.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.attributes.TypeSkinColor;
 
 public class EditCharacter extends Activity {
-	private RpgCharacter rpgCharacter;
+
+	private static int START_LEVEL = 1;
+
+	private RpgCharacter character = new RpgCharacter();
 
 	private ImageButton image;
 	private EditText name;
-	
+
 	private Spinner classe;
 	private Spinner race;
 	private Spinner alignment;
 	private Spinner religion;
-	
+
 	private Spinner size;
-	private Spinner age;	
+	private Spinner age;
 	private Spinner gender;
 	private Spinner height;
 	private Spinner weight;
@@ -42,22 +49,23 @@ public class EditCharacter extends Activity {
 	private Spinner hair;
 	private Spinner skin;
 
-	private void setOptionsSpinner(Spinner spinner, TypeCode[] types ) {
-		
+	private Button save;
+
+	private void setOptionsSpinner(Spinner spinner, TypeCode[] types) {
 
 		List<Element> items = new ArrayList<Element>();
 		for (TypeCode g : types) {
-			items.add(new Element(getString(g.getNameCode()), g.getNameCode()));			
+			items.add(new Element(g, getString(g.getNameCode())));
 		}
-		
+
 		ArrayAdapter<Element> adapter = new ArrayAdapter<Element>(this, android.R.layout.simple_spinner_item, items);
-		
+
 		// TODO: Rever este ponto
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);		
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
 		spinner.setAdapter(adapter);
 	}
-	
+
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -71,12 +79,12 @@ public class EditCharacter extends Activity {
 
 		image = (ImageButton) findViewById(R.id_edit.imagebutton_image);
 		name = (EditText) findViewById(R.id_edit.edittext_name);
-		
+
 		classe = (Spinner) findViewById(R.id_edit.spinner_class);
 		race = (Spinner) findViewById(R.id_edit.spinner_race);
 		alignment = (Spinner) findViewById(R.id_edit.spinner_alignment);
 		religion = (Spinner) findViewById(R.id_edit.spinner_religion);
-		
+
 		size = (Spinner) findViewById(R.id_edit.spinner_size);
 		age = (Spinner) findViewById(R.id_edit.spinner_age);
 		gender = (Spinner) findViewById(R.id_edit.spinner_gender);
@@ -85,22 +93,53 @@ public class EditCharacter extends Activity {
 		eye = (Spinner) findViewById(R.id_edit.spinner_eye);
 		hair = (Spinner) findViewById(R.id_edit.spinner_hair);
 		skin = (Spinner) findViewById(R.id_edit.spinner_skin);
-		
+
+		save = (Button) findViewById(R.id_edit.button_save);
+
 		setOptionsSpinner(classe, TypeRpgClass.values());
 		setOptionsSpinner(race, TypeRpgRace.values());
 		setOptionsSpinner(alignment, TypeRpgAlignment.values());
 		setOptionsSpinner(religion, TypeRpgReligion.values());
-		
+
 		setOptionsSpinner(size, TypeRpgSize.values());
 		// TODO: age
 		setOptionsSpinner(gender, TypeGender.values());
 		// TODO: height
-		// TODO: weight		
+		// TODO: weight
 		setOptionsSpinner(eye, TypeEyeColor.values());
 		setOptionsSpinner(hair, TypeHairColor.values());
 		setOptionsSpinner(skin, TypeSkinColor.values());
-		
-		// TODO: ...
+
+		save.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Element e;
+				
+				character.setName(name.getText().toString());
+				character.clearClasses(); // TODO: Only first edit...
+				
+				e = (Element) classe.getSelectedItem();
+				character.addClasse((TypeRpgClass) e.getType(), START_LEVEL);
+
+				e = (Element) race.getSelectedItem();
+				character.setRace((TypeRpgRace) e.getType());
+				
+				e = (Element) alignment.getSelectedItem();
+				character.setAlignment((TypeRpgAlignment) e.getType());
+				
+				e = (Element) religion.getSelectedItem();
+				character.setReligion((TypeRpgReligion) e.getType());
+
+				// DEBUG
+				Log.e(">> class     >>", character.getClasses().toString());
+				Log.e(">> race      >>", character.getRace().toString());
+				Log.e(">> alignment >>", character.getAlignment().toString());
+				Log.e(">> religion  >>", character.getReligion().toString());
+
+			}
+		});
+
 	}
 
 }

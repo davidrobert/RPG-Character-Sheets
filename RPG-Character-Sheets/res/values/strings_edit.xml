@@ -18,5 +18,7 @@
     <string name="edit_label_eye">Eye</string>
     <string name="edit_label_hair">Hair</string>
     <string name="edit_label_skin">Skin</string>
+    
+    <string name="edit_button_save">Save</string>
 
 </resources>

@@ -1,28 +1,22 @@
 package br.com.while42.rpgcs.activity;
 
+import br.com.while42.rpgcs.model.attributes.TypeCode;
+
 public class Element {
 	private String text;
-	private long id;
+	private TypeCode type;
 
-	public Element(String text, long id) {
+	public Element(TypeCode type, String text) {
+		this.type = type;
 		this.text = text;
-		this.id = id;
 	}
 
-	public long getId() {
-		return id;
+	public TypeCode getType() {
+		return type;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getmText() {
+	public String getText() {
 		return text;
-	}
-
-	public void setmText(String text) {
-		this.text = text;
 	}
 
 	@Override
