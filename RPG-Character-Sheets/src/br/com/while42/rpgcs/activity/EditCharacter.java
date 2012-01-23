@@ -58,10 +58,7 @@ public class EditCharacter extends Activity {
 			items.add(new Element(g, getString(g.getNameCode())));
 		}
 
-		ArrayAdapter<Element> adapter = new ArrayAdapter<Element>(this, android.R.layout.simple_spinner_item, items);
-
-		// TODO: Rever este ponto
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ArrayAdapter<Element> adapter = new ArrayAdapter<Element>(this, android.R.layout.simple_spinner_dropdown_item, items);
 
 		spinner.setAdapter(adapter);
 	}
@@ -116,27 +113,72 @@ public class EditCharacter extends Activity {
 			public void onClick(View v) {
 				Element e;
 				
-				character.setName(name.getText().toString());
-				character.clearClasses(); // TODO: Only first edit...
+				// Name
+				character.setName(name.getText().toString());				
 				
+				// Class
+				character.clearClasses(); // TODO: Only first edit...
 				e = (Element) classe.getSelectedItem();
 				character.addClasse((TypeRpgClass) e.getType(), START_LEVEL);
 
+				// Race
 				e = (Element) race.getSelectedItem();
 				character.setRace((TypeRpgRace) e.getType());
 				
+				// Alignment
 				e = (Element) alignment.getSelectedItem();
 				character.setAlignment((TypeRpgAlignment) e.getType());
 				
+				// Religion
 				e = (Element) religion.getSelectedItem();
 				character.setReligion((TypeRpgReligion) e.getType());
+				
+				// Size
+				e = (Element) size.getSelectedItem();
+				character.setSize((TypeRpgSize) e.getType());
 
+				// Age
+				e = (Element) age.getSelectedItem();
+				// TODO: Age
+				
+				// Gender
+				e = (Element) gender.getSelectedItem();
+				character.setGender((TypeGender) e.getType());
+
+				// Height
+				e = (Element) height.getSelectedItem();
+				// TODO: Height				
+				
+				// Weight
+				e = (Element) weight.getSelectedItem();
+				// TODO: Weight
+				
+				// Eye
+				e = (Element) eye.getSelectedItem();
+				character.setEye((TypeEyeColor) e.getType());
+				
+				// Hair
+				e = (Element) hair.getSelectedItem();
+				character.setHair((TypeHairColor) e.getType());
+				
+				// Skin
+				e = (Element) skin.getSelectedItem();
+				character.setSkin((TypeSkinColor) e.getType());
+				
 				// DEBUG
 				Log.e(">> class     >>", character.getClasses().toString());
 				Log.e(">> race      >>", character.getRace().toString());
 				Log.e(">> alignment >>", character.getAlignment().toString());
 				Log.e(">> religion  >>", character.getReligion().toString());
 
+				Log.e(">> size      >>", character.getSize().toString());
+				Log.e(">> age       >>", character.getAge().toString());
+				Log.e(">> gender    >>", character.getGender().toString());
+				Log.e(">> height    >>", character.getHeight().toString());
+				Log.e(">> weight    >>", character.getWeight().toString());
+				Log.e(">> eye       >>", character.getEye().toString());
+				Log.e(">> hair      >>", character.getHair().toString());
+				Log.e(">> skin      >>", character.getSkin().toString());
 			}
 		});
 

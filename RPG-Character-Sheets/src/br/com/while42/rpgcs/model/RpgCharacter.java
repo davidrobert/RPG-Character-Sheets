@@ -27,15 +27,17 @@ public class RpgCharacter implements Serializable {
 	private TypeRpgReligion religion;
 	
 	private TypeRpgSize size;
-	private int age;	
+	private Integer age = 0;	
 	private TypeGender gender;
-	// TODO: height
-	// TODO: weight
+	private Integer height = 0;
+	private Integer weight = 0;
 	private TypeEyeColor eye;
 	private TypeHairColor hair;
 	private TypeSkinColor skin;	
 	
-	
+	public RpgCharacter() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	@Override
 	public String toString() {
@@ -118,11 +120,11 @@ public class RpgCharacter implements Serializable {
 		this.size = size;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
@@ -132,6 +134,22 @@ public class RpgCharacter implements Serializable {
 
 	public void setGender(TypeGender gender) {
 		this.gender = gender;
+	}
+
+	public Integer getHeight() {
+		return height;
+	}
+
+	public void setHeight(Integer height) {
+		this.height = height;
+	}
+
+	public Integer getWeight() {
+		return weight;
+	}
+
+	public void setWeight(Integer weight) {
+		this.weight = weight;
 	}
 
 	public TypeEyeColor getEye() {
