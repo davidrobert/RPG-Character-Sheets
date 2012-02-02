@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model;
 
 import junit.framework.Assert;
 import android.test.AndroidTestCase;
-import br.com.while42.rpgcs.model.bonuses.BaseSaveBonuses;
+import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class BaseSaveBonusesTest extends AndroidTestCase {
 		

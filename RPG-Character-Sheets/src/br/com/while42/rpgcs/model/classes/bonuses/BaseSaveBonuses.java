@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.bonuses;
+package br.com.while42.rpgcs.model.classes.bonuses;
 
 public class BaseSaveBonuses {
 		public static int MAX_LEVEL = 20;
