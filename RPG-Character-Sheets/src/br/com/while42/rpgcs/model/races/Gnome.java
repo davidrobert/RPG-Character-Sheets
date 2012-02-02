@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.races;
 
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 
-public class Gnome extends Race {
+public class Gnome extends AbstractRace {
 	@Override
 	public int getAdjustmentsOfConstitution() {		
 		return +2;

@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model.races;
 
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 
-public class Halfling extends Race {
+public class Halfling extends AbstractRace {
 	@Override
 	public int getAdjustmentsOfDexterity() {		
 		return +2;

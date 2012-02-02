@@ -8,7 +8,7 @@ import br.com.while42.rpgcs.model.races.HalfElf;
 import br.com.while42.rpgcs.model.races.HalfOrc;
 import br.com.while42.rpgcs.model.races.Halfling;
 import br.com.while42.rpgcs.model.races.Human;
-import br.com.while42.rpgcs.model.races.Race;
+import br.com.while42.rpgcs.model.races.AbstractRace;
 
 public enum TypeRpgRace implements TypeCode {
 	HUMAN(R.string.race_human, new Human()),
@@ -20,9 +20,9 @@ public enum TypeRpgRace implements TypeCode {
 	GNOME(R.string.race_gnome, new Gnome());
 	
 	private int nameCode;
-	private Race race;
+	private AbstractRace race;
 	
-	private TypeRpgRace(int nameCode, Race race) {
+	private TypeRpgRace(int nameCode, AbstractRace race) {
 		this.nameCode = nameCode;
 		this.race = race;
 	}
@@ -31,7 +31,7 @@ public enum TypeRpgRace implements TypeCode {
 		return nameCode;
 	}
 	
-	public Race getRace() {
+	public AbstractRace getRace() {
 		return race;
 	}
 }
