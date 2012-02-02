@@ -3,6 +3,7 @@ package br.com.while42.rpgcs.model.races;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 
 public abstract class Race {
+	
 	public int getAdjustmentsOfStrength() {
 		return 0;
 	}
