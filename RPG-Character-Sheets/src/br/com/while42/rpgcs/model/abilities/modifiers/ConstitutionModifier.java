@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.modifiers;
+package br.com.while42.rpgcs.model.abilities.modifiers;
 
 import java.util.Map;
 

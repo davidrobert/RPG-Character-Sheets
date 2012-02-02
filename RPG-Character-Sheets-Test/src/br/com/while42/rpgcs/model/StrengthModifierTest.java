@@ -1,6 +1,6 @@
 package br.com.while42.rpgcs.model;
 
-import br.com.while42.rpgcs.model.modifiers.StrengthModifier;
+import br.com.while42.rpgcs.model.abilities.modifiers.StrengthModifier;
 import junit.framework.Assert;
 import android.test.AndroidTestCase;
 
