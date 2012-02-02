@@ -12,4 +12,20 @@ public abstract class AbstractClass {
 	public TypeRpgClass getClassType() {
 		return TypeRpgClass.NONE;
 	}
+	
+	public int getBaseAttackBonus(int level) {
+		return 0;
+	}
+	
+	public int getFortSave(int level) {
+		return 0;
+	}
+	
+	public int getRefSave(int level) {
+		return 0;
+	}
+	
+	public int getWillSave(int level) {
+		return 0;
+	}
 }
