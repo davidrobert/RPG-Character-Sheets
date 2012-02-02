@@ -35,6 +35,20 @@ public class RpgCharacter implements Serializable {
 	private TypeHairColor hair;
 	private TypeSkinColor skin;	
 	
+	private Integer hitPoints = 0;
+	private Integer currentHitPoints = 0;
+	
+	private Integer armorClass = 0;
+	
+	private Integer touchArmorClass = 0;
+	private Integer flatFooted = 0;
+	private Integer initiative = 0;
+	
+	private Integer baseAttackBonus = 0;
+	private Integer spellResistence = 0;
+	private Integer grapple = 0;
+	
+	
 	public RpgCharacter() {
 		// TODO Auto-generated constructor stub
 	}
