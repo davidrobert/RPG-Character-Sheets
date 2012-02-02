@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import br.com.while42.rpgcs.R;
-import br.com.while42.rpgcs.model.RpgCharacter;
+import br.com.while42.rpgcs.model.character.RpgCharacter;
 
 public class ListCharacterAdapter extends BaseAdapter {
 	private Context context;

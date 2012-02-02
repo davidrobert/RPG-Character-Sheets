@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.adapter.ListCharacterAdapter;
-import br.com.while42.rpgcs.model.RpgCharacter;
+import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.persist.CharacterDAO;
 
 public class ListCharacters extends Activity {

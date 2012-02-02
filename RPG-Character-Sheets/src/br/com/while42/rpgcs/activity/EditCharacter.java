@@ -14,17 +14,17 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import br.com.while42.rpgcs.R;
-import br.com.while42.rpgcs.model.RpgCharacter;
-import br.com.while42.rpgcs.model.attributes.TypeCode;
-import br.com.while42.rpgcs.model.attributes.TypeEyeColor;
-import br.com.while42.rpgcs.model.attributes.TypeGender;
-import br.com.while42.rpgcs.model.attributes.TypeHairColor;
-import br.com.while42.rpgcs.model.attributes.TypeRpgAlignment;
-import br.com.while42.rpgcs.model.attributes.TypeRpgClass;
-import br.com.while42.rpgcs.model.attributes.TypeRpgRace;
-import br.com.while42.rpgcs.model.attributes.TypeRpgReligion;
-import br.com.while42.rpgcs.model.attributes.TypeRpgSize;
-import br.com.while42.rpgcs.model.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.model.character.attributes.TypeCode;
+import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeGender;
+import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
+import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 
 public class EditCharacter extends Activity {
 

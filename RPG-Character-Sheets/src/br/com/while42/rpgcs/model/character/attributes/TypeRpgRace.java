@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.attributes;
+package br.com.while42.rpgcs.model.character.attributes;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.races.Dwarf;

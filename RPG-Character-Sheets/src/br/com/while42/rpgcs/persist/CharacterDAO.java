@@ -8,7 +8,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import br.com.while42.rpgcs.model.RpgCharacter;
+import br.com.while42.rpgcs.model.character.RpgCharacter;
 
 public class CharacterDAO extends SQLiteOpenHelper {
 	

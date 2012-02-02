@@ -1,6 +1,6 @@
 package br.com.while42.rpgcs.model.races;
 
-import br.com.while42.rpgcs.model.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 
 public class Dwarf extends Race {
 

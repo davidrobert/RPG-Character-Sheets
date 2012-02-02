@@ -1,17 +1,17 @@
-package br.com.while42.rpgcs.model;
+package br.com.while42.rpgcs.model.character;
 
 import java.io.Serializable;
 import java.util.HashMap;
 
-import br.com.while42.rpgcs.model.attributes.TypeEyeColor;
-import br.com.while42.rpgcs.model.attributes.TypeGender;
-import br.com.while42.rpgcs.model.attributes.TypeHairColor;
-import br.com.while42.rpgcs.model.attributes.TypeRpgAlignment;
-import br.com.while42.rpgcs.model.attributes.TypeRpgClass;
-import br.com.while42.rpgcs.model.attributes.TypeRpgRace;
-import br.com.while42.rpgcs.model.attributes.TypeRpgReligion;
-import br.com.while42.rpgcs.model.attributes.TypeRpgSize;
-import br.com.while42.rpgcs.model.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeGender;
+import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
+import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 
 public class RpgCharacter implements Serializable {
 
