@@ -1,14 +1,14 @@
 package br.com.while42.rpgcs.model.attributes;
 
 import br.com.while42.rpgcs.R;
-import br.com.while42.rpgcs.model.race.Dwarf;
-import br.com.while42.rpgcs.model.race.Elf;
-import br.com.while42.rpgcs.model.race.Gnome;
-import br.com.while42.rpgcs.model.race.HalfElf;
-import br.com.while42.rpgcs.model.race.HalfOrc;
-import br.com.while42.rpgcs.model.race.Halfling;
-import br.com.while42.rpgcs.model.race.Human;
-import br.com.while42.rpgcs.model.race.Race;
+import br.com.while42.rpgcs.model.races.Dwarf;
+import br.com.while42.rpgcs.model.races.Elf;
+import br.com.while42.rpgcs.model.races.Gnome;
+import br.com.while42.rpgcs.model.races.HalfElf;
+import br.com.while42.rpgcs.model.races.HalfOrc;
+import br.com.while42.rpgcs.model.races.Halfling;
+import br.com.while42.rpgcs.model.races.Human;
+import br.com.while42.rpgcs.model.races.Race;
 
 public enum TypeRpgRace implements TypeCode {
 	HUMAN(R.string.race_human, new Human()),

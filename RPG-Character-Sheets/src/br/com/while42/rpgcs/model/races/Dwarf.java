@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.race;
+package br.com.while42.rpgcs.model.races;
 
 import br.com.while42.rpgcs.model.attributes.TypeRpgClass;
 
