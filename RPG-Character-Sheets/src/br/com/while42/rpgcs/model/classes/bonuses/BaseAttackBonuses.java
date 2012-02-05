@@ -1,34 +1,107 @@
 package br.com.while42.rpgcs.model.classes.bonuses;
 
 public class BaseAttackBonuses {
-	public static int MAX_LEVEL = 20;
-	public static int MIN_LEVEL = 1;
 
-	private static int good[]    = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
-	private static int average[] = {0, 0, 1, 2, 3, 3, 4, 5, 6, 6,  7,  8,  9,  9, 10, 11, 12, 12, 13, 14, 15};
-	private static int poor[]    = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4,  5,  5,  6,  6,  7,  7,  8,  8,  9,  9, 10};		
+	private static int good[][]    = {{ 0,  0,  0,  0}, 
+		                              { 1,  0,  0,  0}, 
+		                              { 2,  0,  0,  0}, 
+		                              { 3,  0,  0,  0}, 
+		                              { 4,  0,  0,  0}, 
+		                              { 5,  0,  0,  0}, 
+		                              { 6,  1,  0,  0}, 
+		                              { 7,  2,  0,  0}, 
+		                              { 8,  3,  0,  0}, 
+		                              { 9,  4,  0,  0}, 
+		                              {10,  5,  0,  0}, 
+		                              {11,  6,  1,  0}, 
+		                              {12,  7,  2,  0}, 
+		                              {13,  8,  3,  0}, 
+		                              {14,  9,  4,  0}, 
+		                              {15, 10,  5,  0}, 
+		                              {16, 11,  6,  1},
+		                              {17, 12,  7,  2}, 
+		                              {18, 13,  8,  3}, 
+		                              {19, 14,  9,  4}, 
+		                              {20, 15, 10,  5}};
+	
+	private static int average[][] = {{ 0,  0,  0,  0}, 
+		                              { 0,  0,  0,  0}, 
+		                              { 1,  0,  0,  0}, 
+		                              { 2,  0,  0,  0}, 
+		                              { 3,  0,  0,  0}, 
+		                              { 3,  0,  0,  0}, 
+		                              { 4,  0,  0,  0}, 
+		                              { 5,  0,  0,  0}, 
+		                              { 6,  1,  0,  0}, 
+		                              { 6,  1,  0,  0},  
+		                              { 7,  2,  0,  0},  
+		                              { 8,  3,  0,  0},  
+		                              { 9,  4,  0,  0},  
+		                              { 9,  4,  0,  0}, 
+		                              {10,  5,  0,  0}, 
+		                              {11,  6,  1,  0}, 
+		                              {12,  7,  2,  0}, 
+		                              {12,  7,  2,  0}, 
+		                              {13,  8,  3,  0}, 
+		                              {14,  9,  4,  0}, 
+		                              {15, 10,  5,  0}};
+	
+	private static int poor[][]    = {{ 0,  0,  0,  0}, 
+                                      { 0,  0,  0,  0}, 
+                                      { 1,  0,  0,  0}, 
+                                      { 1,  0,  0,  0},
+                                      { 2,  0,  0,  0}, 
+                                      { 2,  0,  0,  0}, 
+                                      { 3,  0,  0,  0}, 
+                                      { 3,  0,  0,  0}, 
+                                      { 4,  0,  0,  0}, 
+                                      { 4,  0,  0,  0},  
+                                      { 5,  0,  0,  0},  
+                                      { 5,  0,  0,  0},  
+                                      { 6,  1,  0,  0},  
+                                      { 6,  1,  0,  0},  
+                                      { 7,  2,  0,  0},  
+                                      { 7,  2,  0,  0},  
+                                      { 8,  3,  0,  0},  
+                                      { 8,  3,  0,  0},  
+                                      { 9,  4,  0,  0},  
+                                      { 9,  4,  0,  0}, 
+                                      {10,  5,  0,  0}};		
 
 	public int getGood(int classLevel) {
-		if (classLevel < MIN_LEVEL || classLevel > MAX_LEVEL) {
+		return getGood(classLevel, 1);
+	}
+	
+	
+	public int getGood(int classLevel, int attack) {
+		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
 			throw new IllegalArgumentException();
 		}
 		
-		return good[classLevel];
+		return good[classLevel][attack - 1];
 	}
 	
 	public int getAverage(int classLevel) {
-		if (classLevel < MIN_LEVEL || classLevel > MAX_LEVEL) {
+		return getAverage(classLevel, 1);
+	}
+	
+	public int getAverage(int classLevel, int attack) {
+		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
 			throw new IllegalArgumentException();
 		}
 		
-		return average[classLevel];
+		return average[classLevel][attack - 1];
 	}
 	
 	public int getPoor(int classLevel) {
-		if (classLevel < MIN_LEVEL || classLevel > MAX_LEVEL) {
+		return getPoor(classLevel, 1);
+	}
+	
+	public int getPoor(int classLevel, int attack) {
+		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
 			throw new IllegalArgumentException();
 		}
 		
-		return poor[classLevel];
+		return poor[classLevel][attack - 1];
 	}
 }
