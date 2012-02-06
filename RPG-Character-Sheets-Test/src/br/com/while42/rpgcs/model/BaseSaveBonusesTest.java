@@ -3,6 +3,7 @@ package br.com.while42.rpgcs.model;
 import junit.framework.Assert;
 import android.test.AndroidTestCase;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
+import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
 public class BaseSaveBonusesTest extends AndroidTestCase {
 		
@@ -40,7 +41,7 @@ public class BaseSaveBonusesTest extends AndroidTestCase {
 
 	public void testGetGoodBelowTheMinimum() throws Throwable {
 		try {
-			new BaseSaveBonuses().getGood(BaseSaveBonuses.MIN_LEVEL - 1);
+			new BaseSaveBonuses().getGood(ExperienceAndLevel.MIN_LEVEL - 1);
 		} catch (IllegalArgumentException expected) {
 			assertTrue(expected instanceof IllegalArgumentException);
 		}
@@ -48,7 +49,7 @@ public class BaseSaveBonusesTest extends AndroidTestCase {
 	
 	public void testGetPoorBelowTheMinimum() throws Throwable {
 		try {
-			new BaseSaveBonuses().getPoor(BaseSaveBonuses.MIN_LEVEL - 1);
+			new BaseSaveBonuses().getPoor(ExperienceAndLevel.MIN_LEVEL - 1);
 		} catch (IllegalArgumentException expected) {
 			assertTrue(expected instanceof IllegalArgumentException);
 		}
@@ -56,7 +57,7 @@ public class BaseSaveBonusesTest extends AndroidTestCase {
 	
 	public void testGetGoodAboveTheMax() throws Throwable {
 		try {
-			new BaseSaveBonuses().getGood(BaseSaveBonuses.MAX_LEVEL + 1);	
+			new BaseSaveBonuses().getGood(ExperienceAndLevel.MAX_LEVEL + 1);	
 		} catch (IllegalArgumentException expected) {
 			assertTrue(expected instanceof IllegalArgumentException);
 		}
@@ -64,7 +65,7 @@ public class BaseSaveBonusesTest extends AndroidTestCase {
 	
 	public void testGetPoorAboveTheMax() throws Throwable {
 		try {
-			new BaseSaveBonuses().getPoor(BaseSaveBonuses.MAX_LEVEL + 1);	
+			new BaseSaveBonuses().getPoor(ExperienceAndLevel.MAX_LEVEL + 1);	
 		} catch (IllegalArgumentException expected) {
 			assertTrue(expected instanceof IllegalArgumentException);
 		}
