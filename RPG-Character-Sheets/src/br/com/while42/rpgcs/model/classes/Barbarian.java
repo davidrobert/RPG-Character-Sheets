@@ -2,6 +2,8 @@ package br.com.while42.rpgcs.model.classes;
 
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
+import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class Barbarian implements CharacterClass {
 	
@@ -16,22 +18,22 @@ public class Barbarian implements CharacterClass {
 	}
 	
 	@Override
-	public int getBaseAttackBonus(int level) {
-		return 0;
+	public int getBaseAttackBonus(int classLevel) {
+		return new BaseAttackBonuses().getGood(classLevel);
 	}
 	
 	@Override
-	public int getFortSave(int level) {
-		return 0;
+	public int getFortSave(int classLevel) {
+		return new BaseSaveBonuses().getGood(classLevel);
 	}
 	
 	@Override
-	public int getRefSave(int level) {
-		return 0;
+	public int getRefSave(int classLevel) {
+		return new BaseSaveBonuses().getPoor(classLevel);
 	}
 	
 	@Override
-	public int getWillSave(int level) {
-		return 0;
+	public int getWillSave(int classLevel) {
+		return new BaseSaveBonuses().getPoor(classLevel);
 	}
 }

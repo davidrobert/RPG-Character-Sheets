@@ -2,6 +2,8 @@ package br.com.while42.rpgcs.model.classes;
 
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
+import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class Sorcerer implements CharacterClass {
 	
@@ -16,26 +18,22 @@ public class Sorcerer implements CharacterClass {
 	}
 
 	@Override
-	public int getBaseAttackBonus(int level) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getBaseAttackBonus(int classLevel) {
+		return new BaseAttackBonuses().getPoor(classLevel);
 	}
 
 	@Override
-	public int getFortSave(int level) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getFortSave(int classLevel) {
+		return new BaseSaveBonuses().getPoor(classLevel);
 	}
 
 	@Override
-	public int getRefSave(int level) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getRefSave(int classLevel) {
+		return new BaseSaveBonuses().getPoor(classLevel);
 	}
 
 	@Override
-	public int getWillSave(int level) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getWillSave(int classLevel) {
+		return new BaseSaveBonuses().getGood(classLevel);
 	}
 }

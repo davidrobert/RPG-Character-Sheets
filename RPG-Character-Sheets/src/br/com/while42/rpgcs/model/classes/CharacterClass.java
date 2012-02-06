@@ -7,8 +7,8 @@ public interface CharacterClass {
 	
 	public HitDiceType getHitDice();
 	public TypeRpgClass getClassType();
-	public int getBaseAttackBonus(int level);
-	public int getFortSave(int level);
-	public int getRefSave(int level);
-	public int getWillSave(int level);
+	public int getBaseAttackBonus(int classLevel);
+	public int getFortSave(int classLevel);
+	public int getRefSave(int classLevel);
+	public int getWillSave(int classLevel);
 }
