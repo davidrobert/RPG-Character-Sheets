@@ -24,13 +24,23 @@ public class HitDice {
 		this.modifier = modifier;
 	}
 	
+	public int getCount() {
+		return count;
+	}
+
+	public HitDiceType getDice() {
+		return dice;
+	}
+
+	public int getModifier() {
+		return modifier;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder b = new StringBuilder();
-		if (count > 1) {
-			b.append(String.valueOf(count));
-		}
 		
+		b.append(String.valueOf(count));
 		b.append(dice);
 		
 		if (modifier < 0) {
