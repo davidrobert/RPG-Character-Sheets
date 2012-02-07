@@ -30,6 +30,14 @@ public class AbilityModifierTest extends AndroidTestCase {
 		}
 	}
 	
+	public void testGetBelowTheMaximum() throws Throwable {
+		try {
+			new AbilityModifier().get(AbilityModifier.MAX_SCORE + 1);
+		} catch (IllegalArgumentException expected) {
+			assertTrue(expected instanceof IllegalArgumentException);
+		}
+	}
+	
 	public void testGetBasic() throws Throwable {
 		Assert.assertEquals(0, new AbilityModifier().get(10));	
 	}
