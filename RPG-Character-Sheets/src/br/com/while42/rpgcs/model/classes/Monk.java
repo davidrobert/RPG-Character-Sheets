@@ -79,7 +79,7 @@ public class Monk extends AbstractClass implements CharacterClass {
 	@Override
 	public HitDice getUnarmedDamage(int classLevel, TypeRpgSize size) {
 		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Illegal class level");
 		}
 		
 		if (size == TypeRpgSize.SMALL) {
