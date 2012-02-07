@@ -21,7 +21,7 @@ public class ExperienceAndLevel {
 		/* lvl 13 */ 78000, 
 		/* lvl 14 */ 91000,
 		/* lvl 15 */ 105000, 
-		/* lvl 16 */ 12000, 
+		/* lvl 16 */ 120000, 
 		/* lvl 17 */ 136000,
 		/* lvl 18 */ 153000,
 		/* lvl 19 */ 171000,
@@ -76,4 +76,12 @@ public class ExperienceAndLevel {
 		/* lvl 19 */ 11,
 		/* lvl 20 */ 11
 	};
+	
+	public int getExperience(int classLevel) {
+		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
+			throw new IllegalArgumentException("Invalid class level");
+		}
+		
+		return XP[classLevel];
+	}
 }

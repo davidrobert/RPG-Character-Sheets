@@ -6,13 +6,13 @@ public class BaseSpellBonuses {
 	public static final int MIN_SPELL_LEVEL = 0;
 	public static final int MAX_SPELL_LEVEL = 9;
 
-	private static int bonusSpell[][] = new int[AbilityModifier.MAX_SCORE + 1][MAX_SPELL_LEVEL + 1];
+	private static int BONUS_SPELL[][] = new int[AbilityModifier.MAX_SCORE + 1][MAX_SPELL_LEVEL + 1];
 
 	static {		
 		for (int level = MIN_SPELL_LEVEL; level <= 9; level++) {			
 			int startScore = 10 + level * 2;
 			for (int score = 0; score < startScore; score++) {
-				bonusSpell[score][level] = 0;
+				BONUS_SPELL[score][level] = 0;
 			}
 			
 			if (level == 0) {
@@ -22,7 +22,7 @@ public class BaseSpellBonuses {
 			int bonus = 1;
 			for (int score = startScore; score <= AbilityModifier.MAX_SCORE - 8; score += 8, bonus++) {
 				for (int i = 0; i < 8; i++) {
-					bonusSpell[score + i][level] = bonus;
+					BONUS_SPELL[score + i][level] = bonus;
 				}
 			}
 		} 
@@ -37,6 +37,6 @@ public class BaseSpellBonuses {
 			throw new IllegalArgumentException("Invalid spell level");
 		}
 		
-		return bonusSpell[score][spellLevel];
+		return BONUS_SPELL[score][spellLevel];
 	}
 }
