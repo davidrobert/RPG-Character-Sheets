@@ -1,10 +1,10 @@
 package br.com.while42.rpgcs.model.classes.bonuses;
 
 public class ExperienceAndLevel {
-	public static int MAX_LEVEL = 20;
-	public static int MIN_LEVEL = 1;
+	public static final int MAX_LEVEL = 20;
+	public static final int MIN_LEVEL = 1;
 	
-	public static int XP[] = {
+	private static final int XP[] = {
 		0, 
 		/* lvl 01 */ 0, 
 		/* lvl 02 */ 1000, 
@@ -28,7 +28,7 @@ public class ExperienceAndLevel {
 		/* lvl 20 */ 190000
 		};
 	
-	public static int classSkillMaxRank[] = {
+	private static final int CLASS_SKILL_MAX_RANK[] = {
 		0, 
 		/* lvl 01 */ 4, 
 		/* lvl 02 */ 5, 
@@ -53,7 +53,7 @@ public class ExperienceAndLevel {
 	};
 
 	// TODO: Incomplete
-	public static int crossClassSkillMaxRank[] = {
+	private static final int CROSS_CLASS_SKILL_MAX_RANK[] = {
 		0, 
 		/* lvl 01 */ 2, 
 		/* lvl 02 */ 2,

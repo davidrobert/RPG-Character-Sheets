@@ -3,8 +3,8 @@ package br.com.while42.rpgcs.model.classes.bonuses;
 import br.com.while42.rpgcs.model.abilities.modifiers.AbilityModifier;
 
 public class BaseSpellBonuses {
-	public static int MIN_SPELL_LEVEL = 0;
-	public static int MAX_SPELL_LEVEL = 9;
+	public static final int MIN_SPELL_LEVEL = 0;
+	public static final int MAX_SPELL_LEVEL = 9;
 
 	private static int bonusSpell[][] = new int[AbilityModifier.MAX_SCORE + 1][MAX_SPELL_LEVEL + 1];
 

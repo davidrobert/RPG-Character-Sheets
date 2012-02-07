@@ -3,9 +3,9 @@ package br.com.while42.rpgcs.model.abilities.modifiers;
 
 public class AbilityModifier {
 	
-	public static int MIN_MODIFIER = -5;
-	public static int MIN_SCORE = 0;
-	public static int MAX_SCORE = 100;
+	public static final int MIN_MODIFIER = -5;
+	public static final int MIN_SCORE = 0;
+	public static final int MAX_SCORE = 100;
 	
 	private static int MODIFIER[] = new int[MAX_SCORE + 1];
 		
