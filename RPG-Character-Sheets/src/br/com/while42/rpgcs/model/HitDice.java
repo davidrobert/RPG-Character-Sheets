@@ -35,6 +35,14 @@ public class HitDice {
 	public int getModifier() {
 		return modifier;
 	}
+	
+	public int getMaxValue() {
+		return (count * dice.getValue()) + modifier;
+	}
+	
+	public int getMinValue() {
+		return (count * 1) + modifier;
+	}
 
 	@Override
 	public String toString() {
