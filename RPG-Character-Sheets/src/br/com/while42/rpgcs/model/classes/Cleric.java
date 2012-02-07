@@ -5,7 +5,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
-public class Cleric implements CharacterClass, SpellsPerDay {
+public class Cleric extends AbstractClass implements CharacterClass, SpellsPerDay {
 	
 	@Override
 	public HitDiceType getHitDice() {		

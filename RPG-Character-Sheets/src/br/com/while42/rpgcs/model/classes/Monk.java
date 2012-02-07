@@ -1,11 +1,13 @@
 package br.com.while42.rpgcs.model.classes;
 
+import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
-public class Monk implements CharacterClass {
+public class Monk extends AbstractClass implements CharacterClass {
 	
 	@Override
 	public HitDiceType getHitDice() {		
@@ -35,5 +37,11 @@ public class Monk implements CharacterClass {
 	@Override
 	public int getWillSave(int classLevel) {
 		return new BaseSaveBonuses().getGood(classLevel);
+	}
+	
+	@Override
+	public HitDice getUnarmedDamage(int level, TypeRpgSize size) {
+		// TODO Auto-generated method stub
+		return super.getUnarmedDamage(level, size);
 	}
 }

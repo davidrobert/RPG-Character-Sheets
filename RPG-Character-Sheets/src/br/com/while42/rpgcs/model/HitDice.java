@@ -1,0 +1,44 @@
+package br.com.while42.rpgcs.model;
+
+public class HitDice {
+	
+	private int count;
+	private HitDiceType dice;
+	private int modifier;
+	
+	public HitDice(HitDiceType dice) {
+		this.count = 1;
+		this.dice = dice;
+		this.modifier = 0;
+	}
+	
+	public HitDice(int count, HitDiceType dice) {
+		this.count = count;
+		this.dice = dice;
+		this.modifier = 0;
+	}
+	
+	public HitDice(int count, HitDiceType dice, int modifier) {
+		this.count = count;
+		this.dice = dice;
+		this.modifier = modifier;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder b = new StringBuilder();
+		if (count > 1) {
+			b.append(String.valueOf(count));
+		}
+		
+		b.append(dice);
+		
+		if (modifier < 0) {
+			b.append(String.valueOf(modifier));
+		} else if (modifier > 0) {
+			b.append("+").append(String.valueOf(modifier));
+		}
+		
+		return b.toString();
+	}
+}
