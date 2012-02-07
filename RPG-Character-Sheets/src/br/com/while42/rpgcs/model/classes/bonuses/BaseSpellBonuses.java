@@ -20,8 +20,8 @@ public class BaseSpellBonuses {
 			}
 			
 			int bonus = 1;
-			for (int score = startScore; score <= AbilityModifier.MAX_SCORE - 4; score += 4, bonus++) {
-				for (int i = 0; i < 4; i++) {
+			for (int score = startScore; score <= AbilityModifier.MAX_SCORE - 8; score += 8, bonus++) {
+				for (int i = 0; i < 8; i++) {
 					bonusSpell[score + i][level] = bonus;
 				}
 			}
