@@ -2,6 +2,8 @@ package br.com.while42.rpgcs.model.character;
 
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
@@ -12,6 +14,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.classes.AbstractClass;
 
 public class RpgCharacter implements Serializable {
 
@@ -21,7 +24,7 @@ public class RpgCharacter implements Serializable {
 	private String image;
 	
 	private String name;
-	private HashMap<TypeRpgClass, Integer> classes = new HashMap<TypeRpgClass, Integer>();
+	private HashSet<AbstractClass> classes = new  HashSet<AbstractClass>();
 	private TypeRpgRace race;	
 	private TypeRpgAlignment alignment;
 	private TypeRpgReligion religion;
@@ -86,16 +89,8 @@ public class RpgCharacter implements Serializable {
 		this.name = name;
 	}
 
-	public HashMap<TypeRpgClass, Integer> getClasses() {
+	public HashSet<AbstractClass> getClasses() {
 		return classes;
-	}
-
-	public void setClasses(HashMap<TypeRpgClass, Integer> classes) {
-		this.classes = classes;
-	}
-	
-	public void addClasse(TypeRpgClass classe, Integer level) {
-		classes.put(classe, level);
 	}
 	
 	public void clearClasses() {
