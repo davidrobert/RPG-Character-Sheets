@@ -4,28 +4,30 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 
 public abstract class AbstractRace {
 	
+	private static final int ADJUSTMENT_DEFAULT = 0;
+	
 	public int getAdjustmentsOfStrength() {
-		return 0;
+		return ADJUSTMENT_DEFAULT;
 	}
 	
 	public int getAdjustmentsOfIntelligence() {
-		return 0;
+		return ADJUSTMENT_DEFAULT;
 	}
 	
 	public int getAdjustmentsOfDexterity() {
-		return 0;
+		return ADJUSTMENT_DEFAULT;
 	}
 	
 	public int getAdjustmentsOfConstitution() {
-		return 0;
+		return ADJUSTMENT_DEFAULT;
 	}
 	
 	public int getAdjustmentsOfWisdom() {
-		return 0;
+		return ADJUSTMENT_DEFAULT;
 	}
 	
 	public int getAdjustmentsOfCharisma() {
-		return 0;
+		return ADJUSTMENT_DEFAULT;
 	}
 	
 	public TypeRpgClass getFavoredClass() {
