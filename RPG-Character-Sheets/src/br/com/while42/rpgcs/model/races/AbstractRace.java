@@ -31,4 +31,8 @@ public abstract class AbstractRace {
 	public TypeRpgClass getFavoredClass() {
 		return TypeRpgClass.NONE;
 	}
+	
+	public abstract int getMiddleAge();
+	public abstract int getOldAge();
+	public abstract int getVenerableAge();
 }

@@ -1,6 +1,6 @@
 package br.com.while42.rpgcs.model.races;
 
-public class HalfElf extends AbstractRace implements Age {
+public class HalfElf extends AbstractRace {
 
 	public static final int MIDDLE_AGE = 62; 
 	public static final int OLD_AGE = 93;

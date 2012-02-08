@@ -2,20 +2,23 @@ package br.com.while42.rpgcs.model.races;
 
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 
-public class HalfOrc extends AbstractRace implements Age {
+public class HalfOrc extends AbstractRace {
 	
 	public static final int MIDDLE_AGE = 35; 
 	public static final int OLD_AGE = 45;
 	public static final int VENERABLE_AGE = 60;
+		
+	private static final int ADJUSTMENTS_OF_STRENGTH = +2;
+	private static final int ADJUSTMENTS_OF_INTELLIGENCE = -2;
 	
 	@Override
 	public int getAdjustmentsOfStrength() {		
-		return +2;
+		return ADJUSTMENTS_OF_STRENGTH;
 	}
 	
 	@Override
 	public int getAdjustmentsOfIntelligence() {
-		return -2;
+		return ADJUSTMENTS_OF_INTELLIGENCE;
 	}
 	
 	@Override
