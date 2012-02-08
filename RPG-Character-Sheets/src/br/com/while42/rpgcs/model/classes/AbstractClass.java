@@ -7,7 +7,15 @@ import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
 public abstract class AbstractClass {
 	
-	protected int classLevel = ExperienceAndLevel.MIN_LEVEL;
+	protected int classLevel;
+	
+	public AbstractClass() {
+		classLevel = ExperienceAndLevel.MIN_LEVEL;
+	}
+	
+	public AbstractClass(int classLevel) {
+		this.classLevel = classLevel;
+	}
 	
 	public final int getClassLevel() {
 		return classLevel;
