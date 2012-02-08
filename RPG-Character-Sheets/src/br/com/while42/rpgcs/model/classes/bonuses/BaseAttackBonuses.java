@@ -75,7 +75,7 @@ public class BaseAttackBonuses {
 	
 	public int getGood(int classLevel, int attack) {
 		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Invalid class level");
 		}
 		
 		return GOOD[classLevel][attack - 1];
@@ -87,7 +87,7 @@ public class BaseAttackBonuses {
 	
 	public int getAverage(int classLevel, int attack) {
 		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Invalid class level");
 		}
 		
 		return AVERAGE[classLevel][attack - 1];

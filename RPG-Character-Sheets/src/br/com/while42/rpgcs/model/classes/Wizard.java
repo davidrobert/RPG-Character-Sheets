@@ -18,27 +18,27 @@ public class Wizard extends AbstractClass implements CharacterClass, SpellsPerDa
 	}
 
 	@Override
-	public int getBaseAttackBonus(int classLevel) {
+	public int getBaseAttackBonus() {
 		return new BaseAttackBonuses().getPoor(classLevel);
 	}
 
 	@Override
-	public int getFortSave(int classLevel) {
+	public int getFortSave() {
 		return new BaseSaveBonuses().getPoor(classLevel);
 	}
 
 	@Override
-	public int getRefSave(int classLevel) {
+	public int getRefSave() {
 		return new BaseSaveBonuses().getPoor(classLevel);
 	}
 
 	@Override
-	public int getWillSave(int classLevel) {
+	public int getWillSave() {
 		return new BaseSaveBonuses().getGood(classLevel);
 	}
 
 	@Override
-	public int capacitySpellsPerDay(int level, int spellLevel) {
+	public int capacitySpellsPerDay(int spellLevel) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

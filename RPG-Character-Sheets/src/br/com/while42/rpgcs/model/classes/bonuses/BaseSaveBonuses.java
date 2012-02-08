@@ -7,7 +7,7 @@ public class BaseSaveBonuses {
 	
 		public int getGood(int classLevel) {
 			if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
-				throw new IllegalArgumentException();
+				throw new IllegalArgumentException("Invalid class level");
 			}
 			
 			return GOOD[classLevel];
@@ -15,7 +15,7 @@ public class BaseSaveBonuses {
 		
 		public int getPoor(int classLevel) {
 			if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
-				throw new IllegalArgumentException();
+				throw new IllegalArgumentException("Invalid class level");
 			}
 			
 			return POOR[classLevel];

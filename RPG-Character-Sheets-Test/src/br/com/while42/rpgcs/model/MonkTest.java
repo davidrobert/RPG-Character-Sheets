@@ -10,8 +10,11 @@ public class MonkTest extends AndroidTestCase {
 		
 	public void testGetUnarmedDamageBasic() throws Throwable {		
 		for (int level = ExperienceAndLevel.MIN_LEVEL; level <= ExperienceAndLevel.MAX_LEVEL; level++) {
-			Assert.assertNotNull(new Monk().getUnarmedDamage(level, TypeRpgSize.SMALL));
-			Assert.assertNotNull(new Monk().getUnarmedDamage(level, TypeRpgSize.LARGE));
+			Monk monk = new Monk();
+			monk.setClassLevel(level);
+			
+			Assert.assertNotNull(monk.getUnarmedDamage(TypeRpgSize.SMALL));
+			Assert.assertNotNull(monk.getUnarmedDamage(TypeRpgSize.LARGE));
 		}			
 	}
 	

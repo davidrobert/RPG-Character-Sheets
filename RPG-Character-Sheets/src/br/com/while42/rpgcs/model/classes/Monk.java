@@ -11,6 +11,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 public class Monk extends AbstractClass implements CharacterClass {
 	
 	private static HitDice unarmedDamageSizeSmall[] = new HitDice[ExperienceAndLevel.MAX_LEVEL + 1];
+	private static HitDice unarmedDamageSizeMedium[] = new HitDice[ExperienceAndLevel.MAX_LEVEL + 1];
 	private static HitDice unarmedDamageSizeLarge[] = new HitDice[ExperienceAndLevel.MAX_LEVEL + 1];
 	
 	static {
@@ -57,35 +58,40 @@ public class Monk extends AbstractClass implements CharacterClass {
 	}
 
 	@Override
-	public int getBaseAttackBonus(int classLevel) {
+	public int getBaseAttackBonus() {
 		return new BaseAttackBonuses().getAverage(classLevel);
 	}
 
 	@Override
-	public int getFortSave(int classLevel) {
+	public int getFortSave() {
 		return new BaseSaveBonuses().getGood(classLevel);
 	}
 
 	@Override
-	public int getRefSave(int classLevel) {
+	public int getRefSave() {
 		return new BaseSaveBonuses().getGood(classLevel);
 	}
 
 	@Override
-	public int getWillSave(int classLevel) {
+	public int getWillSave() {
 		return new BaseSaveBonuses().getGood(classLevel);
 	}
 	
 	@Override
-	public HitDice getUnarmedDamage(int classLevel, TypeRpgSize size) {
+	public HitDice getUnarmedDamage(TypeRpgSize size) {
 		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
 			throw new IllegalArgumentException("Illegal class level");
 		}
 		
-		if (size == TypeRpgSize.SMALL) {
+		switch (size) {
+		case SMALL:
 			return unarmedDamageSizeSmall[classLevel];
+		case LARGE:
+			return unarmedDamageSizeLarge[classLevel];
+		case MEDIUM:
+			return unarmedDamageSizeMedium[classLevel];
+		default:
+			return new HitDice(HitDiceType.d4);
 		}
-		
-		return unarmedDamageSizeLarge[classLevel];
 	}
 }

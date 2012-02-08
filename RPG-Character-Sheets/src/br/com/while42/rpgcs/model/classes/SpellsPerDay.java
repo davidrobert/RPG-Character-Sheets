@@ -1,5 +1,5 @@
 package br.com.while42.rpgcs.model.classes;
 
 public interface SpellsPerDay {
-	public int capacitySpellsPerDay(int level, int spellLevel);
+	public int capacitySpellsPerDay(int spellLevel);
 }

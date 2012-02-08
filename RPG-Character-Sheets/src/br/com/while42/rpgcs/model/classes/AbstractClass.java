@@ -3,10 +3,25 @@ package br.com.while42.rpgcs.model.classes;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
+import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
-public class AbstractClass {
+public abstract class AbstractClass {
 	
-	public HitDice getUnarmedDamage(int level, TypeRpgSize size) {
+	protected int classLevel = ExperienceAndLevel.MIN_LEVEL;
+	
+	public final int getClassLevel() {
+		return classLevel;
+	}
+
+	public final void setClassLevel(int classLevel) {
+		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
+			throw new IllegalArgumentException("Invalid class level");
+		}
+		
+		this.classLevel = classLevel;
+	}
+	
+	public HitDice getUnarmedDamage(TypeRpgSize size) {
 		return new HitDice(HitDiceType.d4);
 	}
 }
