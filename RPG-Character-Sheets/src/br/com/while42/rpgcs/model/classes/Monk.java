@@ -8,7 +8,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
-public class Monk extends AbstractClass implements CharacterClass {
+public class Monk extends AbstractClass {
 	
 	private static HitDice unarmedDamageSizeSmall[] = new HitDice[ExperienceAndLevel.MAX_LEVEL + 1];
 	private static HitDice unarmedDamageSizeMedium[] = new HitDice[ExperienceAndLevel.MAX_LEVEL + 1];

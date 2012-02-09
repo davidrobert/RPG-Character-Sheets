@@ -5,7 +5,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
-public class Rogue extends AbstractClass implements CharacterClass {
+public class Rogue extends AbstractClass {
 	
 	@Override
 	public HitDiceType getHitDice() {		

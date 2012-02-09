@@ -1,15 +1,12 @@
 package br.com.while42.rpgcs.model.character;
 
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
@@ -91,6 +88,10 @@ public class RpgCharacter implements Serializable {
 
 	public HashSet<AbstractClass> getClasses() {
 		return classes;
+	}
+	
+	public void addClass(AbstractClass classe) {
+		classes.add(classe);
 	}
 	
 	public void clearClasses() {

@@ -5,7 +5,7 @@ import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
-public abstract class AbstractClass {
+public abstract class AbstractClass implements CharacterClass {
 	
 	protected int classLevel;
 	
