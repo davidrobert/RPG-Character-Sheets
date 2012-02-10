@@ -25,6 +25,9 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.classes.AbstractClass;
+import br.com.while42.rpgcs.model.classes.Barbarian;
+import br.com.while42.rpgcs.model.classes.Fighter;
 
 public class EditCharacter extends Activity {
 
@@ -63,6 +66,18 @@ public class EditCharacter extends Activity {
 		spinner.setAdapter(adapter);
 	}
 
+	private void setOptionsSpinner(Spinner spinner, List<TypeCode> types) {
+
+		List<Element> items = new ArrayList<Element>();
+		for (TypeCode g : types) {
+			items.add(new Element(g, getString(g.getNameCode())));
+		}
+
+		ArrayAdapter<Element> adapter = new ArrayAdapter<Element>(this, android.R.layout.simple_spinner_dropdown_item, items);
+
+		spinner.setAdapter(adapter);
+	}
+	
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -93,7 +108,11 @@ public class EditCharacter extends Activity {
 
 		save = (Button) findViewById(R.id_edit.button_save);
 
-		setOptionsSpinner(classe, TypeRpgClass.values());
+		// TODO: Only for DEBUG
+		new Barbarian();
+		new Fighter();
+		
+		setOptionsSpinner(classe, AbstractClass.getClassTypes());
 		setOptionsSpinner(race, TypeRpgRace.values());
 		setOptionsSpinner(alignment, TypeRpgAlignment.values());
 		setOptionsSpinner(religion, TypeRpgReligion.values());
@@ -119,7 +138,7 @@ public class EditCharacter extends Activity {
 				// Class
 				character.clearClasses(); // TODO: Only first edit...
 				e = (Element) classe.getSelectedItem();
-				character.addClasse((TypeRpgClass) e.getType(), START_LEVEL);
+				//TODO: character.addClasse(e.getType()); 
 
 				// Race
 				e = (Element) race.getSelectedItem();

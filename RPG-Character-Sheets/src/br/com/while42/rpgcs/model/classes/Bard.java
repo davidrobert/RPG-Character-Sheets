@@ -7,6 +7,12 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class Bard extends AbstractClass implements SpellsPerDay {
 	
+	private static final TypeRpgClass typeClass = TypeRpgClass.BARD;
+	
+	static {
+		typeClasses.add(typeClass);
+	}
+	
 	@Override
 	public HitDiceType getHitDice() {		
 		return HitDiceType.d6;
@@ -14,7 +20,7 @@ public class Bard extends AbstractClass implements SpellsPerDay {
 	
 	@Override
 	public TypeRpgClass getClassType() {
-		return TypeRpgClass.BARD;
+		return typeClass;
 	}
 
 	@Override

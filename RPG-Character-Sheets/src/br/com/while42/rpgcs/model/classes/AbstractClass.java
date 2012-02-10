@@ -1,11 +1,17 @@
 package br.com.while42.rpgcs.model.classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
+import br.com.while42.rpgcs.model.character.attributes.TypeCode;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
 public abstract class AbstractClass implements CharacterClass {
+	
+	protected static List<TypeCode> typeClasses = new ArrayList<TypeCode>();
 	
 	protected int classLevel;
 	
@@ -31,5 +37,9 @@ public abstract class AbstractClass implements CharacterClass {
 	
 	public HitDice getUnarmedDamage(TypeRpgSize size) {
 		return new HitDice(HitDiceType.d4);
+	}
+	
+	public static List<TypeCode> getClassTypes() {
+		return typeClasses;
 	}
 }

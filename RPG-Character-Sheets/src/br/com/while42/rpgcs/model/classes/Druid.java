@@ -7,6 +7,12 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class Druid extends AbstractClass implements SpellsPerDay {
 	
+	private static final TypeRpgClass typeClass = TypeRpgClass.DRUID;
+	
+	static {
+		typeClasses.add(typeClass);
+	}
+	
 	@Override
 	public HitDiceType getHitDice() {		
 		return HitDiceType.d8;
@@ -14,7 +20,7 @@ public class Druid extends AbstractClass implements SpellsPerDay {
 	
 	@Override
 	public TypeRpgClass getClassType() {
-		return TypeRpgClass.DRUID;
+		return typeClass;
 	}
 
 	@Override

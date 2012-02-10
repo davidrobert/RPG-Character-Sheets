@@ -7,6 +7,12 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class Rogue extends AbstractClass {
 	
+	private static final TypeRpgClass typeClass = TypeRpgClass.ROGUE;
+	
+	static {
+		typeClasses.add(typeClass);
+	}
+	
 	@Override
 	public HitDiceType getHitDice() {		
 		return HitDiceType.d6;
@@ -14,7 +20,7 @@ public class Rogue extends AbstractClass {
 	
 	@Override
 	public TypeRpgClass getClassType() {
-		return TypeRpgClass.ROGUE;
+		return typeClass;
 	}
 
 	@Override

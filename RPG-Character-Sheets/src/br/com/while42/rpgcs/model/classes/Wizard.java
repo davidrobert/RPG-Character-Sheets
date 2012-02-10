@@ -7,6 +7,12 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class Wizard extends AbstractClass implements SpellsPerDay {
 	
+	private static final TypeRpgClass typeClass = TypeRpgClass.WIZARD;
+	
+	static {
+		typeClasses.add(typeClass);
+	}
+	
 	@Override
 	public HitDiceType getHitDice() {		
 		return HitDiceType.d4;
@@ -14,7 +20,7 @@ public class Wizard extends AbstractClass implements SpellsPerDay {
 	
 	@Override
 	public TypeRpgClass getClassType() {
-		return TypeRpgClass.WIZARD;
+		return typeClass;
 	}
 
 	@Override

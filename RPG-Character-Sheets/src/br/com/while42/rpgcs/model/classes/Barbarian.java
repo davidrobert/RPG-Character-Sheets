@@ -7,6 +7,12 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class Barbarian extends AbstractClass {
 	
+	private static final TypeRpgClass typeClass = TypeRpgClass.BARBARIAN;
+	
+	static {
+		typeClasses.add(typeClass);
+	}
+	
 	@Override
 	public HitDiceType getHitDice() {		
 		return HitDiceType.d12;
@@ -14,7 +20,7 @@ public class Barbarian extends AbstractClass {
 	
 	@Override
 	public TypeRpgClass getClassType() {
-		return TypeRpgClass.BARBARIAN;
+		return typeClass;
 	}
 	
 	@Override

@@ -14,7 +14,11 @@ public class Monk extends AbstractClass {
 	private static HitDice unarmedDamageSizeMedium[] = new HitDice[ExperienceAndLevel.MAX_LEVEL + 1];
 	private static HitDice unarmedDamageSizeLarge[] = new HitDice[ExperienceAndLevel.MAX_LEVEL + 1];
 	
+	private static final TypeRpgClass typeClass = TypeRpgClass.MONK;
+	
 	static {
+		typeClasses.add(typeClass);
+	
 		for (int level = 1; level <= 3; level++) {
 			unarmedDamageSizeSmall[level] = new HitDice(1, HitDiceType.d4);
 			unarmedDamageSizeLarge[level] = new HitDice(1, HitDiceType.d8);
@@ -54,7 +58,7 @@ public class Monk extends AbstractClass {
 	
 	@Override
 	public TypeRpgClass getClassType() {
-		return TypeRpgClass.MONK;
+		return typeClass;
 	}
 
 	@Override
