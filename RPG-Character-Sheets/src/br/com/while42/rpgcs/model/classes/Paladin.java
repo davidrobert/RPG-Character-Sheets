@@ -5,13 +5,10 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
+
 public class Paladin extends AbstractClass implements SpellsPerDay {
 	
 	private static final TypeRpgClass typeClass = TypeRpgClass.PALADIN;
-	
-	static {
-		typeClasses.add(typeClass);
-	}
 	
 	@Override
 	public HitDiceType getHitDice() {		

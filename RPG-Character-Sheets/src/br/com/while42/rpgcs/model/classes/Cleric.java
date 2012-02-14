@@ -9,10 +9,6 @@ public class Cleric extends AbstractClass implements SpellsPerDay {
 	
 	private static final TypeRpgClass typeClass = TypeRpgClass.CLERIC;
 	
-	static {
-		typeClasses.add(typeClass);
-	}
-	
 	@Override
 	public HitDiceType getHitDice() {		
 		return HitDiceType.d8;

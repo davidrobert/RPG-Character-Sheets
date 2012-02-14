@@ -1,9 +1,12 @@
 package br.com.while42.rpgcs.activity;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,7 +23,6 @@ import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
@@ -28,6 +30,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.model.classes.AbstractClass;
 import br.com.while42.rpgcs.model.classes.Barbarian;
 import br.com.while42.rpgcs.model.classes.Fighter;
+import br.com.while42.rpgcs.model.classes.X;
 
 public class EditCharacter extends Activity {
 
@@ -107,12 +110,10 @@ public class EditCharacter extends Activity {
 		skin = (Spinner) findViewById(R.id_edit.spinner_skin);
 
 		save = (Button) findViewById(R.id_edit.button_save);
-
-		// TODO: Only for DEBUG
-		new Barbarian();
-		new Fighter();
 		
-		setOptionsSpinner(classe, AbstractClass.getClassTypes());
+		List<TypeCode> l = X.getModels(this, "br.com.while42.rpgcs");
+
+		setOptionsSpinner(classe, l);
 		setOptionsSpinner(race, TypeRpgRace.values());
 		setOptionsSpinner(alignment, TypeRpgAlignment.values());
 		setOptionsSpinner(religion, TypeRpgReligion.values());

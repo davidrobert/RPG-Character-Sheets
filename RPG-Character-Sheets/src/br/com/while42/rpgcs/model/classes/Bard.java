@@ -9,10 +9,6 @@ public class Bard extends AbstractClass implements SpellsPerDay {
 	
 	private static final TypeRpgClass typeClass = TypeRpgClass.BARD;
 	
-	static {
-		typeClasses.add(typeClass);
-	}
-	
 	@Override
 	public HitDiceType getHitDice() {		
 		return HitDiceType.d6;

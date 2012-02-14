@@ -9,9 +9,8 @@ import br.com.while42.rpgcs.model.character.attributes.TypeCode;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
+@RpgClass(name="AbstractClass")
 public abstract class AbstractClass implements CharacterClass {
-	
-	protected static List<TypeCode> typeClasses = new ArrayList<TypeCode>();
 	
 	protected int classLevel;
 	
@@ -37,9 +36,5 @@ public abstract class AbstractClass implements CharacterClass {
 	
 	public HitDice getUnarmedDamage(TypeRpgSize size) {
 		return new HitDice(HitDiceType.d4);
-	}
-	
-	public static List<TypeCode> getClassTypes() {
-		return typeClasses;
 	}
 }

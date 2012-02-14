@@ -9,10 +9,6 @@ public class Sorcerer extends AbstractClass implements SpellsPerDay {
 	
 	private static final TypeRpgClass typeClass = TypeRpgClass.SORCERER;
 	
-	static {
-		typeClasses.add(typeClass);
-	}
-	
 	@Override
 	public HitDiceType getHitDice() {		
 		return HitDiceType.d4;

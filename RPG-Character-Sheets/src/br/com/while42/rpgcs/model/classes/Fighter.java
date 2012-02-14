@@ -5,13 +5,10 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
+
 public class Fighter extends AbstractClass {
 	
 	private static final TypeRpgClass typeClass = TypeRpgClass.FIGHTER;
-	
-	static {
-		typeClasses.add(typeClass);
-	}
 	
 	@Override
 	public HitDiceType getHitDice() {		
