@@ -23,6 +23,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
@@ -67,19 +68,7 @@ public class EditCharacter extends Activity {
 		ArrayAdapter<Element> adapter = new ArrayAdapter<Element>(this, android.R.layout.simple_spinner_dropdown_item, items);
 
 		spinner.setAdapter(adapter);
-	}
-
-	private void setOptionsSpinner(Spinner spinner, List<TypeCode> types) {
-
-		List<Element> items = new ArrayList<Element>();
-		for (TypeCode g : types) {
-			items.add(new Element(g, getString(g.getNameCode())));
-		}
-
-		ArrayAdapter<Element> adapter = new ArrayAdapter<Element>(this, android.R.layout.simple_spinner_dropdown_item, items);
-
-		spinner.setAdapter(adapter);
-	}
+	}	
 	
 	@Override
 	protected void onResume() {
@@ -111,7 +100,7 @@ public class EditCharacter extends Activity {
 
 		save = (Button) findViewById(R.id_edit.button_save);
 		
-		List<TypeCode> l = X.getModels(this, "br.com.while42.rpgcs");
+		TypeRpgClass[] l = X.getTypeCodes(this, "br.com.while42.rpgcs");
 
 		setOptionsSpinner(classe, l);
 		setOptionsSpinner(race, TypeRpgRace.values());

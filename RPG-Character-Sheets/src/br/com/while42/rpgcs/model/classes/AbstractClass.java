@@ -1,15 +1,11 @@
 package br.com.while42.rpgcs.model.classes;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
-import br.com.while42.rpgcs.model.character.attributes.TypeCode;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
-@RpgClass(name="AbstractClass")
+@RpgClass
 public abstract class AbstractClass implements CharacterClass {
 	
 	protected int classLevel;

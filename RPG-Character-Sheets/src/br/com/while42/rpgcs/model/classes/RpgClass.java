@@ -1,7 +1,6 @@
 package br.com.while42.rpgcs.model.classes;
 
-public @interface RpgClass {
-	public String name();
+public @interface RpgClass {	
 }
 
 
