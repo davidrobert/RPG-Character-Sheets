@@ -24,7 +24,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
-import br.com.while42.rpgcs.model.classes.ReflectionsOfClasses;
+import br.com.while42.rpgcs.model.classes.Classes;
 
 public class EditCharacter extends Activity {
 
@@ -93,9 +93,9 @@ public class EditCharacter extends Activity {
 
 		save = (Button) findViewById(R.id_edit.button_save);
 		
-		TypeCode[] l = ReflectionsOfClasses.getTypeCodes(this, "br.com.while42.rpgcs");
+		TypeCode[] codes = new Classes().getTypeCodes(this, "br.com.while42.rpgcs");
 
-		setOptionsSpinner(classe, l);
+		setOptionsSpinner(classe, codes);
 		setOptionsSpinner(race, TypeRpgRace.values());
 		setOptionsSpinner(alignment, TypeRpgAlignment.values());
 		setOptionsSpinner(religion, TypeRpgReligion.values());

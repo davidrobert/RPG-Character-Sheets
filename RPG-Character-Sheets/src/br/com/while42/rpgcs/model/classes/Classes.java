@@ -14,8 +14,8 @@ import dalvik.system.DexClassLoader;
 import dalvik.system.DexFile;
 import dalvik.system.PathClassLoader;
 
-public class ReflectionsOfClasses {
-	public static TypeCode[] getTypeCodes(Context context, String packageName) {
+public class Classes {
+	public TypeCode[] getTypeCodes(Context context, String packageName) {
 		List<CharacterClass> classes = getModels(context, packageName);
 		
 		TypeCode[] types = new TypeCode[classes.size()];
@@ -28,7 +28,7 @@ public class ReflectionsOfClasses {
 		return types;
 	}
 	
-	private static List<CharacterClass> getModels(Context context, String packageName) {
+	private List<CharacterClass> getModels(Context context, String packageName) {
 
 		String apkName;
 		List<CharacterClass> classes = new ArrayList<CharacterClass>();
@@ -71,15 +71,15 @@ public class ReflectionsOfClasses {
 					Class<?> superclass = entryClass.getSuperclass();
 					if (superclass != null && superclass == AbstractClass.class) {
 						try {
-							AbstractClass character = (AbstractClass) entryClass.newInstance();
-							System.out.println(character.getClassType().toString());
-							
+							AbstractClass character = (AbstractClass) entryClass.newInstance();							
 							classes.add(character);
+							
 						} catch (InstantiationException e) {
-							// TODO Auto-generated catch block
+							Log.d("DEBUG", e.getMessage());
 							e.printStackTrace();
+							
 						} catch (IllegalAccessException e) {
-							// TODO Auto-generated catch block
+							Log.d("DEBUG", e.getMessage());
 							e.printStackTrace();
 						}
 					}					
