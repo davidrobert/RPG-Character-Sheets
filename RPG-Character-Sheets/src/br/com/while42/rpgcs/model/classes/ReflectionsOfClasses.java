@@ -9,37 +9,29 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.character.attributes.TypeCode;
 import dalvik.system.DexClassLoader;
 import dalvik.system.DexFile;
 import dalvik.system.PathClassLoader;
 
-public class X {
-	public static TypeRpgClass[] getTypeCodes(Context context, String packageName) {
-		List<TypeRpgClass> types = new ArrayList<TypeRpgClass>();
+public class ReflectionsOfClasses {
+	public static TypeCode[] getTypeCodes(Context context, String packageName) {
+		List<CharacterClass> classes = getModels(context, packageName);
 		
-		List<Class<? extends AbstractClass>> classes = getModels(context, packageName);
+		TypeCode[] types = new TypeCode[classes.size()];
 		
-		for (Class<? extends AbstractClass> c : classes) {
-			try {
-				types.add(c.getClass().newInstance().getClassType());
-			} catch (InstantiationException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IllegalAccessException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		int i = 0;
+		for (CharacterClass c : classes) {
+			types[i++] = c.getClassType();
 		}
 		
-		return (TypeRpgClass[]) types.toArray();
+		return types;
 	}
 	
-	@SuppressWarnings("unchecked")
-	public static List<Class<? extends AbstractClass>> getModels(Context context, String packageName) {
+	private static List<CharacterClass> getModels(Context context, String packageName) {
 
 		String apkName;
-		List<Class<? extends AbstractClass>> classes = new ArrayList<Class<? extends AbstractClass>>();
+		List<CharacterClass> classes = new ArrayList<CharacterClass>();
 		
 		try {
 			apkName = context.getPackageManager().getApplicationInfo(packageName, 0).sourceDir;
@@ -78,7 +70,18 @@ public class X {
 				if (entryClass != null) {												
 					Class<?> superclass = entryClass.getSuperclass();
 					if (superclass != null && superclass == AbstractClass.class) {
-						classes.add((Class<? extends AbstractClass>) superclass);
+						try {
+							AbstractClass character = (AbstractClass) entryClass.newInstance();
+							System.out.println(character.getClassType().toString());
+							
+							classes.add(character);
+						} catch (InstantiationException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (IllegalAccessException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					}					
 				}
 			}

@@ -1,12 +1,9 @@
 package br.com.while42.rpgcs.activity;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,15 +20,11 @@ import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
-import br.com.while42.rpgcs.model.classes.AbstractClass;
-import br.com.while42.rpgcs.model.classes.Barbarian;
-import br.com.while42.rpgcs.model.classes.Fighter;
-import br.com.while42.rpgcs.model.classes.X;
+import br.com.while42.rpgcs.model.classes.ReflectionsOfClasses;
 
 public class EditCharacter extends Activity {
 
@@ -57,7 +50,7 @@ public class EditCharacter extends Activity {
 	private Spinner skin;
 
 	private Button save;
-
+	
 	private void setOptionsSpinner(Spinner spinner, TypeCode[] types) {
 
 		List<Element> items = new ArrayList<Element>();
@@ -100,7 +93,7 @@ public class EditCharacter extends Activity {
 
 		save = (Button) findViewById(R.id_edit.button_save);
 		
-		TypeRpgClass[] l = X.getTypeCodes(this, "br.com.while42.rpgcs");
+		TypeCode[] l = ReflectionsOfClasses.getTypeCodes(this, "br.com.while42.rpgcs");
 
 		setOptionsSpinner(classe, l);
 		setOptionsSpinner(race, TypeRpgRace.values());
