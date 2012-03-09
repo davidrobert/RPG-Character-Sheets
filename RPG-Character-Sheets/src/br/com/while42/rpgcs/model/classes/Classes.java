@@ -1,9 +1,9 @@
 package br.com.while42.rpgcs.model.classes;
 
-import java.io.IOException;
+import java.io.IOException;	
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.List;
+import java.util.List;  
 
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -57,7 +57,7 @@ public class Classes {
 			String entry = entries.nextElement();
 
 			// only check items that exists in source package, not in libraries, etc.
-			if (entry.startsWith(packageName + ".model.classes")) {
+			if (entry.startsWith(packageName)) {
 
 				Class<?> entryClass;
 				try {
