@@ -5,23 +5,34 @@ public class HitDice {
 	private int count;
 	private HitDiceType dice;
 	private int modifier;
+	private int multiplier;
 	
 	public HitDice(HitDiceType dice) {
 		this.count = 1;
 		this.dice = dice;
 		this.modifier = 0;
+		this.multiplier = 1;
 	}
 	
 	public HitDice(int count, HitDiceType dice) {
 		this.count = count;
 		this.dice = dice;
 		this.modifier = 0;
+		this.multiplier = 1;
 	}
 	
 	public HitDice(int count, HitDiceType dice, int modifier) {
 		this.count = count;
 		this.dice = dice;
 		this.modifier = modifier;
+		this.multiplier = 1;
+	}
+	
+	public HitDice(int count, HitDiceType dice, int modifier, int multiplier) {
+		this.count = count;
+		this.dice = dice;
+		this.modifier = modifier;
+		this.multiplier = multiplier;
 	}
 	
 	public int getCount() {
@@ -36,12 +47,16 @@ public class HitDice {
 		return modifier;
 	}
 	
+	public int getMultiplier() {
+		return multiplier;
+	}
+	
 	public int getMaxValue() {
-		return (count * dice.getValue()) + modifier;
+		return ((count * dice.getValue()) + modifier) * multiplier;
 	}
 	
 	public int getMinValue() {
-		return (count * 1) + modifier;
+		return ((count * 1) + modifier) * multiplier;
 	}
 
 	@Override
@@ -55,6 +70,10 @@ public class HitDice {
 			b.append(String.valueOf(modifier));
 		} else if (modifier > 0) {
 			b.append("+").append(String.valueOf(modifier));
+		}
+		
+		if (multiplier != 1) {
+			b.append(" x ").append(String.valueOf(multiplier));
 		}
 		
 		return b.toString();
