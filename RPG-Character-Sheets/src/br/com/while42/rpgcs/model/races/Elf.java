@@ -1,6 +1,10 @@
 package br.com.while42.rpgcs.model.races;
 
+import java.util.Arrays;
+import java.util.List;
+
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 
 public class Elf extends AbstractRace {
 	
@@ -10,6 +14,8 @@ public class Elf extends AbstractRace {
 	
 	private static final int ADJUSTMENTS_OF_DEXTERITY = +2;
 	private static final int ADJUSTMENTS_OF_CONSTITUTION = -2;
+	
+	private static final TypeRpgReligion religions[] = { TypeRpgReligion.CORELLON_LARENTHIAN, TypeRpgReligion.EHLONNA };
 	
 	@Override
 	public int getAdjustmentsOfDexterity() {
@@ -41,4 +47,8 @@ public class Elf extends AbstractRace {
 		return VENERABLE_AGE;
 	}
 
+	@Override
+	public List<TypeRpgReligion> getReligions() {			
+		return Arrays.asList(religions);
+	}
 }

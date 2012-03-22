@@ -12,4 +12,5 @@ public interface CharacterClass {
 	int getFortSave();
 	int getRefSave();
 	int getWillSave();
+	
 }

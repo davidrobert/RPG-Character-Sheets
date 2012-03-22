@@ -1,6 +1,10 @@
 package br.com.while42.rpgcs.model.races;
 
+import java.util.Arrays;
+import java.util.List;
+
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 
 public class Dwarf extends AbstractRace {
 
@@ -10,6 +14,8 @@ public class Dwarf extends AbstractRace {
 	
 	private static final int ADJUSTMENTS_OF_CONSTITUTION = +2;
 	private static final int ADJUSTMENTS_OF_CHARISMA = -2;
+	
+	private static final TypeRpgReligion religions[] = { TypeRpgReligion.MORADIN };
 	
 	@Override
 	public int getAdjustmentsOfConstitution() {
@@ -41,5 +47,8 @@ public class Dwarf extends AbstractRace {
 		return VENERABLE_AGE;
 	}
 
-
+	@Override
+	public List<TypeRpgReligion> getReligions() {			
+		return Arrays.asList(religions);
+	}
 }

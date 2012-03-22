@@ -1,6 +1,10 @@
 package br.com.while42.rpgcs.model.races;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 
 public abstract class AbstractRace {
 	
@@ -37,4 +41,8 @@ public abstract class AbstractRace {
 	public abstract int getMiddleAge();
 	public abstract int getOldAge();
 	public abstract int getVenerableAge();
+	
+	public List<TypeRpgReligion> getReligions() {
+		return new ArrayList<TypeRpgReligion>(); 
+	}
 }

@@ -1,8 +1,12 @@
 package br.com.while42.rpgcs.model.classes;
 
+import java.util.List;
+
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
@@ -16,6 +20,9 @@ public class Monk extends AbstractClass {
 	private static HitDice unarmedDamageSizeLarge[] = new HitDice[ExperienceAndLevel.MAX_LEVEL + 1];
 	
 	private static final TypeRpgClass typeClass = TypeRpgClass.MONK;
+	
+	private static final TypeRpgReligion religions[] = 
+		{ TypeRpgReligion.HEIRONEOUS, TypeRpgReligion.ST_CUTHBERT, TypeRpgReligion.HEXTOR };
 	
 	static {
 	
@@ -97,5 +104,10 @@ public class Monk extends AbstractClass {
 		default:
 			return new HitDice(HitDiceType.d4);
 		}
+	}
+	
+	@Override
+	public List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
+		return getReligions(religions, alignment);
 	}
 }

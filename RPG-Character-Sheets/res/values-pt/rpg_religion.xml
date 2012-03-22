@@ -3,86 +3,65 @@
               
     <string name="religion_none">Nenhuma</string>
     <string name="religion_none_description"></string>
-    <string name="religion_none_alignment"></string>
     
     <string name="religion_boccob">Boccob</string>
     <string name="religion_boccob_description">Deus da Magia</string>
-    <string name="religion_boccob_alignment">Neutro</string>
     
     <string name="religion_corellon_larenthian">Corellon Larenthian</string>
     <string name="religion_corellon_larenthian_description">Deus dos Elfos</string>
-    <string name="religion_corellon_larenthian_alignment">Caótico Bom</string>
     
     <string name="religion_ehlonna">Ehlonna</string>
     <string name="religion_ehlonna_description">Deusa das Florestas</string>
-    <string name="religion_ehlonna_alignment">neutro Bom</string>
     
     <string name="religion_erytnul">Erytnul</string>
     <string name="religion_erytnul_description">Deus da Matança</string>
-    <string name="religion_erytnul_alignment">Caótico Mau</string>
     
     <string name="religion_fharlanghn">Fharlanghn</string>
     <string name="religion_fharlanghn_description">Deus das Estradas</string>
-    <string name="religion_fharlanghn_alignment">Neutro</string>
     
     <string name="religion_garl_glittergold">Garl Glittergold</string>
     <string name="religion_garl_glittergold_description">Deus dos Gnomos</string>
-    <string name="religion_garl_glittergold_alignment">Neutro Bom</string>
     
     <string name="religion_gruumsh">Gruumsh</string>
     <string name="religion_gruumsh_description">Deus dos Orcs</string>
-    <string name="religion_gruumsh_alignment">Caótico Mal</string>
     
     <string name="religion_heironeous">Heironeous</string>
     <string name="religion_heironeous_description">Deus do Heroismo</string>
-    <string name="religion_heironeous_alignment">Leal Bom</string>  
     
     <string name="religion_hextor">Hextor</string>
     <string name="religion_hextor_description">Deus da Tirania</string>
-    <string name="religion_hextor_alignment">Leal Mau</string>
     
     <string name="religion_kord">Kord</string>
     <string name="religion_kord_description">Deus da Força</string>
-    <string name="religion_kord_alignment">Caótico Bom</string>     
     
     <string name="religion_moradin">Moradin</string>
-    <string name="religion_moradin_description">Deus dos Anões</string>
-    <string name="religion_moradin_alignment">Leal Bom</string>               
+    <string name="religion_moradin_description">Deus dos Anões</string>           
     
     <string name="religion_nerull">Nerull</string>
     <string name="religion_nerull_description">Deus da Morte</string>
-    <string name="religion_nerull_alignment">Neutro Mau</string>
     
     <string name="religion_obad_hai">Obad-Hai</string>
     <string name="religion_obad_hai_description">Deus da Natureza</string>
-    <string name="religion_obad_hai_alignment">Neutro</string>
     
     <string name="religion_olidammara">Olidammara</string>
     <string name="religion_olidammara_description">Deus dos Ladinos</string>
-    <string name="religion_olidammara_alignment">Caótico Neutro</string>
     
     <string name="religion_pelor">Pelor</string>
     <string name="religion_pelor_description">Deus do Sol</string>
-    <string name="religion_pelor_alignment">Neutro Bom</string>
 
     <string name="religion_st_cuthbert">St.Cuthbert</string>
     <string name="religion_st_cuthbert_description">Deus da Retribuição</string>
-    <string name="religion_st_cuthbert_alignment">Leal Bom</string>
     
     <string name="religion_vecna">Vecna</string>
     <string name="religion_vecna_description">Deus dos Segredos</string>
-    <string name="religion_vecna_alignment">Neutro Mau</string>
     
     <string name="religion_wee_jas">Wee Jas</string>
     <string name="religion_wee_jas_description">Deusa da Morte</string>
-    <string name="religion_wee_jas_alignment">Leal Neutro</string>
     
     <string name="religion_yondalla">Yondalla</string>
     <string name="religion_yondalla_description">Deausa dos Halfings</string>
-    <string name="religion_yondalla_alignment">Leal Bom</string>
     
     <string name="religion_other">Outro</string>
     <string name="religion_other_description"></string>
-    <string name="religion_other_alignment"></string>
     
 </resources>

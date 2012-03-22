@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edit_label_class"
-            android:textStyle="bold"
+            android:textStyle="bold"            
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <Spinner
