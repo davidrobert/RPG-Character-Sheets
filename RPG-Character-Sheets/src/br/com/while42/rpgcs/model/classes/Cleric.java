@@ -2,6 +2,7 @@ package br.com.while42.rpgcs.model.classes;
 
 import java.util.List;
 
+import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
@@ -52,5 +53,10 @@ public class Cleric extends AbstractClass implements SpellsPerDay {
 	@Override
 	public List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
 		return TypeRpgReligion.getByAlignment(alignment);
+	}
+	
+	@Override
+	public HitDice getStartingGold() {
+		return new HitDice(5, HitDiceType.d4, 0, 10);
 	}
 }

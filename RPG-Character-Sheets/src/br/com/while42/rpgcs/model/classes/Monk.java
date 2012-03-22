@@ -110,4 +110,9 @@ public class Monk extends AbstractClass {
 	public List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
 		return getReligions(religions, alignment);
 	}
+	
+	@Override
+	public HitDice getStartingGold() {
+		return new HitDice(5, HitDiceType.d4);
+	}
 }
