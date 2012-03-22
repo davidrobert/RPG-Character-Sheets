@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="coins_gold_piece">Peça de Ouro</string>
+    <string name="coins_gold_piece_abbreviation">PO</string>
+    
+    <string name="coins_silver_piece">Peça de Prata</string>
+    <string name="coins_silver_piece_abbreviation">PP</string>
+    
+    <string name="coins_copper_piece">Peça de Cobre</string>
+    <string name="coins_copper_piece_abbreviation">PC</string>
+    
+    <string name="coins_platinum_piece">Peça de Platina</string>
+    <string name="coins_platinum_piece_abbreviation">PL</string>
+    
+</resources>

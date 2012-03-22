@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="coins_gold_piece">Gold Piece</string>
+    <string name="coins_gold_piece_abbreviation">gp</string>
+    
+    <string name="coins_silver_piece">Silver Piece</string>
+    <string name="coins_silver_piece_abbreviation">sp</string>
+    
+    <string name="coins_copper_piece">Copper Piece</string>
+    <string name="coins_copper_piece_abbreviation">cp</string>
+    
+    <string name="coins_platinum_piece">Platinum Piece</string>
+    <string name="coins_platinum_piece_abbreviation">pp</string>
+    
+</resources>
