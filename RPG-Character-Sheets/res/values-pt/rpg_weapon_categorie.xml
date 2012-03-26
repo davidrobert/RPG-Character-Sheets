@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="weapon_categorie_simple">Arma Simples</string>
+    <string name="weapon_categorie_martial">Comuns</string>
+    <string name="weapon_categorie_exotic">Exóticas</string>
+    <string name="weapon_categorie_melle">Armas Brancas</string>
+    <string name="weapon_categorie_ranged">Ataques a Distância</string>
+    
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="weapon_categorie_simple">Simple</string>
+    <string name="weapon_categorie_martial">Martial</string>
+    <string name="weapon_categorie_exotic">Exotic</string>
+    <string name="weapon_categorie_melle">Melle</string>
+    <string name="weapon_categorie_ranged">Ranged</string>
+    
+</resources>
