@@ -12,6 +12,7 @@ public interface Weapon {
 	public int getCritical();
 	public int getRangeIncrement();
 	public float getWeight();
+	public CategorieWeapon getCategorie();
 	public Set<TypeWeapon> getType();
 	
 }
