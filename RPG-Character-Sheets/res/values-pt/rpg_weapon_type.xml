@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="type_weapon_bludgeoning">Concussão</string>
-    <string name="type_weapon_piercing">Perfurante</string>
-    <string name="type_weapon_slashing">Cortante</string>
+    <string name="weapon_type_bludgeoning">Concussão</string>
+    <string name="weapon_type_piercing">Perfurante</string>
+    <string name="weapon_type_slashing">Cortante</string>
     
 </resources>

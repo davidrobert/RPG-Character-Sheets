@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="type_weapon_bludgeoning">Bludgeoning</string>
-    <string name="type_weapon_piercing">piercing</string>
-    <string name="type_weapon_slashing">slashing</string>
+    <string name="weapon_type_bludgeoning">Bludgeoning</string>
+    <string name="weapon_type_piercing">piercing</string>
+    <string name="weapon_type_slashing">slashing</string>
     
 </resources>
