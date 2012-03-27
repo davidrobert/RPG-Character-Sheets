@@ -6,6 +6,8 @@ import br.com.while42.rpgcs.model.HitDice;
 
 public interface BasicWeapon {
 	
+	public int getNamecode();
+	
 	public int getCost();
 	public HitDice getDamage();
 	public HitDice getDamage(SizeWeapon size);

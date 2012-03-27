@@ -10,7 +10,6 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
-@RpgClass
 public abstract class AbstractClass implements CharacterClass {
 	
 	protected int classLevel;
