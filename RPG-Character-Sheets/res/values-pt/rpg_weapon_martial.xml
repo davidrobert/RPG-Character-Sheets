@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="weapon_martial_axe">Machado</string>
+    <string name="weapon_martial_axe_throwing">Machado de Arremessso</string>
+    <string name="weapon_martial_hammer_light">Martelo Leve</string>
+    <string name="weapon_martial_handaxe">Machadinha</string>
+    <string name="weapon_martial_kukri">Kukri</string>
+    <string name="weapon_martial_pick_light">Picareta Leve</string>
+    <string name="weapon_martial_sap"></string>
+    <string name="weapon_martial_shield_light">Escudo Pequeno</string>
+    <string name="weapon_martial_spiked_armor">Armadura com Cravos</string>
+    <string name="weapon_martial_spiked_shield_light">Escudo Pequeno com Cravos</string>
+    <string name="weapon_martial_sword_short">Espada Curta</string>
+    <string name="weapon_martial_battleaxe">Machado de Batalha</string>
+    <string name="weapon_martial_flail">Mangual</string>
+    <string name="weapon_martial_longsword">Espada Longa</string>
+    <string name="weapon_martial_pick_heavy">Picareta Pesada</string>
+    <string name="weapon_martial_scimitar">Cimitarra</string>
+    <string name="weapon_martial_shield_heavy">Escudo Grande</string>
+    <string name="weapon_martial_spiked_shield_heavy">Escudo Grande Com Cravos</string>
+    <string name="weapon_martial_trident">Tridente</string>
+    <string name="weapon_martial_warhammer">Martelo de Batalha</string>
+    <string name="weapon_martial_falchion">Falcione</string>
+    <string name="weapon_martial_glaive">Glaive</string>
+    <string name="weapon_martial_greataxe">Machado de Batalha</string>
+    <string name="weapon_martial_greatclub">Clava Grande</string>
+    <string name="weapon_martial_flail_heavy">Mangual Pesado</string>
+    <string name="weapon_martial_greatsword">Espada Grande</string>
+    <string name="weapon_martial_guisarme">Guisarme</string>
+    <string name="weapon_martial_halberd">Alabarda</string>
+    <string name="weapon_martial_lance">Lança</string>
+    <string name="weapon_martial_ranseur">Ranseur</string>
+    <string name="weapon_martial_scythe">Foice Longa</string>
+    <string name="weapon_martial_longbow">Arco Longo</string>
+    <string name="weapon_martial_longbow_composite">Arco Longo Composto</string>
+    <string name="weapon_martial_shortbow">Arco Curto</string>
+    <string name="weapon_martial_shortbow_composite">Arco Curto Composto</string>
     
 </resources>

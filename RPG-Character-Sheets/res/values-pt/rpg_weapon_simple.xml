@@ -2,5 +2,27 @@
 <resources>
     
     <string name="weapon_simple_gauntlet">Manopla</string>
+    <string name="weapon_simple_unarmed_strike">Ataque Desarmado</string>
+    <string name="weapon_simple_dagger">Adaga</string>
+    <string name="weapon_simple_dagger_punching">Adaga de Soco</string>
+    <string name="weapon_simple_gauntlet_spiked">Manopla com Cravos</string>
+    <string name="weapon_simple_mace_light">Maça leve</string>
+    <string name="weapon_simple_sickle">Foice</string>
+    <string name="weapon_simple_club">Clava</string>
+    <string name="weapon_simple_mace_heavy">Maça Pesada</string>
+    <string name="weapon_simple_morningstar">Maça-Estrela</string>
+    <string name="weapon_simple_shortspear">Lança Curta</string>
+    <string name="weapon_simple_longspear">Lança Longa</string>
+    <string name="weapon_simple_quartestaff">Bordão</string>
+    <string name="weapon_simple_spear">Lança</string>
+    <string name="weapon_simple_crossbow_heavy">Besta Pesada</string>
+    <string name="weapon_simple_crossbow_light">Besta Leve</string>
+    <string name="weapon_simple_dart">Dardo</string>
+    <string name="weapon_simple_javelin">Azagaia</string>
+    <string name="weapon_simple_sling">Funda</string>
+    
+                            
+
+    
     
 </resources>
