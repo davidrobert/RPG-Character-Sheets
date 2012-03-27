@@ -2,5 +2,24 @@
 <resources>
     
     <string name="weapon_simple_gauntlet">Gauntlet</string>
+    <string name="weapon_simple_unarmed_strike">Unarmed Strike</string>
+    <string name="weapon_simple_dagger">Dagger</string>
+    <string name="weapon_simple_dagger_punching">Dagger Punching</string>
+    <string name="weapon_simple_gauntlet_spiked">Gauntlet Spiked</string>
+    <string name="weapon_simple_mace_light">Mace Light</string>
+    <string name="weapon_simple_sickle">Sickle</string>
+    <string name="weapon_simple_club">Club</string>
+    <string name="weapon_simple_mace_heavy">Mace Heavy</string>
+    <string name="weapon_simple_morningstar">Morningstar</string>
+    <string name="weapon_simple_shortspear">Shortspear</string>
+    <string name="weapon_simple_longspear">Longspear</string>
+    <string name="weapon_simple_quartestaff">Quartestaff</string>
+    <string name="weapon_simple_spear">Spear</string>
+    <string name="weapon_simple_crossbow_heavy">Crossbow Heavy</string>
+    <string name="weapon_simple_crossbow_light">Crossbow Light</string>
+    <string name="weapon_simple_dart">Dart</string>
+    <string name="weapon_simple_javelin">Javelin</string>
+    <string name="weapon_simple_sling">Sling</string>
     
+                            
 </resources>
