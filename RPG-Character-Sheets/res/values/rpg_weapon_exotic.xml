@@ -2,5 +2,26 @@
 <resources>
     
     <string name="weapon_exotic_kama">Kama</string>
+    <string name="weapon_exotic_nunchaku">Nunchaku</string>
+    <string name="weapon_exotic_sai">Sai</string>
+    <string name="weapon_exotic_siangham">Siangham</string>
+    <string name="weapon_exotic_sword_bastard">Sword Bastard</string>
+    <string name="weapon_exotic_waraxe_dwarven">Waraxe Dwarven</string>
+    <string name="weapon_exotic_whip">Whip</string>
+    <string name="weapon_exotic_axe_orc_double">Axe Orc Double</string>
+    <string name="weapon_exotic_chain_spiked">Chain Spiked</string>
+    <string name="weapon_exotic_flail_spiked">Flail Spiked</string>
+    <string name="weapon_exotic_flail_dire">Flail Dire</string>
+    <string name="weapon_exotic_hammer_gnome_hooked">Hammer Gnome Hooked</string>
+    <string name="weapon_exotic_sword_two-bladed">Sword Two-Bladed</string>
+    <string name="weapon_exotic_ugrosh_dwarven">Ugrosh Dwarven</string>
+    <string name="weapon_exotic_bolas">Bolas</string>
+    <string name="weapon_exotic_crossbow_hand">Crossbow Hand</string>
+    <string name="weapon_exotic_crossbow_repeating_heavy">Crossbow Repeating Heavy</string>
+    <string name="weapon_exotic_crossbow_repeating_light">Crossbow Repeating Light</string>
+    <string name="weapon_exotic_net">Net</string>
+    <string name="weapon_exotic_shuriken">Shuriken</string>
+
+   
     
 </resources>

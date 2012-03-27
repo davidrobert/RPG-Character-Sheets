@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="weapon_martial_axe">Axe</string>
+    <string name="weapon_martial_axe_throwing">Axe Throwing</string>
+    <string name="weapon_martial_hammer_light">Hammer Light</string>
+    <string name="weapon_martial_handaxe">Handaxe</string>
+    <string name="weapon_martial_kukri">Kukri</string>
+    <string name="weapon_martial_pick_light">Pick Light</string>
+    <string name="weapon_martial_sap">Sap</string>
+    <string name="weapon_martial_shield_light">Shield Light</string>
+    <string name="weapon_martial_spiked_armor">Spiked Armor</string>
+    <string name="weapon_martial_spiked_shield_light">Spiked Shield Light</string>
+    <string name="weapon_martial_sword_short">Sword Short</string>
+    <string name="weapon_martial_battleaxe">Battleaxe</string>
+    <string name="weapon_martial_flail">Flail</string>
+    <string name="weapon_martial_longsword">Longsword</string>
+    <string name="weapon_martial_pick_heavy">Pick Heavy</string>
+    <string name="weapon_martial_rapier">Rapier</string>
+    <string name="weapon_martial_scimitar">Scimitar</string>
+    <string name="weapon_martial_shield_heavy">Shield Heavy</string>
+    <string name="weapon_martial_spiked_shield_heavy">Spiked Shield Heavy</string>
+    <string name="weapon_martial_trident">Trident</string>
+    <string name="weapon_martial_warhammer">Warhammer</string>
+    <string name="weapon_martial_falchion">Falchion</string>
+    <string name="weapon_martial_glaive">Glaive</string>
+    <string name="weapon_martial_greataxe">Greataxe</string>
+    <string name="weapon_martial_greatclub">Greatclub</string>
+    <string name="weapon_martial_flail_heavy">Flail Heavy</string>
+    <string name="weapon_martial_greatsword">Greatsword</string>
+    <string name="weapon_martial_guisarme">Guisarme</string>
+    <string name="weapon_martial_halberd">Halberd</string>
+    <string name="weapon_martial_lance">Lance</string>
+    <string name="weapon_martial_ranseur">Ranseur</string>
+    <string name="weapon_martial_scythe">Scythe</string>
+    <string name="weapon_martial_longbow">Longbow</string>
+    <string name="weapon_martial_longbow_composite">Longbow Composite</string>
+    <string name="weapon_martial_shortbow">Shortbow</string>
+    <string name="weapon_martial_shortbow_composite">Shortbow Composite</string>
+    
+    
+    
+   
+    
+
     
 </resources>
