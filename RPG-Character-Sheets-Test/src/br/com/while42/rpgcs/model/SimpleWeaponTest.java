@@ -4,6 +4,7 @@ import junit.framework.Assert;
 import android.test.AndroidTestCase;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.weapons.SizeWeapon;
+import br.com.while42.rpgcs.model.weapons.TypeWeapon;
 import br.com.while42.rpgcs.model.weapons.simple.Club;
 import br.com.while42.rpgcs.model.weapons.simple.CrossbowHeavy;
 import br.com.while42.rpgcs.model.weapons.simple.CrossbowLight;
@@ -25,33 +26,6 @@ import br.com.while42.rpgcs.model.weapons.simple.Spear;
 import br.com.while42.rpgcs.model.weapons.simple.UnarmedStrike;
 
 public class SimpleWeaponTest extends AndroidTestCase {
-		
-/* 
-		GAUNTLET       ( 2,  0,  0.5, TypeWeapon.BLUDGEONING),
-		UNARMED_STRIKE ( 2,  0,    0, TypeWeapon.BLUDGEONING),
-		
-		DAGGER         ( 2,  3,  0.5, TypeWeapon.PIERCING, TypeWeapon.SLASHING),
-		DAGGER_PUNCHING( 3,  0,  0.5, TypeWeapon.PIERCING),
-		GAUNTLET_SPIKED( 2,  0,  0.5, TypeWeapon.PIERCING),
-		MACE_LIGHT     ( 2,  0,    2, TypeWeapon.BLUDGEONING),
-		SICKLE         ( 2,  0,    1, TypeWeapon.SLASHING),
-		
-		CLUB           ( 2,  3,  1.5, TypeWeapon.BLUDGEONING),
-		MACE_HEAVY     ( 2,  0,    4, TypeWeapon.BLUDGEONING),
-		MORNINGSTAR    ( 2,  0,    3, TypeWeapon.BLUDGEONING, TypeWeapon.PIERCING),
-		SHORTSPEAR     ( 2,  6,  1.5, TypeWeapon.PIERCING),
-		
-		LONGSPEAR      ( 3,  0,  4.5, TypeWeapon.PIERCING),
-		QUARTESTAFF    ( 2,  0,    2, TypeWeapon.BLUDGEONING),
-		SPEAR          ( 3,  6,    3, TypeWeapon.PIERCING),
-		
-		CROSSBOW_HEAVY ( 2, 36,    4, TypeWeapon.PIERCING),
-		CROSSBOW_LIGHT ( 2, 24,    2, TypeWeapon.PIERCING),
-		DART           ( 2,  6, 0.25, TypeWeapon.PIERCING),
-		JAVELIN        ( 2,  9,    1, TypeWeapon.PIERCING),
-		SLING          ( 2, 15,    0, TypeWeapon.BLUDGEONING);
-*/
-	
 	
 	public void testGetCodeName() throws Throwable {		
 		Assert.assertEquals(R.string.weapon_simple_gauntlet,        new Gauntlet().getCodeName());
@@ -234,4 +208,72 @@ public class SimpleWeaponTest extends AndroidTestCase {
 		Assert.assertEquals( 1.0, new Javelin().getWeight());
 		Assert.assertEquals( 0.0, new Sling().getWeight());
 	}
+	
+	public void testGetType() throws Throwable {	
+		Assert.assertEquals(   1, new Gauntlet().getType().size());
+		Assert.assertEquals(true, new Gauntlet().getType().contains(TypeWeapon.BLUDGEONING));
+		
+		Assert.assertEquals(   1, new UnarmedStrike().getType().size());
+		Assert.assertEquals(true, new UnarmedStrike().getType().contains(TypeWeapon.BLUDGEONING));
+
+		// ---
+		
+		Assert.assertEquals(   2, new Dagger().getType().size());
+		Assert.assertEquals(true, new Dagger().getType().contains(TypeWeapon.PIERCING));
+		Assert.assertEquals(true, new Dagger().getType().contains(TypeWeapon.SLASHING));
+		
+		Assert.assertEquals(   1, new DaggerPunching().getType().size());
+		Assert.assertEquals(true, new DaggerPunching().getType().contains(TypeWeapon.PIERCING));
+		
+		Assert.assertEquals(   1, new GauntletSpiked().getType().size());
+		Assert.assertEquals(true, new GauntletSpiked().getType().contains(TypeWeapon.PIERCING));
+		
+		Assert.assertEquals(   1, new MaceLight().getType().size());
+		Assert.assertEquals(true, new MaceLight().getType().contains(TypeWeapon.BLUDGEONING));
+		
+		Assert.assertEquals(   1, new Sickle().getType().size());
+		Assert.assertEquals(true, new Sickle().getType().contains(TypeWeapon.SLASHING));
+		
+		// ---
+		
+		Assert.assertEquals(   1, new Club().getType().size());
+		Assert.assertEquals(true, new Club().getType().contains(TypeWeapon.BLUDGEONING));
+		
+		Assert.assertEquals(   1, new MaceHeavy().getType().size());
+		Assert.assertEquals(true, new MaceHeavy().getType().contains(TypeWeapon.BLUDGEONING));
+		
+		Assert.assertEquals(   2, new Morningstar().getType().size());
+		Assert.assertEquals(true, new Morningstar().getType().contains(TypeWeapon.BLUDGEONING));
+		Assert.assertEquals(true, new Morningstar().getType().contains(TypeWeapon.PIERCING));
+		
+		Assert.assertEquals(   1, new Shortspear().getType().size());
+		Assert.assertEquals(true, new Shortspear().getType().contains(TypeWeapon.PIERCING));
+		
+		// ---
+		
+		Assert.assertEquals(   1, new Longspear().getType().size());
+		Assert.assertEquals(true, new Longspear().getType().contains(TypeWeapon.PIERCING));
+		
+		Assert.assertEquals(   1, new Quartestaff().getType().size());
+		Assert.assertEquals(true, new Quartestaff().getType().contains(TypeWeapon.BLUDGEONING));
+		
+		Assert.assertEquals(   1, new Spear().getType().size());
+		Assert.assertEquals(true, new Spear().getType().contains(TypeWeapon.PIERCING));
+		
+		Assert.assertEquals(   1, new CrossbowHeavy().getType().size());
+		Assert.assertEquals(true, new CrossbowHeavy().getType().contains(TypeWeapon.PIERCING));
+		
+		Assert.assertEquals(   1, new CrossbowLight().getType().size());
+		Assert.assertEquals(true, new CrossbowLight().getType().contains(TypeWeapon.PIERCING));
+		
+		Assert.assertEquals(   1, new Dart().getType().size());
+		Assert.assertEquals(true, new Dart().getType().contains(TypeWeapon.PIERCING));
+		
+		Assert.assertEquals(   1, new Javelin().getType().size());
+		Assert.assertEquals(true, new Javelin().getType().contains(TypeWeapon.PIERCING));
+		
+		Assert.assertEquals(   1, new Sling().getType().size());
+		Assert.assertEquals(true, new Sling().getType().contains(TypeWeapon.BLUDGEONING));		
+	}
+	
 }
