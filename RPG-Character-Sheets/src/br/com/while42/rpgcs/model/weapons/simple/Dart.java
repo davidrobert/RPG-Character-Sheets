@@ -32,7 +32,7 @@ public class Dart extends AbstractSimpleWeapon {
 	
 	
 	@Override
-	public int getNamecode() {
+	public int getCodeName() {
 		return nameCode;
 	}
 	

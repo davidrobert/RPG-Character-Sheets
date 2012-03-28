@@ -33,7 +33,7 @@ public class Morningstar extends AbstractSimpleWeapon {
 	
 	
 	@Override
-	public int getNamecode() {
+	public int getCodeName() {
 		return nameCode;
 	}
 	

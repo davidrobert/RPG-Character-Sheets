@@ -2,13 +2,12 @@ package br.com.while42.rpgcs.model.classes;
 
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
+import br.com.while42.rpgcs.model.TypeCode;
 
 
-public interface CharacterClass {
+public interface CharacterClass extends TypeCode {
 	
 	HitDiceType getHitDice();
-	TypeRpgClass getClassType();
 	int getBaseAttackBonus();
 	int getFortSave();
 	int getRefSave();

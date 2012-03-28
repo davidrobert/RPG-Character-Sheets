@@ -1,6 +1,7 @@
 package br.com.while42.rpgcs.model.character.attributes;
 
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.TypeCode;
 import br.com.while42.rpgcs.model.races.Dwarf;
 import br.com.while42.rpgcs.model.races.Elf;
 import br.com.while42.rpgcs.model.races.Gnome;
@@ -27,7 +28,7 @@ public enum TypeRpgRace implements TypeCode {
 		this.race = race;
 	}
 	
-	public int getNameCode() {
+	public int getCodeName() {
 		return nameCode;
 	}
 	

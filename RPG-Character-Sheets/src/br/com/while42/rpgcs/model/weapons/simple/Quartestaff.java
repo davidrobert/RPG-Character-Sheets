@@ -32,7 +32,7 @@ public class Quartestaff extends AbstractSimpleWeapon {
 	
 	
 	@Override
-	public int getNamecode() {
+	public int getCodeName() {
 		return nameCode;
 	}
 	

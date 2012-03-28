@@ -14,8 +14,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.TypeCode;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
-import br.com.while42.rpgcs.model.character.attributes.TypeCode;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -55,7 +55,7 @@ public class EditCharacter extends Activity {
 
 		List<Element> items = new ArrayList<Element>();
 		for (TypeCode g : types) {
-			items.add(new Element(g, getString(g.getNameCode())));
+			items.add(new Element(g, getString(g.getCodeName())));
 		}
 
 		ArrayAdapter<Element> adapter = new ArrayAdapter<Element>(this, android.R.layout.simple_spinner_dropdown_item, items);

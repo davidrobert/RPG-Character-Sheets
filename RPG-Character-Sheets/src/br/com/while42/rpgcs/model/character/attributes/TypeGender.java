@@ -1,6 +1,7 @@
 package br.com.while42.rpgcs.model.character.attributes;
 
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.TypeCode;
 
 public enum TypeGender implements TypeCode {
 	MEN(R.string.gender_men),
@@ -12,7 +13,7 @@ public enum TypeGender implements TypeCode {
 		this.nameCode = nameCode;
 	}
 
-	public int getNameCode() {
+	public int getCodeName() {
 		return nameCode;
 	}
 }

@@ -2,19 +2,17 @@ package br.com.while42.rpgcs.model.classes;
 
 import java.util.List;
 
+import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 
 public class Rogue extends AbstractClass {
-	
-	private static final TypeRpgClass typeClass = TypeRpgClass.ROGUE;
-	
+
 	private static final TypeRpgReligion religions[] = 
 		{ TypeRpgReligion.OLIDAMMARA, TypeRpgReligion.NERULL, TypeRpgReligion.VECNA, TypeRpgReligion.ERYTNUL };
 	
@@ -24,8 +22,8 @@ public class Rogue extends AbstractClass {
 	}
 	
 	@Override
-	public TypeRpgClass getClassType() {
-		return typeClass;
+	public int getCodeName() {
+		return R.string.class_rogue;
 	}
 
 	@Override

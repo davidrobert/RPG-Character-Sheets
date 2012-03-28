@@ -9,7 +9,7 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
-import br.com.while42.rpgcs.model.character.attributes.TypeCode;
+import br.com.while42.rpgcs.model.TypeCode;
 import dalvik.system.DexClassLoader;
 import dalvik.system.DexFile;
 import dalvik.system.PathClassLoader;
@@ -22,7 +22,7 @@ public class Classes {
 		
 		int i = 0;
 		for (CharacterClass c : classes) {
-			types[i++] = c.getClassType();
+			types[i++] = c;
 		}
 		
 		return types;
