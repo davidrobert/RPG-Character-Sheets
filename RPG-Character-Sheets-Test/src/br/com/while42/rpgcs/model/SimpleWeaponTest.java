@@ -76,7 +76,7 @@ public class SimpleWeaponTest extends AndroidTestCase {
 		Assert.assertEquals(35, new CrossbowLight().getCost());
 		Assert.assertEquals( 5, new Dart().getCost());
 		Assert.assertEquals( 1, new Javelin().getCost());
-		Assert.assertEquals( 2, new Sling().getCost());
+		Assert.assertEquals( 0, new Sling().getCost());
 	}
 	
 }
