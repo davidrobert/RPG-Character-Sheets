@@ -3,8 +3,9 @@ package br.com.while42.rpgcs.model.races;
 import java.util.Arrays;
 import java.util.List;
 
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
+import br.com.while42.rpgcs.model.classes.AbstractClass;
+import br.com.while42.rpgcs.model.classes.Bard;
 
 public class Gnome extends AbstractRace {
 	
@@ -28,8 +29,8 @@ public class Gnome extends AbstractRace {
 	}
 	
 	@Override
-	public TypeRpgClass getFavoredClass() {		
-		return TypeRpgClass.BARD;
+	public Class<? extends AbstractClass> getFavoredClass() {		
+		return Bard.class;
 	}
 
 	@Override
