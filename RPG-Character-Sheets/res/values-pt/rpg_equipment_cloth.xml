@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="cloth_artisans_outfit"></string>
+    <string name="cloth_clerics_vestments"></string>
+    <string name="cloth_cold_weather_outfit"></string>
+    <string name="cloth_coutiers_outfit"></string>
+    <string name="cloth_entertainers_outfit"></string>
+    <string name="cloth_explorers_outfit"></string>
+    <string name="cloth_monks_outfit"></string>
+    <string name="cloth_nobles_outfit"></string>
+    <string name="cloth_peasants_outfit"></string>
+    <string name="cloth_royal_outfit"></string>
+    <string name="cloth_scholars_outfit"></string>
+    <string name="cloth_travelers_outfit"></string>
+
+</resources>
