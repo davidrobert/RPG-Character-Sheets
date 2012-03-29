@@ -2,5 +2,24 @@
 <resources>
     
     <string name="weapon_exotic_kama">Kama</string>
-    
+    <string name="weapon_exotic_nunchaku">Nunchaku</string>
+    <string name="weapon_exotic_sai">Sai</string>
+    <string name="weapon_exotic_siangham">Siangham</string>
+    <string name="weapon_exotic_sword_bastard">Espada Bastarda</string>
+    <string name="weapon_exotic_waraxe_dwarven">Machado de Guerra Anao</string>
+    <string name="weapon_exotic_whip">Chicote</string>
+    <string name="weapon_exotic_axe_orc_double">Machado de Orc Duplo</string>
+    <string name="weapon_exotic_chain_spiked">Corrente com Cravos</string>
+    <string name="weapon_exotic_flail_spiked">Mangual Atroz</string>
+    <!--  <string name="weapon_exotic_flail_dire">++++++++++++++++++++++++++++++++++++++++++++++++++++++++</string> -->
+    <string name="weapon_exotic_hammer_gnome_hooked">Martelo Gnomo com Gancho</string>
+    <string name="weapon_exotic_sword_two-bladed">Espada de Duas Laminas</string>
+    <string name="weapon_exotic_ugrosh_dwarven">Ugrosh Anao</string>
+    <string name="weapon_exotic_bolas">Boladeira</string>
+    <string name="weapon_exotic_crossbow_hand">Besta de Mao</string>
+    <string name="weapon_exotic_crossbow_repeating_heavy">Besta de Repeticao pesada</string>
+    <string name="weapon_exotic_crossbow_repeating_light">Besta de Repeticao Leve</string>
+    <string name="weapon_exotic_net">Rede</string>
+    <string name="weapon_exotic_shuriken">Shuriken</string>
+        
 </resources>
