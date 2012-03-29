@@ -2,6 +2,9 @@
 <resources>
     
     <string name="weapon_munition_bolt">Bolt</string>
+    <string name="weapon_munition_bullets">Bullets</string>
+    <string name="weapon_munition_arrows">Arrows</string>
+    <string name="weapon_munition_bolts_hand">Bolts of Hand</string>
    
    
     
