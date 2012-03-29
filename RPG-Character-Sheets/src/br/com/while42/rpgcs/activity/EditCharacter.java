@@ -24,6 +24,8 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.classes.AbstractClass;
+import br.com.while42.rpgcs.model.classes.CharacterClass;
 import br.com.while42.rpgcs.model.classes.Classes;
 
 public class EditCharacter extends Activity {
@@ -51,6 +53,20 @@ public class EditCharacter extends Activity {
 
 	private Button save;
 	
+	private List<CharacterClass> listClasses;
+	
+	private void setOptionsSpinner(Spinner spinner, List<CharacterClass> listClasses) {
+
+		List<Element> items = new ArrayList<Element>();
+		for (CharacterClass g : listClasses) {
+			items.add(new Element(g, getString(g.getCodeName())));
+		}
+
+		ArrayAdapter<Element> adapter = new ArrayAdapter<Element>(this, android.R.layout.simple_spinner_dropdown_item, items);
+
+		spinner.setAdapter(adapter);
+	}	
+	
 	private void setOptionsSpinner(Spinner spinner, TypeCode[] types) {
 
 		List<Element> items = new ArrayList<Element>();
@@ -73,6 +89,8 @@ public class EditCharacter extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.edit_character);
+		
+		listClasses = new Classes().getAll(this, "br.com.while42.rpgcs", AbstractClass.class);
 
 		image = (ImageButton) findViewById(R.id_edit.imagebutton_image);
 		name = (EditText) findViewById(R.id_edit.edittext_name);
@@ -92,10 +110,9 @@ public class EditCharacter extends Activity {
 		skin = (Spinner) findViewById(R.id_edit.spinner_skin);
 
 		save = (Button) findViewById(R.id_edit.button_save);
-		
-		TypeCode[] codes = new Classes().getTypeCodes(this, "br.com.while42.rpgcs");
 
-		setOptionsSpinner(classe, codes);
+		//setOptionsSpinner(classe, codes);
+		setOptionsSpinner(classe, listClasses);
 		setOptionsSpinner(race, TypeRpgRace.values());
 		setOptionsSpinner(alignment, TypeRpgAlignment.values());
 		setOptionsSpinner(religion, TypeRpgReligion.values());
