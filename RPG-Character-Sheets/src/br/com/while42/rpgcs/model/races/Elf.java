@@ -3,8 +3,9 @@ package br.com.while42.rpgcs.model.races;
 import java.util.Arrays;
 import java.util.List;
 
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
+import br.com.while42.rpgcs.model.classes.AbstractClass;
+import br.com.while42.rpgcs.model.classes.Sorcerer;
 
 public class Elf extends AbstractRace {
 	
@@ -28,8 +29,8 @@ public class Elf extends AbstractRace {
 	}
 
 	@Override
-	public TypeRpgClass getFavoredClass() {
-		return TypeRpgClass.SORCERER;
+	public Class<? extends AbstractClass> getFavoredClass() {
+		return Sorcerer.class;
 	}
 
 	@Override

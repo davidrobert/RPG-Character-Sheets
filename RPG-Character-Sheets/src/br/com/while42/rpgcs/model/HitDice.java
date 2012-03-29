@@ -58,6 +58,18 @@ public class HitDice {
 	public int getMinValue() {
 		return ((count * 1) + modifier) * multiplier;
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof HitDice)) return false;
+		
+		HitDice h = (HitDice) o;
+		if (count == h.count && dice == h.dice && modifier == h.modifier && multiplier == h.multiplier)
+			return true;
+		
+		return false;
+	}
 
 	@Override
 	public String toString() {

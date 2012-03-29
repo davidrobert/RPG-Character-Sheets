@@ -1,6 +1,7 @@
 package br.com.while42.rpgcs.model.character.attributes;
 
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.TypeCode;
 
 public enum TypeRpgLanguage implements TypeCode {
 
@@ -30,7 +31,7 @@ public enum TypeRpgLanguage implements TypeCode {
 		this.nameCode = nameCode;
 	}
 
-	public int getNameCode() {
+	public int getCodeName() {
 		return nameCode;
 	}
 }

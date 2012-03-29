@@ -1,6 +1,7 @@
 package br.com.while42.rpgcs.model.character.attributes;
 
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.TypeCode;
 
 public enum TypeRpgSize implements TypeCode {
 	FINE(R.string.size_fine), 
@@ -19,7 +20,7 @@ public enum TypeRpgSize implements TypeCode {
 		this.nameCode = nameCode;
 	}
 
-	public int getNameCode() {
+	public int getCodeName() {
 		return nameCode;
 	}
 }

@@ -3,8 +3,8 @@ package br.com.while42.rpgcs.model.races;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgClass;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
+import br.com.while42.rpgcs.model.classes.AbstractClass;
 
 public abstract class AbstractRace {
 	
@@ -34,8 +34,9 @@ public abstract class AbstractRace {
 		return ADJUSTMENT_DEFAULT;
 	}
 	
-	public TypeRpgClass getFavoredClass() {
-		return TypeRpgClass.NONE;
+	public Class<? extends AbstractClass> getFavoredClass() {
+		// TODO: Verificar se esta Ž a melhor maneira de implementar
+		return null;
 	}
 	
 	public abstract int getMiddleAge();

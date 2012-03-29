@@ -1,6 +1,7 @@
 package br.com.while42.rpgcs.model.character.attributes;
 
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.TypeCode;
 
 public enum TypeRpgSkill implements TypeCode {
 	APPRAISE(R.string.skill_appraise),
@@ -16,7 +17,7 @@ public enum TypeRpgSkill implements TypeCode {
 	ESCAPE_ARTIST(R.string.skill_escape_artist),
 	FORGERY(R.string.skill_forgery),
 	GATHER_INFORMATION(R.string.skill_gather_information),
-	HANDLE_ANIMAL(R.string.skill_handle_information),
+	HANDLE_ANIMAL(R.string.skill_handle_animal),
 	HEAL(R.string.skill_heal),
 	HIDE(R.string.skill_hide),
 	INTIMIDATE(R.string.skill_intimidate),
@@ -55,7 +56,7 @@ public enum TypeRpgSkill implements TypeCode {
 		this.nameCode = nameCode;
 	}
 
-	public int getNameCode() {
+	public int getCodeName() {
 		return nameCode;
 	}
 }

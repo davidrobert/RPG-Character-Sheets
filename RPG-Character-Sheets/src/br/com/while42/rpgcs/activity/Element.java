@@ -1,6 +1,6 @@
 package br.com.while42.rpgcs.activity;
 
-import br.com.while42.rpgcs.model.character.attributes.TypeCode;
+import br.com.while42.rpgcs.model.TypeCode;
 
 public class Element {
 	private String text;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.TypeCode;
 
 public enum TypeRpgReligion implements TypeCode {
 	
@@ -42,7 +43,7 @@ public enum TypeRpgReligion implements TypeCode {
 		this.alignment = alignment;
 	}
 
-	public int getNameCode() {
+	public int getCodeName() {
 		return nameCode;
 	}
 	
