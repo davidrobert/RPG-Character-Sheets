@@ -4,8 +4,8 @@
     <string name="weapon_munition_bolt">Bolt</string>
     <string name="weapon_munition_bullets">Bullets</string>
     <string name="weapon_munition_arrows">Arrows</string>
-    <string name="weapon_munition_bolts_hand">Bolts of Hand</string>
-   
+    <string name="weapon_munition_bolts_of_crossbow_of_hand">Bolts of Crossbow of Hand</string>
+    <string name="weapon_munition_bolts_of_repeating">Bolts of Repeating</string>
    
     
 </resources>

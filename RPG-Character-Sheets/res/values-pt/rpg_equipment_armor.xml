@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="armor_padded_armor"></string>
-    <string name="armor_leather"></string>
-    <string name="armor_studded_leather"></string>
-    <string name="armor_chain_shirt"></string>
-    <string name="armor_hide"></string>
-    <string name="armor_scale_Mail"></string>
-    <string name="armor_chainmail"></string>
-    <string name="armor_breastplate"></string>
-    <string name="armor_splint_mail"></string>
-    <string name="armor_banded_mail"></string>
-    <string name="armor_half_plate"></string>
-    <string name="armor_full_plate"></string>
-    <string name="armor_buckler"></string>
-    <string name="armor_shield_small_wood"></string>
-    <string name="armor_shield_small_steel"></string>
-    <string name="armor_shield_large_wood"></string>
-    <string name="armor_shield_large_steel"></string>
-    <string name="armor_shield_tower"></string>
-    <string name="armor_armor_spikes"></string>
-    <string name="armor_gauntlet_locked"></string>
-    <string name="armor_shield_spikes"></string>
+    <string name="armor_padded_armor">Acolchoada</string>
+    <string name="armor_leather">Couro</string>
+    <string name="armor_studded_leather">Couro Batido</string>
+    <string name="armor_chain_shirt">Camisao de Cota de Malhas</string>
+    <string name="armor_hide">Gibao de Peles</string>
+    <string name="armor_scale_Mail">Brunea</string>
+    <string name="armor_chainmail">Cota de Malha</string>
+    <string name="armor_breastplate">Peitoral de Aco</string>
+    <string name="armor_splint_mail">Cota de Talas</string>
+    <string name="armor_banded_mail">Loriga Segmentada</string>
+    <string name="armor_half_plate">Meia Armadura</string>
+    <string name="armor_full_plate">Armadura de Batalha</string>
+    <string name="armor_buckler">Broquel</string>
+    <string name="armor_shield_small_wood">Escudo Pequeno de Madeira</string>
+    <string name="armor_shield_small_steel">Escudo Pequeno de Metal</string>
+    <string name="armor_shield_large_wood">Escudo Grande de Madeira</string>
+    <string name="armor_shield_large_steel">Escudo Grande de Metal</string>
+    <string name="armor_shield_tower">Escudo de Corpo</string>
+    <string name="armor_armor_spikes">Cravos para Armadura</string>
+    <string name="armor_gauntlet_locked">Manopla de Seguranca</string>
+    <string name="armor_shield_spikes">Cravos Para Escudo</string>
 
 </resources>

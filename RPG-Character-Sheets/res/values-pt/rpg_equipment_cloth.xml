@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="cloth_artisans_outfit"></string>
-    <string name="cloth_clerics_vestments"></string>
-    <string name="cloth_cold_weather_outfit"></string>
-    <string name="cloth_coutiers_outfit"></string>
-    <string name="cloth_entertainers_outfit"></string>
-    <string name="cloth_explorers_outfit"></string>
-    <string name="cloth_monks_outfit"></string>
-    <string name="cloth_nobles_outfit"></string>
-    <string name="cloth_peasants_outfit"></string>
-    <string name="cloth_royal_outfit"></string>
-    <string name="cloth_scholars_outfit"></string>
-    <string name="cloth_travelers_outfit"></string>
+    <string name="cloth_artisans_outfit">Traje de Artesao</string>
+    <string name="cloth_clerics_vestments">Vestimentas</string>
+    <string name="cloth_cold_weather_outfit">Traje de Clima Frio</string>
+    <string name="cloth_coutiers_outfit">Traje da Corte</string>
+    <string name="cloth_entertainers_outfit">Traje de Entreterimento</string>
+    <string name="cloth_explorers_outfit">Traje de Explorador</string>
+    <string name="cloth_monks_outfit">Traje de Monge</string>
+    <string name="cloth_nobles_outfit">Traje de Nobre</string>
+    <string name="cloth_peasants_outfit">Traje de Sabio</string>
+    <string name="cloth_royal_outfit">Traje de Nobre</string>
+    <string name="cloth_scholars_outfit">Traje de Sabio</string>
+    <string name="cloth_travelers_outfit">Traje de Viajante</string>
 
 </resources>

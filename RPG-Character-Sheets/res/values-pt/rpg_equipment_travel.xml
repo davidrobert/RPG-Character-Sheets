@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="travel_bit_and_bridle"></string>
-    <string name="travel_guard_dog"></string>
-    <string name="travel_riding_dog"></string>
-    <string name="travel_donkey"></string>
-    <string name="travel_feed_per_day"></string>
-    <string name="travel_horse_heavy"></string>
-    <string name="travel_horse_light"></string>
-    <string name="travel_pony"></string>
-    <string name="travel_warhorse_heavy"></string>
-    <string name="travel_warhorse_light"></string>
-    <string name="travel_warpony"></string>
-    <string name="travel_military_saddle"></string>
-    <string name="travel_pack_saddle"></string>
-    <string name="travel_riding_saddle"></string>
-    <string name="travel_exotic_military_saddle"></string>
-    <string name="travel_exotic_pack_saddle"></string>
-    <string name="travel_exotic_riding_saddle"></string>
-    <string name="travel_saddlebags"></string>
-    <string name="travel_carriage"></string>
-    <string name="travel_cart"></string>
-    <string name="travel_galley"></string>
-    <string name="travel_keelboat"></string>
-    <string name="travel_longship"></string>
-    <string name="travel_rowboat"></string>
-    <string name="travel_sailing_ship"></string>
-    <string name="travel_sled"></string>
-    <string name="travel_wagon"></string>
-    <string name="travel_warship"></string>
+    <string name="travel_bit_and_bridle">Freio e Redeas</string>
+    <string name="travel_guard_dog">Cao de Guarda</string>
+    <string name="travel_riding_dog">Cachorro de Montaria</string>
+    <string name="travel_donkey">Jumento ou Mula</string>
+    <string name="travel_feed_per_day">EstabuloI (Por Dia)</string>
+    <string name="travel_horse_heavy">Cavalo Pesado</string>
+    <string name="travel_horse_light">Cavalo Leve</string>
+    <string name="travel_pony">Ponei</string>
+    <string name="travel_warhorse_heavy">Cavalo de Guerra Pesado</string>
+    <string name="travel_warhorse_light">Cavalo de Guerra Leve</string>
+    <string name="travel_warpony">Ponei de Guerra</string>
+    <string name="travel_military_saddle">Sela Militar</string>
+    <string name="travel_pack_saddle">Sela de Carga</string>
+    <string name="travel_riding_saddle">Sela de Montaria</string>
+    <string name="travel_exotic_military_saddle">Sela Exotica Militar</string>
+    <string name="travel_exotic_pack_saddle">Sela Exotica de Carga</string>
+    <string name="travel_exotic_riding_saddle">Sela Exotica de Montaria</string>
+    <string name="travel_saddlebags">Alforje</string>
+    <string name="travel_carriage">Carruagem</string>
+    <string name="travel_cart">Charrete</string>
+    <string name="travel_galley">Galeao</string>
+    <string name="travel_keelboat">Barcaca</string>
+    <string name="travel_longship">Navio</string>
+    <string name="travel_rowboat">Barco a Remo</string>
+    <string name="travel_sailing_ship">Veleiro</string>
+    <string name="travel_sled">Treno</string>
+    <string name="travel_wagon">Carroca</string>
+    <string name="travel_warship">Navio de Guerra</string>
 
 </resources>
