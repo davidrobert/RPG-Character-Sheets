@@ -15,18 +15,18 @@ import br.com.while42.rpgcs.model.equipment.weapons.TypeWeapon;
 public class Bolas extends AbstractExoticWeapon {
 
 	private static final int nameCode = R.string.weapon_exotic_bolas;
-	private static final int cost = 2;
+	private static final int cost = 5;
 	private static final Map<SizeWeapon, HitDice> damage = new HashMap<SizeWeapon, HitDice>();	
 	private static final int critical = 2;
-	private static final int rangeIncrement = 0;
+	private static final int rangeIncrement = 3;
 	private static final double weight = 1;
 	private static final Set<TypeWeapon> types = new HashSet<TypeWeapon>();
 	
 	static {
-		damage.put(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
-		damage.put(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
+		damage.put(SizeWeapon.SMALL, new HitDice(HitDiceType.d3));
+		damage.put(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d4));
 		
-		types.add(TypeWeapon.SLASHING);
+		types.add(TypeWeapon.BLUDGEONING);
 	}
 	
 	
