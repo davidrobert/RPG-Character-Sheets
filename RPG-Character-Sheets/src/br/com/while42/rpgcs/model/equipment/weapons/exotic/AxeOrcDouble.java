@@ -15,16 +15,16 @@ import br.com.while42.rpgcs.model.equipment.weapons.TypeWeapon;
 public class AxeOrcDouble extends AbstractExoticWeapon {
 
 	private static final int nameCode = R.string.weapon_exotic_axe_orc_double;
-	private static final int cost = 2;
+	private static final int cost = 60;
 	private static final Map<SizeWeapon, HitDice> damage = new HashMap<SizeWeapon, HitDice>();	
-	private static final int critical = 2;
+	private static final int critical = 3;
 	private static final int rangeIncrement = 0;
-	private static final double weight = 1;
+	private static final double weight = 12.5;
 	private static final Set<TypeWeapon> types = new HashSet<TypeWeapon>();
 	
 	static {
-		damage.put(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
-		damage.put(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
+		damage.put(SizeWeapon.SMALL, new HitDice(HitDiceType.d6));
+		damage.put(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d8));
 		
 		types.add(TypeWeapon.SLASHING);
 	}
