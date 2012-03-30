@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.weapons;
+package br.com.while42.rpgcs.model.equipment.weapons;
 
 import java.util.Set;
 

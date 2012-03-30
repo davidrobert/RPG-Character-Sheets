@@ -1,9 +1,9 @@
-package br.com.while42.rpgcs.model.weapons;
+package br.com.while42.rpgcs.model.equipment.weapons;
 
 import br.com.while42.rpgcs.R;
 
 public enum TypeWeapon {
-	BLUDGEONING(R.string.weapon_type_bludgeoning), // concuss‹o
+	BLUDGEONING(R.string.weapon_type_bludgeoning), // concussï¿½o
 	PIERCING(R.string.weapon_type_piercing), // perfurante
 	SLASHING(R.string.weapon_type_slashing); // cortante
 	

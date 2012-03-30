@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.weapons.simple;
+package br.com.while42.rpgcs.model.equipment.weapons.simple;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -9,25 +9,24 @@ import java.util.Set;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
-import br.com.while42.rpgcs.model.weapons.AbstractSimpleWeapon;
-import br.com.while42.rpgcs.model.weapons.SizeWeapon;
-import br.com.while42.rpgcs.model.weapons.TypeWeapon;
+import br.com.while42.rpgcs.model.equipment.weapons.SizeWeapon;
+import br.com.while42.rpgcs.model.equipment.weapons.TypeWeapon;
 
-public class Quartestaff extends AbstractSimpleWeapon {
+public class GauntletSpiked extends AbstractSimpleWeapon {
 
-	private static final int nameCode = R.string.weapon_simple_quartestaff;
-	private static final int cost = 0;
+	private static final int nameCode = R.string.weapon_simple_gauntlet_spiked;
+	private static final int cost = 5;
 	private static final Map<SizeWeapon, HitDice> damage = new HashMap<SizeWeapon, HitDice>();	
 	private static final int critical = 2;
 	private static final int rangeIncrement = 0;
-	private static final double weight = 2;
+	private static final double weight = 0.5;
 	private static final Set<TypeWeapon> types = new HashSet<TypeWeapon>();
 	
 	static {
-		damage.put(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
-		damage.put(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
+		damage.put(SizeWeapon.SMALL, new HitDice(HitDiceType.d3));
+		damage.put(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d4));
 		
-		types.add(TypeWeapon.BLUDGEONING);
+		types.add(TypeWeapon.PIERCING);
 	}
 	
 	
