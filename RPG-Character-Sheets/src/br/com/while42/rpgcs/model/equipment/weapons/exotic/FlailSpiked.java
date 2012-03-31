@@ -1,78 +1,69 @@
 package br.com.while42.rpgcs.model.equipment.weapons.exotic;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
+import br.com.while42.rpgcs.model.equipment.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equipment.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equipment.weapons.TypeWeapon;
 
 public class FlailSpiked extends AbstractExoticWeapon {
 
-	private static final int nameCode = R.string.weapon_exotic_flail_spiked;
-	private static final int cost = 2;
-	private static final Map<SizeWeapon, List<HitDice>> damage = new HashMap<SizeWeapon, List<HitDice>>();	
-	private static final int critical = 2;
-	private static final int rangeIncrement = 0;
-	private static final double weight = 1;
-	private static final Set<TypeWeapon> types = new HashSet<TypeWeapon>();
+	private static final BasicWeapon base;
 	
 	static {
-		List<HitDice> small = Arrays.asList(new HitDice(HitDiceType.d4));
-		List<HitDice> medium = Arrays.asList(new HitDice(HitDiceType.d6));
+		base = new BasicWeapon(R.string.weapon_exotic_flail_spiked);
+		base.setCost(2);
+		base.setCritical(2);
+		base.setRangeIncrement(0);
+		base.setWeight(1);
 		
-		damage.put(SizeWeapon.SMALL, small);
-		damage.put(SizeWeapon.MEDIUM, medium);
+		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
+		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
 		
-		types.add(TypeWeapon.SLASHING);
+		base.addType(TypeWeapon.SLASHING);
 	}
-	
 	
 	@Override
 	public int getCodeName() {
-		return nameCode;
+		return base.getCodeName();
 	}
 	
 	@Override
 	public int getCost() {
-		return cost;
+		return base.getCost();
 	}
 
 	@Override
 	public List<HitDice> getDamage() {
-		return getDamage(SizeWeapon.MEDIUM);
+		return base.getDamage(SizeWeapon.MEDIUM);
 	}
 
 	@Override
 	public List<HitDice> getDamage(SizeWeapon size) {
-		return damage.get(size);
+		return base.getDamage(size);
 	}
 
 	@Override
 	public int getCritical() {
-		return critical;
+		return base.getCritical();
 	}
 
 	@Override
 	public int getRangeIncrement() {
-		return rangeIncrement;
+		return base.getRangeIncrement();
 	}
 
 	@Override
 	public double getWeight() {
-		return weight;
+		return base.getWeight();
 	}
 
 	@Override
 	public Set<TypeWeapon> getType() {
-		return Collections.unmodifiableSet(types);
+		return base.getType();
 	}
-
 }
