@@ -1,8 +1,10 @@
 package br.com.while42.rpgcs.model.equipment.weapons.exotic;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -16,19 +18,21 @@ public class AxeOrcDouble extends AbstractExoticWeapon {
 
 	private static final int nameCode = R.string.weapon_exotic_axe_orc_double;
 	private static final int cost = 60;
-	private static final Map<SizeWeapon, HitDice> damage = new HashMap<SizeWeapon, HitDice>();	
+	private static final Map<SizeWeapon, List<HitDice>> damage = new HashMap<SizeWeapon, List<HitDice>>();	
 	private static final int critical = 3;
 	private static final int rangeIncrement = 0;
 	private static final double weight = 12.5;
 	private static final Set<TypeWeapon> types = new HashSet<TypeWeapon>();
 	
 	static {
-		damage.put(SizeWeapon.SMALL, new HitDice(HitDiceType.d6));
-		damage.put(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d8));
+		List<HitDice> small = Arrays.asList(new HitDice(HitDiceType.d6));
+		List<HitDice> medium = Arrays.asList(new HitDice(HitDiceType.d8));
+		
+		damage.put(SizeWeapon.SMALL, small);
+		damage.put(SizeWeapon.MEDIUM, medium);
 		
 		types.add(TypeWeapon.SLASHING);
 	}
-	
 	
 	@Override
 	public int getCodeName() {
@@ -41,12 +45,12 @@ public class AxeOrcDouble extends AbstractExoticWeapon {
 	}
 
 	@Override
-	public HitDice getDamage() {
+	public List<HitDice> getDamage() {
 		return getDamage(SizeWeapon.MEDIUM);
 	}
 
 	@Override
-	public HitDice getDamage(SizeWeapon size) {
+	public List<HitDice> getDamage(SizeWeapon size) {
 		return damage.get(size);
 	}
 

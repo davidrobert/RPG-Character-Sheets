@@ -1,8 +1,10 @@
 package br.com.while42.rpgcs.model.equipment.weapons.simple;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -16,15 +18,18 @@ public class Sickle extends AbstractSimpleWeapon {
 
 	private static final int nameCode = R.string.weapon_simple_sickle;
 	private static final int cost = 6;
-	private static final Map<SizeWeapon, HitDice> damage = new HashMap<SizeWeapon, HitDice>();	
+	private static final Map<SizeWeapon, List<HitDice>> damage = new HashMap<SizeWeapon, List<HitDice>>();	
 	private static final int critical = 2;
 	private static final int rangeIncrement = 0;
 	private static final double weight = 1;
 	private static final Set<TypeWeapon> types = new HashSet<TypeWeapon>();
 	
 	static {
-		damage.put(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
-		damage.put(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
+		List<HitDice> small = Arrays.asList(new HitDice(HitDiceType.d4));
+		List<HitDice> medium = Arrays.asList(new HitDice(HitDiceType.d6));
+		
+		damage.put(SizeWeapon.SMALL, small);
+		damage.put(SizeWeapon.MEDIUM, medium);
 		
 		types.add(TypeWeapon.SLASHING);
 	}
@@ -41,12 +46,12 @@ public class Sickle extends AbstractSimpleWeapon {
 	}
 
 	@Override
-	public HitDice getDamage() {
+	public List<HitDice> getDamage() {
 		return getDamage(SizeWeapon.MEDIUM);
 	}
 
 	@Override
-	public HitDice getDamage(SizeWeapon size) {
+	public List<HitDice> getDamage(SizeWeapon size) {
 		return damage.get(size);
 	}
 
