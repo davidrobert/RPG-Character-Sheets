@@ -1,8 +1,5 @@
 package br.com.while42.rpgcs.model.equipment.weapons.simple;
 
-import java.util.List;
-import java.util.Set;
-
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
@@ -27,43 +24,7 @@ public class CrossbowLight extends AbstractSimpleWeapon {
 		base.addType(TypeWeapon.PIERCING);
 	}
 	
-	@Override
-	public int getCodeName() {
-		return base.getCodeName();
-	}
-	
-	@Override
-	public int getCost() {
-		return base.getCost();
-	}
-
-	@Override
-	public List<HitDice> getDamage() {
-		return base.getDamage(SizeWeapon.MEDIUM);
-	}
-
-	@Override
-	public List<HitDice> getDamage(SizeWeapon size) {
-		return base.getDamage(size);
-	}
-
-	@Override
-	public int getCritical() {
-		return base.getCritical();
-	}
-
-	@Override
-	public int getRangeIncrement() {
-		return base.getRangeIncrement();
-	}
-
-	@Override
-	public double getWeight() {
-		return base.getWeight();
-	}
-
-	@Override
-	public Set<TypeWeapon> getType() {
-		return base.getType();
+	public CrossbowLight() {
+		super(base);
 	}
 }

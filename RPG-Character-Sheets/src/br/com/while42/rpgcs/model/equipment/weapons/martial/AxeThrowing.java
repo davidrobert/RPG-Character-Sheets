@@ -1,20 +1,17 @@
 package br.com.while42.rpgcs.model.equipment.weapons.martial;
 
-import lombok.Delegate;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.equipment.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equipment.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equipment.weapons.TypeWeapon;
-import br.com.while42.rpgcs.model.equipment.weapons.Weapon;
 
-public class AxeThrowing  {
-
-	@Delegate(types=Weapon.class)
-	private BasicWeapon base;
+public class AxeThrowing extends AbstractMartialWeapon {
 	
-	public AxeThrowing() {
+	private static BasicWeapon base;
+
+	static {
 		base = new BasicWeapon(R.string.weapon_martial_axe_throwing);
 		base.setCost(8);
 		base.setCritical(2);
@@ -25,6 +22,9 @@ public class AxeThrowing  {
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
 		
 		base.addType(TypeWeapon.SLASHING);
-	}		
-
+	}
+	
+	public AxeThrowing() {
+		super(base);
+	}
 }
