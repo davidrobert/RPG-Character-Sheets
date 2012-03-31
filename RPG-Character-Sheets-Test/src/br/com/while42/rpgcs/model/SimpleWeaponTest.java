@@ -80,55 +80,55 @@ public class SimpleWeaponTest extends AndroidTestCase {
 	}
 	
 	public void testGetDamageSmall() throws Throwable {
-		Assert.assertEquals(new HitDice(HitDiceType.d2 ), new Gauntlet().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d2 ), new UnarmedStrike().getDamage(SizeWeapon.SMALL));
+		Assert.assertEquals(new HitDice(HitDiceType.d2 ), new Gauntlet().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d2 ), new UnarmedStrike().getDamage(SizeWeapon.SMALL).get(0));
 		
-		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new Dagger().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new DaggerPunching().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new GauntletSpiked().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new MaceLight().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Sickle().getDamage(SizeWeapon.SMALL));
+		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new Dagger().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new DaggerPunching().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new GauntletSpiked().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new MaceLight().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Sickle().getDamage(SizeWeapon.SMALL).get(0));
 		
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Club().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new MaceHeavy().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Morningstar().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Shortspear().getDamage(SizeWeapon.SMALL));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Club().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new MaceHeavy().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Morningstar().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Shortspear().getDamage(SizeWeapon.SMALL).get(0));
 		
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Longspear().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Quartestaff().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Spear().getDamage(SizeWeapon.SMALL));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Longspear().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Quartestaff().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Spear().getDamage(SizeWeapon.SMALL).get(0));
 		
-		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new CrossbowHeavy().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new CrossbowLight().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new Dart().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Javelin().getDamage(SizeWeapon.SMALL));
-		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new Sling().getDamage(SizeWeapon.SMALL));
+		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new CrossbowHeavy().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new CrossbowLight().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new Dart().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Javelin().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new Sling().getDamage(SizeWeapon.SMALL).get(0));
 	}
 	
 	public void testGetDamage() throws Throwable {
-		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new Gauntlet().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new UnarmedStrike().getDamage());
+		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new Gauntlet().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d3 ), new UnarmedStrike().getDamage().get(0));
 		
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Dagger().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new DaggerPunching().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new GauntletSpiked().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new MaceLight().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Sickle().getDamage());
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Dagger().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new DaggerPunching().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new GauntletSpiked().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new MaceLight().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Sickle().getDamage().get(0));
 		
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Club().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new MaceHeavy().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new Morningstar().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Shortspear().getDamage());
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Club().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new MaceHeavy().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new Morningstar().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Shortspear().getDamage().get(0));
 		
-		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new Longspear().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Quartestaff().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new Spear().getDamage());
+		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new Longspear().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Quartestaff().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new Spear().getDamage().get(0));
 		
-		Assert.assertEquals(new HitDice(HitDiceType.d10), new CrossbowHeavy().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new CrossbowLight().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Dart().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Javelin().getDamage());
-		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Sling().getDamage());
+		Assert.assertEquals(new HitDice(HitDiceType.d10), new CrossbowHeavy().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new CrossbowLight().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Dart().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Javelin().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Sling().getDamage().get(0));
 	}
 	
 	public void testGetCritical() throws Throwable {		
