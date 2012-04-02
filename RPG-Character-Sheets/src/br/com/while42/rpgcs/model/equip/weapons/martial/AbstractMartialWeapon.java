@@ -5,6 +5,8 @@ import java.util.Set;
 
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
@@ -23,6 +25,16 @@ public abstract class AbstractMartialWeapon implements Weapon {
 		return CategorieWeapon.MARTIAL;
 	}
 
+	@Override
+	public final CategorieUsefulnessWeapon getCategorieUsefulness() {
+		return CategorieUsefulnessWeapon.MELEE;
+	}
+	
+	@Override
+	public final CategorieEncumbranceWeapon getCategorieEncumbrance() {
+		return CategorieEncumbranceWeapon.TWO_HANDED;
+	}
+	
 	@Override
 	public int getCodeName() {
 		return base.getCodeName();

@@ -1,26 +1,38 @@
-package br.com.while42.rpgcs.model.equip.weapons.exotic;
+package br.com.while42.rpgcs.model.equip.weapons.exotic.ranged;
 
 import java.util.List;
 import java.util.Set;
 
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 
-public abstract class AbstractExoticWeapon implements Weapon {
+public abstract class AbstractExoticRangedWeapon implements Weapon {
 
 	private BasicWeapon base;
 
-	public AbstractExoticWeapon(BasicWeapon base) {
+	public AbstractExoticRangedWeapon(BasicWeapon base) {
 		this.base = base;
 	}
 
 	@Override
 	public final CategorieWeapon getCategorie() {
 		return CategorieWeapon.EXOTIC;
+	}
+	
+	@Override
+	public final CategorieUsefulnessWeapon getCategorieUsefulness() {
+		return CategorieUsefulnessWeapon.RANGED;
+	}
+	
+	@Override
+	public final CategorieEncumbranceWeapon getCategorieEncumbrance() {
+		return CategorieEncumbranceWeapon.LIGHT;
 	}
 
 	@Override

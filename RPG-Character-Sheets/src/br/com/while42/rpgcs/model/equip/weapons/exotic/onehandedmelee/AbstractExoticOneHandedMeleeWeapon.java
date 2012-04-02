@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.equip.weapons.simple;
+package br.com.while42.rpgcs.model.equip.weapons.exotic.onehandedmelee;
 
 import java.util.List;
 import java.util.Set;
@@ -12,37 +12,34 @@ import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 
+public abstract class AbstractExoticOneHandedMeleeWeapon implements Weapon {
 
-public abstract class AbstractSimpleWeapon implements Weapon {
-	
 	private BasicWeapon base;
-	
-	public AbstractSimpleWeapon(BasicWeapon base) {
+
+	public AbstractExoticOneHandedMeleeWeapon(BasicWeapon base) {
 		this.base = base;
 	}
-	
+
 	@Override
 	public final CategorieWeapon getCategorie() {
-		return CategorieWeapon.SIMPLE;
+		return CategorieWeapon.EXOTIC;
 	}
 	
 	@Override
 	public final CategorieUsefulnessWeapon getCategorieUsefulness() {
-		// TODO: Falta implementar
-		return null;
+		return CategorieUsefulnessWeapon.MELEE;
 	}
 	
 	@Override
 	public final CategorieEncumbranceWeapon getCategorieEncumbrance() {
-		// TODO: Falta implementar
-		return null;
+		return CategorieEncumbranceWeapon.ONE_HANDED;
 	}
-	
+
 	@Override
 	public int getCodeName() {
 		return base.getCodeName();
 	}
-	
+
 	@Override
 	public int getCost() {
 		return base.getCost();

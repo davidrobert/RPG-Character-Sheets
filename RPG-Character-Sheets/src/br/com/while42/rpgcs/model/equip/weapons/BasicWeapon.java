@@ -19,6 +19,9 @@ public class BasicWeapon implements Weapon {
 	private int rangeIncrement = 0;
 	private double weight = 0.0;
 	private Set<TypeWeapon> types = new HashSet<TypeWeapon>();
+	private CategorieWeapon categorie = null;
+	private CategorieUsefulnessWeapon categorieUsefulness = null;
+	private CategorieEncumbranceWeapon categorieEncumbrance = null;
 
 	public BasicWeapon(int codeName) {
 		this.codeName = codeName;
@@ -99,9 +102,32 @@ public class BasicWeapon implements Weapon {
 		return codeName;
 	}
 	
+	public void setCategorie(CategorieWeapon categorie) {
+		this.categorie = categorie;
+	}
+
 	@Override
 	public CategorieWeapon getCategorie() {
-		return null;
+		return categorie;
+	}
+
+	public void setCategorieUsefulness(CategorieUsefulnessWeapon categorieUsefulness) {
+		this.categorieUsefulness = categorieUsefulness;
+	}
+	
+	@Override
+	public CategorieUsefulnessWeapon getCategorieUsefulness() {
+		return categorieUsefulness;
+	}
+
+	public void setCategorieEncumbrance(
+			CategorieEncumbranceWeapon categorieEncumbrance) {
+		this.categorieEncumbrance = categorieEncumbrance;
+	}
+	
+	@Override
+	public CategorieEncumbranceWeapon getCategorieEncumbrance() {
+		return categorieEncumbrance;
 	}
 
 }

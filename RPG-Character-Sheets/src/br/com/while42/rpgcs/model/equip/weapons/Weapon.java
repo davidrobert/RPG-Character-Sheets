@@ -15,6 +15,8 @@ public interface Weapon extends TypeCode {
 	public int getRangeIncrement();
 	public double getWeight();
 	public CategorieWeapon getCategorie();
+	public CategorieUsefulnessWeapon getCategorieUsefulness();
+	public CategorieEncumbranceWeapon getCategorieEncumbrance();
 	public Set<TypeWeapon> getType();
 	
 }
