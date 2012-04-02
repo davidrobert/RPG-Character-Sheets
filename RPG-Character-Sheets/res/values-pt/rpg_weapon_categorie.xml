@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="weapon_categorie_simple">Arma Simples</string>
-    <string name="weapon_categorie_martial">Comuns</string>
+    <string name="weapon_categorie_simple">Simples</string>
+    <string name="weapon_categorie_martial">Comum</string>
     <string name="weapon_categorie_exotic">Exóticas</string>
-    <string name="weapon_categorie_melle">Armas Brancas</string>
-    <string name="weapon_categorie_ranged">Ataques a Distância</string>
+    
+    <string name="weapon_categorie_usefulness_melle">Corporal</string>
+    <string name="weapon_categorie_usefulness_ranged">Arremesso ou Disparo</string>
+    
+    <string name="weapon_categorie_encumbrance_light">Leve</string>
+    <string name="weapon_categorie_encumbrance_one_handed">Uma Mão</string>
+    <string name="weapon_categorie_encumbrance_two_handed">Duas Mãos</string>
     
 </resources>

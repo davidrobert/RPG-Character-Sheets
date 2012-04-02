@@ -4,7 +4,12 @@
     <string name="weapon_categorie_simple">Simple</string>
     <string name="weapon_categorie_martial">Martial</string>
     <string name="weapon_categorie_exotic">Exotic</string>
-    <string name="weapon_categorie_melle">Melle</string>
-    <string name="weapon_categorie_ranged">Ranged</string>
     
+    <string name="weapon_categorie_usefulness_melle">Melle</string>
+    <string name="weapon_categorie_usefulness_ranged">Ranged</string>
+    
+    <string name="weapon_categorie_encumbrance_light">Light</string>
+    <string name="weapon_categorie_encumbrance_one_handed">One Handed</string>
+    <string name="weapon_categorie_encumbrance_two_handed">Two Handed</string>
+        
 </resources>
