@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.equipment.weapons.exotic;
+package br.com.while42.rpgcs.model.equipment.weapons.exotic.twohandedmelee;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
@@ -6,13 +6,14 @@ import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.equipment.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equipment.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equipment.weapons.TypeWeapon;
+import br.com.while42.rpgcs.model.equipment.weapons.exotic.AbstractExoticWeapon;
 
-public class Shuriken extends AbstractExoticWeapon {
+public class HammerGnomoHooked extends AbstractExoticWeapon {
 
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_shuriken);
+		base = new BasicWeapon(R.string.weapon_exotic_hammer_gnome_hooked);
 		base.setCost(2);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
@@ -24,7 +25,7 @@ public class Shuriken extends AbstractExoticWeapon {
 		base.addType(TypeWeapon.SLASHING);
 	}
 
-	public Shuriken() {
+	public HammerGnomoHooked() {
 		super(base);
 	}
 }

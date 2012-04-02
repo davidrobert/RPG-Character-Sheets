@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.equipment.weapons.exotic;
+package br.com.while42.rpgcs.model.equipment.weapons.exotic.onehandedmelee;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
@@ -6,6 +6,7 @@ import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.equipment.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equipment.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equipment.weapons.TypeWeapon;
+import br.com.while42.rpgcs.model.equipment.weapons.exotic.AbstractExoticWeapon;
 
 public class Whip extends AbstractExoticWeapon {
 

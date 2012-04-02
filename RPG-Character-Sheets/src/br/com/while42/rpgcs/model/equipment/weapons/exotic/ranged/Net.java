@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.equipment.weapons.exotic;
+package br.com.while42.rpgcs.model.equipment.weapons.exotic.ranged;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
@@ -6,13 +6,14 @@ import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.equipment.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equipment.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equipment.weapons.TypeWeapon;
+import br.com.while42.rpgcs.model.equipment.weapons.exotic.AbstractExoticWeapon;
 
-public class HammerGnomoHooked extends AbstractExoticWeapon {
+public class Net extends AbstractExoticWeapon {
 
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_hammer_gnome_hooked);
+		base = new BasicWeapon(R.string.weapon_exotic_net);
 		base.setCost(2);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
@@ -24,7 +25,7 @@ public class HammerGnomoHooked extends AbstractExoticWeapon {
 		base.addType(TypeWeapon.SLASHING);
 	}
 
-	public HammerGnomoHooked() {
+	public Net() {
 		super(base);
 	}
 }
