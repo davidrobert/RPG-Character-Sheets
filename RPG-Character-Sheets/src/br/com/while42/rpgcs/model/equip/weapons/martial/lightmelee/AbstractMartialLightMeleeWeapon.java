@@ -12,12 +12,12 @@ public abstract class AbstractMartialLightMeleeWeapon extends AbstractMartialWea
 	}
 
 	@Override
-	public CategorieUsefulnessWeapon getCategorieUsefulness() {
+	public final CategorieUsefulnessWeapon getCategorieUsefulness() {
 		return CategorieUsefulnessWeapon.MELEE;
 	}
 	
 	@Override
-	public CategorieEncumbranceWeapon getCategorieEncumbrance() {
+	public final CategorieEncumbranceWeapon getCategorieEncumbrance() {
 		return CategorieEncumbranceWeapon.LIGHT;
 	}
 

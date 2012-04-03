@@ -12,12 +12,12 @@ public abstract class AbstractMartialRangedWeapon extends AbstractMartialWeapon 
 	}
 
 	@Override
-	public CategorieUsefulnessWeapon getCategorieUsefulness() {
+	public final CategorieUsefulnessWeapon getCategorieUsefulness() {
 		return CategorieUsefulnessWeapon.RANGED;
 	}
 	
 	@Override
-	public CategorieEncumbranceWeapon getCategorieEncumbrance() {
+	public final CategorieEncumbranceWeapon getCategorieEncumbrance() {
 		return null;
 	}
 

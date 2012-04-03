@@ -12,12 +12,12 @@ public abstract class AbstractMartialOneHandedMeleeWeapon extends AbstractMartia
 	}
 
 	@Override
-	public CategorieUsefulnessWeapon getCategorieUsefulness() {
+	public final CategorieUsefulnessWeapon getCategorieUsefulness() {
 		return CategorieUsefulnessWeapon.MELEE;
 	}
 	
 	@Override
-	public CategorieEncumbranceWeapon getCategorieEncumbrance() {
+	public final CategorieEncumbranceWeapon getCategorieEncumbrance() {
 		return CategorieEncumbranceWeapon.ONE_HANDED;
 	}
 
