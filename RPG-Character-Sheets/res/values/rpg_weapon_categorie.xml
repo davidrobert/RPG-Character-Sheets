@@ -8,6 +8,7 @@
     <string name="weapon_categorie_usefulness_melle">Melle</string>
     <string name="weapon_categorie_usefulness_ranged">Ranged</string>
     
+    <string name="weapon_categorie_encumbrance_unarmed">Unarmed</string>
     <string name="weapon_categorie_encumbrance_light">Light</string>
     <string name="weapon_categorie_encumbrance_one_handed">One Handed</string>
     <string name="weapon_categorie_encumbrance_two_handed">Two Handed</string>

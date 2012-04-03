@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.equip.weapons.simple;
+package br.com.while42.rpgcs.model.equip.weapons.simple.ranged;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
@@ -7,7 +7,7 @@ import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 
-public class CrossbowHeavy extends AbstractSimpleWeapon {
+public class CrossbowHeavy extends AbstractSimpleRangedWeapon {
 
 	private static BasicWeapon base;
 	

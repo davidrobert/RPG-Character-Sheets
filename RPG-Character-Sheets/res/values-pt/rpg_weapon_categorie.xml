@@ -8,6 +8,7 @@
     <string name="weapon_categorie_usefulness_melle">Corporal</string>
     <string name="weapon_categorie_usefulness_ranged">Arremesso ou Disparo</string>
     
+    <string name="weapon_categorie_encumbrance_unarmed">Desarmado</string>
     <string name="weapon_categorie_encumbrance_light">Leve</string>
     <string name="weapon_categorie_encumbrance_one_handed">Uma Mão</string>
     <string name="weapon_categorie_encumbrance_two_handed">Duas Mãos</string>

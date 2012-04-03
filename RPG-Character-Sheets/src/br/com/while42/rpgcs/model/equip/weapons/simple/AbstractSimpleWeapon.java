@@ -27,14 +27,12 @@ public abstract class AbstractSimpleWeapon implements Weapon {
 	}
 	
 	@Override
-	public final CategorieUsefulnessWeapon getCategorieUsefulness() {
-		// TODO: Falta implementar
+	public CategorieUsefulnessWeapon getCategorieUsefulness() {
 		return null;
 	}
 	
 	@Override
-	public final CategorieEncumbranceWeapon getCategorieEncumbrance() {
-		// TODO: Falta implementar
+	public CategorieEncumbranceWeapon getCategorieEncumbrance() {
 		return null;
 	}
 	
