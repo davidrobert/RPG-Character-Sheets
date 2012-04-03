@@ -6,9 +6,9 @@ import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
-import br.com.while42.rpgcs.model.equip.weapons.exotic.lightmelee.AbstractExoticLightMelleWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.exotic.AbstractExoticWeapon;
 
-public class CrossbowRepeatingHeavy extends AbstractExoticLightMelleWeapon {
+public class CrossbowRepeatingHeavy extends AbstractExoticWeapon {
 	
 	private static BasicWeapon base;
 
