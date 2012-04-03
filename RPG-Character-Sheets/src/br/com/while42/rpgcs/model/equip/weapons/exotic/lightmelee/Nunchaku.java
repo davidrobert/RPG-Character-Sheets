@@ -21,7 +21,7 @@ public class Nunchaku extends AbstractExoticLightMelleWeapon {
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
 
-		base.addType(TypeWeapon.SLASHING);
+		base.addType(TypeWeapon.BLUDGEONING);
 	}
 
 	public Nunchaku() {

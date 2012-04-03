@@ -13,7 +13,7 @@ public class Siangham extends AbstractExoticLightMelleWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_exotic_siangham);
-		base.setCost(2);
+		base.setCost(3);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(1);
@@ -21,7 +21,7 @@ public class Siangham extends AbstractExoticLightMelleWeapon {
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
 
-		base.addType(TypeWeapon.SLASHING);
+		base.addType(TypeWeapon.PIERCING);
 	}
 
 	public Siangham() {

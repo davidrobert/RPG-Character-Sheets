@@ -13,15 +13,15 @@ public class Sai extends AbstractExoticLightMelleWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_exotic_sai);
-		base.setCost(2);
+		base.setCost(1);
 		base.setCritical(2);
-		base.setRangeIncrement(0);
+		base.setRangeIncrement(10);
 		base.setWeight(1);
 
-		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
-		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
+		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d3));
+		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d4));
 
-		base.addType(TypeWeapon.SLASHING);
+		base.addType(TypeWeapon.BLUDGEONING);
 	}
 
 	public Sai() {
