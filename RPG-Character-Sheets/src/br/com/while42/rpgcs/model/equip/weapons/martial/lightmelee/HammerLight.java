@@ -13,7 +13,7 @@ public class HammerLight extends AbstractMartialLightMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_hammer_light);
-		base.setCost(81);
+		base.setCost(1);
 		base.setCritical(2);
 		base.setRangeIncrement(6);
 		base.setWeight(1);
