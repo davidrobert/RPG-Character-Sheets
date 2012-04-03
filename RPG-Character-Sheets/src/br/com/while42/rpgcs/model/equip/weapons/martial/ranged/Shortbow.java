@@ -13,15 +13,15 @@ public class Shortbow extends AbstractMartialRangedWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_shortbow);
-		base.setCost(8);
-		base.setCritical(2);
-		base.setRangeIncrement(3);
+		base.setCost(30);
+		base.setCritical(3);
+		base.setRangeIncrement(18);
 		base.setWeight(1);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
 		
-		base.addType(TypeWeapon.SLASHING);
+		base.addType(TypeWeapon.PIERCING);
 	}
 	
 	public Shortbow() {
