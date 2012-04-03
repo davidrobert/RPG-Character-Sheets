@@ -16,7 +16,7 @@ public class Siangham extends AbstractExoticLightMelleWeapon {
 		base.setCost(3);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
-		base.setWeight(1);
+		base.setWeight(0.5);
 
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
