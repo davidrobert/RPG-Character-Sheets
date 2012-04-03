@@ -19,6 +19,8 @@ public class Quartestaff extends AbstractSimpleWeapon {
 		base.setWeight(2);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
+		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
+		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));
 		
 		base.addType(TypeWeapon.BLUDGEONING);

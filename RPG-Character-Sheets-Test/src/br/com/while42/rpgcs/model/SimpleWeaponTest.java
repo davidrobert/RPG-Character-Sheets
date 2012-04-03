@@ -96,6 +96,7 @@ public class SimpleWeaponTest extends AndroidTestCase {
 		
 		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Longspear().getDamage(SizeWeapon.SMALL).get(0));
 		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Quartestaff().getDamage(SizeWeapon.SMALL).get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d4 ), new Quartestaff().getDamage(SizeWeapon.SMALL).get(0));
 		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Spear().getDamage(SizeWeapon.SMALL).get(0));
 		
 		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new CrossbowHeavy().getDamage(SizeWeapon.SMALL).get(0));
@@ -122,6 +123,7 @@ public class SimpleWeaponTest extends AndroidTestCase {
 		
 		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new Longspear().getDamage().get(0));
 		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Quartestaff().getDamage().get(0));
+		Assert.assertEquals(new HitDice(HitDiceType.d6 ), new Quartestaff().getDamage().get(1));
 		Assert.assertEquals(new HitDice(HitDiceType.d8 ), new Spear().getDamage().get(0));
 		
 		Assert.assertEquals(new HitDice(HitDiceType.d10), new CrossbowHeavy().getDamage().get(0));
