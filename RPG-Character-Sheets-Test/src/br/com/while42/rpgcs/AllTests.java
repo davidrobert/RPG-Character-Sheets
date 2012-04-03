@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model;
+package br.com.while42.rpgcs;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

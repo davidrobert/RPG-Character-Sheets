@@ -1,8 +1,10 @@
-package br.com.while42.rpgcs.model;
+package br.com.while42.rpgcs.model.equip.weapons;
 
 import junit.framework.Assert;
 import android.test.AndroidTestCase;
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.HitDice;
+import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieWeapon;
