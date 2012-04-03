@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.equip.weapons.martial;
+package br.com.while42.rpgcs.model.equip.weapons.martial.lightmelee;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
@@ -7,7 +7,7 @@ import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 
-public class AxeThrowing extends AbstractMartialWeapon {
+public class AxeThrowing extends AbstractMartialLightMeleeWeapon {
 	
 	private static BasicWeapon base;
 

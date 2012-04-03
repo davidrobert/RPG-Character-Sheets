@@ -26,13 +26,13 @@ public abstract class AbstractMartialWeapon implements Weapon {
 	}
 
 	@Override
-	public final CategorieUsefulnessWeapon getCategorieUsefulness() {
-		return CategorieUsefulnessWeapon.MELEE;
+	public CategorieUsefulnessWeapon getCategorieUsefulness() {
+		return null;
 	}
 	
 	@Override
-	public final CategorieEncumbranceWeapon getCategorieEncumbrance() {
-		return CategorieEncumbranceWeapon.TWO_HANDED;
+	public CategorieEncumbranceWeapon getCategorieEncumbrance() {
+		return null;
 	}
 	
 	@Override
