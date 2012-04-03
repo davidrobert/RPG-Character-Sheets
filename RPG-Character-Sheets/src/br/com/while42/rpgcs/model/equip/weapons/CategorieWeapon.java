@@ -1,8 +1,9 @@
 package br.com.while42.rpgcs.model.equip.weapons;
 
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.TypeCode;
 
-public enum CategorieWeapon {
+public enum CategorieWeapon implements TypeCode {
 	SIMPLE(R.string.weapon_categorie_simple),
 	MARTIAL(R.string.weapon_categorie_martial),
 	EXOTIC(R.string.weapon_categorie_exotic);
@@ -13,7 +14,8 @@ public enum CategorieWeapon {
 		this.nameCode = nameCode;
 	}
 
-	public int getNameCode() {
+	@Override
+	public int getCodeName() {
 		return nameCode;
 	}	
 }

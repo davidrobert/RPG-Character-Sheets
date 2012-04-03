@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="armor_categorie_light">Light</string>
+    <string name="armor_categorie_medium">Medium</string>
+    <string name="armor_categorie_heavy">Heavy</string>
+    <string name="armor_categorie_shield">Shield</string>
+    <string name="armor_categorie_extra">Extra</string>
+        
+</resources>
