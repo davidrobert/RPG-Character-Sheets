@@ -3,6 +3,9 @@ package br.com.while42.rpgcs.model;
 import junit.framework.Assert;
 import android.test.AndroidTestCase;
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.simple.Club;
@@ -278,4 +281,81 @@ public class SimpleWeaponTest extends AndroidTestCase {
 		Assert.assertEquals(true, new Sling().getType().contains(TypeWeapon.BLUDGEONING));		
 	}
 	
+	public void testGetCategorie() throws Throwable {		
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Gauntlet().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new UnarmedStrike().getCategorie());
+		
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Dagger().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new DaggerPunching().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new GauntletSpiked().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new MaceLight().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Sickle().getCategorie());
+		
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Club().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new MaceHeavy().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Morningstar().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Shortspear().getCategorie());
+		
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Longspear().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Quartestaff().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Spear().getCategorie());
+		
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new CrossbowHeavy().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new CrossbowLight().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Dart().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Javelin().getCategorie());
+		Assert.assertEquals( CategorieWeapon.SIMPLE, new Sling().getCategorie());
+	}
+	
+	public void testGetCategorieUsefulness() throws Throwable {		
+		//Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new Gauntlet().getCategorieUsefulness());
+		//Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new UnarmedStrike().getCategorieUsefulness());
+		
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new Dagger().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new DaggerPunching().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new GauntletSpiked().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new MaceLight().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new Sickle().getCategorieUsefulness());
+		
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new Club().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new MaceHeavy().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new Morningstar().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new Shortspear().getCategorieUsefulness());
+		
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new Longspear().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new Quartestaff().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.MELEE, new Spear().getCategorieUsefulness());
+		
+		Assert.assertEquals( CategorieUsefulnessWeapon.RANGED, new CrossbowHeavy().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.RANGED, new CrossbowLight().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.RANGED, new Dart().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.RANGED, new Javelin().getCategorieUsefulness());
+		Assert.assertEquals( CategorieUsefulnessWeapon.RANGED, new Sling().getCategorieUsefulness());
+	}
+	
+	public void testGetCategorieEncumbrance() throws Throwable {		
+		//Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new Gauntlet().getCategorieEncumbrance());
+		//Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new UnarmedStrike().getCategorieEncumbrance());
+		
+		Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new Dagger().getCategorieEncumbrance());
+		Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new DaggerPunching().getCategorieEncumbrance());
+		Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new GauntletSpiked().getCategorieEncumbrance());
+		Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new MaceLight().getCategorieEncumbrance());
+		Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new Sickle().getCategorieEncumbrance());
+		
+		Assert.assertEquals( CategorieEncumbranceWeapon.ONE_HANDED, new Club().getCategorieEncumbrance());
+		Assert.assertEquals( CategorieEncumbranceWeapon.ONE_HANDED, new MaceHeavy().getCategorieEncumbrance());
+		Assert.assertEquals( CategorieEncumbranceWeapon.ONE_HANDED, new Morningstar().getCategorieEncumbrance());
+		Assert.assertEquals( CategorieEncumbranceWeapon.ONE_HANDED, new Shortspear().getCategorieEncumbrance());
+		
+		Assert.assertEquals( CategorieEncumbranceWeapon.TWO_HANDED, new Longspear().getCategorieEncumbrance());
+		Assert.assertEquals( CategorieEncumbranceWeapon.TWO_HANDED, new Quartestaff().getCategorieEncumbrance());
+		Assert.assertEquals( CategorieEncumbranceWeapon.TWO_HANDED, new Spear().getCategorieEncumbrance());
+		
+		//Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new CrossbowHeavy().getCategorieEncumbrance());
+		//Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new CrossbowLight().getCategorieEncumbrance());
+		//Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new Dart().getCategorieEncumbrance());
+		//Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new Javelin().getCategorieEncumbrance());
+		//Assert.assertEquals( CategorieEncumbranceWeapon.LIGHT, new Sling().getCategorieEncumbrance());
+	}
 }
