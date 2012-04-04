@@ -1,5 +1,6 @@
 package br.com.while42.rpgcs.model.equip.armor.shields;
 
+import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.equip.armor.Armor;
 import br.com.while42.rpgcs.model.equip.armor.BasicArmor;
 
@@ -7,7 +8,7 @@ public class ShieldLightSteel extends AbstractShieldArmor implements Armor {
 
 	private static final BasicArmor armor;
 	static {
-		armor = new BasicArmor(0);
+		armor = new BasicArmor(R.string.armor_shield_light_steel);
 		armor.setCost(9);
 		armor.setArmorBonus(1);
 		armor.setMaximumDexBonus(0);

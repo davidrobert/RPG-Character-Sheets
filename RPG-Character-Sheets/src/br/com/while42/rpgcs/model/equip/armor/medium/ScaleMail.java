@@ -1,5 +1,6 @@
 package br.com.while42.rpgcs.model.equip.armor.medium;
 
+import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.equip.armor.Armor;
 import br.com.while42.rpgcs.model.equip.armor.BasicArmor;
 
@@ -7,7 +8,7 @@ public class ScaleMail extends AbstractMediumArmor implements Armor {
 
 	private static final BasicArmor armor;
 	static {
-		armor = new BasicArmor(0);
+		armor = new BasicArmor(R.string.armor_medium_scale_mail);
 		armor.setCost(50);
 		armor.setArmorBonus(4);
 		armor.setMaximumDexBonus(3);
