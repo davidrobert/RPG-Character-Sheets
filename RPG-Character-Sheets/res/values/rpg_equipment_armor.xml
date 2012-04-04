@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="armor_padded_armor">Padded armor</string>
-    <string name="armor_leather">Leather</string>
-    <string name="armor_studded_leather">Studded leather</string>
-    <string name="armor_chain_shirt">Chain shirt</string>
-    <string name="armor_hide">Hide</string>
-    <string name="armor_scale_Mail">Scale Mail</string>
-    <string name="armor_chainmail">Chainmail</string>
-    <string name="armor_breastplate">Breastplate</string>
-    <string name="armor_splint_mail">Splint mail</string>
-    <string name="armor_banded_mail">Banded mail</string>
-    <string name="armor_half_plate">Half-plate</string>
-    <string name="armor_full_plate">Full plate</string>
-    <string name="armor_buckler">Buckler</string>
-    <string name="armor_shield_small_wood">Shield, small, wood</string>
-    <string name="armor_shield_small_steel">Shield, small, steel</string>
-    <string name="armor_shield_large_wood">Shield, large, wood</string>
-    <string name="armor_shield_large_steel">Shield, large, steel</string>
+    <string name="armor_light_padded">Padded</string>
+    <string name="armor_light_leather">Leather</string>
+    <string name="armor_light_studded_leather">Studded leather</string>
+    <string name="armor_light_chain_shirt">Chain shirt</string>
+    
+    <string name="armor_medium_hide">Hide</string>
+    <string name="armor_medium_scale_Mail">Scale Mail</string>
+    <string name="armor_medium_chainmail">Chainmail</string>
+    <string name="armor_medium_breastplate">Breastplate</string>
+    
+    <string name="armor_heavy_splint_mail">Splint mail</string>
+    <string name="armor_heavy_banded_mail">Banded mail</string>
+    <string name="armor_heavy_half_plate">Half-plate</string>
+    <string name="armor_heavy_full_plate">Full plate</string>
+    
+    <string name="armor_shield_buckler">Buckler</string>
+    <string name="armor_shield_light_wooden">Shield, light woodden</string>
+    <string name="armor_shield_light_steel">Shield, light steel</string>
+    <string name="armor_shield_heavy_wooden">Shield, heavy wooden</string>
+    <string name="armor_shield_heavy_steel">Shield, heavy steel</string>
     <string name="armor_shield_tower">Shield, tower</string>
-    <string name="armor_armor_spikes">Armor spikes</string>
-    <string name="armor_gauntlet_locked">Gauntlet, locked</string>
-    <string name="armor_shield_spikes">Shield spikes</string>
+    
+    <string name="armor_extra_armor_spikes">Armor spikes</string>
+    <string name="armor_extra_gauntlet_locked">Gauntlet, locked</string>
+    <string name="armor_extra_shield_spikes">Shield spikes</string>
 
 </resources>
