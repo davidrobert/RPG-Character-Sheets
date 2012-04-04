@@ -8,13 +8,13 @@ public class ShieldLightSteel extends AbstractShieldArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(0);
-		armor.setCost(0);
-		armor.setArmorBonus(0);
+		armor.setCost(9);
+		armor.setArmorBonus(1);
 		armor.setMaximumDexBonus(0);
-		armor.setArmorCheckPenalty(0);
-		armor.setArcaneSpellFailureChance(0);
+		armor.setArmorCheckPenalty(-1);
+		armor.setArcaneSpellFailureChance(5);
 		armor.setSpeed(0);
-		armor.setWeight(0);
+		armor.setWeight(3);
 	}
 	
 	public ShieldLightSteel() {

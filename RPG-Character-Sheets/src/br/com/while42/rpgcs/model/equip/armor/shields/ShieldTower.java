@@ -8,13 +8,13 @@ public class ShieldTower extends AbstractShieldArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(0);
-		armor.setCost(0);
-		armor.setArmorBonus(0);
-		armor.setMaximumDexBonus(0);
-		armor.setArmorCheckPenalty(0);
-		armor.setArcaneSpellFailureChance(0);
+		armor.setCost(30);
+		armor.setArmorBonus(4);
+		armor.setMaximumDexBonus(2);
+		armor.setArmorCheckPenalty(-10);
+		armor.setArcaneSpellFailureChance(50);
 		armor.setSpeed(0);
-		armor.setWeight(0);
+		armor.setWeight(22.5);
 	}
 	
 	public ShieldTower() {

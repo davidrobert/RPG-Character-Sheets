@@ -8,13 +8,13 @@ public class Breastplate extends AbstractMediumArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(0);
-		armor.setCost(0);
-		armor.setArmorBonus(0);
-		armor.setMaximumDexBonus(0);
-		armor.setArmorCheckPenalty(0);
-		armor.setArcaneSpellFailureChance(0);
-		armor.setSpeed(0);
-		armor.setWeight(0);
+		armor.setCost(200);
+		armor.setArmorBonus(5);
+		armor.setMaximumDexBonus(3);
+		armor.setArmorCheckPenalty(-4);
+		armor.setArcaneSpellFailureChance(25);
+		armor.setSpeed(20);
+		armor.setWeight(15);
 	}
 	
 	public Breastplate() {

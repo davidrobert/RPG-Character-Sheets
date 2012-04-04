@@ -8,13 +8,13 @@ public class Hide extends AbstractMediumArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(0);
-		armor.setCost(0);
-		armor.setArmorBonus(0);
-		armor.setMaximumDexBonus(0);
-		armor.setArmorCheckPenalty(0);
-		armor.setArcaneSpellFailureChance(0);
-		armor.setSpeed(0);
-		armor.setWeight(0);
+		armor.setCost(15);
+		armor.setArmorBonus(3);
+		armor.setMaximumDexBonus(4);
+		armor.setArmorCheckPenalty(-3);
+		armor.setArcaneSpellFailureChance(20);
+		armor.setSpeed(20);
+		armor.setWeight(12.5);
 	}
 	
 	public Hide() {

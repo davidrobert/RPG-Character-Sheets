@@ -8,13 +8,13 @@ public class HalfPlate extends AbstractHeavyArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(0);
-		armor.setCost(0);
-		armor.setArmorBonus(0);
+		armor.setCost(600);
+		armor.setArmorBonus(7);
 		armor.setMaximumDexBonus(0);
-		armor.setArmorCheckPenalty(0);
-		armor.setArcaneSpellFailureChance(0);
-		armor.setSpeed(0);
-		armor.setWeight(0);
+		armor.setArmorCheckPenalty(-7);
+		armor.setArcaneSpellFailureChance(40);
+		armor.setSpeed(20);
+		armor.setWeight(25);
 	}
 	
 	public HalfPlate() {

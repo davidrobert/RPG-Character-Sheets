@@ -8,13 +8,13 @@ public class ShieldSpikes extends AbstractExtraArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(0);
-		armor.setCost(0);
+		armor.setCost(10);
 		armor.setArmorBonus(0);
 		armor.setMaximumDexBonus(0);
 		armor.setArmorCheckPenalty(0);
 		armor.setArcaneSpellFailureChance(0);
 		armor.setSpeed(0);
-		armor.setWeight(0);
+		armor.setWeight(2.5);
 	}
 	
 	public ShieldSpikes() {
