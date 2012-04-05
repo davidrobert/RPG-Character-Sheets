@@ -22,10 +22,12 @@ public abstract class AbstractClass implements CharacterClass {
 		this.classLevel = classLevel;
 	}
 	
+	@Override
 	public final int getClassLevel() {
 		return classLevel;
 	}
 
+	@Override
 	public final void setClassLevel(int classLevel) {
 		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
 			throw new IllegalArgumentException("Invalid class level");
@@ -34,10 +36,12 @@ public abstract class AbstractClass implements CharacterClass {
 		this.classLevel = classLevel;
 	}
 	
+	@Override
 	public HitDice getUnarmedDamage(TypeRpgSize size) {
 		return new HitDice(HitDiceType.d4);
 	}
 	
+	@Override
 	public List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {
 		return new ArrayList<TypeRpgReligion>(); 
 	}
