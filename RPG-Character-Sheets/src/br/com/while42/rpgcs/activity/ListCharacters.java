@@ -23,7 +23,7 @@ public class ListCharacters extends Activity {
 
 		CharacterDAO dao = new CharacterDAO(this);
 		rpgCharacters.clear();
-		rpgCharacters.addAll(dao.getList());
+		rpgCharacters.addAll(dao.getAll());
 		dao.close();
 
 		adapter.notifyDataSetChanged();

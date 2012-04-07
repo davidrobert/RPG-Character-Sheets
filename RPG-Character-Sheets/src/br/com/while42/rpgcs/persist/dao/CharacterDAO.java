@@ -61,7 +61,7 @@ public class CharacterDAO extends SQLiteOpenHelper {
 		return 0;
 	}
 	
-	public RpgCharacter retrieve(long id) {
+	public RpgCharacter get(long id) {
 		// TODO: Falta implementar
 		return new RpgCharacter();
 	}
@@ -72,7 +72,7 @@ public class CharacterDAO extends SQLiteOpenHelper {
 		getWritableDatabase().delete(TABLE, "id=?", whereArgs);
 	}
 
-	public List<RpgCharacter> retrieveAllCharacters() {
+	public List<RpgCharacter> getAll() {
 
 		List<RpgCharacter> rpgCharacters = new ArrayList<RpgCharacter>();
 		Cursor cursor = getWritableDatabase().query(TABLE, COLS, // Colunas

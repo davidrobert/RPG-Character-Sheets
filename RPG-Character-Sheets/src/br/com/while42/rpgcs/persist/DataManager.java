@@ -85,7 +85,7 @@ public class DataManager {
 	}
 
 	public RpgCharacter retrieveCharacter(long characterId) {
-		RpgCharacter character = characterDao.retrieve(characterId);
+		RpgCharacter character = characterDao.get(characterId);
 		
 		return character;
 	}
