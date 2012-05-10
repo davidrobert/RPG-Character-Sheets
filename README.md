@@ -1,6 +1,5 @@
-RPG Character Sheets
-[![endorse](http://api.coderwall.com/while42/endorsecount.png)](http://coderwall.com/while42)
-==================== 
+RPG Character Sheets   [![endorse](http://api.coderwall.com/while42/endorsecount.png)](http://coderwall.com/while42)
+======================== 
 
 O RPG Character Sheets é um projeto de uma aplicação móvel especifica para tablets.
 
