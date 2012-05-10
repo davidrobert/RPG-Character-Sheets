@@ -1,3 +1,7 @@
+RPG Character Sheets
+[![endorse](http://api.coderwall.com/while42/endorsecount.png)](http://coderwall.com/while42)
+==================== 
+
 O RPG Character Sheets é um projeto de uma aplicação móvel especifica para tablets.
 
 Jogar RPG de mesa tradicional inclui carregar uma gama de livros, dados, miniaturas e fichas dos personagens. O RPG Character Sheets tem como objetivo juntar todas as fichas de Dungeons and Dragons e sistemas d20 em apenas um lugar e de um modo bastante atraente.
