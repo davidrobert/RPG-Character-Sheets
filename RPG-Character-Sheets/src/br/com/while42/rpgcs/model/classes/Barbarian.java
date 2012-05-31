@@ -11,7 +11,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
-public class Barbarian extends AbstractClass {
+public class Barbarian extends AbstractRpgClass {
 	
 	private static final TypeRpgReligion religions[] = { TypeRpgReligion.KORD, TypeRpgReligion.OBAD_HAI, TypeRpgReligion.ERYTNUL };
 	

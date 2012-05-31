@@ -12,7 +12,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 
-public class Druid extends AbstractClass implements SpellsPerDay {
+public class Druid extends AbstractRpgClass implements SpellsPerDay {
 	
 	private static final TypeRpgReligion religions[] = { TypeRpgReligion.OBAD_HAI };
 	

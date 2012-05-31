@@ -12,7 +12,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 
-public class Ranger extends AbstractClass implements SpellsPerDay {
+public class Ranger extends AbstractRpgClass implements SpellsPerDay {
 
 	private static final TypeRpgReligion religions[] = { TypeRpgReligion.EHLONNA, TypeRpgReligion.OBAD_HAI };
 	

@@ -12,7 +12,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 
-public class Rogue extends AbstractClass {
+public class Rogue extends AbstractRpgClass {
 
 	private static final TypeRpgReligion religions[] = 
 		{ TypeRpgReligion.OLIDAMMARA, TypeRpgReligion.NERULL, TypeRpgReligion.VECNA, TypeRpgReligion.ERYTNUL };

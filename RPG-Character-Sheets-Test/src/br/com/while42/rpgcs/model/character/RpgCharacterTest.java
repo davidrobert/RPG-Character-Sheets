@@ -7,7 +7,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
-import br.com.while42.rpgcs.model.classes.AbstractClass;
+import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.Barbarian;
 import android.test.AndroidTestCase;
 
@@ -16,7 +16,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	public void createInstanceCharacter() {
 		RpgCharacter character = new RpgCharacter();
 		
-		AbstractClass barbarian = new Barbarian();
+		AbstractRpgClass barbarian = new Barbarian();
 		barbarian.setClassLevel(1);
 		
 		character.setName("Blob");

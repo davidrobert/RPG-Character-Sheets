@@ -1,6 +1,6 @@
 package br.com.while42.rpgcs.model.races;
 
-import br.com.while42.rpgcs.model.classes.AbstractClass;
+import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.Barbarian;
 
 public class HalfOrc extends AbstractRace {
@@ -28,7 +28,7 @@ public class HalfOrc extends AbstractRace {
 	}
 	
 	@Override
-	public Class<? extends AbstractClass> getFavoredClass() {		
+	public Class<? extends AbstractRpgClass> getFavoredClass() {		
 		return Barbarian.class;
 	}
 

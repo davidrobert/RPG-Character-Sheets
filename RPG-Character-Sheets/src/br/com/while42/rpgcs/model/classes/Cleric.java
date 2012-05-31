@@ -11,7 +11,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
-public class Cleric extends AbstractClass implements SpellsPerDay {
+public class Cleric extends AbstractRpgClass implements SpellsPerDay {
 	
 	@Override
 	public HitDiceType getHitDice() {		

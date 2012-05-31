@@ -11,7 +11,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
-import br.com.while42.rpgcs.model.classes.AbstractClass;
+import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 
 public class RpgCharacter implements Serializable {
 
@@ -21,7 +21,7 @@ public class RpgCharacter implements Serializable {
 	private String image;
 	
 	private String name;
-	private HashSet<AbstractClass> classes = new  HashSet<AbstractClass>();
+	private HashSet<AbstractRpgClass> classes = new  HashSet<AbstractRpgClass>();
 	private TypeRpgRace race;	
 	private TypeRpgAlignment alignment;
 	private TypeRpgReligion religion;
@@ -86,11 +86,11 @@ public class RpgCharacter implements Serializable {
 		this.name = name;
 	}
 
-	public HashSet<AbstractClass> getClasses() {
+	public HashSet<AbstractRpgClass> getClasses() {
 		return classes;
 	}
 	
-	public void addClass(AbstractClass classe) {
+	public void addClass(AbstractRpgClass classe) {
 		classes.add(classe);
 	}
 	

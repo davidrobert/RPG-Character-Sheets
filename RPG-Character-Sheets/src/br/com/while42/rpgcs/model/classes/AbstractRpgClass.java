@@ -10,16 +10,16 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
-public abstract class AbstractClass implements CharacterClass {
+public abstract class AbstractRpgClass implements CharacterClass {
 	
 	protected int classLevel;
 	
-	public AbstractClass() {
+	public AbstractRpgClass() {
 		classLevel = ExperienceAndLevel.MIN_LEVEL;
 	}
 	
-	public AbstractClass(int classLevel) {
-		this.classLevel = classLevel;
+	public AbstractRpgClass(int classLevel) {
+		setClassLevel(classLevel);
 	}
 	
 	@Override

@@ -12,7 +12,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 
-public class Fighter extends AbstractClass {
+public class Fighter extends AbstractRpgClass {
 	
 	private static final TypeRpgReligion religions[] = 
 		{ TypeRpgReligion.HEIRONEOUS, TypeRpgReligion.KORD, TypeRpgReligion.ST_CUTHBERT, TypeRpgReligion.HEXTOR, TypeRpgReligion.ERYTNUL };

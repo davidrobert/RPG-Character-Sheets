@@ -11,7 +11,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
-public class Sorcerer extends AbstractClass implements SpellsPerDay {
+public class Sorcerer extends AbstractRpgClass implements SpellsPerDay {
 	
 	private static final TypeRpgReligion religions[] = { TypeRpgReligion.WEE_JAS, TypeRpgReligion.BOCCOB, TypeRpgReligion.VECNA };
 	

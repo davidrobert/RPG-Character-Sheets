@@ -12,7 +12,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 
-public class Paladin extends AbstractClass implements SpellsPerDay {
+public class Paladin extends AbstractRpgClass implements SpellsPerDay {
 
 	private static final TypeRpgReligion religions[] = { TypeRpgReligion.HEIRONEOUS };
 	
