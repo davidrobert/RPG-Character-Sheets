@@ -1,7 +1,6 @@
 package br.com.while42.rpgcs.model.classes;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.Set;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
@@ -50,8 +49,8 @@ public class Cleric extends AbstractRpgClass implements SpellsPerDay {
 	}
 	
 	@Override
-	public List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
-		return Collections.unmodifiableList(TypeRpgReligion.getByAlignment(alignment));
+	public Set<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
+		return TypeRpgReligion.getByAlignment(alignment);
 	}
 	
 	@Override

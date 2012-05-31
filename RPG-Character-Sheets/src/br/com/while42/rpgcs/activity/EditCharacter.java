@@ -136,7 +136,7 @@ public class EditCharacter extends Activity {
 				character.setName(name.getText().toString());				
 				
 				// Class
-				character.clearClasses(); // TODO: Only first edit...
+				character.clearRpgClass(); // TODO: Only first edit...
 				e = (Element) classe.getSelectedItem();
 				//TODO: character.addClasse(e.getType()); 
 
@@ -185,7 +185,7 @@ public class EditCharacter extends Activity {
 				character.setSkin((TypeSkinColor) e.getType());
 				
 				// DEBUG
-				Log.e(">> class     >>", character.getClasses().toString());
+				Log.e(">> class     >>", character.getRpgClasses().toString());
 				Log.e(">> race      >>", character.getRace().toString());
 				Log.e(">> alignment >>", character.getAlignment().toString());
 				Log.e(">> religion  >>", character.getReligion().toString());

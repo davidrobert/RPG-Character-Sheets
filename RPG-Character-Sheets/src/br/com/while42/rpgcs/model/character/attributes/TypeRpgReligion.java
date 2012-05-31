@@ -1,7 +1,8 @@
 package br.com.while42.rpgcs.model.character.attributes;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.TypeCode;
@@ -55,8 +56,8 @@ public enum TypeRpgReligion implements TypeCode {
 		return alignment;
 	}
 	
-	public static List<TypeRpgReligion> getByAlignment(TypeRpgAlignment alignment) {
-		List<TypeRpgReligion> religions = new ArrayList<TypeRpgReligion>();
+	public static Set<TypeRpgReligion> getByAlignment(TypeRpgAlignment alignment) {
+		Set<TypeRpgReligion> religions = new HashSet<TypeRpgReligion>();
 		
 		for (TypeRpgReligion r: TypeRpgReligion.values()) {
 			if (r.getAlignment() == alignment) {
@@ -64,6 +65,6 @@ public enum TypeRpgReligion implements TypeCode {
 			}
 		}
 		
-		return religions;
+		return (Set<TypeRpgReligion>) Collections.unmodifiableCollection(religions);
 	}
 }

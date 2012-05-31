@@ -1,7 +1,9 @@
 package br.com.while42.rpgcs.model.classes;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
@@ -42,12 +44,12 @@ public abstract class AbstractRpgClass implements CharacterClass {
 	}
 	
 	@Override
-	public List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {
-		return new ArrayList<TypeRpgReligion>(); 
+	public Set<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {
+		return (Set<TypeRpgReligion>) Collections.unmodifiableCollection(new HashSet<TypeRpgReligion>()); 
 	}
 		
-	protected List<TypeRpgReligion> getReligions(TypeRpgReligion religions[], TypeRpgAlignment alignment) {
-		List<TypeRpgReligion> religionsAvailable = new ArrayList<TypeRpgReligion>();
+	protected Set<TypeRpgReligion> getReligions(Collection<TypeRpgReligion> religions, TypeRpgAlignment alignment) {
+		Set<TypeRpgReligion> religionsAvailable = new HashSet<TypeRpgReligion>();
 		
 		for (TypeRpgReligion r: religions) {
 			if (r.getAlignment() == alignment) {
@@ -55,6 +57,6 @@ public abstract class AbstractRpgClass implements CharacterClass {
 			}
 		}
 		
-		return religionsAvailable;
+		return (Set<TypeRpgReligion>) Collections.unmodifiableCollection(religionsAvailable);
 	}
 }

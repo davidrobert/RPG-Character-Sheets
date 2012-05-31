@@ -1,6 +1,6 @@
 package br.com.while42.rpgcs.model.classes;
 
-import java.util.List;
+import java.util.Set;
 
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
@@ -15,7 +15,7 @@ public interface CharacterClass extends TypeCode {
 	int getClassLevel();
 	void setClassLevel(int classLevel);
 	HitDice getUnarmedDamage(TypeRpgSize size);
-	List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment);
+	Set<TypeRpgReligion> getReligions(TypeRpgAlignment alignment);
 	
 	HitDiceType getHitDice();
 	int getBaseAttackBonus();

@@ -1,7 +1,8 @@
 package br.com.while42.rpgcs.model.classes;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
@@ -14,7 +15,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class Druid extends AbstractRpgClass implements SpellsPerDay {
 	
-	private static final TypeRpgReligion religions[] = { TypeRpgReligion.OBAD_HAI };
+	private static final Set<TypeRpgReligion> religions = new HashSet<TypeRpgReligion>(Arrays.asList( TypeRpgReligion.OBAD_HAI ));
 	
 	@Override
 	public HitDiceType getHitDice() {		
@@ -53,8 +54,8 @@ public class Druid extends AbstractRpgClass implements SpellsPerDay {
 	}
 	
 	@Override
-	public List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
-		return Collections.unmodifiableList(getReligions(religions, alignment));
+	public Set<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
+		return getReligions(religions, alignment);
 	}
 	
 	@Override

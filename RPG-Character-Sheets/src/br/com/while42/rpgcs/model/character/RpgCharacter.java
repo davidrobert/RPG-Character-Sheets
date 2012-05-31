@@ -1,7 +1,9 @@
 package br.com.while42.rpgcs.model.character;
 
 import java.io.Serializable;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Set;
 
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
@@ -21,7 +23,7 @@ public class RpgCharacter implements Serializable {
 	private String image;
 	
 	private String name;
-	private HashSet<AbstractRpgClass> classes = new  HashSet<AbstractRpgClass>();
+	private HashSet<AbstractRpgClass> rpgClass = new  HashSet<AbstractRpgClass>();
 	private TypeRpgRace race;	
 	private TypeRpgAlignment alignment;
 	private TypeRpgReligion religion;
@@ -86,16 +88,16 @@ public class RpgCharacter implements Serializable {
 		this.name = name;
 	}
 
-	public HashSet<AbstractRpgClass> getClasses() {
-		return classes;
+	public Set<AbstractRpgClass> getRpgClasses() {
+		return (Set<AbstractRpgClass>) Collections.unmodifiableCollection(rpgClass);
 	}
 	
-	public void addClass(AbstractRpgClass classe) {
-		classes.add(classe);
+	public void addRpgClass(AbstractRpgClass rpgClass) {
+		this.rpgClass.add(rpgClass);
 	}
 	
-	public void clearClasses() {
-		classes.clear();
+	public void clearRpgClass() {
+		rpgClass.clear();
 	}
 
 	public TypeRpgRace getRace() {

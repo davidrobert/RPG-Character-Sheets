@@ -1,7 +1,8 @@
 package br.com.while42.rpgcs.model.classes;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
@@ -20,8 +21,8 @@ public class Monk extends AbstractRpgClass {
 	private static HitDice unarmedDamageSizeMedium[] = new HitDice[ExperienceAndLevel.MAX_LEVEL + 1];
 	private static HitDice unarmedDamageSizeLarge[] = new HitDice[ExperienceAndLevel.MAX_LEVEL + 1];
 	
-	private static final TypeRpgReligion religions[] = 
-		{ TypeRpgReligion.HEIRONEOUS, TypeRpgReligion.ST_CUTHBERT, TypeRpgReligion.HEXTOR };
+	private static final Set<TypeRpgReligion> religions = new HashSet<TypeRpgReligion>(Arrays.asList( 
+			TypeRpgReligion.HEIRONEOUS, TypeRpgReligion.ST_CUTHBERT, TypeRpgReligion.HEXTOR ));
 	
 	static {
 	
@@ -106,8 +107,8 @@ public class Monk extends AbstractRpgClass {
 	}
 	
 	@Override
-	public List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
-		return Collections.unmodifiableList(getReligions(religions, alignment));
+	public Set<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
+		return getReligions(religions, alignment);
 	}
 	
 	@Override

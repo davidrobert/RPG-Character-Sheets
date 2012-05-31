@@ -20,7 +20,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 		barbarian.setClassLevel(1);
 		
 		character.setName("Blob");
-		character.addClass(barbarian);
+		character.addRpgClass(barbarian);
 		character.setAge(40);
 		character.setAlignment(TypeRpgAlignment.NEUTRAL_EVIL);
 		character.setEye(TypeEyeColor.Brown);
@@ -31,6 +31,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 		character.setReligion(TypeRpgReligion.NONE);
 		character.setSkin(TypeSkinColor.PALE);
 		character.setWeight(120); // TODO: Method name 
+		
+		character.getRpgClasses();
 	}
 	
 	
