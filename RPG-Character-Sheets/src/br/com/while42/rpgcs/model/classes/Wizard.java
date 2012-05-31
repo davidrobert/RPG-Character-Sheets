@@ -1,5 +1,6 @@
 package br.com.while42.rpgcs.model.classes;
 
+import java.util.Collections;
 import java.util.List;
 
 import br.com.while42.rpgcs.R;
@@ -52,7 +53,7 @@ public class Wizard extends AbstractClass implements SpellsPerDay {
 	
 	@Override
 	public List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
-		return getReligions(religions, alignment);
+		return Collections.unmodifiableList(getReligions(religions, alignment));
 	}
 	
 	@Override

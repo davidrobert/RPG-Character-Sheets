@@ -1,5 +1,6 @@
 package br.com.while42.rpgcs.model.classes;
 
+import java.util.Collections;
 import java.util.List;
 
 import br.com.while42.rpgcs.R;
@@ -50,7 +51,7 @@ public class Cleric extends AbstractClass implements SpellsPerDay {
 	
 	@Override
 	public List<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {		
-		return TypeRpgReligion.getByAlignment(alignment);
+		return Collections.unmodifiableList(TypeRpgReligion.getByAlignment(alignment));
 	}
 	
 	@Override
