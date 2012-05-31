@@ -24,7 +24,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
-import br.com.while42.rpgcs.model.classes.AbstractClass;
+import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.CharacterClass;
 import br.com.while42.rpgcs.model.classes.Classes;
 
@@ -90,7 +90,7 @@ public class EditCharacter extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.edit_character);
 		
-		listClasses = new Classes().getAll(this, "br.com.while42.rpgcs", AbstractClass.class);
+		listClasses = new Classes().getAll(this, "br.com.while42.rpgcs", AbstractRpgClass.class);
 
 		image = (ImageButton) findViewById(R.id_edit.imagebutton_image);
 		name = (EditText) findViewById(R.id_edit.edittext_name);
