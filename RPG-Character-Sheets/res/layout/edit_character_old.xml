@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableRow>
+
+        <!-- Image -->
+
+        <ImageButton
+            android:id="@+id_edit/imagebutton_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/edit_description_image"
+            android:src="@android:drawable/btn_star" />
+
+        <!-- Name -->
+
+        <TextView
+            android:id="@+id_edit/textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_name"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id_edit/edittext_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="20"
+            android:inputType="textPersonName"
+            android:width="20dp" >
+        </EditText>
+    </TableRow>
+
+    <TableRow>
+
+        <!-- Class -->
+
+        <TextView
+            android:id="@+id_edit/textview_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_class"
+            android:textStyle="bold"            
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <!-- Race -->
+
+        <TextView
+            android:id="@+id_edit/textview_race"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_race"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_race"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <!-- Alignment -->
+
+        <TextView
+            android:id="@+id_edit/textview_alignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_alignment"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_alignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <!-- Religion -->
+
+        <TextView
+            android:id="@+id_edit/textview_religion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_religion"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_religion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+    </TableRow>
+
+    <TableRow>
+
+        <!-- Size -->
+
+        <TextView
+            android:id="@+id_edit/textview_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_size"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Age -->
+
+        <TextView
+            android:id="@+id_edit/textview_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_age"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Gender -->
+
+        <TextView
+            android:id="@+id_edit/textview_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_gender"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Height -->
+
+        <TextView
+            android:id="@+id_edit/textview_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_height"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Weight -->
+
+        <TextView
+            android:id="@+id_edit/textview_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_weight"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Eye -->
+
+        <TextView
+            android:id="@+id_edit/textview_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_eye"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_eye"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Hair -->
+
+        <TextView
+            android:id="@+id_edit/textview_hair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_hair"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_hair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+
+        <!-- Skin -->
+
+        <TextView
+            android:id="@+id_edit/textview_skin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_label_skin"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id_edit/spinner_skin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" >
+        </Spinner>
+    </TableRow>
+
+    <TableRow>
+
+        <!-- Abilitys -->
+
+        <FrameLayout
+            android:id="@+id_edit/framelayout_abilitys"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TableLayout
+                android:id="@+id_edit/tablelayout_abilitys"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_strength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_strength_abbreviation"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_strength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_dexterity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_dexterity_abbreviation"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_dexterity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_constitution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_constitution_abbreviation"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_constitution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_intelligence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_intelligence_abbreviation"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_intelligence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_wisdom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_wisdom_abbreviation"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_wisdom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id_edit/textview_charisma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ability_charisma_abbreviation"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id_edit/edittext_charisma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" >
+                    </EditText>
+                </TableRow>
+                
+            </TableLayout>
+        </FrameLayout>
+    </TableRow>
+
+    <Button
+        android:id="@+id_edit/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_button_save" />
+
+</TableLayout>
