@@ -30,8 +30,6 @@ import br.com.while42.rpgcs.model.classes.Classes;
 
 public class EditCharacter extends Activity {
 
-	private static int START_LEVEL = 1;
-
 	private RpgCharacter character = new RpgCharacter();
 
 	private ImageButton image;
