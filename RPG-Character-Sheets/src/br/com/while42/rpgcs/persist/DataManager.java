@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.while42.rpgcs.model.character.RpgCharacter;
-import br.com.while42.rpgcs.persist.dao.CharacterDAO;
+import br.com.while42.rpgcs.persist.dao.RpgCharacterDAO;
 
 import android.content.Context;
 import android.database.SQLException;
@@ -20,12 +20,7 @@ public class DataManager {
 	private SQLiteDatabase db;
 	private boolean useDebugDb = false;
 
-	private CharacterDAO characterDao;
-
-	public DataManager(Context context) {
-		this.context = context;
-		openDb();
-	}
+	private RpgCharacterDAO rpgCharacterDao;
 
 	public DataManager(Context context, boolean useDebugDb) {
 		this.context = context;
@@ -56,7 +51,7 @@ public class DataManager {
 
 			// since we pass db into DAO, have to recreate DAO if db is
 			// re-opened
-			characterDao = new CharacterDAO(context);
+			rpgCharacterDao = new RpgCharacterDAO(db);
 
 			return true;
 		}
@@ -66,11 +61,11 @@ public class DataManager {
 
 	// Match operations
 
-	public long saveCharacter(RpgCharacter character) {
+	public long saveRpgCharacter(RpgCharacter rpgCharacter) {
 		long matchId = 0L;
 		try {
 			db.beginTransaction();
-			matchId = characterDao.save(character);
+			matchId = rpgCharacterDao.save(rpgCharacter);
 
 			db.setTransactionSuccessful();
 		} catch (SQLException e) {
@@ -84,25 +79,25 @@ public class DataManager {
 		return matchId;
 	}
 
-	public RpgCharacter retrieveCharacter(long characterId) {
-		RpgCharacter character = characterDao.get(characterId);
+	public RpgCharacter retrieveRpgCharacter(long rpgCharacterId) {
+		RpgCharacter rpgCharacter = rpgCharacterDao.retrieve(rpgCharacterId);
 		
-		return character;
+		return rpgCharacter;
 	}
 
-	public List<RpgCharacter> retrieveAllCharacters() {
+	public List<RpgCharacter> retrieveAllRpgCharacters() {
 		List<RpgCharacter> characters = new ArrayList<RpgCharacter>();
 
 		return characters;
 	}
 
-	public boolean deleteCharacter(RpgCharacter character) {
+	public boolean deleteRpgCharacter(RpgCharacter rpgCharacter) {
 		boolean result = false;
 		try {
 			db.beginTransaction();
-			if (character != null) {
+			if (rpgCharacter != null) {
 
-				characterDao.delete(character);
+				rpgCharacterDao.delete(rpgCharacter);
 			}
 			db.setTransactionSuccessful();
 			result = true;

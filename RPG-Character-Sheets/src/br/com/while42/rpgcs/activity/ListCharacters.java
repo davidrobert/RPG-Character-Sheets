@@ -9,7 +9,7 @@ import android.widget.ListView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.adapter.ListCharacterAdapter;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
-import br.com.while42.rpgcs.persist.dao.CharacterDAO;
+import br.com.while42.rpgcs.persist.dao.RpgCharacterDAO;
 
 public class ListCharacters extends Activity {
 
@@ -21,7 +21,7 @@ public class ListCharacters extends Activity {
 	protected void onResume() {
 		super.onResume();
 
-		CharacterDAO dao = new CharacterDAO(this);
+		RpgCharacterDAO dao = new RpgCharacterDAO(this);
 		rpgCharacters.clear();
 		rpgCharacters.addAll(dao.getAll());
 		dao.close();
