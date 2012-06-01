@@ -26,9 +26,9 @@ public class RpgCharacter implements Serializable {
 	private HashSet<AbstractRpgClass> rpgClass = new  HashSet<AbstractRpgClass>();
 	private TypeRpgRace race;	
 	private TypeRpgAlignment alignment;
-	private TypeRpgReligion religion;
+	private TypeRpgReligion religion = TypeRpgReligion.NONE;
 	
-	private TypeRpgSize size;
+	private TypeRpgSize size = TypeRpgSize.MEDIUM;
 	private Integer age = 0;	
 	private TypeGender gender;
 	private Integer height = 0;
@@ -50,9 +50,14 @@ public class RpgCharacter implements Serializable {
 	private Integer spellResistence = 0;
 	private Integer grapple = 0;
 	
-	
 	public RpgCharacter() {
-		// TODO Auto-generated constructor stub
+		// TODO: Construir uma classe Builder para RpgCharacter
+	}
+	
+	public RpgCharacter(String name, TypeRpgRace race, TypeRpgAlignment alignment) {
+		this.name = name;
+		this.race = race;
+		this.alignment = alignment;
 	}
 	
 	@Override

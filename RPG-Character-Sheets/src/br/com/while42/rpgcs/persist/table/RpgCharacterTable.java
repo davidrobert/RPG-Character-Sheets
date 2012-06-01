@@ -1,5 +1,7 @@
 package br.com.while42.rpgcs.persist.table;
 
+import br.com.while42.rpgcs.model.character.RpgCharacter;
+import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
 
@@ -25,6 +27,7 @@ public final class RpgCharacterTable {
 		public static String[] get() {
 			return new String[] { 
 					BaseColumns._ID, 
+					
 					RpgCharacterColumns.NAME,
 					RpgCharacterColumns.RACE,
 					RpgCharacterColumns.ALIGNMENT,
@@ -40,6 +43,27 @@ public final class RpgCharacterTable {
 					RpgCharacterColumns.SKIN
 			};
 		}
+	}
+	
+	public static ContentValues toContentValues(RpgCharacter rpgCharacter) {
+		ContentValues values = new ContentValues();
+
+		// values.put("id", a.getId()); // WRONG!
+		values.put(RpgCharacterColumns.NAME, rpgCharacter.getName());
+		values.put(RpgCharacterColumns.RACE, rpgCharacter.getRace().toString());
+		values.put(RpgCharacterColumns.ALIGNMENT, rpgCharacter.getAlignment().toString());
+		values.put(RpgCharacterColumns.RELIGION, rpgCharacter.getReligion().toString());
+		
+		values.put(RpgCharacterColumns.SIZE, rpgCharacter.getSize().toString());
+		values.put(RpgCharacterColumns.AGE, rpgCharacter.getAge().toString());
+		values.put(RpgCharacterColumns.GENDER, rpgCharacter.getGender().toString());
+		values.put(RpgCharacterColumns.HEIGHT, rpgCharacter.getHeight().toString());
+		values.put(RpgCharacterColumns.WEIGHT, rpgCharacter.getWeight().toString());
+		values.put(RpgCharacterColumns.EYE, rpgCharacter.getEye().toString());
+		values.put(RpgCharacterColumns.HAIR, rpgCharacter.getHair().toString());
+		values.put(RpgCharacterColumns.SKIN, rpgCharacter.getSkin().toString());
+
+		return values;
 	}
 
 	public static void onCreate(SQLiteDatabase db) {

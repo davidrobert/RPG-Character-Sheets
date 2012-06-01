@@ -14,7 +14,7 @@ import android.database.sqlite.SQLiteException;
 
 public class DataManager {
 
-	public static final int DATABASE_VERSION = 11;
+	public static final int DATABASE_VERSION = 12;
 
 	private Context context;
 	private SQLiteDatabase db;
