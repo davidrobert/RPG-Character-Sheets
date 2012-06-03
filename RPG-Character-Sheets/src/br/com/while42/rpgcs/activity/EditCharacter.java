@@ -136,9 +136,8 @@ public class EditCharacter extends Activity {
 				cs.setName(name.getText().toString());				
 				
 				// Class
-				cs.clearRpgClass(); // TODO: Only first edit...
 				e = (Element) classe.getSelectedItem();
-				//TODO: character.addClasse(e.getType()); 
+				cs.addRpgClass((AbstractRpgClass) e.getType());
 
 				// Race
 				e = (Element) race.getSelectedItem();
@@ -158,7 +157,6 @@ public class EditCharacter extends Activity {
 
 				// Age
 				cs.setAge(Integer.parseInt(age.getText().toString()));
-				// TODO: Age
 				
 				// Gender
 				e = (Element) gender.getSelectedItem();
