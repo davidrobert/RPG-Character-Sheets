@@ -53,7 +53,7 @@ public class RpgCharacter implements Serializable {
 	public RpgCharacter() {
 		// TODO: Construir uma classe Builder para RpgCharacter
 	}
-
+	
 	public RpgCharacter(String name, TypeRpgRace race, TypeRpgAlignment alignment) {
 		this.name = name;
 		this.race = race;

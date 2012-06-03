@@ -20,9 +20,9 @@ import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
 public class RpgCharacterTest extends AndroidTestCase {
 
-	private static List<RpgCharacter> rpgCharacterSheets = new ArrayList<RpgCharacter>();
+	public static List<RpgCharacter> getList() {
+		List<RpgCharacter> rpgCharacterSheets = new ArrayList<RpgCharacter>();
 
-	static {
 		{
 			RpgCharacter rc = new RpgCharacter();
 
@@ -34,8 +34,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 			rc.setSize(TypeRpgSize.MEDIUM);
 			rc.setAge(40);
 			rc.setGender(TypeGender.MEN);
-			rc.setHeight(200); // TODO: Method name
-			rc.setWeight(120); // TODO: Method name
+			rc.setHeight(200);
+			rc.setWeight(120); 
 			rc.setEye(TypeEyeColor.Brown);
 			rc.setHair(TypeHairColor.BLACK);
 			rc.setSkin(TypeSkinColor.PALE);
@@ -43,7 +43,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 			AbstractRpgClass barbarian = new Barbarian();
 			barbarian.setClassLevel(1);
 			rc.addRpgClass(barbarian);
-			
+
 			rpgCharacterSheets.add(rc);
 		}
 
@@ -58,8 +58,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 			rc.setSize(TypeRpgSize.MEDIUM);
 			rc.setAge(40);
 			rc.setGender(TypeGender.MEN);
-			rc.setHeight(200); // TODO: Method name
-			rc.setWeight(120); // TODO: Method name
+			rc.setHeight(200); 
+			rc.setWeight(120);
 			rc.setEye(TypeEyeColor.Brown);
 			rc.setHair(TypeHairColor.BLACK);
 			rc.setSkin(TypeSkinColor.PALE);
@@ -67,10 +67,10 @@ public class RpgCharacterTest extends AndroidTestCase {
 			AbstractRpgClass monk = new Monk();
 			monk.setClassLevel(20);
 			rc.addRpgClass(monk);
-			
+
 			rpgCharacterSheets.add(rc);
 		}
-		
+
 		{
 			RpgCharacter rc = new RpgCharacter();
 
@@ -82,8 +82,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 			rc.setSize(TypeRpgSize.MEDIUM);
 			rc.setAge(40);
 			rc.setGender(TypeGender.WOMAN);
-			rc.setHeight(200); // TODO: Method name
-			rc.setWeight(120); // TODO: Method name
+			rc.setHeight(200); 
+			rc.setWeight(120); 
 			rc.setEye(TypeEyeColor.Deep_Blue);
 			rc.setHair(TypeHairColor.WHITE);
 			rc.setSkin(TypeSkinColor.WHITE);
@@ -91,17 +91,13 @@ public class RpgCharacterTest extends AndroidTestCase {
 			AbstractRpgClass sorcerer = new Sorcerer();
 			sorcerer.setClassLevel(ExperienceAndLevel.MAX_LEVEL);
 			rc.addRpgClass(sorcerer);
-			
+
 			rpgCharacterSheets.add(rc);
 		}
+		return rpgCharacterSheets;
 	}
 
-	public static RpgCharacter getInstance() {
-		return rpgCharacterSheets.get(0);
+	public void testIsPersistent() {
+		assertFalse(new RpgCharacter().isPersistent());
 	}
-	
-	public static List<RpgCharacter> getList() {
-		return new ArrayList<RpgCharacter>(rpgCharacterSheets);
-	}
-
 }

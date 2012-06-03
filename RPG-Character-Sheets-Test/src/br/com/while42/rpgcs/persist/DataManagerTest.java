@@ -4,7 +4,6 @@ import java.util.List;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
-import android.util.Log;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.RpgCharacterTest;
 import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
@@ -48,7 +47,7 @@ public class DataManagerTest extends AndroidTestCase {
 
 	public void testSaveRpgCharacter() {
 
-		RpgCharacter rpgCharacter = RpgCharacterTest.getInstance();
+		RpgCharacter rpgCharacter = RpgCharacterTest.getList().get(0);
 
 		Long id = dataManager.saveRpgCharacter(rpgCharacter);
 
@@ -57,32 +56,26 @@ public class DataManagerTest extends AndroidTestCase {
 		assertEquals(id, rpgCharacter.getId());
 	}
 
-	public void testRetrieveRpgCharacter() {
-		clearAllTables();
+	public void testRetrieveRpgCharacter() throws Exception {
 		
-		RpgCharacter rpgCharacter = RpgCharacterTest.getInstance();
-
+		RpgCharacter rpgCharacter = RpgCharacterTest.getList().get(0);
+		
 		Long id = dataManager.saveRpgCharacter(rpgCharacter);
-		Log.i("**", id.toString());
 		
 		RpgCharacter rpgCharacter2 = dataManager.retrieveRpgCharacter(id);
-
-		
-		Log.i("**: ", rpgCharacter.toString());
-		Log.i("**: ", rpgCharacter2.toString());
 		
 		assertTrue(rpgCharacter.equals(rpgCharacter2));		
 	}
 	
-	public void testRetrieveAllRpgCharacters() {
-		clearAllTables();
+	public void testRetrieveAllRpgCharacters() {		
+		List<RpgCharacter> list = RpgCharacterTest.getList();
 		
-		for (RpgCharacter rc: RpgCharacterTest.getList()) {
+		for (RpgCharacter rc: list) {
 			dataManager.saveRpgCharacter(rc);
 		}
 		
 		List<RpgCharacter> rpgCharacters = dataManager.retrieveAllRpgCharacters();
-		for (RpgCharacter rc: RpgCharacterTest.getList()) {
+		for (RpgCharacter rc: list) {
 			assertTrue(rpgCharacters.contains(rc));
 		}
 		
