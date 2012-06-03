@@ -89,7 +89,7 @@ public class RpgCharacter implements Serializable {
 	}
 
 	public Set<AbstractRpgClass> getRpgClasses() {
-		return (Set<AbstractRpgClass>) Collections.unmodifiableCollection(rpgClass);
+		return Collections.unmodifiableSet(rpgClass);
 	}
 
 	public void addRpgClass(AbstractRpgClass rpgClass) {
