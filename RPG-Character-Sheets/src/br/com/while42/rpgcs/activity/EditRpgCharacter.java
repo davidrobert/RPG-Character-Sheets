@@ -204,7 +204,8 @@ public class EditRpgCharacter extends Activity {
 				
 				dataManager.saveRpgCharacter(cs);
 				
-				Intent play = new Intent(EditRpgCharacter.this, PlayRpgCharacter.class);				
+				Intent play = new Intent(EditRpgCharacter.this, PlayRpgCharacter.class);	
+				play.putExtra("id", cs.getId());
 				startActivity(play);
 			}
 		});

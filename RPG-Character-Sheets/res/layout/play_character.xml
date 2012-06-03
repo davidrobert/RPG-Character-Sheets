@@ -6,7 +6,7 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id_play/textview_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -18,10 +18,10 @@
         android:layout_marginTop="20dp"/>
    
    <TableLayout
-        android:id="@+id/subTitle"
+        android:id="@+id_play/subTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id_play/textView2"
         android:layout_marginTop="80dp"
         android:layout_marginLeft="20dp">
         
@@ -30,7 +30,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textview_gender_race_class"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -39,7 +39,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -50,7 +50,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textview_alignment"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -59,7 +59,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -70,7 +70,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textView6"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -81,10 +81,10 @@
   	</TableLayout>
    
    <TableLayout
-        android:id="@+id/subTitle2"
+        android:id="@+id_play/subTitle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id_play/textView2"
         android:layout_marginTop="120dp"
         android:layout_marginLeft="20dp">
         
@@ -93,7 +93,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -103,7 +103,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -112,7 +112,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -123,7 +123,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 		 	<TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textView6"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:typeface="serif"
@@ -132,7 +132,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    		    		    
 		    <TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textView6"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -144,10 +144,10 @@
   	</TableLayout>
   	
    	<TableLayout
-        android:id="@+id/habilitiesModTitle"
+        android:id="@+id_play/habilitiesModTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id_play/textView2"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="20dp">
         
@@ -156,7 +156,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="100dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
@@ -166,7 +166,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textView6"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:gravity="center"
@@ -179,11 +179,11 @@
   	</TableLayout>
   	
    	<TableLayout
-        android:id="@+id/habilitiesMod1"
+        android:id="@+id_play/habilitiesMod1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id_play/textView2"
+        android:layout_below="@+id_play/textView2"
         android:background="@drawable/layout_table"
         android:layout_marginTop="180dp"
         android:layout_marginLeft="20dp">
@@ -194,7 +194,7 @@
             android:background="@drawable/layout_table_row_50">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="80dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
@@ -205,7 +205,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -217,7 +217,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView5"
+		        android:id="@+id_play/textView5"
 		        android:layout_width="10dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -226,7 +226,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textView6"
 		        android:layout_width="50dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center"
@@ -242,7 +242,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="80dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
@@ -253,7 +253,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -265,7 +265,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView5"
+		        android:id="@+id_play/textView5"
 		        android:layout_width="10dp"
 		        android:typeface="serif"
 		        android:gravity="center"
@@ -274,7 +274,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textView6"
 		        android:layout_width="50dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center"
@@ -288,11 +288,11 @@
     </TableLayout>
     
     <TableLayout
-        android:id="@+id/habilitiesMod2"
+        android:id="@+id_play/habilitiesMod2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id_play/textView2"
+        android:layout_below="@+id_play/textView2"
         android:background="@drawable/layout_table"
         android:layout_marginTop="300dp"
         android:layout_marginLeft="20dp" >
@@ -303,7 +303,7 @@
             android:background="@drawable/layout_table_row_50">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="80dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
@@ -314,7 +314,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -326,7 +326,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView5"
+		        android:id="@+id_play/textView5"
 		        android:layout_width="10dp"
 		        android:gravity="center"
 		        android:typeface="serif"
@@ -335,7 +335,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textView6"
 		        android:layout_width="50dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center"
@@ -351,7 +351,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="80dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
@@ -362,7 +362,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -374,7 +374,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView5"
+		        android:id="@+id_play/textView5"
 		        android:layout_width="10dp"
 		        android:typeface="serif"
 		        android:gravity="center"
@@ -383,7 +383,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textView6"
 		        android:layout_width="50dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center"
@@ -397,11 +397,11 @@
     </TableLayout>
     
     <TableLayout
-        android:id="@+id/habilitiesMod3"
+        android:id="@+id_play/habilitiesMod3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id_play/textView2"
+        android:layout_below="@+id_play/textView2"
         android:background="@drawable/layout_table"
         android:layout_marginTop="420dp"
         android:layout_marginLeft="20dp" >
@@ -412,7 +412,7 @@
             android:background="@drawable/layout_table_row_50">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="80dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
@@ -423,7 +423,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -435,7 +435,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView5"
+		        android:id="@+id_play/textView5"
 		        android:layout_width="10dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -444,7 +444,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textView6"
 		        android:layout_width="50dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center"
@@ -460,7 +460,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="80dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
@@ -471,7 +471,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -483,7 +483,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView5"
+		        android:id="@+id_play/textView5"
 		        android:layout_width="10dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -492,7 +492,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id/textView6"
+		        android:id="@+id_play/textView6"
 		        android:layout_width="50dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center"
@@ -507,10 +507,10 @@
     
     
     <TableLayout
-        android:id="@+id/defensesTitle"
+        android:id="@+id_play/defensesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id_play/textView2"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="245dp">
 		        
@@ -519,7 +519,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="100dp"
 		        android:layout_height="fill_parent"
 		        android:typeface="serif"
@@ -531,11 +531,11 @@
   	</TableLayout>    
     
     <TableLayout
-        android:id="@+id/defenses1"
+        android:id="@+id_play/defenses1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id_play/textView2"
+        android:layout_below="@+id_play/textView2"
         android:background="@drawable/layout_table"
         android:layout_marginTop="180dp"
         android:layout_marginLeft="245dp" >
@@ -545,7 +545,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="90dp"
 		        android:layout_height="fill_parent"
 		        android:typeface="serif"
@@ -556,7 +556,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -570,11 +570,11 @@
     </TableLayout>
 
     <TableLayout
-        android:id="@+id/defenses2"
+        android:id="@+id_play/defenses2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id_play/textView2"
+        android:layout_below="@+id_play/textView2"
         android:background="@drawable/layout_table"
         android:layout_marginTop="245dp"
         android:layout_marginLeft="245dp" >
@@ -584,7 +584,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="90dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
@@ -595,7 +595,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -609,11 +609,11 @@
     </TableLayout>
 
     <TableLayout
-        android:id="@+id/defenses3"
+        android:id="@+id_play/defenses3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id_play/textView2"
+        android:layout_below="@+id_play/textView2"
         android:background="@drawable/layout_table"
         android:layout_marginTop="310dp"
         android:layout_marginLeft="245dp" >
@@ -623,7 +623,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="90dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
@@ -634,7 +634,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -648,11 +648,11 @@
     </TableLayout>
     
     <TableLayout
-        android:id="@+id/defenses4"
+        android:id="@+id_play/defenses4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id_play/textView2"
+        android:layout_below="@+id_play/textView2"
         android:background="@drawable/layout_table"
         android:layout_marginTop="375dp"
         android:layout_marginLeft="245dp" >
@@ -662,7 +662,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="90dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
@@ -673,7 +673,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -687,11 +687,11 @@
     </TableLayout>
     
     <TableLayout
-        android:id="@+id/milestoneAndActionPoints"
+        android:id="@+id_play/milestoneAndActionPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id_play/textView2"
+        android:layout_below="@+id_play/textView2"
         android:background="@drawable/layout_table"
         android:layout_marginTop="440dp"
         android:layout_marginLeft="245dp">
@@ -702,7 +702,7 @@
             android:background="@drawable/layout_table_row_30">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="170dp"
 		        android:layout_height="fill_parent"
 		        android:typeface="serif"
@@ -713,7 +713,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -729,7 +729,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="170dp"
 		        android:layout_height="fill_parent"
 		        android:paddingLeft="10dp"
@@ -740,7 +740,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -755,11 +755,11 @@
     </TableLayout>
     
     <TableLayout
-        android:id="@+id/resistansesBox"
+        android:id="@+id_play/resistansesBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id_play/textView2"
+        android:layout_below="@+id_play/textView2"
         android:background="@drawable/layout_table"
         android:layout_marginTop="180dp"
         android:layout_marginLeft="400dp">
@@ -769,7 +769,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="170dp"
 		        android:layout_height="wrap_content"
 		        android:typeface="serif"
@@ -780,7 +780,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="wrap_content"
@@ -798,7 +798,7 @@
             android:background="@drawable/layout_row_border_bottom">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="170dp"
 		        android:layout_height="wrap_content"
 		        android:paddingLeft="10dp"
@@ -809,7 +809,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:layout_height="wrap_content"
 		        android:textColor="#000"
@@ -826,7 +826,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="170dp"
 		        android:layout_height="wrap_content"
 		        android:paddingLeft="10dp"
@@ -838,7 +838,7 @@
 		        android:textStyle="bold" />
             
 		    <TextView
-		        android:id="@+id/textView4"
+		        android:id="@+id_play/textView4"
 		        android:layout_width="50dp"
 		        android:layout_height="wrap_content"
 		        android:textColor="#000"
@@ -855,7 +855,7 @@
             android:layout_width="match_parent">
 
 		    <TextView
-		        android:id="@+id/textView3"
+		        android:id="@+id_play/textView3"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:paddingLeft="10dp"
@@ -873,11 +873,11 @@
     </TableLayout>
     
     <Button
-        android:id="@+id/Button01"
+        android:id="@+id_play/Button01"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/tableRow1"
+        android:layout_below="@+id_play/tableRow1"
         android:layout_marginRight="34dp"
         android:typeface="serif"
         android:layout_marginTop="830dp"
