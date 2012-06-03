@@ -89,9 +89,15 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 	@Override
 	public RpgCharacter retrieve(Long id) {
 		RpgCharacter rpgCharacter = null;
+		
 		Cursor cursor = db.query(RpgCharacterTable.NAME, RpgCharacterColumns.get(),
-				BaseColumns._ID + " = ?", new String[] { id.toString() },
-				null, null, null, "1");
+				BaseColumns._ID + " = ?", // where
+				new String[] { id.toString() }, // values
+				null, // group by
+				null, // having
+				null, // order by
+				"1");  // limit
+		
 		if (cursor.moveToFirst()) {
 			rpgCharacter = this.buildPlayerFromCursor(cursor);
 		}
@@ -107,12 +113,13 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 	public List<RpgCharacter> retrieveAll() {
 		List<RpgCharacter> myList = new ArrayList<RpgCharacter>();
 
-		Cursor cursor = db.query(RpgCharacterTable.NAME, RpgCharacterColumns.get(), null, // where
+		Cursor cursor = db.query(RpgCharacterTable.NAME, RpgCharacterColumns.get(), 
+				null, // where
 				null, // values
 				null, // group by
 				null, // having
 				RpgCharacterColumns.NAME, // order by
-				null);
+				null); // limit
 
 		if (cursor.moveToFirst()) {
 			do {
