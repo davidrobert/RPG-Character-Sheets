@@ -45,7 +45,7 @@ public abstract class AbstractRpgClass implements CharacterClass {
 	
 	@Override
 	public Set<TypeRpgReligion> getReligions(TypeRpgAlignment alignment) {
-		return (Set<TypeRpgReligion>) Collections.unmodifiableCollection(new HashSet<TypeRpgReligion>()); 
+		return Collections.unmodifiableSet(new HashSet<TypeRpgReligion>()); 
 	}
 		
 	protected Set<TypeRpgReligion> getReligions(Collection<TypeRpgReligion> religions, TypeRpgAlignment alignment) {
@@ -57,6 +57,6 @@ public abstract class AbstractRpgClass implements CharacterClass {
 			}
 		}
 		
-		return (Set<TypeRpgReligion>) Collections.unmodifiableCollection(religionsAvailable);
+		return Collections.unmodifiableSet(religionsAvailable);
 	}
 }
