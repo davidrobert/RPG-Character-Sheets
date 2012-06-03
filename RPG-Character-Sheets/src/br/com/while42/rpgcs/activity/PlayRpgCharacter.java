@@ -25,12 +25,24 @@ public class PlayRpgCharacter extends Activity {
 		
 		DataManager manager = new DataManager(getApplicationContext());
 		
-		Log.i("ID: ", id.toString());
+		Log.d("ID: ", id.toString());
 		
 		RpgCharacter rpgCharacter = manager.retrieveRpgCharacter(id);
 		
 		TextView name = (TextView) findViewById(R.id_play.textview_name);
+		TextView gender_race_class = (TextView) findViewById(R.id_play.textview_gender_race_class);
+		TextView alignment = (TextView) findViewById(R.id_play.textview_alignment);
+					
 		name.setText(rpgCharacter.getName());
+		
+		StringBuilder sbGenderRaceClass = new StringBuilder();
+		sbGenderRaceClass.append(getString(rpgCharacter.getGender().getCodeName())).append(" ");
+		sbGenderRaceClass.append(getString(rpgCharacter.getRace().getCodeName())).append(" ");
+		//sbGenderRaceClass.append(getString(rpgCharacter.getRpgClasses().get(0).getCodeName()));
+		
+		gender_race_class.setText(sbGenderRaceClass.toString());
+		
+		alignment.setText(getString(rpgCharacter.getAlignment().getCodeName()));
 		
 	}
 

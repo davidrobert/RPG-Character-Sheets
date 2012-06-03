@@ -1,9 +1,9 @@
 package br.com.while42.rpgcs.model.character;
 
 import java.io.Serializable;
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
@@ -88,8 +88,8 @@ public class RpgCharacter implements Serializable {
 		this.name = name;
 	}
 
-	public Set<AbstractRpgClass> getRpgClasses() {
-		return Collections.unmodifiableSet(rpgClass);
+	public List<AbstractRpgClass> getRpgClasses() {
+		return new ArrayList<AbstractRpgClass>(rpgClass);
 	}
 
 	public void addRpgClass(AbstractRpgClass rpgClass) {
