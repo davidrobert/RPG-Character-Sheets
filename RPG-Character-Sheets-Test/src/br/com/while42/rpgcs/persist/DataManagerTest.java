@@ -1,18 +1,19 @@
 package br.com.while42.rpgcs.persist;
 
-import br.com.while42.rpgcs.model.character.RpgCharacter;
-import br.com.while42.rpgcs.model.character.RpgCharacterTest;
-import br.com.while42.rpgcs.persist.dao.RpgCharacterDAO;
-import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
+import java.util.List;
+
 import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
+import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.model.character.RpgCharacterTest;
+import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
 
 public class DataManagerTest extends AndroidTestCase {
 
 	SQLiteDatabase db;
 	DataManager dataManager;
 
-	RpgCharacterDAO rpgCharacterDAO;
+	//RpgCharacterDAO rpgCharacterDAO;
 
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -21,7 +22,7 @@ public class DataManagerTest extends AndroidTestCase {
 		db = dataManager.getDb();
 		clearAllTables();
 
-		rpgCharacterDAO = new RpgCharacterDAO(db);
+		//rpgCharacterDAO = new RpgCharacterDAO(db);
 	}
 
 	protected void tearDown() throws Exception {
@@ -46,9 +47,9 @@ public class DataManagerTest extends AndroidTestCase {
 
 	public void testSaveRpgCharacter() {
 
-		RpgCharacter rpgCharacter = RpgCharacterTest.createInstanceCharacter();
+		RpgCharacter rpgCharacter = RpgCharacterTest.getInstance();
 
-		Long id = rpgCharacterDAO.save(rpgCharacter);
+		Long id = dataManager.saveRpgCharacter(rpgCharacter);
 
 		// match
 		assertTrue(id > 0);
@@ -57,12 +58,31 @@ public class DataManagerTest extends AndroidTestCase {
 
 	public void testRetrieveRpgCharacter() {
 		
-		RpgCharacter rpgCharacter = RpgCharacterTest.createInstanceCharacter();
+		RpgCharacter rpgCharacter = RpgCharacterTest.getInstance();
 
-		Long id = rpgCharacterDAO.save(rpgCharacter);
+		Long id = dataManager.saveRpgCharacter(rpgCharacter);
 		
-		RpgCharacter rpgCharacter2 = rpgCharacterDAO.retrieve(id);
+		RpgCharacter rpgCharacter2 = dataManager.retrieveRpgCharacter(id);
 
 		assertTrue(rpgCharacter.equals(rpgCharacter2));
+	}
+	
+	public void testRetrieveAllRpgCharacters() {
+		clearAllTables();
+		
+		for (RpgCharacter rc: RpgCharacterTest.getList()) {
+			dataManager.saveRpgCharacter(rc);
+		}
+		
+		List<RpgCharacter> rpgCharacters = dataManager.retrieveAllRpgCharacters();
+		for (RpgCharacter rc: RpgCharacterTest.getList()) {
+			assertTrue(rpgCharacters.contains(rc));
+		}
+		
+		assertEquals(rpgCharacters.size(), RpgCharacterTest.getList().size());
+	}
+	
+	public void testDeleteRpgCharacter() {
+	
 	}
 }
