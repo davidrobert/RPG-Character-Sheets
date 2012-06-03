@@ -27,7 +27,7 @@ public class MainMenu extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent edit = new Intent(MainMenu.this, EditCharacter.class);
+				Intent edit = new Intent(MainMenu.this, EditRpgCharacter.class);
 				startActivity(edit);
 			}
 		});

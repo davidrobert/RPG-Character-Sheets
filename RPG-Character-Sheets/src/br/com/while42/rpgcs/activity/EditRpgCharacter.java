@@ -28,7 +28,7 @@ import br.com.while42.rpgcs.model.classes.CharacterClass;
 import br.com.while42.rpgcs.model.classes.Classes;
 import br.com.while42.rpgcs.persist.DataManager;
 
-public class EditCharacter extends Activity {
+public class EditRpgCharacter extends Activity {
 
 	DataManager dataManager;
 

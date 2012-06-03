@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.EditCharacter"
+            android:name=".activity.EditRpgCharacter"
             android:label="@string/title_activity_edit_character" >
         </activity>
         <activity
