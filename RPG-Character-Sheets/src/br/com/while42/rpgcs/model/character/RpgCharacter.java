@@ -60,11 +60,6 @@ public class RpgCharacter implements Serializable {
 		this.alignment = alignment;
 	}
 
-	@Override
-	public String toString() {
-		return this.name;
-	}
-
 	public boolean isPersistent() {
 		return getId() != 0;
 	}
@@ -235,4 +230,24 @@ public class RpgCharacter implements Serializable {
 		
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder("");
+		
+		sb.append(" id: ").append(id);
+		sb.append(" name: ").append(name);
+		sb.append(" race: ").append(race);
+		sb.append(" alignment: ").append(alignment);
+		sb.append(" religion: ").append(religion);
+		sb.append(" size: ").append(size);
+		sb.append(" age: ").append(age);
+		sb.append(" gender: ").append(gender);
+		sb.append(" height: ").append(height);
+		sb.append(" weight: ").append(weight);
+		sb.append(" eye: ").append(eye);
+		sb.append(" hair: ").append(hair);
+		sb.append(" skin: ").append(skin);
+		
+		return sb.toString();
+	}
 }
