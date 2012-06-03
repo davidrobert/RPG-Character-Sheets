@@ -77,10 +77,8 @@ public class DataManager {
 		return matchId;
 	}
 
-	public RpgCharacter retrieveRpgCharacter(Long rpgCharacterId) {
-		RpgCharacter rpgCharacter = rpgCharacterDao.retrieve(rpgCharacterId);
-		
-		return rpgCharacter;
+	public RpgCharacter retrieveRpgCharacter(Long id) {
+		return rpgCharacterDao.retrieve(id);
 	}
 
 	public List<RpgCharacter> retrieveAllRpgCharacters() {
