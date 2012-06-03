@@ -1,15 +1,13 @@
 package br.com.while42.rpgcs.persist;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import br.com.while42.rpgcs.model.character.RpgCharacter;
-import br.com.while42.rpgcs.persist.dao.RpgCharacterDAO;
 
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
+import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.persist.dao.RpgCharacterDAO;
 
 
 public class DataManager {
@@ -61,7 +59,7 @@ public class DataManager {
 
 	// Match operations
 
-	public long saveRpgCharacter(RpgCharacter rpgCharacter) {
+	public Long saveRpgCharacter(RpgCharacter rpgCharacter) {
 		long matchId = 0L;
 		try {
 			db.beginTransaction();
@@ -79,16 +77,14 @@ public class DataManager {
 		return matchId;
 	}
 
-	public RpgCharacter retrieveRpgCharacter(long rpgCharacterId) {
+	public RpgCharacter retrieveRpgCharacter(Long rpgCharacterId) {
 		RpgCharacter rpgCharacter = rpgCharacterDao.retrieve(rpgCharacterId);
 		
 		return rpgCharacter;
 	}
 
 	public List<RpgCharacter> retrieveAllRpgCharacters() {
-		List<RpgCharacter> characters = new ArrayList<RpgCharacter>();
-
-		return characters;
+		return rpgCharacterDao.retrieveAll();
 	}
 
 	public boolean deleteRpgCharacter(RpgCharacter rpgCharacter) {
