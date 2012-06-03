@@ -18,62 +18,62 @@ import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 public class RpgCharacter implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
-	private long id;
-	private String image;
-	
-	private String name;
-	private HashSet<AbstractRpgClass> rpgClass = new  HashSet<AbstractRpgClass>();
-	private TypeRpgRace race;	
+
+	private Long id = 0L;
+	private String image = "";
+
+	private String name = "";
+	private HashSet<AbstractRpgClass> rpgClass = new HashSet<AbstractRpgClass>();
+	private TypeRpgRace race;
 	private TypeRpgAlignment alignment;
 	private TypeRpgReligion religion = TypeRpgReligion.NONE;
-	
+
 	private TypeRpgSize size = TypeRpgSize.MEDIUM;
-	private Integer age = 0;	
+	private Integer age = 0;
 	private TypeGender gender;
 	private Integer height = 0;
 	private Integer weight = 0;
 	private TypeEyeColor eye;
 	private TypeHairColor hair;
-	private TypeSkinColor skin;	
-	
+	private TypeSkinColor skin;
+
 	private Integer hitPoints = 0;
 	private Integer currentHitPoints = 0;
-	
+
 	private Integer armorClass = 0;
-	
+
 	private Integer touchArmorClass = 0;
 	private Integer flatFooted = 0;
 	private Integer initiative = 0;
-	
+
 	private Integer baseAttackBonus = 0;
 	private Integer spellResistence = 0;
 	private Integer grapple = 0;
-	
+
 	public RpgCharacter() {
 		// TODO: Construir uma classe Builder para RpgCharacter
 	}
-	
+
 	public RpgCharacter(String name, TypeRpgRace race, TypeRpgAlignment alignment) {
 		this.name = name;
 		this.race = race;
 		this.alignment = alignment;
 	}
-	
+
 	@Override
 	public String toString() {
 		return this.name;
 	}
-	
+
 	public boolean isPersistent() {
 		return getId() != 0;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -96,11 +96,11 @@ public class RpgCharacter implements Serializable {
 	public Set<AbstractRpgClass> getRpgClasses() {
 		return (Set<AbstractRpgClass>) Collections.unmodifiableCollection(rpgClass);
 	}
-	
+
 	public void addRpgClass(AbstractRpgClass rpgClass) {
 		this.rpgClass.add(rpgClass);
 	}
-	
+
 	public void clearRpgClass() {
 		rpgClass.clear();
 	}
@@ -191,6 +191,48 @@ public class RpgCharacter implements Serializable {
 
 	public void setSkin(TypeSkinColor skin) {
 		this.skin = skin;
+	}
+
+	@Override
+	public boolean equals(Object rpgCharacter) {
+
+		if (this == rpgCharacter)
+			return true;
+
+		if (!(rpgCharacter instanceof RpgCharacter))
+			return false;
+
+		RpgCharacter rc = (RpgCharacter) rpgCharacter;
+
+		return (id.equals(rc.id) &&
+				image.equals(rc.image) &&
+				name.equals(rc.name) &&
+				race.equals(rc.race) &&
+				alignment.equals(rc.alignment) &&
+				religion.equals(rc.religion) &&
+				size.equals(rc.size) &&
+				age.equals(rc.age) &&
+				gender.equals(rc.gender) &&
+				height.equals(rc.height) &&
+				weight.equals(rc.weight) &&
+				eye.equals(rc.eye) &&
+				hair.equals(rc.hair) &&
+				skin.equals(rc.skin) &&
+				
+				hitPoints.equals(rc.hitPoints) &&
+				currentHitPoints.equals(rc.currentHitPoints) &&
+				
+				armorClass.equals(rc.armorClass) &&
+				
+				touchArmorClass.equals(rc.touchArmorClass) &&
+				flatFooted.equals(rc.flatFooted) &&
+				initiative.equals(rc.initiative) &&
+				
+				baseAttackBonus.equals(rc.baseAttackBonus) &&
+				spellResistence.equals(rc.spellResistence) &&
+				grapple.equals(rc.grapple)
+				);
+		
 	}
 
 }
