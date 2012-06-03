@@ -158,12 +158,12 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id_edit/spinner_age"
+        <EditText
+            android:id="@+id_edit/edittext_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawSelectorOnTop="true" >
-        </Spinner>
+            android:inputType="number" >
+        </EditText>
     </TableRow>
 
     <!-- Gender -->
@@ -204,12 +204,12 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id_edit/spinner_height"
+        <EditText
+            android:id="@+id_edit/edittext_height"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawSelectorOnTop="true" >
-        </Spinner>
+           android:inputType="number" >
+        </EditText>
     </TableRow>
 
     <!-- Weight -->
@@ -227,12 +227,12 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id_edit/spinner_weight"
+        <EditText
+            android:id="@+id_edit/edittext_weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawSelectorOnTop="true" >
-        </Spinner>
+            android:inputType="number" >
+        </EditText>
     </TableRow>
 
     <!-- Eye -->
