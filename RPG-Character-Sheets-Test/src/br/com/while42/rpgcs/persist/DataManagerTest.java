@@ -13,16 +13,12 @@ public class DataManagerTest extends AndroidTestCase {
 	SQLiteDatabase db;
 	DataManager dataManager;
 
-	//RpgCharacterDAO rpgCharacterDAO;
-
 	protected void setUp() throws Exception {
 		super.setUp();
 
 		dataManager = new DataManager(getContext(), true);
 		db = dataManager.getDb();
 		clearAllTables();
-
-		//rpgCharacterDAO = new RpgCharacterDAO(db);
 	}
 
 	protected void tearDown() throws Exception {
@@ -67,7 +63,9 @@ public class DataManagerTest extends AndroidTestCase {
 		assertTrue(rpgCharacter.equals(rpgCharacter2));		
 	}
 	
-	public void testRetrieveAllRpgCharacters() {		
+	public void testRetrieveAllRpgCharacters() {
+		clearAllTables();
+		
 		List<RpgCharacter> list = RpgCharacterTest.getList();
 		
 		for (RpgCharacter rc: list) {
