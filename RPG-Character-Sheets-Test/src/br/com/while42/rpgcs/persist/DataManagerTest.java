@@ -4,6 +4,7 @@ import java.util.List;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
+import android.util.Log;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.RpgCharacterTest;
 import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
@@ -57,14 +58,20 @@ public class DataManagerTest extends AndroidTestCase {
 	}
 
 	public void testRetrieveRpgCharacter() {
+		clearAllTables();
 		
 		RpgCharacter rpgCharacter = RpgCharacterTest.getInstance();
 
 		Long id = dataManager.saveRpgCharacter(rpgCharacter);
+		Log.i("**", id.toString());
 		
 		RpgCharacter rpgCharacter2 = dataManager.retrieveRpgCharacter(id);
 
-		assertTrue(rpgCharacter.equals(rpgCharacter2));
+		
+		Log.i("**: ", rpgCharacter.toString());
+		Log.i("**: ", rpgCharacter2.toString());
+		
+		assertTrue(rpgCharacter.equals(rpgCharacter2));		
 	}
 	
 	public void testRetrieveAllRpgCharacters() {
@@ -83,6 +90,18 @@ public class DataManagerTest extends AndroidTestCase {
 	}
 	
 	public void testDeleteRpgCharacter() {
-	
+		List<RpgCharacter> list = RpgCharacterTest.getList();
+		
+		for (RpgCharacter rc: list) {
+			dataManager.saveRpgCharacter(rc);
+		}
+		
+		assertTrue(dataManager.retrieveAllRpgCharacters().size() > 0);
+		
+		for (RpgCharacter rc: list) {
+			dataManager.deleteRpgCharacter(rc);
+		}
+		
+		assertTrue(dataManager.retrieveAllRpgCharacters().isEmpty());
 	}
 }
