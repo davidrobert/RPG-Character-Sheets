@@ -87,10 +87,10 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 	}
 
 	@Override
-	public RpgCharacter retrieve(long id) {
+	public RpgCharacter retrieve(Long id) {
 		RpgCharacter rpgCharacter = null;
 		Cursor cursor = db.query(RpgCharacterTable.NAME, RpgCharacterColumns.get(),
-				BaseColumns._ID + " = ?", new String[] { String.valueOf(id) },
+				BaseColumns._ID + " = ?", new String[] { id.toString() },
 				null, null, null, "1");
 		if (cursor.moveToFirst()) {
 			rpgCharacter = this.buildPlayerFromCursor(cursor);

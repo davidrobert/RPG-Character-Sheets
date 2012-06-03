@@ -9,7 +9,7 @@ public interface Dao<T> {
 
 	void delete(T type);
 	
-	T retrieve(long id);
+	T retrieve(Long id);
 	
 	List<T> retrieveAll();
 }
