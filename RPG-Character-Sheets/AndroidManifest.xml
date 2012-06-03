@@ -26,6 +26,10 @@
             android:name=".activity.ListRpgCharacters"
             android:label="@string/title_activity_edit_character" >
         </activity>
+        <activity
+            android:name=".activity.PlayRpgCharacter"
+            android:label="@string/title_activity_edit_character" >
+        </activity>
     </application>
 
 </manifest>

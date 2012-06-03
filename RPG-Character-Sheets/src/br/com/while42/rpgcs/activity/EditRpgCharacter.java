@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -156,17 +157,23 @@ public class EditRpgCharacter extends Activity {
 				cs.setSize((TypeRpgSize) e.getType());
 
 				// Age
-				cs.setAge(Integer.parseInt(age.getText().toString()));
+				if (!age.getText().toString().isEmpty()) {
+					cs.setAge(Integer.parseInt(age.getText().toString()));
+				}
 				
 				// Gender
 				e = (Element) gender.getSelectedItem();
 				cs.setGender((TypeGender) e.getType());
 
 				// Height
-				cs.setHeight(Integer.parseInt(height.getText().toString()));			
+				if (!height.getText().toString().isEmpty()) {
+					cs.setHeight(Integer.parseInt(height.getText().toString()));
+				}
 				
 				// Weight
-				cs.setWeight(Integer.parseInt(weight.getText().toString()));
+				if (!weight.getText().toString().isEmpty()) {
+					cs.setWeight(Integer.parseInt(weight.getText().toString()));
+				}
 				
 				// Eye
 				e = (Element) eye.getSelectedItem();
@@ -196,6 +203,9 @@ public class EditRpgCharacter extends Activity {
 				Log.e(">> skin      >>", cs.getSkin().toString());
 				
 				dataManager.saveRpgCharacter(cs);
+				
+				Intent play = new Intent(EditRpgCharacter.this, PlayRpgCharacter.class);				
+				startActivity(play);
 			}
 		});
 

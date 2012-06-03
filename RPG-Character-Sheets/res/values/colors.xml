@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="opaca20">#20000000</color>
+    <color name="opaca50">#50ffffff</color>
+    <color name="opaca90">#90ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="bordaVermelha">#A52A2A</color>
+</resources>
