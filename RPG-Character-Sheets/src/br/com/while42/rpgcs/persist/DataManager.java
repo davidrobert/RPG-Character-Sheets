@@ -20,6 +20,10 @@ public class DataManager {
 
 	private RpgCharacterDAO rpgCharacterDao;
 
+	public DataManager(Context context) {
+		this(context, false);
+	}
+	
 	public DataManager(Context context, boolean useDebugDb) {
 		this.context = context;
 		this.useDebugDb = useDebugDb;
