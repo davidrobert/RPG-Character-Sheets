@@ -70,18 +70,18 @@ public final class RpgCharacterTable {
 		StringBuilder sb = new StringBuilder();
 		sb.append("CREATE TABLE " + RpgCharacterTable.NAME + " (");
 		sb.append(BaseColumns._ID + " INTEGER PRIMARY KEY, ");
-		sb.append(RpgCharacterColumns.NAME + " TEXT");
-		sb.append(RpgCharacterColumns.RACE + " TEXT");
-		sb.append(RpgCharacterColumns.ALIGNMENT + " TEXT");
-		sb.append(RpgCharacterColumns.RELIGION + " TEXT");
+		sb.append(RpgCharacterColumns.NAME + " TEXT,");
+		sb.append(RpgCharacterColumns.RACE + " TEXT,");
+		sb.append(RpgCharacterColumns.ALIGNMENT + " TEXT,");
+		sb.append(RpgCharacterColumns.RELIGION + " TEXT,");
 		
-		sb.append(RpgCharacterColumns.SIZE + " TEXT");
-		sb.append(RpgCharacterColumns.AGE + " TEXT");
-		sb.append(RpgCharacterColumns.GENDER + " TEXT");
-		sb.append(RpgCharacterColumns.HEIGHT + " TEXT");
-		sb.append(RpgCharacterColumns.WEIGHT + " TEXT");
-		sb.append(RpgCharacterColumns.EYE + " TEXT");
-		sb.append(RpgCharacterColumns.HAIR + " TEXT");
+		sb.append(RpgCharacterColumns.SIZE + " TEXT,");
+		sb.append(RpgCharacterColumns.AGE + " TEXT,");
+		sb.append(RpgCharacterColumns.GENDER + " TEXT,");
+		sb.append(RpgCharacterColumns.HEIGHT + " TEXT,");
+		sb.append(RpgCharacterColumns.WEIGHT + " TEXT,");
+		sb.append(RpgCharacterColumns.EYE + " TEXT,");
+		sb.append(RpgCharacterColumns.HAIR + " TEXT,");
 		sb.append(RpgCharacterColumns.SKIN + " TEXT");
 		sb.append(");");
 
