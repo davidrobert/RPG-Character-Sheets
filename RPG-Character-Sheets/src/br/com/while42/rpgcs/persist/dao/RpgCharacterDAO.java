@@ -1,12 +1,21 @@
 package br.com.while42.rpgcs.persist.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.provider.BaseColumns;
-import android.util.Log;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeGender;
+import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
+import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.persist.TableColumnsUtils;
 import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
 import br.com.while42.rpgcs.persist.table.RpgCharacterTable.RpgCharacterColumns;
@@ -33,7 +42,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 	}
 	
 	@Override
-	public long save(RpgCharacter rpgCharacter) {
+	public Long save(RpgCharacter rpgCharacter) {
 		if (rpgCharacter.getId() == 0) {
 			
 			//db.insert(RpgCharacterTable.NAME, nullColumnHack, values)
@@ -47,13 +56,11 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 			insertStatement.bindString(5, rpgCharacter.getSize().toString());
 			insertStatement.bindString(6, rpgCharacter.getAge().toString());
 			insertStatement.bindString(7, rpgCharacter.getGender().toString());
-			insertStatement.bindString(8, rpgCharacter.getHeight().toString());
-			insertStatement.bindString(9, rpgCharacter.getWeight().toString());
+			insertStatement.bindLong(8, rpgCharacter.getHeight());
+			insertStatement.bindLong(9, rpgCharacter.getWeight());
 			insertStatement.bindString(10, rpgCharacter.getEye().toString());
 			insertStatement.bindString(11, rpgCharacter.getHair().toString());
 			insertStatement.bindString(12, rpgCharacter.getSkin().toString());
-			
-			Log.i("SAVE", insertStatement.toString());
 			
 			rpgCharacter.setId(insertStatement.executeInsert());
 		} else {
@@ -71,22 +78,79 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 
 	@Override
 	public void delete(RpgCharacter rpgCharacter) {
-		// TODO Auto-generated method stub
+		if (rpgCharacter.isPersistent()) {
+			db.delete(RpgCharacterTable.NAME, BaseColumns._ID + " = ?",
+					new String[] { String.valueOf(rpgCharacter.getId()) });
+			rpgCharacter.setId(0L);
+		}
 		
 	}
 
 	@Override
 	public RpgCharacter retrieve(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		RpgCharacter rpgCharacter = null;
+		Cursor cursor = db.query(RpgCharacterTable.NAME, RpgCharacterColumns.get(),
+				BaseColumns._ID + " = ?", new String[] { String.valueOf(id) },
+				null, null, null, "1");
+		if (cursor.moveToFirst()) {
+			rpgCharacter = this.buildPlayerFromCursor(cursor);
+		}
+
+		if (!cursor.isClosed()) {
+			cursor.close();
+		}
+
+		return rpgCharacter;
 	}
 
 	@Override
 	public List<RpgCharacter> retrieveAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<RpgCharacter> myList = new ArrayList<RpgCharacter>();
+
+		Cursor cursor = db.query(RpgCharacterTable.NAME, RpgCharacterColumns.get(), null, // where
+				null, // values
+				null, // group by
+				null, // having
+				RpgCharacterColumns.NAME, // order by
+				null);
+
+		if (cursor.moveToFirst()) {
+			do {
+				RpgCharacter rpgCharacter = this.buildPlayerFromCursor(cursor);
+				myList.add(rpgCharacter);
+			} while (cursor.moveToNext());
+		}
+
+		if (!cursor.isClosed()) {
+			cursor.close();
+		}
+
+		return myList;
 	}
 
+	private RpgCharacter buildPlayerFromCursor(Cursor cursor) {
+		RpgCharacter rpgCharacter = null;
 
+		if (cursor != null) {
+			rpgCharacter = new RpgCharacter();
+			rpgCharacter.setId(cursor.getLong(0));
+			
+			rpgCharacter.setName(cursor.getString(1));
+			rpgCharacter.setRace(TypeRpgRace.valueOf(cursor.getString(2)));
+			rpgCharacter.setAlignment(TypeRpgAlignment.valueOf(cursor.getString(3)));
+			rpgCharacter.setReligion(TypeRpgReligion.valueOf(cursor.getString(4)));
+			
+			rpgCharacter.setSize(TypeRpgSize.valueOf(cursor.getString(5)));
+			rpgCharacter.setAge(cursor.getInt(6));
+			rpgCharacter.setGender(TypeGender.valueOf(cursor.getString(7)));
+			rpgCharacter.setHeight(cursor.getInt(8));
+			rpgCharacter.setWeight(cursor.getInt(9));
+			rpgCharacter.setEye(TypeEyeColor.valueOf(cursor.getString(10)));
+			rpgCharacter.setHair(TypeHairColor.valueOf(cursor.getString(11)));
+			rpgCharacter.setSkin(TypeSkinColor.valueOf(cursor.getString(12)));
+		}
+
+		return rpgCharacter;
+	}
 	
 }

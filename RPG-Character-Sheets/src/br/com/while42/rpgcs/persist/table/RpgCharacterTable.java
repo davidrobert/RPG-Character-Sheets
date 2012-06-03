@@ -57,8 +57,8 @@ public final class RpgCharacterTable {
 		values.put(RpgCharacterColumns.SIZE, rpgCharacter.getSize().toString());
 		values.put(RpgCharacterColumns.AGE, rpgCharacter.getAge().toString());
 		values.put(RpgCharacterColumns.GENDER, rpgCharacter.getGender().toString());
-		values.put(RpgCharacterColumns.HEIGHT, rpgCharacter.getHeight().toString());
-		values.put(RpgCharacterColumns.WEIGHT, rpgCharacter.getWeight().toString());
+		values.put(RpgCharacterColumns.HEIGHT, rpgCharacter.getHeight());
+		values.put(RpgCharacterColumns.WEIGHT, rpgCharacter.getWeight());
 		values.put(RpgCharacterColumns.EYE, rpgCharacter.getEye().toString());
 		values.put(RpgCharacterColumns.HAIR, rpgCharacter.getHair().toString());
 		values.put(RpgCharacterColumns.SKIN, rpgCharacter.getSkin().toString());
@@ -78,8 +78,8 @@ public final class RpgCharacterTable {
 		sb.append(RpgCharacterColumns.SIZE + " TEXT,");
 		sb.append(RpgCharacterColumns.AGE + " TEXT,");
 		sb.append(RpgCharacterColumns.GENDER + " TEXT,");
-		sb.append(RpgCharacterColumns.HEIGHT + " TEXT,");
-		sb.append(RpgCharacterColumns.WEIGHT + " TEXT,");
+		sb.append(RpgCharacterColumns.HEIGHT + " INTEGER,");
+		sb.append(RpgCharacterColumns.WEIGHT + " INTEGER,");
 		sb.append(RpgCharacterColumns.EYE + " TEXT,");
 		sb.append(RpgCharacterColumns.HAIR + " TEXT,");
 		sb.append(RpgCharacterColumns.SKIN + " TEXT");

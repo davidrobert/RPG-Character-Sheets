@@ -48,10 +48,21 @@ public class DataManagerTest extends AndroidTestCase {
 
 		RpgCharacter rpgCharacter = RpgCharacterTest.createInstanceCharacter();
 
-		long id = rpgCharacterDAO.save(rpgCharacter);
+		Long id = rpgCharacterDAO.save(rpgCharacter);
 
 		// match
 		assertTrue(id > 0);
 		assertEquals(id, rpgCharacter.getId());
+	}
+
+	public void testRetrieveRpgCharacter() {
+		
+		RpgCharacter rpgCharacter = RpgCharacterTest.createInstanceCharacter();
+
+		long id = rpgCharacterDAO.save(rpgCharacter);
+		
+		RpgCharacter rpgCharacter2 = rpgCharacterDAO.retrieve(id);
+
+		assertTrue(rpgCharacter.equals(rpgCharacter2));
 	}
 }
