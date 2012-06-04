@@ -6,9 +6,9 @@ import java.util.List;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
+import android.util.Log;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.persist.TableColumnsUtils;
-import br.com.while42.rpgcs.persist.table.RpgCharacterTable.RpgCharacterColumns;
 import br.com.while42.rpgcs.persist.table.RpgClassTable;
 import br.com.while42.rpgcs.persist.table.RpgClassTable.RpgClassColumns;
 
@@ -42,7 +42,8 @@ public class RpgClassDAO  {
 			insertStatement.bindLong(1, idRpgCharacter);
 			insertStatement.bindString(2, rpgClass.getClass().getName());
 			insertStatement.bindLong(3, rpgClass.getClassLevel());
-			
+		
+			Log.d(">>>>>>>>>>", rpgClass.getClass().getName());
 		}
 	}
 
@@ -64,16 +65,16 @@ public class RpgClassDAO  {
 		List<AbstractRpgClass> myList = new ArrayList<AbstractRpgClass>();
 
 		Cursor cursor = db.query(RpgClassTable.NAME, RpgClassColumns.get(), 
-				null, // where
-				null, // values
+				RpgClassColumns.ID_RPG_CHARACTER + " = ?", // where
+				new String[] { idRpgCharacter.toString() }, // values
 				null, // group by
 				null, // having
-				RpgCharacterColumns.NAME, // order by
+				RpgClassColumns.NAME, // order by
 				null); // limit
 
 		if (cursor.moveToFirst()) {
 			do {
-				AbstractRpgClass rpgClass = this.buildPlayerFromCursor(cursor);
+				AbstractRpgClass rpgClass = this.buildRpgClassFromCursor(cursor);
 				myList.add(rpgClass);
 			} while (cursor.moveToNext());
 		}
@@ -85,7 +86,7 @@ public class RpgClassDAO  {
 		return myList;
 	}
 
-	private AbstractRpgClass buildPlayerFromCursor(Cursor cursor) {
+	private AbstractRpgClass buildRpgClassFromCursor(Cursor cursor) {
 		AbstractRpgClass rpgClass = null;
 
 		if (cursor != null) {
@@ -101,10 +102,13 @@ public class RpgClassDAO  {
 				
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
+				Log.e("Error: ClassNotFoundException", e.getStackTrace().toString());
 			} catch (InstantiationException e) {
 				e.printStackTrace();
+				Log.e("Error: InstantiationException", e.getStackTrace().toString());
 			} catch (IllegalAccessException e) {
 				e.printStackTrace();
+				Log.e("Error: IllegalAccessException", e.getStackTrace().toString());
 			}
 			
 		}

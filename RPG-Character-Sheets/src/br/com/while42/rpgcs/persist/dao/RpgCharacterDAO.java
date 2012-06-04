@@ -116,7 +116,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 				"1");  // limit
 		
 		if (cursor.moveToFirst()) {
-			rpgCharacter = this.buildPlayerFromCursor(cursor);
+			rpgCharacter = this.buildRpgCharacterFromCursor(cursor);
 			rpgCharacter.addRpgClass(daoClass.retrieveAll(rpgCharacter.getId()));
 		}
 		
@@ -145,7 +145,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 
 		if (cursor.moveToFirst()) {
 			do {
-				RpgCharacter rpgCharacter = this.buildPlayerFromCursor(cursor);
+				RpgCharacter rpgCharacter = this.buildRpgCharacterFromCursor(cursor);
 				rpgCharacter.addRpgClass(daoClass.retrieveAll(rpgCharacter.getId()));
 				myList.add(rpgCharacter);
 			} while (cursor.moveToNext());
@@ -158,7 +158,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 		return myList;
 	}
 
-	private RpgCharacter buildPlayerFromCursor(Cursor cursor) {
+	private RpgCharacter buildRpgCharacterFromCursor(Cursor cursor) {
 		RpgCharacter rpgCharacter = null;
 
 		if (cursor != null) {
