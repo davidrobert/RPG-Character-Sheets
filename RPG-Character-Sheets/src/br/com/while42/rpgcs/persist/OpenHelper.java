@@ -1,6 +1,7 @@
 package br.com.while42.rpgcs.persist;
 
 import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
+import br.com.while42.rpgcs.persist.table.RpgClassTable;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -20,12 +21,14 @@ public class OpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		RpgCharacterTable.onCreate(db);
+		RpgClassTable.onCreate(db);
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, final int oldVersion,
 			final int newVersion) {
 		RpgCharacterTable.onUpgrade(db, oldVersion, newVersion);
+		RpgClassTable.onUpgrade(db,oldVersion, newVersion);
 	}
 
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
+import android.util.Log;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.RpgCharacterTest;
 import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
@@ -49,7 +50,7 @@ public class DataManagerTest extends AndroidTestCase {
 
 		// match
 		assertTrue(id > 0);
-		assertEquals(id, rpgCharacter.getId());
+		assertEquals(id.longValue(), rpgCharacter.getId().longValue());
 	}
 
 	public void testRetrieveRpgCharacter() throws Exception {
@@ -59,6 +60,9 @@ public class DataManagerTest extends AndroidTestCase {
 		Long id = dataManager.saveRpgCharacter(rpgCharacter);
 		
 		RpgCharacter rpgCharacter2 = dataManager.retrieveRpgCharacter(id);
+		
+		Log.d("original:", rpgCharacter.toString());
+		Log.d("salvado :", rpgCharacter2.toString());		
 		
 		assertTrue(rpgCharacter.equals(rpgCharacter2));		
 	}

@@ -92,6 +92,12 @@ public class RpgCharacter implements Serializable {
 		return new ArrayList<AbstractRpgClass>(rpgClass);
 	}
 
+	public void addRpgClass(List<AbstractRpgClass> rpgClasses) {
+		for (AbstractRpgClass rpgClass: rpgClasses) {
+			addRpgClass(rpgClass);
+		}
+	}
+	
 	public void addRpgClass(AbstractRpgClass rpgClass) {
 		this.rpgClass.add(rpgClass);
 	}
@@ -225,7 +231,9 @@ public class RpgCharacter implements Serializable {
 				
 				baseAttackBonus.equals(rc.baseAttackBonus) &&
 				spellResistence.equals(rc.spellResistence) &&
-				grapple.equals(rc.grapple)
+				grapple.equals(rc.grapple) &&
+				
+				rpgClass.equals(rc.rpgClass) 
 				);
 		
 	}
@@ -236,6 +244,11 @@ public class RpgCharacter implements Serializable {
 		
 		sb.append(" id: ").append(id);
 		sb.append(" name: ").append(name);
+		sb.append(" classes: [");
+		for (AbstractRpgClass c: rpgClass) {
+			sb.append(c.getClass().getName()).append(" - ").append(c.getClassLevel()).append(" ");
+		}
+		sb.append("]");
 		sb.append(" race: ").append(race);
 		sb.append(" alignment: ").append(alignment);
 		sb.append(" religion: ").append(religion);

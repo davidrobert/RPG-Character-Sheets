@@ -38,7 +38,10 @@ public class PlayRpgCharacter extends Activity {
 		StringBuilder sbGenderRaceClass = new StringBuilder();
 		sbGenderRaceClass.append(getString(rpgCharacter.getGender().getCodeName())).append(" ");
 		sbGenderRaceClass.append(getString(rpgCharacter.getRace().getCodeName())).append(" ");
-		//sbGenderRaceClass.append(getString(rpgCharacter.getRpgClasses().get(0).getCodeName()));
+		
+		if (!rpgCharacter.getRpgClasses().isEmpty()) {
+			sbGenderRaceClass.append(getString(rpgCharacter.getRpgClasses().get(0).getCodeName()));
+		}
 		
 		gender_race_class.setText(sbGenderRaceClass.toString());
 		

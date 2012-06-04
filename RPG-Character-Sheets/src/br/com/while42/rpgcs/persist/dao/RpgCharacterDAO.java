@@ -16,6 +16,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.persist.TableColumnsUtils;
 import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
 import br.com.while42.rpgcs.persist.table.RpgCharacterTable.RpgCharacterColumns;
@@ -35,10 +36,12 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 
 	private SQLiteDatabase db;
 	private SQLiteStatement insertStatement;
+	private RpgClassDAO daoClass;
 
 	public RpgCharacterDAO(SQLiteDatabase db) {
 		this.db = db;
 		insertStatement = db.compileStatement(INSERT);
+		daoClass = new RpgClassDAO(db);
 	}
 	
 	@Override
@@ -63,10 +66,19 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 			insertStatement.bindString(12, rpgCharacter.getSkin().toString());
 			
 			rpgCharacter.setId(insertStatement.executeInsert());
+			
+			for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
+				daoClass.save(rpgCharacter.getId(), rpgClass);
+			}
+			
 		} else {
 			this.update(rpgCharacter);
+			
+			for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
+				daoClass.update(rpgCharacter.getId(), rpgClass);
+			}
 		}
-
+		
 		return rpgCharacter.getId();
 	}
 
@@ -81,6 +93,11 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 		if (rpgCharacter.isPersistent()) {
 			db.delete(RpgCharacterTable.NAME, BaseColumns._ID + " = ?",
 					new String[] { String.valueOf(rpgCharacter.getId()) });
+			
+			for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
+				daoClass.delete(rpgCharacter.getId(), rpgClass);
+			}
+			
 			rpgCharacter.setId(0L);
 		}
 		
@@ -100,6 +117,11 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 		
 		if (cursor.moveToFirst()) {
 			rpgCharacter = this.buildPlayerFromCursor(cursor);
+			rpgCharacter.addRpgClass(daoClass.retrieveAll(rpgCharacter.getId()));
+		}
+		
+		for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
+			daoClass.update(rpgCharacter.getId(), rpgClass);
 		}
 
 		if (!cursor.isClosed()) {
@@ -124,6 +146,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 		if (cursor.moveToFirst()) {
 			do {
 				RpgCharacter rpgCharacter = this.buildPlayerFromCursor(cursor);
+				rpgCharacter.addRpgClass(daoClass.retrieveAll(rpgCharacter.getId()));
 				myList.add(rpgCharacter);
 			} while (cursor.moveToNext());
 		}
