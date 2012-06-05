@@ -16,7 +16,8 @@ public final class RpgClassTable {
 		public static final String LEVEL = "level";
 		
 		public static String[] get() {
-			return new String[] { 					
+			return new String[] { 			
+					BaseColumns._ID, 
 					RpgClassColumns.ID_RPG_CHARACTER,
 					RpgClassColumns.NAME,
 					RpgClassColumns.LEVEL
@@ -39,15 +40,19 @@ public final class RpgClassTable {
 		StringBuilder sb = new StringBuilder();
 		sb.append("CREATE TABLE " + RpgClassTable.NAME + " (");
 		
+		sb.append(BaseColumns._ID + " INTEGER PRIMARY KEY, ");
+		
 		sb.append(RpgClassColumns.ID_RPG_CHARACTER + " INTEGER,");
 		sb.append(RpgClassColumns.NAME + " TEXT, ");
-		sb.append(RpgClassColumns.LEVEL + " INTEGER, ");
+		sb.append(RpgClassColumns.LEVEL + " INTEGER ");
 		
-		sb.append("PRIMARY KEY (");
+		/*
+		sb.append(", PRIMARY KEY (");
 		sb.append(RpgClassColumns.ID_RPG_CHARACTER).append(", ");
 		sb.append(RpgClassColumns.NAME);
 		sb.append(" )");
-		
+		*/
+	
 		sb.append(");");
 
 		Log.i(">>", sb.toString());

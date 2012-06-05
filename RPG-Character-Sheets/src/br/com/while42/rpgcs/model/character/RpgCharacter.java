@@ -231,9 +231,9 @@ public class RpgCharacter implements Serializable {
 				
 				baseAttackBonus.equals(rc.baseAttackBonus) &&
 				spellResistence.equals(rc.spellResistence) &&
-				grapple.equals(rc.grapple) &&
+				grapple.equals(rc.grapple) 
 				
-				rpgClass.equals(rc.rpgClass) 
+				// TODO: && rpgClass.equals(rc.rpgClass) 
 				);
 		
 	}

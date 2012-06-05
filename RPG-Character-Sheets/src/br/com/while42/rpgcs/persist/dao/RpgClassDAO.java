@@ -18,12 +18,9 @@ public class RpgClassDAO  {
 	private static final String INSERT = "INSERT INTO "
 			+ RpgClassTable.NAME
 			+ "("
-			+ new TableColumnsUtils()
-					.getAsCommaSeparatedStringWithoutFirstColumn(RpgClassColumns
-							.get())
+			+ new TableColumnsUtils().getAsCommaSeparatedStringWithoutFirstColumn(RpgClassColumns.get())
 			+ ") VALUES "
-			+ new TableColumnsUtils()
-					.getQuestionMarksWithoutFirstColumn(RpgClassColumns.get());
+			+ new TableColumnsUtils().getQuestionMarksWithoutFirstColumn(RpgClassColumns.get());
 
 	private SQLiteDatabase db;
 	private SQLiteStatement insertStatement;
@@ -33,30 +30,32 @@ public class RpgClassDAO  {
 		insertStatement = db.compileStatement(INSERT);
 	}
 	
-	public void save(Long idRpgCharacter, AbstractRpgClass rpgClass) {
-		if (!idRpgCharacter.equals(0L)) {
+	public long save(Long idRpgCharacter, AbstractRpgClass rpgClass) {
+		
+		if (idRpgCharacter != 0L) {
 			
 			//db.insert(RpgCharacterTable.NAME, nullColumnHack, values)
 			insertStatement.clearBindings();
-			
 			insertStatement.bindLong(1, idRpgCharacter);
 			insertStatement.bindString(2, rpgClass.getClass().getName());
 			insertStatement.bindLong(3, rpgClass.getClassLevel());
-		
-			Log.d(">>>>>>>>>>", rpgClass.getClass().getName());
+					
+			return insertStatement.executeInsert();
 		}
+		
+		return 0L;
 	}
 
 	public void update(Long idRpgCharacter, AbstractRpgClass rpgClass) {
-		//db.update(RpgCharacterTable.NAME, RpgCharacterTable.toContentValues(rpgCharacter), BaseColumns._ID
-		//		+ " = ?", new String[] { String.valueOf(rpgCharacter.getId()) });
+		//db.update(RpgClassTable.NAME, RpgClassTable.toContentValues(rpgCharacter), BaseColumns._ID
+		//		+ " = ?", new String[] { String.valueOf(rpgClass.getId()) });
 	}
 
 	public void delete(Long idRpgCharacter, AbstractRpgClass rpgClass) {
-		//if (rpgCharacter.isPersistent()) {
-		//	db.delete(RpgCharacterTable.NAME, BaseColumns._ID + " = ?",
-		//			new String[] { String.valueOf(rpgCharacter.getId()) });
-		//	rpgCharacter.setId(0L);
+		//if (rpgClass.isPersistent()) {
+		//	db.delete(RpgClassTable.NAME, BaseColumns._ID + " = ?",
+		//			new String[] { String.valueOf(rpgClass.getId()) });
+		//	rpgClass.setId(0L);
 		//}
 	}
 
@@ -91,8 +90,10 @@ public class RpgClassDAO  {
 
 		if (cursor != null) {
 
-			String className = cursor.getString(1);
-			Integer level = cursor.getInt(2);
+			String className = cursor.getString(2);
+			Integer level = cursor.getInt(3);
+			
+			Log.d("ClassName: ", className);
 			
 			try {
 				@SuppressWarnings("unchecked")

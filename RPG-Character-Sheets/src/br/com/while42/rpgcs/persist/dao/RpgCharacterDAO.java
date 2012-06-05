@@ -27,12 +27,9 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 	private static final String INSERT = "INSERT INTO "
 			+ RpgCharacterTable.NAME
 			+ "("
-			+ new TableColumnsUtils()
-					.getAsCommaSeparatedStringWithoutFirstColumn(RpgCharacterColumns
-							.get())
+			+ new TableColumnsUtils().getAsCommaSeparatedStringWithoutFirstColumn(RpgCharacterColumns.get())
 			+ ") VALUES "
-			+ new TableColumnsUtils()
-					.getQuestionMarksWithoutFirstColumn(RpgCharacterColumns.get());
+			+ new TableColumnsUtils().getQuestionMarksWithoutFirstColumn(RpgCharacterColumns.get());
 
 	private SQLiteDatabase db;
 	private SQLiteStatement insertStatement;
@@ -86,6 +83,10 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 	public void update(RpgCharacter rpgCharacter) {
 		db.update(RpgCharacterTable.NAME, RpgCharacterTable.toContentValues(rpgCharacter), BaseColumns._ID
 				+ " = ?", new String[] { String.valueOf(rpgCharacter.getId()) });
+		
+		for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
+			daoClass.update(rpgCharacter.getId(), rpgClass);
+		}
 	}
 
 	@Override
@@ -118,10 +119,6 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 		if (cursor.moveToFirst()) {
 			rpgCharacter = this.buildRpgCharacterFromCursor(cursor);
 			rpgCharacter.addRpgClass(daoClass.retrieveAll(rpgCharacter.getId()));
-		}
-		
-		for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
-			daoClass.update(rpgCharacter.getId(), rpgClass);
 		}
 
 		if (!cursor.isClosed()) {
