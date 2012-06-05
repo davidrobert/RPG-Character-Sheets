@@ -34,7 +34,6 @@ public class RpgClassDAO  {
 		
 		if (idRpgCharacter != 0L) {
 			
-			//db.insert(RpgCharacterTable.NAME, nullColumnHack, values)
 			insertStatement.clearBindings();
 			insertStatement.bindLong(1, idRpgCharacter);
 			insertStatement.bindString(2, rpgClass.getClass().getName());
@@ -46,17 +45,25 @@ public class RpgClassDAO  {
 		return 0L;
 	}
 
-	public void update(Long idRpgCharacter, AbstractRpgClass rpgClass) {
-		//db.update(RpgClassTable.NAME, RpgClassTable.toContentValues(rpgCharacter), BaseColumns._ID
-		//		+ " = ?", new String[] { String.valueOf(rpgClass.getId()) });
-	}
-
 	public void delete(Long idRpgCharacter, AbstractRpgClass rpgClass) {
-		//if (rpgClass.isPersistent()) {
-		//	db.delete(RpgClassTable.NAME, BaseColumns._ID + " = ?",
-		//			new String[] { String.valueOf(rpgClass.getId()) });
-		//	rpgClass.setId(0L);
-		//}
+		if (idRpgCharacter != 0L) {
+			StringBuffer whereClause = new StringBuffer();
+			whereClause.append(RpgClassColumns.ID_RPG_CHARACTER).append(" = ? AND ");
+			whereClause.append(RpgClassColumns.NAME).append(" = ?");
+			
+			db.delete(RpgClassTable.NAME, whereClause.toString(),
+					new String[] { idRpgCharacter.toString(), rpgClass.getClass().getName() });
+		}
+	}
+	
+	public void deleteAll(Long idRpgCharacter) {
+		if (idRpgCharacter != 0L) {
+			StringBuffer whereClause = new StringBuffer();
+			whereClause.append(RpgClassColumns.ID_RPG_CHARACTER).append(" = ? ");
+			
+			db.delete(RpgClassTable.NAME, whereClause.toString(),
+					new String[] { idRpgCharacter.toString() });
+		}
 	}
 
 
@@ -92,8 +99,6 @@ public class RpgClassDAO  {
 
 			String className = cursor.getString(2);
 			Integer level = cursor.getInt(3);
-			
-			Log.d("ClassName: ", className);
 			
 			try {
 				@SuppressWarnings("unchecked")

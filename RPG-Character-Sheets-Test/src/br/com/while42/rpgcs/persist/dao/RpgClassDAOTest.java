@@ -75,5 +75,67 @@ public class RpgClassDAOTest extends AndroidTestCase {
 		assertEquals(monk.getClass(), retrieveAll.get(1).getClass());
 		assertEquals(monk.getClassLevel(), retrieveAll.get(1).getClassLevel());	
 	}
+	
+	public void testDelete() {
+		clearAllTables();
+
+		List<AbstractRpgClass> list = new ArrayList<AbstractRpgClass>();
+		
+		Barbarian barbarian = new Barbarian();
+		barbarian.setClassLevel(1);
+		list.add(barbarian);
+
+		Monk monk = new Monk();
+		monk.setClassLevel(10);
+		list.add(monk);
+		
+		for (AbstractRpgClass rpgClass: list) {
+			long id = dao.save(1L, rpgClass);
+			assertTrue(id > 0);
+		}
+
+		List<AbstractRpgClass> retrieveAll = dao.retrieveAll(1L);
+		
+		assertEquals(list.size(), retrieveAll.size());
+		
+		dao.delete(1L, barbarian);
+		
+		retrieveAll = dao.retrieveAll(1L);
+		assertEquals(1, retrieveAll.size());
+		
+		assertEquals(monk.getClass(), retrieveAll.get(0).getClass());
+		assertEquals(monk.getClassLevel(), retrieveAll.get(0).getClassLevel());
+		
+		dao.delete(1L, monk);
+		
+		assertTrue(dao.retrieveAll(1L).isEmpty());
+	}
+	
+	public void testDeleteAll() {
+		clearAllTables();
+
+		List<AbstractRpgClass> list = new ArrayList<AbstractRpgClass>();
+		
+		Barbarian barbarian = new Barbarian();
+		barbarian.setClassLevel(1);
+		list.add(barbarian);
+
+		Monk monk = new Monk();
+		monk.setClassLevel(10);
+		list.add(monk);
+		
+		for (AbstractRpgClass rpgClass: list) {
+			long id = dao.save(1L, rpgClass);
+			assertTrue(id > 0);
+		}
+
+		List<AbstractRpgClass> retrieveAll = dao.retrieveAll(1L);
+		
+		assertEquals(list.size(), retrieveAll.size());
+		
+		dao.deleteAll(1L);
+		
+		assertTrue(dao.retrieveAll(1L).isEmpty());
+	}
 
 }

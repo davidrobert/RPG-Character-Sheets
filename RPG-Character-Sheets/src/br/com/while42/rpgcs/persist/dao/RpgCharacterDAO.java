@@ -71,8 +71,9 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 		} else {
 			this.update(rpgCharacter);
 			
+			daoClass.deleteAll(rpgCharacter.getId());
 			for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
-				daoClass.update(rpgCharacter.getId(), rpgClass);
+				daoClass.save(rpgCharacter.getId(), rpgClass);
 			}
 		}
 		
@@ -84,8 +85,9 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 		db.update(RpgCharacterTable.NAME, RpgCharacterTable.toContentValues(rpgCharacter), BaseColumns._ID
 				+ " = ?", new String[] { String.valueOf(rpgCharacter.getId()) });
 		
+		daoClass.deleteAll(rpgCharacter.getId());
 		for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
-			daoClass.update(rpgCharacter.getId(), rpgClass);
+			daoClass.save(rpgCharacter.getId(), rpgClass);
 		}
 	}
 
