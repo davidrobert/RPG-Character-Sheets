@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.TypeCode;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -32,7 +33,6 @@ import br.com.while42.rpgcs.persist.DataManager;
 public class EditRpgCharacter extends Activity {
 
 	DataManager dataManager;
-
 	
 	private EditText name;
 
@@ -132,6 +132,7 @@ public class EditRpgCharacter extends Activity {
 				Element e;
 				
 				RpgCharacter cs = new RpgCharacter();
+				Attributes attr = cs.getAttributes();
 				
 				// Name
 				cs.setName(name.getText().toString());				
@@ -142,65 +143,65 @@ public class EditRpgCharacter extends Activity {
 
 				// Race
 				e = (Element) race.getSelectedItem();
-				cs.setRace((TypeRpgRace) e.getType());
+				attr.setRace((TypeRpgRace) e.getType());
 				
 				// Alignment
 				e = (Element) alignment.getSelectedItem();
-				cs.setAlignment((TypeRpgAlignment) e.getType());
+				attr.setAlignment((TypeRpgAlignment) e.getType());
 				
 				// Religion
 				e = (Element) religion.getSelectedItem();
-				cs.setReligion((TypeRpgReligion) e.getType());
+				attr.setReligion((TypeRpgReligion) e.getType());
 				
 				// Size
 				e = (Element) size.getSelectedItem();
-				cs.setSize((TypeRpgSize) e.getType());
+				attr.setSize((TypeRpgSize) e.getType());
 
 				// Age
 				if (!age.getText().toString().isEmpty()) {
-					cs.setAge(Integer.parseInt(age.getText().toString()));
+					attr.setAge(Integer.parseInt(age.getText().toString()));
 				}
 				
 				// Gender
 				e = (Element) gender.getSelectedItem();
-				cs.setGender((TypeGender) e.getType());
+				attr.setGender((TypeGender) e.getType());
 
 				// Height
 				if (!height.getText().toString().isEmpty()) {
-					cs.setHeight(Integer.parseInt(height.getText().toString()));
+					attr.setHeight(Integer.parseInt(height.getText().toString()));
 				}
 				
 				// Weight
 				if (!weight.getText().toString().isEmpty()) {
-					cs.setWeight(Integer.parseInt(weight.getText().toString()));
+					attr.setWeight(Integer.parseInt(weight.getText().toString()));
 				}
 				
 				// Eye
 				e = (Element) eye.getSelectedItem();
-				cs.setEye((TypeEyeColor) e.getType());
+				attr.setEye((TypeEyeColor) e.getType());
 				
 				// Hair
 				e = (Element) hair.getSelectedItem();
-				cs.setHair((TypeHairColor) e.getType());
+				attr.setHair((TypeHairColor) e.getType());
 				
 				// Skin
 				e = (Element) skin.getSelectedItem();
-				cs.setSkin((TypeSkinColor) e.getType());
+				attr.setSkin((TypeSkinColor) e.getType());
 				
 				// DEBUG
 				Log.e(">> class     >>", cs.getRpgClasses().toString());
-				Log.e(">> race      >>", cs.getRace().toString());
-				Log.e(">> alignment >>", cs.getAlignment().toString());
-				Log.e(">> religion  >>", cs.getReligion().toString());
+				Log.e(">> race      >>", attr.getRace().toString());
+				Log.e(">> alignment >>", attr.getAlignment().toString());
+				Log.e(">> religion  >>", attr.getReligion().toString());
 
-				Log.e(">> size      >>", cs.getSize().toString());
-				Log.e(">> age       >>", cs.getAge().toString());
-				Log.e(">> gender    >>", cs.getGender().toString());
-				Log.e(">> height    >>", cs.getHeight().toString());
-				Log.e(">> weight    >>", cs.getWeight().toString());
-				Log.e(">> eye       >>", cs.getEye().toString());
-				Log.e(">> hair      >>", cs.getHair().toString());
-				Log.e(">> skin      >>", cs.getSkin().toString());
+				Log.e(">> size      >>", attr.getSize().toString());
+				Log.e(">> age       >>", attr.getAge().toString());
+				Log.e(">> gender    >>", attr.getGender().toString());
+				Log.e(">> height    >>", attr.getHeight().toString());
+				Log.e(">> weight    >>", attr.getWeight().toString());
+				Log.e(">> eye       >>", attr.getEye().toString());
+				Log.e(">> hair      >>", attr.getHair().toString());
+				Log.e(">> skin      >>", attr.getSkin().toString());
 				
 				dataManager.saveRpgCharacter(cs);
 				

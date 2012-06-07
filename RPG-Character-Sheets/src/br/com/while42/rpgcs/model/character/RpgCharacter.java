@@ -7,14 +7,9 @@ import java.util.List;
 
 import br.com.while42.rpgcs.model.abilities.Abilities;
 import br.com.while42.rpgcs.model.abilities.Defences;
-import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
-import br.com.while42.rpgcs.model.character.attributes.TypeGender;
-import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
+import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
-import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 
 public class RpgCharacter implements Serializable {
@@ -26,19 +21,8 @@ public class RpgCharacter implements Serializable {
 
 	private String name = "";
 	private HashSet<AbstractRpgClass> rpgClass = new HashSet<AbstractRpgClass>();
-	private TypeRpgRace race;
-	private TypeRpgAlignment alignment;
-	private TypeRpgReligion religion = TypeRpgReligion.NONE;
-
-	private TypeRpgSize size = TypeRpgSize.MEDIUM;
-	private Integer age = 0;
-	private TypeGender gender;
-	private Integer height = 0;
-	private Integer weight = 0;
-	private TypeEyeColor eye;
-	private TypeHairColor hair;
-	private TypeSkinColor skin;
-
+	
+	private Attributes attributes = new Attributes();
 	private Abilities abilities = new Abilities();
 	private Defences defences = new Defences();
 	
@@ -55,8 +39,8 @@ public class RpgCharacter implements Serializable {
 	
 	public RpgCharacter(String name, TypeRpgRace race, TypeRpgAlignment alignment) {
 		this.name = name;
-		this.race = race;
-		this.alignment = alignment;
+		attributes.setRace(race);
+		attributes.setAlignment(alignment);
 	}
 
 	public boolean isPersistent() {
@@ -104,94 +88,6 @@ public class RpgCharacter implements Serializable {
 	public void clearRpgClass() {
 		rpgClass.clear();
 	}
-
-	public TypeRpgRace getRace() {
-		return race;
-	}
-
-	public void setRace(TypeRpgRace race) {
-		this.race = race;
-	}
-
-	public TypeRpgAlignment getAlignment() {
-		return alignment;
-	}
-
-	public void setAlignment(TypeRpgAlignment alignment) {
-		this.alignment = alignment;
-	}
-
-	public TypeRpgReligion getReligion() {
-		return religion;
-	}
-
-	public void setReligion(TypeRpgReligion religion) {
-		this.religion = religion;
-	}
-
-	public TypeRpgSize getSize() {
-		return size;
-	}
-
-	public void setSize(TypeRpgSize size) {
-		this.size = size;
-	}
-
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-
-	public TypeGender getGender() {
-		return gender;
-	}
-
-	public void setGender(TypeGender gender) {
-		this.gender = gender;
-	}
-
-	public Integer getHeight() {
-		return height;
-	}
-
-	public void setHeight(Integer height) {
-		this.height = height;
-	}
-
-	public Integer getWeight() {
-		return weight;
-	}
-
-	public void setWeight(Integer weight) {
-		this.weight = weight;
-	}
-
-	public TypeEyeColor getEye() {
-		return eye;
-	}
-
-	public void setEye(TypeEyeColor eye) {
-		this.eye = eye;
-	}
-
-	public TypeHairColor getHair() {
-		return hair;
-	}
-
-	public void setHair(TypeHairColor hair) {
-		this.hair = hair;
-	}
-
-	public TypeSkinColor getSkin() {
-		return skin;
-	}
-
-	public void setSkin(TypeSkinColor skin) {
-		this.skin = skin;
-	}
 	
 	public void setExperience(Long xp) {
 		this.experience = xp;
@@ -216,6 +112,14 @@ public class RpgCharacter implements Serializable {
 	public Defences getDefences() {
 		return defences;
 	}
+	
+	public void setAttributes(Attributes attributes) {
+		this.attributes = attributes;
+	}
+	
+	public Attributes getAttributes() {
+		return attributes;
+	}
 
 	@Override
 	public boolean equals(Object rpgCharacter) {
@@ -231,17 +135,6 @@ public class RpgCharacter implements Serializable {
 		return (id.equals(rc.id) &&
 				image.equals(rc.image) &&
 				name.equals(rc.name) &&
-				race.equals(rc.race) &&
-				alignment.equals(rc.alignment) &&
-				religion.equals(rc.religion) &&
-				size.equals(rc.size) &&
-				age.equals(rc.age) &&
-				gender.equals(rc.gender) &&
-				height.equals(rc.height) &&
-				weight.equals(rc.weight) &&
-				eye.equals(rc.eye) &&
-				hair.equals(rc.hair) &&
-				skin.equals(rc.skin) &&
 				
 				baseAttackBonus.equals(rc.baseAttackBonus) &&
 
@@ -258,22 +151,13 @@ public class RpgCharacter implements Serializable {
 		
 		sb.append(" id: ").append(id);
 		sb.append(" name: ").append(name);
+		
 		sb.append(" classes: [");
 		for (AbstractRpgClass c: rpgClass) {
 			sb.append(c.getClass().getName()).append(" - ").append(c.getClassLevel()).append(" ");
 		}
 		sb.append("]");
-		sb.append(" race: ").append(race);
-		sb.append(" alignment: ").append(alignment);
-		sb.append(" religion: ").append(religion);
-		sb.append(" size: ").append(size);
-		sb.append(" age: ").append(age);
-		sb.append(" gender: ").append(gender);
-		sb.append(" height: ").append(height);
-		sb.append(" weight: ").append(weight);
-		sb.append(" eye: ").append(eye);
-		sb.append(" hair: ").append(hair);
-		sb.append(" skin: ").append(skin);
+		sb.append(attributes);
 		
 		return sb.toString();
 	}

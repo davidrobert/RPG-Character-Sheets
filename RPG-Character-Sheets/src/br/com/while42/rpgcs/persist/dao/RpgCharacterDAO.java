@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.provider.BaseColumns;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -45,22 +46,24 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 	public Long save(RpgCharacter rpgCharacter) {
 		if (rpgCharacter.getId() == 0) {
 			
+			Attributes attr = rpgCharacter.getAttributes();
+			
 			//db.insert(RpgCharacterTable.NAME, nullColumnHack, values)
 			insertStatement.clearBindings();
 			
 			insertStatement.bindString(1, rpgCharacter.getName());
-			insertStatement.bindString(2, rpgCharacter.getRace().toString());
-			insertStatement.bindString(3, rpgCharacter.getAlignment().toString());
-			insertStatement.bindString(4, rpgCharacter.getReligion().toString());
+			insertStatement.bindString(2, attr.getRace().toString());
+			insertStatement.bindString(3, attr.getAlignment().toString());
+			insertStatement.bindString(4, attr.getReligion().toString());
 			
-			insertStatement.bindString(5, rpgCharacter.getSize().toString());
-			insertStatement.bindString(6, rpgCharacter.getAge().toString());
-			insertStatement.bindString(7, rpgCharacter.getGender().toString());
-			insertStatement.bindLong(8, rpgCharacter.getHeight());
-			insertStatement.bindLong(9, rpgCharacter.getWeight());
-			insertStatement.bindString(10, rpgCharacter.getEye().toString());
-			insertStatement.bindString(11, rpgCharacter.getHair().toString());
-			insertStatement.bindString(12, rpgCharacter.getSkin().toString());
+			insertStatement.bindString(5, attr.getSize().toString());
+			insertStatement.bindString(6, attr.getAge().toString());
+			insertStatement.bindString(7, attr.getGender().toString());
+			insertStatement.bindLong(8, attr.getHeight());
+			insertStatement.bindLong(9, attr.getWeight());
+			insertStatement.bindString(10, attr.getEye().toString());
+			insertStatement.bindString(11, attr.getHair().toString());
+			insertStatement.bindString(12, attr.getSkin().toString());
 			
 			rpgCharacter.setId(insertStatement.executeInsert());
 			
@@ -165,18 +168,21 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 			rpgCharacter.setId(cursor.getLong(0));
 			
 			rpgCharacter.setName(cursor.getString(1));
-			rpgCharacter.setRace(TypeRpgRace.valueOf(cursor.getString(2)));
-			rpgCharacter.setAlignment(TypeRpgAlignment.valueOf(cursor.getString(3)));
-			rpgCharacter.setReligion(TypeRpgReligion.valueOf(cursor.getString(4)));
 			
-			rpgCharacter.setSize(TypeRpgSize.valueOf(cursor.getString(5)));
-			rpgCharacter.setAge(cursor.getInt(6));
-			rpgCharacter.setGender(TypeGender.valueOf(cursor.getString(7)));
-			rpgCharacter.setHeight(cursor.getInt(8));
-			rpgCharacter.setWeight(cursor.getInt(9));
-			rpgCharacter.setEye(TypeEyeColor.valueOf(cursor.getString(10)));
-			rpgCharacter.setHair(TypeHairColor.valueOf(cursor.getString(11)));
-			rpgCharacter.setSkin(TypeSkinColor.valueOf(cursor.getString(12)));
+			Attributes attr = rpgCharacter.getAttributes();
+			
+			attr.setRace(TypeRpgRace.valueOf(cursor.getString(2)));
+			attr.setAlignment(TypeRpgAlignment.valueOf(cursor.getString(3)));
+			attr.setReligion(TypeRpgReligion.valueOf(cursor.getString(4)));
+			
+			attr.setSize(TypeRpgSize.valueOf(cursor.getString(5)));
+			attr.setAge(cursor.getInt(6));
+			attr.setGender(TypeGender.valueOf(cursor.getString(7)));
+			attr.setHeight(cursor.getInt(8));
+			attr.setWeight(cursor.getInt(9));
+			attr.setEye(TypeEyeColor.valueOf(cursor.getString(10)));
+			attr.setHair(TypeHairColor.valueOf(cursor.getString(11)));
+			attr.setSkin(TypeSkinColor.valueOf(cursor.getString(12)));
 		}
 
 		return rpgCharacter;

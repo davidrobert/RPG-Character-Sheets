@@ -11,6 +11,7 @@ import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.abilities.Abilities;
 import br.com.while42.rpgcs.model.abilities.Defences;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import br.com.while42.rpgcs.persist.DataManager;
 
 public class PlayRpgCharacter extends Activity {
@@ -60,9 +61,11 @@ public class PlayRpgCharacter extends Activity {
 					
 		tvName.setText(rpgCharacter.getName());
 		
+		Attributes attr = rpgCharacter.getAttributes();
+		
 		StringBuilder sbGenderRaceClass = new StringBuilder();
-		sbGenderRaceClass.append(getString(rpgCharacter.getGender().getCodeName())).append(" ");
-		sbGenderRaceClass.append(getString(rpgCharacter.getRace().getCodeName())).append(" ");
+		sbGenderRaceClass.append(getString(attr.getGender().getCodeName())).append(" ");
+		sbGenderRaceClass.append(getString(attr.getRace().getCodeName())).append(" ");
 		
 		if (!rpgCharacter.getRpgClasses().isEmpty()) {
 			sbGenderRaceClass.append(getString(rpgCharacter.getRpgClasses().get(0).getCodeName()));
@@ -70,7 +73,7 @@ public class PlayRpgCharacter extends Activity {
 		
 		tvGenderRaceClass.setText(sbGenderRaceClass.toString());
 		
-		tvAlignment.setText(getString(rpgCharacter.getAlignment().getCodeName()));
+		tvAlignment.setText(getString(attr.getAlignment().getCodeName()));
 		tvExperience.setText(rpgCharacter.getExperience().toString());
 		
 		NumberFormat fmt = new DecimalFormat("+#;-#");

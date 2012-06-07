@@ -1,6 +1,7 @@
 package br.com.while42.rpgcs.persist.table;
 
 import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
@@ -50,18 +51,21 @@ public final class RpgCharacterTable {
 
 		// values.put("id", a.getId()); // WRONG!
 		values.put(RpgCharacterColumns.NAME, rpgCharacter.getName());
-		values.put(RpgCharacterColumns.RACE, rpgCharacter.getRace().toString());
-		values.put(RpgCharacterColumns.ALIGNMENT, rpgCharacter.getAlignment().toString());
-		values.put(RpgCharacterColumns.RELIGION, rpgCharacter.getReligion().toString());
 		
-		values.put(RpgCharacterColumns.SIZE, rpgCharacter.getSize().toString());
-		values.put(RpgCharacterColumns.AGE, rpgCharacter.getAge().toString());
-		values.put(RpgCharacterColumns.GENDER, rpgCharacter.getGender().toString());
-		values.put(RpgCharacterColumns.HEIGHT, rpgCharacter.getHeight());
-		values.put(RpgCharacterColumns.WEIGHT, rpgCharacter.getWeight());
-		values.put(RpgCharacterColumns.EYE, rpgCharacter.getEye().toString());
-		values.put(RpgCharacterColumns.HAIR, rpgCharacter.getHair().toString());
-		values.put(RpgCharacterColumns.SKIN, rpgCharacter.getSkin().toString());
+		Attributes attr = rpgCharacter.getAttributes();
+		
+		values.put(RpgCharacterColumns.RACE, attr.getRace().toString());
+		values.put(RpgCharacterColumns.ALIGNMENT, attr.getAlignment().toString());
+		values.put(RpgCharacterColumns.RELIGION, attr.getReligion().toString());
+		
+		values.put(RpgCharacterColumns.SIZE, attr.getSize().toString());
+		values.put(RpgCharacterColumns.AGE, attr.getAge().toString());
+		values.put(RpgCharacterColumns.GENDER, attr.getGender().toString());
+		values.put(RpgCharacterColumns.HEIGHT, attr.getHeight());
+		values.put(RpgCharacterColumns.WEIGHT, attr.getWeight());
+		values.put(RpgCharacterColumns.EYE, attr.getEye().toString());
+		values.put(RpgCharacterColumns.HAIR, attr.getHair().toString());
+		values.put(RpgCharacterColumns.SKIN, attr.getSkin().toString());
 
 		return values;
 	}
