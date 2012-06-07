@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import br.com.while42.rpgcs.model.abilities.Abilities;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -37,6 +38,8 @@ public class RpgCharacter implements Serializable {
 	private TypeHairColor hair;
 	private TypeSkinColor skin;
 
+	private Abilities abilities = new Abilities(50, 0, 0, 0, 0, 0);
+	
 	private Integer hitPoints = 0;
 	private Integer currentHitPoints = 0;
 
@@ -51,6 +54,7 @@ public class RpgCharacter implements Serializable {
 	private Integer grapple = 0;
 	
 	private Long experience = 0L;
+	
 
 	public RpgCharacter() {
 		// TODO: Construir uma classe Builder para RpgCharacter
@@ -202,6 +206,14 @@ public class RpgCharacter implements Serializable {
 	
 	public Long getExperience() {
 		return experience;
+	}
+	
+	public void setAbilities(Abilities abilities) {
+		this.abilities = abilities;
+	}
+	
+	public Abilities getAbilities() {
+		return abilities;
 	}
 
 	@Override

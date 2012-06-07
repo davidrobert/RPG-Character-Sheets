@@ -1,10 +1,14 @@
 package br.com.while42.rpgcs.activity;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.abilities.Abilities;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.persist.DataManager;
 
@@ -29,31 +33,31 @@ public class PlayRpgCharacter extends Activity {
 		
 		RpgCharacter rpgCharacter = manager.retrieveRpgCharacter(id);
 		
-		TextView name = (TextView) findViewById(R.id_play.textview_name);
-		TextView gender_race_class = (TextView) findViewById(R.id_play.textview_gender_race_class);
-		TextView alignment = (TextView) findViewById(R.id_play.textview_alignment);
-		TextView experience = (TextView) findViewById(R.id_play.textview_experience);
+		TextView tvName = (TextView) findViewById(R.id_play.textview_name);
+		TextView tvGenderRaceClass = (TextView) findViewById(R.id_play.textview_gender_race_class);
+		TextView tvAlignment = (TextView) findViewById(R.id_play.textview_alignment);
+		TextView tvExperience = (TextView) findViewById(R.id_play.textview_experience);
 		
-		TextView strength = (TextView) findViewById(R.id_play.textview_strength);
-		TextView strength_modifier = (TextView) findViewById(R.id_play.textview_strength_modifier);
-		TextView constitution = (TextView) findViewById(R.id_play.textview_constitution);
-		TextView constitution_modifier = (TextView) findViewById(R.id_play.textview_constitution_modifier);
-		TextView wisdom = (TextView) findViewById(R.id_play.textview_wisdom);
-		TextView wisdom_modifier = (TextView) findViewById(R.id_play.textview_wisdom_modifier);
-		TextView charisma = (TextView) findViewById(R.id_play.textview_charisma);
-		TextView charisma_modifier = (TextView) findViewById(R.id_play.textview_charisma_modifier);
-		TextView dexterity = (TextView) findViewById(R.id_play.textview_dexterity);
-		TextView dexterity_modifier = (TextView) findViewById(R.id_play.textview_dexterity_modifier);
-		TextView intelligence = (TextView) findViewById(R.id_play.textview_intelligence);
-		TextView intelligence_modifier = (TextView) findViewById(R.id_play.textview_intelligence_modifier);
+		TextView tvStrength = (TextView) findViewById(R.id_play.textview_strength);
+		TextView tvStrengthModifier = (TextView) findViewById(R.id_play.textview_strength_modifier);
+		TextView tvConstitution = (TextView) findViewById(R.id_play.textview_constitution);
+		TextView tvConstitutionModifier = (TextView) findViewById(R.id_play.textview_constitution_modifier);
+		TextView tvWisdom = (TextView) findViewById(R.id_play.textview_wisdom);
+		TextView tvWisdomModifier = (TextView) findViewById(R.id_play.textview_wisdom_modifier);
+		TextView tvCharisma = (TextView) findViewById(R.id_play.textview_charisma);
+		TextView tvCharismaModifier = (TextView) findViewById(R.id_play.textview_charisma_modifier);
+		TextView tvDexterity = (TextView) findViewById(R.id_play.textview_dexterity);
+		TextView tvDexterityModifier = (TextView) findViewById(R.id_play.textview_dexterity_modifier);
+		TextView tvIntelligence = (TextView) findViewById(R.id_play.textview_intelligence);
+		TextView tvIntelligenceModifier = (TextView) findViewById(R.id_play.textview_intelligence_modifier);
 		
-		TextView armorClass = (TextView) findViewById(R.id_play.textview_armor_class);
+		TextView tvArmorClass = (TextView) findViewById(R.id_play.textview_armor_class);
 		
-		TextView fortitude = (TextView) findViewById(R.id_play.textview_fortitude);
-		TextView reflex = (TextView) findViewById(R.id_play.textview_reflex);
-		TextView will = (TextView) findViewById(R.id_play.textview_will);
+		TextView tvFortitude = (TextView) findViewById(R.id_play.textview_fortitude);
+		TextView tvReflex = (TextView) findViewById(R.id_play.textview_reflex);
+		TextView tvWill = (TextView) findViewById(R.id_play.textview_will);
 					
-		name.setText(rpgCharacter.getName());
+		tvName.setText(rpgCharacter.getName());
 		
 		StringBuilder sbGenderRaceClass = new StringBuilder();
 		sbGenderRaceClass.append(getString(rpgCharacter.getGender().getCodeName())).append(" ");
@@ -63,33 +67,50 @@ public class PlayRpgCharacter extends Activity {
 			sbGenderRaceClass.append(getString(rpgCharacter.getRpgClasses().get(0).getCodeName()));
 		}
 		
-		gender_race_class.setText(sbGenderRaceClass.toString());
+		tvGenderRaceClass.setText(sbGenderRaceClass.toString());
 		
-		alignment.setText(getString(rpgCharacter.getAlignment().getCodeName()));
-		experience.setText(rpgCharacter.getExperience().toString());
+		tvAlignment.setText(getString(rpgCharacter.getAlignment().getCodeName()));
+		tvExperience.setText(rpgCharacter.getExperience().toString());
 		
-		strength.setText("15");
-		strength_modifier.setText("+2");
+		NumberFormat fmt = new DecimalFormat("+#;-#");
 		
-		constitution.setText("13");
-		constitution_modifier.setText("+1");
+		Abilities abilities = rpgCharacter.getAbilities();
 		
-		wisdom.setText("10");
-		wisdom_modifier.setText("+0");
+		String strength = abilities.getStrength().toString();
+		String strengthMod = fmt.format(abilities.getStrengthModifier());
+		String constitution = abilities.getConstitution().toString();
+		String constitutionMod = fmt.format(abilities.getConstitutionModifier());
+		String wisdom = abilities.getWisdom().toString();
+		String wisdomMod = fmt.format(abilities.getWisdomModifier());
+		String charisma = abilities.getCharisma().toString();
+		String charismaMod = fmt.format(abilities.getCharismaModifier());
+		String dexterity = abilities.getDexterity().toString();
+		String dexterityMod = fmt.format(abilities.getDexterityModifier());
+		String intelligence = abilities.getIntelligence().toString();
+		String intelligenceMod = fmt.format(abilities.getIntelligenceModifier());
 		
-		charisma.setText("10");
-		charisma_modifier.setText("+0");
+		tvStrength.setText(strength);
+		tvStrengthModifier.setText(strengthMod);
 		
-		dexterity.setText("10");
-		dexterity_modifier.setText("+0");
+		tvConstitution.setText(constitution);
+		tvConstitutionModifier.setText(constitutionMod);
 		
-		intelligence.setText("10");
-		intelligence_modifier.setText("+0");
+		tvWisdom.setText(wisdom);
+		tvWisdomModifier.setText(wisdomMod);
 		
-		armorClass.setText("25");
-		fortitude.setText("19");
-		reflex.setText("23");
-		will.setText("25");
+		tvCharisma.setText(charisma);
+		tvCharismaModifier.setText(charismaMod);
+		
+		tvDexterity.setText(dexterity);
+		tvDexterityModifier.setText(dexterityMod);
+		
+		tvIntelligence.setText(intelligence);
+		tvIntelligenceModifier.setText(intelligenceMod);
+		
+		tvArmorClass.setText("25");
+		tvFortitude.setText("19");
+		tvReflex.setText("23");
+		tvWill.setText("25");
 		
 		
 	}

@@ -1,6 +1,6 @@
 package br.com.while42.rpgcs.model.classes.bonuses;
 
-import br.com.while42.rpgcs.model.abilities.modifiers.AbilityModifier;
+import br.com.while42.rpgcs.model.abilities.AbilityModifier;
 
 public class BaseSpellBonuses {
 	public static final int MIN_SPELL_LEVEL = 0;
