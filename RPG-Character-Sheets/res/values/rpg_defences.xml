@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="defences">Defences</string>
+    <string name="defences">Defenses</string>
+    <!-- <string name="defences">Defenses</string> -->
     
     <string name="defences_hit_points">Hit Points</string>
     <string name="defences_hit_points_abbreviation">HP</string>
