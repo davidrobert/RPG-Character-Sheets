@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.abilities.modifiers;
+package br.com.while42.rpgcs.model.abilities;
 
 
 public class AbilityModifier {
