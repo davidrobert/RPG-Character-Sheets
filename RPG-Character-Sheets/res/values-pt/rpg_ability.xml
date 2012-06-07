@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<string name="abilitys">Abilidades</string>
+	
+	<string name="ability_modifier">Modificador</string>
+	<string name="ability_modifier_abbreviation">MOD</string>
+    
     <string name="ability_strength">Força</string>
     <string name="ability_dexterity">Destreza</string>
     <string name="ability_constitution">Constituição</string>

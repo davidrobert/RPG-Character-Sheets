@@ -32,6 +32,14 @@ public class PlayRpgCharacter extends Activity {
 		TextView name = (TextView) findViewById(R.id_play.textview_name);
 		TextView gender_race_class = (TextView) findViewById(R.id_play.textview_gender_race_class);
 		TextView alignment = (TextView) findViewById(R.id_play.textview_alignment);
+		TextView experience = (TextView) findViewById(R.id_play.textview_experience);
+		
+		TextView strength = (TextView) findViewById(R.id_play.textview_strength);
+		TextView strength_modifier = (TextView) findViewById(R.id_play.textview_strength_modifier);
+		TextView constitution = (TextView) findViewById(R.id_play.textview_constitution);
+		TextView constitution_modifier = (TextView) findViewById(R.id_play.textview_constitution_modifier);
+		TextView wisdom = (TextView) findViewById(R.id_play.textview_wisdom);
+		TextView wisdom_modifier = (TextView) findViewById(R.id_play.textview_wisdom_modifier);
 					
 		name.setText(rpgCharacter.getName());
 		
@@ -46,6 +54,16 @@ public class PlayRpgCharacter extends Activity {
 		gender_race_class.setText(sbGenderRaceClass.toString());
 		
 		alignment.setText(getString(rpgCharacter.getAlignment().getCodeName()));
+		experience.setText(rpgCharacter.getExperience().toString());
+		
+		strength.setText("15");
+		strength_modifier.setText("+2");
+		
+		constitution.setText("13");
+		constitution_modifier.setText("+1");
+		
+		wisdom.setText("10");
+		wisdom_modifier.setText("+0");
 		
 	}
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="defences">Defesas</string>
+    
+    <string name="defences_hit_points">Pontos de Vida</string>
+    <string name="defences_hit_points_abbreviation">PV</string>
+    
+    <string name="defences_armor_class">Classe de Armadura</string>
+    <string name="defences_armor_class_abbreviation">CA</string>
+
+    <string name="defences_touch">Toque</string>
+    <string name="defences_flat_footed">Surpresa</string>
+    
+    <string name="defences_initiative">Iniciativa</string>
+    <string name="defences_spell_resistance">Resistência à Magia</string>
+    
+</resources>

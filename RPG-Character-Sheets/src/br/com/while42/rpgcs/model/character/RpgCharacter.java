@@ -49,6 +49,8 @@ public class RpgCharacter implements Serializable {
 	private Integer baseAttackBonus = 0;
 	private Integer spellResistence = 0;
 	private Integer grapple = 0;
+	
+	private Long experience = 0L;
 
 	public RpgCharacter() {
 		// TODO: Construir uma classe Builder para RpgCharacter
@@ -192,6 +194,14 @@ public class RpgCharacter implements Serializable {
 
 	public void setSkin(TypeSkinColor skin) {
 		this.skin = skin;
+	}
+	
+	public void setExperience(Long xp) {
+		this.experience = xp;
+	}
+	
+	public Long getExperience() {
+		return experience;
 	}
 
 	@Override

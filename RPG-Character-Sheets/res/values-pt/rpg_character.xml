@@ -3,5 +3,10 @@
 
     <string name="character_name">Nome</string>
     <string name="character_image_description">Imagem do Personagem</string>
+    
+    <string name="character_experience_abbreviation">XP</string>
+    <string name="character_experience">Experiência</string>
+    <string name="character_experience_long">Pontos de Experiência</string>
+    
 
 </resources>

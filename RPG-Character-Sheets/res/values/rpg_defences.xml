@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="defences">Defences</string>
+    
+    <string name="defences_hit_points">Hit Points</string>
+    <string name="defences_hit_points_abbreviation">HP</string>
+    
+    <string name="defences_armor_class">Armor Class</string>
+    <string name="defences_armor_class_abbreviation">AC</string>
+
+    <string name="defences_touch">Touch</string>
+    <string name="defences_flat_footed">Flat-Footed</string>
+    
+    <string name="defences_initiative">Initiative</string>
+    <string name="defences_spell_resistance">Spell Resistance</string>
+    
+</resources>
