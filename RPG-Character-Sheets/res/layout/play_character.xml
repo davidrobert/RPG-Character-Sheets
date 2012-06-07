@@ -159,7 +159,7 @@
 
 		    <TextView
 		        android:id="@+id_play/textView3"
-		        android:layout_width="100dp"
+		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
 		        android:textColor="#000"
@@ -175,7 +175,7 @@
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:text="@string/ability_modifier_abbreviation"
-		        android:layout_marginLeft="45dp"
+		        android:layout_marginLeft="35dp"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
         </TableRow>
   	</TableLayout>
@@ -360,11 +360,11 @@
 		        android:paddingLeft="10dp"
 		        android:textColor="#000"
 		        android:typeface="serif"
-		        android:text="CHA"
+		        android:text="@string/ability_charisma_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_charisma"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
@@ -385,14 +385,14 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id_play/textView6"
+		        android:id="@+id_play/textview_charisma_modifier"
 		        android:layout_width="50dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center"
 		        android:textColor="#000"
 		        android:layout_margin="2dp"
 		        android:typeface="serif"
-		        android:text="+5"
+		        android:text=""
 		        android:background="@drawable/layout_text_white_50"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
         </TableRow>
@@ -421,17 +421,17 @@
 		        android:typeface="serif"
 		        android:paddingLeft="10dp"
 		        android:textColor="#000"
-		        android:text="DEX"
+		        android:text="@string/ability_dexterity_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_dexterity"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
 		        android:typeface="serif"
-		        android:text="21"
+		        android:text=""
 		        android:layout_margin="2dp"
 		        android:background="@drawable/layout_text_white_50"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -446,14 +446,14 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id_play/textView6"
+		        android:id="@+id_play/textview_dexterity_modifier"
 		        android:layout_width="50dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center"
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:layout_margin="2dp"
-		        android:text="+5"
+		        android:text=""
 		        android:background="@drawable/layout_text_white_50"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
         </TableRow>
@@ -469,16 +469,16 @@
 		        android:paddingLeft="10dp"
 		        android:textColor="#000"
 		        android:typeface="serif"
-		        android:text="INT"
+		        android:text="@string/ability_intelligence_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_intelligence"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
-		        android:text="14"
+		        android:text=""
 		        android:typeface="serif"
 		        android:layout_margin="2dp"
 		        android:background="@drawable/layout_text_white_50"
@@ -494,14 +494,14 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
-		        android:id="@+id_play/textView6"
+		        android:id="@+id_play/textview_intelligence_modifier"
 		        android:layout_width="50dp"
 		        android:layout_height="fill_parent"
 		        android:gravity="center"
 		        android:textColor="#000"
 		        android:layout_margin="2dp"
 		        android:typeface="serif"
-		        android:text="-2"
+		        android:text=""
 		        android:background="@drawable/layout_text_white_50"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
         </TableRow>

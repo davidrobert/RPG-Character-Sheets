@@ -40,6 +40,12 @@ public class PlayRpgCharacter extends Activity {
 		TextView constitution_modifier = (TextView) findViewById(R.id_play.textview_constitution_modifier);
 		TextView wisdom = (TextView) findViewById(R.id_play.textview_wisdom);
 		TextView wisdom_modifier = (TextView) findViewById(R.id_play.textview_wisdom_modifier);
+		TextView charisma = (TextView) findViewById(R.id_play.textview_charisma);
+		TextView charisma_modifier = (TextView) findViewById(R.id_play.textview_charisma_modifier);
+		TextView dexterity = (TextView) findViewById(R.id_play.textview_dexterity);
+		TextView dexterity_modifier = (TextView) findViewById(R.id_play.textview_dexterity_modifier);
+		TextView intelligence = (TextView) findViewById(R.id_play.textview_intelligence);
+		TextView intelligence_modifier = (TextView) findViewById(R.id_play.textview_intelligence_modifier);
 					
 		name.setText(rpgCharacter.getName());
 		
@@ -65,6 +71,14 @@ public class PlayRpgCharacter extends Activity {
 		wisdom.setText("10");
 		wisdom_modifier.setText("+0");
 		
+		charisma.setText("10");
+		charisma_modifier.setText("+0");
+		
+		dexterity.setText("10");
+		dexterity_modifier.setText("+0");
+		
+		intelligence.setText("10");
+		intelligence_modifier.setText("+0");
 	}
 
 }
