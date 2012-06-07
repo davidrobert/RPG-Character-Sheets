@@ -283,7 +283,7 @@
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:layout_margin="2dp"
-		        android:text="
+		        android:text=""
 		        android:background="@drawable/layout_text_white_50"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
         </TableRow>
