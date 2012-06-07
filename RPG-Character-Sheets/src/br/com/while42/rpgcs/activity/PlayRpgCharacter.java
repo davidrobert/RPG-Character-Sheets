@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.TextView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.abilities.Abilities;
+import br.com.while42.rpgcs.model.abilities.Defences;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.persist.DataManager;
 
@@ -107,7 +108,10 @@ public class PlayRpgCharacter extends Activity {
 		tvIntelligence.setText(intelligence);
 		tvIntelligenceModifier.setText(intelligenceMod);
 		
-		tvArmorClass.setText("25");
+		Defences defences = rpgCharacter.getDefences();
+		
+		tvArmorClass.setText(defences.getArmorClass().toString());
+		
 		tvFortitude.setText("19");
 		tvReflex.setText("23");
 		tvWill.setText("25");

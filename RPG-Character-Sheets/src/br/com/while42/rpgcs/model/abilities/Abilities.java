@@ -12,6 +12,10 @@ public class Abilities {
 	
 	private AbilityModifier modifier = new AbilityModifier();
 
+	public Abilities() {
+		
+	}
+	
 	public Abilities(Integer strength, Integer constitution, Integer wisdom, Integer charisma, Integer dexterity, Integer intelligence) {
 		this.strength = strength;
 		this.constitution = constitution;

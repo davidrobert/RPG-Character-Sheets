@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import br.com.while42.rpgcs.model.abilities.Abilities;
+import br.com.while42.rpgcs.model.abilities.Defences;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -38,19 +39,11 @@ public class RpgCharacter implements Serializable {
 	private TypeHairColor hair;
 	private TypeSkinColor skin;
 
-	private Abilities abilities = new Abilities(50, 0, 0, 0, 0, 0);
+	private Abilities abilities = new Abilities();
+	private Defences defences = new Defences();
 	
-	private Integer hitPoints = 0;
-	private Integer currentHitPoints = 0;
-
-	private Integer armorClass = 0;
-
-	private Integer touchArmorClass = 0;
-	private Integer flatFooted = 0;
-	private Integer initiative = 0;
-
 	private Integer baseAttackBonus = 0;
-	private Integer spellResistence = 0;
+
 	private Integer grapple = 0;
 	
 	private Long experience = 0L;
@@ -215,6 +208,14 @@ public class RpgCharacter implements Serializable {
 	public Abilities getAbilities() {
 		return abilities;
 	}
+	
+	public void setDefences(Defences defences) {
+		this.defences = defences;
+	}
+	
+	public Defences getDefences() {
+		return defences;
+	}
 
 	@Override
 	public boolean equals(Object rpgCharacter) {
@@ -242,17 +243,8 @@ public class RpgCharacter implements Serializable {
 				hair.equals(rc.hair) &&
 				skin.equals(rc.skin) &&
 				
-				hitPoints.equals(rc.hitPoints) &&
-				currentHitPoints.equals(rc.currentHitPoints) &&
-				
-				armorClass.equals(rc.armorClass) &&
-				
-				touchArmorClass.equals(rc.touchArmorClass) &&
-				flatFooted.equals(rc.flatFooted) &&
-				initiative.equals(rc.initiative) &&
-				
 				baseAttackBonus.equals(rc.baseAttackBonus) &&
-				spellResistence.equals(rc.spellResistence) &&
+
 				grapple.equals(rc.grapple) 
 				
 				// TODO: && rpgClass.equals(rc.rpgClass) 
