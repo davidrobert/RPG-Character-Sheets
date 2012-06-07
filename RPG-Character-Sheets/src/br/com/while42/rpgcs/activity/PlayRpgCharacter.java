@@ -46,6 +46,12 @@ public class PlayRpgCharacter extends Activity {
 		TextView dexterity_modifier = (TextView) findViewById(R.id_play.textview_dexterity_modifier);
 		TextView intelligence = (TextView) findViewById(R.id_play.textview_intelligence);
 		TextView intelligence_modifier = (TextView) findViewById(R.id_play.textview_intelligence_modifier);
+		
+		TextView armorClass = (TextView) findViewById(R.id_play.textview_armor_class);
+		
+		TextView fortitude = (TextView) findViewById(R.id_play.textview_fortitude);
+		TextView reflex = (TextView) findViewById(R.id_play.textview_reflex);
+		TextView will = (TextView) findViewById(R.id_play.textview_will);
 					
 		name.setText(rpgCharacter.getName());
 		
@@ -79,6 +85,13 @@ public class PlayRpgCharacter extends Activity {
 		
 		intelligence.setText("10");
 		intelligence_modifier.setText("+0");
+		
+		armorClass.setText("25");
+		fortitude.setText("19");
+		reflex.setText("23");
+		will.setText("25");
+		
+		
 	}
 
 }

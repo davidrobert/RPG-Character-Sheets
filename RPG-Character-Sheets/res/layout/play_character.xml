@@ -527,7 +527,7 @@
 		        android:typeface="serif"
 		        android:gravity="center_vertical"
 		        android:textColor="#000"
-		        android:text="Defenses"
+		        android:text="@string/defences"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
         </TableRow>
   	</TableLayout>    
@@ -554,16 +554,16 @@
 		        android:gravity="center_vertical"
 		        android:paddingLeft="10dp"
 		        android:textColor="#000"
-		        android:text="AC"
+		        android:text="@string/defences_armor_class_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_armor_class"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
-		        android:text="24"
+		        android:text=""
 		        android:typeface="serif"
 		        android:layout_margin="2dp"
 		        android:background="@drawable/layout_text_white_50"
@@ -593,16 +593,16 @@
 		        android:typeface="serif"
 		        android:paddingLeft="10dp"
 		        android:textColor="#000"
-		        android:text="FORT"
+		        android:text="@string/saving_throws_fortitude_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_fortitude"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
-		        android:text="19"
+		        android:text=""
 		        android:layout_margin="2dp"
 		        android:typeface="serif"
 		        android:background="@drawable/layout_text_white_50"
@@ -631,17 +631,17 @@
 		        android:gravity="center_vertical"
 		        android:paddingLeft="10dp"
 		        android:textColor="#000"
-		        android:text="REF"
+		        android:text="@string/saving_throws_reflex_abbreviation"
 		        android:typeface="serif"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_reflex"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
-		        android:text="23"
+		        android:text=""
 		        android:typeface="serif"
 		        android:layout_margin="2dp"
 		        android:background="@drawable/layout_text_white_50"
@@ -671,17 +671,17 @@
 		        android:paddingLeft="10dp"
 		        android:typeface="serif"
 		        android:textColor="#000"
-		        android:text="WILL"
+		        android:text="@string/saving_throws_will_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_will"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
 		        android:typeface="serif"
 		        android:textColor="#000"
-		        android:text="25"
+		        android:text=""
 		        android:layout_margin="2dp"
 		        android:background="@drawable/layout_text_white_50"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
