@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="saving_throws">Saving Throws</string>
+	<string name="saving_throws">Teste de Resistência</string>
     
     <string name="saving_throws_fortitude">Fortitude</string>
-    <string name="saving_throws_reflex">Reflex</string>
-    <string name="saving_throws_will">Will</string>  
+    <string name="saving_throws_reflex">Reflexos</string>
+    <string name="saving_throws_will">Vontade</string>    
     
     <string name="saving_throws_fortitude_abbreviation">FORT</string>
     <string name="saving_throws_reflex_abbreviation">REF</string>
-    <string name="saving_throws_will_abbreviation">WILL</string>   
+    <string name="saving_throws_will_abbreviation">VONT</string>   
 
 </resources>
