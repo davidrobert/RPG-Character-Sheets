@@ -38,7 +38,7 @@ public class Abilities implements Serializable {
 		return modifier.get(strength);
 	}
 
-	public void setStrength(int strength) {
+	public void setStrength(Integer strength) {
 		this.strength = strength;
 	}
 
@@ -50,7 +50,7 @@ public class Abilities implements Serializable {
 		return modifier.get(constitution);
 	}
 
-	public void setConstitution(int constitution) {
+	public void setConstitution(Integer constitution) {
 		this.constitution = constitution;
 	}
 
@@ -62,7 +62,7 @@ public class Abilities implements Serializable {
 		return modifier.get(wisdom);
 	}
 
-	public void setWisdom(int wisdom) {
+	public void setWisdom(Integer wisdom) {
 		this.wisdom = wisdom;
 	}
 
@@ -74,7 +74,7 @@ public class Abilities implements Serializable {
 		return modifier.get(charisma);
 	}
 
-	public void setCharisma(int charisma) {
+	public void setCharisma(Integer charisma) {
 		this.charisma = charisma;
 	}
 
@@ -86,7 +86,7 @@ public class Abilities implements Serializable {
 		return modifier.get(dexterity);
 	}
 
-	public void setDexterity(int dexterity) {
+	public void setDexterity(Integer dexterity) {
 		this.dexterity = dexterity;
 	}
 
@@ -98,7 +98,7 @@ public class Abilities implements Serializable {
 		return modifier.get(intelligence);
 	}
 
-	public void setIntelligence(int intelligence) {
+	public void setIntelligence(Integer intelligence) {
 		this.intelligence = intelligence;
 	}
 
