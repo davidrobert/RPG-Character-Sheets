@@ -16,23 +16,23 @@ import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 public abstract class AbstractRpgClass implements CharacterClass, Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	protected int classLevel;
+	protected Integer classLevel;
 	
 	public AbstractRpgClass() {
 		classLevel = ExperienceAndLevel.MIN_LEVEL;
 	}
 	
-	public AbstractRpgClass(int classLevel) {
+	public AbstractRpgClass(Integer classLevel) {
 		setClassLevel(classLevel);
 	}
 	
 	@Override
-	public final int getClassLevel() {
+	public final Integer getClassLevel() {
 		return classLevel;
 	}
 
 	@Override
-	public final void setClassLevel(int classLevel) {
+	public final void setClassLevel(Integer classLevel) {
 		if (classLevel < ExperienceAndLevel.MIN_LEVEL || classLevel > ExperienceAndLevel.MAX_LEVEL) {
 			throw new IllegalArgumentException("Invalid class level");
 		}
@@ -60,5 +60,18 @@ public abstract class AbstractRpgClass implements CharacterClass, Serializable {
 		}
 		
 		return Collections.unmodifiableSet(religionsAvailable);
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+
+		if (!(o instanceof AbstractRpgClass))
+			return false;
+
+		AbstractRpgClass rc = (AbstractRpgClass) o;
+		
+		return classLevel.equals(rc.classLevel) && getClass().equals(rc.getClass());
 	}
 }

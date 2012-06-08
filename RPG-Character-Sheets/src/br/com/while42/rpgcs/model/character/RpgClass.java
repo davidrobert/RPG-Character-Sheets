@@ -39,4 +39,17 @@ public class RpgClass implements Serializable {
 		return experience;
 	}
 	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+
+		if (!(o instanceof RpgClass))
+			return false;
+
+		RpgClass rc = (RpgClass) o;
+		
+		return experience.equals(rc.experience) && rpgClass.equals(rc.rpgClass);
+	}
+	
 }

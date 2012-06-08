@@ -12,8 +12,8 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 
 public interface CharacterClass extends TypeCode {
 	
-	int getClassLevel();
-	void setClassLevel(int classLevel);
+	Integer getClassLevel();
+	void setClassLevel(Integer classLevel);
 	HitDice getUnarmedDamage(TypeRpgSize size);
 	Set<TypeRpgReligion> getReligions(TypeRpgAlignment alignment);
 	
