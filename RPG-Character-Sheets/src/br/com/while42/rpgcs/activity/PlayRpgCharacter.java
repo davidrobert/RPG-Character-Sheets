@@ -39,6 +39,7 @@ public class PlayRpgCharacter extends Activity {
 		TextView tvName = (TextView) findViewById(R.id_play.textview_name);
 		TextView tvGenderRaceClass = (TextView) findViewById(R.id_play.textview_gender_race_class);
 		TextView tvAlignment = (TextView) findViewById(R.id_play.textview_alignment);
+		TextView tvLevel = (TextView) findViewById(R.id_play.textview_level);
 		TextView tvExperience = (TextView) findViewById(R.id_play.textview_experience);
 		
 		TextView tvStrength = (TextView) findViewById(R.id_play.textview_strength);
@@ -75,6 +76,7 @@ public class PlayRpgCharacter extends Activity {
 		tvGenderRaceClass.setText(sbGenderRaceClass.toString());
 		
 		tvAlignment.setText(getString(attr.getAlignment().getCodeName()));
+		tvLevel.setText("0"); // TODO: Falta implementar
 		tvExperience.setText(rpgCharacter.getRpgClasses().getExperience().toString());
 		
 		NumberFormat fmt = new DecimalFormat("+#;-#");

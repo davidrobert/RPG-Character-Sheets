@@ -105,12 +105,12 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id_play/textView3"
+		        android:id="@+id_play/textview_level"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
 		        android:typeface="serif"
-		        android:text="12"
+		        android:text=""
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <TextView
