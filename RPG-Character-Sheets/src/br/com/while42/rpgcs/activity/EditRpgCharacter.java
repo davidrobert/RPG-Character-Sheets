@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.TypeCode;
+import br.com.while42.rpgcs.model.character.Abilities;
 import br.com.while42.rpgcs.model.character.Attributes;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
@@ -50,6 +51,13 @@ public class EditRpgCharacter extends Activity {
 	private Spinner hair;
 	private Spinner skin;
 
+	private EditText strength;
+	private EditText constitution;
+	private EditText wisdom;
+	private EditText charisma;
+	private EditText dexterity;
+	private EditText intelligence;
+	
 	private Button save;
 	
 	private List<CharacterClass> listClasses;
@@ -108,6 +116,13 @@ public class EditRpgCharacter extends Activity {
 		hair = (Spinner) findViewById(R.id_edit.spinner_hair);
 		skin = (Spinner) findViewById(R.id_edit.spinner_skin);
 
+		strength = (EditText) findViewById(R.id_edit.edittext_strength);
+		constitution = (EditText) findViewById(R.id_edit.edittext_constitution);
+		wisdom = (EditText) findViewById(R.id_edit.edittext_wisdom);
+		charisma = (EditText) findViewById(R.id_edit.edittext_charisma);
+		dexterity = (EditText) findViewById(R.id_edit.edittext_dexterity);
+		intelligence = (EditText) findViewById(R.id_edit.edittext_intelligence);
+		
 		save = (Button) findViewById(R.id_edit.button_save);
 
 		//setOptionsSpinner(classe, codes);
@@ -188,20 +203,27 @@ public class EditRpgCharacter extends Activity {
 				e = (Element) skin.getSelectedItem();
 				attr.setSkin((TypeSkinColor) e.getType());
 				
-				// DEBUG
-				Log.e(">> class     >>", cs.getRpgClasses().toString());
-				Log.e(">> race      >>", attr.getRace().toString());
-				Log.e(">> alignment >>", attr.getAlignment().toString());
-				Log.e(">> religion  >>", attr.getReligion().toString());
-
-				Log.e(">> size      >>", attr.getSize().toString());
-				Log.e(">> age       >>", attr.getAge().toString());
-				Log.e(">> gender    >>", attr.getGender().toString());
-				Log.e(">> height    >>", attr.getHeight().toString());
-				Log.e(">> weight    >>", attr.getWeight().toString());
-				Log.e(">> eye       >>", attr.getEye().toString());
-				Log.e(">> hair      >>", attr.getHair().toString());
-				Log.e(">> skin      >>", attr.getSkin().toString());
+				Abilities ab = cs.getAbilities();
+				if (!strength.getText().toString().isEmpty()) {
+					ab.setStrength(Integer.parseInt(strength.getText().toString()));
+				}
+				if (!intelligence.getText().toString().isEmpty()) {
+					ab.setIntelligence(Integer.parseInt(intelligence.getText().toString()));
+				}
+				if (!constitution.getText().toString().isEmpty()) {
+					ab.setConstitution(Integer.parseInt(constitution.getText().toString()));
+				}
+				if (!dexterity.getText().toString().isEmpty()) {
+					ab.setDexterity(Integer.parseInt(dexterity.getText().toString()));
+				}
+				if (!wisdom.getText().toString().isEmpty()) {
+					ab.setWisdom(Integer.parseInt(wisdom.getText().toString()));
+				}
+				if (!charisma.getText().toString().isEmpty()) {
+					ab.setCharisma(Integer.parseInt(charisma.getText().toString()));
+				}
+				
+				Log.d("RpgCharacter", cs.toString());
 				
 				dataManager.saveRpgCharacter(cs);
 				
