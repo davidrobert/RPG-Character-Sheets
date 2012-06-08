@@ -120,7 +120,7 @@ public class PlayRpgCharacter extends Activity {
 		
 		tvFortitude.setText(savingThrows.getFortitude().toString());
 		tvReflex.setText(savingThrows.getReflex().toString());
-		tvThrowsWill.setText(savingThrows.getThrowsWill());
+		tvThrowsWill.setText(savingThrows.getThrowsWill().toString());
 		
 		
 	}
