@@ -1,16 +1,9 @@
 package br.com.while42.rpgcs.model.character;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.test.AndroidTestCase;
-import android.util.Log;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -183,48 +176,10 @@ public class RpgCharacterTest extends AndroidTestCase {
 	public void testSerialize() {
 		RpgCharacter rpgcs1 = getList().get(0);
 		
-		byte[] serializeObject = serializeObject(rpgcs1);
-		Object deserializeObject = deserializeObject(serializeObject);
-		RpgCharacter rpgcs2 = (RpgCharacter) deserializeObject;
+		byte[] serializeObject = RpgCharacter.serialize(rpgcs1);
+		RpgCharacter rpgcs2 = RpgCharacter.deserialize(serializeObject);
 
 		assertEquals(rpgcs1, rpgcs2);
 	}
-	
-	public static byte[] serializeObject(Object o) { 
-	    ByteArrayOutputStream bos = new ByteArrayOutputStream(); 
-	 
-	    try { 
-	      ObjectOutput out = new ObjectOutputStream(bos); 
-	      out.writeObject(o); 
-	      out.close(); 
-	 
-	      // Get the bytes of the serialized object 
-	      byte[] buf = bos.toByteArray(); 
-	 
-	      return buf; 
-	    } catch(IOException ioe) { 
-	      Log.e("serializeObject", "error", ioe); 
-	 
-	      return null; 
-	    } 
-	  } 
-
-	public static Object deserializeObject(byte[] b) { 
-	    try { 
-	      ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(b)); 
-	      Object object = in.readObject(); 
-	      in.close(); 
-	 
-	      return object; 
-	    } catch(ClassNotFoundException cnfe) { 
-	      Log.e("deserializeObject", "class not found error", cnfe); 
-	 
-	      return null; 
-	    } catch(IOException ioe) { 
-	      Log.e("deserializeObject", "io error", ioe); 
-	 
-	      return null; 
-	    } 
-	  } 
 	
 }

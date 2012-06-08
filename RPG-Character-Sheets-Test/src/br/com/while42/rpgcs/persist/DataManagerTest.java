@@ -8,7 +8,6 @@ import android.util.Log;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.RpgCharacterTest;
 import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
-import br.com.while42.rpgcs.persist.table.RpgClassTable;
 
 public class DataManagerTest extends AndroidTestCase {
 
@@ -30,7 +29,6 @@ public class DataManagerTest extends AndroidTestCase {
 
 	public void clearAllTables() {
 		RpgCharacterTable.clear(db);
-		RpgClassTable.clear(db);
 	}
 
 	public void testCloseDb() {

@@ -1,7 +1,14 @@
 package br.com.while42.rpgcs.model.character;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+import android.util.Log;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 
@@ -32,6 +39,10 @@ public class RpgCharacter implements Serializable {
 		attributes.setAlignment(alignment);
 	}
 
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+	
 	public boolean isPersistent() {
 		return getId() != 0;
 	}
@@ -99,6 +110,43 @@ public class RpgCharacter implements Serializable {
 	public SavingThrows getSavingThrows() {
 		return savingThrows;
 	}
+	
+	public static byte[] serialize(RpgCharacter rpgCharacter) { 
+	    ByteArrayOutputStream bos = new ByteArrayOutputStream(); 
+	 
+	    try { 
+	      ObjectOutput out = new ObjectOutputStream(bos); 
+	      out.writeObject(rpgCharacter); 
+	      out.close(); 
+	 
+	      // Get the bytes of the serialized object 
+	      byte[] buf = bos.toByteArray(); 
+	 
+	      return buf; 
+	    } catch(IOException ioe) { 
+	      Log.e("serializeObject", "error", ioe); 
+	 
+	      return null; 
+	    } 
+	  } 
+
+	public static RpgCharacter deserialize(byte[] s) { 
+	    try { 
+	      ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(s)); 
+	      RpgCharacter rpgCharacter = (RpgCharacter) in.readObject(); 
+	      in.close(); 
+	 
+	      return rpgCharacter; 
+	    } catch(ClassNotFoundException cnfe) { 
+	      Log.e("deserializeObject", "class not found error", cnfe); 
+	 
+	      return null; 
+	    } catch(IOException ioe) { 
+	      Log.e("deserializeObject", "io error", ioe); 
+	 
+	      return null; 
+	    } 
+	  } 
 
 	@Override
 	public boolean equals(Object rpgCharacter) {

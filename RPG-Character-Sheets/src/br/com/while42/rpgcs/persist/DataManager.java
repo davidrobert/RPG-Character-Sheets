@@ -12,7 +12,7 @@ import br.com.while42.rpgcs.persist.dao.RpgCharacterDAO;
 
 public class DataManager {
 
-	public static final int DATABASE_VERSION = 20;
+	public static final int DATABASE_VERSION = 25;
 
 	private Context context;
 	private SQLiteDatabase db;
