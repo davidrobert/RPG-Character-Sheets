@@ -68,14 +68,14 @@ public class PlayRpgCharacter extends Activity {
 		sbGenderRaceClass.append(getString(attr.getGender().getCodeName())).append(" ");
 		sbGenderRaceClass.append(getString(attr.getRace().getCodeName())).append(" ");
 		
-		if (!rpgCharacter.getRpgClasses().isEmpty()) {
-			sbGenderRaceClass.append(getString(rpgCharacter.getRpgClasses().get(0).getCodeName()));
+		if (!rpgCharacter.getRpgClasses().getAll().isEmpty()) {
+			sbGenderRaceClass.append(getString(rpgCharacter.getRpgClasses().getAll().get(0).getCodeName()));
 		}
 		
 		tvGenderRaceClass.setText(sbGenderRaceClass.toString());
 		
 		tvAlignment.setText(getString(attr.getAlignment().getCodeName()));
-		tvExperience.setText(rpgCharacter.getExperience().toString());
+		tvExperience.setText(rpgCharacter.getRpgClasses().getExperience().toString());
 		
 		NumberFormat fmt = new DecimalFormat("+#;-#");
 		

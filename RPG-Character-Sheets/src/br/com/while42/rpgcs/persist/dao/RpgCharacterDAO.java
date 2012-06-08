@@ -67,7 +67,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 			
 			rpgCharacter.setId(insertStatement.executeInsert());
 			
-			for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
+			for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses().getAll()) {
 				daoClass.save(rpgCharacter.getId(), rpgClass);
 			}
 			
@@ -75,7 +75,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 			this.update(rpgCharacter);
 			
 			daoClass.deleteAll(rpgCharacter.getId());
-			for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
+			for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses().getAll()) {
 				daoClass.save(rpgCharacter.getId(), rpgClass);
 			}
 		}
@@ -89,7 +89,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 				+ " = ?", new String[] { String.valueOf(rpgCharacter.getId()) });
 		
 		daoClass.deleteAll(rpgCharacter.getId());
-		for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
+		for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses().getAll()) {
 			daoClass.save(rpgCharacter.getId(), rpgClass);
 		}
 	}
@@ -100,7 +100,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 			db.delete(RpgCharacterTable.NAME, BaseColumns._ID + " = ?",
 					new String[] { String.valueOf(rpgCharacter.getId()) });
 			
-			for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses()) {
+			for (AbstractRpgClass rpgClass: rpgCharacter.getRpgClasses().getAll()) {
 				daoClass.delete(rpgCharacter.getId(), rpgClass);
 			}
 			
@@ -123,7 +123,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 		
 		if (cursor.moveToFirst()) {
 			rpgCharacter = this.buildRpgCharacterFromCursor(cursor);
-			rpgCharacter.addRpgClass(daoClass.retrieveAll(rpgCharacter.getId()));
+			rpgCharacter.getRpgClasses().add(daoClass.retrieveAll(rpgCharacter.getId()));
 		}
 
 		if (!cursor.isClosed()) {
@@ -148,7 +148,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 		if (cursor.moveToFirst()) {
 			do {
 				RpgCharacter rpgCharacter = this.buildRpgCharacterFromCursor(cursor);
-				rpgCharacter.addRpgClass(daoClass.retrieveAll(rpgCharacter.getId()));
+				rpgCharacter.getRpgClasses().add(daoClass.retrieveAll(rpgCharacter.getId()));
 				myList.add(rpgCharacter);
 			} while (cursor.moveToNext());
 		}

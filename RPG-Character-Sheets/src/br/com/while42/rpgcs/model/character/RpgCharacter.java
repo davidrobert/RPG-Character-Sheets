@@ -1,9 +1,6 @@
 package br.com.while42.rpgcs.model.character;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 
 import br.com.while42.rpgcs.model.abilities.Abilities;
 import br.com.while42.rpgcs.model.abilities.Defences;
@@ -12,6 +9,7 @@ import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
+import br.com.while42.rpgcs.model.classes.RpgClass;
 
 public class RpgCharacter implements Serializable {
 
@@ -21,8 +19,7 @@ public class RpgCharacter implements Serializable {
 	private String image = "";
 	private String name = "";
 	
-	private HashSet<AbstractRpgClass> rpgClass = new HashSet<AbstractRpgClass>();
-	
+	private RpgClass classes = new RpgClass();
 	private Attributes attributes = new Attributes();
 	private Abilities abilities = new Abilities();
 	private Defences defences = new Defences();
@@ -30,9 +27,7 @@ public class RpgCharacter implements Serializable {
 	
 	private Integer baseAttackBonus = 0;
 	private Integer grapple = 0;
-	private Long experience = 0L;
 	
-
 	public RpgCharacter() {
 		// TODO: Construir uma classe Builder para RpgCharacter
 	}
@@ -70,31 +65,13 @@ public class RpgCharacter implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public List<AbstractRpgClass> getRpgClasses() {
-		return new ArrayList<AbstractRpgClass>(rpgClass);
-	}
-
-	public void addRpgClass(List<AbstractRpgClass> rpgClasses) {
-		for (AbstractRpgClass rpgClass: rpgClasses) {
-			addRpgClass(rpgClass);
-		}
+	
+	public void setRpgClasses(RpgClass classes) {
+		this.classes = classes;
 	}
 	
-	public void addRpgClass(AbstractRpgClass rpgClass) {
-		this.rpgClass.add(rpgClass);
-	}
-
-	public void clearRpgClass() {
-		rpgClass.clear();
-	}
-	
-	public void setExperience(Long xp) {
-		this.experience = xp;
-	}
-	
-	public Long getExperience() {
-		return experience;
+	public RpgClass getRpgClasses() {
+		return classes;
 	}
 	
 	public void setAbilities(Abilities abilities) {
@@ -161,7 +138,7 @@ public class RpgCharacter implements Serializable {
 		sb.append(" name: ").append(name);
 		
 		sb.append(" classes: [");
-		for (AbstractRpgClass c: rpgClass) {
+		for (AbstractRpgClass c: classes.getAll()) {
 			sb.append(c.getClass().getName()).append(" - ").append(c.getClassLevel()).append(" ");
 		}
 		sb.append("]");

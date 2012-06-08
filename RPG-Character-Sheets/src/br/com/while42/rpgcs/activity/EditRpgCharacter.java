@@ -139,7 +139,7 @@ public class EditRpgCharacter extends Activity {
 				
 				// Class
 				e = (Element) classe.getSelectedItem();
-				cs.addRpgClass((AbstractRpgClass) e.getType());
+				cs.getRpgClasses().add((AbstractRpgClass) e.getType());
 
 				// Race
 				e = (Element) race.getSelectedItem();

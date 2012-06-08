@@ -45,7 +45,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 			AbstractRpgClass barbarian = new Barbarian();
 			barbarian.setClassLevel(1);
-			rc.addRpgClass(barbarian);
+			rc.getRpgClasses().add(barbarian);
 
 			rpgCharacterSheets.add(rc);
 		}
@@ -71,7 +71,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 			AbstractRpgClass monk = new Monk();
 			monk.setClassLevel(20);
-			rc.addRpgClass(monk);
+			rc.getRpgClasses().add(monk);
 
 			rpgCharacterSheets.add(rc);
 		}
@@ -97,7 +97,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 			AbstractRpgClass sorcerer = new Sorcerer();
 			sorcerer.setClassLevel(ExperienceAndLevel.MAX_LEVEL);
-			rc.addRpgClass(sorcerer);
+			rc.getRpgClasses().add(sorcerer);
 
 			rpgCharacterSheets.add(rc);
 		}
