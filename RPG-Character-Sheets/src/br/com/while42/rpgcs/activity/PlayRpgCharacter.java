@@ -13,7 +13,6 @@ import br.com.while42.rpgcs.model.character.Attributes;
 import br.com.while42.rpgcs.model.character.Defences;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.SavingThrows;
-import br.com.while42.rpgcs.persist.DataManager;
 
 public class PlayRpgCharacter extends Activity {
 
@@ -28,13 +27,11 @@ public class PlayRpgCharacter extends Activity {
 		
 		setContentView(R.layout.play_character);
 		
-		Long id = getIntent().getLongExtra("id", 0L);
+		Bundle bn = new Bundle();
+        bn = getIntent().getExtras();
+        RpgCharacter rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
 		
-		DataManager manager = new DataManager(getApplicationContext());
-		
-		Log.d("ID: ", id.toString());
-		
-		RpgCharacter rpgCharacter = manager.retrieveRpgCharacter(id);
+		Log.d("ID: ", rpgCharacter.getId().toString());
 		
 		TextView tvName = (TextView) findViewById(R.id_play.textview_name);
 		TextView tvGenderRaceClass = (TextView) findViewById(R.id_play.textview_gender_race_class);

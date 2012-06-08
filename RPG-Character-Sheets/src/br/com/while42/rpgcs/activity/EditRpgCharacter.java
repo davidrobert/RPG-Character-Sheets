@@ -206,7 +206,11 @@ public class EditRpgCharacter extends Activity {
 				dataManager.saveRpgCharacter(cs);
 				
 				Intent play = new Intent(EditRpgCharacter.this, PlayRpgCharacter.class);	
-				play.putExtra("id", cs.getId());
+				
+				Bundle b = new Bundle();
+	            b.putSerializable(RpgCharacter.class.getName(), cs);
+	            play.putExtras(b);
+				
 				startActivity(play);
 			}
 		});
