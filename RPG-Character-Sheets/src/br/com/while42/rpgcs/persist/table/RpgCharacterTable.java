@@ -1,7 +1,7 @@
 package br.com.while42.rpgcs.persist.table;
 
+import br.com.while42.rpgcs.model.character.Attributes;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
-import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;

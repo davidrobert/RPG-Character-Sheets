@@ -2,14 +2,9 @@ package br.com.while42.rpgcs.model.character;
 
 import java.io.Serializable;
 
-import br.com.while42.rpgcs.model.abilities.Abilities;
-import br.com.while42.rpgcs.model.abilities.Defences;
-import br.com.while42.rpgcs.model.abilities.SavingThrows;
-import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
-import br.com.while42.rpgcs.model.classes.RpgClass;
 
 public class RpgCharacter implements Serializable {
 

@@ -2,7 +2,7 @@ package br.com.while42.rpgcs.model;
 
 import junit.framework.Assert;
 import android.test.AndroidTestCase;
-import br.com.while42.rpgcs.model.abilities.AbilityModifier;
+import br.com.while42.rpgcs.model.abilities.modifier.AbilityModifier;
 
 public class AbilityModifierTest extends AndroidTestCase {
 	

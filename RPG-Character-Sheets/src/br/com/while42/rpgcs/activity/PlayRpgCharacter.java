@@ -8,11 +8,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 import br.com.while42.rpgcs.R;
-import br.com.while42.rpgcs.model.abilities.Abilities;
-import br.com.while42.rpgcs.model.abilities.Defences;
-import br.com.while42.rpgcs.model.abilities.SavingThrows;
+import br.com.while42.rpgcs.model.character.Abilities;
+import br.com.while42.rpgcs.model.character.Attributes;
+import br.com.while42.rpgcs.model.character.Defences;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
-import br.com.while42.rpgcs.model.character.attributes.Attributes;
+import br.com.while42.rpgcs.model.character.SavingThrows;
 import br.com.while42.rpgcs.persist.DataManager;
 
 public class PlayRpgCharacter extends Activity {

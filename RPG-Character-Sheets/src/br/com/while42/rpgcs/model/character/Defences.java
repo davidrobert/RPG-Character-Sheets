@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.model.abilities;
+package br.com.while42.rpgcs.model.character;
 
 public class Defences {
 	private Integer armorClass = 0;

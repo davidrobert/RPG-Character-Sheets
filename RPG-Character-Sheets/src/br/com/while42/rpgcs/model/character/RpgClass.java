@@ -1,8 +1,10 @@
-package br.com.while42.rpgcs.model.classes;
+package br.com.while42.rpgcs.model.character;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+
+import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 
 public class RpgClass {
 	private Long experience = 0L;

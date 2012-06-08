@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.test.AndroidTestCase;
-import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
