@@ -7,6 +7,7 @@ import java.util.List;
 
 import br.com.while42.rpgcs.model.abilities.Abilities;
 import br.com.while42.rpgcs.model.abilities.Defences;
+import br.com.while42.rpgcs.model.abilities.SavingThrows;
 import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
@@ -18,18 +19,17 @@ public class RpgCharacter implements Serializable {
 
 	private Long id = 0L;
 	private String image = "";
-
 	private String name = "";
+	
 	private HashSet<AbstractRpgClass> rpgClass = new HashSet<AbstractRpgClass>();
 	
 	private Attributes attributes = new Attributes();
 	private Abilities abilities = new Abilities();
 	private Defences defences = new Defences();
+	private SavingThrows savingThrows = new SavingThrows();
 	
 	private Integer baseAttackBonus = 0;
-
 	private Integer grapple = 0;
-	
 	private Long experience = 0L;
 	
 
@@ -119,6 +119,14 @@ public class RpgCharacter implements Serializable {
 	
 	public Attributes getAttributes() {
 		return attributes;
+	}
+	
+	public void setSavingThrows(SavingThrows savingThrows) {
+		this.savingThrows = savingThrows;
+	}
+	
+	public SavingThrows getSavingThrows() {
+		return savingThrows;
 	}
 
 	@Override

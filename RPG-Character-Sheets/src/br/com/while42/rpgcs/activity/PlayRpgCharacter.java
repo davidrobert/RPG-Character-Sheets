@@ -10,6 +10,7 @@ import android.widget.TextView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.abilities.Abilities;
 import br.com.while42.rpgcs.model.abilities.Defences;
+import br.com.while42.rpgcs.model.abilities.SavingThrows;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.attributes.Attributes;
 import br.com.while42.rpgcs.persist.DataManager;
@@ -57,7 +58,7 @@ public class PlayRpgCharacter extends Activity {
 		
 		TextView tvFortitude = (TextView) findViewById(R.id_play.textview_fortitude);
 		TextView tvReflex = (TextView) findViewById(R.id_play.textview_reflex);
-		TextView tvWill = (TextView) findViewById(R.id_play.textview_will);
+		TextView tvThrowsWill = (TextView) findViewById(R.id_play.textview_will);
 					
 		tvName.setText(rpgCharacter.getName());
 		
@@ -115,9 +116,11 @@ public class PlayRpgCharacter extends Activity {
 		
 		tvArmorClass.setText(defences.getArmorClass().toString());
 		
-		tvFortitude.setText("19");
-		tvReflex.setText("23");
-		tvWill.setText("25");
+		SavingThrows savingThrows = rpgCharacter.getSavingThrows();
+		
+		tvFortitude.setText(savingThrows.getFortitude().toString());
+		tvReflex.setText(savingThrows.getReflex().toString());
+		tvThrowsWill.setText(savingThrows.getThrowsWill());
 		
 		
 	}
