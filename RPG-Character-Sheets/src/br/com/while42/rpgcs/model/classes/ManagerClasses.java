@@ -13,8 +13,7 @@ import dalvik.system.DexClassLoader;
 import dalvik.system.DexFile;
 import dalvik.system.PathClassLoader;
 
-public class Classes {
-	
+public class ManagerClasses {
 	
 	public <T, K> List<K> getAll(Context context, String packageName, Class<T> superc) {
 
