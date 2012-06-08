@@ -42,4 +42,31 @@ public class SavingThrows implements Serializable {
 	public void setThrowsWill(Integer throwsWill) {
 		this.throwsWill = throwsWill;
 	}	
+	
+	@Override
+	public boolean equals(Object o) {
+
+		if (this == o)
+			return true;
+
+		if (!(o instanceof SavingThrows))
+			return false;
+
+		SavingThrows st = (SavingThrows) o;
+		
+		return fortitude.equals(st.fortitude) &&
+			   reflex.equals(st.reflex) &&
+			   throwsWill.equals(st.throwsWill);
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder("");
+		
+		sb.append(" fortitude: ").append(fortitude);
+		sb.append(" reflex: ").append(reflex);
+		sb.append(" throwsWill: ").append(throwsWill);
+		
+		return sb.toString();
+	}
 }

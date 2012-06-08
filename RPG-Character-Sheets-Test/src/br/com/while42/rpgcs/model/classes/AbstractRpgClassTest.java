@@ -48,4 +48,5 @@ public class AbstractRpgClassTest extends AndroidTestCase {
 		Assert.assertEquals(1, new ConcreteAbstractClass().getClassLevel().intValue());
 		Assert.assertEquals(2, new ConcreteAbstractClass(2).getClassLevel().intValue());
 	}
+	
 }

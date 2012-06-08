@@ -84,5 +84,39 @@ public class Defences implements Serializable {
 		this.initiative = initiative;
 	}
 	
+	@Override
+	public boolean equals(Object o) {
+
+		if (this == o)
+			return true;
+
+		if (!(o instanceof Defences))
+			return false;
+
+		Defences def = (Defences) o;
+		
+		return armorClass.equals(def.armorClass) &&
+			   hitPoints.equals(def.hitPoints) &&
+			   currentHitPoints.equals(def.currentHitPoints) &&
+			   touch.equals(def.touch) &&
+			   flatFooted.equals(def.flatFooted) &&
+			   spellResistance.equals(def.spellResistance) &&
+			   initiative.equals(def.initiative);
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder("");
+		
+		sb.append(" armorClass: ").append(armorClass);
+		sb.append(" hitPoints: ").append(hitPoints);
+		sb.append(" currentHitPoints: ").append(currentHitPoints);
+		sb.append(" touch: ").append(touch);
+		sb.append(" flatFooted: ").append(flatFooted);
+		sb.append(" spellResistance: ").append(spellResistance);
+		sb.append(" initiative: ").append(initiative);
+		
+		return sb.toString();
+	}
 
 }

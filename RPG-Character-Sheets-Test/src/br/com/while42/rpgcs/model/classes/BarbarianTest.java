@@ -20,6 +20,21 @@ public class BarbarianTest extends AndroidTestCase {
 		Assert.assertEquals(new HitDice(4, HitDiceType.d4, 0, 10), new Barbarian().getStartingGold());
 	}
 	
+	public void testEqualsBasic() {
+		AbstractRpgClass barbarian1 = new Barbarian();
+		barbarian1.setClassLevel(1);
+		
+		AbstractRpgClass barbarian2 = new Barbarian();
+		barbarian1.setClassLevel(1);
+		
+		assertEquals(barbarian1, barbarian2);
+		
+		AbstractRpgClass monk = new Monk();
+		monk.setClassLevel(1);
+		
+		assertFalse(barbarian1.equals(monk));
+	}
+	
 	public void testEquals() {
 		Barbarian barbarian1 = new Barbarian();
 		barbarian1.setClassLevel(1);

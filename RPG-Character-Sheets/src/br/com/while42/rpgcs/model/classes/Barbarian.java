@@ -56,4 +56,5 @@ public class Barbarian extends AbstractRpgClass {
 	public HitDice getStartingGold() {
 		return new HitDice(4, HitDiceType.d4, 0, 10);
 	}
+	
 }

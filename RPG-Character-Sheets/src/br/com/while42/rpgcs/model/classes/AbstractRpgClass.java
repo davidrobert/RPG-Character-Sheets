@@ -74,4 +74,9 @@ public abstract class AbstractRpgClass implements CharacterClass, Serializable {
 		
 		return classLevel.equals(rc.classLevel) && getClass().equals(rc.getClass());
 	}
+	
+	@Override
+	public int hashCode() {
+		return classLevel + getClass().getName().hashCode();
+	}
 }

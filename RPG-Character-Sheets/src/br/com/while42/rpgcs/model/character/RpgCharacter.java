@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
-import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 
 public class RpgCharacter implements Serializable {
 
@@ -116,13 +115,14 @@ public class RpgCharacter implements Serializable {
 				image.equals(rc.image) &&
 				name.equals(rc.name) &&
 				
-				baseAttackBonus.equals(rc.baseAttackBonus) &&
-
-				grapple.equals(rc.grapple) 
+				classes.equals(rc.classes) &&
+				attributes.equals(rc.attributes) &&
+				abilities.equals(rc.abilities) &&
+				defences.equals(rc.defences) &&
+				savingThrows.equals(rc.savingThrows) &&
 				
-				// TODO: && rpgClass.equals(rc.rpgClass) 
-				);
-		
+				baseAttackBonus.equals(rc.baseAttackBonus) &&
+				grapple.equals(rc.grapple) );
 	}
 
 	@Override
@@ -132,12 +132,11 @@ public class RpgCharacter implements Serializable {
 		sb.append(" id: ").append(id);
 		sb.append(" name: ").append(name);
 		
-		sb.append(" classes: [");
-		for (AbstractRpgClass c: classes.getAll()) {
-			sb.append(c.getClass().getName()).append(" - ").append(c.getClassLevel()).append(" ");
-		}
-		sb.append("]");
-		sb.append(attributes);
+		sb.append(" classes: ").append(classes);
+		sb.append(" attributes: ").append(attributes);
+		sb.append(" abilities: ").append(abilities);
+		sb.append(" defences: ").append(defences);
+		sb.append(" savingThrows: ").append(savingThrows);
 		
 		return sb.toString();
 	}

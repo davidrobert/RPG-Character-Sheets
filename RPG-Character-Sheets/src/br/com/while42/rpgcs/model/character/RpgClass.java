@@ -52,4 +52,15 @@ public class RpgClass implements Serializable {
 		return experience.equals(rc.experience) && rpgClass.equals(rc.rpgClass);
 	}
 	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder("");
+		
+		for (AbstractRpgClass c: rpgClass) {
+			sb.append(c.getClass().getName()).append("(").append(c.getClassLevel()).append(") ");
+		}
+		
+		return sb.toString();
+	}
+	
 }
