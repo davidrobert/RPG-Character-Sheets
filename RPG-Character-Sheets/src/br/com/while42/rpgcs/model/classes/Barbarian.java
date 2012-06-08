@@ -13,6 +13,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class Barbarian extends AbstractRpgClass {
+	private static final long serialVersionUID = 1L;
 	
 	private static final Set<TypeRpgReligion> religions = new HashSet<TypeRpgReligion>(Arrays.asList( TypeRpgReligion.KORD, TypeRpgReligion.OBAD_HAI, TypeRpgReligion.ERYTNUL ));
 	

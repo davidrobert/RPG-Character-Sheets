@@ -1,6 +1,10 @@
 package br.com.while42.rpgcs.model.character;
 
-public class SavingThrows {
+import java.io.Serializable;
+
+public class SavingThrows implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private Integer fortitude = 0;
 	private Integer reflex = 0;
 	private Integer throwsWill= 0;

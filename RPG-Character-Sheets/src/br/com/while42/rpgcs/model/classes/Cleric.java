@@ -11,6 +11,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseAttackBonuses;
 import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 public class Cleric extends AbstractRpgClass implements SpellsPerDay {
+	private static final long serialVersionUID = 1L;
 	
 	@Override
 	public HitDiceType getHitDice() {		

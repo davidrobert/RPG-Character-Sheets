@@ -1,5 +1,7 @@
 package br.com.while42.rpgcs.model.character;
 
+import java.io.Serializable;
+
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -10,7 +12,9 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 
 
-public class Attributes {
+public class Attributes implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private TypeRpgRace race;
 	private TypeRpgAlignment alignment;
 	private TypeRpgReligion religion = TypeRpgReligion.NONE;

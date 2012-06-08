@@ -14,6 +14,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 
 public class Fighter extends AbstractRpgClass {
+	private static final long serialVersionUID = 1L;
 	
 	private static final Set<TypeRpgReligion> religions = new HashSet<TypeRpgReligion>(Arrays.asList(
 			TypeRpgReligion.HEIRONEOUS, TypeRpgReligion.KORD, TypeRpgReligion.ST_CUTHBERT, TypeRpgReligion.HEXTOR, TypeRpgReligion.ERYTNUL ));

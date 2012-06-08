@@ -1,9 +1,12 @@
 package br.com.while42.rpgcs.model.character;
 
+import java.io.Serializable;
+
 import br.com.while42.rpgcs.model.abilities.modifier.AbilityModifier;
 
 
-public class Abilities {
+public class Abilities implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	private Integer strength = 0;
 	private Integer constitution = 0;

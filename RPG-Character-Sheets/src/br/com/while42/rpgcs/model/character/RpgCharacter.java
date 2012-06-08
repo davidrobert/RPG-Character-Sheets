@@ -141,4 +141,6 @@ public class RpgCharacter implements Serializable {
 		
 		return sb.toString();
 	}
+
+
 }

@@ -14,6 +14,7 @@ import br.com.while42.rpgcs.model.classes.bonuses.BaseSaveBonuses;
 
 
 public class Ranger extends AbstractRpgClass implements SpellsPerDay {
+	private static final long serialVersionUID = 1L;
 
 	private static final Set<TypeRpgReligion> religions = new HashSet<TypeRpgReligion>(Arrays.asList( TypeRpgReligion.EHLONNA, TypeRpgReligion.OBAD_HAI ));
 	

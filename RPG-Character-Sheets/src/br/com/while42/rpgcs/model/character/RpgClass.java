@@ -1,12 +1,15 @@
 package br.com.while42.rpgcs.model.character;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 
-public class RpgClass {
+public class RpgClass implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private Long experience = 0L;
 	private HashSet<AbstractRpgClass> rpgClass = new HashSet<AbstractRpgClass>();
 	

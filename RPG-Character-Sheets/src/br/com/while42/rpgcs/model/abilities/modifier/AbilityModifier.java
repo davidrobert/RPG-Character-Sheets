@@ -1,7 +1,10 @@
 package br.com.while42.rpgcs.model.abilities.modifier;
 
+import java.io.Serializable;
 
-public class AbilityModifier {
+
+public class AbilityModifier implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	public static final int MIN_MODIFIER = -5;
 	public static final int MIN_SCORE = 0;

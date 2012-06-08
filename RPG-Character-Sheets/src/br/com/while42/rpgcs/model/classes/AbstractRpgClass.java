@@ -1,5 +1,6 @@
 package br.com.while42.rpgcs.model.classes;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
@@ -12,7 +13,8 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 
-public abstract class AbstractRpgClass implements CharacterClass {
+public abstract class AbstractRpgClass implements CharacterClass, Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	protected int classLevel;
 	

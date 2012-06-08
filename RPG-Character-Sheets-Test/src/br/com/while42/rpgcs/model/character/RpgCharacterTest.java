@@ -1,9 +1,16 @@
 package br.com.while42.rpgcs.model.character;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.test.AndroidTestCase;
+import android.util.Log;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -28,7 +35,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 			rc.setName("Blob");
 			Attributes attr = rc.getAttributes();
-			
+
 			attr.setRace(TypeRpgRace.HUMAN);
 			attr.setAlignment(TypeRpgAlignment.NEUTRAL_EVIL);
 			attr.setReligion(TypeRpgReligion.NONE);
@@ -37,7 +44,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 			attr.setAge(40);
 			attr.setGender(TypeGender.MEN);
 			attr.setHeight(200);
-			attr.setWeight(120); 
+			attr.setWeight(120);
 			attr.setEye(TypeEyeColor.Brown);
 			attr.setHair(TypeHairColor.BLACK);
 			attr.setSkin(TypeSkinColor.PALE);
@@ -54,7 +61,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 			rc.setName("Deltorei");
 			Attributes attr = rc.getAttributes();
-			
+
 			attr.setRace(TypeRpgRace.HUMAN);
 			attr.setAlignment(TypeRpgAlignment.TRUE_NEUTRAL);
 			attr.setReligion(TypeRpgReligion.NONE);
@@ -62,7 +69,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 			attr.setSize(TypeRpgSize.MEDIUM);
 			attr.setAge(40);
 			attr.setGender(TypeGender.MEN);
-			attr.setHeight(200); 
+			attr.setHeight(200);
 			attr.setWeight(120);
 			attr.setEye(TypeEyeColor.Brown);
 			attr.setHair(TypeHairColor.BLACK);
@@ -80,7 +87,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 			rc.setName("Galadriel");
 			Attributes attr = rc.getAttributes();
-			
+
 			attr.setRace(TypeRpgRace.ELF);
 			attr.setAlignment(TypeRpgAlignment.TRUE_NEUTRAL);
 			attr.setReligion(TypeRpgReligion.OTHER);
@@ -88,8 +95,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 			attr.setSize(TypeRpgSize.MEDIUM);
 			attr.setAge(40);
 			attr.setGender(TypeGender.WOMAN);
-			attr.setHeight(200); 
-			attr.setWeight(120); 
+			attr.setHeight(200);
+			attr.setWeight(120);
 			attr.setEye(TypeEyeColor.Deep_Blue);
 			attr.setHair(TypeHairColor.WHITE);
 			attr.setSkin(TypeSkinColor.WHITE);
@@ -106,4 +113,52 @@ public class RpgCharacterTest extends AndroidTestCase {
 	public void testIsPersistent() {
 		assertFalse(new RpgCharacter().isPersistent());
 	}
+
+	public void testSerialize() {
+		RpgCharacter rpgcs1 = getList().get(0);
+		
+		byte[] serializeObject = serializeObject(rpgcs1);
+		Object deserializeObject = deserializeObject(serializeObject);
+		RpgCharacter rpgcs2 = (RpgCharacter) deserializeObject;
+
+		assertEquals(rpgcs1, rpgcs2);
+	}
+	
+	public static byte[] serializeObject(Object o) { 
+	    ByteArrayOutputStream bos = new ByteArrayOutputStream(); 
+	 
+	    try { 
+	      ObjectOutput out = new ObjectOutputStream(bos); 
+	      out.writeObject(o); 
+	      out.close(); 
+	 
+	      // Get the bytes of the serialized object 
+	      byte[] buf = bos.toByteArray(); 
+	 
+	      return buf; 
+	    } catch(IOException ioe) { 
+	      Log.e("serializeObject", "error", ioe); 
+	 
+	      return null; 
+	    } 
+	  } 
+
+	public static Object deserializeObject(byte[] b) { 
+	    try { 
+	      ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(b)); 
+	      Object object = in.readObject(); 
+	      in.close(); 
+	 
+	      return object; 
+	    } catch(ClassNotFoundException cnfe) { 
+	      Log.e("deserializeObject", "class not found error", cnfe); 
+	 
+	      return null; 
+	    } catch(IOException ioe) { 
+	      Log.e("deserializeObject", "io error", ioe); 
+	 
+	      return null; 
+	    } 
+	  } 
+	
 }

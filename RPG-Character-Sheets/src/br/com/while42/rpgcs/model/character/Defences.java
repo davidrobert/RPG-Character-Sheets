@@ -1,6 +1,10 @@
 package br.com.while42.rpgcs.model.character;
 
-public class Defences {
+import java.io.Serializable;
+
+public class Defences implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private Integer armorClass = 0;
 	private Integer hitPoints = 0;
 	private Integer currentHitPoints = 0;
