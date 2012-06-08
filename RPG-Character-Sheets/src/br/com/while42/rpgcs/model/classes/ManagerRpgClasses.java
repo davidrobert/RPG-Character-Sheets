@@ -13,7 +13,7 @@ import dalvik.system.DexClassLoader;
 import dalvik.system.DexFile;
 import dalvik.system.PathClassLoader;
 
-public class ManagerClasses {
+public class ManagerRpgClasses {
 	
 	public <T, K> List<K> getAll(Context context, String packageName, Class<T> superc) {
 
