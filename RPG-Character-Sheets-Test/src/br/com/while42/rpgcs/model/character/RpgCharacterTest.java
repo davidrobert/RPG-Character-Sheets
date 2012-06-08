@@ -52,6 +52,28 @@ public class RpgCharacterTest extends AndroidTestCase {
 			AbstractRpgClass barbarian = new Barbarian();
 			barbarian.setClassLevel(1);
 			rc.getRpgClasses().add(barbarian);
+			
+			Abilities ab = rc.getAbilities();
+			ab.setStrength(18);
+			ab.setDexterity(17);
+			ab.setIntelligence(16);
+			ab.setWisdom(15);
+			ab.setCharisma(14);
+			ab.setCharisma(13);
+			
+			Defences df = rc.getDefences();
+			df.setArmorClass(10);
+			df.setCurrentHitPoints(11);
+			df.setFlatFooted(12);
+			df.setHitPoints(13);
+			df.setInitiative(14);
+			df.setSpellResistance(15);
+			df.setTouch(16);
+			
+			SavingThrows st = rc.getSavingThrows();
+			st.setFortitude(10);
+			st.setReflex(11);
+			st.setThrowsWill(12);
 
 			rpgCharacterSheets.add(rc);
 		}
@@ -78,6 +100,28 @@ public class RpgCharacterTest extends AndroidTestCase {
 			AbstractRpgClass monk = new Monk();
 			monk.setClassLevel(20);
 			rc.getRpgClasses().add(monk);
+			
+			Abilities ab = rc.getAbilities();
+			ab.setStrength(18);
+			ab.setDexterity(17);
+			ab.setIntelligence(16);
+			ab.setWisdom(15);
+			ab.setCharisma(14);
+			ab.setCharisma(13);
+			
+			Defences df = rc.getDefences();
+			df.setArmorClass(10);
+			df.setCurrentHitPoints(11);
+			df.setFlatFooted(12);
+			df.setHitPoints(13);
+			df.setInitiative(14);
+			df.setSpellResistance(15);
+			df.setTouch(16);
+			
+			SavingThrows st = rc.getSavingThrows();
+			st.setFortitude(10);
+			st.setReflex(11);
+			st.setThrowsWill(12);
 
 			rpgCharacterSheets.add(rc);
 		}
@@ -104,6 +148,28 @@ public class RpgCharacterTest extends AndroidTestCase {
 			AbstractRpgClass sorcerer = new Sorcerer();
 			sorcerer.setClassLevel(ExperienceAndLevel.MAX_LEVEL);
 			rc.getRpgClasses().add(sorcerer);
+			
+			Abilities ab = rc.getAbilities();
+			ab.setStrength(18);
+			ab.setDexterity(17);
+			ab.setIntelligence(16);
+			ab.setWisdom(15);
+			ab.setCharisma(14);
+			ab.setCharisma(13);
+			
+			Defences df = rc.getDefences();
+			df.setArmorClass(10);
+			df.setCurrentHitPoints(11);
+			df.setFlatFooted(12);
+			df.setHitPoints(13);
+			df.setInitiative(14);
+			df.setSpellResistance(15);
+			df.setTouch(16);
+			
+			SavingThrows st = rc.getSavingThrows();
+			st.setFortitude(10);
+			st.setReflex(11);
+			st.setThrowsWill(12);
 
 			rpgCharacterSheets.add(rc);
 		}
