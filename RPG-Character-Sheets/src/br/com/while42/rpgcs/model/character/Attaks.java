@@ -43,4 +43,17 @@ public class Attaks implements Serializable {
 	public int hashCode() {
 		return abilities.hashCode() + attks.hashCode();
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(" attaks: [");
+		for (Attak a: attks) {
+			sb.append(a);
+		}
+		sb.append("]");
+		
+		return sb.toString();
+	}
 }
