@@ -26,6 +26,7 @@ public class RpgCharacter implements Serializable {
 	private Defences defences = new Defences();
 	private SavingThrows savingThrows = new SavingThrows();
 	private Skills skills = new Skills();
+	private Languages languages = new Languages();
 	private Money money = new Money();
 	
 	private Integer baseAttackBonus = 0;
@@ -113,6 +114,14 @@ public class RpgCharacter implements Serializable {
 		return savingThrows;
 	}
 	
+	public Languages getLanguages() {
+		return languages;
+	}
+
+	public void setLanguages(Languages languages) {
+		this.languages = languages;
+	}
+
 	public void setMoney(Money money) {
 		this.money = money;
 	}
@@ -179,6 +188,7 @@ public class RpgCharacter implements Serializable {
 				defences.equals(rc.defences) &&
 				savingThrows.equals(rc.savingThrows) &&
 				skills.equals(rc.skills) &&
+				languages.equals(rc.languages) &&
 				money.equals(rc.money) &&
 				
 				baseAttackBonus.equals(rc.baseAttackBonus) &&
@@ -198,6 +208,7 @@ public class RpgCharacter implements Serializable {
 		sb.append(" defences: ").append(defences);
 		sb.append(" savingThrows: ").append(savingThrows);
 		sb.append(" skills: ").append(skills);
+		sb.append(" languages: ").append(languages);
 		sb.append(" money: ").append(money);
 		
 		return sb.toString();
