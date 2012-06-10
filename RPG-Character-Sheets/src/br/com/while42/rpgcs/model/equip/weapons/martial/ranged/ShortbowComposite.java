@@ -17,7 +17,7 @@ public class ShortbowComposite extends AbstractMartialRangedWeapon {
 		base.setCost(75);
 		base.setCritical(3);
 		base.setRangeIncrement(21);
-		base.setWeight(1);
+		base.setWeight(1d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));

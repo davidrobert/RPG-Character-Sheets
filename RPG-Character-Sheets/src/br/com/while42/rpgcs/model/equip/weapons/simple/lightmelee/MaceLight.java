@@ -17,7 +17,7 @@ public class MaceLight extends AbstractSimpleLightMeleeWeapon {
 		base.setCost(5);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
-		base.setWeight(2);
+		base.setWeight(2d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));

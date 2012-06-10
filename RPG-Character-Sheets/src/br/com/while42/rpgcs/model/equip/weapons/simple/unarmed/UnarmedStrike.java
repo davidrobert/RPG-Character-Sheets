@@ -17,7 +17,7 @@ public class UnarmedStrike extends AbstractSimpleUnarmedWeapon {
 		base.setCost(0);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
-		base.setWeight(0);
+		base.setWeight(0d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d2));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d3));

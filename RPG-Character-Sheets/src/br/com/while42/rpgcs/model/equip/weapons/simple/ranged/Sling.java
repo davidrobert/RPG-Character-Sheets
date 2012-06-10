@@ -17,7 +17,7 @@ public class Sling extends AbstractSimpleRangedWeapon {
 		base.setCost(0);
 		base.setCritical(2);
 		base.setRangeIncrement(15);
-		base.setWeight(0);
+		base.setWeight(0d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d3));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d4));

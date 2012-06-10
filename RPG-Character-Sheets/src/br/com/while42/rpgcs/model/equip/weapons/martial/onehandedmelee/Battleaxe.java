@@ -17,7 +17,7 @@ public class Battleaxe extends AbstractMartialOneHandedMeleeWeapon {
 		base.setCost(10);
 		base.setCritical(3);
 		base.setRangeIncrement(0);
-		base.setWeight(3);
+		base.setWeight(3d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d6));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d8));

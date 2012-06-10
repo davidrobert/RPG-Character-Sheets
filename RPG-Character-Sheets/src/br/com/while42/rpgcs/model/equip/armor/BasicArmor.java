@@ -26,7 +26,7 @@ public class BasicArmor implements Armor {
 	}
 
 	@Override
-	public int getCost() {
+	public Integer getCost() {
 		return cost;
 	}
 	
@@ -80,7 +80,7 @@ public class BasicArmor implements Armor {
 	}
 
 	@Override
-	public double getWeight() {
+	public Double getWeight() {
 		return weight;
 	}
 

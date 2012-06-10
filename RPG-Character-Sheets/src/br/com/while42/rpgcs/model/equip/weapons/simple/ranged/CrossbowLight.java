@@ -17,7 +17,7 @@ public class CrossbowLight extends AbstractSimpleRangedWeapon {
 		base.setCost(35);
 		base.setCritical(2);
 		base.setRangeIncrement(24);
-		base.setWeight(2);
+		base.setWeight(2d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d6));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d8));

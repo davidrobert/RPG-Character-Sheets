@@ -17,7 +17,7 @@ public class SwordShort extends AbstractMartialLightMeleeWeapon {
 		base.setCost(10);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
-		base.setWeight(1);
+		base.setWeight(1d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));

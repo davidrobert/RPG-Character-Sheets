@@ -17,11 +17,11 @@ public class BasicWeapon implements Weapon {
 	
 	private SizeWeapon size;
 	
-	private int cost = 0;
+	private Integer cost = 0;
 	private Map<SizeWeapon, List<HitDice>> damage = new HashMap<SizeWeapon, List<HitDice>>();
-	private int critical = 0;
-	private int rangeIncrement = 0;
-	private double weight = 0.0;
+	private Integer critical = 0;
+	private Integer rangeIncrement = 0;
+	private Double weight = 0.0;
 	private Set<TypeWeapon> types = new HashSet<TypeWeapon>();
 	private CategorieWeapon categorie = null;
 	private CategorieUsefulnessWeapon categorieUsefulness = null;
@@ -38,11 +38,11 @@ public class BasicWeapon implements Weapon {
 	}
 	
 	@Override
-	public int getCost() {
+	public Integer getCost() {
 		return cost;
 	}
 
-	public void setCost(int cost) {
+	public void setCost(Integer cost) {
 		this.cost = cost;
 	}
 
@@ -91,11 +91,11 @@ public class BasicWeapon implements Weapon {
 	}
 
 	@Override
-	public double getWeight() {
+	public Double getWeight() {
 		return weight;
 	}
 
-	public void setWeight(double weight) {
+	public void setWeight(Double weight) {
 		this.weight = weight;
 	}
 
@@ -145,4 +145,31 @@ public class BasicWeapon implements Weapon {
 		return categorieEncumbrance;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+
+		if (!(o instanceof BasicWeapon))
+			return false;
+
+		BasicWeapon bw = (BasicWeapon) o;
+		
+		return 	codeName == bw.codeName &&
+				size.equals(bw.size) &&
+				cost.equals(bw.cost) &&
+				damage.equals(bw.damage) &&
+				critical.equals(bw.critical) &&
+				rangeIncrement.equals(bw.rangeIncrement) &&
+				weight.equals(bw.weight) &&
+				types.equals(bw.types) &&
+				((categorie == null && bw.categorie == null) || categorie.equals(bw.categorie)) &&
+				((categorieUsefulness == null && bw.categorieUsefulness == null) || categorieUsefulness.equals(bw.categorieUsefulness)) &&
+				((categorieEncumbrance == null && bw.categorieEncumbrance == null) || categorieEncumbrance.equals(bw.categorieEncumbrance));
+	}
+	
+	@Override
+	public int hashCode() {		
+		return codeName + size.hashCode() + cost.intValue() + damage.hashCode() + critical.intValue() + rangeIncrement.intValue() + weight.intValue() + types.hashCode();
+	}
 }

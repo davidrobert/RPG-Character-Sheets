@@ -17,7 +17,7 @@ public class Greataxe extends AbstractMartialTwoHandedMeleeWeapon {
 		base.setCost(20);
 		base.setCritical(3);
 		base.setRangeIncrement(0);
-		base.setWeight(6);
+		base.setWeight(6d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d10));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d12));

@@ -25,10 +25,10 @@ public class ExoticWeaponTest extends AndroidTestCase {
 	}
 	
 	public void testGetCost() throws Throwable {		
-		Assert.assertEquals( 2, new Kama().getCost());
-		Assert.assertEquals( 2, new Nunchaku().getCost());
-		Assert.assertEquals( 1, new Sai().getCost());
-		Assert.assertEquals( 3, new Siangham().getCost());
+		Assert.assertEquals( 2, new Kama().getCost().intValue());
+		Assert.assertEquals( 2, new Nunchaku().getCost().intValue());
+		Assert.assertEquals( 1, new Sai().getCost().intValue());
+		Assert.assertEquals( 3, new Siangham().getCost().intValue());
 		
 	}
 	

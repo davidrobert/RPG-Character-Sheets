@@ -17,7 +17,7 @@ public class Lance extends AbstractMartialTwoHandedMeleeWeapon {
 		base.setCost(10);
 		base.setCritical(3);
 		base.setRangeIncrement(0);
-		base.setWeight(5);
+		base.setWeight(5d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d6));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d8));

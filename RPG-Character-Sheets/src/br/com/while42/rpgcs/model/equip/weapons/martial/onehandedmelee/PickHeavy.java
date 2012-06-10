@@ -17,7 +17,7 @@ public class PickHeavy extends AbstractMartialOneHandedMeleeWeapon {
 		base.setCost(8);
 		base.setCritical(4);
 		base.setRangeIncrement(0);
-		base.setWeight(3);
+		base.setWeight(3d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d6));

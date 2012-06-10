@@ -17,7 +17,7 @@ public class Greatclub extends AbstractMartialTwoHandedMeleeWeapon {
 		base.setCost(5);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
-		base.setWeight(4);
+		base.setWeight(4d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d8));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d10));

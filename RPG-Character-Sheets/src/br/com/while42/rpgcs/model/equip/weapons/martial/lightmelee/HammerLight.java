@@ -17,7 +17,7 @@ public class HammerLight extends AbstractMartialLightMeleeWeapon {
 		base.setCost(1);
 		base.setCritical(2);
 		base.setRangeIncrement(6);
-		base.setWeight(1);
+		base.setWeight(1d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d3));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d4));

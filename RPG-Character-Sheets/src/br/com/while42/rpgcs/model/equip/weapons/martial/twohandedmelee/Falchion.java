@@ -17,7 +17,7 @@ public class Falchion extends AbstractMartialTwoHandedMeleeWeapon {
 		base.setCost(75);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
-		base.setWeight(4);
+		base.setWeight(4d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(1, HitDiceType.d6));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(2, HitDiceType.d4));

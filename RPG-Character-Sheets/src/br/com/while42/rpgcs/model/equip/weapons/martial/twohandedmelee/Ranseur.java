@@ -17,7 +17,7 @@ public class Ranseur extends AbstractMartialTwoHandedMeleeWeapon {
 		base.setCost(10);
 		base.setCritical(3);
 		base.setRangeIncrement(0);
-		base.setWeight(6);
+		base.setWeight(6d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(1, HitDiceType.d6));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(2, HitDiceType.d4));

@@ -17,7 +17,7 @@ public class Trident extends AbstractMartialOneHandedMeleeWeapon {
 		base.setCost(15);
 		base.setCritical(2);
 		base.setRangeIncrement(3);
-		base.setWeight(2);
+		base.setWeight(2d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d6));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d8));

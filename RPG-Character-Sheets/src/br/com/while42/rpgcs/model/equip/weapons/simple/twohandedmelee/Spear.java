@@ -17,7 +17,7 @@ public class Spear extends AbstractSimpleTwoHandedMeleeWeapon {
 		base.setCost(2);
 		base.setCritical(3);
 		base.setRangeIncrement(6);
-		base.setWeight(3);
+		base.setWeight(3d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d6));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d8));

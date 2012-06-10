@@ -17,7 +17,7 @@ public class CrossbowHeavy extends AbstractSimpleRangedWeapon {
 		base.setCost(50);
 		base.setCritical(2);
 		base.setRangeIncrement(36);
-		base.setWeight(4);
+		base.setWeight(4d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d8));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d10));

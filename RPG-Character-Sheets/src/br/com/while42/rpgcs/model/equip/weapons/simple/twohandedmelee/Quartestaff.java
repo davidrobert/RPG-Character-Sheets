@@ -17,7 +17,7 @@ public class Quartestaff extends AbstractSimpleTwoHandedMeleeWeapon {
 		base.setCost(0);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
-		base.setWeight(2);
+		base.setWeight(2d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d4));

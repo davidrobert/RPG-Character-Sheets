@@ -14,7 +14,7 @@ public abstract class AbstractArmor implements Armor {
 	}
 
 	@Override
-	public int getCost() {
+	public Integer getCost() {
 		return armor.getCost();
 	}
 
@@ -44,7 +44,7 @@ public abstract class AbstractArmor implements Armor {
 	}
 
 	@Override
-	public double getWeight() {
+	public Double getWeight() {
 		return armor.getWeight();
 	}
 }

@@ -20,7 +20,7 @@ public abstract class AbstractWeapon implements Weapon {
 	}
 
 	@Override
-	public int getCost() {
+	public Integer getCost() {
 		return base.getCost();
 	}
 
@@ -50,12 +50,29 @@ public abstract class AbstractWeapon implements Weapon {
 	}
 
 	@Override
-	public double getWeight() {
+	public Double getWeight() {
 		return base.getWeight();
 	}
 
 	@Override
 	public Set<TypeWeapon> getType() {
 		return base.getType();
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+
+		if (!(o instanceof AbstractWeapon))
+			return false;
+
+		AbstractWeapon aw = (AbstractWeapon) o;
+		return base.equals(aw.base);
+	}
+	
+	@Override
+	public int hashCode() {		
+		return base.hashCode();
 	}
 }

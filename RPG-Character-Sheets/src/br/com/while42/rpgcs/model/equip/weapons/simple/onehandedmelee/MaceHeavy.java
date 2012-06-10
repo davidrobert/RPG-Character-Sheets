@@ -17,7 +17,7 @@ public class MaceHeavy extends AbstractSimpleOneHandedMeleeWeapon {
 		base.setCost(12);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
-		base.setWeight(4);
+		base.setWeight(4d);
 		
 		base.addDamage(SizeWeapon.SMALL, new HitDice(HitDiceType.d6));
 		base.addDamage(SizeWeapon.MEDIUM, new HitDice(HitDiceType.d8));
