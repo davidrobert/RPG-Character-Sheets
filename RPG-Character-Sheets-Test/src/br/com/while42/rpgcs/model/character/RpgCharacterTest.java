@@ -17,11 +17,23 @@ import br.com.while42.rpgcs.model.classes.Barbarian;
 import br.com.while42.rpgcs.model.classes.Monk;
 import br.com.while42.rpgcs.model.classes.Sorcerer;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
+import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.simple.ranged.CrossbowLight;
+import br.com.while42.rpgcs.model.equip.weapons.simple.ranged.Dart;
 
 public class RpgCharacterTest extends AndroidTestCase {
 
 	public static List<RpgCharacter> getList() {
 		List<RpgCharacter> rpgCharacterSheets = new ArrayList<RpgCharacter>();
+		
+		{
+			RpgCharacter rc = new RpgCharacter();
+			
+			Attaks aks = rc.getAttaks();			
+			aks.add(new Dart(), SizeWeapon.MEDIUM);;
+
+			rpgCharacterSheets.add(rc);
+		}
 
 		{
 			RpgCharacter rc = new RpgCharacter();
@@ -67,6 +79,16 @@ public class RpgCharacterTest extends AndroidTestCase {
 			st.setFortitude(10);
 			st.setReflex(11);
 			st.setThrowsWill(12);
+			
+			Money money = rc.getMoney();
+			money.setCopperPiece(10L);
+			money.setGoldPiece(100L);
+			money.setPlatinumPiece(1000L);
+			money.setSilverPiece(10000L);
+			
+			Attaks aks = rc.getAttaks();
+			aks.add(new Dart(), SizeWeapon.MEDIUM);
+			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
 
 			rpgCharacterSheets.add(rc);
 		}
@@ -115,6 +137,16 @@ public class RpgCharacterTest extends AndroidTestCase {
 			st.setFortitude(10);
 			st.setReflex(11);
 			st.setThrowsWill(12);
+			
+			Money money = rc.getMoney();
+			money.setCopperPiece(11L);
+			money.setGoldPiece(101L);
+			money.setPlatinumPiece(1001L);
+			money.setSilverPiece(10001L);
+			
+			Attaks aks = rc.getAttaks();
+			aks.add(new Dart(), SizeWeapon.MEDIUM);
+			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
 
 			rpgCharacterSheets.add(rc);
 		}
@@ -163,6 +195,16 @@ public class RpgCharacterTest extends AndroidTestCase {
 			st.setFortitude(10);
 			st.setReflex(11);
 			st.setThrowsWill(12);
+			
+			Money money = rc.getMoney();
+			money.setCopperPiece(20L);
+			money.setGoldPiece(200L);
+			money.setPlatinumPiece(2000L);
+			money.setSilverPiece(20000L);
+			
+			Attaks aks = rc.getAttaks();
+			aks.add(new Dart(), SizeWeapon.MEDIUM);
+			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
 
 			rpgCharacterSheets.add(rc);
 		}
@@ -173,13 +215,22 @@ public class RpgCharacterTest extends AndroidTestCase {
 		assertFalse(new RpgCharacter().isPersistent());
 	}
 
-	public void testSerialize() {
+	public void testBasicSerialize() {
 		RpgCharacter rpgcs1 = getList().get(0);
 		
 		byte[] serializeObject = RpgCharacter.serialize(rpgcs1);
 		RpgCharacter rpgcs2 = RpgCharacter.deserialize(serializeObject);
 
 		assertEquals(rpgcs1, rpgcs2);
+	}
+	
+	public void testSerialize() {
+		for (RpgCharacter rc: getList()) {
+			byte[] serializeObject = RpgCharacter.serialize(rc);
+			RpgCharacter rc2 = RpgCharacter.deserialize(serializeObject);
+
+			assertEquals(rc, rc2);
+		}
 	}
 	
 }
