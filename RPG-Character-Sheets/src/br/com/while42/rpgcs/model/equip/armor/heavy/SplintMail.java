@@ -5,6 +5,7 @@ import br.com.while42.rpgcs.model.equip.armor.Armor;
 import br.com.while42.rpgcs.model.equip.armor.BasicArmor;
 
 public class SplintMail extends AbstractHeavyArmor implements Armor {
+	private static final long serialVersionUID = 1L;
 
 	private static final BasicArmor armor;
 	static {

@@ -5,6 +5,7 @@ import br.com.while42.rpgcs.model.equip.armor.Armor;
 import br.com.while42.rpgcs.model.equip.armor.BasicArmor;
 
 public class ShieldLightSteel extends AbstractShieldArmor implements Armor {
+	private static final long serialVersionUID = 1L;
 
 	private static final BasicArmor armor;
 	static {
@@ -15,7 +16,7 @@ public class ShieldLightSteel extends AbstractShieldArmor implements Armor {
 		armor.setArmorCheckPenalty(-1);
 		armor.setArcaneSpellFailureChance(5);
 		armor.setSpeed(0);
-		armor.setWeight(3);
+		armor.setWeight(3.0);
 	}
 	
 	public ShieldLightSteel() {

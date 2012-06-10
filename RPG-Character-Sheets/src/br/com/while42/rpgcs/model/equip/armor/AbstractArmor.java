@@ -1,6 +1,8 @@
 package br.com.while42.rpgcs.model.equip.armor;
 
+
 public abstract class AbstractArmor implements Armor {
+	private static final long serialVersionUID = 1L;
 	
 	private BasicArmor armor;
 
@@ -19,32 +21,49 @@ public abstract class AbstractArmor implements Armor {
 	}
 
 	@Override
-	public int getArmorBonus() {
+	public Integer getArmorBonus() {
 		return armor.getArmorBonus();
 	}
 
 	@Override
-	public int getMaximumDexBonus() {
+	public Integer getMaximumDexBonus() {
 		return armor.getMaximumDexBonus();
 	}
 
 	@Override
-	public int getArmorCheckPenalty() {
+	public Integer getArmorCheckPenalty() {
 		return armor.getArmorCheckPenalty();
 	}
 
 	@Override
-	public int getArcaneSpellFailureChance() {
+	public Integer getArcaneSpellFailureChance() {
 		return armor.getArcaneSpellFailureChance();
 	}
 
 	@Override
-	public int getSpeed() {
+	public Integer getSpeed() {
 		return armor.getSpeed();
 	}
 
 	@Override
 	public Double getWeight() {
 		return armor.getWeight();
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+
+		if (!(o instanceof AbstractArmor))
+			return false;
+
+		AbstractArmor aa = (AbstractArmor) o;
+		return armor.equals(aa.armor);
+	}
+	
+	@Override
+	public int hashCode() {
+		return armor.hashCode();
 	}
 }

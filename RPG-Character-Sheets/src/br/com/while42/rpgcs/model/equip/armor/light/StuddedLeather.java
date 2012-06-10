@@ -5,6 +5,7 @@ import br.com.while42.rpgcs.model.equip.armor.Armor;
 import br.com.while42.rpgcs.model.equip.armor.BasicArmor;
 
 public class StuddedLeather extends AbstractLightArmor implements Armor {
+	private static final long serialVersionUID = 1L;
 
 	private static final BasicArmor armor;
 	static {
@@ -15,7 +16,7 @@ public class StuddedLeather extends AbstractLightArmor implements Armor {
 		armor.setArmorCheckPenalty(-1);
 		armor.setArcaneSpellFailureChance(15);
 		armor.setSpeed(30);
-		armor.setWeight(10);
+		armor.setWeight(10.0);
 	}
 	
 	public StuddedLeather() {

@@ -5,6 +5,7 @@ import br.com.while42.rpgcs.model.equip.armor.Armor;
 import br.com.while42.rpgcs.model.equip.armor.BasicArmor;
 
 public class ShieldHeavyWooden extends AbstractShieldArmor implements Armor {
+	private static final long serialVersionUID = 1L;
 
 	private static final BasicArmor armor;
 	static {
@@ -15,7 +16,7 @@ public class ShieldHeavyWooden extends AbstractShieldArmor implements Armor {
 		armor.setArmorCheckPenalty(-2);
 		armor.setArcaneSpellFailureChance(15);
 		armor.setSpeed(0);
-		armor.setWeight(5);
+		armor.setWeight(5.0);
 	}
 	
 	public ShieldHeavyWooden() {

@@ -12,8 +12,6 @@ import android.util.Log;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.equip.Equipments;
-import br.com.while42.rpgcs.model.equip.armor.Armor;
-import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 
 public class RpgCharacter implements Serializable {
 
@@ -33,9 +31,9 @@ public class RpgCharacter implements Serializable {
 	private Money money = new Money();
 	
 	private Attaks attaks = new Attaks(abilities);
+	private Armors armors = new Armors();
 	
-	private Equipments<Armor> armors = new Equipments<Armor>();
-	private Equipments<Weapon> weapons = new Equipments<Weapon>();
+	private Equipments otherEquipments = new Equipments();
 	
 	private Integer baseAttackBonus = 0;
 	private Integer grapple = 0;
@@ -207,6 +205,9 @@ public class RpgCharacter implements Serializable {
 				languages.equals(rc.languages) &&
 				money.equals(rc.money) &&
 				attaks.equals(rc.attaks) &&
+				armors.equals(rc.armors) &&
+				
+				otherEquipments.equals(rc.otherEquipments) &&
 				
 				baseAttackBonus.equals(rc.baseAttackBonus) &&
 				grapple.equals(rc.grapple) );
@@ -214,7 +215,7 @@ public class RpgCharacter implements Serializable {
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder("");
+		StringBuilder sb = new StringBuilder();
 		
 		sb.append(" id: ").append(id);
 		sb.append(" name: ").append(name);
@@ -228,6 +229,8 @@ public class RpgCharacter implements Serializable {
 		sb.append(" languages: ").append(languages);
 		sb.append(" money: ").append(money);
 		sb.append(" attaks: ").append(attaks);
+		sb.append(" armors: ").append(armors);
+		sb.append(" otherEquipments: ").append(otherEquipments);
 		
 		return sb.toString();
 	}

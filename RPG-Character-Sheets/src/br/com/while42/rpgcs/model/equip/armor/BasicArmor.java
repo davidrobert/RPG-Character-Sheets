@@ -1,16 +1,16 @@
 package br.com.while42.rpgcs.model.equip.armor;
 
 public class BasicArmor implements Armor {
+	private static final long serialVersionUID = 1L;
 	
 	private final int codeName;
-	private int cost = 0;
-	private int armorBonus = 0;
-	private int maximumDexBonus = 0;
-	private int armorCheckPenalty = 0;
-	private int arcaneSpellFailureChance = 0;
-	private int speed = 0;
-	
-	private double weight = 0.0;
+	private Integer cost = 0;
+	private Integer armorBonus = 0;
+	private Integer maximumDexBonus = 0;
+	private Integer armorCheckPenalty = 0;
+	private Integer arcaneSpellFailureChance = 0;
+	private Integer speed = 0;
+	private Double weight = 0.0;
 
 	public BasicArmor(int codeName) {
 		this.codeName = codeName;
@@ -21,7 +21,7 @@ public class BasicArmor implements Armor {
 		return codeName;
 	}
 	
-	public void setCost(int cost) {
+	public void setCost(Integer cost) {
 		this.cost = cost;
 	}
 
@@ -30,12 +30,12 @@ public class BasicArmor implements Armor {
 		return cost;
 	}
 	
-	public void setArmorBonus(int armorBonus) {
+	public void setArmorBonus(Integer armorBonus) {
 		this.armorBonus = armorBonus;
 	}
 	
 	@Override
-	public int getArmorBonus() {
+	public Integer getArmorBonus() {
 		return armorBonus;
 	}
 
@@ -44,16 +44,16 @@ public class BasicArmor implements Armor {
 	}
 
 	@Override
-	public int getMaximumDexBonus() {
+	public Integer getMaximumDexBonus() {
 		return maximumDexBonus;
 	}
 	
-	public void setArmorCheckPenalty(int armorCheckPenalty) {
+	public void setArmorCheckPenalty(Integer armorCheckPenalty) {
 		this.armorCheckPenalty = armorCheckPenalty;
 	}
 
 	@Override
-	public int getArmorCheckPenalty() {
+	public Integer getArmorCheckPenalty() {
 		return armorCheckPenalty;
 	}
 	
@@ -62,7 +62,7 @@ public class BasicArmor implements Armor {
 	}
 
 	@Override
-	public int getArcaneSpellFailureChance() {
+	public Integer getArcaneSpellFailureChance() {
 		return arcaneSpellFailureChance;
 	}
 	
@@ -71,11 +71,11 @@ public class BasicArmor implements Armor {
 	}
 	
 	@Override
-	public int getSpeed() {
+	public Integer getSpeed() {
 		return speed;
 	}
 
-	public void setWeight(double weight) {
+	public void setWeight(Double weight) {
 		this.weight = weight;
 	}
 
@@ -88,5 +88,30 @@ public class BasicArmor implements Armor {
 	public CategorieArmor getType() {
 		return null;
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+			if (this == o)
+				return true;
 
+			if (!(o instanceof BasicArmor))
+				return false;
+
+			BasicArmor ba = (BasicArmor) o;
+			
+		return codeName == ba.codeName &&
+				cost.equals(ba.cost) &&
+				armorBonus.equals(ba.armorBonus) &&
+				maximumDexBonus.equals(ba.maximumDexBonus) &&
+				armorCheckPenalty.equals(armorCheckPenalty) &&
+				arcaneSpellFailureChance.equals(arcaneSpellFailureChance) &&
+				speed.equals(speed) &&
+				weight.equals(weight);
+	}
+
+	@Override
+	public int hashCode() {
+		return codeName + cost.intValue() + armorBonus.intValue() + maximumDexBonus.intValue() + armorCheckPenalty.intValue() + 
+				arcaneSpellFailureChance.intValue() + speed.intValue() + weight.intValue();
+	}
 }
