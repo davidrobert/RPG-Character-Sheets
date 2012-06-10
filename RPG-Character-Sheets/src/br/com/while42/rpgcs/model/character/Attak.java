@@ -57,4 +57,15 @@ public class Attak implements Serializable {
 	public int hashCode() {
 		return weapon.hashCode() + size.hashCode() + observation.hashCode();
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(" weapon: ").append(weapon.toString());
+		sb.append(" size: ").append(size);
+		sb.append(" observation: ").append(observation);
+		
+		return sb.toString();
+	}
 }
