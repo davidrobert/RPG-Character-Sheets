@@ -9,6 +9,7 @@ import br.com.while42.rpgcs.model.equip.Equipment;
 
 public interface Weapon extends Equipment, TypeCode {
 	
+	public SizeWeapon getSize();
 	public List<HitDice> getDamage();
 	public List<HitDice> getDamage(SizeWeapon size);
 	public int getCritical();

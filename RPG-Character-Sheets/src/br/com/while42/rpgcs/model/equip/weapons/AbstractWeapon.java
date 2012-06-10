@@ -24,6 +24,11 @@ public abstract class AbstractWeapon implements Weapon {
 	}
 
 	@Override
+	public SizeWeapon getSize() {
+		return base.getSize();
+	}
+	
+	@Override
 	public List<HitDice> getDamage() {
 		return base.getDamage(SizeWeapon.MEDIUM);
 	}

@@ -13,6 +13,9 @@ import br.com.while42.rpgcs.model.HitDice;
 public class BasicWeapon implements Weapon {
 	
 	private final int codeName;
+	
+	private SizeWeapon size;
+	
 	private int cost = 0;
 	private Map<SizeWeapon, List<HitDice>> damage = new HashMap<SizeWeapon, List<HitDice>>();
 	private int critical = 0;
@@ -25,8 +28,14 @@ public class BasicWeapon implements Weapon {
 
 	public BasicWeapon(int codeName) {
 		this.codeName = codeName;
+		this.size = SizeWeapon.MEDIUM;
 	}
 
+	public BasicWeapon(int codeName, SizeWeapon size) {
+		this.codeName = codeName;
+		this.size = size;
+	}
+	
 	@Override
 	public int getCost() {
 		return cost;
@@ -37,8 +46,13 @@ public class BasicWeapon implements Weapon {
 	}
 
 	@Override
+	public SizeWeapon getSize() {
+		return size;
+	}
+	
+	@Override
 	public List<HitDice> getDamage() {
-		return getDamage(SizeWeapon.MEDIUM);
+		return getDamage(size);
 	}
 
 	@Override
