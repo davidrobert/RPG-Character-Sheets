@@ -11,6 +11,9 @@ import java.io.Serializable;
 import android.util.Log;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
+import br.com.while42.rpgcs.model.equip.Equipments;
+import br.com.while42.rpgcs.model.equip.armor.Armor;
+import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 
 public class RpgCharacter implements Serializable {
 
@@ -28,6 +31,9 @@ public class RpgCharacter implements Serializable {
 	private Skills skills = new Skills();
 	private Languages languages = new Languages();
 	private Money money = new Money();
+	
+	private Equipments<Armor> armors = new Equipments<Armor>();
+	private Equipments<Weapon> weapons = new Equipments<Weapon>();
 	
 	private Integer baseAttackBonus = 0;
 	private Integer grapple = 0;

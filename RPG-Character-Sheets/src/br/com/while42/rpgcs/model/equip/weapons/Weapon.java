@@ -5,18 +5,16 @@ import java.util.Set;
 
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.TypeCode;
+import br.com.while42.rpgcs.model.equip.Equipment;
 
-public interface Weapon extends TypeCode {
+public interface Weapon extends Equipment, TypeCode {
 	
-	public int getCost();
 	public List<HitDice> getDamage();
 	public List<HitDice> getDamage(SizeWeapon size);
 	public int getCritical();
 	public int getRangeIncrement();
-	public double getWeight();
 	public CategorieWeapon getCategorie();
 	public CategorieUsefulnessWeapon getCategorieUsefulness();
 	public CategorieEncumbranceWeapon getCategorieEncumbrance();
 	public Set<TypeWeapon> getType();
-	
 }
