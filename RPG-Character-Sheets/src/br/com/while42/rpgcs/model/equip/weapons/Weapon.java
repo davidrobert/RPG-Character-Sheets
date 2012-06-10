@@ -1,5 +1,6 @@
 package br.com.while42.rpgcs.model.equip.weapons;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
@@ -7,7 +8,7 @@ import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.TypeCode;
 import br.com.while42.rpgcs.model.equip.Equipment;
 
-public interface Weapon extends Equipment, TypeCode {
+public interface Weapon extends Equipment, TypeCode, Serializable {
 	
 	public SizeWeapon getSize();
 	public List<HitDice> getDamage();

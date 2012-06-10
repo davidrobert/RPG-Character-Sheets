@@ -19,6 +19,7 @@ public class Attak implements Serializable {
 	public Attak(Weapon weapon, SizeWeapon size, Abilities abilities) {
 		this.weapon = weapon;
 		this.size = size;
+		this.observation = new String();
 	}
 	
 	public int getCodeName() {

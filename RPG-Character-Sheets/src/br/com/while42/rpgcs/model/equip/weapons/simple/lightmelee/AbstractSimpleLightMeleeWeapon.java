@@ -7,6 +7,7 @@ import br.com.while42.rpgcs.model.equip.weapons.simple.AbstractSimpleWeapon;
 
 
 public abstract class AbstractSimpleLightMeleeWeapon extends AbstractSimpleWeapon {
+	private static final long serialVersionUID = 1L;
 	
 	public AbstractSimpleLightMeleeWeapon(BasicWeapon base) {
 		super(base);

@@ -11,6 +11,7 @@ import java.util.Set;
 import br.com.while42.rpgcs.model.HitDice;
 
 public class BasicWeapon implements Weapon {
+	private static final long serialVersionUID = 1L;
 	
 	private final int codeName;
 	

@@ -1,6 +1,9 @@
 package br.com.while42.rpgcs.model;
 
-public class HitDice {
+import java.io.Serializable;
+
+public class HitDice implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	private int count;
 	private HitDiceType dice;

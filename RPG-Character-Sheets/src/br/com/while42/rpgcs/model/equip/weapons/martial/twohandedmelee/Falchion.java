@@ -8,6 +8,7 @@ import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 
 public class Falchion extends AbstractMartialTwoHandedMeleeWeapon {
+	private static final long serialVersionUID = 1L;
 	
 	private static BasicWeapon base;
 

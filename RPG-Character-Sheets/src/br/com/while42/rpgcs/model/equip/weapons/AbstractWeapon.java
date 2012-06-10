@@ -6,6 +6,7 @@ import java.util.Set;
 import br.com.while42.rpgcs.model.HitDice;
 
 public abstract class AbstractWeapon implements Weapon {
+	private static final long serialVersionUID = 1L;
 
 	private BasicWeapon base;
 

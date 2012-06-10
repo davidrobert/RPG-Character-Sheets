@@ -6,6 +6,7 @@ import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.exotic.AbstractExoticWeapon;
 
 public abstract class AbstractExoticRangedWeapon extends AbstractExoticWeapon {
+	private static final long serialVersionUID = 1L;
 
 	public AbstractExoticRangedWeapon(BasicWeapon base) {
 		super(base);

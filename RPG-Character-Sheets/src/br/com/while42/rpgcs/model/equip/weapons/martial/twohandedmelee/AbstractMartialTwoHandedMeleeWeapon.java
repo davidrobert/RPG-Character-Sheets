@@ -6,6 +6,7 @@ import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.martial.AbstractMartialWeapon;
 
 public abstract class AbstractMartialTwoHandedMeleeWeapon extends AbstractMartialWeapon {
+	private static final long serialVersionUID = 1L;
 
 	public AbstractMartialTwoHandedMeleeWeapon(BasicWeapon base) {
 		super(base);

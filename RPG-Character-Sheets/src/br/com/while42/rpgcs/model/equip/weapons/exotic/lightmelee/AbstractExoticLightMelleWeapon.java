@@ -6,6 +6,7 @@ import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
 
 public abstract class AbstractExoticLightMelleWeapon extends AbstractExoticWeapon {
+	private static final long serialVersionUID = 1L;
 
 	public AbstractExoticLightMelleWeapon(BasicWeapon base) {
 		super(base);

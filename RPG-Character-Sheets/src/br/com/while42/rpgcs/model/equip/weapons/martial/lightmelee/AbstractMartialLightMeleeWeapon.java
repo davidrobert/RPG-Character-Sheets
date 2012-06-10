@@ -6,6 +6,7 @@ import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.martial.AbstractMartialWeapon;
 
 public abstract class AbstractMartialLightMeleeWeapon extends AbstractMartialWeapon {
+	private static final long serialVersionUID = 1L;
 
 	public AbstractMartialLightMeleeWeapon(BasicWeapon base) {
 		super(base);
