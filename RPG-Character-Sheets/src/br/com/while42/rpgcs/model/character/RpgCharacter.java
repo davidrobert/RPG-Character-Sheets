@@ -32,6 +32,8 @@ public class RpgCharacter implements Serializable {
 	private Languages languages = new Languages();
 	private Money money = new Money();
 	
+	private Attaks attaks = new Attaks(abilities);
+	
 	private Equipments<Armor> armors = new Equipments<Armor>();
 	private Equipments<Weapon> weapons = new Equipments<Weapon>();
 	
@@ -136,6 +138,14 @@ public class RpgCharacter implements Serializable {
 		return money;
 	}
 	
+	public void setAttaks(Attaks attaks) {
+		this.attaks = attaks;
+	}
+	
+	public Attaks getAttaks() {
+		return attaks;
+	}
+	
 	public static byte[] serialize(RpgCharacter rpgCharacter) { 
 	    ByteArrayOutputStream bos = new ByteArrayOutputStream(); 
 	 
@@ -196,6 +206,7 @@ public class RpgCharacter implements Serializable {
 				skills.equals(rc.skills) &&
 				languages.equals(rc.languages) &&
 				money.equals(rc.money) &&
+				attaks.equals(rc.attaks) &&
 				
 				baseAttackBonus.equals(rc.baseAttackBonus) &&
 				grapple.equals(rc.grapple) );
@@ -216,6 +227,7 @@ public class RpgCharacter implements Serializable {
 		sb.append(" skills: ").append(skills);
 		sb.append(" languages: ").append(languages);
 		sb.append(" money: ").append(money);
+		sb.append(" attaks: ").append(attaks);
 		
 		return sb.toString();
 	}
