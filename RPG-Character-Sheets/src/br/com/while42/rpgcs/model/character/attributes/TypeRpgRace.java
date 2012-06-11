@@ -28,6 +28,7 @@ public enum TypeRpgRace implements TypeCode {
 		this.race = race;
 	}
 	
+	@Override
 	public int getCodeName() {
 		return nameCode;
 	}

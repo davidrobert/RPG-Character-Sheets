@@ -56,6 +56,7 @@ public enum TypeRpgSkill implements TypeCode {
 		this.nameCode = nameCode;
 	}
 
+	@Override
 	public int getCodeName() {
 		return nameCode;
 	}

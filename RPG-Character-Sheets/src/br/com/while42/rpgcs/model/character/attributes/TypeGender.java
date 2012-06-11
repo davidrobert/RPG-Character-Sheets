@@ -13,6 +13,7 @@ public enum TypeGender implements TypeCode {
 		this.nameCode = nameCode;
 	}
 
+	@Override
 	public int getCodeName() {
 		return nameCode;
 	}

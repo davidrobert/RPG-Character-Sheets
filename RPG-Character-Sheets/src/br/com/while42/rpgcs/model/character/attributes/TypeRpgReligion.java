@@ -44,6 +44,7 @@ public enum TypeRpgReligion implements TypeCode {
 		this.alignment = alignment;
 	}
 
+	@Override
 	public int getCodeName() {
 		return nameCode;
 	}
