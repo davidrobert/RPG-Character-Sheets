@@ -15,6 +15,7 @@ public class EspecialWeapon extends AbstractWeapon implements Weapon {
 	
 	protected EspecialWeapon(String name, BasicWeapon base) {
 		super(base);
+		this.base = base;
 		this.name = name;
 	}
 

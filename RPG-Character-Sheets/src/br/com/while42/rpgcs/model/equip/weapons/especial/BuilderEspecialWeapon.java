@@ -1,5 +1,9 @@
 package br.com.while42.rpgcs.model.equip.weapons.especial;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
@@ -14,7 +18,8 @@ public class BuilderEspecialWeapon {
 	private int range;
 	private double weight;
 	private SizeWeapon size;
-	private TypeWeapon type;
+	private HitDice damage;
+	private Set<TypeWeapon> types = new HashSet<TypeWeapon>();;
 	private CategorieEncumbranceWeapon categorieEncunbrance;
 	private CategorieUsefulnessWeapon categorieUsefulness;
 	
@@ -26,77 +31,92 @@ public class BuilderEspecialWeapon {
 		public BuilderEspecialWeaponWithName(String n) {
 			name = n;
 		}
-		public BuilderEspecialWeaponWithNameCost setCost(int cost) {
-			return new BuilderEspecialWeaponWithNameCost(cost);
+		public BuilderEspecialWeaponWithCost setCost(int cost) {
+			return new BuilderEspecialWeaponWithCost(cost);
 		}
 	}
 
-	public class BuilderEspecialWeaponWithNameCost {
-		public BuilderEspecialWeaponWithNameCost(int c) {
+	public class BuilderEspecialWeaponWithCost {
+		public BuilderEspecialWeaponWithCost(int c) {
 			cost = c;
 		}
-		public BuilderEspecialWeaponWithNameCostCritical setCritical(int critical) {
-			return new BuilderEspecialWeaponWithNameCostCritical(critical);
+		public BuilderEspecialWeaponWithCritical setCritical(int critical) {
+			return new BuilderEspecialWeaponWithCritical(critical);
 		}
 	}
 	
-	public class BuilderEspecialWeaponWithNameCostCritical {
-		public BuilderEspecialWeaponWithNameCostCritical(int c) {
+	public class BuilderEspecialWeaponWithCritical {
+		public BuilderEspecialWeaponWithCritical(int c) {
 			critical = c;
 		}
-		public BuilderEspecialWeaponWithNameCostCriticalRange setRangeIncrement(int range) {
-			return new BuilderEspecialWeaponWithNameCostCriticalRange(range);
+		public BuilderEspecialWeaponWithRange setRangeIncrement(int range) {
+			return new BuilderEspecialWeaponWithRange(range);
 		}
 	}
 	
-	public class BuilderEspecialWeaponWithNameCostCriticalRange {
-		public BuilderEspecialWeaponWithNameCostCriticalRange(int r) {
+	public class BuilderEspecialWeaponWithRange {
+		public BuilderEspecialWeaponWithRange(int r) {
 			range = r;
 		}
-		public BuilderEspecialWeaponWithNameCostCriticalRangeWeight setWeight(double weight) {
-			return new BuilderEspecialWeaponWithNameCostCriticalRangeWeight(weight);
+		public BuilderEspecialWeaponWithWeight setWeight(double weight) {
+			return new BuilderEspecialWeaponWithWeight(weight);
 		}
 	}
 	
-	public class BuilderEspecialWeaponWithNameCostCriticalRangeWeight {
-		public BuilderEspecialWeaponWithNameCostCriticalRangeWeight(double w) {
+	public class BuilderEspecialWeaponWithWeight {
+		public BuilderEspecialWeaponWithWeight(double w) {
 			weight = w;
 		}
-		public BuilderEspecialWeaponWithNameCostCriticalRangeWeightSize setSize(SizeWeapon size) {
-			return new BuilderEspecialWeaponWithNameCostCriticalRangeWeightSize(size);
+		public BuilderEspecialWeaponWithSize setSize(SizeWeapon size) {
+			return new BuilderEspecialWeaponWithSize(size);
 		}
 	}
 	
-	public class BuilderEspecialWeaponWithNameCostCriticalRangeWeightSize {
-		public BuilderEspecialWeaponWithNameCostCriticalRangeWeightSize(SizeWeapon s) {
+	public class BuilderEspecialWeaponWithSize {
+		public BuilderEspecialWeaponWithSize(SizeWeapon s) {
 			size = s;
 		}
-		public BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeType setType(TypeWeapon type) {
-			return new BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeType(type);
+		public BuilderEspecialWeaponWithType setType(TypeWeapon type) {
+			return new BuilderEspecialWeaponWithType(type);
+		}
+		public BuilderEspecialWeaponWithType setType(Set<TypeWeapon> types) {
+			return new BuilderEspecialWeaponWithType(types);
 		}
 	}
 	
-	public class BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeType {
-		public BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeType(TypeWeapon t) {
-			type = t;
+	public class BuilderEspecialWeaponWithType {
+		public BuilderEspecialWeaponWithType(TypeWeapon t) {
+			types.add(t);
 		}
-		public BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeTypeEncumbrance setCategorieEncumbrance(CategorieEncumbranceWeapon categorieEncunbrance) {
-			return new BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeTypeEncumbrance(categorieEncunbrance);
+		public BuilderEspecialWeaponWithType(Set<TypeWeapon> ts) {
+			types.addAll(ts);
+		}
+		public BuilderEspecialWeaponWithDamage setDamage(HitDice damage) {
+			return new BuilderEspecialWeaponWithDamage(damage);
 		}
 	}
 	
-	public class BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeTypeEncumbrance {
-		public BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeTypeEncumbrance(CategorieEncumbranceWeapon c) {
+	public class BuilderEspecialWeaponWithDamage {
+		public BuilderEspecialWeaponWithDamage(HitDice d) {
+			damage = d;
+		}
+		public BuilderEspecialWeaponWithEncumbrance setCategorieEncumbrance(CategorieEncumbranceWeapon categorieEncunbrance) {
+			return new BuilderEspecialWeaponWithEncumbrance(categorieEncunbrance);
+		}
+	}
+	
+	public class BuilderEspecialWeaponWithEncumbrance {
+		public BuilderEspecialWeaponWithEncumbrance(CategorieEncumbranceWeapon c) {
 			categorieEncunbrance = c;
 		}
 		
-		public BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeTypeEncumbranceUsefulness setCategorieUsefulness(CategorieUsefulnessWeapon categorieUsefulness) {
-			return new BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeTypeEncumbranceUsefulness(categorieUsefulness);
+		public BuilderEspecialWeaponWithUsefulness setCategorieUsefulness(CategorieUsefulnessWeapon categorieUsefulness) {
+			return new BuilderEspecialWeaponWithUsefulness(categorieUsefulness);
 		}
 	}
 	
-	public class BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeTypeEncumbranceUsefulness {
-		public BuilderEspecialWeaponWithNameCostCriticalRangeWeightSizeTypeEncumbranceUsefulness(CategorieUsefulnessWeapon c) {
+	public class BuilderEspecialWeaponWithUsefulness {
+		public BuilderEspecialWeaponWithUsefulness(CategorieUsefulnessWeapon c) {
 			categorieUsefulness = c;
 		}
 
@@ -108,8 +128,8 @@ public class BuilderEspecialWeapon {
 			base.setCritical(critical);
 			base.setRangeIncrement(range);
 			base.setWeight(weight);
-			//base.addDamage(size, damage);
-			base.addType(type);
+			base.addDamage(size, damage);
+			base.addType(types);
 			base.setCategorieEncumbrance(categorieEncunbrance);
 			base.setCategorieUsefulness(categorieUsefulness);
 			

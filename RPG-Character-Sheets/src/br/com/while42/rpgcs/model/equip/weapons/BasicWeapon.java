@@ -105,7 +105,11 @@ public class BasicWeapon implements Weapon {
 	}
 
 	public void addType(TypeWeapon type) {
-		types.add(type);
+		this.types.add(type);
+	}
+	
+	public void addType(Set<TypeWeapon> types) {
+		this.types.addAll(types);
 	}
 	
 	public void clearTypes() {
@@ -135,8 +139,7 @@ public class BasicWeapon implements Weapon {
 		return categorieUsefulness;
 	}
 
-	public void setCategorieEncumbrance(
-			CategorieEncumbranceWeapon categorieEncumbrance) {
+	public void setCategorieEncumbrance(CategorieEncumbranceWeapon categorieEncumbrance) {
 		this.categorieEncumbrance = categorieEncumbrance;
 	}
 	
