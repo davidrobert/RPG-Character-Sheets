@@ -17,18 +17,18 @@ public class Attributes implements Serializable {
 	
 	private TypeRpgRace race;
 	private TypeRpgAlignment alignment;
-	private TypeRpgReligion religion = TypeRpgReligion.NONE;
+	private TypeRpgReligion religion;
 
-	private TypeRpgSize size = TypeRpgSize.MEDIUM;
-	private Integer age = 0;
+	private TypeRpgSize size;
+	private Integer age;
 	private TypeGender gender;
-	private Integer height = 0;
-	private Integer weight = 0;
+	private Integer height;
+	private Integer weight;
 	private TypeEyeColor eye;
 	private TypeHairColor hair;
 	private TypeSkinColor skin;
 
-	public Attributes() {		
+	protected Attributes() {		
 		// Deafult values
 		race = TypeRpgRace.HUMAN;
 		alignment = TypeRpgAlignment.TRUE_NEUTRAL;
