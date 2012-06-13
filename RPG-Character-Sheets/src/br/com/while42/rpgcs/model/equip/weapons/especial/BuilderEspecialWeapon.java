@@ -132,9 +132,7 @@ public class BuilderEspecialWeapon {
 			base.setCategorieEncumbrance(categorieEncunbrance);
 			base.setCategorieUsefulness(categorieUsefulness);
 			
-			EspecialWeapon especialWeapon = new EspecialWeapon(name, base);
-			
-			return especialWeapon;
+			return new EspecialWeapon(name, base);
 		}
 	}
 }
