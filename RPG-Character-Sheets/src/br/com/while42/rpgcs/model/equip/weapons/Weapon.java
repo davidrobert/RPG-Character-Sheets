@@ -13,8 +13,8 @@ public interface Weapon extends Equipment, TypeCode, Serializable {
 	public SizeWeapon getSize();
 	public List<HitDice> getDamage();
 	public List<HitDice> getDamage(SizeWeapon size);
-	public int getCritical();
-	public int getRangeIncrement();
+	public Integer getCritical();
+	public Integer getRangeIncrement();
 	public CategorieWeapon getCategorie();
 	public CategorieUsefulnessWeapon getCategorieUsefulness();
 	public CategorieEncumbranceWeapon getCategorieEncumbrance();

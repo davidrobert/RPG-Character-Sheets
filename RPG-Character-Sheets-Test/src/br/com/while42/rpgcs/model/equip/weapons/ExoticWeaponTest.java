@@ -50,18 +50,18 @@ public class ExoticWeaponTest extends AndroidTestCase {
 	}
 	
 	public void testGetCritical() throws Throwable {		
-		Assert.assertEquals( 2, new Kama().getCritical());
-		Assert.assertEquals( 2, new Nunchaku().getCritical());
-		Assert.assertEquals( 2, new Sai().getCritical());
-		Assert.assertEquals( 2, new Siangham().getCritical());
+		Assert.assertEquals( 2, new Kama().getCritical().intValue());
+		Assert.assertEquals( 2, new Nunchaku().getCritical().intValue());
+		Assert.assertEquals( 2, new Sai().getCritical().intValue());
+		Assert.assertEquals( 2, new Siangham().getCritical().intValue());
 		
 	}
 	
 	public void testGetRangeIncrement() throws Throwable {		
-		Assert.assertEquals( 0, new Kama().getRangeIncrement());
-		Assert.assertEquals( 0, new Nunchaku().getRangeIncrement());
-		Assert.assertEquals( 10, new Sai().getRangeIncrement());
-		Assert.assertEquals( 0, new Siangham().getRangeIncrement());
+		Assert.assertEquals( 0, new Kama().getRangeIncrement().intValue());
+		Assert.assertEquals( 0, new Nunchaku().getRangeIncrement().intValue());
+		Assert.assertEquals( 10, new Sai().getRangeIncrement().intValue());
+		Assert.assertEquals( 0, new Siangham().getRangeIncrement().intValue());
 		
 	}
 	

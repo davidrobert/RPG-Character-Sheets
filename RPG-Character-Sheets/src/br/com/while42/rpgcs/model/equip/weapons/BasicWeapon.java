@@ -73,20 +73,20 @@ public class BasicWeapon implements Weapon {
 	}
 
 	@Override
-	public int getCritical() {
+	public Integer getCritical() {
 		return critical;
 	}
 
-	public void setCritical(int critical) {
+	public void setCritical(Integer critical) {
 		this.critical = critical;
 	}
 
 	@Override
-	public int getRangeIncrement() {
+	public Integer getRangeIncrement() {
 		return rangeIncrement;
 	}
 
-	public void setRangeIncrement(int rangeIncrement) {
+	public void setRangeIncrement(Integer rangeIncrement) {
 		this.rangeIncrement = rangeIncrement;
 	}
 

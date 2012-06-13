@@ -40,12 +40,12 @@ public abstract class AbstractWeapon implements Weapon {
 	}
 
 	@Override
-	public int getCritical() {
+	public Integer getCritical() {
 		return base.getCritical();
 	}
 
 	@Override
-	public int getRangeIncrement() {
+	public Integer getRangeIncrement() {
 		return base.getRangeIncrement();
 	}
 

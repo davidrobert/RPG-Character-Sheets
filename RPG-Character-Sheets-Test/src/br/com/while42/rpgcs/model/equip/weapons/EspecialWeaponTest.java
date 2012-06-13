@@ -35,8 +35,8 @@ public class EspecialWeaponTest extends AndroidTestCase {
 		
 		assertEquals("Arma Especial", especial.getName());
 		assertEquals(10000, especial.getCost().intValue());
-		assertEquals(2, especial.getCritical());
-		assertEquals(0, especial.getRangeIncrement());
+		assertEquals(2, especial.getCritical().intValue());
+		assertEquals(0, especial.getRangeIncrement().intValue());
 		assertEquals(0.25, especial.getWeight());
 		assertEquals(SizeWeapon.MEDIUM, especial.getSize());
 		assertEquals(types, especial.getType());

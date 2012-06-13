@@ -139,55 +139,55 @@ public class SimpleWeaponTest extends AndroidTestCase {
 	}
 	
 	public void testGetCritical() throws Throwable {		
-		Assert.assertEquals( 2, new Gauntlet().getCritical());
-		Assert.assertEquals( 2, new UnarmedStrike().getCritical());
+		Assert.assertEquals( 2, new Gauntlet().getCritical().intValue());
+		Assert.assertEquals( 2, new UnarmedStrike().getCritical().intValue());
 		
-		Assert.assertEquals( 2, new Dagger().getCritical());
-		Assert.assertEquals( 3, new DaggerPunching().getCritical());
-		Assert.assertEquals( 2, new GauntletSpiked().getCritical());
-		Assert.assertEquals( 2, new MaceLight().getCritical());
-		Assert.assertEquals( 2, new Sickle().getCritical());
+		Assert.assertEquals( 2, new Dagger().getCritical().intValue());
+		Assert.assertEquals( 3, new DaggerPunching().getCritical().intValue());
+		Assert.assertEquals( 2, new GauntletSpiked().getCritical().intValue());
+		Assert.assertEquals( 2, new MaceLight().getCritical().intValue());
+		Assert.assertEquals( 2, new Sickle().getCritical().intValue());
 		
-		Assert.assertEquals( 2, new Club().getCritical());
-		Assert.assertEquals( 2, new MaceHeavy().getCritical());
-		Assert.assertEquals( 2, new Morningstar().getCritical());
-		Assert.assertEquals( 2, new Shortspear().getCritical());
+		Assert.assertEquals( 2, new Club().getCritical().intValue());
+		Assert.assertEquals( 2, new MaceHeavy().getCritical().intValue());
+		Assert.assertEquals( 2, new Morningstar().getCritical().intValue());
+		Assert.assertEquals( 2, new Shortspear().getCritical().intValue());
 		
-		Assert.assertEquals( 3, new Longspear().getCritical());
-		Assert.assertEquals( 2, new Quartestaff().getCritical());
-		Assert.assertEquals( 3, new Spear().getCritical());
+		Assert.assertEquals( 3, new Longspear().getCritical().intValue());
+		Assert.assertEquals( 2, new Quartestaff().getCritical().intValue());
+		Assert.assertEquals( 3, new Spear().getCritical().intValue());
 		
-		Assert.assertEquals( 2, new CrossbowHeavy().getCritical());
-		Assert.assertEquals( 2, new CrossbowLight().getCritical());
-		Assert.assertEquals( 2, new Dart().getCritical());
-		Assert.assertEquals( 2, new Javelin().getCritical());
-		Assert.assertEquals( 2, new Sling().getCritical());
+		Assert.assertEquals( 2, new CrossbowHeavy().getCritical().intValue());
+		Assert.assertEquals( 2, new CrossbowLight().getCritical().intValue());
+		Assert.assertEquals( 2, new Dart().getCritical().intValue());
+		Assert.assertEquals( 2, new Javelin().getCritical().intValue());
+		Assert.assertEquals( 2, new Sling().getCritical().intValue());
 	}
 	
 	public void testGetRangeIncrement() throws Throwable {		
-		Assert.assertEquals( 0, new Gauntlet().getRangeIncrement());
-		Assert.assertEquals( 0, new UnarmedStrike().getRangeIncrement());
+		Assert.assertEquals( 0, new Gauntlet().getRangeIncrement().intValue());
+		Assert.assertEquals( 0, new UnarmedStrike().getRangeIncrement().intValue());
 		
-		Assert.assertEquals( 3, new Dagger().getRangeIncrement());
-		Assert.assertEquals( 0, new DaggerPunching().getRangeIncrement());
-		Assert.assertEquals( 0, new GauntletSpiked().getRangeIncrement());
-		Assert.assertEquals( 0, new MaceLight().getRangeIncrement());
-		Assert.assertEquals( 0, new Sickle().getRangeIncrement());
+		Assert.assertEquals( 3, new Dagger().getRangeIncrement().intValue());
+		Assert.assertEquals( 0, new DaggerPunching().getRangeIncrement().intValue());
+		Assert.assertEquals( 0, new GauntletSpiked().getRangeIncrement().intValue());
+		Assert.assertEquals( 0, new MaceLight().getRangeIncrement().intValue());
+		Assert.assertEquals( 0, new Sickle().getRangeIncrement().intValue());
 		
-		Assert.assertEquals( 3, new Club().getRangeIncrement());
-		Assert.assertEquals( 0, new MaceHeavy().getRangeIncrement());
-		Assert.assertEquals( 0, new Morningstar().getRangeIncrement());
-		Assert.assertEquals( 6, new Shortspear().getRangeIncrement());
+		Assert.assertEquals( 3, new Club().getRangeIncrement().intValue());
+		Assert.assertEquals( 0, new MaceHeavy().getRangeIncrement().intValue());
+		Assert.assertEquals( 0, new Morningstar().getRangeIncrement().intValue());
+		Assert.assertEquals( 6, new Shortspear().getRangeIncrement().intValue());
 		
-		Assert.assertEquals( 0, new Longspear().getRangeIncrement());
-		Assert.assertEquals( 0, new Quartestaff().getRangeIncrement());
-		Assert.assertEquals( 6, new Spear().getRangeIncrement());
+		Assert.assertEquals( 0, new Longspear().getRangeIncrement().intValue());
+		Assert.assertEquals( 0, new Quartestaff().getRangeIncrement().intValue());
+		Assert.assertEquals( 6, new Spear().getRangeIncrement().intValue());
 		
-		Assert.assertEquals(36, new CrossbowHeavy().getRangeIncrement());
-		Assert.assertEquals(24, new CrossbowLight().getRangeIncrement());
-		Assert.assertEquals( 6, new Dart().getRangeIncrement());
-		Assert.assertEquals( 9, new Javelin().getRangeIncrement());
-		Assert.assertEquals(15, new Sling().getRangeIncrement());
+		Assert.assertEquals(36, new CrossbowHeavy().getRangeIncrement().intValue());
+		Assert.assertEquals(24, new CrossbowLight().getRangeIncrement().intValue());
+		Assert.assertEquals( 6, new Dart().getRangeIncrement().intValue());
+		Assert.assertEquals( 9, new Javelin().getRangeIncrement().intValue());
+		Assert.assertEquals(15, new Sling().getRangeIncrement().intValue());
 	}
 	
 	public void testGetWeight() throws Throwable {		

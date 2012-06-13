@@ -13,10 +13,10 @@ import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 public class BuilderEspecialWeapon {
 
 	private String name;
-	private int cost;
-	private int critical;
-	private int range;
-	private double weight;
+	private Integer cost;
+	private Integer critical;
+	private Integer range;
+	private Double weight;
 	private SizeWeapon size;
 	private HitDice damage;
 	private Set<TypeWeapon> types = new HashSet<TypeWeapon>();;
@@ -31,40 +31,40 @@ public class BuilderEspecialWeapon {
 		private BuilderEspecialWeaponWithName(String n) {
 			name = n;
 		}
-		public BuilderEspecialWeaponWithCost setCost(int cost) {
+		public BuilderEspecialWeaponWithCost setCost(Integer cost) {
 			return new BuilderEspecialWeaponWithCost(cost);
 		}
 	}
 
 	public class BuilderEspecialWeaponWithCost {
-		private BuilderEspecialWeaponWithCost(int c) {
+		private BuilderEspecialWeaponWithCost(Integer c) {
 			cost = c;
 		}
-		public BuilderEspecialWeaponWithCritical setCritical(int critical) {
+		public BuilderEspecialWeaponWithCritical setCritical(Integer critical) {
 			return new BuilderEspecialWeaponWithCritical(critical);
 		}
 	}
 	
 	public class BuilderEspecialWeaponWithCritical {
-		private BuilderEspecialWeaponWithCritical(int c) {
+		private BuilderEspecialWeaponWithCritical(Integer c) {
 			critical = c;
 		}
-		public BuilderEspecialWeaponWithRange setRangeIncrement(int range) {
+		public BuilderEspecialWeaponWithRange setRangeIncrement(Integer range) {
 			return new BuilderEspecialWeaponWithRange(range);
 		}
 	}
 	
 	public class BuilderEspecialWeaponWithRange {
-		private BuilderEspecialWeaponWithRange(int r) {
+		private BuilderEspecialWeaponWithRange(Integer r) {
 			range = r;
 		}
-		public BuilderEspecialWeaponWithWeight setWeight(double weight) {
+		public BuilderEspecialWeaponWithWeight setWeight(Double weight) {
 			return new BuilderEspecialWeaponWithWeight(weight);
 		}
 	}
 	
 	public class BuilderEspecialWeaponWithWeight {
-		private BuilderEspecialWeaponWithWeight(double w) {
+		private BuilderEspecialWeaponWithWeight(Double w) {
 			weight = w;
 		}
 		public BuilderEspecialWeaponWithSize setSize(SizeWeapon size) {
