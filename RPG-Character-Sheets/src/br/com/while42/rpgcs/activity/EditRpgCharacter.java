@@ -17,6 +17,7 @@ import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.TypeCode;
 import br.com.while42.rpgcs.model.character.Abilities;
 import br.com.while42.rpgcs.model.character.Attributes;
+import br.com.while42.rpgcs.model.character.BuilderAttributes;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
@@ -33,32 +34,32 @@ import br.com.while42.rpgcs.persist.DataManager;
 
 public class EditRpgCharacter extends Activity {
 
-	DataManager dataManager;
+	private DataManager dataManager;
 	
-	private EditText name;
+	private EditText etName;
 
-	private Spinner classe;
-	private Spinner race;
-	private Spinner alignment;
-	private Spinner religion;
+	private Spinner sClasse;
+	private Spinner sRace;
+	private Spinner sAlignment;
+	private Spinner sReligion;
 
-	private Spinner size;
-	private EditText age;
-	private Spinner gender;
-	private EditText height;
-	private EditText weight;
-	private Spinner eye;
-	private Spinner hair;
-	private Spinner skin;
+	private Spinner sSize;
+	private EditText etAge;
+	private Spinner sGender;
+	private EditText etHeight;
+	private EditText etWeight;
+	private Spinner sEye;
+	private Spinner sHair;
+	private Spinner sSkin;
 
-	private EditText strength;
-	private EditText constitution;
-	private EditText wisdom;
-	private EditText charisma;
-	private EditText dexterity;
-	private EditText intelligence;
+	private EditText etStrength;
+	private EditText etConstitution;
+	private EditText etWisdom;
+	private EditText etCharisma;
+	private EditText etDexterity;
+	private EditText etIntelligence;
 	
-	private Button save;
+	private Button bSave;
 	
 	private List<CharacterClass> listClasses;
 	
@@ -100,128 +101,138 @@ public class EditRpgCharacter extends Activity {
 		dataManager = new DataManager(getApplicationContext());
 		listClasses = new ManagerRpgClasses().getAll(this, "br.com.while42.rpgcs", AbstractRpgClass.class);
 
-		name = (EditText) findViewById(R.id_edit.edittext_name);
+		etName = (EditText) findViewById(R.id_edit.edittext_name);
 
-		classe = (Spinner) findViewById(R.id_edit.spinner_class);
-		race = (Spinner) findViewById(R.id_edit.spinner_race);
-		alignment = (Spinner) findViewById(R.id_edit.spinner_alignment);
-		religion = (Spinner) findViewById(R.id_edit.spinner_religion);
+		sClasse = (Spinner) findViewById(R.id_edit.spinner_class);
+		sRace = (Spinner) findViewById(R.id_edit.spinner_race);
+		sAlignment = (Spinner) findViewById(R.id_edit.spinner_alignment);
+		sReligion = (Spinner) findViewById(R.id_edit.spinner_religion);
 
-		size = (Spinner) findViewById(R.id_edit.spinner_size);
-		age = (EditText) findViewById(R.id_edit.edittext_age);
-		gender = (Spinner) findViewById(R.id_edit.spinner_gender);
-		height = (EditText) findViewById(R.id_edit.edittext_height);
-		weight = (EditText) findViewById(R.id_edit.edittext_weight);
-		eye = (Spinner) findViewById(R.id_edit.spinner_eye);
-		hair = (Spinner) findViewById(R.id_edit.spinner_hair);
-		skin = (Spinner) findViewById(R.id_edit.spinner_skin);
+		sSize = (Spinner) findViewById(R.id_edit.spinner_size);
+		etAge = (EditText) findViewById(R.id_edit.edittext_age);
+		sGender = (Spinner) findViewById(R.id_edit.spinner_gender);
+		etHeight = (EditText) findViewById(R.id_edit.edittext_height);
+		etWeight = (EditText) findViewById(R.id_edit.edittext_weight);
+		sEye = (Spinner) findViewById(R.id_edit.spinner_eye);
+		sHair = (Spinner) findViewById(R.id_edit.spinner_hair);
+		sSkin = (Spinner) findViewById(R.id_edit.spinner_skin);
 
-		strength = (EditText) findViewById(R.id_edit.edittext_strength);
-		constitution = (EditText) findViewById(R.id_edit.edittext_constitution);
-		wisdom = (EditText) findViewById(R.id_edit.edittext_wisdom);
-		charisma = (EditText) findViewById(R.id_edit.edittext_charisma);
-		dexterity = (EditText) findViewById(R.id_edit.edittext_dexterity);
-		intelligence = (EditText) findViewById(R.id_edit.edittext_intelligence);
+		etStrength = (EditText) findViewById(R.id_edit.edittext_strength);
+		etConstitution = (EditText) findViewById(R.id_edit.edittext_constitution);
+		etWisdom = (EditText) findViewById(R.id_edit.edittext_wisdom);
+		etCharisma = (EditText) findViewById(R.id_edit.edittext_charisma);
+		etDexterity = (EditText) findViewById(R.id_edit.edittext_dexterity);
+		etIntelligence = (EditText) findViewById(R.id_edit.edittext_intelligence);
 		
-		save = (Button) findViewById(R.id_edit.button_save);
+		bSave = (Button) findViewById(R.id_edit.button_save);
 
 		//setOptionsSpinner(classe, codes);
-		setOptionsSpinner(classe, listClasses);
-		setOptionsSpinner(race, TypeRpgRace.values());
-		setOptionsSpinner(alignment, TypeRpgAlignment.values());
-		setOptionsSpinner(religion, TypeRpgReligion.values());
+		setOptionsSpinner(sClasse, listClasses);
+		setOptionsSpinner(sRace, TypeRpgRace.values());
+		setOptionsSpinner(sAlignment, TypeRpgAlignment.values());
+		setOptionsSpinner(sReligion, TypeRpgReligion.values());
 
-		setOptionsSpinner(size, TypeRpgSize.values());
+		setOptionsSpinner(sSize, TypeRpgSize.values());
 		// TODO: age
-		setOptionsSpinner(gender, TypeGender.values());
+		setOptionsSpinner(sGender, TypeGender.values());
 		// TODO: height
 		// TODO: weight
-		setOptionsSpinner(eye, TypeEyeColor.values());
-		setOptionsSpinner(hair, TypeHairColor.values());
-		setOptionsSpinner(skin, TypeSkinColor.values());
+		setOptionsSpinner(sEye, TypeEyeColor.values());
+		setOptionsSpinner(sHair, TypeHairColor.values());
+		setOptionsSpinner(sSkin, TypeSkinColor.values());
 
-		save.setOnClickListener(new OnClickListener() {
+		bSave.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				Element e;
-				
-				RpgCharacter cs = new RpgCharacter();
-				Attributes attr = cs.getAttributes();
-				
+						
 				// Name
-				cs.setName(name.getText().toString());				
+				String name = etName.getText().toString();				
 				
 				// Class
-				e = (Element) classe.getSelectedItem();
-				cs.getRpgClasses().add((AbstractRpgClass) e.getType());
-
+				e = (Element) sClasse.getSelectedItem();
+				AbstractRpgClass clazz = (AbstractRpgClass) e.getType();
+				
 				// Race
-				e = (Element) race.getSelectedItem();
-				attr.setRace((TypeRpgRace) e.getType());
+				e = (Element) sRace.getSelectedItem();
+				TypeRpgRace race = (TypeRpgRace) e.getType();
 				
 				// Alignment
-				e = (Element) alignment.getSelectedItem();
-				attr.setAlignment((TypeRpgAlignment) e.getType());
+				e = (Element) sAlignment.getSelectedItem();
+				TypeRpgAlignment alignment = (TypeRpgAlignment) e.getType();
 				
 				// Religion
-				e = (Element) religion.getSelectedItem();
-				attr.setReligion((TypeRpgReligion) e.getType());
+				e = (Element) sReligion.getSelectedItem();
+				TypeRpgReligion religion = (TypeRpgReligion) e.getType();
 				
 				// Size
-				e = (Element) size.getSelectedItem();
-				attr.setSize((TypeRpgSize) e.getType());
+				e = (Element) sSize.getSelectedItem();
+				TypeRpgSize size = (TypeRpgSize) e.getType();
 
 				// Age
-				if (!age.getText().toString().isEmpty()) {
-					attr.setAge(Integer.parseInt(age.getText().toString()));
-				}
+				Integer age = Integer.getInteger(etAge.getText().toString(), 0);
 				
 				// Gender
-				e = (Element) gender.getSelectedItem();
-				attr.setGender((TypeGender) e.getType());
+				e = (Element) sGender.getSelectedItem();
+				TypeGender gender = (TypeGender) e.getType();
 
 				// Height
-				if (!height.getText().toString().isEmpty()) {
-					attr.setHeight(Integer.parseInt(height.getText().toString()));
-				}
+				Integer height = Integer.getInteger(etHeight.getText().toString(), 0);
 				
 				// Weight
-				if (!weight.getText().toString().isEmpty()) {
-					attr.setWeight(Integer.parseInt(weight.getText().toString()));
-				}
+				Integer weight = Integer.getInteger(etWeight.getText().toString(), 0);
 				
 				// Eye
-				e = (Element) eye.getSelectedItem();
-				attr.setEye((TypeEyeColor) e.getType());
+				e = (Element) sEye.getSelectedItem();
+				TypeEyeColor eye = (TypeEyeColor) e.getType();
 				
 				// Hair
-				e = (Element) hair.getSelectedItem();
-				attr.setHair((TypeHairColor) e.getType());
+				e = (Element) sHair.getSelectedItem();
+				TypeHairColor hair = (TypeHairColor) e.getType();
 				
 				// Skin
-				e = (Element) skin.getSelectedItem();
-				attr.setSkin((TypeSkinColor) e.getType());
+				e = (Element) sSkin.getSelectedItem();
+				TypeSkinColor skin = (TypeSkinColor) e.getType();
 				
-				Abilities ab = cs.getAbilities();
-				if (!strength.getText().toString().isEmpty()) {
-					ab.setStrength(Integer.parseInt(strength.getText().toString()));
+								
+				Abilities ab = new Abilities();
+				if (!etStrength.getText().toString().isEmpty()) {
+					ab.setStrength(Integer.parseInt(etStrength.getText().toString()));
 				}
-				if (!intelligence.getText().toString().isEmpty()) {
-					ab.setIntelligence(Integer.parseInt(intelligence.getText().toString()));
+				if (!etIntelligence.getText().toString().isEmpty()) {
+					ab.setIntelligence(Integer.parseInt(etIntelligence.getText().toString()));
 				}
-				if (!constitution.getText().toString().isEmpty()) {
-					ab.setConstitution(Integer.parseInt(constitution.getText().toString()));
+				if (!etConstitution.getText().toString().isEmpty()) {
+					ab.setConstitution(Integer.parseInt(etConstitution.getText().toString()));
 				}
-				if (!dexterity.getText().toString().isEmpty()) {
-					ab.setDexterity(Integer.parseInt(dexterity.getText().toString()));
+				if (!etDexterity.getText().toString().isEmpty()) {
+					ab.setDexterity(Integer.parseInt(etDexterity.getText().toString()));
 				}
-				if (!wisdom.getText().toString().isEmpty()) {
-					ab.setWisdom(Integer.parseInt(wisdom.getText().toString()));
+				if (!etWisdom.getText().toString().isEmpty()) {
+					ab.setWisdom(Integer.parseInt(etWisdom.getText().toString()));
 				}
-				if (!charisma.getText().toString().isEmpty()) {
-					ab.setCharisma(Integer.parseInt(charisma.getText().toString()));
+				if (!etCharisma.getText().toString().isEmpty()) {
+					ab.setCharisma(Integer.parseInt(etCharisma.getText().toString()));
 				}
+				
+				BuilderAttributes builder = new BuilderAttributes();
+				Attributes attributes = builder.setRace(race)
+											   .setAlignment(alignment)
+											   .setReligion(religion)
+											   .setSize(size)
+											   .setAge(age)
+											   .setGender(gender)
+											   .setHeight(height)
+											   .setWeight(weight)
+											   .setEye(eye)
+											   .setHair(hair)
+											   .setSkin(skin)
+											   .toAttributes();
+				
+				RpgCharacter cs = new RpgCharacter(name, attributes);
+				cs.getRpgClasses().add(clazz);
+				cs.setAbilities(ab);
 				
 				Log.d("RpgCharacter", cs.toString());
 				

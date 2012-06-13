@@ -9,8 +9,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 import android.util.Log;
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
-import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.equip.Equipments;
 
 public class RpgCharacter implements Serializable {
@@ -19,10 +17,10 @@ public class RpgCharacter implements Serializable {
 
 	private Long id = 0L;
 	private String image = "";
-	private String name = "";
+	private String name;
 	
 	private RpgClass classes = new RpgClass();
-	private Attributes attributes = new Attributes();
+	private Attributes attributes;
 	private Abilities abilities = new Abilities();
 	private Defences defences = new Defences();
 	private SavingThrows savingThrows = new SavingThrows();
@@ -37,15 +35,11 @@ public class RpgCharacter implements Serializable {
 	
 	private Integer baseAttackBonus = 0;
 	private Integer grapple = 0;
+
 	
-	public RpgCharacter() {
-		// TODO: Construir uma classe Builder para RpgCharacter
-	}
-	
-	public RpgCharacter(String name, TypeRpgRace race, TypeRpgAlignment alignment) {
+	public RpgCharacter(String name, Attributes attributes) {
 		this.name = name;
-		attributes.setRace(race);
-		attributes.setAlignment(alignment);
+		this.attributes = attributes;
 	}
 
 	public static long getSerialVersionUID() {

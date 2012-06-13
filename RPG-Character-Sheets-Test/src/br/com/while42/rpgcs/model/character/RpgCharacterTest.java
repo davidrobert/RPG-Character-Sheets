@@ -27,7 +27,21 @@ public class RpgCharacterTest extends AndroidTestCase {
 		List<RpgCharacter> rpgCharacterSheets = new ArrayList<RpgCharacter>();
 		
 		{
-			RpgCharacter rc = new RpgCharacter();
+			BuilderAttributes builder = new BuilderAttributes();
+			Attributes attributes = builder.setRace(TypeRpgRace.HUMAN)
+	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
+	                .setReligion(TypeRpgReligion.NONE)
+	                .setSize(TypeRpgSize.MEDIUM)
+	                .setAge(30)
+	                .setGender(TypeGender.MEN)
+	                .setHeight(169)
+	                .setWeight(83)
+	                .setEye(TypeEyeColor.Brown)
+	                .setHair(TypeHairColor.BROWN)
+	                .setSkin(TypeSkinColor.BROWN)
+	                .toAttributes();
+			
+			RpgCharacter rc = new RpgCharacter("Snarf", attributes);
 			
 			Attaks aks = rc.getAttaks();			
 			aks.add(new Dart(), SizeWeapon.MEDIUM);;
@@ -36,23 +50,21 @@ public class RpgCharacterTest extends AndroidTestCase {
 		}
 
 		{
-			RpgCharacter rc = new RpgCharacter();
-
-			rc.setName("Blob");
-			Attributes attr = rc.getAttributes();
-
-			attr.setRace(TypeRpgRace.HUMAN);
-			attr.setAlignment(TypeRpgAlignment.NEUTRAL_EVIL);
-			attr.setReligion(TypeRpgReligion.NONE);
-
-			attr.setSize(TypeRpgSize.MEDIUM);
-			attr.setAge(40);
-			attr.setGender(TypeGender.MEN);
-			attr.setHeight(200);
-			attr.setWeight(120);
-			attr.setEye(TypeEyeColor.Brown);
-			attr.setHair(TypeHairColor.BLACK);
-			attr.setSkin(TypeSkinColor.PALE);
+			BuilderAttributes builder = new BuilderAttributes();
+			Attributes attributes = builder.setRace(TypeRpgRace.HUMAN)
+	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
+	                .setReligion(TypeRpgReligion.NONE)
+	                .setSize(TypeRpgSize.MEDIUM)
+	                .setAge(30)
+	                .setGender(TypeGender.MEN)
+	                .setHeight(169)
+	                .setWeight(83)
+	                .setEye(TypeEyeColor.Brown)
+	                .setHair(TypeHairColor.BROWN)
+	                .setSkin(TypeSkinColor.BROWN)
+	                .toAttributes();
+			
+			RpgCharacter rc = new RpgCharacter("Blob", attributes);
 
 			AbstractRpgClass barbarian = new Barbarian();
 			barbarian.setClassLevel(1);
@@ -94,24 +106,22 @@ public class RpgCharacterTest extends AndroidTestCase {
 		}
 
 		{
-			RpgCharacter rc = new RpgCharacter();
-
-			rc.setName("Deltorei");
-			Attributes attr = rc.getAttributes();
-
-			attr.setRace(TypeRpgRace.HUMAN);
-			attr.setAlignment(TypeRpgAlignment.TRUE_NEUTRAL);
-			attr.setReligion(TypeRpgReligion.NONE);
-
-			attr.setSize(TypeRpgSize.MEDIUM);
-			attr.setAge(40);
-			attr.setGender(TypeGender.MEN);
-			attr.setHeight(200);
-			attr.setWeight(120);
-			attr.setEye(TypeEyeColor.Brown);
-			attr.setHair(TypeHairColor.BLACK);
-			attr.setSkin(TypeSkinColor.PALE);
-
+			BuilderAttributes builder = new BuilderAttributes();
+			Attributes attributes = builder.setRace(TypeRpgRace.HUMAN)
+	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
+	                .setReligion(TypeRpgReligion.NONE)
+	                .setSize(TypeRpgSize.MEDIUM)
+	                .setAge(30)
+	                .setGender(TypeGender.MEN)
+	                .setHeight(169)
+	                .setWeight(83)
+	                .setEye(TypeEyeColor.Brown)
+	                .setHair(TypeHairColor.BROWN)
+	                .setSkin(TypeSkinColor.BROWN)
+	                .toAttributes();
+			
+			RpgCharacter rc = new RpgCharacter("Deltorei", attributes);
+			
 			AbstractRpgClass monk = new Monk();
 			monk.setClassLevel(20);
 			rc.getRpgClasses().add(monk);
@@ -152,23 +162,21 @@ public class RpgCharacterTest extends AndroidTestCase {
 		}
 
 		{
-			RpgCharacter rc = new RpgCharacter();
-
-			rc.setName("Galadriel");
-			Attributes attr = rc.getAttributes();
-
-			attr.setRace(TypeRpgRace.ELF);
-			attr.setAlignment(TypeRpgAlignment.TRUE_NEUTRAL);
-			attr.setReligion(TypeRpgReligion.OTHER);
-
-			attr.setSize(TypeRpgSize.MEDIUM);
-			attr.setAge(40);
-			attr.setGender(TypeGender.WOMAN);
-			attr.setHeight(200);
-			attr.setWeight(120);
-			attr.setEye(TypeEyeColor.Deep_Blue);
-			attr.setHair(TypeHairColor.WHITE);
-			attr.setSkin(TypeSkinColor.WHITE);
+			BuilderAttributes builder = new BuilderAttributes();
+			Attributes attributes = builder.setRace(TypeRpgRace.ELF)
+	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
+	                .setReligion(TypeRpgReligion.OTHER)
+	                .setSize(TypeRpgSize.MEDIUM)
+	                .setAge(30)
+	                .setGender(TypeGender.WOMAN)
+	                .setHeight(169)
+	                .setWeight(83)
+	                .setEye(TypeEyeColor.Deep_Blue)
+	                .setHair(TypeHairColor.WHITE)
+	                .setSkin(TypeSkinColor.WHITE)
+	                .toAttributes();
+			
+			RpgCharacter rc = new RpgCharacter("Galadriel", attributes);
 
 			AbstractRpgClass sorcerer = new Sorcerer();
 			sorcerer.setClassLevel(ExperienceAndLevel.MAX_LEVEL);
@@ -212,7 +220,24 @@ public class RpgCharacterTest extends AndroidTestCase {
 	}
 
 	public void testIsPersistent() {
-		assertFalse(new RpgCharacter().isPersistent());
+		
+		BuilderAttributes builder = new BuilderAttributes();
+		Attributes attributes = builder.setRace(TypeRpgRace.HUMAN)
+                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
+                .setReligion(TypeRpgReligion.NONE)
+                .setSize(TypeRpgSize.MEDIUM)
+                .setAge(30)
+                .setGender(TypeGender.MEN)
+                .setHeight(169)
+                .setWeight(83)
+                .setEye(TypeEyeColor.Brown)
+                .setHair(TypeHairColor.BROWN)
+                .setSkin(TypeSkinColor.BROWN)
+                .toAttributes();
+		
+		RpgCharacter rc = new RpgCharacter("Stark", attributes);
+		
+		assertFalse(rc.isPersistent());
 	}
 
 	public void testBasicSerialize() {
