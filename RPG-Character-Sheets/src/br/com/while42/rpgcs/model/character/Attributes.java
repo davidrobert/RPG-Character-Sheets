@@ -29,18 +29,6 @@ public class Attributes implements Serializable {
 	private TypeSkinColor skin;
 
 	protected Attributes() {		
-		// Deafult values
-		race = TypeRpgRace.HUMAN;
-		alignment = TypeRpgAlignment.TRUE_NEUTRAL;
-		religion = TypeRpgReligion.NONE;
-		size = TypeRpgSize.MEDIUM;
-		age = 21;
-		gender = TypeGender.MEN;
-		height = 175;
-		weight = 80;
-		eye = TypeEyeColor.Brown;
-		hair = TypeHairColor.BROWN;
-		skin = TypeSkinColor.BROWN;
 	}
 	
 	public TypeRpgRace getRace() {
