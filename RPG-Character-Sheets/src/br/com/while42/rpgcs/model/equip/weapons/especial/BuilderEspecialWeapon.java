@@ -28,7 +28,7 @@ public class BuilderEspecialWeapon {
 	}
 
 	public class BuilderEspecialWeaponWithName {
-		public BuilderEspecialWeaponWithName(String n) {
+		private BuilderEspecialWeaponWithName(String n) {
 			name = n;
 		}
 		public BuilderEspecialWeaponWithCost setCost(int cost) {
@@ -37,7 +37,7 @@ public class BuilderEspecialWeapon {
 	}
 
 	public class BuilderEspecialWeaponWithCost {
-		public BuilderEspecialWeaponWithCost(int c) {
+		private BuilderEspecialWeaponWithCost(int c) {
 			cost = c;
 		}
 		public BuilderEspecialWeaponWithCritical setCritical(int critical) {
@@ -46,7 +46,7 @@ public class BuilderEspecialWeapon {
 	}
 	
 	public class BuilderEspecialWeaponWithCritical {
-		public BuilderEspecialWeaponWithCritical(int c) {
+		private BuilderEspecialWeaponWithCritical(int c) {
 			critical = c;
 		}
 		public BuilderEspecialWeaponWithRange setRangeIncrement(int range) {
@@ -55,7 +55,7 @@ public class BuilderEspecialWeapon {
 	}
 	
 	public class BuilderEspecialWeaponWithRange {
-		public BuilderEspecialWeaponWithRange(int r) {
+		private BuilderEspecialWeaponWithRange(int r) {
 			range = r;
 		}
 		public BuilderEspecialWeaponWithWeight setWeight(double weight) {
@@ -64,7 +64,7 @@ public class BuilderEspecialWeapon {
 	}
 	
 	public class BuilderEspecialWeaponWithWeight {
-		public BuilderEspecialWeaponWithWeight(double w) {
+		private BuilderEspecialWeaponWithWeight(double w) {
 			weight = w;
 		}
 		public BuilderEspecialWeaponWithSize setSize(SizeWeapon size) {
@@ -73,7 +73,7 @@ public class BuilderEspecialWeapon {
 	}
 	
 	public class BuilderEspecialWeaponWithSize {
-		public BuilderEspecialWeaponWithSize(SizeWeapon s) {
+		private BuilderEspecialWeaponWithSize(SizeWeapon s) {
 			size = s;
 		}
 		public BuilderEspecialWeaponWithType setType(TypeWeapon type) {
@@ -85,7 +85,7 @@ public class BuilderEspecialWeapon {
 	}
 	
 	public class BuilderEspecialWeaponWithType {
-		public BuilderEspecialWeaponWithType(TypeWeapon t) {
+		private BuilderEspecialWeaponWithType(TypeWeapon t) {
 			types.add(t);
 		}
 		public BuilderEspecialWeaponWithType(Set<TypeWeapon> ts) {
@@ -97,7 +97,7 @@ public class BuilderEspecialWeapon {
 	}
 	
 	public class BuilderEspecialWeaponWithDamage {
-		public BuilderEspecialWeaponWithDamage(HitDice d) {
+		private BuilderEspecialWeaponWithDamage(HitDice d) {
 			damage = d;
 		}
 		public BuilderEspecialWeaponWithEncumbrance setCategorieEncumbrance(CategorieEncumbranceWeapon categorieEncunbrance) {
@@ -106,17 +106,16 @@ public class BuilderEspecialWeapon {
 	}
 	
 	public class BuilderEspecialWeaponWithEncumbrance {
-		public BuilderEspecialWeaponWithEncumbrance(CategorieEncumbranceWeapon c) {
+		private BuilderEspecialWeaponWithEncumbrance(CategorieEncumbranceWeapon c) {
 			categorieEncunbrance = c;
 		}
-		
 		public BuilderEspecialWeaponWithUsefulness setCategorieUsefulness(CategorieUsefulnessWeapon categorieUsefulness) {
 			return new BuilderEspecialWeaponWithUsefulness(categorieUsefulness);
 		}
 	}
 	
 	public class BuilderEspecialWeaponWithUsefulness {
-		public BuilderEspecialWeaponWithUsefulness(CategorieUsefulnessWeapon c) {
+		private BuilderEspecialWeaponWithUsefulness(CategorieUsefulnessWeapon c) {
 			categorieUsefulness = c;
 		}
 

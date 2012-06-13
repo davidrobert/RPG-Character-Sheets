@@ -29,7 +29,7 @@ public class BuilderAttributes {
 	}
 
 	public class BuilderAttributesWithRace {
-		public BuilderAttributesWithRace(TypeRpgRace r) {
+		private BuilderAttributesWithRace(TypeRpgRace r) {
 			race = r;
 		}
 		public BuilderAttributesWithAlignment setAlignment(TypeRpgAlignment alignment) {
@@ -38,7 +38,7 @@ public class BuilderAttributes {
 	}
 	
 	public class BuilderAttributesWithAlignment {
-		public BuilderAttributesWithAlignment(TypeRpgAlignment a) {
+		private BuilderAttributesWithAlignment(TypeRpgAlignment a) {
 			alignment = a;
 		}
 		public BuilderAttributesWithReligion setReligion(TypeRpgReligion religion) {
@@ -47,7 +47,7 @@ public class BuilderAttributes {
 	}
 	
 	public class BuilderAttributesWithReligion {
-		public BuilderAttributesWithReligion(TypeRpgReligion r) {
+		private BuilderAttributesWithReligion(TypeRpgReligion r) {
 			religion = r;
 		}
 		public BuilderAttributesWithSize setSize(TypeRpgSize size) {
@@ -56,7 +56,7 @@ public class BuilderAttributes {
 	}
 	
 	public class BuilderAttributesWithSize {
-		public BuilderAttributesWithSize(TypeRpgSize s) {
+		private BuilderAttributesWithSize(TypeRpgSize s) {
 			size = s;
 		}
 		public BuilderAttributesWithAge setAge(Integer age) {
@@ -65,7 +65,7 @@ public class BuilderAttributes {
 	}
 	
 	public class BuilderAttributesWithAge {
-		public BuilderAttributesWithAge(Integer a) {
+		private BuilderAttributesWithAge(Integer a) {
 			age = a;
 		}
 		public BuilderAttributesWithGender setGender(TypeGender gender) {
@@ -74,7 +74,7 @@ public class BuilderAttributes {
 	}
 	
 	public class BuilderAttributesWithGender {
-		public BuilderAttributesWithGender(TypeGender g) {
+		private BuilderAttributesWithGender(TypeGender g) {
 			gender = g;
 		}
 		public BuilderAttributesWithHeight setHeight(Integer height) {
@@ -83,7 +83,7 @@ public class BuilderAttributes {
 	}
 	
 	public class BuilderAttributesWithHeight {
-		public BuilderAttributesWithHeight(Integer h) {
+		private BuilderAttributesWithHeight(Integer h) {
 			height = h;
 		}
 		public BuilderAttributesWithWeight setWeight(Integer weight) {
@@ -92,7 +92,7 @@ public class BuilderAttributes {
 	}
 	
 	public class BuilderAttributesWithWeight {
-		public BuilderAttributesWithWeight(Integer w) {
+		private BuilderAttributesWithWeight(Integer w) {
 			weight = w;
 		}
 		public BuilderAttributesWithEye setEye(TypeEyeColor color) {
@@ -101,7 +101,7 @@ public class BuilderAttributes {
 	}
 	
 	public class BuilderAttributesWithEye {
-		public BuilderAttributesWithEye(TypeEyeColor color) {
+		private BuilderAttributesWithEye(TypeEyeColor color) {
 			eye = color;
 		}
 		public BuilderAttributesWithHair setHair(TypeHairColor color) {
@@ -110,7 +110,7 @@ public class BuilderAttributes {
 	}
 	
 	public class BuilderAttributesWithHair {
-		public BuilderAttributesWithHair(TypeHairColor color) {
+		private BuilderAttributesWithHair(TypeHairColor color) {
 			hair = color;
 		}
 		public BuilderAttributesWithSkin setSkin(TypeSkinColor color) {
@@ -119,7 +119,7 @@ public class BuilderAttributes {
 	}
 	
 	public class BuilderAttributesWithSkin {
-		public BuilderAttributesWithSkin(TypeSkinColor color) {
+		private BuilderAttributesWithSkin(TypeSkinColor color) {
 			skin = color;
 		}
 
