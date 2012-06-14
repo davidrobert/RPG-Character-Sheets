@@ -16,7 +16,7 @@ public class EspecialWeaponTest extends AndroidTestCase {
 	public void testBuilder() throws Throwable {		
 		BuilderEspecialWeapon builder = new BuilderEspecialWeapon();
 		EspecialWeapon especial = builder.setName("Arma Especial")
-		                                 .setCost(10000)
+		                                 .setCost(10000L)
 		                                 .setCritical(2)
 		                                 .setRangeIncrement(0)
 		                                 .setWeight(0.25)
@@ -34,7 +34,7 @@ public class EspecialWeaponTest extends AndroidTestCase {
 		damages.add(new HitDice(2, HitDiceType.d6, +2));
 		
 		assertEquals("Arma Especial", especial.getName());
-		assertEquals(10000, especial.getCost().intValue());
+		assertEquals(10000L, especial.getCost().longValue());
 		assertEquals(2, especial.getCritical().intValue());
 		assertEquals(0, especial.getRangeIncrement().intValue());
 		assertEquals(0.25, especial.getWeight());

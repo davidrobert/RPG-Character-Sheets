@@ -14,7 +14,7 @@ public class Greatsword extends AbstractMartialTwoHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_greatsword);
-		base.setCost(8);
+		base.setCost(8L);
 		base.setCritical(2);
 		base.setRangeIncrement(3);
 		base.setWeight(1d);

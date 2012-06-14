@@ -17,7 +17,7 @@ public class BasicWeapon implements Weapon {
 	
 	private SizeWeapon size;
 	
-	private Integer cost = 0;
+	private Long cost = 0L;
 	private Map<SizeWeapon, List<HitDice>> damage = new HashMap<SizeWeapon, List<HitDice>>();
 	private Integer critical = 0;
 	private Integer rangeIncrement = 0;
@@ -38,11 +38,11 @@ public class BasicWeapon implements Weapon {
 	}
 	
 	@Override
-	public Integer getCost() {
+	public Long getCost() {
 		return cost;
 	}
 
-	public void setCost(Integer cost) {
+	public void setCost(Long cost) {
 		this.cost = cost;
 	}
 

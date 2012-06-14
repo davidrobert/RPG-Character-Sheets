@@ -10,7 +10,7 @@ public class Hide extends AbstractMediumArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_medium_hide);
-		armor.setCost(15);
+		armor.setCost(15L);
 		armor.setArmorBonus(3);
 		armor.setMaximumDexBonus(4);
 		armor.setArmorCheckPenalty(-3);

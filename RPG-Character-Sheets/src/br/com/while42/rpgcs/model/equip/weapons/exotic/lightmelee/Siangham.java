@@ -14,7 +14,7 @@ public class Siangham extends AbstractExoticLightMelleWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_exotic_siangham);
-		base.setCost(3);
+		base.setCost(3L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(0.5);

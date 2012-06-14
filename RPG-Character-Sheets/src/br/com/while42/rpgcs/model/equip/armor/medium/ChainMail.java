@@ -10,7 +10,7 @@ public class ChainMail extends AbstractMediumArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_medium_chainmail);
-		armor.setCost(150);
+		armor.setCost(150L);
 		armor.setArmorBonus(5);
 		armor.setMaximumDexBonus(2);
 		armor.setArmorCheckPenalty(-5);

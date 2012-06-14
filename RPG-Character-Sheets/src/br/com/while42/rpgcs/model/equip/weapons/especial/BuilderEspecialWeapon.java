@@ -13,7 +13,7 @@ import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 public class BuilderEspecialWeapon {
 
 	private String name;
-	private Integer cost;
+	private Long cost;
 	private Integer critical;
 	private Integer range;
 	private Double weight;
@@ -31,13 +31,13 @@ public class BuilderEspecialWeapon {
 		private BuilderEspecialWeaponWithName(String n) {
 			name = n;
 		}
-		public BuilderEspecialWeaponWithCost setCost(Integer cost) {
+		public BuilderEspecialWeaponWithCost setCost(Long cost) {
 			return new BuilderEspecialWeaponWithCost(cost);
 		}
 	}
 
 	public class BuilderEspecialWeaponWithCost {
-		private BuilderEspecialWeaponWithCost(Integer c) {
+		private BuilderEspecialWeaponWithCost(Long c) {
 			cost = c;
 		}
 		public BuilderEspecialWeaponWithCritical setCritical(Integer critical) {

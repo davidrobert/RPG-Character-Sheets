@@ -10,7 +10,7 @@ public class BandedMail extends AbstractHeavyArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_heavy_banded_mail);
-		armor.setCost(250);
+		armor.setCost(250L);
 		armor.setArmorBonus(6);
 		armor.setMaximumDexBonus(1);
 		armor.setArmorCheckPenalty(-6);

@@ -10,7 +10,7 @@ public class Buckler extends AbstractShieldArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_shield_buckler);
-		armor.setCost(15);
+		armor.setCost(15L);
 		armor.setArmorBonus(1);
 		armor.setMaximumDexBonus(0);
 		armor.setArmorCheckPenalty(-1);

@@ -14,7 +14,7 @@ public class UnarmedStrike extends AbstractSimpleUnarmedWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_simple_unarmed_strike);
-		base.setCost(0);
+		base.setCost(0L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(0d);

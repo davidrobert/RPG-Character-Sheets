@@ -14,7 +14,7 @@ public class CrossbowHeavy extends AbstractSimpleRangedWeapon {
 	
 	static {		
 		base = new BasicWeapon(R.string.weapon_simple_crossbow_heavy);
-		base.setCost(50);
+		base.setCost(50L);
 		base.setCritical(2);
 		base.setRangeIncrement(36);
 		base.setWeight(4d);

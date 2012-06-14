@@ -59,29 +59,29 @@ public class SimpleWeaponTest extends AndroidTestCase {
 	}
 	
 	public void testGetCost() throws Throwable {		
-		Assert.assertEquals( 2, new Gauntlet().getCost().intValue());
-		Assert.assertEquals( 0, new UnarmedStrike().getCost().intValue());
+		Assert.assertEquals( 2L, new Gauntlet().getCost().longValue());
+		Assert.assertEquals( 0L, new UnarmedStrike().getCost().longValue());
 		
-		Assert.assertEquals( 2, new Dagger().getCost().intValue());
-		Assert.assertEquals( 2, new DaggerPunching().getCost().intValue());
-		Assert.assertEquals( 5, new GauntletSpiked().getCost().intValue());
-		Assert.assertEquals( 5, new MaceLight().getCost().intValue());
-		Assert.assertEquals( 6, new Sickle().getCost().intValue());
+		Assert.assertEquals( 2L, new Dagger().getCost().longValue());
+		Assert.assertEquals( 2L, new DaggerPunching().getCost().longValue());
+		Assert.assertEquals( 5L, new GauntletSpiked().getCost().longValue());
+		Assert.assertEquals( 5L, new MaceLight().getCost().longValue());
+		Assert.assertEquals( 6L, new Sickle().getCost().longValue());
 		
-		Assert.assertEquals( 0, new Club().getCost().intValue());
-		Assert.assertEquals(12, new MaceHeavy().getCost().intValue());
-		Assert.assertEquals( 8, new Morningstar().getCost().intValue());
-		Assert.assertEquals( 1, new Shortspear().getCost().intValue());
+		Assert.assertEquals( 0L, new Club().getCost().longValue());
+		Assert.assertEquals(12L, new MaceHeavy().getCost().longValue());
+		Assert.assertEquals( 8L, new Morningstar().getCost().longValue());
+		Assert.assertEquals( 1L, new Shortspear().getCost().longValue());
 		
-		Assert.assertEquals( 5, new Longspear().getCost().intValue());
-		Assert.assertEquals( 0, new Quartestaff().getCost().intValue());
-		Assert.assertEquals( 2, new Spear().getCost().intValue());
+		Assert.assertEquals( 5L, new Longspear().getCost().longValue());
+		Assert.assertEquals( 0L, new Quartestaff().getCost().longValue());
+		Assert.assertEquals( 2L, new Spear().getCost().longValue());
 		
-		Assert.assertEquals(50, new CrossbowHeavy().getCost().intValue());
-		Assert.assertEquals(35, new CrossbowLight().getCost().intValue());
-		Assert.assertEquals( 5, new Dart().getCost().intValue());
-		Assert.assertEquals( 1, new Javelin().getCost().intValue());
-		Assert.assertEquals( 0, new Sling().getCost().intValue());
+		Assert.assertEquals(50L, new CrossbowHeavy().getCost().longValue());
+		Assert.assertEquals(35L, new CrossbowLight().getCost().longValue());
+		Assert.assertEquals( 5L, new Dart().getCost().longValue());
+		Assert.assertEquals( 1L, new Javelin().getCost().longValue());
+		Assert.assertEquals( 0L, new Sling().getCost().longValue());
 	}
 	
 	public void testGetDamageSmall() throws Throwable {

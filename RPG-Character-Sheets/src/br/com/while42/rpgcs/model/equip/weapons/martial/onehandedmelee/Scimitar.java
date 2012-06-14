@@ -14,7 +14,7 @@ public class Scimitar extends AbstractMartialOneHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_scimitar);
-		base.setCost(15);
+		base.setCost(15L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(2d);

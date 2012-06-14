@@ -10,7 +10,7 @@ public class ShieldTower extends AbstractShieldArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_shield_tower);
-		armor.setCost(30);
+		armor.setCost(30L);
 		armor.setArmorBonus(4);
 		armor.setMaximumDexBonus(2);
 		armor.setArmorCheckPenalty(-10);

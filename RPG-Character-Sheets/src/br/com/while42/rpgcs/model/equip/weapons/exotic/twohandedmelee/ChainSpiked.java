@@ -14,7 +14,7 @@ public class ChainSpiked extends AbstractExoticTwoHandedMelleWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_exotic_chain_spiked);
-		base.setCost(25);
+		base.setCost(25L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(10d);

@@ -10,7 +10,7 @@ public class SplintMail extends AbstractHeavyArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_heavy_splint_mail);
-		armor.setCost(200);
+		armor.setCost(200L);
 		armor.setArmorBonus(6);
 		armor.setMaximumDexBonus(0);
 		armor.setArmorCheckPenalty(-7);

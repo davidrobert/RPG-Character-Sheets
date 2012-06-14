@@ -14,7 +14,7 @@ public class Guisarme extends AbstractMartialTwoHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_guisarme);
-		base.setCost(9);
+		base.setCost(9L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);
 		base.setWeight(6d);

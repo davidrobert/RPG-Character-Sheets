@@ -14,7 +14,7 @@ public class AxeOrcDouble extends AbstractExoticTwoHandedMelleWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_exotic_axe_orc_double);
-		base.setCost(60);
+		base.setCost(60L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);
 		base.setWeight(12.5);

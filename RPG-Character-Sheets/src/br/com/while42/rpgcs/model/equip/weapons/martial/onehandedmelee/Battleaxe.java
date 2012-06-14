@@ -14,7 +14,7 @@ public class Battleaxe extends AbstractMartialOneHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_battleaxe);
-		base.setCost(10);
+		base.setCost(10L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);
 		base.setWeight(3d);

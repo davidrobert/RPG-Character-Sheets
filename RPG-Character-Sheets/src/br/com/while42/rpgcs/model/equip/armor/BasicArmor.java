@@ -4,7 +4,7 @@ public class BasicArmor implements Armor {
 	private static final long serialVersionUID = 1L;
 	
 	private final int codeName;
-	private Integer cost = 0;
+	private Long cost = 0L;
 	private Integer armorBonus = 0;
 	private Integer maximumDexBonus = 0;
 	private Integer armorCheckPenalty = 0;
@@ -21,12 +21,12 @@ public class BasicArmor implements Armor {
 		return codeName;
 	}
 	
-	public void setCost(Integer cost) {
+	public void setCost(Long cost) {
 		this.cost = cost;
 	}
 
 	@Override
-	public Integer getCost() {
+	public Long getCost() {
 		return cost;
 	}
 	

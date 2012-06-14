@@ -10,7 +10,7 @@ public class ShieldSpikes extends AbstractExtraArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_extra_shield_spikes);
-		armor.setCost(10);
+		armor.setCost(10L);
 		armor.setArmorBonus(0);
 		armor.setMaximumDexBonus(0);
 		armor.setArmorCheckPenalty(0);

@@ -14,7 +14,7 @@ public class Kukri extends AbstractMartialLightMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_kukri);
-		base.setCost(8);
+		base.setCost(8L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(1.5);

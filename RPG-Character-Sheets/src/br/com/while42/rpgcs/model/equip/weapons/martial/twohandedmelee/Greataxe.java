@@ -14,7 +14,7 @@ public class Greataxe extends AbstractMartialTwoHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_greataxe);
-		base.setCost(20);
+		base.setCost(20L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);
 		base.setWeight(6d);

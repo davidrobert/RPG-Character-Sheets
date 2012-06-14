@@ -5,7 +5,7 @@ import br.com.while42.rpgcs.model.equip.armor.BasicArmor;
 public class BuilderEspecialArmor {
 
 	private String name;
-	private Integer cost;
+	private Long cost;
 	private Integer armorBonus;
 	private Integer maximumDexBonus;
 	private Integer armorCheckPenalty;
@@ -21,13 +21,13 @@ public class BuilderEspecialArmor {
 		private BuilderEspecialArmorWithName(String n) {
 			name = n;
 		}
-		public BuilderEspecialArmorWithCost setCost(Integer cost) {
+		public BuilderEspecialArmorWithCost setCost(Long cost) {
 			return new BuilderEspecialArmorWithCost(cost);
 		}
 	}
 	
 	public class BuilderEspecialArmorWithCost {
-		private BuilderEspecialArmorWithCost(Integer c) {
+		private BuilderEspecialArmorWithCost(Long c) {
 			cost = c;
 		}
 		public BuilderEspecialArmorWithArmorBonus setArmorBonus(Integer armorBonus) {

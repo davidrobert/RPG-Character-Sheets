@@ -14,7 +14,7 @@ public class Dart extends AbstractSimpleRangedWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_simple_dart);
-		base.setCost(5);
+		base.setCost(5L);
 		base.setCritical(2);
 		base.setRangeIncrement(6);
 		base.setWeight(0.25);

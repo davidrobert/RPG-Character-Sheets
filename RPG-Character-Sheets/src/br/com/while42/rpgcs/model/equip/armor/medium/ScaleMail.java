@@ -10,7 +10,7 @@ public class ScaleMail extends AbstractMediumArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_medium_scale_mail);
-		armor.setCost(50);
+		armor.setCost(50L);
 		armor.setArmorBonus(4);
 		armor.setMaximumDexBonus(3);
 		armor.setArmorCheckPenalty(-4);

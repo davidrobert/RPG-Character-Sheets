@@ -14,7 +14,7 @@ public class Handaxe extends AbstractMartialLightMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_handaxe);
-		base.setCost(6);
+		base.setCost(6L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(1d);

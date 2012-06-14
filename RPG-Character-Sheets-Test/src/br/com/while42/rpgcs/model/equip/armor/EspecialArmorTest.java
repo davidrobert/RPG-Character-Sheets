@@ -10,7 +10,7 @@ public class EspecialArmorTest extends AndroidTestCase {
 		BuilderEspecialArmor builder = new BuilderEspecialArmor();
 		
 		EspecialArmor armor = builder.setName("Armadura Especial")
-			   .setCost(10000)
+			   .setCost(10000L)
 			   .setArmorBonus(10)
 			   .setMaximumDexBonus(11)
 			   .setArmorCheckPenalty(12)
@@ -20,7 +20,7 @@ public class EspecialArmorTest extends AndroidTestCase {
 			   .toEspecialArmor();
 			   
 		assertEquals("Armadura Especial", armor.getName());
-		assertEquals(10000, armor.getCost().intValue());
+		assertEquals(10000L, armor.getCost().longValue());
 		assertEquals(10, armor.getArmorBonus().intValue());
 		assertEquals(11, armor.getMaximumDexBonus().intValue());
 		assertEquals(12, armor.getArmorCheckPenalty().intValue());

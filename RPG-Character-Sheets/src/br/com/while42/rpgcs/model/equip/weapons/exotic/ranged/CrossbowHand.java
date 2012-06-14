@@ -14,7 +14,7 @@ public class CrossbowHand extends AbstractExoticRangedWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_exotic_crossbow_hand);
-		base.setCost(100);
+		base.setCost(100L);
 		base.setCritical(2);
 		base.setRangeIncrement(9);
 		base.setWeight(1d);

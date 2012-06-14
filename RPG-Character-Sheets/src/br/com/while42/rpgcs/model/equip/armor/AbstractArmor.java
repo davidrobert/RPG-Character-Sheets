@@ -16,7 +16,7 @@ public abstract class AbstractArmor implements Armor {
 	}
 
 	@Override
-	public Integer getCost() {
+	public Long getCost() {
 		return armor.getCost();
 	}
 

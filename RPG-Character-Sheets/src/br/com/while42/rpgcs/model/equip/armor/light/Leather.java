@@ -10,7 +10,7 @@ public class Leather extends AbstractLightArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_light_leather);
-		armor.setCost(10);
+		armor.setCost(10L);
 		armor.setArmorBonus(2);
 		armor.setMaximumDexBonus(6);
 		armor.setArmorCheckPenalty(0);

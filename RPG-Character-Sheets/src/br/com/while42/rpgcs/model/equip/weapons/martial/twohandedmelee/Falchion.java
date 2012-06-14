@@ -14,7 +14,7 @@ public class Falchion extends AbstractMartialTwoHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_falchion);
-		base.setCost(75);
+		base.setCost(75L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(4d);

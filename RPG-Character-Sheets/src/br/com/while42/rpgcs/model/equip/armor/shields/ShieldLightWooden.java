@@ -10,7 +10,7 @@ public class ShieldLightWooden extends AbstractShieldArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_shield_light_wooden);
-		armor.setCost(3);
+		armor.setCost(3L);
 		armor.setArmorBonus(1);
 		armor.setMaximumDexBonus(0);
 		armor.setArmorCheckPenalty(-1);

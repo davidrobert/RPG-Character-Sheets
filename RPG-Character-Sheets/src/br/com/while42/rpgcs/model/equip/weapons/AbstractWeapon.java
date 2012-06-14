@@ -20,7 +20,7 @@ public abstract class AbstractWeapon implements Weapon {
 	}
 
 	@Override
-	public Integer getCost() {
+	public Long getCost() {
 		return base.getCost();
 	}
 

@@ -14,7 +14,7 @@ public class Whip extends AbstractExoticOneHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_exotic_whip);
-		base.setCost(2);
+		base.setCost(2L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(1d);

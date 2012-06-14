@@ -10,7 +10,7 @@ public class Padded extends AbstractLightArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_light_padded);
-		armor.setCost(5);
+		armor.setCost(5L);
 		armor.setArmorBonus(1);
 		armor.setMaximumDexBonus(8);
 		armor.setArmorCheckPenalty(0);

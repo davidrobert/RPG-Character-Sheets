@@ -14,7 +14,7 @@ public class Quartestaff extends AbstractSimpleTwoHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_simple_quartestaff);
-		base.setCost(0);
+		base.setCost(0L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(2d);

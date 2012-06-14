@@ -10,7 +10,7 @@ public class GaultletLocked extends AbstractExtraArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_extra_gauntlet_locked);
-		armor.setCost(8);
+		armor.setCost(8L);
 		armor.setArmorBonus(0);
 		armor.setMaximumDexBonus(0);
 		armor.setArmorCheckPenalty(0);

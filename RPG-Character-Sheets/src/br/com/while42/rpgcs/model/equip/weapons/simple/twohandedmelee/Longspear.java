@@ -14,7 +14,7 @@ public class Longspear extends AbstractSimpleTwoHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_simple_longspear);
-		base.setCost(5);
+		base.setCost(5L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);
 		base.setWeight(4.5);

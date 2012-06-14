@@ -10,7 +10,7 @@ public class ShieldHeavySteel extends AbstractShieldArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_shield_heavy_steel);
-		armor.setCost(20);
+		armor.setCost(20L);
 		armor.setArmorBonus(2);
 		armor.setMaximumDexBonus(0);
 		armor.setArmorCheckPenalty(-2);

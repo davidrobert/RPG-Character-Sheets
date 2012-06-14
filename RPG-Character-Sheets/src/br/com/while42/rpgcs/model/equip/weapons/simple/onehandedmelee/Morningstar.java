@@ -14,7 +14,7 @@ public class Morningstar extends AbstractSimpleOneHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_simple_morningstar);
-		base.setCost(8);
+		base.setCost(8L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(3d);

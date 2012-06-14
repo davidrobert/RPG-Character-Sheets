@@ -14,7 +14,7 @@ public class Greatclub extends AbstractMartialTwoHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_greatclub);
-		base.setCost(5);
+		base.setCost(5L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(4d);

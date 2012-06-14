@@ -14,7 +14,7 @@ public class PickHeavy extends AbstractMartialOneHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_pick_heavy);
-		base.setCost(8);
+		base.setCost(8L);
 		base.setCritical(4);
 		base.setRangeIncrement(0);
 		base.setWeight(3d);

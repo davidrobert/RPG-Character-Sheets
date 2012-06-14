@@ -14,7 +14,7 @@ public class Sap extends AbstractMartialLightMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_sap);
-		base.setCost(1);
+		base.setCost(1L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
 		base.setWeight(1d);

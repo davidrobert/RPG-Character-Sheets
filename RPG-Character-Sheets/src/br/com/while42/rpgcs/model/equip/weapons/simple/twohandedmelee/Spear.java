@@ -14,7 +14,7 @@ public class Spear extends AbstractSimpleTwoHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_simple_spear);
-		base.setCost(2);
+		base.setCost(2L);
 		base.setCritical(3);
 		base.setRangeIncrement(6);
 		base.setWeight(3d);

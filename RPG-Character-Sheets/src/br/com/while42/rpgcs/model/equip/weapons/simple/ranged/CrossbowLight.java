@@ -14,7 +14,7 @@ public class CrossbowLight extends AbstractSimpleRangedWeapon {
 	
 	static {
 		base = new BasicWeapon(R.string.weapon_simple_crossbow_light);
-		base.setCost(35);
+		base.setCost(35L);
 		base.setCritical(2);
 		base.setRangeIncrement(24);
 		base.setWeight(2d);

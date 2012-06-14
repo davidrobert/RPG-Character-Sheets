@@ -14,7 +14,7 @@ public class LongbowComposite extends AbstractMartialRangedWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_martial_longbow_composite);
-		base.setCost(100);
+		base.setCost(100L);
 		base.setCritical(3);
 		base.setRangeIncrement(33);
 		base.setWeight(1.5);

@@ -10,7 +10,7 @@ public class ChainShirt extends AbstractLightArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_light_chain_shirt);
-		armor.setCost(100);
+		armor.setCost(100L);
 		armor.setArmorBonus(4);
 		armor.setMaximumDexBonus(4);
 		armor.setArmorCheckPenalty(-2);

@@ -14,7 +14,7 @@ public class Club extends AbstractSimpleOneHandedMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_simple_club);
-		base.setCost(0);
+		base.setCost(0L);
 		base.setCritical(2);
 		base.setRangeIncrement(3);
 		base.setWeight(1.5);

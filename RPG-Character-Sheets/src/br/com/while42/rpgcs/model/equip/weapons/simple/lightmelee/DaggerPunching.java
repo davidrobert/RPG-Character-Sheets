@@ -14,7 +14,7 @@ public class DaggerPunching extends AbstractSimpleLightMeleeWeapon {
 
 	static {
 		base = new BasicWeapon(R.string.weapon_simple_dagger_punching);
-		base.setCost(2);
+		base.setCost(2L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);
 		base.setWeight(0.5);

@@ -10,7 +10,7 @@ public class FullPlate extends AbstractHeavyArmor implements Armor {
 	private static final BasicArmor armor;
 	static {
 		armor = new BasicArmor(R.string.armor_heavy_full_plate);
-		armor.setCost(1500);
+		armor.setCost(1500L);
 		armor.setArmorBonus(8);
 		armor.setMaximumDexBonus(1);
 		armor.setArmorCheckPenalty(-6);
