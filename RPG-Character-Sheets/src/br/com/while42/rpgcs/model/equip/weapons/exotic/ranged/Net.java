@@ -26,6 +26,6 @@ public class Net extends AbstractExoticRangedWeapon {
 	}
 
 	public Net() {
-		super(base);
+		super(base, null);
 	}
 }

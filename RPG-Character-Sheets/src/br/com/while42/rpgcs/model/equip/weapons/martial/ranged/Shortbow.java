@@ -3,6 +3,7 @@ package br.com.while42.rpgcs.model.equip.weapons.martial.ranged;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
+import br.com.while42.rpgcs.model.character.TypeMunition;
 import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
@@ -26,6 +27,6 @@ public class Shortbow extends AbstractMartialRangedWeapon {
 	}
 	
 	public Shortbow() {
-		super(base);
+		super(base, TypeMunition.ARROWS);
 	}
 }

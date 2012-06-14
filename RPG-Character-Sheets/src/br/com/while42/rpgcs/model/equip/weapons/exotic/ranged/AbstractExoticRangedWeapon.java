@@ -1,15 +1,20 @@
 package br.com.while42.rpgcs.model.equip.weapons.exotic.ranged;
 
+import br.com.while42.rpgcs.model.character.TypeMunition;
 import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.RangedWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.exotic.AbstractExoticWeapon;
 
-public abstract class AbstractExoticRangedWeapon extends AbstractExoticWeapon {
+public abstract class AbstractExoticRangedWeapon extends AbstractExoticWeapon implements RangedWeapon {
 	private static final long serialVersionUID = 1L;
 
-	public AbstractExoticRangedWeapon(BasicWeapon base) {
+	private TypeMunition typeMunition;
+	
+	public AbstractExoticRangedWeapon(BasicWeapon base, TypeMunition typeMunition) {
 		super(base);
+		this.typeMunition = typeMunition;
 	}
 
 	@Override
@@ -22,4 +27,8 @@ public abstract class AbstractExoticRangedWeapon extends AbstractExoticWeapon {
 		return null;
 	}
 
+	@Override
+	public TypeMunition getTypeMunition() {
+		return typeMunition;
+	}
 }

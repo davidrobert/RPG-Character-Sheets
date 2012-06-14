@@ -1,15 +1,20 @@
 package br.com.while42.rpgcs.model.equip.weapons.martial.ranged;
 
+import br.com.while42.rpgcs.model.character.TypeMunition;
 import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.RangedWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.martial.AbstractMartialWeapon;
 
-public abstract class AbstractMartialRangedWeapon extends AbstractMartialWeapon {
+public abstract class AbstractMartialRangedWeapon extends AbstractMartialWeapon implements RangedWeapon {
 	private static final long serialVersionUID = 1L;
 
-	public AbstractMartialRangedWeapon(BasicWeapon base) {
+	private TypeMunition typeMunition;
+	
+	public AbstractMartialRangedWeapon(BasicWeapon base, TypeMunition typeMunition) {
 		super(base);
+		this.typeMunition = typeMunition;
 	}
 
 	@Override
@@ -21,5 +26,9 @@ public abstract class AbstractMartialRangedWeapon extends AbstractMartialWeapon 
 	public final CategorieEncumbranceWeapon getCategorieEncumbrance() {
 		return null;
 	}
-
+	
+	@Override
+	public TypeMunition getTypeMunition() {
+		return typeMunition;
+	}
 }

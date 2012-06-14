@@ -3,6 +3,7 @@ package br.com.while42.rpgcs.model.equip.weapons.simple.ranged;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
+import br.com.while42.rpgcs.model.character.TypeMunition;
 import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
@@ -26,6 +27,6 @@ public class Dart extends AbstractSimpleRangedWeapon {
 	}
 	
 	public Dart() {
-		super(base);
+		super(base, TypeMunition.BOLT);
 	}
 }

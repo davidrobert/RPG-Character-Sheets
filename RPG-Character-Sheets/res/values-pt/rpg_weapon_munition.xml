@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="weapon_munition_bolt">Dardo</string>
+    <string name="weapon_munition_bullets">Balas</string>
+    <string name="weapon_munition_arrows">Flexas</string>
+    <string name="weapon_munition_bolts_of_crossbow_of_hand">Setas de Besta de Mão</string>
+    <string name="weapon_munition_bolts_of_repeating">Setas de Repetição</string>
+    <string name="weapon_munition_shuriken">Shuriken</string>
+   	<string name="weapon_munition_especial">Especial</string>
+    
+</resources>
