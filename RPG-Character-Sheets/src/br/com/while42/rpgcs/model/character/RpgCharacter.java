@@ -15,31 +15,49 @@ public class RpgCharacter implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private Long id = 0L;
-	private String image = "";
+	private Long id;
+	private String image;
 	private String name;
 	
-	private RpgClass classes = new RpgClass();
 	private Attributes attributes;
-	private Abilities abilities = new Abilities();
-	private Defences defences = new Defences();
-	private SavingThrows savingThrows = new SavingThrows();
-	private Skills skills = new Skills();
-	private Languages languages = new Languages();
-	private Money money = new Money();
 	
-	private Attaks attaks = new Attaks(abilities);
-	private Armors armors = new Armors();
+	private RpgClass classes;
+	private Abilities abilities;
+	private Defences defences;
+	private SavingThrows savingThrows;
+	private Skills skills;
+	private Languages languages;
+	private Money money;
 	
-	private Equipments otherEquipments = new Equipments();
+	private Attaks attaks;
+	private Armors armors;
+	private Equipments otherEquipments;
 	
-	private Integer baseAttackBonus = 0;
-	private Integer grapple = 0;
+	private Integer baseAttackBonus;
+	private Integer grapple;
 
 	
 	public RpgCharacter(String name, Attributes attributes) {
 		this.name = name;
 		this.attributes = attributes;
+		
+		this.id = 0L;
+		this.image = "";
+		
+		this.classes = new RpgClass();
+		this.abilities = new Abilities();
+		this.defences = new Defences();
+		this.savingThrows = new SavingThrows();
+		this.skills = new Skills();
+		this.languages = new Languages();
+		this.money = new Money();
+		
+		this.attaks = new Attaks(abilities);
+		this.armors = new Armors();
+		this.otherEquipments = new Equipments();
+		
+		this.baseAttackBonus = 0;
+		this.grapple = 0;
 	}
 
 	public static long getSerialVersionUID() {
