@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+        
+    <string name="skills">Perícias</string>
     
 	<string name="skill_appraise">Avaliação</string>
 	<string name="skill_balance">Equilíbrio</string>

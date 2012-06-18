@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
+    <string name="languages">Languages</string>
+    
     <string name="language_abyssal">Abyssal</string>
 	<string name="language_aquan">Aquan</string>
 	<string name="language_auran">Auran</string>
