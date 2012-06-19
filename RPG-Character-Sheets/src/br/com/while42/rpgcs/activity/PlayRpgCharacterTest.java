@@ -3,6 +3,7 @@ package br.com.while42.rpgcs.activity;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -103,6 +104,10 @@ public class PlayRpgCharacterTest extends Activity {
 		languages.add(TypeRpgLanguage.ELVEN);
 		languages.add(TypeRpgLanguage.ORC);
 		languages.add(TypeRpgLanguage.GOBLIN);
+		languages.add(TypeRpgLanguage.COMMON);
+		languages.add(TypeRpgLanguage.DRACONIC);
+		languages.add(TypeRpgLanguage.GIANT);
+		languages.add(TypeRpgLanguage.HALFLING);
 		
 		rc.getRpgClasses().setExperience(35000L);
 		
@@ -212,6 +217,8 @@ public class PlayRpgCharacterTest extends Activity {
 		for (TypeRpgLanguage type: rpgCharacter.getLanguages().getAll()) {
 			lgs[i++] = getString(type.getCodeName());
 		}
+		
+		Arrays.sort(lgs);
 		
 		ArrayAdapter<String> adapterLanguages = new ArrayAdapter<String>(this,
 				R.layout.list_languages, android.R.id.text1, lgs);
