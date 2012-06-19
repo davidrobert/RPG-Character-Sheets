@@ -1090,16 +1090,17 @@
 		        android:typeface="serif"
 		        android:textSize="20sp"
 		        android:textStyle="bold"
-		        android:text="Deity" />
+		        android:text="@string/play_label_religion" />
             
 		    <TextView
+		        android:id="@+id_play/textview_religion"
 		        android:layout_width="165dp"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:gravity="center"
 		        android:textSize="18sp"
-		        android:text="The Raven Queen"
+		        android:text=""
 		        android:background="@drawable/white_square_down_right_rounded_corner"/>
 		    
         </TableRow>

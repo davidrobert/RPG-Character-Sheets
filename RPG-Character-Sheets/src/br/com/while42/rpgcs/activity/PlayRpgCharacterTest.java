@@ -149,6 +149,10 @@ public class PlayRpgCharacterTest extends Activity {
 		
 		ListView lvLanguages = (ListView) findViewById(R.id_play.listview_languages);
 					
+		TextView tvReligion = (TextView) findViewById(R.id_play.textview_religion);
+		
+		// ---
+		
 		tvName.setText(rpgCharacter.getName());
 		
 		Attributes attr = rpgCharacter.getAttributes();
@@ -224,6 +228,9 @@ public class PlayRpgCharacterTest extends Activity {
 				R.layout.list_languages, android.R.id.text1, lgs);
 		
 		lvLanguages.setAdapter(adapterLanguages);
+		
+		String religion = getString(attr.getReligion().getCodeName());
+		tvReligion.setText(religion);
 	}
 
 }
