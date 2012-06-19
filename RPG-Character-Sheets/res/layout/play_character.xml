@@ -203,6 +203,7 @@
 		        android:typeface="serif"
 		        android:textColor="#000"
 		        android:text="@string/ability_strength_abbreviation"
+		        android:textStyle="bold"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
@@ -248,6 +249,7 @@
 		        android:typeface="serif"
 		        android:paddingLeft="5dp"
 		        android:textColor="#000"
+		        android:textStyle="bold"
 		        android:text="@string/ability_constitution_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
@@ -305,6 +307,7 @@
 		        android:gravity="center_vertical"
 		        android:paddingLeft="5dp"
 		        android:typeface="serif"
+		        android:textStyle="bold"
 		        android:textColor="#000"
 		        android:text="@string/ability_wisdom_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -352,6 +355,7 @@
 		        android:paddingLeft="5dp"
 		        android:textColor="#000"
 		        android:typeface="serif"
+		        android:textStyle="bold"
 		        android:text="@string/ability_charisma_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
@@ -409,6 +413,7 @@
 		        android:gravity="center_vertical"
 		        android:typeface="serif"
 		        android:paddingLeft="5dp"
+		        android:textStyle="bold"
 		        android:textColor="#000"
 		        android:text="@string/ability_dexterity_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -454,6 +459,7 @@
 		        android:layout_height="fill_parent"
 		        android:gravity="center_vertical"
 		        android:paddingLeft="5dp"
+		        android:textStyle="bold"
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:text="@string/ability_intelligence_abbreviation"
@@ -540,6 +546,7 @@
 		        android:gravity="center_vertical"
 		        android:paddingLeft="5dp"
 		        android:textColor="#000"
+		        android:textStyle="bold"
 		        android:text="@string/defences_armor_class_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
@@ -574,6 +581,7 @@
 		        android:id="@+id_play/textView3"
 		        android:layout_width="70dp"
 		        android:layout_height="50dp"
+		        android:textStyle="bold"
 		        android:gravity="center_vertical"
 		        android:typeface="serif"
 		        android:paddingLeft="5dp"
@@ -588,7 +596,6 @@
 		        android:layout_height="50dp"
 		        android:textColor="#000"
 		        android:text=""
-		        android:layout_margin="2dp"
 		        android:typeface="serif"
 		        android:background="@drawable/white_square_all_right_rounded_corners"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -617,6 +624,7 @@
 		        android:paddingLeft="5dp"
 		        android:textColor="#000"
 		        android:text="@string/saving_throws_reflex_abbreviation"
+		        android:textStyle="bold"
 		        android:typeface="serif"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
@@ -652,6 +660,7 @@
 		        android:layout_width="70dp"
 		        android:layout_height="50dp"
 		        android:gravity="center_vertical"
+		        android:textStyle="bold"
 		        android:paddingLeft="5dp"
 		        android:typeface="serif"
 		        android:textColor="#000"
@@ -694,6 +703,7 @@
 		        android:gravity="center_vertical"
 		        android:paddingLeft="5dp"
 		        android:textColor="#000"
+		        android:textStyle="bold"
 		        android:text="Milestones"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
@@ -717,6 +727,7 @@
 		        android:layout_width="160dp"
 		        android:layout_height="40dp"
 		        android:paddingLeft="5dp"
+		        android:textStyle="bold"
 		        android:gravity="center_vertical"
 		        android:textColor="#000"
 		        android:typeface="serif"
@@ -786,7 +797,7 @@
 		        android:textColor="#000"
 		        android:text="Initiave"
 		        android:textSize="20sp"
-		        />
+		        android:textStyle="bold" />
             
 		    <TextView
 		        android:id="@+id_play/textView4"
@@ -814,6 +825,7 @@
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:text="Speed"
+		        android:textStyle="bold"
 		        android:textSize="20sp" />
             
 		    <TextView
@@ -840,6 +852,7 @@
 		        android:gravity="center_vertical"
 		        android:textColor="#000"
 		        android:typeface="serif"
+		        android:textStyle="bold"
 		        android:text="Saving Throw"
 		        android:textSize="20sp" />
             
