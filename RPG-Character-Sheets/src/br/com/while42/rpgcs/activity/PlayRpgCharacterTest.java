@@ -262,7 +262,7 @@ public class PlayRpgCharacterTest extends Activity {
 			for (Skill skill: skills.getAll()) {
 				HashMap<String, String> map = new HashMap<String, String>();
 				map.put("name", getString(skill.getType().getCodeName()));
-				map.put("modifier", skill.getModifier().toString());
+				map.put("modifier", "(" + fmt.format(skill.getModifier()) + ")");
 				sklls.add(map);
 			}
 			
