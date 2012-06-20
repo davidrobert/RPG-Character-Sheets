@@ -132,6 +132,14 @@ public class RpgCharacter implements Serializable {
 		return savingThrows;
 	}
 	
+	public Skills getSkills() {
+		return skills;
+	}
+
+	public void setSkills(Skills skills) {
+		this.skills = skills;
+	}
+
 	public Languages getLanguages() {
 		return languages;
 	}

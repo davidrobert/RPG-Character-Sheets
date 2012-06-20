@@ -10,7 +10,7 @@ public class Skills implements Serializable {
 	private Set<Skill> skills = new HashSet<Skill>();
 	private Set<SkillOther> others = new HashSet<SkillOther>();
 	
-	public void addSkill(Skill skill) {
+	public void add(Skill skill) {
 		skills.add(skill);
 	}
 	
@@ -18,7 +18,7 @@ public class Skills implements Serializable {
 		return new HashSet<Skill>(skills);
 	}
 	
-	public void addSkill(SkillOther skill) {
+	public void add(SkillOther skill) {
 		others.add(skill);
 	}
 	

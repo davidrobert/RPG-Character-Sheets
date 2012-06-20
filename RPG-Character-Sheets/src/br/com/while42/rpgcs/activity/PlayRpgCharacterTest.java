@@ -2,10 +2,7 @@ package br.com.while42.rpgcs.activity;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -22,6 +19,8 @@ import br.com.while42.rpgcs.model.character.Languages;
 import br.com.while42.rpgcs.model.character.Money;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.SavingThrows;
+import br.com.while42.rpgcs.model.character.Skill;
+import br.com.while42.rpgcs.model.character.Skills;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -30,6 +29,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgLanguage;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.Barbarian;
@@ -109,6 +109,23 @@ public class PlayRpgCharacterTest extends Activity {
 		languages.add(TypeRpgLanguage.GIANT);
 		languages.add(TypeRpgLanguage.HALFLING);
 		
+		Skills skills = rc.getSkills();
+		skills.add(new Skill(TypeRpgSkill.APPRAISE, 1));
+		skills.add(new Skill(TypeRpgSkill.BALANCE, 2));
+		skills.add(new Skill(TypeRpgSkill.BLUFF, 3));
+		skills.add(new Skill(TypeRpgSkill.CLIMB, 1));
+		skills.add(new Skill(TypeRpgSkill.CONCENTRATION, 5));
+		skills.add(new Skill(TypeRpgSkill.CRAFT, 4));
+		skills.add(new Skill(TypeRpgSkill.DECIPHER_SCRIPT, 3));
+		skills.add(new Skill(TypeRpgSkill.DIPLOMACY, 2));
+		skills.add(new Skill(TypeRpgSkill.DISABLE_DEVICE, 2));
+		skills.add(new Skill(TypeRpgSkill.DISGUISE, 1));
+		skills.add(new Skill(TypeRpgSkill.ESCAPE_ARTIST, 1));
+		skills.add(new Skill(TypeRpgSkill.FORGERY, 5));
+		skills.add(new Skill(TypeRpgSkill.GATHER_INFORMATION, 5));
+		skills.add(new Skill(TypeRpgSkill.HANDLE_ANIMAL, 10));
+		skills.add(new Skill(TypeRpgSkill.HEAL, -1));
+		
 		rc.getRpgClasses().setExperience(35000L);
 		
 		return rc;
@@ -148,6 +165,7 @@ public class PlayRpgCharacterTest extends Activity {
 		TextView tvThrowsWill = (TextView) findViewById(R.id_play.textview_will);
 		
 		ListView lvLanguages = (ListView) findViewById(R.id_play.listview_languages);
+		ListView lvSkills = (ListView) findViewById(R.id_play.listview_skills);
 					
 		TextView tvReligion = (TextView) findViewById(R.id_play.textview_religion);
 		
@@ -216,19 +234,36 @@ public class PlayRpgCharacterTest extends Activity {
 		tvReflex.setText(savingThrows.getReflex().toString());
 		tvThrowsWill.setText(savingThrows.getThrowsWill().toString());
 		
-		String[] lgs = new String[rpgCharacter.getLanguages().getAll().size()];
-		int i = 0;
-		for (TypeRpgLanguage type: rpgCharacter.getLanguages().getAll()) {
-			lgs[i++] = getString(type.getCodeName());
+		{
+			String[] lgs = new String[rpgCharacter.getLanguages().getAll().size()];
+			int i = 0;
+			for (TypeRpgLanguage type: rpgCharacter.getLanguages().getAll()) {
+				lgs[i++] = getString(type.getCodeName());
+			}
+		
+			Arrays.sort(lgs);
+		
+			ArrayAdapter<String> adapterLanguages = new ArrayAdapter<String>(this,
+					R.layout.list_languages, android.R.id.text1, lgs);
+		
+			lvLanguages.setAdapter(adapterLanguages);
 		}
 		
-		Arrays.sort(lgs);
+		{
+			String[] sklls = new String[rpgCharacter.getSkills().getAll().size()];
+			int j = 0;
+			for (Skill skill: rpgCharacter.getSkills().getAll()) {
+				sklls[j++] = getString(skill.getType().getCodeName());
+			}
 		
-		ArrayAdapter<String> adapterLanguages = new ArrayAdapter<String>(this,
-				R.layout.list_languages, android.R.id.text1, lgs);
+			Arrays.sort(sklls);
 		
-		lvLanguages.setAdapter(adapterLanguages);
+			ArrayAdapter<String> adapterSkills = new ArrayAdapter<String>(this,
+					R.layout.list_languages, android.R.id.text1, sklls);
 		
+			lvSkills.setAdapter(adapterSkills);
+		}
+			
 		String religion = getString(attr.getReligion().getCodeName());
 		tvReligion.setText(religion);
 	}
