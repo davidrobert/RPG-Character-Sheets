@@ -2,12 +2,18 @@ package br.com.while42.rpgcs.activity;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.character.Abilities;
@@ -234,10 +240,11 @@ public class PlayRpgCharacterTest extends Activity {
 		tvReflex.setText(savingThrows.getReflex().toString());
 		tvThrowsWill.setText(savingThrows.getThrowsWill().toString());
 		
+		Languages languages = rpgCharacter.getLanguages();
 		{
-			String[] lgs = new String[rpgCharacter.getLanguages().getAll().size()];
+			String[] lgs = new String[languages.getAll().size()];
 			int i = 0;
-			for (TypeRpgLanguage type: rpgCharacter.getLanguages().getAll()) {
+			for (TypeRpgLanguage type: languages.getAll()) {
 				lgs[i++] = getString(type.getCodeName());
 			}
 		
@@ -249,18 +256,28 @@ public class PlayRpgCharacterTest extends Activity {
 			lvLanguages.setAdapter(adapterLanguages);
 		}
 		
+		Skills skills = rpgCharacter.getSkills();
 		{
-			String[] sklls = new String[rpgCharacter.getSkills().getAll().size()];
-			int j = 0;
-			for (Skill skill: rpgCharacter.getSkills().getAll()) {
-				sklls[j++] = getString(skill.getType().getCodeName());
+			ArrayList<HashMap<String, String>> sklls = new ArrayList<HashMap<String, String>>();
+			for (Skill skill: skills.getAll()) {
+				HashMap<String, String> map = new HashMap<String, String>();
+				map.put("name", getString(skill.getType().getCodeName()));
+				map.put("modifier", skill.getModifier().toString());
+				sklls.add(map);
 			}
-		
-			Arrays.sort(sklls);
-		
-			ArrayAdapter<String> adapterSkills = new ArrayAdapter<String>(this,
-					R.layout.list_languages, android.R.id.text1, sklls);
-		
+			
+			Comparator<Map<String, String>> mapComparator = new Comparator<Map<String, String>>() {
+				@Override
+				public int compare(Map<String, String> m1, Map<String, String> m2) {
+			        return m1.get("name").compareTo(m2.get("name"));
+			    }
+			};
+			
+			Collections.sort(sklls, mapComparator);
+
+			SimpleAdapter adapterSkills = new SimpleAdapter(this, sklls, R.layout.list_skills,
+			            new String[] {"name", "modifier"}, new int[] {R.id.name, R.id.modifier});
+			
 			lvSkills.setAdapter(adapterSkills);
 		}
 			
