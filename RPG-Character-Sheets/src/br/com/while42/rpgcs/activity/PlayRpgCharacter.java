@@ -28,6 +28,7 @@ import br.com.while42.rpgcs.model.character.Skills;
 import br.com.while42.rpgcs.model.character.attributes.TypeAbilities;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgLanguage;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
+import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 
 public class PlayRpgCharacter extends Activity {
 	
@@ -44,9 +45,9 @@ public class PlayRpgCharacter extends Activity {
         Log.d("ID: ", rpgCharacter.getId().toString());
 		
 		TextView tvName = (TextView) findViewById(R.id_play.textview_name);
-		TextView tvGenderRaceClass = (TextView) findViewById(R.id_play.textview_gender_race_class);
+		TextView tvGenderRace = (TextView) findViewById(R.id_play.textview_gender_race);
 		TextView tvAlignment = (TextView) findViewById(R.id_play.textview_alignment);
-		TextView tvLevel = (TextView) findViewById(R.id_play.textview_level);
+		TextView tvClassesLevel = (TextView) findViewById(R.id_play.textview_classes_level);
 		TextView tvExperience = (TextView) findViewById(R.id_play.textview_experience);
 		
 		TextView tvStrength = (TextView) findViewById(R.id_play.textview_strength);
@@ -80,18 +81,28 @@ public class PlayRpgCharacter extends Activity {
 		
 		Attributes attr = rpgCharacter.getAttributes();
 		
-		StringBuilder sbGenderRaceClass = new StringBuilder();
-		sbGenderRaceClass.append(getString(attr.getGender().getCodeName())).append(" ");
-		sbGenderRaceClass.append(getString(attr.getRace().getCodeName())).append(" ");
+		StringBuilder sbGenderRace = new StringBuilder();
+		sbGenderRace.append(getString(attr.getGender().getCodeName()));
+		sbGenderRace.append(" ");
+		sbGenderRace.append(getString(attr.getRace().getCodeName()));
 		
-		if (!rpgCharacter.getRpgClasses().getAll().isEmpty()) {
-			sbGenderRaceClass.append(getString(rpgCharacter.getRpgClasses().getAll().get(0).getCodeName()));
-		}
-		
-		tvGenderRaceClass.setText(sbGenderRaceClass.toString());
+		tvGenderRace.setText(sbGenderRace.toString());
 		
 		tvAlignment.setText(getString(attr.getAlignment().getCodeName()));
-		tvLevel.setText("0"); // TODO: Falta implementar
+		
+		StringBuilder sbClassLevel = new StringBuilder();
+		for (AbstractRpgClass clazz : rpgCharacter.getRpgClasses().getAll()) {
+			if (sbClassLevel.length() > 0) {
+				sbClassLevel.append(" / ");
+			}
+			sbClassLevel.append(getString(clazz.getCodeName()));
+			sbClassLevel.append(" (");
+			sbClassLevel.append(clazz.getClassLevel().toString());
+			sbClassLevel.append(")");
+		}
+		
+		tvClassesLevel.setText(sbClassLevel.toString()); 
+		
 		tvExperience.setText(rpgCharacter.getRpgClasses().getExperience().toString());
 		
 		NumberFormat fmt = new DecimalFormat("+#;-#");

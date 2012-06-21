@@ -31,7 +31,7 @@
             android:orientation="vertical">
 
 		    <TextView
-		        android:id="@+id_play/textview_gender_race_class"
+		        android:id="@+id_play/textview_gender_race"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
@@ -59,62 +59,7 @@
 		        android:typeface="serif"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
-		    <!-- 
-		    <TextView
-		        android:id="@+id_play/textView3"
-		        android:layout_width="wrap_content"
-		        android:layout_height="fill_parent"
-		        android:textColor="#000"
-		        android:text="/"
-		        android:paddingLeft="10dp"
-		        android:typeface="serif"
-		        android:paddingRight="10dp"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
-		    
-		    <TextView
-		        android:id="@+id_play/textView6"
-		        android:layout_width="wrap_content"
-		        android:layout_height="fill_parent"
-		        android:textColor="#000"
-		        android:typeface="serif"
-		        android:text=""
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
-		    -->
-        </TableRow>
-  	</TableLayout>
-   
-   <TableLayout
-        android:id="@+id_play/subTitle2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id_play/textView2"
-        android:layout_marginTop="120dp"
-        >
-        
-        <TableRow 
-            android:layout_height="20dp"
-            android:layout_width="match_parent">
-
-		    <TextView
-		        android:id="@+id_play/textView3"
-		        android:layout_width="wrap_content"
-		        android:layout_height="fill_parent"
-		        android:textColor="#000"
-		        android:text="@string/class_level"
-		        android:paddingRight="10dp"
-		        android:typeface="serif"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
-            
-		    <TextView
-		        android:id="@+id_play/textview_level"
-		        android:layout_width="wrap_content"
-		        android:layout_height="fill_parent"
-		        android:textColor="#000"
-		        android:typeface="serif"
-		        android:text=""
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
-		    
-		    <TextView
+		     <TextView
 		        android:id="@+id_play/textView3"
 		        android:layout_width="wrap_content"
 		        android:layout_height="fill_parent"
@@ -143,6 +88,43 @@
 		        android:paddingLeft="10dp"
 		        android:text="@string/character_experience_abbreviation"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+  	</TableLayout>
+   
+   <TableLayout
+        android:id="@+id_play/subTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id_play/textView2"
+        android:layout_marginTop="120dp"
+        >
+        
+        <TableRow 
+            android:layout_height="20dp"
+            android:layout_width="match_parent">
+
+            <!--  
+		    <TextView
+		        android:id="@+id_play/textView3"
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:textColor="#000"
+		        android:text="@string/class_level"
+		        android:paddingRight="10dp"
+		        android:typeface="serif"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		        -->
+            
+		    <TextView
+		        android:id="@+id_play/textview_classes_level"
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:textColor="#000"
+		        android:typeface="serif"
+		        android:text=""
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		    
+		   
         </TableRow>
   	</TableLayout>
   	
