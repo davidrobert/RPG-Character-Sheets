@@ -17,6 +17,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.Barbarian;
 import br.com.while42.rpgcs.model.classes.Monk;
@@ -44,6 +45,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setEye(TypeEyeColor.Brown)
 	                .setHair(TypeHairColor.BROWN)
 	                .setSkin(TypeSkinColor.BROWN)
+	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
 			RpgCharacter rc = new RpgCharacter("Snarf", attributes);
@@ -67,6 +69,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setEye(TypeEyeColor.Brown)
 	                .setHair(TypeHairColor.BROWN)
 	                .setSkin(TypeSkinColor.BROWN)
+	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
 			RpgCharacter rc = new RpgCharacter("Blob", attributes);
@@ -130,6 +133,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setEye(TypeEyeColor.Brown)
 	                .setHair(TypeHairColor.BROWN)
 	                .setSkin(TypeSkinColor.BROWN)
+	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
 			RpgCharacter rc = new RpgCharacter("Deltorei", attributes);
@@ -210,6 +214,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setEye(TypeEyeColor.Deep_Blue)
 	                .setHair(TypeHairColor.WHITE)
 	                .setSkin(TypeSkinColor.WHITE)
+	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
 			RpgCharacter rc = new RpgCharacter("Galadriel", attributes);
@@ -297,6 +302,7 @@ public class RpgCharacterTest extends AndroidTestCase {
                 .setEye(TypeEyeColor.Brown)
                 .setHair(TypeHairColor.BROWN)
                 .setSkin(TypeSkinColor.BROWN)
+                .setVision(TypeVision.NORMAL)
                 .toAttributes();
 		
 		RpgCharacter rc = new RpgCharacter("Stark", attributes);

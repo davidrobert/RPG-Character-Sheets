@@ -8,6 +8,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 import android.test.AndroidTestCase;
 
 public class BuilderAttributesTest extends AndroidTestCase {
@@ -25,6 +26,7 @@ public class BuilderAttributesTest extends AndroidTestCase {
 				                       .setEye(TypeEyeColor.Brown)
 				                       .setHair(TypeHairColor.BROWN)
 				                       .setSkin(TypeSkinColor.BROWN)
+				                       .setVision(TypeVision.NORMAL)
 				                       .toAttributes();
 		
 		assertEquals(TypeRpgRace.HUMAN, attributes.getRace());
