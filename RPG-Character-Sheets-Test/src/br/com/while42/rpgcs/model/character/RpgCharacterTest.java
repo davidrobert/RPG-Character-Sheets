@@ -15,6 +15,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgLanguage;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.Barbarian;
@@ -80,7 +81,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 			ab.setIntelligence(16);
 			ab.setWisdom(15);
 			ab.setCharisma(14);
-			ab.setCharisma(13);
+			ab.setConstitution(13);
 			
 			Defences df = rc.getDefences();
 			df.setArmorClass(10);
@@ -143,7 +144,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 			ab.setIntelligence(16);
 			ab.setWisdom(15);
 			ab.setCharisma(14);
-			ab.setCharisma(13);
+			ab.setConstitution(13);
 			
 			Defences df = rc.getDefences();
 			df.setArmorClass(10);
@@ -176,6 +177,23 @@ public class RpgCharacterTest extends AndroidTestCase {
 			languages.add(TypeRpgLanguage.DRACONIC);
 			languages.add(TypeRpgLanguage.DRUIDIC);
 			
+			Skills skills = rc.getSkills();
+			skills.add(new Skill(TypeRpgSkill.APPRAISE, 1));
+			skills.add(new Skill(TypeRpgSkill.BALANCE, 2));
+			skills.add(new Skill(TypeRpgSkill.BLUFF, 3));
+			skills.add(new Skill(TypeRpgSkill.CLIMB, 1));
+			skills.add(new Skill(TypeRpgSkill.CONCENTRATION, 5));
+			skills.add(new Skill(TypeRpgSkill.CRAFT, 4));
+			skills.add(new Skill(TypeRpgSkill.DECIPHER_SCRIPT, 3));
+			skills.add(new Skill(TypeRpgSkill.DIPLOMACY, 2));
+			skills.add(new Skill(TypeRpgSkill.DISABLE_DEVICE, 2));
+			skills.add(new Skill(TypeRpgSkill.DISGUISE, 1));
+			skills.add(new Skill(TypeRpgSkill.ESCAPE_ARTIST, 1));
+			skills.add(new Skill(TypeRpgSkill.FORGERY, 5));
+			skills.add(new Skill(TypeRpgSkill.GATHER_INFORMATION, 5));
+			skills.add(new Skill(TypeRpgSkill.HANDLE_ANIMAL, 10));
+			skills.add(new Skill(TypeRpgSkill.HEAL, -1));
+			
 			rpgCharacterSheets.add(rc);
 		}
 
@@ -206,7 +224,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 			ab.setIntelligence(16);
 			ab.setWisdom(15);
 			ab.setCharisma(14);
-			ab.setCharisma(13);
+			ab.setConstitution(13);
 			
 			Defences df = rc.getDefences();
 			df.setArmorClass(10);
@@ -234,10 +252,30 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 			Languages languages = rc.getLanguages();
 			
-			languages.add(TypeRpgLanguage.DRUIDIC);
-			languages.add(TypeRpgLanguage.DWARVEN);
 			languages.add(TypeRpgLanguage.ELVEN);
+			languages.add(TypeRpgLanguage.ORC);
+			languages.add(TypeRpgLanguage.GOBLIN);
+			languages.add(TypeRpgLanguage.COMMON);
+			languages.add(TypeRpgLanguage.DRACONIC);
 			languages.add(TypeRpgLanguage.GIANT);
+			languages.add(TypeRpgLanguage.HALFLING);
+			
+			Skills skills = rc.getSkills();
+			skills.add(new Skill(TypeRpgSkill.APPRAISE, 1));
+			skills.add(new Skill(TypeRpgSkill.BALANCE, 2));
+			skills.add(new Skill(TypeRpgSkill.BLUFF, 3));
+			skills.add(new Skill(TypeRpgSkill.CLIMB, 1));
+			skills.add(new Skill(TypeRpgSkill.CONCENTRATION, 5));
+			skills.add(new Skill(TypeRpgSkill.CRAFT, 4));
+			skills.add(new Skill(TypeRpgSkill.DECIPHER_SCRIPT, 3));
+			skills.add(new Skill(TypeRpgSkill.DIPLOMACY, 2));
+			skills.add(new Skill(TypeRpgSkill.DISABLE_DEVICE, 2));
+			skills.add(new Skill(TypeRpgSkill.DISGUISE, 1));
+			skills.add(new Skill(TypeRpgSkill.ESCAPE_ARTIST, 1));
+			skills.add(new Skill(TypeRpgSkill.FORGERY, 5));
+			skills.add(new Skill(TypeRpgSkill.GATHER_INFORMATION, 5));
+			skills.add(new Skill(TypeRpgSkill.HANDLE_ANIMAL, 10));
+			skills.add(new Skill(TypeRpgSkill.HEAL, -1));
 			
 			rpgCharacterSheets.add(rc);
 		}
@@ -284,6 +322,34 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 			assertEquals(rc, rc2);
 		}
+	}
+	
+	@Test
+	public void testAbilitiesDefault() {
+		RpgCharacter rc = getList().get(0);
+		
+		Abilities ab = rc.getAbilities();
+		
+		assertEquals(0, ab.getStrength().intValue());
+		assertEquals(0, ab.getConstitution().intValue());
+		assertEquals(0, ab.getWisdom().intValue());
+		assertEquals(0, ab.getCharisma().intValue());
+		assertEquals(0, ab.getDexterity().intValue());
+		assertEquals(0, ab.getIntelligence().intValue());
+	}
+	
+	@Test
+	public void testAbilities() {
+		RpgCharacter rc = getList().get(1);
+		
+		Abilities ab = rc.getAbilities();
+		
+		assertEquals(18, ab.getStrength().intValue());
+		assertEquals(13, ab.getConstitution().intValue());
+		assertEquals(15, ab.getWisdom().intValue());
+		assertEquals(14, ab.getCharisma().intValue());
+		assertEquals(17, ab.getDexterity().intValue());
+		assertEquals(16, ab.getIntelligence().intValue());
 	}
 	
 	@Test
