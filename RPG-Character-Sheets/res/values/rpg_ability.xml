@@ -5,6 +5,7 @@
    	<string name="ability_modifier">Modifier</string>
 	<string name="ability_modifier_abbreviation">MOD</string>
     
+	<string name="ability_none">None</string>
     <string name="ability_strength">Strength</string>
     <string name="ability_dexterity">Dexterity</string>
     <string name="ability_constitution">Constitution</string>
@@ -12,6 +13,7 @@
     <string name="ability_wisdom">Wisdom</string>
     <string name="ability_charisma">Charisma</string>
     
+    <string name="ability_none_abbreviation">N/A</string>
     <string name="ability_strength_abbreviation">STR</string>
     <string name="ability_dexterity_abbreviation">DEX</string>
     <string name="ability_constitution_abbreviation">CON</string>

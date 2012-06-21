@@ -20,7 +20,12 @@ public class Languages implements Serializable {
 	}
 	
 	public Set<TypeRpgLanguage> getAll() {
-		return langs;
+		//return new HashSet<TypeRpgLanguage>(langs);
+		return (langs);
+	}
+	
+	public void clear() {
+		langs.clear();
 	}
 	
 	@Override

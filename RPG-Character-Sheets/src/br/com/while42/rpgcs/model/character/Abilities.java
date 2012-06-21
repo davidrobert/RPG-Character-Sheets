@@ -1,105 +1,121 @@
 package br.com.while42.rpgcs.model.character;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 import br.com.while42.rpgcs.model.abilities.modifier.AbilityModifier;
+import br.com.while42.rpgcs.model.character.attributes.TypeAbilities;
 
 public class Abilities implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private Integer strength = 0;
-	private Integer constitution = 0;
-	private Integer wisdom = 0;
-	private Integer charisma = 0;
-	private Integer dexterity = 0;
-	private Integer intelligence = 0;
-
+	private final Map<TypeAbilities, Integer> abilities = new HashMap<TypeAbilities, Integer>();
 	private AbilityModifier modifier = new AbilityModifier();
 
 	public Abilities() {
-
+		for (TypeAbilities abilitie: TypeAbilities.values()) {
+			abilities.put(abilitie, 0);
+		}
 	}
 
 	public Abilities(Integer strength, Integer constitution, Integer wisdom,
 			Integer charisma, Integer dexterity, Integer intelligence) {
-		this.strength = strength;
-		this.constitution = constitution;
-		this.wisdom = wisdom;
-		this.charisma = charisma;
-		this.dexterity = dexterity;
-		this.intelligence = intelligence;
+		
+		for (TypeAbilities abilitie: TypeAbilities.values()) {
+			abilities.put(abilitie, 0);
+		}
+		
+		abilities.put(TypeAbilities.STRENGTH, strength);
+		abilities.put(TypeAbilities.CONSTITUTION, constitution);
+		abilities.put(TypeAbilities.WISDOM, wisdom);
+		abilities.put(TypeAbilities.CHARISMA, charisma);
+		abilities.put(TypeAbilities.DEXTERITY, dexterity);
+		abilities.put(TypeAbilities.INTELLIGENCE, intelligence);
 	}
 
+	private void setAbility(TypeAbilities type, Integer value) {
+		abilities.put(type, value);
+	}
+	
+	private Integer getAbility(TypeAbilities type) {
+		return abilities.get(type);
+	}
+	
+	private Integer getModifier(TypeAbilities type) {
+		return modifier.get(getAbility(type));
+	}
+	
 	public Integer getStrength() {
-		return strength;
+		return getAbility(TypeAbilities.STRENGTH);
 	}
 
 	public Integer getStrengthModifier() {
-		return modifier.get(strength);
+		return getModifier(TypeAbilities.STRENGTH);
 	}
 
 	public void setStrength(Integer strength) {
-		this.strength = strength;
+		setAbility(TypeAbilities.STRENGTH, strength);
 	}
 
 	public Integer getConstitution() {
-		return constitution;
+		return getAbility(TypeAbilities.CONSTITUTION);
 	}
 
 	public Integer getConstitutionModifier() {
-		return modifier.get(constitution);
+		return getModifier(TypeAbilities.CONSTITUTION);
 	}
 
 	public void setConstitution(Integer constitution) {
-		this.constitution = constitution;
+		setAbility(TypeAbilities.CONSTITUTION, constitution);
 	}
 
 	public Integer getWisdom() {
-		return wisdom;
+		return getAbility(TypeAbilities.WISDOM);
 	}
 
 	public Integer getWisdomModifier() {
-		return modifier.get(wisdom);
+		return getModifier(TypeAbilities.WISDOM);
 	}
 
 	public void setWisdom(Integer wisdom) {
-		this.wisdom = wisdom;
+		setAbility(TypeAbilities.WISDOM, wisdom);
 	}
 
 	public Integer getCharisma() {
-		return charisma;
+		return getAbility(TypeAbilities.CHARISMA);
 	}
 
 	public Integer getCharismaModifier() {
-		return modifier.get(charisma);
+		return getModifier(TypeAbilities.CHARISMA);
 	}
 
 	public void setCharisma(Integer charisma) {
-		this.charisma = charisma;
+		setAbility(TypeAbilities.CHARISMA, charisma);
 	}
 
 	public Integer getDexterity() {
-		return dexterity;
+		return getAbility(TypeAbilities.DEXTERITY);
 	}
 
 	public Integer getDexterityModifier() {
-		return modifier.get(dexterity);
+		return getModifier(TypeAbilities.DEXTERITY);
 	}
 
 	public void setDexterity(Integer dexterity) {
-		this.dexterity = dexterity;
+		setAbility(TypeAbilities.DEXTERITY, dexterity);
 	}
 
 	public Integer getIntelligence() {
-		return intelligence;
+		return getAbility(TypeAbilities.INTELLIGENCE);
 	}
 
 	public Integer getIntelligenceModifier() {
-		return modifier.get(intelligence);
+		return getModifier(TypeAbilities.INTELLIGENCE);
 	}
 
 	public void setIntelligence(Integer intelligence) {
-		this.intelligence = intelligence;
+		setAbility(TypeAbilities.INTELLIGENCE, intelligence);
 	}
 
 	@Override
@@ -113,24 +129,24 @@ public class Abilities implements Serializable {
 
 		Abilities a = (Abilities) o;
 
-		return strength.equals(a.strength) &&
-			   constitution.equals(a.constitution) &&
-			   wisdom.equals(a.wisdom) && 
-			   charisma.equals(a.charisma) &&
-			   dexterity.equals(a.dexterity) &&
-			   intelligence.equals(a.intelligence);
+		return getAbility(TypeAbilities.STRENGTH).equals(a.getAbility(TypeAbilities.STRENGTH)) &&
+				getAbility(TypeAbilities.CONSTITUTION).equals(a.getAbility(TypeAbilities.CONSTITUTION)) &&
+				getAbility(TypeAbilities.WISDOM).equals(a.getAbility(TypeAbilities.WISDOM)) && 
+				getAbility(TypeAbilities.CHARISMA).equals(a.getAbility(TypeAbilities.CHARISMA)) &&
+				getAbility(TypeAbilities.DEXTERITY).equals(a.getAbility(TypeAbilities.DEXTERITY)) &&
+				getAbility(TypeAbilities.INTELLIGENCE).equals(a.getAbility(TypeAbilities.INTELLIGENCE));
 	}
 	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder("");
 		
-		sb.append(" strength: ").append(strength);
-		sb.append(" constitution: ").append(constitution);
-		sb.append(" wisdom: ").append(wisdom);
-		sb.append(" charisma: ").append(charisma);
-		sb.append(" dexterity: ").append(dexterity);
-		sb.append(" intelligence: ").append(intelligence);
+		sb.append(" strength: ").append(getAbility(TypeAbilities.STRENGTH));
+		sb.append(" constitution: ").append(getAbility(TypeAbilities.CONSTITUTION));
+		sb.append(" wisdom: ").append(getAbility(TypeAbilities.WISDOM));
+		sb.append(" charisma: ").append(getAbility(TypeAbilities.CHARISMA));
+		sb.append(" dexterity: ").append(getAbility(TypeAbilities.DEXTERITY));
+		sb.append(" intelligence: ").append(getAbility(TypeAbilities.INTELLIGENCE));
 		
 		return sb.toString();
 	}

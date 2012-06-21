@@ -4,6 +4,8 @@ import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.TypeCode;
 
 public enum TypeAbilities implements TypeCode {
+	NONE(R.string.ability_none),
+	
 	STRENGTH(R.string.ability_strength),
 	CONSTITUTION(R.string.ability_constitution),
 	WISDOM(R.string.ability_wisdom),
@@ -11,11 +13,11 @@ public enum TypeAbilities implements TypeCode {
 	DEXTERITY(R.string.ability_dexterity),
 	INTELLIGENCE(R.string.ability_intelligence);
 
+	private int codeName;
+	
 	private TypeAbilities(int codeName) {
 		this.codeName = codeName;
 	}
-	
-	private int codeName;
 	
 	@Override
 	public int getCodeName() {

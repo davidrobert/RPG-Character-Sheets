@@ -261,8 +261,11 @@ public class PlayRpgCharacterTest extends Activity {
 			ArrayList<HashMap<String, String>> sklls = new ArrayList<HashMap<String, String>>();
 			for (Skill skill: skills.getAll()) {
 				HashMap<String, String> map = new HashMap<String, String>();
-				map.put("name", getString(skill.getType().getCodeName()));
+				TypeRpgSkill type = skill.getType();
+				
+				map.put("name", getString(type.getCodeName()));
 				map.put("modifier", "(" + fmt.format(skill.getModifier()) + ")");
+				map.put("ability", getString(type.getAbility().getCodeName()));
 				sklls.add(map);
 			}
 			
@@ -276,7 +279,7 @@ public class PlayRpgCharacterTest extends Activity {
 			Collections.sort(sklls, mapComparator);
 
 			SimpleAdapter adapterSkills = new SimpleAdapter(this, sklls, R.layout.list_skills,
-			            new String[] {"name", "modifier"}, new int[] {R.id.name, R.id.modifier});
+			            new String[] {"name", "modifier", "ability"}, new int[] {R.id.name, R.id.modifier, R.id.ability});
 			
 			lvSkills.setAdapter(adapterSkills);
 		}
