@@ -2,36 +2,46 @@ package br.com.while42.rpgcs.activity;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.character.Abilities;
 import br.com.while42.rpgcs.model.character.Attributes;
 import br.com.while42.rpgcs.model.character.Defences;
+import br.com.while42.rpgcs.model.character.Languages;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.SavingThrows;
+import br.com.while42.rpgcs.model.character.Skill;
+import br.com.while42.rpgcs.model.character.Skills;
+import br.com.while42.rpgcs.model.character.attributes.TypeAbilities;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgLanguage;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
 
 public class PlayRpgCharacter extends Activity {
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-	}
-
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.play_character);
-		
+
 		Bundle bn = new Bundle();
         bn = getIntent().getExtras();
         RpgCharacter rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
-		
-		Log.d("ID: ", rpgCharacter.getId().toString());
+        
+        Log.d("ID: ", rpgCharacter.getId().toString());
 		
 		TextView tvName = (TextView) findViewById(R.id_play.textview_name);
 		TextView tvGenderRaceClass = (TextView) findViewById(R.id_play.textview_gender_race_class);
@@ -57,7 +67,15 @@ public class PlayRpgCharacter extends Activity {
 		TextView tvFortitude = (TextView) findViewById(R.id_play.textview_fortitude);
 		TextView tvReflex = (TextView) findViewById(R.id_play.textview_reflex);
 		TextView tvThrowsWill = (TextView) findViewById(R.id_play.textview_will);
+		
+		ListView lvLanguages = (ListView) findViewById(R.id_play.listview_languages);
+		ListView lvSkills = (ListView) findViewById(R.id_play.listview_skills);
 					
+		TextView tvReligion = (TextView) findViewById(R.id_play.textview_religion);
+		TextView tvVision = (TextView) findViewById(R.id_play.textview_vision);
+		
+		// ---
+		
 		tvName.setText(rpgCharacter.getName());
 		
 		Attributes attr = rpgCharacter.getAttributes();
@@ -121,7 +139,59 @@ public class PlayRpgCharacter extends Activity {
 		tvReflex.setText(savingThrows.getReflex().toString());
 		tvThrowsWill.setText(savingThrows.getThrowsWill().toString());
 		
+		Languages languages = rpgCharacter.getLanguages();
+		{
+			String[] lgs = new String[languages.getAll().size()];
+			int i = 0;
+			for (TypeRpgLanguage type: languages.getAll()) {
+				lgs[i++] = getString(type.getCodeName());
+			}
 		
+			Arrays.sort(lgs);
+		
+			ArrayAdapter<String> adapterLanguages = new ArrayAdapter<String>(this,
+					R.layout.list_languages, android.R.id.text1, lgs);
+		
+			lvLanguages.setAdapter(adapterLanguages);
+		}
+		
+		Skills skills = rpgCharacter.getSkills();
+		{
+			ArrayList<HashMap<String, String>> sklls = new ArrayList<HashMap<String, String>>();
+			for (Skill skill: skills.getAll()) {
+				HashMap<String, String> map = new HashMap<String, String>();
+				TypeRpgSkill type = skill.getType();
+				
+				map.put("name", getString(type.getCodeName()));
+				map.put("modifier", "(" + fmt.format(skill.getModifier()) + ")");
+				
+				TypeAbilities ability = type.getAbility();
+				int code = (ability != null) ? ability.getCodeName() : R.string.ability_none;
+				map.put("ability", getString(code));
+
+				sklls.add(map);
+			}
+			
+			Comparator<Map<String, String>> mapComparator = new Comparator<Map<String, String>>() {
+				@Override
+				public int compare(Map<String, String> m1, Map<String, String> m2) {
+			        return m1.get("name").compareTo(m2.get("name"));
+			    }
+			};
+			
+			Collections.sort(sklls, mapComparator);
+
+			SimpleAdapter adapterSkills = new SimpleAdapter(this, sklls, R.layout.list_skills,
+			            new String[] {"name", "modifier", "ability"}, new int[] {R.id.name, R.id.modifier, R.id.ability});
+			
+			lvSkills.setAdapter(adapterSkills);
+		}
+			
+		String religion = getString(attr.getReligion().getCodeName());
+		tvReligion.setText(religion);
+		
+		String vision = getString(attr.getVision().getCodeName());
+		tvVision.setText(vision);
 	}
 
 }
