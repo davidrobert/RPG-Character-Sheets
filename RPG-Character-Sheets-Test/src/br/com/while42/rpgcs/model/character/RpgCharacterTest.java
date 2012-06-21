@@ -2,12 +2,16 @@ package br.com.while42.rpgcs.model.character;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+
+import org.junit.Test;
 
 import android.test.AndroidTestCase;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgLanguage;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
@@ -102,6 +106,13 @@ public class RpgCharacterTest extends AndroidTestCase {
 			aks.add(new Dart(), SizeWeapon.MEDIUM);
 			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
 
+			Languages languages = rc.getLanguages();
+			
+			languages.add(TypeRpgLanguage.ABYSSAL);
+			languages.add(TypeRpgLanguage.AQUAN);
+			languages.add(TypeRpgLanguage.AURAN);
+			languages.add(TypeRpgLanguage.CELESTIAL);
+			
 			rpgCharacterSheets.add(rc);
 		}
 
@@ -158,6 +169,13 @@ public class RpgCharacterTest extends AndroidTestCase {
 			aks.add(new Dart(), SizeWeapon.MEDIUM);
 			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
 
+			Languages languages = rc.getLanguages();
+			
+			languages.add(TypeRpgLanguage.CELESTIAL);
+			languages.add(TypeRpgLanguage.COMMON);
+			languages.add(TypeRpgLanguage.DRACONIC);
+			languages.add(TypeRpgLanguage.DRUIDIC);
+			
 			rpgCharacterSheets.add(rc);
 		}
 
@@ -214,11 +232,19 @@ public class RpgCharacterTest extends AndroidTestCase {
 			aks.add(new Dart(), SizeWeapon.MEDIUM);
 			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
 
+			Languages languages = rc.getLanguages();
+			
+			languages.add(TypeRpgLanguage.DRUIDIC);
+			languages.add(TypeRpgLanguage.DWARVEN);
+			languages.add(TypeRpgLanguage.ELVEN);
+			languages.add(TypeRpgLanguage.GIANT);
+			
 			rpgCharacterSheets.add(rc);
 		}
 		return rpgCharacterSheets;
 	}
 
+	@Test
 	public void testIsPersistent() {
 		
 		BuilderAttributes builder = new BuilderAttributes();
@@ -240,6 +266,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 		assertFalse(rc.isPersistent());
 	}
 
+	@Test
 	public void testBasicSerialize() {
 		RpgCharacter rpgcs1 = getList().get(0);
 		
@@ -249,12 +276,36 @@ public class RpgCharacterTest extends AndroidTestCase {
 		assertEquals(rpgcs1, rpgcs2);
 	}
 	
+	@Test
 	public void testSerialize() {
 		for (RpgCharacter rc: getList()) {
 			byte[] serializeObject = RpgCharacter.serialize(rc);
 			RpgCharacter rc2 = RpgCharacter.deserialize(serializeObject);
 
 			assertEquals(rc, rc2);
+		}
+	}
+	
+	@Test
+	public void testLanguages() {		
+		for (RpgCharacter rc: getList()) {
+			Languages languages = rc.getLanguages();
+			
+			languages.clear();
+			
+			languages.add(TypeRpgLanguage.CELESTIAL);
+			languages.add(TypeRpgLanguage.COMMON);
+			languages.add(TypeRpgLanguage.ORC);
+			languages.add(TypeRpgLanguage.INFERNAL);
+	
+			Set<TypeRpgLanguage> langs = rc.getLanguages().getAll();
+			
+			assertTrue(langs.contains(TypeRpgLanguage.CELESTIAL));
+			assertTrue(langs.contains(TypeRpgLanguage.COMMON));
+			assertTrue(langs.contains(TypeRpgLanguage.ORC));
+			assertTrue(langs.contains(TypeRpgLanguage.INFERNAL));
+			
+			assertEquals(4, langs.size());
 		}
 	}
 	
