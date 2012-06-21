@@ -10,6 +10,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 
 
 public class Attributes implements Serializable {
@@ -27,6 +28,7 @@ public class Attributes implements Serializable {
 	private TypeEyeColor eye;
 	private TypeHairColor hair;
 	private TypeSkinColor skin;
+	private TypeVision vision;
 
 	protected Attributes() {		
 	}
@@ -119,6 +121,14 @@ public class Attributes implements Serializable {
 		this.skin = skin;
 	}
 	
+	public TypeVision getVision() {
+		return vision;
+	}
+
+	public void setVision(TypeVision vision) {
+		this.vision = vision;
+	}
+
 	@Override
 	public boolean equals(Object attributes) {
 

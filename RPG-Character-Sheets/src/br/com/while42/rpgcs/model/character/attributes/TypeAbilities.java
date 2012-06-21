@@ -4,7 +4,6 @@ import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.TypeCode;
 
 public enum TypeAbilities implements TypeCode {
-	NONE(R.string.ability_none),
 	
 	STRENGTH(R.string.ability_strength),
 	CONSTITUTION(R.string.ability_constitution),

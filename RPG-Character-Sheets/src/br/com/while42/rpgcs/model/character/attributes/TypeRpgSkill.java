@@ -41,7 +41,7 @@ public enum TypeRpgSkill implements TypeCode {
 	SEARCH(R.string.skill_search, TypeAbilities.INTELLIGENCE),
 	SENSE_MOTIVE(R.string.skill_sense_motive, TypeAbilities.WISDOM),
 	//SLEIGHT_OF_HAND(R.string.skill_sleight_of_hand, TypeAbilities.DEXTERITY),
-	SPEAK_LANGUAGE(R.string.skill_speak_language, TypeAbilities.NONE),
+	SPEAK_LANGUAGE(R.string.skill_speak_language),
 	SPELLCRAFT(R.string.skill_spellcraft, TypeAbilities.INTELLIGENCE),
 	SPOT(R.string.skill_spot, TypeAbilities.WISDOM),
 	SURVIVAL(R.string.skill_survival, TypeAbilities.WISDOM),
@@ -56,6 +56,11 @@ public enum TypeRpgSkill implements TypeCode {
 	private TypeRpgSkill(int nameCode, TypeAbilities ability) {
 		this.nameCode = nameCode;
 		this.ability = ability;
+	}
+	
+	private TypeRpgSkill(int nameCode) {
+		this.nameCode = nameCode;
+		this.ability = null;
 	}
 
 	public TypeAbilities getAbility() {

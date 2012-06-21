@@ -27,6 +27,7 @@ import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.SavingThrows;
 import br.com.while42.rpgcs.model.character.Skill;
 import br.com.while42.rpgcs.model.character.Skills;
+import br.com.while42.rpgcs.model.character.attributes.TypeAbilities;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -37,6 +38,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.Barbarian;
 import br.com.while42.rpgcs.model.classes.Sorcerer;
@@ -60,6 +62,7 @@ public class PlayRpgCharacterTest extends Activity {
                 .setEye(TypeEyeColor.Brown)
                 .setHair(TypeHairColor.BROWN)
                 .setSkin(TypeSkinColor.BROWN)
+                .setVision(TypeVision.DARKVISION)
                 .toAttributes();
 		
 		RpgCharacter rc = new RpgCharacter("Blob", attributes);
@@ -174,6 +177,7 @@ public class PlayRpgCharacterTest extends Activity {
 		ListView lvSkills = (ListView) findViewById(R.id_play.listview_skills);
 					
 		TextView tvReligion = (TextView) findViewById(R.id_play.textview_religion);
+		TextView tvVision = (TextView) findViewById(R.id_play.textview_vision);
 		
 		// ---
 		
@@ -265,7 +269,11 @@ public class PlayRpgCharacterTest extends Activity {
 				
 				map.put("name", getString(type.getCodeName()));
 				map.put("modifier", "(" + fmt.format(skill.getModifier()) + ")");
-				map.put("ability", getString(type.getAbility().getCodeName()));
+				
+				TypeAbilities ability = type.getAbility();
+				int code = (ability != null) ? ability.getCodeName() : R.string.ability_none;
+				map.put("ability", getString(code));
+
 				sklls.add(map);
 			}
 			
@@ -286,6 +294,9 @@ public class PlayRpgCharacterTest extends Activity {
 			
 		String religion = getString(attr.getReligion().getCodeName());
 		tvReligion.setText(religion);
+		
+		String vision = getString(attr.getVision().getCodeName());
+		tvVision.setText(vision);
 	}
 
 }

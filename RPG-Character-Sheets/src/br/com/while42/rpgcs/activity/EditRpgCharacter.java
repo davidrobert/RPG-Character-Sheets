@@ -27,6 +27,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.CharacterClass;
 import br.com.while42.rpgcs.model.classes.ManagerRpgClasses;
@@ -195,6 +196,10 @@ public class EditRpgCharacter extends Activity {
 				e = (Element) sSkin.getSelectedItem();
 				TypeSkinColor skin = (TypeSkinColor) e.getType();
 				
+				// Vision
+				// TODO: Falta implementar
+				TypeVision vision = TypeVision.NORMAL;
+				
 								
 				Abilities ab = new Abilities();
 				if (!etStrength.getText().toString().isEmpty()) {
@@ -228,6 +233,7 @@ public class EditRpgCharacter extends Activity {
 											   .setEye(eye)
 											   .setHair(hair)
 											   .setSkin(skin)
+											   .setVision(vision)
 											   .toAttributes();
 				
 				RpgCharacter cs = new RpgCharacter(name, attributes);

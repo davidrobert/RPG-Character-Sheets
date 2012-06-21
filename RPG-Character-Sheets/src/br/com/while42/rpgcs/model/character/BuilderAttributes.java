@@ -8,6 +8,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
+import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 
 public class BuilderAttributes {
 
@@ -23,6 +24,7 @@ public class BuilderAttributes {
 	private TypeEyeColor eye;
 	private TypeHairColor hair;
 	private TypeSkinColor skin;
+	private TypeVision vision;
 	
 	public BuilderAttributesWithRace setRace(TypeRpgRace race) {
 		return new BuilderAttributesWithRace(race);
@@ -122,6 +124,15 @@ public class BuilderAttributes {
 		private BuilderAttributesWithSkin(TypeSkinColor color) {
 			skin = color;
 		}
+		public BuilderAttributesWithVision setVision(TypeVision vision) {
+			return new BuilderAttributesWithVision(vision);
+		}
+	}
+	
+	public class BuilderAttributesWithVision {
+		private BuilderAttributesWithVision(TypeVision v) {
+			vision = v;
+		}
 
 		public Attributes toAttributes() {
 			Attributes attr = new Attributes();
@@ -137,6 +148,7 @@ public class BuilderAttributes {
 			attr.setEye(eye);
 			attr.setHair(hair);
 			attr.setSkin(skin);
+			attr.setVision(vision);
 			
 			return attr;
 		}

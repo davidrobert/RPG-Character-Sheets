@@ -2,7 +2,11 @@
 <resources>
     
 	<string name="vision">Vision</string>
-	<string name="vision_low_light">Penumbra</string>
-    <string name="vision_darkvision">Escuro</string>
+	<string name="vision_normal">Normal</string>
+	<string name="vision_low_light">Low-light</string>
+    <string name="vision_darkvision">Darkvision</string> 
+    <string name="vision_tremorsense">Tremorsense</string>
+    <string name="vision_infravision">Infravision</string>
+    <string name="vision_ultravision">Ultravision</string>
     
 </resources>

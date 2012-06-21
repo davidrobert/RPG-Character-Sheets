@@ -1068,13 +1068,13 @@
 		        android:textStyle="bold" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_vision"
 		        android:layout_width="165dp"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:gravity="center"
-		        android:text="Darkvision"
+		        android:text=""
 		        android:background="@drawable/white_square_up_right_rounded_corner"
 		        android:textSize="18sp" />
         </TableRow>
