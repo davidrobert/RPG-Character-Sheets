@@ -80,7 +80,7 @@ public class PlayRpgCharacterTest extends Activity {
 		ab.setIntelligence(16);
 		ab.setWisdom(15);
 		ab.setCharisma(14);
-		ab.setCharisma(13);
+		ab.setConstitution(13);
 		
 		Defences df = rc.getDefences();
 		df.setArmorClass(10);
