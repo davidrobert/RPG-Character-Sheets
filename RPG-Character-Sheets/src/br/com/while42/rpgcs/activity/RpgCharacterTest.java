@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import br.com.while42.rpgcs.model.character.Abilities;
-import br.com.while42.rpgcs.model.character.Attaks;
+import br.com.while42.rpgcs.model.character.Attacks;
 import br.com.while42.rpgcs.model.character.Attributes;
 import br.com.while42.rpgcs.model.character.BuilderAttributes;
 import br.com.while42.rpgcs.model.character.Defences;
@@ -30,8 +30,13 @@ import br.com.while42.rpgcs.model.classes.Barbarian;
 import br.com.while42.rpgcs.model.classes.Sorcerer;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.exotic.ranged.Shuriken;
+import br.com.while42.rpgcs.model.equip.weapons.exotic.twohandedmelee.AxeOrcDouble;
+import br.com.while42.rpgcs.model.equip.weapons.martial.twohandedmelee.Greataxe;
+import br.com.while42.rpgcs.model.equip.weapons.simple.onehandedmelee.Morningstar;
 import br.com.while42.rpgcs.model.equip.weapons.simple.ranged.CrossbowLight;
 import br.com.while42.rpgcs.model.equip.weapons.simple.ranged.Dart;
+import br.com.while42.rpgcs.model.equip.weapons.simple.twohandedmelee.Spear;
 
 public class RpgCharacterTest extends Activity {
 
@@ -110,9 +115,14 @@ public class RpgCharacterTest extends Activity {
 		money.setPlatinumPiece(1000L);
 		money.setSilverPiece(10000L);
 		
-		Attaks aks = rc.getAttaks();
+		Attacks aks = rc.getAttacks();
 		aks.add(new Dart(), SizeWeapon.MEDIUM);
 		aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
+		aks.add(new Morningstar(), SizeWeapon.MEDIUM);
+		aks.add(new AxeOrcDouble(), SizeWeapon.MEDIUM);
+		aks.add(new Greataxe(), SizeWeapon.MEDIUM);
+		aks.add(new Shuriken(), SizeWeapon.MEDIUM);
+		aks.add(new Spear(), SizeWeapon.MEDIUM);
 		
 		Languages languages = rc.getLanguages();
 		languages.add(TypeRpgLanguage.ELVEN);

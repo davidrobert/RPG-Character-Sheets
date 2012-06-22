@@ -50,7 +50,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 			
 			RpgCharacter rc = new RpgCharacter("Snarf", attributes);
 			
-			Attaks aks = rc.getAttaks();			
+			Attacks aks = rc.getAttacks();			
 			aks.add(new Dart(), SizeWeapon.MEDIUM);;
 
 			rpgCharacterSheets.add(rc);
@@ -106,7 +106,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 			money.setPlatinumPiece(1000L);
 			money.setSilverPiece(10000L);
 			
-			Attaks aks = rc.getAttaks();
+			Attacks aks = rc.getAttacks();
 			aks.add(new Dart(), SizeWeapon.MEDIUM);
 			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
 
@@ -170,7 +170,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 			money.setPlatinumPiece(1001L);
 			money.setSilverPiece(10001L);
 			
-			Attaks aks = rc.getAttaks();
+			Attacks aks = rc.getAttacks();
 			aks.add(new Dart(), SizeWeapon.MEDIUM);
 			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
 
@@ -251,7 +251,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 			money.setPlatinumPiece(2000L);
 			money.setSilverPiece(20000L);
 			
-			Attaks aks = rc.getAttaks();
+			Attacks aks = rc.getAttacks();
 			aks.add(new Dart(), SizeWeapon.MEDIUM);
 			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
 

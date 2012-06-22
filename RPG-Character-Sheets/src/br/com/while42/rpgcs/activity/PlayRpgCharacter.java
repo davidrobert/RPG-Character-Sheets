@@ -17,7 +17,10 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.character.Abilities;
+import br.com.while42.rpgcs.model.character.Attack;
+import br.com.while42.rpgcs.model.character.Attacks;
 import br.com.while42.rpgcs.model.character.Attributes;
 import br.com.while42.rpgcs.model.character.Defences;
 import br.com.while42.rpgcs.model.character.Languages;
@@ -29,6 +32,8 @@ import br.com.while42.rpgcs.model.character.attributes.TypeAbilities;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgLanguage;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
+import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 
 public class PlayRpgCharacter extends Activity {
 	
@@ -74,6 +79,8 @@ public class PlayRpgCharacter extends Activity {
 					
 		TextView tvReligion = (TextView) findViewById(R.id_play.textview_religion);
 		TextView tvVision = (TextView) findViewById(R.id_play.textview_vision);
+		
+		ListView lvAttacks = (ListView) findViewById(R.id_play.listview_attacks);
 		
 		// ---
 		
@@ -183,13 +190,7 @@ public class PlayRpgCharacter extends Activity {
 				sklls.add(map);
 			}
 			
-			Comparator<Map<String, String>> mapComparator = new Comparator<Map<String, String>>() {
-				@Override
-				public int compare(Map<String, String> m1, Map<String, String> m2) {
-			        return m1.get("name").compareTo(m2.get("name"));
-			    }
-			};
-			
+			Comparator<Map<String, String>> mapComparator = builderComparator("name");
 			Collections.sort(sklls, mapComparator);
 
 			SimpleAdapter adapterSkills = new SimpleAdapter(this, sklls, R.layout.list_skills,
@@ -203,6 +204,66 @@ public class PlayRpgCharacter extends Activity {
 		
 		String vision = getString(attr.getVision().getCodeName());
 		tvVision.setText(vision);
+		
+		Attacks attaks = rpgCharacter.getAttacks();
+		{
+			ArrayList<HashMap<String, String>> attks = new ArrayList<HashMap<String, String>>();
+			for (Attack attack: attaks.getAttacks()) {
+				HashMap<String, String> map = new HashMap<String, String>();
+				
+				Weapon weapon = attack.getWeapon();
+				map.put("attack", getString(weapon.getCodeName()));
+				map.put("bonus", "0"); // TODO: Falta Implementar
+				
+				StringBuffer sbDamage = new StringBuffer();
+				for (HitDice dice: weapon.getDamage()) {
+					if (sbDamage.length() > 0) {
+						sbDamage.append(" / ");
+					}
+					sbDamage.append(dice.toString());
+				}
+				
+				map.put("damage", sbDamage.toString());
+				map.put("critical", "0"); // TODO: Falta Implementar
+				map.put("range", weapon.getRangeIncrement().toString());
+				
+				StringBuffer sbType = new StringBuffer();
+				for(TypeWeapon type: weapon.getType()) {
+					if (sbType.length() > 0) {
+						sbType.append(" / ");
+					}
+					sbType.append(getString(type.getNameCode()));
+				}
+				
+				map.put("type", sbType.toString());
+				map.put("notes", attack.getObservation());
+				
+				attks.add(map);
+			}
+			
+			Comparator<Map<String, String>> mapComparator = builderComparator("attack");
+			Collections.sort(attks, mapComparator);
+			
+			SimpleAdapter adapterAttacks = new SimpleAdapter(this, attks, R.layout.list_attacks,
+		            new String[] {"attack", "bonus", "damage", "critical", "range", "type", "notes"}, 
+		            new int[] {R.id.attack, R.id.bonus, R.id.damage, R.id.critical, R.id.range, R.id.type, 
+						R.id.notes});
+		
+			lvAttacks.setAdapter(adapterAttacks);
+		}
 	}
 
+	
+	private Comparator<Map<String, String>> builderComparator(final String name) {
+		Comparator<Map<String, String>> mapComparator = new Comparator<Map<String, String>>() {
+
+			@Override
+			public int compare(Map<String, String> m1, Map<String, String> m2) {
+				return m1.get(name).compareTo(m2.get(name));
+			}
+		};
+
+		return mapComparator;
+	}
+	
 }
