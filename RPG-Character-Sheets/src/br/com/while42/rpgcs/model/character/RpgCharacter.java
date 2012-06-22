@@ -248,7 +248,7 @@ public class RpgCharacter implements Serializable {
 		sb.append(" skills: ").append(skills);
 		sb.append(" languages: ").append(languages);
 		sb.append(" money: ").append(money);
-		sb.append(" attaks: ").append(attacks);
+		sb.append(" attacks: ").append(attacks);
 		sb.append(" armors: ").append(armors);
 		sb.append(" otherEquipments: ").append(otherEquipments);
 		
