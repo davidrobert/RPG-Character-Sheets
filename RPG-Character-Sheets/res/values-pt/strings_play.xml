@@ -2,5 +2,14 @@
 <resources>
 
     <string name="play_label_religion">Divindade</string>
-
+    <string name="play_label_attacks">Ataques</string>
+    
+    <string name="play_label_attack">Ataque</string>
+    <string name="play_label_attack_bonus">Bonus de Ataque</string>
+    <string name="play_label_attack_damage">Dano</string>
+    <string name="play_label_attack_critical">Sucesso Decisivo</string>
+    <string name="play_label_attack_range_increment">Alcance</string>
+    <string name="play_label_attack_type">Tipo</string>
+    <string name="play_label_attack_notes">Observações</string>
+    
 </resources>

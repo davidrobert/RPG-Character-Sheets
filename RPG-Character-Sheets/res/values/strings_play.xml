@@ -2,5 +2,14 @@
 <resources>
 
     <string name="play_label_religion">Deity</string>
-
+    <string name="play_label_attacks">Attacks</string>
+    
+    <string name="play_label_attack">Attack</string>
+    <string name="play_label_attack_bonus">Attack Bonus</string>
+    <string name="play_label_attack_damage">Damage</string>
+    <string name="play_label_attack_critical">Critical</string>
+    <string name="play_label_attack_range_increment">Range Increment</string>
+    <string name="play_label_attack_type">Type</string>
+    <string name="play_label_attack_notes">Notes</string>
+    
 </resources>
