@@ -29,7 +29,7 @@ public class RpgCharacter implements Serializable {
 	private Languages languages;
 	private Money money;
 	
-	private Attaks attaks;
+	private Attacks attacks;
 	private Armors armors;
 	private Equipments otherEquipments;
 	
@@ -52,7 +52,7 @@ public class RpgCharacter implements Serializable {
 		this.languages = new Languages();
 		this.money = new Money();
 		
-		this.attaks = new Attaks(abilities);
+		this.attacks = new Attacks(abilities);
 		this.armors = new Armors();
 		this.otherEquipments = new Equipments();
 		
@@ -156,12 +156,12 @@ public class RpgCharacter implements Serializable {
 		return money;
 	}
 	
-	public void setAttaks(Attaks attaks) {
-		this.attaks = attaks;
+	public void setAttacks(Attacks attaks) {
+		this.attacks = attaks;
 	}
 	
-	public Attaks getAttaks() {
-		return attaks;
+	public Attacks getAttacks() {
+		return attacks;
 	}
 	
 	public static byte[] serialize(RpgCharacter rpgCharacter) { 
@@ -224,7 +224,7 @@ public class RpgCharacter implements Serializable {
 				skills.equals(rc.skills) &&
 				languages.equals(rc.languages) &&
 				money.equals(rc.money) &&
-				attaks.equals(rc.attaks) &&
+				attacks.equals(rc.attacks) &&
 				armors.equals(rc.armors) &&
 				
 				otherEquipments.equals(rc.otherEquipments) &&
@@ -248,7 +248,7 @@ public class RpgCharacter implements Serializable {
 		sb.append(" skills: ").append(skills);
 		sb.append(" languages: ").append(languages);
 		sb.append(" money: ").append(money);
-		sb.append(" attaks: ").append(attaks);
+		sb.append(" attaks: ").append(attacks);
 		sb.append(" armors: ").append(armors);
 		sb.append(" otherEquipments: ").append(otherEquipments);
 		

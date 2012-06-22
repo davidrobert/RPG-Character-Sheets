@@ -9,21 +9,21 @@ import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 
-public class Attak implements Serializable {
+public class Attack implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Weapon weapon;
 	private SizeWeapon size;
 	private String observation;
 	
-	public Attak(Weapon weapon, SizeWeapon size, Abilities abilities) {
+	public Attack(Weapon weapon, SizeWeapon size, Abilities abilities) {
 		this.weapon = weapon;
 		this.size = size;
 		this.observation = new String();
 	}
 	
-	public int getCodeName() {
-		return weapon.getCodeName();
+	public Weapon getWeapon() {
+		return weapon;
 	}
 	
 	public List<HitDice> getDamage() {
@@ -43,10 +43,10 @@ public class Attak implements Serializable {
 		if (this == o)
 			return true;
 
-		if (!(o instanceof Attak))
+		if (!(o instanceof Attack))
 			return false;
 
-		Attak attk = (Attak) o;
+		Attack attk = (Attack) o;
 		
 		return weapon.equals(attk.weapon) &&
 				size.equals(attk.size) &&

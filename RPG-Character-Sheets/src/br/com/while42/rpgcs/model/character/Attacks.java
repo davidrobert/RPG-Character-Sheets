@@ -10,22 +10,22 @@ import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 import br.com.while42.rpgcs.model.equip.weapons.munition.Munition;
 
-public class Attaks implements Serializable {
+public class Attacks implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Abilities abilities;	
-	private List<Attak> attks = new ArrayList<Attak>();
+	private List<Attack> attks = new ArrayList<Attack>();
 	private Set<Munition> munitions = new HashSet<Munition>();
 	
-	public Attaks(Abilities abilities) {
+	public Attacks(Abilities abilities) {
 		this.abilities = abilities;
 	}
 	
 	public void add(Weapon weapon, SizeWeapon size) {
-		attks.add(new Attak(weapon, size, abilities));
+		attks.add(new Attack(weapon, size, abilities));
 	}
 	
-	public List<Attak> getAttaks() {
+	public List<Attack> getAttacks() {
 		return attks;
 	}
 	
@@ -43,10 +43,10 @@ public class Attaks implements Serializable {
 		if (this == o)
 			return true;
 
-		if (!(o instanceof Attaks))
+		if (!(o instanceof Attacks))
 			return false;
 
-		Attaks aks = (Attaks) o;
+		Attacks aks = (Attacks) o;
 		
 		return abilities.equals(aks.abilities) &&
 			   attks.equals(aks.attks) &&
@@ -63,7 +63,7 @@ public class Attaks implements Serializable {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append(" attaks: [");
-		for (Attak a: attks) {
+		for (Attack a: attks) {
 			sb.append(a);
 		}
 		sb.append("]");
