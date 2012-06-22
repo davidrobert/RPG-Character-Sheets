@@ -3,6 +3,8 @@ package br.com.while42.rpgcs.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import br.com.while42.rpgcs.model.HitDice;
+import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.Abilities;
 import br.com.while42.rpgcs.model.character.Attacks;
 import br.com.while42.rpgcs.model.character.Attributes;
@@ -29,7 +31,12 @@ import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.Barbarian;
 import br.com.while42.rpgcs.model.classes.Sorcerer;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.especial.BuilderEspecialWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.exotic.ranged.Shuriken;
 import br.com.while42.rpgcs.model.equip.weapons.exotic.twohandedmelee.AxeOrcDouble;
 import br.com.while42.rpgcs.model.equip.weapons.martial.twohandedmelee.Greataxe;
@@ -123,6 +130,21 @@ public class RpgCharacterTest extends Activity {
 		aks.add(new Greataxe(), SizeWeapon.MEDIUM);
 		aks.add(new Shuriken(), SizeWeapon.MEDIUM);
 		aks.add(new Spear(), SizeWeapon.MEDIUM);
+		
+		BuilderEspecialWeapon buiderWeapon = new BuilderEspecialWeapon();
+		EspecialWeapon especialWeapon = buiderWeapon.setName("Alabarda")
+		            .setCost(500L)
+		            .setCritical(10)
+		            .setRangeIncrement(3)
+		            .setWeight(10.0)
+		            .setSize(SizeWeapon.MEDIUM)
+		            .setType(TypeWeapon.SLASHING)
+		            .setDamage(new HitDice(2, HitDiceType.d4, +1))
+		            .setCategorieEncumbrance(CategorieEncumbranceWeapon.TWO_HANDED)
+		            .setCategorieUsefulness(CategorieUsefulnessWeapon.RANGED)
+		            .toEspecialWeapon();
+		
+		aks.add(especialWeapon);
 		
 		Languages languages = rc.getLanguages();
 		languages.add(TypeRpgLanguage.ELVEN);

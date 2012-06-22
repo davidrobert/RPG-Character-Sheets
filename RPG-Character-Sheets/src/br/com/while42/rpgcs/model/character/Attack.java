@@ -8,6 +8,7 @@ import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
+import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
 
 public class Attack implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -19,6 +20,12 @@ public class Attack implements Serializable {
 	public Attack(Weapon weapon, SizeWeapon size, Abilities abilities) {
 		this.weapon = weapon;
 		this.size = size;
+		this.observation = new String();
+	}
+	
+	public Attack(EspecialWeapon especialWeapon, Abilities abilities) {
+		this.weapon = especialWeapon;
+		this.size = especialWeapon.getSize();
 		this.observation = new String();
 	}
 	

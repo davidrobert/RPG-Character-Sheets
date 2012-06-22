@@ -34,6 +34,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
+import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
 
 public class PlayRpgCharacter extends Activity {
 	
@@ -212,7 +213,14 @@ public class PlayRpgCharacter extends Activity {
 				HashMap<String, String> map = new HashMap<String, String>();
 				
 				Weapon weapon = attack.getWeapon();
-				map.put("attack", getString(weapon.getCodeName()));
+				
+				String attackName = "";
+				if (weapon.getClass().equals(EspecialWeapon.class)) {
+					attackName = ((EspecialWeapon) weapon).getName();
+				} else {
+					attackName = getString(weapon.getCodeName());
+				}
+				map.put("attack", attackName);
 				map.put("bonus", "0"); // TODO: Falta Implementar
 				
 				StringBuffer sbDamage = new StringBuffer();

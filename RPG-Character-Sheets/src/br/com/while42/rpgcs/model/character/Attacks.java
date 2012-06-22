@@ -8,6 +8,7 @@ import java.util.Set;
 
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
+import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.munition.Munition;
 
 public class Attacks implements Serializable {
@@ -23,6 +24,10 @@ public class Attacks implements Serializable {
 	
 	public void add(Weapon weapon, SizeWeapon size) {
 		attks.add(new Attack(weapon, size, abilities));
+	}
+	
+	public void add(EspecialWeapon especialWeapon) {
+		attks.add(new Attack(especialWeapon, abilities));
 	}
 	
 	public List<Attack> getAttacks() {
