@@ -10,6 +10,7 @@ public class Languages implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Set<TypeRpgLanguage> langs = new HashSet<TypeRpgLanguage>();
+	private Set<String> especials = new HashSet<String>();
 	
 	public void add(TypeRpgLanguage language) {
 		langs.add(language);
@@ -23,8 +24,21 @@ public class Languages implements Serializable {
 		return new HashSet<TypeRpgLanguage>(langs);
 	}
 	
+	public void add(String especialLanguage) {
+		especials.add(especialLanguage);
+	}
+	
+	public void remove(String especialLanguage) {
+		especials.remove(especialLanguage);
+	}
+	
+	public Set<String> getAllEspecial() {
+		return new HashSet<String>(especials);
+	}
+	
 	public void clear() {
 		langs.clear();
+		especials.clear();
 	}
 	
 	@Override
@@ -37,11 +51,11 @@ public class Languages implements Serializable {
 
 		Languages lgs = (Languages) o;
 		
-		return langs.equals(lgs.langs);
+		return langs.equals(lgs.langs) && especials.equals(lgs.especials);
 	}
 	
 	@Override
 	public int hashCode() {
-		return langs.hashCode();
+		return langs.hashCode() + especials.hashCode();
 	}
 }
