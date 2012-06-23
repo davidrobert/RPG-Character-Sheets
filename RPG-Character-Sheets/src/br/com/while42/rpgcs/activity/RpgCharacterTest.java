@@ -29,6 +29,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.Barbarian;
+import br.com.while42.rpgcs.model.classes.Fighter;
 import br.com.while42.rpgcs.model.classes.Sorcerer;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
@@ -86,9 +87,9 @@ public class RpgCharacterTest extends Activity {
 		
 		rc.setId(100L);
 
-		AbstractRpgClass barbarian = new Barbarian();
-		barbarian.setClassLevel(1);
-		rc.getRpgClasses().add(barbarian);
+		AbstractRpgClass fighter = new Fighter();
+		fighter.setClassLevel(1);
+		rc.getRpgClasses().add(fighter);
 		
 		AbstractRpgClass sorcerer = new Sorcerer();
 		sorcerer.setClassLevel(ExperienceAndLevel.MAX_LEVEL);
