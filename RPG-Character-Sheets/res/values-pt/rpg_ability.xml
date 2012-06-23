@@ -3,7 +3,7 @@
 	<string name="abilitys">Abilidades</string>
 	
 	<string name="ability_modifier">Modificador</string>
-	<string name="ability_modifier_abbreviation">MOD</string>
+	<string name="ability_modifier_abbreviation">Mod</string>
     
 	<string name="ability_none">Nenhum</string>
     <string name="ability_strength">Força</string>

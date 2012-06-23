@@ -12,4 +12,12 @@
     <string name="play_label_attack_type">Type</string>
     <string name="play_label_attack_notes">Notes</string>
     
+    <string name="play_label_button_feats">Feats</string>
+    <string name="play_label_button_equipment">Equipment</string>
+    <string name="play_label_button_items">Items</string>
+    <string name="play_label_button_treasure">Treasure</string>
+    <string name="play_label_button_magic_spells">Magic/Spells</string>
+    <string name="play_label_button_familiar">Familiar</string>
+    <string name="play_label_button_notes">Notes</string>
+    
 </resources>

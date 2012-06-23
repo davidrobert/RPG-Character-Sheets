@@ -12,4 +12,12 @@
     <string name="play_label_attack_type">Tipo</string>
     <string name="play_label_attack_notes">Observações</string>
     
+    <string name="play_label_button_feats">Talentos</string>
+    <string name="play_label_button_equipment">Equipamento</string>
+    <string name="play_label_button_items">Items</string>
+    <string name="play_label_button_treasure">Tesouros</string>
+    <string name="play_label_button_magic_spells">Magia/Feitiços</string>
+    <string name="play_label_button_familiar">Familiar</string>
+    <string name="play_label_button_notes">Anotações</string>
+    
 </resources>
