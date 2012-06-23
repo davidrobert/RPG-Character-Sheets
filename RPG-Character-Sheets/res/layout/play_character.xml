@@ -158,7 +158,7 @@
 		        android:typeface="serif"
 		        android:text="@string/ability_modifier_abbreviation"
 		        android:layout_marginLeft="25dp"
-		        android:textSize="18sp" />
+		        android:textSize="15sp" />
         </TableRow>
   	</TableLayout>
   	
@@ -1105,22 +1105,106 @@
             <ListView
                 android:id="@+id_play/listview_attacks"
                 android:layout_width="525dp"
-                android:layout_height="fill_parent"
+                android:layout_height="380dp"
                 android:layout_weight="1"
                 android:background="@drawable/white_square_all_rounded_corners" >
             </ListView>
         </TableRow>
     </TableLayout>
     
+        
     <Button
-        android:id="@+id_play/Button01"
+        android:id="@+id_play/button_feats"
         android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="0dp"
+        android:typeface="serif"
+        android:textSize="22sp"
+        android:text="@string/play_label_button_feats" 
         android:layout_alignParentRight="true"
         android:layout_below="@+id_play/tableRow1"
-        android:layout_marginRight="34dp"
-        android:typeface="serif"
-        android:layout_marginTop="830dp"
-        android:text="Conditions" />
+        android:layout_marginTop="550dp" 
+        android:textColor="#000" />
     
+    <Button
+        android:id="@+id_play/button_equipment"
+        android:drawableLeft="@drawable/equipment50"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="0dp"
+        android:typeface="serif"
+        android:textSize="22sp"
+        android:text="@string/play_label_button_equipment" 
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id_play/tableRow1"
+        android:layout_marginTop="625dp"
+        android:textColor="#000" />
+    
+ 	<Button
+        android:id="@+id_play/button_items"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="0dp"
+        android:typeface="serif"
+        android:textSize="22sp"
+        android:text="@string/play_label_button_items" 
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id_play/tableRow1"
+        android:layout_marginTop="700dp" 
+        android:textColor="#000" />
+    
+    <Button
+        android:id="@+id_play/button_treasure"
+        android:drawableLeft="@drawable/treasure50"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="0dp"
+        android:typeface="serif"
+        android:textSize="22sp"
+        android:text="@string/play_label_button_treasure" 
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id_play/tableRow1"
+        android:layout_marginTop="775dp"
+        android:textColor="#000" />
+    
+	<Button
+        android:id="@+id_play/button_magic_spells"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="0dp"
+        android:typeface="serif"
+        android:textSize="22sp"
+        android:text="@string/play_label_button_magic_spells" 
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id_play/tableRow1"
+        android:layout_marginTop="850dp" 
+        android:textColor="#000" />
+    
+    <Button
+        android:id="@+id_play/button_familiar"
+        android:drawableLeft="@drawable/familiar50"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="0dp"
+        android:typeface="serif"
+        android:textSize="22sp"
+        android:text="@string/play_label_button_familiar" 
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id_play/tableRow1"
+        android:layout_marginTop="925dp"
+        android:textColor="#000" />    
+        
+    <Button
+        android:id="@+id_play/button_notes"
+        android:drawableLeft="@drawable/notes50"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="0dp"
+        android:typeface="serif"
+        android:textSize="22sp"
+        android:text="@string/play_label_button_notes" 
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id_play/tableRow1"
+        android:layout_marginTop="1000dp"
+        android:textColor="#000" />   
 </RelativeLayout>
