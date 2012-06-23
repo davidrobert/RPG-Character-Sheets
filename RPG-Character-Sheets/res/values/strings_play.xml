@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="play_label_initiative">Initiative</string>
+    <string name="play_label_speed">Speed</string>
+    <string name="play_label_grapple">Grapple</string>
+    <string name="play_label_spell_resistence">Spell Resistence</string>
+    
     <string name="play_label_religion">Deity</string>
     <string name="play_label_attacks">Attacks</string>
     

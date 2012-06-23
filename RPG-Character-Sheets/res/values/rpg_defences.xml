@@ -6,6 +6,7 @@
     <string name="defences_hit_points">Hit Points</string>
     <string name="defences_hit_points_abbreviation">HP</string>
     
+    <string name="defences_armor_class_uppercase">ARMOR CLASS</string>
     <string name="defences_armor_class">Armor Class</string>
     <string name="defences_armor_class_abbreviation">AC</string>
 

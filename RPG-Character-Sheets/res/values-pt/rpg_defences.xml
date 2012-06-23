@@ -5,6 +5,7 @@
     <string name="defences_hit_points">Pontos de Vida</string>
     <string name="defences_hit_points_abbreviation">PV</string>
     
+    <string name="defences_armor_class_uppercase">CLASSE DE ARMADURA</string>
     <string name="defences_armor_class">Classe de Armadura</string>
     <string name="defences_armor_class_abbreviation">CA</string>
 
