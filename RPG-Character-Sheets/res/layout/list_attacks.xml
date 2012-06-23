@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" 
-    android:background="@drawable/layout_attack">
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_attack" >
 
     <TableRow
         android:layout_width="fill_parent"
@@ -119,6 +119,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_span="1"
             android:gravity="center"
             android:paddingLeft="5dp"
             android:text="@string/play_label_attack_type"
@@ -136,13 +137,14 @@
             android:textColor="#000"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:typeface="serif" />
+            android:typeface="serif"
+            android:visibility="invisible" />
     </TableRow>
 
     <TableRow
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
-        android:paddingBottom="5dip">
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dip" >
 
         <TextView
             android:id="@+id/range"
@@ -157,6 +159,7 @@
             android:id="@+id/type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_span="1"
             android:gravity="center"
             android:paddingLeft="6dip"
             android:textColor="#000"

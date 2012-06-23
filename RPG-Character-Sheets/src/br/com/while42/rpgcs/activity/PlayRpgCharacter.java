@@ -75,6 +75,14 @@ public class PlayRpgCharacter extends Activity {
 		TextView tvReflex = (TextView) findViewById(R.id_play.textview_reflex);
 		TextView tvThrowsWill = (TextView) findViewById(R.id_play.textview_will);
 		
+		TextView tvTouch = (TextView) findViewById(R.id_play.textview_touch);
+		TextView tvFlatFoted = (TextView) findViewById(R.id_play.textview_flat_footed);
+		
+		TextView tvInitiative = (TextView) findViewById(R.id_play.textview_initiative);
+		TextView tvSpeed = (TextView) findViewById(R.id_play.textview_speed);
+		TextView tvGrapple = (TextView) findViewById(R.id_play.textview_grapple);
+		TextView tvSpellResistence = (TextView) findViewById(R.id_play.textview_spell_resistence);		
+		
 		ListView lvLanguages = (ListView) findViewById(R.id_play.listview_languages);
 		ListView lvSkills = (ListView) findViewById(R.id_play.listview_skills);
 					
@@ -158,12 +166,26 @@ public class PlayRpgCharacter extends Activity {
 		tvReflex.setText(savingThrows.getReflex().toString());
 		tvThrowsWill.setText(savingThrows.getThrowsWill().toString());
 		
+		// TODO: Falta implementar
+		tvTouch.setText("+10");
+		tvFlatFoted.setText("+2");
+		
+		// TODO: Falta implementar
+		tvInitiative.setText("+1");
+		tvSpeed.setText("+2");
+		tvGrapple.setText("+3");
+		tvSpellResistence.setText("+4");		
+		
 		Languages languages = rpgCharacter.getLanguages();
 		{
-			String[] lgs = new String[languages.getAll().size()];
+			String[] lgs = new String[languages.getAll().size() + languages.getAllEspecial().size()];
 			int i = 0;
 			for (TypeRpgLanguage type: languages.getAll()) {
 				lgs[i++] = getString(type.getCodeName());
+			}
+			
+			for (String name: languages.getAllEspecial()) {
+				lgs[i++] = name;
 			}
 		
 			Arrays.sort(lgs);
@@ -244,7 +266,9 @@ public class PlayRpgCharacter extends Activity {
 				}
 				
 				map.put("type", sbType.toString());
-				map.put("notes", attack.getObservation());
+				
+				String notes = attack.getObservation();
+				map.put("notes", notes);
 				
 				attks.add(map);
 			}

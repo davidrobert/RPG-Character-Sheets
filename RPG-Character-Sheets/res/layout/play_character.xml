@@ -663,7 +663,6 @@
     </TableLayout>
     
     <TableLayout
-        android:id="@+id_play/milestoneAndActionPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id_play/textView2"
@@ -679,24 +678,39 @@
 
 		    <TextView
 		        android:id="@+id_play/textView3"
-		        android:layout_width="160dp"
+		        android:layout_width="fill_parent"
 		        android:layout_height="40dp"
 		        android:typeface="serif"
 		        android:gravity="center_vertical"
 		        android:paddingLeft="5dp"
 		        android:textColor="#000"
 		        android:textStyle="bold"
-		        android:text="Milestones"
+		        android:text="@string/defences_touch"
+		        android:textSize="18sp"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		    
+		   <TextView
+		        android:id="@+id_play/textView3"
+		        android:layout_width="fill_parent"
+		        android:layout_height="match_parent"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:textStyle=""
+		        android:gravity="center_vertical"
+		        android:textColor="#000"
+		        android:typeface="serif"
+		        android:text="@string/defences_armor_class_uppercase"
+		        android:textSize="10sp"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_touch"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="40dp"
 		        android:textColor="#000"
 		        android:typeface="serif"
-		        android:text="0"
+		        android:text=""
 		        android:background="@drawable/white_square_up_right_rounded_corner"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
         </TableRow>
@@ -706,24 +720,39 @@
 
 		    <TextView
 		        android:id="@+id_play/textView3"
-		        android:layout_width="160dp"
+		        android:layout_width="fill_parent"
 		        android:layout_height="40dp"
 		        android:paddingLeft="5dp"
 		        android:textStyle="bold"
 		        android:gravity="center_vertical"
 		        android:textColor="#000"
 		        android:typeface="serif"
-		        android:text="Action Points"
+		        android:text="@string/defences_flat_footed"
+		        android:textSize="17sp"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textView3"
+		        android:layout_width="fill_parent"
+		        android:layout_height="match_parent"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:textStyle=""
+		        android:gravity="center_vertical"
+		        android:textColor="#000"
+		        android:typeface="serif"
+		        android:text="@string/defences_armor_class_uppercase"
+		        android:textSize="10sp"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		    
+		    <TextView
+		        android:id="@+id_play/textview_flat_footed"
 		        android:layout_width="50dp"
 		        android:layout_height="40dp"
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:gravity="center"
-		        android:text="1"
+		        android:text=""
 		        android:background="@drawable/white_square_down_right_rounded_corner"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
@@ -777,18 +806,18 @@
 		        android:gravity="center_vertical"
 		        android:paddingLeft="5dp"
 		        android:textColor="#000"
-		        android:text="Initiave"
-		        android:textSize="20sp"
+		        android:text="@string/play_label_initiative"
+		        android:textSize="17sp"
 		        android:textStyle="bold" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_initiative"
 		        android:layout_width="50dp"
 		        android:gravity="center"
 		        android:layout_height="fill_parent"
 		        android:textColor="#000"
 		        android:typeface="serif"
-		        android:text="+11"
+		        android:text=""
 		        android:background="@drawable/white_square_up_right_rounded_corner"
 		        android:textSize="20sp" />
         </TableRow>
@@ -806,25 +835,54 @@
 		        android:gravity="center_vertical"
 		        android:textColor="#000"
 		        android:typeface="serif"
-		        android:text="Speed"
+		        android:text="@string/play_label_speed"
 		        android:textStyle="bold"
-		        android:textSize="20sp" />
+		        android:textSize="17sp" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_speed"
 		        android:layout_width="50dp"
 		        android:layout_height="wrap_content"
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:gravity="center"
-		        android:text="6"
+		        android:text=""
+		        android:background="@drawable/layout_text_white"
+		        android:textSize="20sp" />
+        </TableRow>
+      
+		<TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" >
+
+		    <TextView
+		        android:id="@+id_play/textView3"
+		        android:layout_width="150dp"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="5dp"
+		        android:gravity="center_vertical"
+		        android:textColor="#000"
+		        android:typeface="serif"
+		        android:text="@string/play_label_grapple"
+		        android:textStyle="bold"
+		        android:textSize="17sp" />
+            
+		    <TextView
+		        android:id="@+id_play/textview_grapple"
+		        android:layout_width="50dp"
+		        android:layout_height="wrap_content"
+		        android:textColor="#000"
+		        android:typeface="serif"
+		        android:gravity="center"
+		        android:text=""
 		        android:background="@drawable/layout_text_white"
 		        android:textSize="20sp" />
         </TableRow>
         
 		<TableRow 
             android:layout_height="wrap_content"
-            android:layout_width="match_parent">
+            android:layout_width="match_parent"
+            android:background="@drawable/layout_row_border_bottom" >
 
 		    <TextView
 		        android:id="@+id_play/textView3"
@@ -835,21 +893,22 @@
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:textStyle="bold"
-		        android:text="Saving Throw"
-		        android:textSize="20sp" />
+		        android:text="@string/play_label_spell_resistence"
+		        android:textSize="17sp" />
             
 		    <TextView
-		        android:id="@+id_play/textView4"
+		        android:id="@+id_play/textview_spell_resistence"
 		        android:layout_width="50dp"
 		        android:layout_height="wrap_content"
 		        android:textColor="#000"
 		        android:typeface="serif"
 		        android:gravity="center"
-		        android:text="0"
+		        android:text=""
 		        android:background="@drawable/layout_text_white"
 		        android:textSize="20sp" />
         </TableRow>
         
+        <!-- 
 		<TableRow 
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
@@ -868,6 +927,7 @@
 		        android:background="@drawable/layout_resistances"
 		        android:textSize="20sp" />
         </TableRow>
+        -->
     </TableLayout>
     
     <!-- Languages Box -->
@@ -909,6 +969,7 @@
     </TableLayout>
 
     <!-- PI and PP Box -->
+    <!-- 
     <TableLayout
         android:id="@+id_play/PIAndPPBox"
         android:layout_width="wrap_content"
@@ -974,6 +1035,7 @@
 		    
         </TableRow>
     </TableLayout>
+    -->
     
     <!-- Skills Title -->
     <TableLayout
@@ -1115,6 +1177,7 @@
         
     <Button
         android:id="@+id_play/button_feats"
+        android:drawableLeft="@drawable/feats50"
         android:layout_width="250dp"
         android:layout_height="75dp"
         android:layout_marginRight="0dp"
@@ -1142,6 +1205,7 @@
     
  	<Button
         android:id="@+id_play/button_items"
+        android:drawableLeft="@drawable/items50"
         android:layout_width="250dp"
         android:layout_height="75dp"
         android:layout_marginRight="0dp"
@@ -1169,6 +1233,7 @@
     
 	<Button
         android:id="@+id_play/button_magic_spells"
+        android:drawableLeft="@drawable/magic_spells50"
         android:layout_width="250dp"
         android:layout_height="75dp"
         android:layout_marginRight="0dp"

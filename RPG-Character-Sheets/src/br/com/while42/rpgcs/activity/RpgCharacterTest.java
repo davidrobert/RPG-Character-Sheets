@@ -28,7 +28,6 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
-import br.com.while42.rpgcs.model.classes.Barbarian;
 import br.com.while42.rpgcs.model.classes.Fighter;
 import br.com.while42.rpgcs.model.classes.Sorcerer;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
@@ -155,6 +154,9 @@ public class RpgCharacterTest extends Activity {
 		languages.add(TypeRpgLanguage.DRACONIC);
 		languages.add(TypeRpgLanguage.GIANT);
 		languages.add(TypeRpgLanguage.HALFLING);
+		
+		String especialLanguage = "Idioma Secreto";
+		languages.add(especialLanguage);
 		
 		Skills skills = rc.getSkills();
 		skills.add(new Skill(TypeRpgSkill.APPRAISE, 1));
