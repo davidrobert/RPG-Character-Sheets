@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="play_title_activity">Rpg Character Sheet</string>
 
     <string name="play_label_initiative">Initiative</string>
     <string name="play_label_speed">Speed</string>

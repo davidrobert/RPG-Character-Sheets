@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="edit_title_activity">Edit Character Sheet</string>
 
     <string name="edit_description_image">Player Image</string>
     <string name="edit_label_name">Name</string>

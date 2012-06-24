@@ -20,15 +20,43 @@
         </activity>
         <activity
             android:name=".activity.EditRpgCharacter"
-            android:label="@string/title_activity_edit_character" >
+            android:label="@string/edit_title_activity" >
         </activity>
         <activity
             android:name=".activity.ListRpgCharacters"
-            android:label="@string/title_activity_edit_character" >
+            android:label="@string/list_title_activity" >
         </activity>
         <activity
             android:name=".activity.PlayRpgCharacter"
-            android:label="@string/title_activity_edit_character" >
+            android:label="@string/play_title_activity" >
+        </activity>
+        <activity
+            android:name=".activity.FeatsRpgCharacter"
+            android:label="@string/feats_title_activity" >
+        </activity>
+        <activity
+            android:name=".activity.EquipmentRpgCharacter"
+            android:label="@string/equipment_title_activity" >
+        </activity>
+        <activity
+            android:name=".activity.ItemsRpgCharacter"
+            android:label="@string/items_title_activity" >
+        </activity>
+        <activity
+            android:name=".activity.TreasureRpgCharacter"
+            android:label="@string/treasure_title_activity" >
+        </activity>
+        <activity
+            android:name=".activity.MagicAndSpellsRpgCharacter"
+            android:label="@string/magic_spells_title_activity" >
+        </activity>
+        <activity
+            android:name=".activity.FamiliarRpgCharacter"
+            android:label="@string/familiar_title_activity" >
+        </activity>
+        <activity
+            android:name=".activity.NotesRpgCharacter"
+            android:label="@string/notes_title_activity" >
         </activity>
     </application>
 

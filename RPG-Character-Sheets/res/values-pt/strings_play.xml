@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="play_title_activity">Planilha de Personagem</string>
     
     <string name="play_label_initiative">Iniciativa</string>
     <string name="play_label_speed">Deslocamento</string>
@@ -19,7 +20,7 @@
     
     <string name="play_label_button_feats">Talentos</string>
     <string name="play_label_button_equipment">Equipamento</string>
-    <string name="play_label_button_items">Items</string>
+    <string name="play_label_button_items">Itens</string>
     <string name="play_label_button_treasure">Tesouros</string>
     <string name="play_label_button_magic_spells">Magia/Feitiços</string>
     <string name="play_label_button_familiar">Familiar</string>

@@ -10,9 +10,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -38,6 +42,8 @@ import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
 
 public class PlayRpgCharacter extends Activity {
 	
+	private RpgCharacter rpgCharacter;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -46,7 +52,7 @@ public class PlayRpgCharacter extends Activity {
 
 		Bundle bn = new Bundle();
         bn = getIntent().getExtras();
-        RpgCharacter rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
+        rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
         
         Log.d("ID: ", rpgCharacter.getId().toString());
 		
@@ -90,6 +96,14 @@ public class PlayRpgCharacter extends Activity {
 		TextView tvVision = (TextView) findViewById(R.id_play.textview_vision);
 		
 		ListView lvAttacks = (ListView) findViewById(R.id_play.listview_attacks);
+		
+		Button bFeats = (Button) findViewById(R.id_play.button_feats);
+		Button bEquipment = (Button) findViewById(R.id_play.button_equipment);
+		Button bItems = (Button) findViewById(R.id_play.button_items);
+		Button bTreasure = (Button) findViewById(R.id_play.button_treasure);
+		Button bMagicSpells = (Button) findViewById(R.id_play.button_magic_spells);
+		Button bFamiliar = (Button) findViewById(R.id_play.button_familiar);
+		Button bNotes = (Button) findViewById(R.id_play.button_notes);		
 		
 		// ---
 		
@@ -283,6 +297,57 @@ public class PlayRpgCharacter extends Activity {
 		
 			lvAttacks.setAdapter(adapterAttacks);
 		}
+		
+		// Buttons
+		
+		bFeats.setOnClickListener(new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				startActivity(FeatsRpgCharacter.class);
+			}
+		});
+		
+		bEquipment.setOnClickListener(new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				startActivity(EquipmentRpgCharacter.class);
+			}			
+		});
+		
+		bItems.setOnClickListener(new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				startActivity(ItemsRpgCharacter.class);
+			}			
+		});
+		
+		bTreasure.setOnClickListener(new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				startActivity(TreasureRpgCharacter.class);
+			}			
+		});
+		
+		bMagicSpells.setOnClickListener(new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				startActivity(MagicAndSpellsRpgCharacter.class);
+			}			
+		});
+		
+		bFamiliar.setOnClickListener(new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				startActivity(FamiliarRpgCharacter.class);
+			}			
+		});
+		
+		bNotes.setOnClickListener(new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				startActivity(NotesRpgCharacter.class);
+			}			
+		});
 	}
 
 	
@@ -296,6 +361,19 @@ public class PlayRpgCharacter extends Activity {
 		};
 
 		return mapComparator;
+	}
+	
+	private void startActivity(Class<?> clazz) {
+		Intent intent = new Intent(PlayRpgCharacter.this, clazz);
+		
+		putSerializeRpgCharacter(intent);
+		startActivity(intent);
+	}
+	
+	private void putSerializeRpgCharacter(Intent intent) {
+		Bundle b = new Bundle();
+		b.putSerializable(RpgCharacter.class.getName(), rpgCharacter);
+		intent.putExtras(b);
 	}
 	
 }
