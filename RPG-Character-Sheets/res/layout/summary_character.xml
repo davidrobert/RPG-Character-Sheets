@@ -21,7 +21,6 @@
         android:layout_gravity="center_vertical"
         android:paddingLeft="10dp"
         android:textColor="#FFFFFF"
-        android:textSize="22dp" >
-    </TextView>
+        android:textSize="22dp" />
 
 </LinearLayout>

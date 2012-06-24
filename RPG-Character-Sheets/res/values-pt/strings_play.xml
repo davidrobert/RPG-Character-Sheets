@@ -2,12 +2,16 @@
 <resources>
     <string name="play_title_activity">Planilha de Personagem</string>
     
+    <string name="play_label_button_edit">EDITAR</string>
+    
     <string name="play_label_initiative">Iniciativa</string>
     <string name="play_label_speed">Deslocamento</string>
     <string name="play_label_grapple">Agarrar</string>
     <string name="play_label_spell_resistence">Resist. Magia</string>
 
     <string name="play_label_religion">Divindade</string>
+  
+    <string name="play_label_hitpoints">PONTOS DE VIDA</string>
     <string name="play_label_attacks">Ataques</string>
     
     <string name="play_label_attack">Ataque</string>

@@ -41,9 +41,9 @@ import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
 
 public class PlayRpgCharacter extends Activity {
-	
+
 	private RpgCharacter rpgCharacter;
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -94,6 +94,9 @@ public class PlayRpgCharacter extends Activity {
 					
 		TextView tvReligion = (TextView) findViewById(R.id_play.textview_religion);
 		TextView tvVision = (TextView) findViewById(R.id_play.textview_vision);
+		
+		TextView tvHitPointsActual = (TextView) findViewById(R.id_play.textview_hitpoints_actual);
+		TextView tvHitPointsTotal = (TextView) findViewById(R.id_play.textview_hitpoints_total);
 		
 		ListView lvAttacks = (ListView) findViewById(R.id_play.listview_attacks);
 		
@@ -242,6 +245,10 @@ public class PlayRpgCharacter extends Activity {
 		String vision = getString(attr.getVision().getCodeName());
 		tvVision.setText(vision);
 		
+		// TODO: Falta implementar
+		tvHitPointsActual.setText("60");
+		tvHitPointsTotal.setText("100");
+		
 		Attacks attaks = rpgCharacter.getAttacks();
 		{
 			ArrayList<HashMap<String, String>> attks = new ArrayList<HashMap<String, String>>();
@@ -350,7 +357,6 @@ public class PlayRpgCharacter extends Activity {
 		});
 	}
 
-	
 	private Comparator<Map<String, String>> builderComparator(final String name) {
 		Comparator<Map<String, String>> mapComparator = new Comparator<Map<String, String>>() {
 
@@ -362,18 +368,18 @@ public class PlayRpgCharacter extends Activity {
 
 		return mapComparator;
 	}
-	
+
 	private void startActivity(Class<?> clazz) {
 		Intent intent = new Intent(PlayRpgCharacter.this, clazz);
-		
+
 		putSerializeRpgCharacter(intent);
 		startActivity(intent);
 	}
-	
+
 	private void putSerializeRpgCharacter(Intent intent) {
 		Bundle b = new Bundle();
 		b.putSerializable(RpgCharacter.class.getName(), rpgCharacter);
 		intent.putExtras(b);
 	}
-	
+
 }
