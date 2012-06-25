@@ -46,13 +46,16 @@ public class NotesRpgCharacter extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO: Apesar das notas serem uma lista, neste caso esta sempre salvando tudo em um unico item
+				notes.clear();
 				notes.add(edNotes.getText().toString());
 				
-				Intent intent = NotesRpgCharacter.this.getIntent();
+				Intent intent = new Intent(NotesRpgCharacter.this, PlayRpgCharacter.class);
 				Bundle b = new Bundle();
 				b.putSerializable(RpgCharacter.class.getName(), rpgCharacter);
 				intent.putExtras(b);
 				
+				setResult(Activity.RESULT_OK, intent);
+				startActivity(intent);
 				finish();
 			}
 		});

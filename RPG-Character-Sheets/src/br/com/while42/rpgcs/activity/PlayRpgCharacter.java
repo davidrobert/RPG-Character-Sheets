@@ -51,7 +51,7 @@ public class PlayRpgCharacter extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		readRpgCharacterInExtra();
+		getSerializeRpgCharacter();
 	}
 	
 	@Override
@@ -60,7 +60,7 @@ public class PlayRpgCharacter extends Activity {
 		
 		setContentView(R.layout.play_character);
 
-		readRpgCharacterInExtra();
+		getSerializeRpgCharacter();
 		
 		TextView tvName = (TextView) findViewById(R.id_play.textview_name);
 		ImageView ivGender = (ImageView) findViewById(R.id_play.imageview_gender);
@@ -389,11 +389,11 @@ public class PlayRpgCharacter extends Activity {
 		});
 	}
 
-	private void readRpgCharacterInExtra() {
+	private void getSerializeRpgCharacter() {
 		Bundle bn = new Bundle();
         bn = getIntent().getExtras();
         rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
-        
+
         Log.d("PLAY - ID: ", rpgCharacter.getId().toString());
 	}
 
@@ -414,6 +414,7 @@ public class PlayRpgCharacter extends Activity {
 
 		putSerializeRpgCharacter(intent);
 		startActivity(intent);
+		finish();
 	}
 
 	private void putSerializeRpgCharacter(Intent intent) {
