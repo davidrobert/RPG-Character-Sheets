@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -33,6 +35,7 @@ import br.com.while42.rpgcs.model.character.SavingThrows;
 import br.com.while42.rpgcs.model.character.Skill;
 import br.com.while42.rpgcs.model.character.Skills;
 import br.com.while42.rpgcs.model.character.attributes.TypeAbilities;
+import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgLanguage;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
@@ -57,7 +60,8 @@ public class PlayRpgCharacter extends Activity {
         Log.d("ID: ", rpgCharacter.getId().toString());
 		
 		TextView tvName = (TextView) findViewById(R.id_play.textview_name);
-		TextView tvGenderRace = (TextView) findViewById(R.id_play.textview_gender_race);
+		ImageView ivGender = (ImageView) findViewById(R.id_play.imageview_gender);
+		TextView tvRace = (TextView) findViewById(R.id_play.textview_race);
 		TextView tvAlignment = (TextView) findViewById(R.id_play.textview_alignment);
 		TextView tvClassesLevel = (TextView) findViewById(R.id_play.textview_classes_level);
 		TextView tvExperience = (TextView) findViewById(R.id_play.textview_experience);
@@ -100,6 +104,7 @@ public class PlayRpgCharacter extends Activity {
 		
 		ListView lvAttacks = (ListView) findViewById(R.id_play.listview_attacks);
 		
+		Button bEdit = (Button) findViewById(R.id_play.button_edit);
 		Button bFeats = (Button) findViewById(R.id_play.button_feats);
 		Button bEquipment = (Button) findViewById(R.id_play.button_equipment);
 		Button bItems = (Button) findViewById(R.id_play.button_items);
@@ -114,12 +119,14 @@ public class PlayRpgCharacter extends Activity {
 		
 		Attributes attr = rpgCharacter.getAttributes();
 		
-		StringBuilder sbGenderRace = new StringBuilder();
-		sbGenderRace.append(getString(attr.getGender().getCodeName()));
-		sbGenderRace.append(" ");
-		sbGenderRace.append(getString(attr.getRace().getCodeName()));
+		TypeGender gender = attr.getGender();
+		if (TypeGender.MEN.equals(gender)) {
+			ivGender.setBackgroundResource(R.drawable.gender_m20);
+		} else if (TypeGender.WOMAN.equals(gender)) {
+			ivGender.setBackgroundResource(R.drawable.gender_f20);
+		}
 		
-		tvGenderRace.setText(sbGenderRace.toString());
+		tvRace.setText(getString(attr.getRace().getCodeName()));
 		
 		tvAlignment.setText(getString(attr.getAlignment().getCodeName()));
 		
@@ -245,9 +252,8 @@ public class PlayRpgCharacter extends Activity {
 		String vision = getString(attr.getVision().getCodeName());
 		tvVision.setText(vision);
 		
-		// TODO: Falta implementar
-		tvHitPointsActual.setText("60");
-		tvHitPointsTotal.setText("100");
+		tvHitPointsActual.setText(defences.getCurrentHitPoints().toString());
+		tvHitPointsTotal.setText(defences.getHitPoints().toString());
 		
 		Attacks attaks = rpgCharacter.getAttacks();
 		{
@@ -306,6 +312,16 @@ public class PlayRpgCharacter extends Activity {
 		}
 		
 		// Buttons
+		bEdit.setOnClickListener(new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				// TODO: Falta implementar
+				new AlertDialog.Builder(PlayRpgCharacter.this)
+				.setTitle("Edição")
+				.setMessage("Falta Implementar")
+				.show();
+			}
+		});
 		
 		bFeats.setOnClickListener(new OnClickListener() {			
 			@Override

@@ -2,5 +2,8 @@
 <resources>
 
     <string name="app_name">RPG Planilha de Personagem</string>
+    <string name="space_simple"> </string>
+    <string name="space_bar_space"> / </string>
+    <string name="bar">/</string>
 
 </resources>
