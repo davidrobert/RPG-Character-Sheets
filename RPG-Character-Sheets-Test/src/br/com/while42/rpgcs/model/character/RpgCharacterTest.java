@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import org.junit.Test;
-
 import android.test.AndroidTestCase;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
@@ -287,7 +285,6 @@ public class RpgCharacterTest extends AndroidTestCase {
 		return rpgCharacterSheets;
 	}
 
-	@Test
 	public void testIsPersistent() {
 		
 		BuilderAttributes builder = new BuilderAttributes();
@@ -310,7 +307,6 @@ public class RpgCharacterTest extends AndroidTestCase {
 		assertFalse(rc.isPersistent());
 	}
 
-	@Test
 	public void testBasicSerialize() {
 		RpgCharacter rpgcs1 = getList().get(0);
 		
@@ -320,7 +316,6 @@ public class RpgCharacterTest extends AndroidTestCase {
 		assertEquals(rpgcs1, rpgcs2);
 	}
 	
-	@Test
 	public void testSerialize() {
 		for (RpgCharacter rc: getList()) {
 			byte[] serializeObject = RpgCharacter.serialize(rc);
@@ -330,7 +325,6 @@ public class RpgCharacterTest extends AndroidTestCase {
 		}
 	}
 	
-	@Test
 	public void testAbilitiesDefault() {
 		RpgCharacter rc = getList().get(0);
 		
@@ -344,7 +338,6 @@ public class RpgCharacterTest extends AndroidTestCase {
 		assertEquals(0, ab.getIntelligence().intValue());
 	}
 	
-	@Test
 	public void testAbilities() {
 		RpgCharacter rc = getList().get(1);
 		
@@ -358,7 +351,6 @@ public class RpgCharacterTest extends AndroidTestCase {
 		assertEquals(16, ab.getIntelligence().intValue());
 	}
 	
-	@Test
 	public void testLanguages() {		
 		for (RpgCharacter rc: getList()) {
 			Languages languages = rc.getLanguages();
