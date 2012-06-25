@@ -32,6 +32,7 @@ public class RpgCharacter implements Serializable {
 	private Attacks attacks;
 	private Armors armors;
 	private Equipments otherEquipments;
+	private Notes notes;
 	
 	private Integer baseAttackBonus;
 	private Integer grapple;
@@ -55,6 +56,7 @@ public class RpgCharacter implements Serializable {
 		this.attacks = new Attacks(abilities);
 		this.armors = new Armors();
 		this.otherEquipments = new Equipments();
+		this.notes = new Notes();
 		
 		this.baseAttackBonus = 0;
 		this.grapple = 0;
@@ -164,6 +166,14 @@ public class RpgCharacter implements Serializable {
 		return attacks;
 	}
 	
+	public Notes getNotes() {
+		return notes;
+	}
+
+	public void setNotes(Notes notes) {
+		this.notes = notes;
+	}
+
 	public static byte[] serialize(RpgCharacter rpgCharacter) { 
 	    ByteArrayOutputStream bos = new ByteArrayOutputStream(); 
 	 
@@ -228,6 +238,7 @@ public class RpgCharacter implements Serializable {
 				armors.equals(rc.armors) &&
 				
 				otherEquipments.equals(rc.otherEquipments) &&
+				notes.equals(rc.notes) &&
 				
 				baseAttackBonus.equals(rc.baseAttackBonus) &&
 				grapple.equals(rc.grapple) );
@@ -251,6 +262,7 @@ public class RpgCharacter implements Serializable {
 		sb.append(" attacks: ").append(attacks);
 		sb.append(" armors: ").append(armors);
 		sb.append(" otherEquipments: ").append(otherEquipments);
+		sb.append(" notes: ").append(notes);
 		
 		return sb.toString();
 	}

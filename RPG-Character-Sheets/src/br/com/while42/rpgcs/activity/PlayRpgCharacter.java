@@ -33,6 +33,7 @@ import br.com.while42.rpgcs.model.character.Languages;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.SavingThrows;
 import br.com.while42.rpgcs.model.character.Skill;
+import br.com.while42.rpgcs.model.character.SkillOther;
 import br.com.while42.rpgcs.model.character.Skills;
 import br.com.while42.rpgcs.model.character.attributes.TypeAbilities;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
@@ -48,16 +49,18 @@ public class PlayRpgCharacter extends Activity {
 	private RpgCharacter rpgCharacter;
 
 	@Override
+	protected void onResume() {
+		super.onResume();
+		readRpgCharacterInExtra();
+	}
+	
+	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.play_character);
 
-		Bundle bn = new Bundle();
-        bn = getIntent().getExtras();
-        rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
-        
-        Log.d("ID: ", rpgCharacter.getId().toString());
+		readRpgCharacterInExtra();
 		
 		TextView tvName = (TextView) findViewById(R.id_play.textview_name);
 		ImageView ivGender = (ImageView) findViewById(R.id_play.imageview_gender);
@@ -237,6 +240,19 @@ public class PlayRpgCharacter extends Activity {
 				sklls.add(map);
 			}
 			
+			for (SkillOther especialSkill: skills.getAllOthers()) {
+				HashMap<String, String> map = new HashMap<String, String>();
+				
+				map.put("name", especialSkill.getName());
+				map.put("modifier", "(" + fmt.format(especialSkill.getModifier()) + ")");
+				
+				TypeAbilities ability = especialSkill.getAbility();
+				int code = (ability != null) ? ability.getCodeName() : R.string.ability_none;
+				map.put("ability", getString(code));
+
+				sklls.add(map);
+			}
+			
 			Comparator<Map<String, String>> mapComparator = builderComparator("name");
 			Collections.sort(sklls, mapComparator);
 
@@ -371,6 +387,14 @@ public class PlayRpgCharacter extends Activity {
 				startActivity(NotesRpgCharacter.class);
 			}			
 		});
+	}
+
+	private void readRpgCharacterInExtra() {
+		Bundle bn = new Bundle();
+        bn = getIntent().getExtras();
+        rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
+        
+        Log.d("PLAY - ID: ", rpgCharacter.getId().toString());
 	}
 
 	private Comparator<Map<String, String>> builderComparator(final String name) {

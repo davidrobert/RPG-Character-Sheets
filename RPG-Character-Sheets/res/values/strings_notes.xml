@@ -2,4 +2,6 @@
 <resources>
 	<string name="notes_title_activity">Notes</string>
 
+	<string name="notes_button_update">Update</string>
+	
 </resources>

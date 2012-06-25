@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="notes_title_activity">Anotações</string>
+
+    <string name="notes_title_activity">Anotações</string>
+    
+    <string name="notes_button_update">Update</string>
 
 </resources>

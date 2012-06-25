@@ -12,10 +12,13 @@ import br.com.while42.rpgcs.model.character.BuilderAttributes;
 import br.com.while42.rpgcs.model.character.Defences;
 import br.com.while42.rpgcs.model.character.Languages;
 import br.com.while42.rpgcs.model.character.Money;
+import br.com.while42.rpgcs.model.character.Notes;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.SavingThrows;
 import br.com.while42.rpgcs.model.character.Skill;
+import br.com.while42.rpgcs.model.character.SkillOther;
 import br.com.while42.rpgcs.model.character.Skills;
+import br.com.while42.rpgcs.model.character.attributes.TypeAbilities;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
@@ -175,7 +178,13 @@ public class RpgCharacterTest extends Activity {
 		skills.add(new Skill(TypeRpgSkill.HANDLE_ANIMAL, 10));
 		skills.add(new Skill(TypeRpgSkill.HEAL, -1));
 		
+		skills.add(new SkillOther("Pescaria", 10, TypeAbilities.WISDOM));
+		
 		rc.getRpgClasses().setExperience(35000L);
+		
+		Notes notes = rc.getNotes();
+		notes.add("Abc Def Ghi Jkl Mno Pqr Stu Vwx Yz");
+		notes.add("0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0");
 		
 		return rc;
 	}
