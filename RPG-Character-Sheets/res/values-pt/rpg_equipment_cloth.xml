@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="cloth_artisans_outfit">Traje de Artesao</string>
+    <string name="cloth_artisans_outfit">Traje de Artesão</string>
     <string name="cloth_clerics_vestments">Vestimentas</string>
     <string name="cloth_cold_weather_outfit">Traje de Clima Frio</string>
     <string name="cloth_coutiers_outfit">Traje da Corte</string>
