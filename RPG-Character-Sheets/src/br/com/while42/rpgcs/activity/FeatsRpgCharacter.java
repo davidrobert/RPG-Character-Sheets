@@ -12,12 +12,12 @@ public class FeatsRpgCharacter extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.feats_character);
+		setContentView(R.layout.activity_feats_character);
 
 		Bundle bn = new Bundle();
         bn = getIntent().getExtras();
         RpgCharacter rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
         
-        Log.d("ID: ", rpgCharacter.getId().toString());
+        Log.d("FEATS - ID: ", rpgCharacter.getId().toString());
 	}	
 }

@@ -12,12 +12,12 @@ public class MagicAndSpellsRpgCharacter extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.magic_spells_character);
+		setContentView(R.layout.activity_magic_spells_character);
 
 		Bundle bn = new Bundle();
         bn = getIntent().getExtras();
         RpgCharacter rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
         
-        Log.d("ID: ", rpgCharacter.getId().toString());
+        Log.d("MAGIC - ID: ", rpgCharacter.getId().toString());
 	}	
 }

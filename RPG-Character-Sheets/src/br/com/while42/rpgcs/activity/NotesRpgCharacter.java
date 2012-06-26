@@ -21,7 +21,7 @@ public class NotesRpgCharacter extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.notes_character);
+		setContentView(R.layout.activity_notes_character);
 
 		Bundle bn = new Bundle();
         bn = getIntent().getExtras();

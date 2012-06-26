@@ -28,7 +28,7 @@ public class ListRpgCharacters extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.list_characters);
+		setContentView(R.layout.activity_list_characters);
 
 		listCharacters = (ListView) findViewById(R.id_list_characters.listView_characters);    
 		

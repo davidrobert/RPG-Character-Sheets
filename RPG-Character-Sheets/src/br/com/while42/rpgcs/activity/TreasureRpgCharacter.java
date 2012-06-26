@@ -12,7 +12,7 @@ public class TreasureRpgCharacter extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.treasure_character);
+		setContentView(R.layout.activity_treasure_character);
 
 		Bundle bn = new Bundle();
         bn = getIntent().getExtras();

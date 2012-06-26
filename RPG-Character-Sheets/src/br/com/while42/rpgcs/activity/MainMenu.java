@@ -17,7 +17,7 @@ public class MainMenu extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_menu);
+		setContentView(R.layout.activity_main_menu);
 		
 		newCharacter = (Button) findViewById(R.id_menu.button_newcharacter);
 		loadCharacter = (Button) findViewById(R.id_menu.button_loadcharacter);

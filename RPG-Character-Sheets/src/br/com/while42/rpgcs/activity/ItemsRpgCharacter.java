@@ -12,12 +12,12 @@ public class ItemsRpgCharacter extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.items_character);
+		setContentView(R.layout.activity_items_character);
 
 		Bundle bn = new Bundle();
         bn = getIntent().getExtras();
         RpgCharacter rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
         
-        Log.d("ID: ", rpgCharacter.getId().toString());
+        Log.d("ITEMS - ID: ", rpgCharacter.getId().toString());
 	}	
 }

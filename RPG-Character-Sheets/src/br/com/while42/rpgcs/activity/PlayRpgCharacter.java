@@ -58,7 +58,7 @@ public class PlayRpgCharacter extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.play_character);
+		setContentView(R.layout.activity_play_character);
 
 		getSerializeRpgCharacter();
 		
@@ -414,7 +414,6 @@ public class PlayRpgCharacter extends Activity {
 
 		putSerializeRpgCharacter(intent);
 		startActivity(intent);
-		finish();
 	}
 
 	private void putSerializeRpgCharacter(Intent intent) {

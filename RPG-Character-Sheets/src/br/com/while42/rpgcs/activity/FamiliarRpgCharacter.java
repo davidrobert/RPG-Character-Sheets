@@ -12,12 +12,12 @@ public class FamiliarRpgCharacter extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.familiar_character);
+		setContentView(R.layout.activity_familiar_character);
 
 		Bundle bn = new Bundle();
         bn = getIntent().getExtras();
         RpgCharacter rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
         
-        Log.d("ID: ", rpgCharacter.getId().toString());
+        Log.d("FAMILIAR - ID: ", rpgCharacter.getId().toString());
 	}	
 }

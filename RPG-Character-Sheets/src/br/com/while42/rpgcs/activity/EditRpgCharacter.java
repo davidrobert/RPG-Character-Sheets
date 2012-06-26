@@ -97,7 +97,7 @@ public class EditRpgCharacter extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.edit_character);
+		setContentView(R.layout.activity_edit_character);
 		
 		dataManager = new DataManager(getApplicationContext());
 		listClasses = new ManagerRpgClasses().getAll(this, "br.com.while42.rpgcs", AbstractRpgClass.class);
