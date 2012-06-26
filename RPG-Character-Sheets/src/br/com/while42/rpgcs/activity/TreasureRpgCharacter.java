@@ -18,6 +18,6 @@ public class TreasureRpgCharacter extends Activity {
         bn = getIntent().getExtras();
         RpgCharacter rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
         
-        Log.d("ID: ", rpgCharacter.getId().toString());
+        Log.d("TREASURE - ID: ", rpgCharacter.getId().toString());
 	}	
 }
