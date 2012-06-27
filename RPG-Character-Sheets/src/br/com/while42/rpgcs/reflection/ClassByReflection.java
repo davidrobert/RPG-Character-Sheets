@@ -1,6 +1,8 @@
-package br.com.while42.rpgcs.model.classes;
+package br.com.while42.rpgcs.reflection;
 
 import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -13,20 +15,20 @@ import dalvik.system.DexClassLoader;
 import dalvik.system.DexFile;
 import dalvik.system.PathClassLoader;
 
-public class ManagerRpgClasses {
-	
+public class ClassByReflection {
+
 	public <T, K> List<K> getAll(Context context, String packageName, Class<T> superc) {
 
 		String apkName;
 		List<K> list = new ArrayList<K>();
-		
+
 		try {
 			apkName = context.getPackageManager().getApplicationInfo(packageName, 0).sourceDir;
 		} catch (NameNotFoundException e1) {
 			Log.d("DEBUG", e1.getMessage());
 			return list;
 		}
-		
+
 		DexFile dexFile;
 		try {
 			dexFile = new DexFile(apkName);
@@ -36,14 +38,16 @@ public class ManagerRpgClasses {
 		}
 
 		PathClassLoader classLoader2 = new PathClassLoader(apkName, Thread.currentThread().getContextClassLoader());
-		DexClassLoader classLoader = new DexClassLoader(apkName, new ContextWrapper(context).getCacheDir().getAbsolutePath(), null, classLoader2);
-		
+		DexClassLoader classLoader = new DexClassLoader(apkName, new ContextWrapper(context).getCacheDir()
+				.getAbsolutePath(), null, classLoader2);
+
 		Enumeration<String> entries = dexFile.entries();
 
 		while (entries.hasMoreElements()) {
 			String entry = entries.nextElement();
 
-			// only check items that exists in source package, not in libraries, etc.
+			// only check items that exists in source package, not in libraries,
+			// etc.
 			if (entry.startsWith(packageName)) {
 
 				Class<?> entryClass;
@@ -52,25 +56,40 @@ public class ManagerRpgClasses {
 				} catch (ClassNotFoundException e) {
 					Log.d("DEBUG", e.getMessage());
 					continue;
-				}
-				
-				if (entryClass != null) {												
+				}				
+
+				if (entryClass != null && !entryClass.isInterface() && !Modifier.isAbstract(entryClass.getModifiers())) {
+					
+					boolean isPublic = false;
+					Constructor<?>[] constructors = entryClass.getConstructors();
+					for (Constructor<?> c: constructors) {
+						isPublic = Modifier.isPublic(c.getModifiers());
+					}
+					
+					if (!isPublic) {
+						continue;
+					}
+					
 					Class<?> superclass = entryClass.getSuperclass();
+					while (superclass != null && superclass != superc) {
+						superclass = superclass.getSuperclass();
+					}
+
 					if (superclass != null && superclass == superc) {
 						try {
 							@SuppressWarnings("unchecked")
-							K obj = (K) entryClass.newInstance();							
+							K obj = (K) entryClass.newInstance();
 							list.add(obj);
-							
+
 						} catch (InstantiationException e) {
 							Log.d("DEBUG", e.getMessage());
 							e.printStackTrace();
-							
+
 						} catch (IllegalAccessException e) {
 							Log.d("DEBUG", e.getMessage());
 							e.printStackTrace();
 						}
-					}					
+					}
 				}
 			}
 		}

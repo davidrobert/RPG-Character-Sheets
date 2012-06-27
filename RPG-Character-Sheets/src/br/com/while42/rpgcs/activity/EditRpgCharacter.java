@@ -30,8 +30,8 @@ import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.CharacterClass;
-import br.com.while42.rpgcs.model.classes.ManagerRpgClasses;
 import br.com.while42.rpgcs.persist.DataManager;
+import br.com.while42.rpgcs.reflection.ClassByReflection;
 
 public class EditRpgCharacter extends Activity {
 
@@ -100,7 +100,7 @@ public class EditRpgCharacter extends Activity {
 		setContentView(R.layout.activity_edit_character);
 		
 		dataManager = new DataManager(getApplicationContext());
-		listClasses = new ManagerRpgClasses().getAll(this, "br.com.while42.rpgcs", AbstractRpgClass.class);
+		listClasses = new ClassByReflection().getAll(this, "br.com.while42.rpgcs", AbstractRpgClass.class);
 
 		etName = (EditText) findViewById(R.id_edit.edittext_name);
 
