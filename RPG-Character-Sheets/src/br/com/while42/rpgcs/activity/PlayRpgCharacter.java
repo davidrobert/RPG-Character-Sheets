@@ -23,7 +23,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import br.com.while42.rpgcs.R;
-import br.com.while42.rpgcs.comparable.MapComparable;
+import br.com.while42.rpgcs.comparator.MapComparator;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.character.Abilities;
 import br.com.while42.rpgcs.model.character.Attack;
@@ -254,7 +254,7 @@ public class PlayRpgCharacter extends Activity {
 				sklls.add(map);
 			}
 			
-			Comparator<Map<String, String>> mapComparator = new MapComparable().builderComparator("name");
+			Comparator<Map<String, String>> mapComparator = new MapComparator().builderComparator("name");
 			Collections.sort(sklls, mapComparator);
 
 			SimpleAdapter adapterSkills = new SimpleAdapter(this, sklls, R.layout.list_skills,
@@ -317,7 +317,7 @@ public class PlayRpgCharacter extends Activity {
 				attks.add(map);
 			}
 			
-			Comparator<Map<String, String>> mapComparator = new MapComparable().builderComparator("attack");
+			Comparator<Map<String, String>> mapComparator = new MapComparator().builderComparator("attack");
 			Collections.sort(attks, mapComparator);
 			
 			SimpleAdapter adapterAttacks = new SimpleAdapter(this, attks, R.layout.list_attacks,

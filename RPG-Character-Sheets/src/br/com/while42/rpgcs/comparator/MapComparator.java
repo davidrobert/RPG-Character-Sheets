@@ -1,9 +1,9 @@
-package br.com.while42.rpgcs.comparable;
+package br.com.while42.rpgcs.comparator;
 
 import java.util.Comparator;
 import java.util.Map;
 
-public class MapComparable {
+public class MapComparator {
 
 	public Comparator<Map<String, String>> builderComparator(final String name) {
 		Comparator<Map<String, String>> mapComparator = new Comparator<Map<String, String>>() {

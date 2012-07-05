@@ -13,7 +13,7 @@ import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import br.com.while42.rpgcs.R;
-import br.com.while42.rpgcs.comparable.MapComparable;
+import br.com.while42.rpgcs.comparator.MapComparator;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.equip.weapons.AbstractWeapon;
@@ -64,7 +64,7 @@ public class EquipmentRpgCharacter extends Activity {
 			equips.add(map);
 		}
 
-		Comparator<Map<String, String>> mapComparator = new MapComparable().builderComparator("name");
+		Comparator<Map<String, String>> mapComparator = new MapComparator().builderComparator("name");
 		Collections.sort(equips, mapComparator);
 
 		SimpleAdapter adapterEquipments = new SimpleAdapter(this, equips, R.layout.list_equipments, new String[] {
