@@ -5,10 +5,10 @@ import java.io.Serializable;
 public class HitDice implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	private int count;
+	private Integer count;
 	private HitDiceType dice;
-	private int modifier;
-	private int multiplier;
+	private Integer modifier;
+	private Integer multiplier;
 	
 	public HitDice(HitDiceType dice) {
 		this.count = 1;
@@ -17,28 +17,28 @@ public class HitDice implements Serializable {
 		this.multiplier = 1;
 	}
 	
-	public HitDice(int count, HitDiceType dice) {
+	public HitDice(Integer count, HitDiceType dice) {
 		this.count = count;
 		this.dice = dice;
 		this.modifier = 0;
 		this.multiplier = 1;
 	}
 	
-	public HitDice(int count, HitDiceType dice, int modifier) {
+	public HitDice(Integer count, HitDiceType dice, Integer modifier) {
 		this.count = count;
 		this.dice = dice;
 		this.modifier = modifier;
 		this.multiplier = 1;
 	}
 	
-	public HitDice(int count, HitDiceType dice, int modifier, int multiplier) {
+	public HitDice(Integer count, HitDiceType dice, Integer modifier, Integer multiplier) {
 		this.count = count;
 		this.dice = dice;
 		this.modifier = modifier;
 		this.multiplier = multiplier;
 	}
 	
-	public int getCount() {
+	public Integer getCount() {
 		return count;
 	}
 
@@ -46,19 +46,19 @@ public class HitDice implements Serializable {
 		return dice;
 	}
 
-	public int getModifier() {
+	public Integer getModifier() {
 		return modifier;
 	}
 	
-	public int getMultiplier() {
+	public Integer getMultiplier() {
 		return multiplier;
 	}
 	
-	public int getMaxValue() {
+	public Integer getMaxValue() {
 		return ((count * dice.getValue()) + modifier) * multiplier;
 	}
 	
-	public int getMinValue() {
+	public Integer getMinValue() {
 		return ((count * 1) + modifier) * multiplier;
 	}
 	
@@ -68,7 +68,7 @@ public class HitDice implements Serializable {
 		if (!(o instanceof HitDice)) return false;
 		
 		HitDice h = (HitDice) o;
-		if (count == h.count && dice == h.dice && modifier == h.modifier && multiplier == h.multiplier)
+		if (count.equals(h.count) && dice.equals(h.dice) && modifier.equals(h.modifier) && multiplier.equals(h.multiplier))
 			return true;
 		
 		return false;
@@ -78,17 +78,17 @@ public class HitDice implements Serializable {
 	public String toString() {
 		StringBuilder b = new StringBuilder();
 		
-		b.append(String.valueOf(count));
+		b.append(count.toString());
 		b.append(dice);
 		
 		if (modifier < 0) {
-			b.append(String.valueOf(modifier));
+			b.append(modifier.toString());
 		} else if (modifier > 0) {
-			b.append("+").append(String.valueOf(modifier));
+			b.append("+").append(modifier.toString());
 		}
 		
 		if (multiplier != 1) {
-			b.append(" x ").append(String.valueOf(multiplier));
+			b.append(" x ").append(multiplier.toString());
 		}
 		
 		return b.toString();
