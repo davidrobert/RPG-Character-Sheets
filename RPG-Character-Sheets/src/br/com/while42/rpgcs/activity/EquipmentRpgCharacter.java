@@ -72,6 +72,7 @@ public class EquipmentRpgCharacter extends Activity {
 		lvEquipments.setAdapter(adapterEquipments);
 	}
 
+	// TODO: Colocar este metodo em uma classe que possa ser reutilizada em diferentes activitys
 	private Comparator<Map<String, String>> builderComparator(final String name) {
 		Comparator<Map<String, String>> mapComparator = new Comparator<Map<String, String>>() {
 
