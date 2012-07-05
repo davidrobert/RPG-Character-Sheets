@@ -13,6 +13,7 @@ import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.comparable.MapComparable;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.equip.weapons.AbstractWeapon;
@@ -63,7 +64,7 @@ public class EquipmentRpgCharacter extends Activity {
 			equips.add(map);
 		}
 
-		Comparator<Map<String, String>> mapComparator = builderComparator("name");
+		Comparator<Map<String, String>> mapComparator = new MapComparable().builderComparator("name");
 		Collections.sort(equips, mapComparator);
 
 		SimpleAdapter adapterEquipments = new SimpleAdapter(this, equips, R.layout.list_equipments, new String[] {
@@ -71,17 +72,5 @@ public class EquipmentRpgCharacter extends Activity {
 
 		lvEquipments.setAdapter(adapterEquipments);
 	}
-
-	// TODO: Colocar este metodo em uma classe que possa ser reutilizada em diferentes activitys
-	private Comparator<Map<String, String>> builderComparator(final String name) {
-		Comparator<Map<String, String>> mapComparator = new Comparator<Map<String, String>>() {
-
-			@Override
-			public int compare(Map<String, String> m1, Map<String, String> m2) {
-				return m1.get(name).compareTo(m2.get(name));
-			}
-		};
-
-		return mapComparator;
-	}
+	
 }
