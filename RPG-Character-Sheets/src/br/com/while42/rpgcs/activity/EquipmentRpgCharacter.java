@@ -39,7 +39,7 @@ public class EquipmentRpgCharacter extends Activity {
 
 		ArrayList<HashMap<String, String>> equips = new ArrayList<HashMap<String, String>>();
 
-		listWeapons = new ClassByReflection().getAll(this, "br.com.while42.rpgcs", AbstractWeapon.class);
+		listWeapons = ClassByReflection.getAll(this, "br.com.while42.rpgcs", AbstractWeapon.class);
 
 		for (AbstractWeapon weapon : listWeapons) {
 			HashMap<String, String> map = new HashMap<String, String>();

@@ -66,6 +66,7 @@ public class RpgCharacterTest extends Activity {
 		play.putExtras(b);
 
 		startActivity(play);
+		finish();
 	}
 	
 

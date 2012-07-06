@@ -100,7 +100,7 @@ public class EditRpgCharacter extends Activity {
 		setContentView(R.layout.activity_edit_character);
 		
 		dataManager = new DataManager(getApplicationContext());
-		listClasses = new ClassByReflection().getAll(this, "br.com.while42.rpgcs", AbstractRpgClass.class);
+		listClasses = ClassByReflection.getAll(this, "br.com.while42.rpgcs", AbstractRpgClass.class);
 
 		etName = (EditText) findViewById(R.id_edit.edittext_name);
 

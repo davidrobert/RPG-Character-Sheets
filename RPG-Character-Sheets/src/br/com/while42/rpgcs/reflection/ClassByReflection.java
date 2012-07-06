@@ -5,7 +5,9 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -16,8 +18,14 @@ import dalvik.system.DexFile;
 import dalvik.system.PathClassLoader;
 
 public class ClassByReflection {
-
-	public <T, K> List<K> getAll(Context context, String packageName, Class<T> superc) {
+	private static Map<String, List<?>> cache = new HashMap<String, List<?>>();
+	
+	@SuppressWarnings("unchecked")
+	public static <T, K> List<K> getAll(Context context, String packageName, Class<T> superc) {
+		if (cache.containsKey(superc.getCanonicalName())) {
+			Log.d("CACHE", "GET");
+			return (List<K>) cache.get(superc.getCanonicalName());
+		}
 
 		String apkName;
 		List<K> list = new ArrayList<K>();
@@ -77,7 +85,6 @@ public class ClassByReflection {
 
 					if (superclass != null && superclass == superc) {
 						try {
-							@SuppressWarnings("unchecked")
 							K obj = (K) entryClass.newInstance();
 							list.add(obj);
 
@@ -94,6 +101,8 @@ public class ClassByReflection {
 			}
 		}
 
+		Log.d("CACHE", "PUT");
+		cache.put(superc.getCanonicalName(), new ArrayList<K>(list));
 		return list;
 	}
 }
