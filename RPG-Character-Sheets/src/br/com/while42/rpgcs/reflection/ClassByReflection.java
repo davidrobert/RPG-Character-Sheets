@@ -18,10 +18,12 @@ import dalvik.system.DexFile;
 import dalvik.system.PathClassLoader;
 
 public class ClassByReflection {
+	public static final String PACKAGE = "br.com.while42.rpgcs";
+	
 	private static Map<String, List<?>> cache = new HashMap<String, List<?>>();
 	
 	@SuppressWarnings("unchecked")
-	public static <T, K> List<K> getAll(Context context, String packageName, Class<T> superc) {
+	public static <T, K> List<K> getAll(Context context, Class<T> superc) {
 		if (cache.containsKey(superc.getCanonicalName())) {
 			Log.d("CACHE", "GET");
 			return (List<K>) cache.get(superc.getCanonicalName());
@@ -31,7 +33,7 @@ public class ClassByReflection {
 		List<K> list = new ArrayList<K>();
 
 		try {
-			apkName = context.getPackageManager().getApplicationInfo(packageName, 0).sourceDir;
+			apkName = context.getPackageManager().getApplicationInfo(PACKAGE, 0).sourceDir;
 		} catch (NameNotFoundException e1) {
 			Log.d("DEBUG", e1.getMessage());
 			return list;
@@ -56,7 +58,7 @@ public class ClassByReflection {
 
 			// only check items that exists in source package, not in libraries,
 			// etc.
-			if (entry.startsWith(packageName)) {
+			if (entry.startsWith(PACKAGE)) {
 
 				Class<?> entryClass;
 				try {

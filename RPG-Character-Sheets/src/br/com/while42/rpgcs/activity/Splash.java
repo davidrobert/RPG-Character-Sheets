@@ -40,8 +40,8 @@ public class Splash extends Activity implements Runnable {
 	private long loadClassesByReflection() {
 		long startTime = System.currentTimeMillis();
 		
-		ClassByReflection.getAll(this, "br.com.while42.rpgcs", AbstractRpgClass.class);
-		ClassByReflection.getAll(this, "br.com.while42.rpgcs", AbstractWeapon.class);
+		ClassByReflection.getAll(this, AbstractRpgClass.class);
+		ClassByReflection.getAll(this, AbstractWeapon.class);
 		
 		long totalTime = System.currentTimeMillis() - startTime;
 		Log.d("SPLASH - Time to Load", Long.toString(totalTime));
