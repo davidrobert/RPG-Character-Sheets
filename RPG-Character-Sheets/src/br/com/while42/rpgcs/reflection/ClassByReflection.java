@@ -18,10 +18,10 @@ import dalvik.system.DexFile;
 import dalvik.system.PathClassLoader;
 
 public class ClassByReflection {
-	public static final String PACKAGE = "br.com.while42.rpgcs";
-	
+	// public static final String PACKAGE = "br.com.while42.rpgcs";
+
 	private static Map<String, List<?>> cache = new HashMap<String, List<?>>();
-	
+
 	@SuppressWarnings("unchecked")
 	public static <T, K> List<K> getAll(Context context, Class<T> superc) {
 		if (cache.containsKey(superc.getCanonicalName())) {
@@ -29,11 +29,14 @@ public class ClassByReflection {
 			return (List<K>) cache.get(superc.getCanonicalName());
 		}
 
+		String packageName = context.getPackageName();
+		Log.d("PACKAGE", packageName);
+
 		String apkName;
 		List<K> list = new ArrayList<K>();
 
 		try {
-			apkName = context.getPackageManager().getApplicationInfo(PACKAGE, 0).sourceDir;
+			apkName = context.getPackageManager().getApplicationInfo(packageName, 0).sourceDir;
 		} catch (NameNotFoundException e1) {
 			Log.d("DEBUG", e1.getMessage());
 			return list;
@@ -46,40 +49,41 @@ public class ClassByReflection {
 			Log.d("DEBUG", e1.getMessage());
 			return list;
 		}
-
-		PathClassLoader classLoader2 = new PathClassLoader(apkName, Thread.currentThread().getContextClassLoader());
-		DexClassLoader classLoader = new DexClassLoader(apkName, new ContextWrapper(context).getCacheDir()
-				.getAbsolutePath(), null, classLoader2);
+	
+		ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
+		String absolutePath = new ContextWrapper(context).getCacheDir().getAbsolutePath();	
+		
+		PathClassLoader pathClassLoader = new PathClassLoader(apkName, contextClassLoader);
+		DexClassLoader dexClassLoader = new DexClassLoader(apkName, absolutePath, null, pathClassLoader);
 
 		Enumeration<String> entries = dexFile.entries();
 
 		while (entries.hasMoreElements()) {
 			String entry = entries.nextElement();
 
-			// only check items that exists in source package, not in libraries,
-			// etc.
-			if (entry.startsWith(PACKAGE)) {
+			// only check items that exists in source package (not in libraries)
+			if (entry.startsWith(packageName)) {
 
 				Class<?> entryClass;
 				try {
-					entryClass = classLoader.loadClass(entry); // dexFile.loadClass(entry,
+					entryClass = dexClassLoader.loadClass(entry); // dexFile.loadClass(entry,
 				} catch (ClassNotFoundException e) {
 					Log.d("DEBUG", e.getMessage());
 					continue;
-				}				
+				}
 
 				if (entryClass != null && !entryClass.isInterface() && !Modifier.isAbstract(entryClass.getModifiers())) {
-					
+
 					boolean isPublic = false;
 					Constructor<?>[] constructors = entryClass.getConstructors();
-					for (Constructor<?> c: constructors) {
+					for (Constructor<?> c : constructors) {
 						isPublic = Modifier.isPublic(c.getModifiers());
 					}
-					
+
 					if (!isPublic) {
 						continue;
 					}
-					
+
 					Class<?> superclass = entryClass.getSuperclass();
 					while (superclass != null && superclass != superc) {
 						superclass = superclass.getSuperclass();
