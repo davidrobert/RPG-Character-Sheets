@@ -13,7 +13,7 @@ public class Rapier extends AbstractMartialOneHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_rapier);
+		base = new BasicWeapon(R.string.weapon_martial_rapier, R.drawable.weapon_axe);
 		base.setCost(20L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

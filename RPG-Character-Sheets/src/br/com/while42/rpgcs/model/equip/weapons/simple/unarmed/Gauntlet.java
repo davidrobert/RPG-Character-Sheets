@@ -13,7 +13,7 @@ public class Gauntlet extends AbstractSimpleUnarmedWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_simple_gauntlet);
+		base = new BasicWeapon(R.string.weapon_simple_gauntlet, R.drawable.weapon_axe);
 		base.setCost(2L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

@@ -13,7 +13,7 @@ public class Sai extends AbstractExoticLightMelleWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_sai);
+		base = new BasicWeapon(R.string.weapon_exotic_sai, R.drawable.weapon_axe);
 		base.setCost(1L);
 		base.setCritical(2);
 		base.setRangeIncrement(10);

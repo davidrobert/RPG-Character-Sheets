@@ -13,7 +13,7 @@ public class Kama extends AbstractExoticLightMelleWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_kama);
+		base = new BasicWeapon(R.string.weapon_exotic_kama, R.drawable.weapon_axe);
 		base.setCost(2L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
@@ -28,4 +28,5 @@ public class Kama extends AbstractExoticLightMelleWeapon {
 	public Kama() {
 		super(base);
 	}
+
 }

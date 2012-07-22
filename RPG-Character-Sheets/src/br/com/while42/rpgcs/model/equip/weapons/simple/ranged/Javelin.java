@@ -14,7 +14,7 @@ public class Javelin extends AbstractSimpleRangedWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_simple_javelin);
+		base = new BasicWeapon(R.string.weapon_simple_javelin, R.drawable.weapon_axe);
 		base.setCost(1L);
 		base.setCritical(2);
 		base.setRangeIncrement(9);

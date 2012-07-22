@@ -14,7 +14,7 @@ public class Bolas extends AbstractExoticRangedWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_bolas);
+		base = new BasicWeapon(R.string.weapon_exotic_bolas, R.drawable.weapon_axe);
 		base.setCost(5L);
 		base.setCritical(2);
 		base.setRangeIncrement(3);

@@ -10,6 +10,9 @@ import br.com.while42.rpgcs.model.equip.Equipment;
 
 public interface Weapon extends Equipment, TypeCode, Serializable {
 	
+	// TODO: Verificar se nao vale ficar em uma interface esse metodo
+	public int getCodeImage();
+	
 	public SizeWeapon getSize();
 	public List<HitDice> getDamage();
 	public List<HitDice> getDamage(SizeWeapon size);

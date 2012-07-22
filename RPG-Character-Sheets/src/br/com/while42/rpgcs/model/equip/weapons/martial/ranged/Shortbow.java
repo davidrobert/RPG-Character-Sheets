@@ -14,7 +14,7 @@ public class Shortbow extends AbstractMartialRangedWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_shortbow);
+		base = new BasicWeapon(R.string.weapon_martial_shortbow, R.drawable.weapon_axe);
 		base.setCost(30L);
 		base.setCritical(3);
 		base.setRangeIncrement(18);

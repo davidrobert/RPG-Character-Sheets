@@ -13,7 +13,7 @@ public class Dagger extends AbstractSimpleLightMeleeWeapon {
 	private static final BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_simple_dagger);
+		base = new BasicWeapon(R.string.weapon_simple_dagger, R.drawable.weapon_axe);
 		base.setCost(2L);
 		base.setCritical(2);
 		base.setRangeIncrement(3);

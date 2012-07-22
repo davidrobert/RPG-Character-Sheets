@@ -10,7 +10,7 @@ public abstract class AbstractExoticWeapon extends AbstractWeapon {
 	public AbstractExoticWeapon(BasicWeapon base) {
 		super(base);
 	}
-
+	
 	@Override
 	public final CategorieWeapon getCategorie() {
 		return CategorieWeapon.EXOTIC;

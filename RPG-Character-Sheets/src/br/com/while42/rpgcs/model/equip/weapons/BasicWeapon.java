@@ -14,6 +14,7 @@ public class BasicWeapon implements Weapon {
 	private static final long serialVersionUID = 1L;
 	
 	private final int codeName;
+	private final int codeImage; 
 	
 	private SizeWeapon size;
 	
@@ -27,13 +28,15 @@ public class BasicWeapon implements Weapon {
 	private CategorieUsefulnessWeapon categorieUsefulness = null;
 	private CategorieEncumbranceWeapon categorieEncumbrance = null;
 
-	public BasicWeapon(int codeName) {
+	public BasicWeapon(int codeName, int codeImage) {
 		this.codeName = codeName;
+		this.codeImage = codeImage;
 		this.size = SizeWeapon.MEDIUM;
 	}
 
-	public BasicWeapon(int codeName, SizeWeapon size) {
+	public BasicWeapon(int codeName, int codeImage, SizeWeapon size) {
 		this.codeName = codeName;
+		this.codeImage = codeImage;
 		this.size = size;
 	}
 	
@@ -120,6 +123,11 @@ public class BasicWeapon implements Weapon {
 	public int getCodeName() {
 		return codeName;
 	}
+	
+	@Override
+	public int getCodeImage() {
+		return codeImage;
+	};
 	
 	public void setCategorie(CategorieWeapon categorie) {
 		this.categorie = categorie;

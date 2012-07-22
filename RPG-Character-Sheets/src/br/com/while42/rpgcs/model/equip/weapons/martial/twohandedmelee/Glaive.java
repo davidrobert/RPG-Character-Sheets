@@ -13,7 +13,7 @@ public class Glaive extends AbstractMartialTwoHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_glaive);
+		base = new BasicWeapon(R.string.weapon_martial_glaive, R.drawable.weapon_axe);
 		base.setCost(8L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);

@@ -13,7 +13,7 @@ public class SwordShort extends AbstractMartialLightMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_sword_short);
+		base = new BasicWeapon(R.string.weapon_martial_sword_short, R.drawable.weapon_axe);
 		base.setCost(10L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

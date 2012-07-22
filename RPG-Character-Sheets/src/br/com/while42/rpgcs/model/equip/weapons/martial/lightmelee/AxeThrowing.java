@@ -13,7 +13,7 @@ public class AxeThrowing extends AbstractMartialLightMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_axe_throwing);
+		base = new BasicWeapon(R.string.weapon_martial_axe_throwing, R.drawable.weapon_axe);
 		base.setCost(8L);
 		base.setCritical(2);
 		base.setRangeIncrement(3);

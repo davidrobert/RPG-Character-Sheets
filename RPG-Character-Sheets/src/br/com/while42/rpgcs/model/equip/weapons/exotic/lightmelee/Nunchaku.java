@@ -13,7 +13,7 @@ public class Nunchaku extends AbstractExoticLightMelleWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_nunchaku);
+		base = new BasicWeapon(R.string.weapon_exotic_nunchaku, R.drawable.weapon_axe);
 		base.setCost(2L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

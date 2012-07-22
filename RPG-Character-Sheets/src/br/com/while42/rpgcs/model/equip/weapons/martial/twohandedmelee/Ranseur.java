@@ -13,7 +13,7 @@ public class Ranseur extends AbstractMartialTwoHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_ranseur);
+		base = new BasicWeapon(R.string.weapon_martial_ranseur, R.drawable.weapon_axe);
 		base.setCost(10L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);

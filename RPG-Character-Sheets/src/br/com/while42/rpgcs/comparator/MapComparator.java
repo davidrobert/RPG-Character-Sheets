@@ -16,4 +16,16 @@ public class MapComparator {
 
 		return mapComparator;
 	}
+	
+	public Comparator<Map<String, Object>> builderComparatorWithCast(final String name) {
+		Comparator<Map<String, Object>> mapComparator = new Comparator<Map<String, Object>>() {
+
+			@Override
+			public int compare(Map<String, Object> m1, Map<String, Object> m2) {
+				return ((String)m1.get(name)).compareTo((String) m2.get(name));
+			}
+		};
+
+		return mapComparator;
+	}
 }

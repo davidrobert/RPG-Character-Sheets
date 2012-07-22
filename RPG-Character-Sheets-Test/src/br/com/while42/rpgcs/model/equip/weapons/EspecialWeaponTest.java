@@ -23,6 +23,7 @@ public class EspecialWeaponTest extends AndroidTestCase {
 		                                 .setSize(SizeWeapon.MEDIUM)
 		                                 .setType(TypeWeapon.PIERCING)
 		                                 .setDamage(new HitDice(2, HitDiceType.d6, +2))
+		                                 .setCategorie(CategorieWeapon.SIMPLE)
 		                                 .setCategorieEncumbrance(CategorieEncumbranceWeapon.TWO_HANDED)
 		                                 .setCategorieUsefulness(CategorieUsefulnessWeapon.MELEE)
 		                                 .toEspecialWeapon();

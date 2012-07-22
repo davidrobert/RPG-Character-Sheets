@@ -13,7 +13,7 @@ public class Net extends AbstractExoticRangedWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_net);
+		base = new BasicWeapon(R.string.weapon_exotic_net, R.drawable.weapon_axe);
 		base.setCost(2L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

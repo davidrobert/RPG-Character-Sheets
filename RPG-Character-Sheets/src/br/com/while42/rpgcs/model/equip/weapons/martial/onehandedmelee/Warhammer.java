@@ -13,7 +13,7 @@ public class Warhammer extends AbstractMartialOneHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_warhammer);
+		base = new BasicWeapon(R.string.weapon_martial_warhammer, R.drawable.weapon_axe);
 		base.setCost(12L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);

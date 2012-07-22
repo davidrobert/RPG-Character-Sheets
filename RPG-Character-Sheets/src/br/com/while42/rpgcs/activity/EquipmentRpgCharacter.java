@@ -15,8 +15,11 @@ import android.widget.SimpleAdapter;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.comparator.MapComparator;
 import br.com.while42.rpgcs.model.HitDice;
+import br.com.while42.rpgcs.model.character.Attack;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.equip.weapons.AbstractWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.Weapon;
+import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
 import br.com.while42.rpgcs.reflection.ClassByReflection;
 
 public class EquipmentRpgCharacter extends Activity {
@@ -35,20 +38,30 @@ public class EquipmentRpgCharacter extends Activity {
 
 		Log.d("EQUIPMENT - ID: ", rpgCharacter.getId().toString());
 
-		ListView lvEquipments = (ListView) findViewById(R.id_equipment.listview_equipments);
+		ArrayList<HashMap<String, Object>> strWeapons = new ArrayList<HashMap<String, Object>>();
 
-		ArrayList<HashMap<String, String>> equips = new ArrayList<HashMap<String, String>>();
+		List<Attack> attacks = rpgCharacter.getAttacks().getAttacks();
+		for (Attack atk : attacks) {
+			HashMap<String, Object> map = new HashMap<String, Object>();
+			Weapon weapon = atk.getWeapon();
 
-		listWeapons = ClassByReflection.getAll(this, AbstractWeapon.class);
-
-		for (AbstractWeapon weapon : listWeapons) {
-			HashMap<String, String> map = new HashMap<String, String>();
-
-			map.put("name", getString(weapon.getCodeName()));
+			Log.d("Weapon", getWeaponName(weapon));
 			
-			if (getString(weapon.getCodeName()).isEmpty()) {
-				
-			}
+			int categorieCodeName = weapon.getCategorie().getCodeName();
+			int udefulnessCodeName = weapon.getCategorieUsefulness().getCodeName();
+			// TODO: Encumbrance eh NULL para RANGED Weapons
+			// int encumbranceCodeName = weapon.getCategorieEncumbrance().getCodeName();
+
+			// TODO: falta a imagem
+			map.put("image", weapon.getCodeImage());
+			map.put("name", getWeaponName(weapon));
+			map.put("categorie", getString(categorieCodeName));
+			map.put("critical", weapon.getCritical().toString());
+			map.put("range", weapon.getRangeIncrement().toString());
+			map.put("cost", weapon.getCost().toString());
+			map.put("weight", weapon.getWeight().toString());
+			map.put("categorie_usefulness", getString(udefulnessCodeName));
+			// map.put("categorie_encumbrance", getString(encumbranceCodeName));
 
 			StringBuffer buffer = new StringBuffer();
 			for (HitDice dice : weapon.getDamage()) {
@@ -59,18 +72,76 @@ public class EquipmentRpgCharacter extends Activity {
 			}
 
 			map.put("damage", "(" + buffer.toString() + ")");
-			map.put("range", weapon.getRangeIncrement().toString());
 
-			equips.add(map);
+			strWeapons.add(map);
 		}
 
-		Comparator<Map<String, String>> mapComparator = new MapComparator().builderComparator("name");
-		Collections.sort(equips, mapComparator);
+		ListView lvEquipments = (ListView) findViewById(R.id_equipment.listview_equipments);
 
-		SimpleAdapter adapterEquipments = new SimpleAdapter(this, equips, R.layout.list_equipments, new String[] {
-				"name", "damage", "range" }, new int[] { R.id.name, R.id.damage, R.id.range });
+		Comparator<Map<String, Object>> mapComparator = new MapComparator().builderComparatorWithCast("name");
+		Collections.sort(strWeapons, mapComparator);
+
+		SimpleAdapter adapterEquipments = new SimpleAdapter(this, strWeapons, R.layout.list_weapons, new String[] { "image", "name",
+				"categorie", "critical", "range", "cost", "weight", "categorie_usefulness", "categorie_encumbrance", "damage" }, new int[] {
+				R.id.image, R.id.name, R.id.categorie, R.id.critical, R.id.range, R.id.cost, R.id.weight, R.id.categorie_usefulness,
+				R.id.categorie_encumbrance, R.id.damage });
 
 		lvEquipments.setAdapter(adapterEquipments);
+
+		// -----------------
+
+		/*
+		 * ListView lvEquipments = (ListView)
+		 * findViewById(R.id_equipment.listview_equipments);
+		 * 
+		 * ArrayList<HashMap<String, String>> equips = new
+		 * ArrayList<HashMap<String, String>>();
+		 * 
+		 * listWeapons = ClassByReflection.getAll(this, AbstractWeapon.class);
+		 * 
+		 * for (AbstractWeapon weapon : listWeapons) { HashMap<String, String>
+		 * map = new HashMap<String, String>();
+		 * 
+		 * map.put("name", getString(weapon.getCodeName()));
+		 * 
+		 * if (getString(weapon.getCodeName()).isEmpty()) {
+		 * 
+		 * }
+		 * 
+		 * StringBuffer buffer = new StringBuffer(); for (HitDice dice :
+		 * weapon.getDamage()) { if (buffer.length() > 0) {
+		 * buffer.append(" / "); } buffer.append(dice); }
+		 * 
+		 * map.put("damage", "(" + buffer.toString() + ")"); map.put("range",
+		 * weapon.getRangeIncrement().toString());
+		 * 
+		 * equips.add(map); }
+		 * 
+		 * 
+		 * Comparator<Map<String, String>> mapComparator = new
+		 * MapComparator().builderComparator("name"); Collections.sort(equips,
+		 * mapComparator);
+		 * 
+		 * SimpleAdapter adapterEquipments = new SimpleAdapter(this, equips,
+		 * R.layout.list_equipments, new String[] { "name", "damage", "range" },
+		 * new int[] { R.id.name, R.id.damage, R.id.range });
+		 * 
+		 * lvEquipments.setAdapter(adapterEquipments);
+		 */
 	}
 	
+	private String getWeaponName(Weapon weapon) {
+		
+		if (weapon instanceof EspecialWeapon) {
+			return ((EspecialWeapon) weapon).getName();
+		}
+		
+		int weaponCodeName = weapon.getCodeName();
+		if (weaponCodeName == 0) {
+			return "";
+		}
+		
+		return getString(weaponCodeName);
+	}
+
 }

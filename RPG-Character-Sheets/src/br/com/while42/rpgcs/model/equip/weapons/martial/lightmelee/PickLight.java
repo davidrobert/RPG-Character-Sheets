@@ -13,7 +13,7 @@ public class PickLight extends AbstractMartialLightMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_pick_light);
+		base = new BasicWeapon(R.string.weapon_martial_pick_light, R.drawable.weapon_axe);
 		base.setCost(4L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

@@ -13,7 +13,7 @@ public class UgroshDwarven extends AbstractExoticTwoHandedMelleWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_ugrosh_dwarven);
+		base = new BasicWeapon(R.string.weapon_exotic_ugrosh_dwarven, R.drawable.weapon_axe);
 		base.setCost(2L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

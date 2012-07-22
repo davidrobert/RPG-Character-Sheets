@@ -13,7 +13,7 @@ public class FlailSpiked extends AbstractExoticTwoHandedMelleWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_flail_spiked);
+		base = new BasicWeapon(R.string.weapon_exotic_flail_spiked, R.drawable.weapon_axe);
 		base.setCost(2L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

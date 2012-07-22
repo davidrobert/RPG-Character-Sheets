@@ -13,7 +13,7 @@ public class HammerGnomoHooked extends AbstractExoticTwoHandedMelleWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_hammer_gnome_hooked);
+		base = new BasicWeapon(R.string.weapon_exotic_hammer_gnome_hooked, R.drawable.weapon_axe);
 		base.setCost(2L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

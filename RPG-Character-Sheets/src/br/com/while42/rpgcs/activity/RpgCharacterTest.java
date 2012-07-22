@@ -36,6 +36,7 @@ import br.com.while42.rpgcs.model.classes.Sorcerer;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.especial.BuilderEspecialWeapon;
@@ -144,6 +145,7 @@ public class RpgCharacterTest extends Activity {
 		            .setSize(SizeWeapon.MEDIUM)
 		            .setType(TypeWeapon.SLASHING)
 		            .setDamage(new HitDice(2, HitDiceType.d4, +1))
+		            .setCategorie(CategorieWeapon.EXOTIC)
 		            .setCategorieEncumbrance(CategorieEncumbranceWeapon.TWO_HANDED)
 		            .setCategorieUsefulness(CategorieUsefulnessWeapon.RANGED)
 		            .toEspecialWeapon();

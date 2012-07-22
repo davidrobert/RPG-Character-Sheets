@@ -13,7 +13,7 @@ public class Lance extends AbstractMartialTwoHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_lance);
+		base = new BasicWeapon(R.string.weapon_martial_lance, R.drawable.weapon_axe);
 		base.setCost(10L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);

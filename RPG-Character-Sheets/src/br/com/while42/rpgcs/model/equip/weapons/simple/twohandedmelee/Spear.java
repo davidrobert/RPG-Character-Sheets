@@ -13,7 +13,7 @@ public class Spear extends AbstractSimpleTwoHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_simple_spear);
+		base = new BasicWeapon(R.string.weapon_simple_spear, R.drawable.weapon_axe);
 		base.setCost(2L);
 		base.setCritical(3);
 		base.setRangeIncrement(6);

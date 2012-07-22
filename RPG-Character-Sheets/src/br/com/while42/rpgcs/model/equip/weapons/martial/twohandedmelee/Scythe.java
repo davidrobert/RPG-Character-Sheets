@@ -13,7 +13,7 @@ public class Scythe extends AbstractMartialTwoHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_scythe);
+		base = new BasicWeapon(R.string.weapon_martial_scythe, R.drawable.weapon_axe);
 		base.setCost(18L);
 		base.setCritical(4);
 		base.setRangeIncrement(0);

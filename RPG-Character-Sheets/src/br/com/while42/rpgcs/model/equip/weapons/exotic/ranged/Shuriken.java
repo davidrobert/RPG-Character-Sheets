@@ -14,7 +14,7 @@ public class Shuriken extends AbstractExoticRangedWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_exotic_shuriken);
+		base = new BasicWeapon(R.string.weapon_exotic_shuriken, R.drawable.weapon_axe);
 		base.setCost(2L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

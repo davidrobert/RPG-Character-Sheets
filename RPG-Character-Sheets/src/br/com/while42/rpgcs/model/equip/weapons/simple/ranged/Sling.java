@@ -14,7 +14,7 @@ public class Sling extends AbstractSimpleRangedWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_simple_sling);
+		base = new BasicWeapon(R.string.weapon_simple_sling, R.drawable.weapon_axe);
 		base.setCost(0L);
 		base.setCritical(2);
 		base.setRangeIncrement(15);

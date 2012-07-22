@@ -3,10 +3,12 @@ package br.com.while42.rpgcs.model.equip.weapons.especial;
 import java.util.HashSet;
 import java.util.Set;
 
+import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.equip.weapons.BasicWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
+import br.com.while42.rpgcs.model.equip.weapons.CategorieWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 
@@ -19,6 +21,7 @@ public class BuilderEspecialWeapon {
 	private Double weight;
 	private SizeWeapon size;
 	private HitDice damage;
+	private CategorieWeapon categorie;
 	private Set<TypeWeapon> types = new HashSet<TypeWeapon>();;
 	private CategorieEncumbranceWeapon categorieEncunbrance;
 	private CategorieUsefulnessWeapon categorieUsefulness;
@@ -100,6 +103,15 @@ public class BuilderEspecialWeapon {
 		private BuilderEspecialWeaponWithDamage(HitDice d) {
 			damage = d;
 		}
+		public BuilderEspecialWeaponWithCategorie setCategorie(CategorieWeapon categorie) {
+			return new BuilderEspecialWeaponWithCategorie(categorie);
+		}
+	}
+	
+	public class BuilderEspecialWeaponWithCategorie {
+		private BuilderEspecialWeaponWithCategorie(CategorieWeapon c) {
+			categorie = c;
+		}
 		public BuilderEspecialWeaponWithEncumbrance setCategorieEncumbrance(CategorieEncumbranceWeapon categorieEncunbrance) {
 			return new BuilderEspecialWeaponWithEncumbrance(categorieEncunbrance);
 		}
@@ -121,7 +133,7 @@ public class BuilderEspecialWeapon {
 
 		public EspecialWeapon toEspecialWeapon() {
 
-			BasicWeapon base = new BasicWeapon(0);
+			BasicWeapon base = new BasicWeapon(0, R.drawable.weapon_axe);
 			
 			base.setCost(cost);
 			base.setCritical(critical);
@@ -129,6 +141,7 @@ public class BuilderEspecialWeapon {
 			base.setWeight(weight);
 			base.addDamage(size, damage);
 			base.addType(types);
+			base.setCategorie(categorie);
 			base.setCategorieEncumbrance(categorieEncunbrance);
 			base.setCategorieUsefulness(categorieUsefulness);
 			

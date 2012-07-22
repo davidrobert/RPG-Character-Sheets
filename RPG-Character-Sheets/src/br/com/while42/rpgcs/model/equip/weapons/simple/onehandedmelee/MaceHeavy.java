@@ -13,7 +13,7 @@ public class MaceHeavy extends AbstractSimpleOneHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_simple_mace_heavy);
+		base = new BasicWeapon(R.string.weapon_simple_mace_heavy, R.drawable.weapon_axe);
 		base.setCost(12L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

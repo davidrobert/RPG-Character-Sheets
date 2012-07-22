@@ -13,7 +13,7 @@ public class Halberd extends AbstractMartialTwoHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_halberd);
+		base = new BasicWeapon(R.string.weapon_martial_halberd, R.drawable.weapon_axe);
 		base.setCost(10L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);

@@ -13,7 +13,7 @@ public class FlailHeavy extends AbstractMartialTwoHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_flail_heavy);
+		base = new BasicWeapon(R.string.weapon_martial_flail_heavy, R.drawable.weapon_axe);
 		base.setCost(15L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);

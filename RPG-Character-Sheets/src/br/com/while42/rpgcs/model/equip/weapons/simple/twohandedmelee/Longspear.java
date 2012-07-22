@@ -13,7 +13,7 @@ public class Longspear extends AbstractSimpleTwoHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_simple_longspear);
+		base = new BasicWeapon(R.string.weapon_simple_longspear, R.drawable.weapon_axe);
 		base.setCost(5L);
 		base.setCritical(3);
 		base.setRangeIncrement(0);

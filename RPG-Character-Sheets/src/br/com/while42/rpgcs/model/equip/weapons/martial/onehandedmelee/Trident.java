@@ -13,7 +13,7 @@ public class Trident extends AbstractMartialOneHandedMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_martial_trident);
+		base = new BasicWeapon(R.string.weapon_martial_trident, R.drawable.weapon_axe);
 		base.setCost(15L);
 		base.setCritical(2);
 		base.setRangeIncrement(3);

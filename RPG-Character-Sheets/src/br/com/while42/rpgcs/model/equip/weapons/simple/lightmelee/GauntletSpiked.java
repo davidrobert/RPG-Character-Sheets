@@ -13,7 +13,7 @@ public class GauntletSpiked extends AbstractSimpleLightMeleeWeapon {
 	private static BasicWeapon base;
 
 	static {
-		base = new BasicWeapon(R.string.weapon_simple_gauntlet_spiked);
+		base = new BasicWeapon(R.string.weapon_simple_gauntlet_spiked, R.drawable.weapon_axe);
 		base.setCost(5L);
 		base.setCritical(2);
 		base.setRangeIncrement(0);
