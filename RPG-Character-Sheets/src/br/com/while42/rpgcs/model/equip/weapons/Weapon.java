@@ -13,6 +13,7 @@ public interface Weapon extends Equipment, TypeCode, Serializable {
 	// TODO: Verificar se nao vale ficar em uma interface esse metodo
 	public int getCodeImage();
 	
+	public void setSize(SizeWeapon size);
 	public SizeWeapon getSize();
 	public List<HitDice> getDamage();
 	public List<HitDice> getDamage(SizeWeapon size);
@@ -22,4 +23,10 @@ public interface Weapon extends Equipment, TypeCode, Serializable {
 	public CategorieUsefulnessWeapon getCategorieUsefulness();
 	public CategorieEncumbranceWeapon getCategorieEncumbrance();
 	public Set<TypeWeapon> getType();
+	
+	public String getDescription();
+	
+	public void setEquiped(Boolean equiped);
+	public Boolean isEquiped();
+	
 }

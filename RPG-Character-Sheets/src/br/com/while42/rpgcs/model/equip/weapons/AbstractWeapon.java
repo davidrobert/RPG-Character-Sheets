@@ -28,6 +28,11 @@ public abstract class AbstractWeapon implements Weapon {
 	public Long getCost() {
 		return base.getCost();
 	}
+	
+	@Override
+	public void setSize(SizeWeapon size) {
+		base.setSize(size);
+	}
 
 	@Override
 	public SizeWeapon getSize() {
@@ -62,6 +67,21 @@ public abstract class AbstractWeapon implements Weapon {
 	@Override
 	public Set<TypeWeapon> getType() {
 		return base.getType();
+	}
+	
+	@Override
+	public String getDescription() {
+		return base.getDescription();
+	}
+	
+	@Override
+	public void setEquiped(Boolean equiped) {
+		base.setEquiped(equiped);	
+	}
+	
+	@Override
+	public Boolean isEquiped() {
+		return base.isEquiped();
 	}
 	
 	@Override

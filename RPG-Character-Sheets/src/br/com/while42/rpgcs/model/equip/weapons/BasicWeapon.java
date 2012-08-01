@@ -27,6 +27,8 @@ public class BasicWeapon implements Weapon {
 	private CategorieWeapon categorie = null;
 	private CategorieUsefulnessWeapon categorieUsefulness = null;
 	private CategorieEncumbranceWeapon categorieEncumbrance = null;
+	private String description = "";
+	private Boolean equiped = false;
 
 	public BasicWeapon(int codeName, int codeImage) {
 		this.codeName = codeName;
@@ -49,6 +51,11 @@ public class BasicWeapon implements Weapon {
 		this.cost = cost;
 	}
 
+	@Override
+	public void setSize(SizeWeapon size) {
+		this.size = size;
+	}
+	
 	@Override
 	public SizeWeapon getSize() {
 		return size;
@@ -157,6 +164,21 @@ public class BasicWeapon implements Weapon {
 	}
 
 	@Override
+	public String getDescription() {
+		return description;
+	}
+	
+	@Override
+	public void setEquiped(Boolean equiped) {
+		this.equiped = equiped;
+	}
+	
+	@Override
+	public Boolean isEquiped() {
+		return equiped;
+	}
+	
+	@Override
 	public boolean equals(Object o) {
 		if (this == o)
 			return true;
@@ -176,11 +198,13 @@ public class BasicWeapon implements Weapon {
 				types.equals(bw.types) &&
 				((categorie == null && bw.categorie == null) || categorie.equals(bw.categorie)) &&
 				((categorieUsefulness == null && bw.categorieUsefulness == null) || categorieUsefulness.equals(bw.categorieUsefulness)) &&
-				((categorieEncumbrance == null && bw.categorieEncumbrance == null) || categorieEncumbrance.equals(bw.categorieEncumbrance));
+				((categorieEncumbrance == null && bw.categorieEncumbrance == null) || categorieEncumbrance.equals(bw.categorieEncumbrance)) &&
+				description.equals(bw.description) &&
+				equiped.equals(bw.equiped);
 	}
 	
 	@Override
 	public int hashCode() {		
-		return codeName + size.hashCode() + cost.intValue() + damage.hashCode() + critical.intValue() + rangeIncrement.intValue() + weight.intValue() + types.hashCode();
+		return codeName + size.hashCode() + cost.intValue() + damage.hashCode() + critical.intValue() + rangeIncrement.intValue() + weight.intValue() + types.hashCode() + description.hashCode() + equiped.hashCode();
 	}
 }
