@@ -3,7 +3,6 @@ package br.com.while42.rpgcs.model.equip.weapons;
 import java.util.List;
 import java.util.Set;
 
-import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.HitDice;
 
 public abstract class AbstractWeapon implements Weapon {
@@ -22,7 +21,7 @@ public abstract class AbstractWeapon implements Weapon {
 	
 	@Override
 	public int getCodeImage() {
-		return R.drawable.weapon_axe;
+		return base.getCodeImage();
 	};
 
 	@Override
