@@ -19,6 +19,8 @@
     <string name="play_label_attack_damage">Damage</string>
     <string name="play_label_attack_critical">Critical</string>
     <string name="play_label_attack_range_increment">Range Increment</string>
+    <string name="play_label_attack_cost">Cost</string>
+    <string name="play_label_attack_weight">Weight</string>
     <string name="play_label_attack_type">Type</string>
     <string name="play_label_attack_notes">Notes</string>
     

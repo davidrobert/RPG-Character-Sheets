@@ -19,6 +19,8 @@
     <string name="play_label_attack_damage">Dano</string>
     <string name="play_label_attack_critical">Sucesso Decisivo</string>
     <string name="play_label_attack_range_increment">Alcance</string>
+    <string name="play_label_attack_cost">Preço</string>
+    <string name="play_label_attack_weight">Peso</string>    
     <string name="play_label_attack_type">Tipo</string>
     <string name="play_label_attack_notes">Observações</string>
     
