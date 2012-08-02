@@ -11,6 +11,8 @@ public class BasicArmor implements Armor {
 	private Integer arcaneSpellFailureChance = 0;
 	private Integer speed = 0;
 	private Double weight = 0.0;
+	private String description = "";
+	private Boolean equiped = false;
 
 	public BasicArmor(int codeName) {
 		this.codeName = codeName;
@@ -87,6 +89,21 @@ public class BasicArmor implements Armor {
 	@Override
 	public CategorieArmor getType() {
 		return null;
+	}
+	
+	@Override
+	public String getDescription() {
+		return description;
+	}
+	
+	@Override
+	public void setEquiped(Boolean equiped) {
+		this.equiped = equiped;
+	}
+	
+	@Override
+	public Boolean isEquiped() {
+		return equiped;
 	}
 	
 	@Override

@@ -51,6 +51,21 @@ public abstract class AbstractArmor implements Armor {
 	}
 	
 	@Override
+	public String getDescription() {
+		return armor.getDescription();
+	}
+	
+	@Override
+	public void setEquiped(Boolean equiped) {
+		armor.setEquiped(equiped);	
+	}
+	
+	@Override
+	public Boolean isEquiped() {
+		return armor.isEquiped();
+	}
+	
+	@Override
 	public boolean equals(Object o) {
 		if (this == o)
 			return true;

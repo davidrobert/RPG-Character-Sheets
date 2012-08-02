@@ -13,4 +13,9 @@ public interface Armor extends Equipment, TypeCode, Serializable {
 	public Integer getArcaneSpellFailureChance();
 	public Integer getSpeed();
 	public CategorieArmor getType();
+	
+	public String getDescription();
+	
+	public void setEquiped(Boolean equiped);
+	public Boolean isEquiped();
 }

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
@@ -15,16 +14,12 @@ import android.widget.SimpleAdapter;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.comparator.MapComparator;
 import br.com.while42.rpgcs.model.HitDice;
-import br.com.while42.rpgcs.model.character.Attack;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
-import br.com.while42.rpgcs.model.equip.weapons.AbstractWeapon;
+import br.com.while42.rpgcs.model.equip.Equipments;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
-import br.com.while42.rpgcs.reflection.ClassByReflection;
 
 public class EquipmentRpgCharacter extends Activity {
-
-	private List<AbstractWeapon> listWeapons;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -40,18 +35,19 @@ public class EquipmentRpgCharacter extends Activity {
 
 		ArrayList<HashMap<String, Object>> strWeapons = new ArrayList<HashMap<String, Object>>();
 
-		List<Attack> attacks = rpgCharacter.getAttacks().getAttacks();
-		for (Attack atk : attacks) {
+		Equipments equipments = rpgCharacter.getEquipments();
+		for (Weapon weapon : equipments.getWeapons()) {
 			HashMap<String, Object> map = new HashMap<String, Object>();
-			Weapon weapon = atk.getWeapon();
 
 			Log.d("Weapon", getWeaponName(weapon));
-			
+
 			int categorieCodeName = weapon.getCategorie().getCodeName();
 			int udefulnessCodeName = weapon.getCategorieUsefulness().getCodeName();
 			// TODO: Encumbrance eh NULL para RANGED Weapons
-			// int encumbranceCodeName = weapon.getCategorieEncumbrance().getCodeName();
+			// int encumbranceCodeName =
+			// weapon.getCategorieEncumbrance().getCodeName();
 
+			// map.put("type", R.string.equipment_label_type_weapon);
 			map.put("image", weapon.getCodeImage());
 			map.put("name", getWeaponName(weapon));
 			map.put("categorie", getString(categorieCodeName));
@@ -80,10 +76,10 @@ public class EquipmentRpgCharacter extends Activity {
 		Comparator<Map<String, Object>> mapComparator = new MapComparator().builderComparatorWithCast("name");
 		Collections.sort(strWeapons, mapComparator);
 
-		SimpleAdapter adapterEquipments = new SimpleAdapter(this, strWeapons, R.layout.list_weapons, new String[] { "image", "name",
-				"categorie", "critical", "range", "cost", "weight", "categorie_usefulness", "categorie_encumbrance", "damage" }, new int[] {
-				R.id.image, R.id.name, R.id.categorie, R.id.critical, R.id.range, R.id.cost, R.id.weight, R.id.categorie_usefulness,
-				R.id.categorie_encumbrance, R.id.damage });
+		SimpleAdapter adapterEquipments = new SimpleAdapter(this, strWeapons, R.layout.list_weapons, new String[] { "image",
+				"name", "categorie", "critical", "range", "cost", "weight", "categorie_usefulness", "categorie_encumbrance",
+				"damage" }, new int[] { R.id.image, R.id.name, R.id.categorie, R.id.critical, R.id.range, R.id.cost, R.id.weight,
+				R.id.categorie_usefulness, R.id.categorie_encumbrance, R.id.damage });
 
 		lvEquipments.setAdapter(adapterEquipments);
 
@@ -128,18 +124,18 @@ public class EquipmentRpgCharacter extends Activity {
 		 * lvEquipments.setAdapter(adapterEquipments);
 		 */
 	}
-	
+
 	private String getWeaponName(Weapon weapon) {
-		
+
 		if (weapon instanceof EspecialWeapon) {
 			return ((EspecialWeapon) weapon).getName();
 		}
-		
+
 		int weaponCodeName = weapon.getCodeName();
 		if (weaponCodeName == 0) {
 			return "";
 		}
-		
+
 		return getString(weaponCodeName);
 	}
 

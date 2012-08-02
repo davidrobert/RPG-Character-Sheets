@@ -2,4 +2,6 @@
 <resources>
 	<string name="equipment_title_activity">Equipamentos</string>
 
+	<string name="equipment_label_type_weapon">Arma</string>
+	<string name="equipment_label_type_armor">Armadura</string>
 </resources>

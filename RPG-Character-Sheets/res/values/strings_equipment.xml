@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="equipment_title_activity">Equipment</string>
-
+	
+	<string name="equipment_label_type_weapon">Weapon</string>
+	<string name="equipment_label_type_armor">Armor</string>
 </resources>

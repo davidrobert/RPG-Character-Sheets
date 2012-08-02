@@ -34,6 +34,7 @@ import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.classes.Fighter;
 import br.com.while42.rpgcs.model.classes.Sorcerer;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
+import br.com.while42.rpgcs.model.equip.Equipments;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieEncumbranceWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieUsefulnessWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.CategorieWeapon;
@@ -127,14 +128,16 @@ public class RpgCharacterTest extends Activity {
 		money.setPlatinumPiece(1000L);
 		money.setSilverPiece(10000L);
 		
-		Attacks aks = rc.getAttacks();
-		aks.add(new Dart(), SizeWeapon.MEDIUM);
-		aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
-		aks.add(new Morningstar(), SizeWeapon.MEDIUM);
-		aks.add(new AxeOrcDouble(), SizeWeapon.MEDIUM);
-		aks.add(new Greataxe(), SizeWeapon.MEDIUM);
-		aks.add(new Shuriken(), SizeWeapon.MEDIUM);
-		aks.add(new Spear(), SizeWeapon.MEDIUM);
+		Equipments equip = rc.getEquipments();
+		
+		
+		equip.addWeapon(new Dart(), SizeWeapon.MEDIUM);
+		equip.addWeapon(new CrossbowLight(), SizeWeapon.MEDIUM);
+		equip.addWeapon(new Morningstar(), SizeWeapon.MEDIUM);
+		equip.addWeapon(new AxeOrcDouble(), SizeWeapon.MEDIUM);
+		equip.addWeapon(new Greataxe(), SizeWeapon.MEDIUM);
+		equip.addWeapon(new Shuriken(), SizeWeapon.MEDIUM);
+		equip.addWeapon(new Spear(), SizeWeapon.MEDIUM);
 		
 		BuilderEspecialWeapon buiderWeapon = new BuilderEspecialWeapon();
 		EspecialWeapon especialWeapon = buiderWeapon.setName("Alabarda")
@@ -150,7 +153,7 @@ public class RpgCharacterTest extends Activity {
 		            .setCategorieUsefulness(CategorieUsefulnessWeapon.RANGED)
 		            .toEspecialWeapon();
 		
-		aks.add(especialWeapon);
+		equip.addWeapon(especialWeapon);
 		
 		Languages languages = rc.getLanguages();
 		languages.add(TypeRpgLanguage.ELVEN);

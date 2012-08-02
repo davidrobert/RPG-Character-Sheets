@@ -29,9 +29,9 @@ public class RpgCharacter implements Serializable {
 	private Languages languages;
 	private Money money;
 	
-	private Attacks attacks;
-	private Armors armors;
-	private Equipments otherEquipments;
+	//private Attacks attacks;
+	//private Armors armors;
+	private Equipments equipments;
 	private Notes notes;
 	
 	private Integer baseAttackBonus;
@@ -53,9 +53,9 @@ public class RpgCharacter implements Serializable {
 		this.languages = new Languages();
 		this.money = new Money();
 		
-		this.attacks = new Attacks(abilities);
-		this.armors = new Armors();
-		this.otherEquipments = new Equipments();
+		//this.attacks = new Attacks(abilities);
+		//this.armors = new Armors();
+		this.equipments = new Equipments();
 		this.notes = new Notes();
 		
 		this.baseAttackBonus = 0;
@@ -158,12 +158,18 @@ public class RpgCharacter implements Serializable {
 		return money;
 	}
 	
+	/*
 	public void setAttacks(Attacks attaks) {
 		this.attacks = attaks;
 	}
 	
 	public Attacks getAttacks() {
 		return attacks;
+	}
+	*/
+	
+	public Equipments getEquipments() {
+		return equipments;
 	}
 	
 	public Notes getNotes() {
@@ -234,10 +240,10 @@ public class RpgCharacter implements Serializable {
 				skills.equals(rc.skills) &&
 				languages.equals(rc.languages) &&
 				money.equals(rc.money) &&
-				attacks.equals(rc.attacks) &&
-				armors.equals(rc.armors) &&
+				//attacks.equals(rc.attacks) &&
+				//armors.equals(rc.armors) &&
 				
-				otherEquipments.equals(rc.otherEquipments) &&
+				equipments.equals(rc.equipments) &&
 				notes.equals(rc.notes) &&
 				
 				baseAttackBonus.equals(rc.baseAttackBonus) &&
@@ -259,9 +265,9 @@ public class RpgCharacter implements Serializable {
 		sb.append(" skills: ").append(skills);
 		sb.append(" languages: ").append(languages);
 		sb.append(" money: ").append(money);
-		sb.append(" attacks: ").append(attacks);
-		sb.append(" armors: ").append(armors);
-		sb.append(" otherEquipments: ").append(otherEquipments);
+		//sb.append(" attacks: ").append(attacks);
+		//sb.append(" armors: ").append(armors);
+		sb.append(" equipments: ").append(equipments);
 		sb.append(" notes: ").append(notes);
 		
 		return sb.toString();

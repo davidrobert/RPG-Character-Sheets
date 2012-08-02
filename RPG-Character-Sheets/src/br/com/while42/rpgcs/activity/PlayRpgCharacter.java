@@ -26,8 +26,6 @@ import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.comparator.MapComparator;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.character.Abilities;
-import br.com.while42.rpgcs.model.character.Attack;
-import br.com.while42.rpgcs.model.character.Attacks;
 import br.com.while42.rpgcs.model.character.Attributes;
 import br.com.while42.rpgcs.model.character.Defences;
 import br.com.while42.rpgcs.model.character.Languages;
@@ -41,6 +39,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgLanguage;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgSkill;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
+import br.com.while42.rpgcs.model.equip.Equipments;
 import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
@@ -272,13 +271,11 @@ public class PlayRpgCharacter extends Activity {
 		tvHitPointsActual.setText(defences.getCurrentHitPoints().toString());
 		tvHitPointsTotal.setText(defences.getHitPoints().toString());
 		
-		Attacks attaks = rpgCharacter.getAttacks();
+		Equipments equipments = rpgCharacter.getEquipments();
 		{
 			ArrayList<HashMap<String, String>> attks = new ArrayList<HashMap<String, String>>();
-			for (Attack attack: attaks.getAttacks()) {
+			for (Weapon weapon: equipments.getWeapons()) {
 				HashMap<String, String> map = new HashMap<String, String>();
-				
-				Weapon weapon = attack.getWeapon();
 				
 				String attackName = "";
 				if (weapon.getClass().equals(EspecialWeapon.class)) {
@@ -311,7 +308,7 @@ public class PlayRpgCharacter extends Activity {
 				
 				map.put("type", sbType.toString());
 				
-				String notes = attack.getObservation();
+				String notes = weapon.getDescription();
 				map.put("notes", notes);
 				
 				attks.add(map);

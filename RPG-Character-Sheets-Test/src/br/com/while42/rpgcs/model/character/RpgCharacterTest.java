@@ -21,6 +21,7 @@ import br.com.while42.rpgcs.model.classes.Barbarian;
 import br.com.while42.rpgcs.model.classes.Monk;
 import br.com.while42.rpgcs.model.classes.Sorcerer;
 import br.com.while42.rpgcs.model.classes.bonuses.ExperienceAndLevel;
+import br.com.while42.rpgcs.model.equip.Equipments;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.simple.ranged.CrossbowLight;
 import br.com.while42.rpgcs.model.equip.weapons.simple.ranged.Dart;
@@ -48,8 +49,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 			
 			RpgCharacter rc = new RpgCharacter("Snarf", attributes);
 			
-			Attacks aks = rc.getAttacks();			
-			aks.add(new Dart(), SizeWeapon.MEDIUM);;
+			Equipments equip = rc.getEquipments();			
+			equip.addWeapon(new Dart(), SizeWeapon.MEDIUM);;
 
 			rpgCharacterSheets.add(rc);
 		}
@@ -104,9 +105,9 @@ public class RpgCharacterTest extends AndroidTestCase {
 			money.setPlatinumPiece(1000L);
 			money.setSilverPiece(10000L);
 			
-			Attacks aks = rc.getAttacks();
-			aks.add(new Dart(), SizeWeapon.MEDIUM);
-			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
+			Equipments equip = rc.getEquipments();
+			equip.addWeapon(new Dart(), SizeWeapon.MEDIUM);
+			equip.addWeapon(new CrossbowLight(), SizeWeapon.MEDIUM);
 
 			Languages languages = rc.getLanguages();
 			
@@ -168,9 +169,9 @@ public class RpgCharacterTest extends AndroidTestCase {
 			money.setPlatinumPiece(1001L);
 			money.setSilverPiece(10001L);
 			
-			Attacks aks = rc.getAttacks();
-			aks.add(new Dart(), SizeWeapon.MEDIUM);
-			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
+			Equipments equip = rc.getEquipments();
+			equip.addWeapon(new Dart(), SizeWeapon.MEDIUM);
+			equip.addWeapon(new CrossbowLight(), SizeWeapon.MEDIUM);
 
 			Languages languages = rc.getLanguages();
 			
@@ -249,9 +250,9 @@ public class RpgCharacterTest extends AndroidTestCase {
 			money.setPlatinumPiece(2000L);
 			money.setSilverPiece(20000L);
 			
-			Attacks aks = rc.getAttacks();
-			aks.add(new Dart(), SizeWeapon.MEDIUM);
-			aks.add(new CrossbowLight(), SizeWeapon.MEDIUM);
+			Equipments equip = rc.getEquipments();
+			equip.addWeapon(new Dart(), SizeWeapon.MEDIUM);
+			equip.addWeapon(new CrossbowLight(), SizeWeapon.MEDIUM);
 
 			Languages languages = rc.getLanguages();
 			
