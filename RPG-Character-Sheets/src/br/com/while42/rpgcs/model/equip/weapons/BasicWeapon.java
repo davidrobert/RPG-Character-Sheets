@@ -30,16 +30,29 @@ public class BasicWeapon implements Weapon {
 	private String description = "";
 	private Boolean equiped = false;
 
+	public BasicWeapon(BasicWeapon basic) {
+		codeName = basic.codeName;
+		codeImage = basic.codeImage;
+		
+		size = basic.size;
+		
+		cost = basic.cost;
+		damage = new HashMap<SizeWeapon, List<HitDice>>(basic.damage);
+		critical = basic.critical;
+		rangeIncrement = basic.rangeIncrement;
+		weight = basic.weight;
+		types = new HashSet<TypeWeapon>(types);
+		categorie = basic.categorie;
+		categorieUsefulness = basic.categorieUsefulness;
+		categorieEncumbrance = basic.categorieEncumbrance;
+		description = basic.description;
+		equiped = basic.equiped;
+	}
+	
 	public BasicWeapon(int codeName, int codeImage) {
 		this.codeName = codeName;
 		this.codeImage = codeImage;
 		this.size = SizeWeapon.MEDIUM;
-	}
-
-	public BasicWeapon(int codeName, int codeImage, SizeWeapon size) {
-		this.codeName = codeName;
-		this.codeImage = codeImage;
-		this.size = size;
 	}
 	
 	@Override

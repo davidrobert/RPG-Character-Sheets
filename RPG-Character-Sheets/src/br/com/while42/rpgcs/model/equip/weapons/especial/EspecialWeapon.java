@@ -11,28 +11,29 @@ public class EspecialWeapon extends AbstractWeapon implements Weapon {
 	private static final long serialVersionUID = 1L;
 
 	private String name;
-	private BasicWeapon base;
 	
 	protected EspecialWeapon(String name, BasicWeapon base) {
 		super(base);
-		this.base = base;
 		this.name = name;
-	}
-
-	public CategorieWeapon getCategorie() {
-		return base.getCategorie();
-	}
-
-	public CategorieUsefulnessWeapon getCategorieUsefulness() {
-		return base.getCategorieUsefulness();
-	}
-
-	public CategorieEncumbranceWeapon getCategorieEncumbrance() {
-		return base.getCategorieEncumbrance();
 	}
 
 	public String getName() {
 		return name;
+	}
+	
+	@Override
+	public CategorieWeapon getCategorie() {
+		return getCategorie();
+	}
+
+	@Override
+	public CategorieUsefulnessWeapon getCategorieUsefulness() {
+		return getCategorieUsefulness();
+	}
+
+	@Override
+	public CategorieEncumbranceWeapon getCategorieEncumbrance() {
+		return getCategorieEncumbrance();
 	}
 
 }

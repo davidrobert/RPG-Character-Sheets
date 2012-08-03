@@ -7,6 +7,7 @@ import java.util.List;
 import br.com.while42.rpgcs.model.equip.armor.Armor;
 import br.com.while42.rpgcs.model.equip.weapons.SizeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
+import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
 
 public class Equipments implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -22,6 +23,21 @@ public class Equipments implements Serializable {
 	
 	public void addWeapon(Weapon weapon, SizeWeapon size) {
 		weapon.setSize(size);
+		weapons.add(weapon);
+	}
+	
+	public void addWeapon(Weapon weapon, SizeWeapon size, Boolean equiped) {
+		weapon.setSize(size);
+		weapon.setEquiped(equiped);
+		weapons.add(weapon);
+	}
+	
+	public void addWeapon(EspecialWeapon weapon) {
+		weapons.add(weapon);
+	}
+	
+	public void addWeapon(EspecialWeapon weapon, Boolean equiped) {
+		weapon.setEquiped(equiped);
 		weapons.add(weapon);
 	}
 	

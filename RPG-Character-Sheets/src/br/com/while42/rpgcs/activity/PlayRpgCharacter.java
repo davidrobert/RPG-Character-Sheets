@@ -261,7 +261,7 @@ public class PlayRpgCharacter extends Activity {
 			
 			lvSkills.setAdapter(adapterSkills);
 		}
-			
+		
 		String religion = getString(attr.getReligion().getCodeName());
 		tvReligion.setText(religion);
 		
@@ -275,6 +275,10 @@ public class PlayRpgCharacter extends Activity {
 		{
 			ArrayList<HashMap<String, String>> attks = new ArrayList<HashMap<String, String>>();
 			for (Weapon weapon: equipments.getWeapons()) {
+				
+				if (!weapon.isEquiped())
+					continue;
+				
 				HashMap<String, String> map = new HashMap<String, String>();
 				
 				String attackName = "";
@@ -321,7 +325,7 @@ public class PlayRpgCharacter extends Activity {
 		            new String[] {"attack", "bonus", "damage", "critical", "range", "type", "notes"}, 
 		            new int[] {R.id.attack, R.id.bonus, R.id.damage, R.id.critical, R.id.range, R.id.type, 
 						R.id.notes});
-		
+			
 			lvAttacks.setAdapter(adapterAttacks);
 		}
 		

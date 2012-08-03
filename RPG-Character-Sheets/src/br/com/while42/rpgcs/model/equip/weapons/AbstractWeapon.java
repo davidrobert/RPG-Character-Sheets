@@ -11,7 +11,7 @@ public abstract class AbstractWeapon implements Weapon {
 	private BasicWeapon base;
 
 	public AbstractWeapon(BasicWeapon base) {
-		this.base = base;
+		this.base = new BasicWeapon(base);
 	}
 
 	@Override

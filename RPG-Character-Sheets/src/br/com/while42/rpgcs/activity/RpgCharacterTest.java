@@ -6,7 +6,6 @@ import android.os.Bundle;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.Abilities;
-import br.com.while42.rpgcs.model.character.Attacks;
 import br.com.while42.rpgcs.model.character.Attributes;
 import br.com.while42.rpgcs.model.character.BuilderAttributes;
 import br.com.while42.rpgcs.model.character.Defences;
@@ -131,13 +130,13 @@ public class RpgCharacterTest extends Activity {
 		Equipments equip = rc.getEquipments();
 		
 		
-		equip.addWeapon(new Dart(), SizeWeapon.MEDIUM);
+		equip.addWeapon(new Dart(), SizeWeapon.MEDIUM, true);
 		equip.addWeapon(new CrossbowLight(), SizeWeapon.MEDIUM);
 		equip.addWeapon(new Morningstar(), SizeWeapon.MEDIUM);
 		equip.addWeapon(new AxeOrcDouble(), SizeWeapon.MEDIUM);
-		equip.addWeapon(new Greataxe(), SizeWeapon.MEDIUM);
-		equip.addWeapon(new Shuriken(), SizeWeapon.MEDIUM);
-		equip.addWeapon(new Spear(), SizeWeapon.MEDIUM);
+		equip.addWeapon(new Greataxe(), SizeWeapon.MEDIUM, true);
+		equip.addWeapon(new Shuriken(), SizeWeapon.MEDIUM, true);
+		equip.addWeapon(new Spear(), SizeWeapon.MEDIUM, true);
 		
 		BuilderEspecialWeapon buiderWeapon = new BuilderEspecialWeapon();
 		EspecialWeapon especialWeapon = buiderWeapon.setName("Alabarda")
@@ -153,7 +152,7 @@ public class RpgCharacterTest extends Activity {
 		            .setCategorieUsefulness(CategorieUsefulnessWeapon.RANGED)
 		            .toEspecialWeapon();
 		
-		equip.addWeapon(especialWeapon);
+		equip.addWeapon(especialWeapon, true);
 		
 		Languages languages = rc.getLanguages();
 		languages.add(TypeRpgLanguage.ELVEN);
