@@ -14,7 +14,7 @@ import br.com.while42.rpgcs.reflection.ClassByReflection;
 
 public class Splash extends Activity implements Runnable {
 
-	private static long DELAY = 500;
+	private static long DELAY = 250;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

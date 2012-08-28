@@ -273,13 +273,15 @@ public class PlayRpgCharacter extends Activity {
 		
 		Equipments equipments = rpgCharacter.getEquipments();
 		{
-			ArrayList<HashMap<String, String>> attks = new ArrayList<HashMap<String, String>>();
+			ArrayList<HashMap<String, Object>> attks = new ArrayList<HashMap<String, Object>>();
 			for (Weapon weapon: equipments.getWeapons()) {
 				
 				if (!weapon.isEquiped())
 					continue;
 				
-				HashMap<String, String> map = new HashMap<String, String>();
+				HashMap<String, Object> map = new HashMap<String, Object>();
+				
+				map.put("image", weapon.getCodeImage());
 				
 				String attackName = "";
 				if (weapon.getClass().equals(EspecialWeapon.class)) {
@@ -318,12 +320,12 @@ public class PlayRpgCharacter extends Activity {
 				attks.add(map);
 			}
 			
-			Comparator<Map<String, String>> mapComparator = new MapComparator().builderComparator("attack");
+			Comparator<Map<String, Object>> mapComparator = new MapComparator().builderComparatorWithCast("attack");
 			Collections.sort(attks, mapComparator);
 			
 			SimpleAdapter adapterAttacks = new SimpleAdapter(this, attks, R.layout.list_attacks,
-		            new String[] {"attack", "bonus", "damage", "critical", "range", "type", "notes"}, 
-		            new int[] {R.id.attack, R.id.bonus, R.id.damage, R.id.critical, R.id.range, R.id.type, 
+		            new String[] {"image", "attack", "bonus", "damage", "critical", "range", "type", "notes"}, 
+		            new int[] {R.id.image, R.id.attack, R.id.bonus, R.id.damage, R.id.critical, R.id.range, R.id.type, 
 						R.id.notes});
 			
 			lvAttacks.setAdapter(adapterAttacks);

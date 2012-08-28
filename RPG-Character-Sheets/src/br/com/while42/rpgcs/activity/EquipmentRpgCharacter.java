@@ -44,8 +44,7 @@ public class EquipmentRpgCharacter extends Activity {
 			int categorieCodeName = weapon.getCategorie().getCodeName();
 			int udefulnessCodeName = weapon.getCategorieUsefulness().getCodeName();
 			// TODO: Encumbrance eh NULL para RANGED Weapons
-			// int encumbranceCodeName =
-			// weapon.getCategorieEncumbrance().getCodeName();
+			// int encumbranceCodeName = weapon.getCategorieEncumbrance().getCodeName();
 
 			// map.put("type", R.string.equipment_label_type_weapon);
 			map.put("image", weapon.getCodeImage());
