@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ScreenBase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- Head -->
+        <include
+            android:layout_weight="1"
+            layout="@layout/include_play_head" />
+
+        <!-- Body -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:stretchColumns="1" >
+            <TableRow>
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    layout="@layout/include_play_habilidades" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    layout="@layout/include_play_defesas" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- Pontos de Vida -->
+        <include
+            android:layout_weight="1"
+            layout="@layout/include_play_pontos_de_vida" />
+    </LinearLayout>
+
+</ScrollView>

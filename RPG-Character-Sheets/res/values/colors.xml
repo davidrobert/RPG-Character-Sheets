@@ -6,4 +6,7 @@
     <color name="transparent">#00ffffff</color>
     <color name="bordaVermelha">#A52A2A</color>
     <color name="clear">#00000000</color>
+    
+    <color name="Black">#000000</color>
+	<color name="White">#FFFFFF</color>
 </resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Play_Head"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*" >
+
+        <TextView
+            style="@style/Play_TextPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do Jogador" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/FontBaseBold"
+                android:text="Raça:" />
+
+            <TextView
+                style="@style/FontBase"
+                android:text="Humano" />
+
+            <TextView
+                style="@style/FontBaseBold"
+                android:text="Alinhamento: " />
+
+            <TextView
+                style="@style/FontBase"
+                android:text="Caótico Bom" />
+
+            <TextView
+                style="@style/FontBaseBold"
+                android:text="XP: " />
+
+            <TextView
+                style="@style/FontBase"
+                android:text="35.000" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/FontBaseBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classes (nível): " />
+
+        <TextView
+            style="@style/FontBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guerreiro (20) / Mago (2)" />
+    </LinearLayout>
+
+</LinearLayout>

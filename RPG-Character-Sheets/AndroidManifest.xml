@@ -14,16 +14,29 @@
         <activity
             android:name=".activity.Splash"
             android:label="@string/app_name" >
+            <!-- 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
         
         <activity
             android:name=".activity.RpgCharacterTest"
             android:label="@string/app_name" >
         </activity>
+        
+        <!-- Activity de Teste da Nova Tela da Play -->
+        <activity
+            android:name=".activity.PlayRpgCharacterNew"
+            android:label="@string/play_title_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
         <activity
             android:name=".activity.EditRpgCharacter"
             android:label="@string/edit_title_activity" >
