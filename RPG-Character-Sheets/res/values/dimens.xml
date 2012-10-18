@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TextSize">16sp</dimen>
+    
+    <!-- Play -->
+    <dimen name="PlayPlayerName">30sp</dimen>
+</resources>
