@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Head Styles -->
+    <style name="Play_Head">
+        <item name="android:background">@drawable/play_head</item>
+    </style>
+    
+	<style name="Play_TextPlayerName" parent="@style/FontBase">
+	    <item name="android:textSize">@dimen/PlayPlayerName</item>
+	</style>
+	
+	<!-- Habilidades Styles -->
+    
+    
+</resources>
