@@ -21,16 +21,17 @@
             android:layout_weight="2"
             android:stretchColumns="1" >
             <TableRow>
-
+				<!-- Collumn left -->
                 <include
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    layout="@layout/include_play_habilidades" />
+                    layout="@layout/include_play_column_left" />
 
+                <!-- Collumn right -->
                 <include
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    layout="@layout/include_play_defesas" />
+                    layout="@layout/include_play_column_right" />
             </TableRow>
         </TableLayout>
 

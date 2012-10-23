@@ -1,44 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/Play_Head"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        style="@style/FontBase"
-        android:layout_width="wrap_content"
+    <TableLayout 
         android:layout_height="wrap_content"
-        android:text="Habilidades" />
-
-	<TextView
-        style="@style/FontBase"
         android:layout_width="wrap_content"
+        android:stretchColumns="*">
+        
+        <TableRow 
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+            
+            <TextView 
+                style="@style/FontBase"
+                android:layout_span="2"
+                android:text="Habilidades"/>
+            
+            <TextView 
+                android:layout_gravity="right"
+                style="@style/FontBase"
+                android:text="Mod"/>
+            
+        </TableRow>
+    </TableLayout>
+    
+    <TableLayout 
         android:layout_height="wrap_content"
-        android:text="Habilidades" />
-	
-	<TextView
-        style="@style/FontBase"
         android:layout_width="wrap_content"
+        android:paddingBottom="10dp"
+        android:stretchColumns="*">
+        
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                style="@style/FontBase"
+                android:text="FOR"/>
+        
+            <TextView 
+                android:layout_width="match_parent"
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center"
+                style="@style/FontBase"
+                android:text="18"/>
+            
+            <TextView
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center" 
+                style="@style/FontBase"
+                android:text="+3"/>
+        </TableRow>
+        
+        <TableRow 
+            android:background="@drawable/layout_transparent_with_black_border"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent">
+            
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                style="@style/FontBase"
+                android:text="SAB"/>
+        
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center"
+                style="@style/FontBase"
+                android:text="13"/>
+            
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center"
+                style="@style/FontBase"
+                android:text="+1"/>
+        </TableRow>
+        
+    </TableLayout>
+    
+    <TableLayout 
         android:layout_height="wrap_content"
-        android:text="Habilidades" />
-	
-	<TextView
-        style="@style/FontBase"
         android:layout_width="wrap_content"
+        android:paddingBottom="10dp"
+        android:stretchColumns="*">
+        
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                style="@style/FontBase"
+                android:text="CAR"/>
+        
+            <TextView 
+                android:layout_width="match_parent"
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center"
+                style="@style/FontBase"
+                android:text="18"/>
+            
+            <TextView
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center" 
+                style="@style/FontBase"
+                android:text="+3"/>
+        </TableRow>
+        
+        <TableRow 
+            android:background="@drawable/layout_transparent_with_black_border"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent">
+            
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                style="@style/FontBase"
+                android:text="DEX"/>
+        
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center"
+                style="@style/FontBase"
+                android:text="13"/>
+            
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center"
+                style="@style/FontBase"
+                android:text="+1"/>
+        </TableRow>
+        
+    </TableLayout>
+    
+    <TableLayout 
         android:layout_height="wrap_content"
-        android:text="Habilidades" />
-	
-	<TextView
-        style="@style/FontBase"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Visão" />
-	
-	<TextView
-        style="@style/FontBase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Divindade" />
+        android:paddingBottom="10dp"
+        android:stretchColumns="*">
+        
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                style="@style/FontBase"
+                android:text="FOR"/>
+        
+            <TextView 
+                android:layout_width="match_parent"
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center"
+                style="@style/FontBase"
+                android:text="18"/>
+            
+            <TextView
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center" 
+                style="@style/FontBase"
+                android:text="+3"/>
+        </TableRow>
+        
+        <TableRow 
+            android:background="@drawable/layout_transparent_with_black_border"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent">
+            
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                style="@style/FontBase"
+                android:text="CON"/>
+        
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center"
+                style="@style/FontBase"
+                android:text="13"/>
+            
+            <TextView 
+                android:background="@drawable/layout_transparent_with_black_border"
+                android:gravity="center"
+                style="@style/FontBase"
+                android:text="+1"/>
+        </TableRow>
+        
+    </TableLayout>
 	
 </LinearLayout>
