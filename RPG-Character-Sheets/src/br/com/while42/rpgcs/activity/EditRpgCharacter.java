@@ -203,22 +203,22 @@ public class EditRpgCharacter extends SherlockActivity {
 				
 								
 				Abilities ab = new Abilities();
-				if (!etStrength.getText().toString().isEmpty()) {
+				if (etStrength.getText().toString() != "") {
 					ab.setStrength(Integer.parseInt(etStrength.getText().toString()));
 				}
-				if (!etIntelligence.getText().toString().isEmpty()) {
+				if (etIntelligence.getText().toString() != "") {
 					ab.setIntelligence(Integer.parseInt(etIntelligence.getText().toString()));
 				}
-				if (!etConstitution.getText().toString().isEmpty()) {
+				if (etConstitution.getText().toString() != "") {
 					ab.setConstitution(Integer.parseInt(etConstitution.getText().toString()));
 				}
-				if (!etDexterity.getText().toString().isEmpty()) {
+				if (etDexterity.getText().toString() != "") {
 					ab.setDexterity(Integer.parseInt(etDexterity.getText().toString()));
 				}
-				if (!etWisdom.getText().toString().isEmpty()) {
+				if (etWisdom.getText().toString() != "") {
 					ab.setWisdom(Integer.parseInt(etWisdom.getText().toString()));
 				}
-				if (!etCharisma.getText().toString().isEmpty()) {
+				if (etCharisma.getText().toString() != "") {
 					ab.setCharisma(Integer.parseInt(etCharisma.getText().toString()));
 				}
 				
