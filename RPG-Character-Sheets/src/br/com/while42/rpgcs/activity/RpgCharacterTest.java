@@ -3,6 +3,7 @@ package br.com.while42.rpgcs.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.Abilities;
@@ -52,14 +53,11 @@ import br.com.while42.rpgcs.model.equip.weapons.simple.twohandedmelee.Spear;
 public class RpgCharacterTest extends Activity {
 
 	@Override
-	protected void onResume() {
-		super.onResume();
-	}
-
-	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		Log.d("ACTIVITY", "RpgCharacterTest");
+		
 		Intent play = new Intent(RpgCharacterTest.this, PlayRpgCharacter.class);
 		
 		Bundle b = new Bundle();
@@ -69,7 +67,6 @@ public class RpgCharacterTest extends Activity {
 		startActivity(play);
 		finish();
 	}
-	
 
 	private RpgCharacter createRpgCharacterSheet() {
 		BuilderAttributes builder = new BuilderAttributes();

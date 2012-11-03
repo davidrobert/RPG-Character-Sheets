@@ -58,6 +58,8 @@ public class PlayRpgCharacter extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		Log.d("ACTIVITY", "PlayRpgCharacter");
+		
 		setContentView(R.layout.activity_play_character);
 
 		getSerializeRpgCharacter();

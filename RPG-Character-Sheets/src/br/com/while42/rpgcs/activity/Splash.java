@@ -1,10 +1,10 @@
 package br.com.while42.rpgcs.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.Window;
 import br.com.while42.rpgcs.R;
@@ -12,52 +12,50 @@ import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.equip.weapons.AbstractWeapon;
 import br.com.while42.rpgcs.reflection.ClassByReflection;
 
-public class Splash extends Activity implements Runnable {
+public class Splash extends Activity {
 
-	private static long DELAY = 250;
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_splash);
-		
-		Handler handler = new Handler();
-		handler.postDelayed(this, DELAY);
-		
-		//new LoadViewTask().execute();
+
+		Log.d("ACTIVITY", "Splash");		
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		new LoadViewTask(this, RpgCharacterTest.class).execute();
 	}
 
-	public void run() {
-		
-    	// TODO: Only DEBUG
-		startActivity(new Intent(this, RpgCharacterTest.class));
-		finish();
-	}
 
-	
-	
-	private long loadClassesByReflection() {
-		long startTime = System.currentTimeMillis();
+	private class LoadViewTask extends AsyncTask<Long, Long, Long> {
+		private Class<? extends Activity> activity;
+		private Context context;		
 		
-		ClassByReflection.getAll(this, AbstractRpgClass.class);
-		ClassByReflection.getAll(this, AbstractWeapon.class);
+		public LoadViewTask(Context context, Class<? extends Activity> activity) {
+			this.context = context;
+			this.activity = activity;
+		}
 		
-		long totalTime = System.currentTimeMillis() - startTime;
-		Log.d("SPLASH - Time to Load", Long.toString(totalTime));
-		
-		return totalTime;
-	}
-	
-	private class LoadViewTask extends AsyncTask<Void, Integer, Void>  
-    {
 		@Override
-		protected Void doInBackground(Void... arg0) {
-			loadClassesByReflection();
+		protected Long doInBackground(Long... arg0) {
+			long startTime = System.currentTimeMillis();
+
+			ClassByReflection.getAll(Splash.this, AbstractRpgClass.class);
+			ClassByReflection.getAll(Splash.this, AbstractWeapon.class);
+
+			return System.currentTimeMillis() - startTime;
+		}
+
+		@Override
+		protected void onPostExecute(Long result) {
+			Log.d("SPLASH", "Time to Load: " + result);
 			
-			return null;
-		}  
-    
-    }
-	
+			startActivity(new Intent(context, activity));
+			finish();
+		}
+	}
+
 }

@@ -5,13 +5,12 @@
     android:orientation="vertical"
     android:padding="10dp" >
 
-    <ImageView
-        android:id="@+id/AnimationImageView"
-        android:layout_width="fill_parent"
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"/>
-        <!--  android:src="@drawable/dragon_2560x1600" /> -->
+        android:layout_gravity="center"/>
     
     <TextView 
         android:layout_height="20dp"
