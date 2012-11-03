@@ -387,6 +387,14 @@ public class PlayRpgCharacter extends SherlockActivity {
 		getSerializeRpgCharacter();
 	}
 
+	@Override
+	protected void onStart() {
+		super.onStart();
+		ActionBar actionBar = getSupportActionBar();
+		if (actionBar.getTabCount() > 0) {
+			actionBar.selectTab(actionBar.getTabAt(0));
+		}
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -396,60 +404,65 @@ public class PlayRpgCharacter extends SherlockActivity {
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
 		BuilderTabs builder = new BuilderTabs(actionBar);
-		
-		builder.addTab(PlayRpgCharacter.class, "play"); //R.string.play_title_activity);
+
+		builder.addTab(PlayRpgCharacter.class, "play"); // R.string.play_title_activity);
 		builder.addTab(FeatsRpgCharacter.class, R.string.feats_title_activity);
 		builder.addTab(EquipmentRpgCharacter.class, R.string.equipment_title_activity);
 		builder.addTab(ItemsRpgCharacter.class, R.string.items_title_activity);
 		builder.addTab(TreasureRpgCharacter.class, R.string.treasure_title_activity);
-		//builder.addTab(MagicAndSpellsRpgCharacter.class, R.string.magic_spells_title_activity);
-		//builder.addTab(FamiliarRpgCharacter.class, R.string.familiar_title_activity);
-		//builder.addTab(NotesRpgCharacter.class, R.string.notes_title_activity);
+		// builder.addTab(MagicAndSpellsRpgCharacter.class,
+		// R.string.magic_spells_title_activity);
+		// builder.addTab(FamiliarRpgCharacter.class,
+		// R.string.familiar_title_activity);
+		// builder.addTab(NotesRpgCharacter.class,
+		// R.string.notes_title_activity);
 
 		return super.onCreateOptionsMenu(menu);
 	}
-	
+
 	private class BuilderTabs {
 		private ActionBar actionBar;
 
 		public BuilderTabs(ActionBar actionBar) {
 			this.actionBar = actionBar;
 		}
-		
+
 		private void addTab(final Class<? extends Activity> classActivity, final int title) {
 			Tab tab = actionBar.newTab();
 			tab.setText(title);
-			setListener(tab);
+			setListener(tab, classActivity);
 			actionBar.addTab(tab);
 		}
-		
+
 		private void addTab(final Class<? extends Activity> classActivity, final String title) {
 			Tab tab = actionBar.newTab();
 			tab.setText(title);
-			setListener(tab);
+			setListener(tab, classActivity);
 			actionBar.addTab(tab);
 		}
-		
-		private void setListener(Tab tab) {
+
+		private void setListener(Tab tab, final Class<? extends Activity> classActivity) {
 			tab.setTabListener(new TabListener() {
+
 				@Override
 				public void onTabSelected(Tab tab, FragmentTransaction ft) {
-					// TODO Auto-generated method stub
+					if (PlayRpgCharacter.class != classActivity) {
+						startActivity(classActivity);
+					}
 				}
 
 				@Override
 				public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-					// TODO Auto-generated method stub
 				}
 
 				@Override
 				public void onTabReselected(Tab tab, FragmentTransaction ft) {
-					//startActivity(classActivity);
+
 				}
 			});
 		}
 	}
-	
+
 	private void getSerializeRpgCharacter() {
 		Bundle bn = new Bundle();
 		bn = getIntent().getExtras();
