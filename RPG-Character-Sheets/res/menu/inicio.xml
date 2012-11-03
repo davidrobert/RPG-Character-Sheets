@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- 
+    <item android:title="Novo" android:showAsAction="always"/>
+    <item android:title="Alterar" android:showAsAction="always"/>
+     -->
+    
+    <item
+        android:showAsAction="always"
+        android:title="Opções">
+        <menu>
+            <group
+                android:id="@+ordenacao/itens"
+                android:checkableBehavior="single" >
+                <item
+                    android:id="@+id/novo"
+                    android:showAsAction="always"
+                    android:title="Novo">
+                </item>
+                <item
+                    android:id="@+id/editar"
+                    android:showAsAction="always"
+                    android:title="Editar'"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

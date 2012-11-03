@@ -3,7 +3,6 @@ package br.com.while42.rpgcs.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,7 +32,9 @@ import br.com.while42.rpgcs.model.classes.CharacterClass;
 import br.com.while42.rpgcs.persist.DataManager;
 import br.com.while42.rpgcs.reflection.ClassByReflection;
 
-public class EditRpgCharacter extends Activity {
+import com.actionbarsherlock.app.SherlockActivity;
+
+public class EditRpgCharacter extends SherlockActivity {
 
 	private DataManager dataManager;
 	

@@ -6,7 +6,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
@@ -19,7 +18,9 @@ import br.com.while42.rpgcs.model.equip.Equipments;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
 
-public class EquipmentRpgCharacter extends Activity {
+import com.actionbarsherlock.app.SherlockActivity;
+
+public class EquipmentRpgCharacter extends SherlockActivity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

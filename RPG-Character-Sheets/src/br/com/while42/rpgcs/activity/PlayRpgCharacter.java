@@ -10,9 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -44,33 +44,33 @@ import br.com.while42.rpgcs.model.equip.weapons.TypeWeapon;
 import br.com.while42.rpgcs.model.equip.weapons.Weapon;
 import br.com.while42.rpgcs.model.equip.weapons.especial.EspecialWeapon;
 
-public class PlayRpgCharacter extends Activity {
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.ActionBar.Tab;
+import com.actionbarsherlock.app.ActionBar.TabListener;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+
+public class PlayRpgCharacter extends SherlockActivity {
 
 	private RpgCharacter rpgCharacter;
 
 	@Override
-	protected void onResume() {
-		super.onResume();
-		getSerializeRpgCharacter();
-	}
-	
-	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		Log.d("ACTIVITY", "PlayRpgCharacter");
-		
+
 		setContentView(R.layout.activity_play_character);
 
 		getSerializeRpgCharacter();
-		
+
 		TextView tvName = (TextView) findViewById(R.id_play.textview_name);
 		ImageView ivGender = (ImageView) findViewById(R.id_play.imageview_gender);
 		TextView tvRace = (TextView) findViewById(R.id_play.textview_race);
 		TextView tvAlignment = (TextView) findViewById(R.id_play.textview_alignment);
 		TextView tvClassesLevel = (TextView) findViewById(R.id_play.textview_classes_level);
 		TextView tvExperience = (TextView) findViewById(R.id_play.textview_experience);
-		
+
 		TextView tvStrength = (TextView) findViewById(R.id_play.textview_strength);
 		TextView tvStrengthModifier = (TextView) findViewById(R.id_play.textview_strength_modifier);
 		TextView tvConstitution = (TextView) findViewById(R.id_play.textview_constitution);
@@ -83,58 +83,57 @@ public class PlayRpgCharacter extends Activity {
 		TextView tvDexterityModifier = (TextView) findViewById(R.id_play.textview_dexterity_modifier);
 		TextView tvIntelligence = (TextView) findViewById(R.id_play.textview_intelligence);
 		TextView tvIntelligenceModifier = (TextView) findViewById(R.id_play.textview_intelligence_modifier);
-		
+
 		TextView tvArmorClass = (TextView) findViewById(R.id_play.textview_armor_class);
-		
+
 		TextView tvFortitude = (TextView) findViewById(R.id_play.textview_fortitude);
 		TextView tvReflex = (TextView) findViewById(R.id_play.textview_reflex);
 		TextView tvThrowsWill = (TextView) findViewById(R.id_play.textview_will);
-		
+
 		TextView tvTouch = (TextView) findViewById(R.id_play.textview_touch);
 		TextView tvFlatFoted = (TextView) findViewById(R.id_play.textview_flat_footed);
-		
+
 		TextView tvInitiative = (TextView) findViewById(R.id_play.textview_initiative);
 		TextView tvSpeed = (TextView) findViewById(R.id_play.textview_speed);
 		TextView tvGrapple = (TextView) findViewById(R.id_play.textview_grapple);
-		TextView tvSpellResistence = (TextView) findViewById(R.id_play.textview_spell_resistence);		
-		
+		TextView tvSpellResistence = (TextView) findViewById(R.id_play.textview_spell_resistence);
+
 		ListView lvLanguages = (ListView) findViewById(R.id_play.listview_languages);
 		ListView lvSkills = (ListView) findViewById(R.id_play.listview_skills);
-					
+
 		TextView tvReligion = (TextView) findViewById(R.id_play.textview_religion);
 		TextView tvVision = (TextView) findViewById(R.id_play.textview_vision);
-		
+
 		TextView tvHitPointsActual = (TextView) findViewById(R.id_play.textview_hitpoints_actual);
 		TextView tvHitPointsTotal = (TextView) findViewById(R.id_play.textview_hitpoints_total);
-		
+
 		ListView lvAttacks = (ListView) findViewById(R.id_play.listview_attacks);
-		
-		Button bEdit = (Button) findViewById(R.id_play.button_edit);
+
 		Button bFeats = (Button) findViewById(R.id_play.button_feats);
 		Button bEquipment = (Button) findViewById(R.id_play.button_equipment);
 		Button bItems = (Button) findViewById(R.id_play.button_items);
 		Button bTreasure = (Button) findViewById(R.id_play.button_treasure);
 		Button bMagicSpells = (Button) findViewById(R.id_play.button_magic_spells);
 		Button bFamiliar = (Button) findViewById(R.id_play.button_familiar);
-		Button bNotes = (Button) findViewById(R.id_play.button_notes);		
-		
+		Button bNotes = (Button) findViewById(R.id_play.button_notes);
+
 		// ---
-		
+
 		tvName.setText(rpgCharacter.getName());
-		
+
 		Attributes attr = rpgCharacter.getAttributes();
-		
+
 		TypeGender gender = attr.getGender();
 		if (TypeGender.MEN.equals(gender)) {
 			ivGender.setBackgroundResource(R.drawable.gender_m20);
 		} else if (TypeGender.WOMAN.equals(gender)) {
 			ivGender.setBackgroundResource(R.drawable.gender_f20);
 		}
-		
+
 		tvRace.setText(getString(attr.getRace().getCodeName()));
-		
+
 		tvAlignment.setText(getString(attr.getAlignment().getCodeName()));
-		
+
 		StringBuilder sbClassLevel = new StringBuilder();
 		for (AbstractRpgClass clazz : rpgCharacter.getRpgClasses().getAll()) {
 			if (sbClassLevel.length() > 0) {
@@ -145,15 +144,15 @@ public class PlayRpgCharacter extends Activity {
 			sbClassLevel.append(clazz.getClassLevel().toString());
 			sbClassLevel.append(")");
 		}
-		
-		tvClassesLevel.setText(sbClassLevel.toString()); 
-		
+
+		tvClassesLevel.setText(sbClassLevel.toString());
+
 		tvExperience.setText(rpgCharacter.getRpgClasses().getExperience().toString());
-		
+
 		NumberFormat fmt = new DecimalFormat("+#;-#");
-		
+
 		Abilities abilities = rpgCharacter.getAbilities();
-		
+
 		String strength = abilities.getStrength().toString();
 		String strengthMod = fmt.format(abilities.getStrengthModifier());
 		String constitution = abilities.getConstitution().toString();
@@ -166,125 +165,125 @@ public class PlayRpgCharacter extends Activity {
 		String dexterityMod = fmt.format(abilities.getDexterityModifier());
 		String intelligence = abilities.getIntelligence().toString();
 		String intelligenceMod = fmt.format(abilities.getIntelligenceModifier());
-		
+
 		tvStrength.setText(strength);
 		tvStrengthModifier.setText(strengthMod);
-		
+
 		tvConstitution.setText(constitution);
 		tvConstitutionModifier.setText(constitutionMod);
-		
+
 		tvWisdom.setText(wisdom);
 		tvWisdomModifier.setText(wisdomMod);
-		
+
 		tvCharisma.setText(charisma);
 		tvCharismaModifier.setText(charismaMod);
-		
+
 		tvDexterity.setText(dexterity);
 		tvDexterityModifier.setText(dexterityMod);
-		
+
 		tvIntelligence.setText(intelligence);
 		tvIntelligenceModifier.setText(intelligenceMod);
-		
+
 		Defences defences = rpgCharacter.getDefences();
-		
+
 		tvArmorClass.setText(defences.getArmorClass().toString());
-		
+
 		SavingThrows savingThrows = rpgCharacter.getSavingThrows();
-		
+
 		tvFortitude.setText(savingThrows.getFortitude().toString());
 		tvReflex.setText(savingThrows.getReflex().toString());
 		tvThrowsWill.setText(savingThrows.getThrowsWill().toString());
-		
+
 		// TODO: Falta implementar
 		tvTouch.setText("+10");
 		tvFlatFoted.setText("+2");
-		
+
 		// TODO: Falta implementar
 		tvInitiative.setText("+1");
 		tvSpeed.setText("+2");
 		tvGrapple.setText("+3");
-		tvSpellResistence.setText("+4");		
-		
+		tvSpellResistence.setText("+4");
+
 		Languages languages = rpgCharacter.getLanguages();
 		{
 			String[] lgs = new String[languages.getAll().size() + languages.getAllEspecial().size()];
 			int i = 0;
-			for (TypeRpgLanguage type: languages.getAll()) {
+			for (TypeRpgLanguage type : languages.getAll()) {
 				lgs[i++] = getString(type.getCodeName());
 			}
-			
-			for (String name: languages.getAllEspecial()) {
+
+			for (String name : languages.getAllEspecial()) {
 				lgs[i++] = name;
 			}
-		
+
 			Arrays.sort(lgs);
-		
-			ArrayAdapter<String> adapterLanguages = new ArrayAdapter<String>(this,
-					R.layout.list_languages, android.R.id.text1, lgs);
-		
+
+			ArrayAdapter<String> adapterLanguages = new ArrayAdapter<String>(this, R.layout.list_languages, android.R.id.text1,
+					lgs);
+
 			lvLanguages.setAdapter(adapterLanguages);
 		}
-		
+
 		Skills skills = rpgCharacter.getSkills();
 		{
 			ArrayList<HashMap<String, String>> sklls = new ArrayList<HashMap<String, String>>();
-			for (Skill skill: skills.getAll()) {
+			for (Skill skill : skills.getAll()) {
 				HashMap<String, String> map = new HashMap<String, String>();
 				TypeRpgSkill type = skill.getType();
-				
+
 				map.put("name", getString(type.getCodeName()));
 				map.put("modifier", "(" + fmt.format(skill.getModifier()) + ")");
-				
+
 				TypeAbilities ability = type.getAbility();
 				int code = (ability != null) ? ability.getCodeName() : R.string.ability_none;
 				map.put("ability", getString(code));
 
 				sklls.add(map);
 			}
-			
-			for (SkillOther especialSkill: skills.getAllOthers()) {
+
+			for (SkillOther especialSkill : skills.getAllOthers()) {
 				HashMap<String, String> map = new HashMap<String, String>();
-				
+
 				map.put("name", especialSkill.getName());
 				map.put("modifier", "(" + fmt.format(especialSkill.getModifier()) + ")");
-				
+
 				TypeAbilities ability = especialSkill.getAbility();
 				int code = (ability != null) ? ability.getCodeName() : R.string.ability_none;
 				map.put("ability", getString(code));
 
 				sklls.add(map);
 			}
-			
+
 			Comparator<Map<String, String>> mapComparator = new MapComparator().builderComparator("name");
 			Collections.sort(sklls, mapComparator);
 
-			SimpleAdapter adapterSkills = new SimpleAdapter(this, sklls, R.layout.list_skills,
-			            new String[] {"name", "modifier", "ability"}, new int[] {R.id.name, R.id.modifier, R.id.ability});
-			
+			SimpleAdapter adapterSkills = new SimpleAdapter(this, sklls, R.layout.list_skills, new String[] { "name", "modifier",
+					"ability" }, new int[] { R.id.name, R.id.modifier, R.id.ability });
+
 			lvSkills.setAdapter(adapterSkills);
 		}
-		
+
 		String religion = getString(attr.getReligion().getCodeName());
 		tvReligion.setText(religion);
-		
+
 		String vision = getString(attr.getVision().getCodeName());
 		tvVision.setText(vision);
-		
+
 		tvHitPointsActual.setText(defences.getCurrentHitPoints().toString());
 		tvHitPointsTotal.setText(defences.getHitPoints().toString());
-		
+
 		Equipments equipments = rpgCharacter.getEquipments();
 		{
 			ArrayList<HashMap<String, Object>> attks = new ArrayList<HashMap<String, Object>>();
-			for (Weapon weapon: equipments.getWeapons()) {
-				
+			for (Weapon weapon : equipments.getWeapons()) {
+
 				if (!weapon.isEquiped())
 					continue;
-				
+
 				HashMap<String, Object> map = new HashMap<String, Object>();
-				
+
 				map.put("image", weapon.getCodeImage());
-				
+
 				String attackName = "";
 				if (weapon.getClass().equals(EspecialWeapon.class)) {
 					attackName = ((EspecialWeapon) weapon).getName();
@@ -293,117 +292,173 @@ public class PlayRpgCharacter extends Activity {
 				}
 				map.put("attack", attackName);
 				map.put("bonus", "0"); // TODO: Falta Implementar
-				
+
 				StringBuffer sbDamage = new StringBuffer();
-				for (HitDice dice: weapon.getDamage()) {
+				for (HitDice dice : weapon.getDamage()) {
 					if (sbDamage.length() > 0) {
 						sbDamage.append(" / ");
 					}
 					sbDamage.append(dice.toString());
 				}
-				
+
 				map.put("damage", sbDamage.toString());
 				map.put("critical", "0"); // TODO: Falta Implementar
 				map.put("range", weapon.getRangeIncrement().toString());
-				
+
 				StringBuffer sbType = new StringBuffer();
-				for(TypeWeapon type: weapon.getType()) {
+				for (TypeWeapon type : weapon.getType()) {
 					if (sbType.length() > 0) {
 						sbType.append(" / ");
 					}
 					sbType.append(getString(type.getNameCode()));
 				}
-				
+
 				map.put("type", sbType.toString());
-				
+
 				String notes = weapon.getDescription();
 				map.put("notes", notes);
-				
+
 				attks.add(map);
 			}
-			
+
 			Comparator<Map<String, Object>> mapComparator = new MapComparator().builderComparatorWithCast("attack");
 			Collections.sort(attks, mapComparator);
-			
-			SimpleAdapter adapterAttacks = new SimpleAdapter(this, attks, R.layout.list_attacks,
-		            new String[] {"image", "attack", "bonus", "damage", "critical", "range", "type", "notes"}, 
-		            new int[] {R.id.image, R.id.attack, R.id.bonus, R.id.damage, R.id.critical, R.id.range, R.id.type, 
-						R.id.notes});
-			
+
+			SimpleAdapter adapterAttacks = new SimpleAdapter(this, attks, R.layout.list_attacks, new String[] { "image",
+					"attack", "bonus", "damage", "critical", "range", "type", "notes" }, new int[] { R.id.image, R.id.attack,
+					R.id.bonus, R.id.damage, R.id.critical, R.id.range, R.id.type, R.id.notes });
+
 			lvAttacks.setAdapter(adapterAttacks);
 		}
-		
-		// Buttons
-		bEdit.setOnClickListener(new OnClickListener() {			
-			@Override
-			public void onClick(View v) {
-				// TODO: Falta implementar
-				new AlertDialog.Builder(PlayRpgCharacter.this)
-				.setTitle("Edição")
-				.setMessage("Falta Implementar")
-				.show();
-			}
-		});
-		
-		bFeats.setOnClickListener(new OnClickListener() {			
+
+		bFeats.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(FeatsRpgCharacter.class);
 			}
 		});
-		
-		bEquipment.setOnClickListener(new OnClickListener() {			
+
+		bEquipment.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(EquipmentRpgCharacter.class);
-			}			
+			}
 		});
-		
-		bItems.setOnClickListener(new OnClickListener() {			
+
+		bItems.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(ItemsRpgCharacter.class);
-			}			
+			}
 		});
-		
-		bTreasure.setOnClickListener(new OnClickListener() {			
+
+		bTreasure.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(TreasureRpgCharacter.class);
-			}			
+			}
 		});
-		
-		bMagicSpells.setOnClickListener(new OnClickListener() {			
+
+		bMagicSpells.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(MagicAndSpellsRpgCharacter.class);
-			}			
+			}
 		});
-		
-		bFamiliar.setOnClickListener(new OnClickListener() {			
+
+		bFamiliar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(FamiliarRpgCharacter.class);
-			}			
+			}
 		});
-		
-		bNotes.setOnClickListener(new OnClickListener() {			
+
+		bNotes.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(NotesRpgCharacter.class);
-			}			
+			}
 		});
 	}
 
-	private void getSerializeRpgCharacter() {
-		Bundle bn = new Bundle();
-        bn = getIntent().getExtras();
-        rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
-
-        Log.d("PLAY - ID: ", rpgCharacter.getId().toString());
+	@Override
+	protected void onResume() {
+		super.onResume();
+		getSerializeRpgCharacter();
 	}
 
-	private void startActivity(Class<?> clazz) {
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getSupportMenuInflater().inflate(R.menu.inicio, menu);
+		ActionBar actionBar = getSupportActionBar();
+
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+		BuilderTabs builder = new BuilderTabs(actionBar);
+		
+		builder.addTab(PlayRpgCharacter.class, "play"); //R.string.play_title_activity);
+		builder.addTab(FeatsRpgCharacter.class, R.string.feats_title_activity);
+		builder.addTab(EquipmentRpgCharacter.class, R.string.equipment_title_activity);
+		builder.addTab(ItemsRpgCharacter.class, R.string.items_title_activity);
+		builder.addTab(TreasureRpgCharacter.class, R.string.treasure_title_activity);
+		//builder.addTab(MagicAndSpellsRpgCharacter.class, R.string.magic_spells_title_activity);
+		//builder.addTab(FamiliarRpgCharacter.class, R.string.familiar_title_activity);
+		//builder.addTab(NotesRpgCharacter.class, R.string.notes_title_activity);
+
+		return super.onCreateOptionsMenu(menu);
+	}
+	
+	private class BuilderTabs {
+		private ActionBar actionBar;
+
+		public BuilderTabs(ActionBar actionBar) {
+			this.actionBar = actionBar;
+		}
+		
+		private void addTab(final Class<? extends Activity> classActivity, final int title) {
+			Tab tab = actionBar.newTab();
+			tab.setText(title);
+			setListener(tab);
+			actionBar.addTab(tab);
+		}
+		
+		private void addTab(final Class<? extends Activity> classActivity, final String title) {
+			Tab tab = actionBar.newTab();
+			tab.setText(title);
+			setListener(tab);
+			actionBar.addTab(tab);
+		}
+		
+		private void setListener(Tab tab) {
+			tab.setTabListener(new TabListener() {
+				@Override
+				public void onTabSelected(Tab tab, FragmentTransaction ft) {
+					// TODO Auto-generated method stub
+				}
+
+				@Override
+				public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+					// TODO Auto-generated method stub
+				}
+
+				@Override
+				public void onTabReselected(Tab tab, FragmentTransaction ft) {
+					//startActivity(classActivity);
+				}
+			});
+		}
+	}
+	
+	private void getSerializeRpgCharacter() {
+		Bundle bn = new Bundle();
+		bn = getIntent().getExtras();
+		rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
+
+		Log.d("PLAY - ID: ", rpgCharacter.getId().toString());
+	}
+
+	private void startActivity(Class<? extends Activity> clazz) {
 		Intent intent = new Intent(PlayRpgCharacter.this, clazz);
 
 		putSerializeRpgCharacter(intent);

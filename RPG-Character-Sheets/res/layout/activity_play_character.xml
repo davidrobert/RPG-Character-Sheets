@@ -20,6 +20,7 @@
 		        android:layout_height="50dip"
 		        android:orientation="horizontal" >
 	
+			    <!-- 
 		        <Button
 		            android:id="@+id_play/button_edit"
 		            android:layout_width="250dip"
@@ -30,6 +31,7 @@
 		            android:background="@drawable/button2_d3_265x50"
 		            android:text="@string/play_label_button_edit"
 		            android:textStyle="bold" />
+			    -->
 		    </RelativeLayout>
 		
 		    <TextView

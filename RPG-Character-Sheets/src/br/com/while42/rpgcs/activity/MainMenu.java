@@ -1,6 +1,5 @@
 package br.com.while42.rpgcs.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +7,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import br.com.while42.rpgcs.R;
 
-public class MainMenu extends Activity {
+import com.actionbarsherlock.app.SherlockActivity;
+
+public class MainMenu extends SherlockActivity {
 	
 	private Button newCharacter;
 	private Button loadCharacter;

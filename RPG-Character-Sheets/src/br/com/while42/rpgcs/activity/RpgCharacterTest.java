@@ -1,6 +1,5 @@
 package br.com.while42.rpgcs.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -50,7 +49,9 @@ import br.com.while42.rpgcs.model.equip.weapons.simple.ranged.CrossbowLight;
 import br.com.while42.rpgcs.model.equip.weapons.simple.ranged.Dart;
 import br.com.while42.rpgcs.model.equip.weapons.simple.twohandedmelee.Spear;
 
-public class RpgCharacterTest extends Activity {
+import com.actionbarsherlock.app.SherlockActivity;
+
+public class RpgCharacterTest extends SherlockActivity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

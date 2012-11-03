@@ -12,7 +12,9 @@ import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 import br.com.while42.rpgcs.model.equip.weapons.AbstractWeapon;
 import br.com.while42.rpgcs.reflection.ClassByReflection;
 
-public class Splash extends Activity {
+import com.actionbarsherlock.app.SherlockActivity;
+
+public class Splash extends SherlockActivity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

@@ -12,7 +12,9 @@ import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.character.Notes;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 
-public class NotesRpgCharacter extends Activity {
+import com.actionbarsherlock.app.SherlockActivity;
+
+public class NotesRpgCharacter extends SherlockActivity {
 	
 	private EditText edNotes;
 	private Button btUpdate;
