@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id_frag_play_defences_armor/textView2"
+        android:layout_below="@+id_frag_play_defences_armor/textView2"
+        android:layout_marginLeft="185dp"
+        android:layout_marginTop="440dp"
+        android:background="@drawable/layout_table" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/layout_table_row_30" >
+
+            <TextView
+                android:id="@+id_frag_play_defences_armor/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/defences_touch"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_defences_armor/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/defences_armor_class_uppercase"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:textSize="10sp"
+                android:textStyle=""
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_defences_armor/textview_touch"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:background="@drawable/white_square_up_right_rounded_corner"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                android:id="@+id_frag_play_defences_armor/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/defences_flat_footed"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_defences_armor/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/defences_armor_class_uppercase"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:textSize="10sp"
+                android:textStyle=""
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_defences_armor/textview_flat_footed"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:background="@drawable/white_square_down_right_rounded_corner"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

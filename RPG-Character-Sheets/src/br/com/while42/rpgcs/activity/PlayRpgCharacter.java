@@ -8,11 +8,11 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.activity.fragment.PlayAbilities;
 import br.com.while42.rpgcs.activity.fragment.PlayAttacks;
 import br.com.while42.rpgcs.activity.fragment.PlayDefences;
+import br.com.while42.rpgcs.activity.fragment.PlayDefencesArmor;
 import br.com.while42.rpgcs.activity.fragment.PlayDefencesOther;
 import br.com.while42.rpgcs.activity.fragment.PlayHeader;
 import br.com.while42.rpgcs.activity.fragment.PlayHitPoints;
@@ -66,12 +66,10 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		transaction.replace(R.id_play.fragment_defences_other, new PlayDefencesOther(defences), PlayDefencesOther.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_language, new PlayLanguages(languages), PlayLanguages.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_skills, new PlaySkills(skills), PlaySkills.class.getCanonicalName());
+		transaction.replace(R.id_play.fragment_defences_armor, new PlayDefencesArmor(defences), PlayDefencesArmor.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_hitpoints, new PlayHitPoints(defences), PlayHitPoints.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_attacks, new PlayAttacks(equipments), PlayAttacks.class.getCanonicalName());
 		transaction.commit();
-
-		TextView tvTouch = (TextView) findViewById(R.id_play.textview_touch);
-		TextView tvFlatFoted = (TextView) findViewById(R.id_play.textview_flat_footed);
 
 		Button bFeats = (Button) findViewById(R.id_play.button_feats);
 		Button bEquipment = (Button) findViewById(R.id_play.button_equipment);
@@ -82,10 +80,6 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		Button bNotes = (Button) findViewById(R.id_play.button_notes);
 
 		// ---
-
-		// TODO: Falta implementar
-		tvTouch.setText("+10");
-		tvFlatFoted.setText("+2");
 
 		bFeats.setOnClickListener(new OnClickListener() {
 			@Override
