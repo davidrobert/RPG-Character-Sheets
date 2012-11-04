@@ -14,6 +14,7 @@ import br.com.while42.rpgcs.activity.fragment.PlayAbilities;
 import br.com.while42.rpgcs.activity.fragment.PlayAttacks;
 import br.com.while42.rpgcs.activity.fragment.PlayDefences;
 import br.com.while42.rpgcs.activity.fragment.PlayHeader;
+import br.com.while42.rpgcs.activity.fragment.PlayHitPoints;
 import br.com.while42.rpgcs.activity.fragment.PlayLanguages;
 import br.com.while42.rpgcs.activity.fragment.PlaySkills;
 import br.com.while42.rpgcs.activity.fragment.PlayVisionAndDeity;
@@ -61,10 +62,9 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		transaction.replace(R.id_play.fragment_vision_deity, new PlayVisionAndDeity(attr), PlayVisionAndDeity.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_language, new PlayLanguages(languages), PlayLanguages.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_skills, new PlaySkills(skills), PlaySkills.class.getCanonicalName());
+		transaction.replace(R.id_play.fragment_hitpoints, new PlayHitPoints(defences), PlayHitPoints.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_attacks, new PlayAttacks(equipments), PlayAttacks.class.getCanonicalName());
 		transaction.commit();
-
-		
 
 		TextView tvTouch = (TextView) findViewById(R.id_play.textview_touch);
 		TextView tvFlatFoted = (TextView) findViewById(R.id_play.textview_flat_footed);
@@ -73,9 +73,6 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		TextView tvSpeed = (TextView) findViewById(R.id_play.textview_speed);
 		TextView tvGrapple = (TextView) findViewById(R.id_play.textview_grapple);
 		TextView tvSpellResistence = (TextView) findViewById(R.id_play.textview_spell_resistence);
-
-		TextView tvHitPointsActual = (TextView) findViewById(R.id_play.textview_hitpoints_actual);
-		TextView tvHitPointsTotal = (TextView) findViewById(R.id_play.textview_hitpoints_total);
 
 		Button bFeats = (Button) findViewById(R.id_play.button_feats);
 		Button bEquipment = (Button) findViewById(R.id_play.button_equipment);
@@ -87,9 +84,6 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 
 		// ---
 
-
-		
-
 		// TODO: Falta implementar
 		tvTouch.setText("+10");
 		tvFlatFoted.setText("+2");
@@ -99,9 +93,6 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		tvSpeed.setText("+2");
 		tvGrapple.setText("+3");
 		tvSpellResistence.setText("+4");
-
-		tvHitPointsActual.setText(defences.getCurrentHitPoints().toString());
-		tvHitPointsTotal.setText(defences.getHitPoints().toString());
 
 		bFeats.setOnClickListener(new OnClickListener() {
 			@Override

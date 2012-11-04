@@ -386,69 +386,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <!-- Hit Points -->
-
-            <TableLayout
-                android:layout_width="525dp"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id_play/textView2"
-                android:layout_below="@+id_play/textView2"
-                android:layout_marginTop="550dp"
-                android:background="@drawable/layout_table" >
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <TextView
-                        android:layout_width="310dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:text="@string/play_label_hitpoints"
-                        android:textColor="#000"
-                        android:textSize="30sp"
-                        android:textStyle=""
-                        android:typeface="serif" />
-
-                    <TextView
-                        android:id="@+id_play/textview_hitpoints_actual"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/white_square"
-                        android:gravity="right"
-                        android:paddingLeft="10dp"
-                        android:text=""
-                        android:textColor="#000"
-                        android:textSize="50sp"
-                        android:typeface="serif" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/white_square"
-                        android:gravity="center"
-                        android:paddingLeft="10dp"
-                        android:text="@string/space_bar_space"
-                        android:textColor="#000"
-                        android:textSize="50sp"
-                        android:typeface="serif" />
-
-                    <TextView
-                        android:id="@+id_play/textview_hitpoints_total"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/white_square_all_right_rounded_corners"
-                        android:gravity="left"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:text=""
-                        android:textColor="#000"
-                        android:textSize="50sp"
-                        android:typeface="serif" />
-                </TableRow>
-            </TableLayout>
+            <FrameLayout
+                android:id="@+id_play/fragment_hitpoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <FrameLayout
                 android:id="@+id_play/fragment_attacks"
