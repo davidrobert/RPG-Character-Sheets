@@ -211,6 +211,14 @@ public class SimpleWeaponTest extends AndroidTestCase {
 		Assert.assertEquals( 0.0, new Sling().getWeight());
 	}
 	
+	public void testGetTypeBasic() throws Throwable {	
+		Assert.assertTrue(new Gauntlet().getType().contains(TypeWeapon.BLUDGEONING));
+	}
+	
+	public void testGetTypeBasicSize() throws Throwable {	
+		Assert.assertEquals(1, new Gauntlet().getType().size());
+	}
+	
 	public void testGetType() throws Throwable {	
 		Assert.assertEquals(   1, new Gauntlet().getType().size());
 		Assert.assertEquals(true, new Gauntlet().getType().contains(TypeWeapon.BLUDGEONING));
