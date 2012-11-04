@@ -41,7 +41,7 @@ public class BasicWeapon implements Weapon {
 		critical = basic.critical;
 		rangeIncrement = basic.rangeIncrement;
 		weight = basic.weight;
-		types = new HashSet<TypeWeapon>(types);
+		types = new HashSet<TypeWeapon>(basic.types);
 		categorie = basic.categorie;
 		categorieUsefulness = basic.categorieUsefulness;
 		categorieEncumbrance = basic.categorieEncumbrance;
