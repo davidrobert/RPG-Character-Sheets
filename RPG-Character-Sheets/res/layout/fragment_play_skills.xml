@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- Skills Title -->
+
+    <TableLayout
+        android:id="@+id_frag_play_skills/skillsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id_frag_play_skills/textView2"
+        android:layout_marginLeft="545dp"
+        android:layout_marginTop="155dp" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp" >
+
+            <TextView
+                android:id="@+id_frag_play_skills/textView3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/skills"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:typeface="serif" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- Skills Box -->
+
+    <TableLayout
+        android:id="@+id_frag_play_skills/skillsBox"
+        android:layout_width="235dp"
+        android:layout_height="250dp"
+        android:layout_alignLeft="@+id_frag_play_skills/textView2"
+        android:layout_below="@+id_frag_play_skills/textView2"
+        android:layout_marginLeft="545dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/layout_table" >
+
+        <ListView
+            android:id="@+id_frag_play_skills/listview_skills"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/white_square_all_rounded_corners" >
+        </ListView>
+    </TableLayout>
+
+</RelativeLayout>

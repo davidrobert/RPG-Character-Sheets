@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- Vision and Deity Box -->
+
+    <TableLayout
+        android:id="@+id_frag_play_vision/visionAndDeityBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id_frag_play_vision/textView2"
+        android:layout_below="@+id_frag_play_vision/textView2"
+        android:layout_marginLeft="445dp"
+        android:layout_marginTop="440dp"
+        android:background="@drawable/layout_table" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/layout_table_row" >
+
+            <TextView
+                android:id="@+id_frag_play_vision/textView3"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/vision"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_vision/textview_vision"
+                android:layout_width="210dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/white_square_up_right_rounded_corner"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:typeface="serif" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/play_label_religion"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_vision/textview_religion"
+                android:layout_width="210dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/white_square_down_right_rounded_corner"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:typeface="serif" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

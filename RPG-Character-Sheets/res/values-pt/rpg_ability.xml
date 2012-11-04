@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="abilitys">Abilidades</string>
+	<string name="abilitys">Habilidades</string>
 	
 	<string name="ability_modifier">Modificador</string>
 	<string name="ability_modifier_abbreviation">Mod</string>

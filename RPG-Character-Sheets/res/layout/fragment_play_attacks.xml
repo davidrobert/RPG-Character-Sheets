@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- Attacks -->
+
+    <TableLayout
+        android:layout_width="525dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id_frag_play_attacks/textView2"
+        android:layout_below="@+id_frag_play_attacks/textView2"
+        android:layout_marginTop="650dp"
+        android:background="@drawable/layout_table"
+        android:orientation="vertical" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/opaca20"
+            android:paddingBottom="10dp" >
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="@string/play_label_attack"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="@string/play_label_attack_bonus"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="@string/play_label_attack_damage"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="@string/play_label_attack_critical"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_table_row_50" >
+
+            <ListView
+                android:id="@+id_frag_play_attacks/listview_attacks"
+                android:layout_width="fill_parent"
+                android:layout_height="380dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_square_all_rounded_corners" >
+            </ListView>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

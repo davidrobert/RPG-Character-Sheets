@@ -31,7 +31,6 @@ public class Splash extends SherlockActivity {
 		new LoadViewTask(this, RpgCharacterTest.class).execute();
 	}
 
-
 	private class LoadViewTask extends AsyncTask<Long, Long, Long> {
 		private Class<? extends Activity> activity;
 		private Context context;		

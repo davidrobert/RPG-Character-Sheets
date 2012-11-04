@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:gravity="top">
+
+    <TextView
+        android:id="@+id_frag_play_header/textview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <TableLayout
+        android:id="@+id_frag_play_header/subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id_frag_play_header/imageview_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp" />
+
+            <TextView
+                android:id="@+id_frag_play_header/textview_race"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_header/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/bar"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_header/textview_alignment"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_header/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/bar"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_header/textview_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_header/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="10dp"
+                android:text="@string/character_experience_abbreviation"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id_frag_play_header/subTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp" >
+
+            <!--
+				    <TextView
+				        android:id="@+id_frag_play_header/textView3"
+				        android:layout_width="wrap_content"
+				        android:layout_height="fill_parent"
+				        android:textColor="#000"
+				        android:text="@string/class_level"
+				        android:paddingRight="10dp"
+				        android:typeface="serif"
+				        android:textAppearance="?android:attr/textAppearanceLarge" />
+            -->
+
+            <TextView
+                android:id="@+id_frag_play_header/textview_classes_level"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

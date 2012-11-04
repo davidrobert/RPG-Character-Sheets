@@ -6,809 +6,319 @@
     android:orientation="vertical"
     android:paddingLeft="10dp"
     android:paddingRight="10dp" >
-	
-    <ScrollView 
-        android:layout_height="fill_parent"
-        android:layout_width="fill_parent">
-        
-        <RelativeLayout 
-            android:layout_height="fill_parent"
-            android:layout_width="fill_parent">
-            
-			<RelativeLayout
-		        android:layout_width="fill_parent"
-		        android:layout_height="50dip"
-		        android:orientation="horizontal" >
-	
-			    <!-- 
-		        <Button
-		            android:id="@+id_play/button_edit"
-		            android:layout_width="250dip"
-		            android:layout_height="50dip"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true"
-		            android:layout_marginTop="2dip"
-		            android:background="@drawable/button2_d3_265x50"
-		            android:text="@string/play_label_button_edit"
-		            android:textStyle="bold" />
-			    -->
-		    </RelativeLayout>
-		
-		    <TextView
-		        android:id="@+id_play/textview_name"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignParentTop="true"
-		        android:layout_marginTop="20dp"
-		        android:text=""
-		        android:textColor="#000"
-		        android:textSize="50sp"
-		        android:textStyle="bold"
-		        android:typeface="serif" />
-		
-		    <TableLayout
-		        android:id="@+id_play/subTitle"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginTop="80dp" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:orientation="vertical" >
-		
-		            <ImageView
-		                android:id="@+id_play/imageview_gender"
-		                android:paddingLeft="5dp"
-		                android:paddingRight="20dp"
-		                android:paddingTop="10dp"
-		                android:layout_width="wrap_content"
-		                android:layout_height="fill_parent"
-		                android:layout_gravity="center" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_race"
-		                android:layout_width="wrap_content"
-		                android:layout_height="fill_parent"
-		                android:paddingLeft="10dp"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="wrap_content"
-		                android:layout_height="fill_parent"
-		                android:paddingLeft="10dp"
-		                android:paddingRight="10dp"
-		                android:text="@string/bar"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_alignment"
-		                android:layout_width="wrap_content"
-		                android:layout_height="fill_parent"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="wrap_content"
-		                android:layout_height="fill_parent"
-		                android:paddingLeft="10dp"
-		                android:paddingRight="10dp"
-		                android:text="@string/bar"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_experience"
-		                android:layout_width="wrap_content"
-		                android:layout_height="fill_parent"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView6"
-		                android:layout_width="wrap_content"
-		                android:layout_height="fill_parent"
-		                android:paddingLeft="10dp"
-		                android:text="@string/character_experience_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <TableLayout
-		        android:id="@+id_play/subTitle2"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginTop="120dp" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="20dp" >
-		
-		            <!--
-				    <TextView
-				        android:id="@+id_play/textView3"
-				        android:layout_width="wrap_content"
-				        android:layout_height="fill_parent"
-				        android:textColor="#000"
-				        android:text="@string/class_level"
-				        android:paddingRight="10dp"
-				        android:typeface="serif"
-				        android:textAppearance="?android:attr/textAppearanceLarge" />
-		            -->
-		
-		            <TextView
-		                android:id="@+id_play/textview_classes_level"
-		                android:layout_width="wrap_content"
-		                android:layout_height="fill_parent"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <TableLayout
-		        android:id="@+id_play/habilitiesModTitle"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginTop="155dp" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="20dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="100dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center_vertical"
-		                android:text="@string/abilitys"
-		                android:textColor="#000"
-		                android:textSize="18sp"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView6"
-		                android:layout_width="wrap_content"
-		                android:layout_height="fill_parent"
-		                android:layout_marginLeft="25dp"
-		                android:gravity="center"
-		                android:text="@string/ability_modifier_abbreviation"
-		                android:textColor="#000"
-		                android:textSize="15sp"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <TableLayout
-		        android:id="@+id_play/habilitiesMod1"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginTop="180dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="50dp"
-		            android:background="@drawable/layout_table_row_50" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="60dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/ability_strength_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_strength"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/layout_text_white_50"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView5"
-		                android:layout_width="5dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center"
-		                android:text="@string/space_simple"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_strength_modifier"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/white_square_up_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="50dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="60dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/ability_constitution_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_constitution"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/layout_text_white_50"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView5"
-		                android:layout_width="5dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center"
-		                android:text="@string/space_simple"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_constitution_modifier"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/white_square_down_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <TableLayout
-		        android:id="@+id_play/habilitiesMod2"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginTop="300dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="50dp"
-		            android:background="@drawable/layout_table_row_50" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="60dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/ability_wisdom_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_wisdom"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/layout_text_white_50"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView5"
-		                android:layout_width="5dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center"
-		                android:text="@string/space_simple"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_wisdom_modifier"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/white_square_up_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="50dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="60dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/ability_charisma_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_charisma"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/layout_text_white_50"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView5"
-		                android:layout_width="5dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center"
-		                android:text="@string/space_simple"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_charisma_modifier"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/white_square_down_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <TableLayout
-		        android:id="@+id_play/habilitiesMod3"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginTop="420dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="50dp"
-		            android:background="@drawable/layout_table_row_50" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="60dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/ability_dexterity_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_dexterity"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/layout_text_white_50"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView5"
-		                android:layout_width="5dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center"
-		                android:text="@string/space_simple"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_dexterity_modifier"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/white_square_up_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="50dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="60dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/ability_intelligence_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_intelligence"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/layout_text_white_50"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView5"
-		                android:layout_width="5dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center"
-		                android:text="@string/space_simple"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_intelligence_modifier"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/white_square_down_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <!-- Defenses Title Box -->
-		
-		    <TableLayout
-		        android:id="@+id_play/defensesTitle"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="185dp"
-		        android:layout_marginTop="155dp" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="20dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="100dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center_vertical"
-		                android:text="@string/defences"
-		                android:textColor="#000"
-		                android:textSize="18sp"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <!-- Defenses Box -->
-		
-		    <TableLayout
-		        android:id="@+id_play/defenses1"
-		        android:layout_width="wrap_content"
-		        android:layout_height="50dp"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="185dp"
-		        android:layout_marginTop="180dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="50dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="70dp"
-		                android:layout_height="50dp"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/defences_armor_class_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_armor_class"
-		                android:layout_width="50dp"
-		                android:layout_height="50dp"
-		                android:background="@drawable/white_square_all_right_rounded_corners"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <TableLayout
-		        android:id="@+id_play/defenses2"
-		        android:layout_width="wrap_content"
-		        android:layout_height="50dp"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="185dp"
-		        android:layout_marginTop="245dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="50dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="70dp"
-		                android:layout_height="50dp"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/saving_throws_fortitude_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_fortitude"
-		                android:layout_width="50dp"
-		                android:layout_height="50dp"
-		                android:background="@drawable/white_square_all_right_rounded_corners"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <TableLayout
-		        android:id="@+id_play/defenses3"
-		        android:layout_width="wrap_content"
-		        android:layout_height="50dp"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="185dp"
-		        android:layout_marginTop="310dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="50dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="70dp"
-		                android:layout_height="50dp"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/saving_throws_reflex_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_reflex"
-		                android:layout_width="50dp"
-		                android:layout_height="50dp"
-		                android:background="@drawable/white_square_all_right_rounded_corners"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <TableLayout
-		        android:id="@+id_play/defenses4"
-		        android:layout_width="wrap_content"
-		        android:layout_height="50dp"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="185dp"
-		        android:layout_marginTop="375dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="50dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="70dp"
-		                android:layout_height="50dp"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/saving_throws_will_abbreviation"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_will"
-		                android:layout_width="50dp"
-		                android:layout_height="50dp"
-		                android:background="@drawable/white_square_all_right_rounded_corners"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <TableLayout
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="185dp"
-		        android:layout_marginTop="440dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="40dp"
-		            android:background="@drawable/layout_table_row_30" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="fill_parent"
-		                android:layout_height="40dp"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/defences_touch"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textSize="18sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="fill_parent"
-		                android:layout_height="match_parent"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:paddingRight="5dp"
-		                android:text="@string/defences_armor_class_uppercase"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textSize="10sp"
-		                android:textStyle=""
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_touch"
-		                android:layout_width="50dp"
-		                android:layout_height="40dp"
-		                android:background="@drawable/white_square_up_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="40dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="fill_parent"
-		                android:layout_height="40dp"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/defences_flat_footed"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textSize="17sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="fill_parent"
-		                android:layout_height="match_parent"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:paddingRight="5dp"
-		                android:text="@string/defences_armor_class_uppercase"
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:textSize="10sp"
-		                android:textStyle=""
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_flat_footed"
-		                android:layout_width="50dp"
-		                android:layout_height="40dp"
-		                android:background="@drawable/white_square_down_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textAppearance="?android:attr/textAppearanceLarge"
-		                android:textColor="#000"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <TableLayout
-		        android:id="@+id_play/resistansesBox"
-		        android:layout_width="200dp"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="325dp"
-		        android:layout_marginTop="180dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <!--
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <FrameLayout
+                android:id="@+id_play/fragment_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id_play/textView2" />
+
+            <FrameLayout
+                android:id="@+id_play/fragment_abilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id_play/textView2" />
+
+            <!-- Defenses Title Box -->
+
+            <TableLayout
+                android:id="@+id_play/defensesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id_play/textView2"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="155dp" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/defences"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:typeface="serif" />
+                </TableRow>
+            </TableLayout>
+
+            <!-- Defenses Box -->
+
+            <TableLayout
+                android:id="@+id_play/defenses1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id_play/textView2"
+                android:layout_below="@+id_play/textView2"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="180dp"
+                android:background="@drawable/layout_table" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="@string/defences_armor_class_abbreviation"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_armor_class"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/white_square_all_right_rounded_corners"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:typeface="serif" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id_play/defenses2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id_play/textView2"
+                android:layout_below="@+id_play/textView2"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="245dp"
+                android:background="@drawable/layout_table" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="@string/saving_throws_fortitude_abbreviation"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_fortitude"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/white_square_all_right_rounded_corners"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:typeface="serif" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id_play/defenses3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id_play/textView2"
+                android:layout_below="@+id_play/textView2"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="310dp"
+                android:background="@drawable/layout_table" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="@string/saving_throws_reflex_abbreviation"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_reflex"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/white_square_all_right_rounded_corners"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:typeface="serif" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id_play/defenses4"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id_play/textView2"
+                android:layout_below="@+id_play/textView2"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="375dp"
+                android:background="@drawable/layout_table" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="@string/saving_throws_will_abbreviation"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_will"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/white_square_all_right_rounded_corners"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:typeface="serif" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id_play/textView2"
+                android:layout_below="@+id_play/textView2"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="440dp"
+                android:background="@drawable/layout_table" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/layout_table_row_30" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="@string/defences_touch"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/defences_armor_class_uppercase"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:textSize="10sp"
+                        android:textStyle=""
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_touch"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/white_square_up_right_rounded_corner"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="@string/defences_flat_footed"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/defences_armor_class_uppercase"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:textSize="10sp"
+                        android:textStyle=""
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_flat_footed"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/white_square_down_right_rounded_corner"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000"
+                        android:typeface="serif" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id_play/resistansesBox"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id_play/textView2"
+                android:layout_below="@+id_play/textView2"
+                android:layout_marginLeft="325dp"
+                android:layout_marginTop="180dp"
+                android:background="@drawable/layout_table" >
+
+                <!--
 		        <ListView 
 		            android:layout_height="fill_parent"
 		            android:layout_weight="1"
@@ -832,123 +342,123 @@
 				        android:textSize="20sp"
 				        android:textStyle="bold" />
 		        </TableRow>
-		        -->
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="wrap_content" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="150dp"
-		                android:layout_height="wrap_content"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/play_label_initiative"
-		                android:textColor="#000"
-		                android:textSize="17sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_initiative"
-		                android:layout_width="50dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/white_square_up_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textColor="#000"
-		                android:textSize="20sp"
-		                android:typeface="serif" />
-		        </TableRow>
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="wrap_content"
-		            android:background="@drawable/layout_row_border_bottom" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="150dp"
-		                android:layout_height="wrap_content"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/play_label_speed"
-		                android:textColor="#000"
-		                android:textSize="17sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_speed"
-		                android:layout_width="50dp"
-		                android:layout_height="wrap_content"
-		                android:background="@drawable/layout_text_white"
-		                android:gravity="center"
-		                android:text=""
-		                android:textColor="#000"
-		                android:textSize="20sp"
-		                android:typeface="serif" />
-		        </TableRow>
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="wrap_content" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="150dp"
-		                android:layout_height="wrap_content"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/play_label_grapple"
-		                android:textColor="#000"
-		                android:textSize="17sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_grapple"
-		                android:layout_width="50dp"
-		                android:layout_height="wrap_content"
-		                android:background="@drawable/layout_text_white"
-		                android:gravity="center"
-		                android:text=""
-		                android:textColor="#000"
-		                android:textSize="20sp"
-		                android:typeface="serif" />
-		        </TableRow>
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="wrap_content"
-		            android:background="@drawable/layout_row_border_bottom" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="150dp"
-		                android:layout_height="wrap_content"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/play_label_spell_resistence"
-		                android:textColor="#000"
-		                android:textSize="17sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_spell_resistence"
-		                android:layout_width="50dp"
-		                android:layout_height="wrap_content"
-		                android:background="@drawable/layout_text_white"
-		                android:gravity="center"
-		                android:text=""
-		                android:textColor="#000"
-		                android:textSize="20sp"
-		                android:typeface="serif" />
-		        </TableRow>
-		
-		        <!--
+                -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="@string/play_label_initiative"
+                        android:textColor="#000"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_initiative"
+                        android:layout_width="50dp"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/white_square_up_right_rounded_corner"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_row_border_bottom" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="@string/play_label_speed"
+                        android:textColor="#000"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_speed"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/layout_text_white"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="@string/play_label_grapple"
+                        android:textColor="#000"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_grapple"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/layout_text_white"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_row_border_bottom" >
+
+                    <TextView
+                        android:id="@+id_play/textView3"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="@string/play_label_spell_resistence"
+                        android:textColor="#000"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_spell_resistence"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/layout_text_white"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <!--
 				<TableRow 
 		            android:layout_height="wrap_content"
 		            android:layout_width="match_parent">
@@ -967,49 +477,16 @@
 				        android:background="@drawable/layout_resistances"
 				        android:textSize="20sp" />
 		        </TableRow>
-		        -->
-		    </TableLayout>
-		
-		    <!-- Languages Box -->
-		
-		    <TableLayout
-		        android:id="@+id_play/languagesBox"
-		        android:layout_width="200dp"
-		        android:layout_height="120dp"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="325dp"
-		        android:layout_marginTop="310dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="fill_parent"
-		                android:layout_height="wrap_content"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:text="@string/languages"
-		                android:textColor="#000"
-		                android:textSize="20sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		        </TableRow>
-		
-		        <ListView
-		            android:id="@+id_play/listview_languages"
-		            android:layout_width="fill_parent"
-		            android:layout_height="fill_parent"
-		            android:layout_weight="1"
-		            android:background="@drawable/white_square_all_down_rounded_corners" >
-		        </ListView>
-		    </TableLayout>
-		
-		    <!-- PI and PP Box -->
-		    <!--
+                -->
+            </TableLayout>
+
+            <FrameLayout
+                android:id="@+id_play/fragment_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- PI and PP Box -->
+            <!--
 		    <TableLayout
 		        android:id="@+id_play/PIAndPPBox"
 		        android:layout_width="wrap_content"
@@ -1075,367 +552,185 @@
 				    
 		        </TableRow>
 		    </TableLayout>
-		    -->
-		
-		
-		    <!-- Skills Title -->
-		
-		    <TableLayout
-		        android:id="@+id_play/skillsTitle"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="545dp"
-		        android:layout_marginTop="155dp" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="20dp" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="100dp"
-		                android:layout_height="wrap_content"
-		                android:gravity="center_vertical"
-		                android:text="@string/skills"
-		                android:textColor="#000"
-		                android:textSize="18sp"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <!-- Skills Box -->
-		
-		    <TableLayout
-		        android:id="@+id_play/skillsBox"
-		        android:layout_width="235dp"
-		        android:layout_height="250dp"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="545dp"
-		        android:layout_marginTop="180dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <ListView
-		            android:id="@+id_play/listview_skills"
-		            android:layout_width="fill_parent"
-		            android:layout_height="fill_parent"
-		            android:layout_weight="1"
-		            android:background="@drawable/white_square_all_rounded_corners" >
-		        </ListView>
-		    </TableLayout>
-		
-		    <!-- Vision and Deity Box -->
-		
-		    <TableLayout
-		        android:id="@+id_play/visionAndDeityBox"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginLeft="445dp"
-		        android:layout_marginTop="440dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="40dp"
-		            android:background="@drawable/layout_table_row" >
-		
-		            <TextView
-		                android:id="@+id_play/textView3"
-		                android:layout_width="130dp"
-		                android:layout_height="40dp"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:paddingRight="5dp"
-		                android:text="@string/vision"
-		                android:textColor="#000"
-		                android:textSize="20sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_vision"
-		                android:layout_width="210dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/white_square_up_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textColor="#000"
-		                android:textSize="18sp"
-		                android:typeface="serif" />
-		        </TableRow>
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="40dp" >
-		
-		            <TextView
-		                android:layout_width="130dp"
-		                android:layout_height="40dp"
-		                android:gravity="center_vertical"
-		                android:paddingLeft="5dp"
-		                android:paddingRight="5dp"
-		                android:text="@string/play_label_religion"
-		                android:textColor="#000"
-		                android:textSize="20sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_religion"
-		                android:layout_width="210dp"
-		                android:layout_height="fill_parent"
-		                android:background="@drawable/white_square_down_right_rounded_corner"
-		                android:gravity="center"
-		                android:text=""
-		                android:textColor="#000"
-		                android:textSize="18sp"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <!-- Hit Points -->
-		
-		    <TableLayout
-		        android:layout_width="525dp"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginTop="550dp"
-		        android:background="@drawable/layout_table" >
-		
-		        <TableRow
-		            android:layout_width="match_parent"
-		            android:layout_height="match_parent" >
-		
-		            <TextView
-		                android:layout_width="310dp"
-		                android:layout_height="wrap_content"
-		                android:gravity="center_horizontal"
-		                android:paddingLeft="5dp"
-		                android:paddingRight="5dp"
-		                android:text="@string/play_label_hitpoints"
-		                android:textColor="#000"
-		                android:textSize="30sp"
-		                android:textStyle=""
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_hitpoints_actual"
-		                android:layout_width="wrap_content"
-		                android:layout_height="wrap_content"
-		                android:background="@drawable/white_square"
-		                android:gravity="right"
-		                android:paddingLeft="10dp"
-		                android:text=""
-		                android:textColor="#000"
-		                android:textSize="50sp"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:layout_width="wrap_content"
-		                android:layout_height="wrap_content"
-		                android:background="@drawable/white_square"
-		                android:gravity="center"
-		                android:paddingLeft="10dp"
-		                android:text="@string/space_bar_space"
-		                android:textColor="#000"
-		                android:textSize="50sp"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:id="@+id_play/textview_hitpoints_total"
-		                android:layout_width="100dp"
-		                android:layout_height="wrap_content"
-		                android:background="@drawable/white_square_all_right_rounded_corners"
-		                android:gravity="left"
-		                android:paddingLeft="10dp"
-		                android:paddingRight="10dp"
-		                android:text=""
-		                android:textColor="#000"
-		                android:textSize="50sp"
-		                android:typeface="serif" />
-		        </TableRow>
-		    </TableLayout>
-		
-		    <!-- Attacks -->
-		
-		    <TableLayout
-		        android:layout_width="525dp"
-		        android:layout_height="wrap_content"
-		        android:orientation="vertical" 
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:layout_marginTop="650dp"
-		        android:background="@drawable/layout_table" >
-		
-		         <TableRow
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:background="@color/opaca20"
-		            android:paddingBottom="10dp" >
-		
-		            <TextView
-		                android:layout_width="20dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center"
-		                android:paddingLeft="5dp"
-		                android:text="@string/play_label_attack"
-		                android:textColor="#000"
-		                android:textSize="25sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:layout_width="100dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center"
-		                android:paddingLeft="5dp"
-		                android:text="@string/play_label_attack_bonus"
-		                android:textColor="#000"
-		                android:textSize="17sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:layout_width="fill_parent"
-		                android:layout_height="fill_parent"
-		                android:gravity="center"
-		                android:paddingLeft="5dp"
-		                android:text="@string/play_label_attack_damage"
-		                android:textColor="#000"
-		                android:textSize="17sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		
-		            <TextView
-		                android:layout_width="100dp"
-		                android:layout_height="fill_parent"
-		                android:gravity="center"
-		                android:paddingLeft="5dp"
-		                android:text="@string/play_label_attack_critical"
-		                android:textColor="#000"
-		                android:textSize="17sp"
-		                android:textStyle="bold"
-		                android:typeface="serif" />
-		        </TableRow>
-		        
-		        <TableRow
-		            android:layout_width="fill_parent"
-		            android:layout_height="50dp"
-		            android:background="@drawable/layout_table_row_50" >
-		
-		            <ListView
-		                android:id="@+id_play/listview_attacks"
-		                android:layout_width="fill_parent"
-		                android:layout_height="380dp"
-		                android:layout_weight="1"
-		                android:background="@drawable/white_square_all_rounded_corners" >
-		            </ListView>
-		        </TableRow>
-		    </TableLayout>
-		
-		    <Button
-		        android:id="@+id_play/button_feats"
-		        android:layout_width="250dp"
-		        android:layout_height="75dp"
-		        android:layout_alignParentRight="true"
-		        android:layout_below="@+id_play/tableRow1"
-		        android:layout_marginRight="0dp"
-		        android:layout_marginTop="550dp"
-		        android:drawableLeft="@drawable/feats50"
-		        android:text="@string/play_label_button_feats"
-		        android:textColor="#000"
-		        android:textSize="22sp"
-		        android:typeface="serif" />
-		
-		    <Button
-		        android:id="@+id_play/button_equipment"
-		        android:layout_width="250dp"
-		        android:layout_height="75dp"
-		        android:layout_alignParentRight="true"
-		        android:layout_below="@+id_play/tableRow1"
-		        android:layout_marginRight="0dp"
-		        android:layout_marginTop="625dp"
-		        android:drawableLeft="@drawable/equipment50"
-		        android:text="@string/play_label_button_equipment"
-		        android:textColor="#000"
-		        android:textSize="22sp"
-		        android:typeface="serif" />
-		
-		    <Button
-		        android:id="@+id_play/button_items"
-		        android:layout_width="250dp"
-		        android:layout_height="75dp"
-		        android:layout_alignParentRight="true"
-		        android:layout_below="@+id_play/tableRow1"
-		        android:layout_marginRight="0dp"
-		        android:layout_marginTop="700dp"
-		        android:drawableLeft="@drawable/items50"
-		        android:text="@string/play_label_button_items"
-		        android:textColor="#000"
-		        android:textSize="22sp"
-		        android:typeface="serif" />
-		
-		    <Button
-		        android:id="@+id_play/button_treasure"
-		        android:layout_width="250dp"
-		        android:layout_height="75dp"
-		        android:layout_alignParentRight="true"
-		        android:layout_below="@+id_play/tableRow1"
-		        android:layout_marginRight="0dp"
-		        android:layout_marginTop="775dp"
-		        android:drawableLeft="@drawable/treasure50"
-		        android:text="@string/play_label_button_treasure"
-		        android:textColor="#000"
-		        android:textSize="22sp"
-		        android:typeface="serif" />
-		
-		    <Button
-		        android:id="@+id_play/button_magic_spells"
-		        android:layout_width="250dp"
-		        android:layout_height="75dp"
-		        android:layout_alignParentRight="true"
-		        android:layout_below="@+id_play/tableRow1"
-		        android:layout_marginRight="0dp"
-		        android:layout_marginTop="850dp"
-		        android:drawableLeft="@drawable/magic_spells50"
-		        android:text="@string/play_label_button_magic_spells"
-		        android:textColor="#000"
-		        android:textSize="22sp"
-		        android:typeface="serif" />
-		
-		    <Button
-		        android:id="@+id_play/button_familiar"
-		        android:layout_width="250dp"
-		        android:layout_height="75dp"
-		        android:layout_alignParentRight="true"
-		        android:layout_below="@+id_play/tableRow1"
-		        android:layout_marginRight="0dp"
-		        android:layout_marginTop="925dp"
-		        android:drawableLeft="@drawable/familiar50"
-		        android:text="@string/play_label_button_familiar"
-		        android:textColor="#000"
-		        android:textSize="22sp"
-		        android:typeface="serif" />
-		
-		    <Button
-		        android:id="@+id_play/button_notes"
-		        android:layout_width="250dp"
-		        android:layout_height="75dp"
-		        android:layout_alignParentRight="true"
-		        android:layout_below="@+id_play/tableRow1"
-		        android:layout_marginRight="0dp"
-		        android:layout_marginTop="1000dp"
-		        android:drawableLeft="@drawable/notes50"
-		        android:text="@string/play_label_button_notes"
-		        android:textColor="#000"
-		        android:textSize="22sp"
-		        android:typeface="serif" />            
+            -->
+
+            <FrameLayout
+                android:id="@+id_play/fragment_skills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@+id_play/fragment_vision_deity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Hit Points -->
+
+            <TableLayout
+                android:layout_width="525dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id_play/textView2"
+                android:layout_below="@+id_play/textView2"
+                android:layout_marginTop="550dp"
+                android:background="@drawable/layout_table" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="310dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/play_label_hitpoints"
+                        android:textColor="#000"
+                        android:textSize="30sp"
+                        android:textStyle=""
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_hitpoints_actual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_square"
+                        android:gravity="right"
+                        android:paddingLeft="10dp"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="50sp"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_square"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="@string/space_bar_space"
+                        android:textColor="#000"
+                        android:textSize="50sp"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id_play/textview_hitpoints_total"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_square_all_right_rounded_corners"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="50sp"
+                        android:typeface="serif" />
+                </TableRow>
+            </TableLayout>
+
+            <FrameLayout
+                android:id="@+id_play/fragment_attacks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id_play/button_feats"
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id_play/tableRow1"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="550dp"
+                android:drawableLeft="@drawable/feats50"
+                android:text="@string/play_label_button_feats"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id_play/button_equipment"
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id_play/tableRow1"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="625dp"
+                android:drawableLeft="@drawable/equipment50"
+                android:text="@string/play_label_button_equipment"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id_play/button_items"
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id_play/tableRow1"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="700dp"
+                android:drawableLeft="@drawable/items50"
+                android:text="@string/play_label_button_items"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id_play/button_treasure"
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id_play/tableRow1"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="775dp"
+                android:drawableLeft="@drawable/treasure50"
+                android:text="@string/play_label_button_treasure"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id_play/button_magic_spells"
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id_play/tableRow1"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="850dp"
+                android:drawableLeft="@drawable/magic_spells50"
+                android:text="@string/play_label_button_magic_spells"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id_play/button_familiar"
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id_play/tableRow1"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="925dp"
+                android:drawableLeft="@drawable/familiar50"
+                android:text="@string/play_label_button_familiar"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id_play/button_notes"
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id_play/tableRow1"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="1000dp"
+                android:drawableLeft="@drawable/notes50"
+                android:text="@string/play_label_button_notes"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:typeface="serif" />
         </RelativeLayout>
-        
     </ScrollView>
-    
+
 </RelativeLayout>
