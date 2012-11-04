@@ -136,7 +136,8 @@
                 </TableRow>
             </TableLayout>
 
-            <FrameLayout android:id="@+id_play/fragment_defences_other"
+            <FrameLayout
+                android:id="@+id_play/fragment_defences_other"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -144,75 +145,6 @@
                 android:id="@+id_play/fragment_language"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
-            <!-- PI and PP Box -->
-            <!--
-		    <TableLayout
-		        android:id="@+id_play/PIAndPPBox"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id_play/textView2"
-		        android:layout_below="@+id_play/textView2"
-		        android:background="@drawable/layout_table"
-		        android:layout_marginTop="440dp"
-		        android:layout_marginLeft="415dp">
-		        
-		        <TableRow 
-		            android:layout_height="40dp"
-		            android:layout_width="match_parent"
-		            android:background="@drawable/layout_table_row_30">
-		
-				    <TextView
-				        android:id="@+id_play/textView3"
-				        android:layout_width="60dp"
-				        android:layout_height="40dp"
-				        android:typeface="serif"
-				        android:gravity="center_vertical"
-				        android:paddingLeft="5dp"
-				        android:textColor="#000"
-				        android:textStyle="bold"
-				        android:text="PI"
-				        android:textAppearance="?android:attr/textAppearanceLarge" />
-		            
-				    <TextView
-				        android:id="@+id_play/textView4"
-				        android:layout_width="50dp"
-				        android:gravity="center"
-				        android:layout_height="40dp"
-				        android:textColor="#000"
-				        android:typeface="serif"
-				        android:text="+16"
-				        android:background="@drawable/white_square_up_right_rounded_corner"
-				        android:textAppearance="?android:attr/textAppearanceLarge" />
-		        </TableRow>
-				<TableRow 
-		            android:layout_height="40dp"
-		            android:layout_width="match_parent">
-		
-				    <TextView
-				        android:layout_width="60dp"
-				        android:layout_height="40dp"
-				        android:paddingLeft="5dp"
-				        android:textStyle="bold"
-				        android:gravity="center_vertical"
-				        android:textColor="#000"
-				        android:typeface="serif"
-				        android:text="PP"
-				        android:textAppearance="?android:attr/textAppearanceLarge" />
-		            
-				    <TextView
-				        android:layout_width="50dp"
-				        android:layout_height="40dp"
-				        android:textColor="#000"
-				        android:typeface="serif"
-				        android:gravity="center"
-				        android:text="+16"
-				        android:background="@drawable/white_square_down_right_rounded_corner"
-				        android:textAppearance="?android:attr/textAppearanceLarge" />
-				    
-		        </TableRow>
-		    </TableLayout>
-            -->
 
             <FrameLayout
                 android:id="@+id_play/fragment_skills"
