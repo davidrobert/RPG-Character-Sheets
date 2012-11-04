@@ -12,7 +12,7 @@ import android.widget.TextView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.activity.fragment.PlayAbilities;
 import br.com.while42.rpgcs.activity.fragment.PlayAttacks;
-import br.com.while42.rpgcs.activity.fragment.PlayDefences;
+import br.com.while42.rpgcs.activity.fragment.PlaySavingThrows;
 import br.com.while42.rpgcs.activity.fragment.PlayHeader;
 import br.com.while42.rpgcs.activity.fragment.PlayHitPoints;
 import br.com.while42.rpgcs.activity.fragment.PlayLanguages;
@@ -58,7 +58,7 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 		transaction.replace(R.id_play.fragment_header, new PlayHeader(rpgCharacter), PlayHeader.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_abilities, new PlayAbilities(abilities), PlayAbilities.class.getCanonicalName());
-		transaction.replace(R.id_play.fragment_defences, new PlayDefences(defences, savingThrows), PlayDefences.class.getCanonicalName());
+		transaction.replace(R.id_play.fragment_savingthrows, new PlaySavingThrows(defences, savingThrows), PlaySavingThrows.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_vision_deity, new PlayVisionAndDeity(attr), PlayVisionAndDeity.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_language, new PlayLanguages(languages), PlayLanguages.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_skills, new PlaySkills(skills), PlaySkills.class.getCanonicalName());

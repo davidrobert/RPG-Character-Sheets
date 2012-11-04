@@ -28,7 +28,7 @@
                 android:layout_below="@+id_play/textView2" />
 
             <FrameLayout
-                android:id="@+id_play/fragment_defences"
+                android:id="@+id_play/fragment_savingthrows"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id_play/textView2" />

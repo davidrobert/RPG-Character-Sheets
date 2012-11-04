@@ -10,15 +10,15 @@ import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.character.Defences;
 import br.com.while42.rpgcs.model.character.SavingThrows;
 
-public class PlayDefences extends Fragment {
+public class PlaySavingThrows extends Fragment {
 
 	private Defences defences;
 	private SavingThrows savingThrows;
 
-	public PlayDefences() {
+	public PlaySavingThrows() {
 	}
 
-	public PlayDefences(Defences defences, SavingThrows savingThrows) {
+	public PlaySavingThrows(Defences defences, SavingThrows savingThrows) {
 		this.defences = defences;
 		this.savingThrows = savingThrows;
 	}
@@ -26,7 +26,7 @@ public class PlayDefences extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-		View layout = inflater.inflate(R.layout.fragment_play_defences, container, false);
+		View layout = inflater.inflate(R.layout.fragment_play_savingthrows, container, false);
 
 		if (defences != null) {
 			TextView tvArmorClass = (TextView) layout.findViewById(R.id_frag_play_defences.textview_armor_class);
