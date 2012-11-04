@@ -28,10 +28,10 @@ public class PlayDefencesOther extends Fragment {
 		if (defences == null)
 			return layout;
 
-		TextView tvInitiative = (TextView) layout.findViewById(R.id_play.textview_initiative);
-		TextView tvSpeed = (TextView) layout.findViewById(R.id_play.textview_speed);
-		TextView tvGrapple = (TextView) layout.findViewById(R.id_play.textview_grapple);
-		TextView tvSpellResistence = (TextView) layout.findViewById(R.id_play.textview_spell_resistence);
+		TextView tvInitiative = (TextView) layout.findViewById(R.id_frag_play_defences_other.textview_initiative);
+		TextView tvSpeed = (TextView) layout.findViewById(R.id_frag_play_defences_other.textview_speed);
+		TextView tvGrapple = (TextView) layout.findViewById(R.id_frag_play_defences_other.textview_grapple);
+		TextView tvSpellResistence = (TextView) layout.findViewById(R.id_frag_play_defences_other.textview_spell_resistence);
 
 		// TODO: Falta implementar
 		tvInitiative.setText("+1");

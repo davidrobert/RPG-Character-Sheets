@@ -5,11 +5,11 @@
     android:orientation="vertical" >
 
     <TableLayout
-        android:id="@+id_play/resistansesBox"
+        android:id="@+id_frag_play_defences_other/resistansesBox"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id_play/textView2"
-        android:layout_below="@+id_play/textView2"
+        android:layout_alignLeft="@+id_frag_play_defences_other/textView2"
+        android:layout_below="@+id_frag_play_defences_other/textView2"
         android:layout_marginLeft="325dp"
         android:layout_marginTop="180dp"
         android:background="@drawable/layout_table" >
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id_play/textView3"
+                android:id="@+id_frag_play_defences_other/textView3"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
@@ -31,7 +31,7 @@
                 android:typeface="serif" />
 
             <TextView
-                android:id="@+id_play/textview_initiative"
+                android:id="@+id_frag_play_defences_other/textview_initiative"
                 android:layout_width="50dp"
                 android:layout_height="fill_parent"
                 android:background="@drawable/white_square_up_right_rounded_corner"
@@ -48,7 +48,7 @@
             android:background="@drawable/layout_row_border_bottom" >
 
             <TextView
-                android:id="@+id_play/textView3"
+                android:id="@+id_frag_play_defences_other/textView3"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
@@ -60,7 +60,7 @@
                 android:typeface="serif" />
 
             <TextView
-                android:id="@+id_play/textview_speed"
+                android:id="@+id_frag_play_defences_other/textview_speed"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/layout_text_white"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id_play/textView3"
+                android:id="@+id_frag_play_defences_other/textView3"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
@@ -88,7 +88,7 @@
                 android:typeface="serif" />
 
             <TextView
-                android:id="@+id_play/textview_grapple"
+                android:id="@+id_frag_play_defences_other/textview_grapple"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/layout_text_white"
@@ -105,7 +105,7 @@
             android:background="@drawable/layout_row_border_bottom" >
 
             <TextView
-                android:id="@+id_play/textView3"
+                android:id="@+id_frag_play_defences_other/textView3"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
@@ -117,7 +117,7 @@
                 android:typeface="serif" />
 
             <TextView
-                android:id="@+id_play/textview_spell_resistence"
+                android:id="@+id_frag_play_defences_other/textview_spell_resistence"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/layout_text_white"
