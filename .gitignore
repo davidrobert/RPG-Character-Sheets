@@ -8,6 +8,9 @@
 # Java class files
 *.class
 
+# cache files
+*.cache
+
 # generated files
 RPG-Character-Sheets/bin/
 RPG-Character-Sheets/gen/
