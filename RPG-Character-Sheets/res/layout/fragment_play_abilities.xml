@@ -17,7 +17,7 @@
 
             <TextView
                 android:id="@+id_frag_play_abilities/textView3"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="fill_parent"
                 android:gravity="center_vertical"
                 android:text="@string/abilitys"
