@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- Defenses Title Box -->
+
+    <TableLayout
+        android:id="@+id_frag_play_defences/defensesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id_frag_play_defences/textView2"
+        android:layout_marginLeft="185dp"
+        android:layout_marginTop="155dp" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp" >
+
+            <TextView
+                android:id="@+id_frag_play_defences/textView3"
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="@string/defences"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:typeface="serif" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- Defenses Box -->
+
+    <TableLayout
+        android:id="@+id_frag_play_defences/defenses1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id_frag_play_defences/textView2"
+        android:layout_below="@+id_frag_play_defences/textView2"
+        android:layout_marginLeft="185dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/layout_table" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id_frag_play_defences/textView3"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/defences_armor_class_abbreviation"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_defences/textview_armor_class"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/white_square_all_right_rounded_corners"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id_frag_play_defences/defenses2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id_frag_play_defences/textView2"
+        android:layout_below="@+id_frag_play_defences/textView2"
+        android:layout_marginLeft="185dp"
+        android:layout_marginTop="245dp"
+        android:background="@drawable/layout_table" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id_frag_play_defences/textView3"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/saving_throws_fortitude_abbreviation"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_defences/textview_fortitude"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/white_square_all_right_rounded_corners"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id_frag_play_defences/defenses3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id_frag_play_defences/textView2"
+        android:layout_below="@+id_frag_play_defences/textView2"
+        android:layout_marginLeft="185dp"
+        android:layout_marginTop="310dp"
+        android:background="@drawable/layout_table" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id_frag_play_defences/textView3"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/saving_throws_reflex_abbreviation"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_defences/textview_reflex"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/white_square_all_right_rounded_corners"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id_frag_play_defences/defenses4"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id_frag_play_defences/textView2"
+        android:layout_below="@+id_frag_play_defences/textView2"
+        android:layout_marginLeft="185dp"
+        android:layout_marginTop="375dp"
+        android:background="@drawable/layout_table" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id_frag_play_defences/textView3"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/saving_throws_will_abbreviation"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_defences/textview_will"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/white_square_all_right_rounded_corners"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

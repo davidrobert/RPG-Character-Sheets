@@ -12,6 +12,7 @@ import android.widget.TextView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.activity.fragment.PlayAbilities;
 import br.com.while42.rpgcs.activity.fragment.PlayAttacks;
+import br.com.while42.rpgcs.activity.fragment.PlayDefences;
 import br.com.while42.rpgcs.activity.fragment.PlayHeader;
 import br.com.while42.rpgcs.activity.fragment.PlayLanguages;
 import br.com.while42.rpgcs.activity.fragment.PlaySkills;
@@ -50,21 +51,20 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		Languages languages = rpgCharacter.getLanguages();
 		Attributes attr = rpgCharacter.getAttributes();
 		Equipments equipments = rpgCharacter.getEquipments();
+		Defences defences = rpgCharacter.getDefences();
+		SavingThrows savingThrows = rpgCharacter.getSavingThrows();
 
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 		transaction.replace(R.id_play.fragment_header, new PlayHeader(rpgCharacter), PlayHeader.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_abilities, new PlayAbilities(abilities), PlayAbilities.class.getCanonicalName());
+		transaction.replace(R.id_play.fragment_defences, new PlayDefences(defences, savingThrows), PlayDefences.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_vision_deity, new PlayVisionAndDeity(attr), PlayVisionAndDeity.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_language, new PlayLanguages(languages), PlayLanguages.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_skills, new PlaySkills(skills), PlaySkills.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_attacks, new PlayAttacks(equipments), PlayAttacks.class.getCanonicalName());
 		transaction.commit();
 
-		TextView tvArmorClass = (TextView) findViewById(R.id_play.textview_armor_class);
-
-		TextView tvFortitude = (TextView) findViewById(R.id_play.textview_fortitude);
-		TextView tvReflex = (TextView) findViewById(R.id_play.textview_reflex);
-		TextView tvThrowsWill = (TextView) findViewById(R.id_play.textview_will);
+		
 
 		TextView tvTouch = (TextView) findViewById(R.id_play.textview_touch);
 		TextView tvFlatFoted = (TextView) findViewById(R.id_play.textview_flat_footed);
@@ -87,15 +87,8 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 
 		// ---
 
-		Defences defences = rpgCharacter.getDefences();
 
-		tvArmorClass.setText(defences.getArmorClass().toString());
-
-		SavingThrows savingThrows = rpgCharacter.getSavingThrows();
-
-		tvFortitude.setText(savingThrows.getFortitude().toString());
-		tvReflex.setText(savingThrows.getReflex().toString());
-		tvThrowsWill.setText(savingThrows.getThrowsWill().toString());
+		
 
 		// TODO: Falta implementar
 		tvTouch.setText("+10");

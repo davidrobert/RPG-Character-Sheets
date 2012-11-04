@@ -27,6 +27,9 @@ public class PlayAbilities extends Fragment {
 
 		View layout = inflater.inflate(R.layout.fragment_play_abilities, container, false);
 
+		if (abilities == null)
+			return layout;
+		
 		TextView tvStrength = (TextView) layout.findViewById(R.id_frag_play_abilities.textview_strength);
 		TextView tvStrengthModifier = (TextView) layout.findViewById(R.id_frag_play_abilities.textview_strength_modifier);
 		TextView tvConstitution = (TextView) layout.findViewById(R.id_frag_play_abilities.textview_constitution);
@@ -41,9 +44,6 @@ public class PlayAbilities extends Fragment {
 		TextView tvIntelligenceModifier = (TextView) layout.findViewById(R.id_frag_play_abilities.textview_intelligence_modifier);
 		
 		NumberFormat fmt = new DecimalFormat("+#;-#");
-		
-		if (abilities == null)
-			return layout;
 		
 		String strength = abilities.getStrength().toString();
 		String strengthMod = fmt.format(abilities.getStrengthModifier());
