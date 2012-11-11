@@ -7,16 +7,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import br.com.while42.rpgcs.R;
-import br.com.while42.rpgcs.model.character.Attributes;
+import br.com.while42.rpgcs.model.character.Characteristics;
 
 public class PlayVisionAndDeity extends Fragment {
 
-	private Attributes attr;
+	private Characteristics attr;
 
 	public PlayVisionAndDeity() {
 	}
 
-	public PlayVisionAndDeity(Attributes attr) {
+	public PlayVisionAndDeity(Characteristics attr) {
 		this.attr = attr;
 	}
 

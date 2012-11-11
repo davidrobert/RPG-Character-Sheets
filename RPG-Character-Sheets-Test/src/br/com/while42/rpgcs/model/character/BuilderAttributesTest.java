@@ -14,8 +14,8 @@ import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 public class BuilderAttributesTest extends AndroidTestCase {
 
 	public void testBuilder() throws Throwable {
-		BuilderAttributes builder = new BuilderAttributes();
-		Attributes attributes = builder.setName("Blob")
+		BuilderCharacteristics builder = new BuilderCharacteristics();
+		Characteristics characteristics = builder.setName("Blob")
 				                       .setRace(TypeRpgRace.HUMAN)
 				                       .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 				                       .setReligion(TypeRpgReligion.NONE)
@@ -30,17 +30,17 @@ public class BuilderAttributesTest extends AndroidTestCase {
 				                       .setVision(TypeVision.NORMAL)
 				                       .toAttributes();
 		
-		assertEquals("Blob", attributes.getName());
-		assertEquals(TypeRpgRace.HUMAN, attributes.getRace());
-		assertEquals(TypeRpgAlignment.TRUE_NEUTRAL, attributes.getAlignment());
-		assertEquals(TypeRpgReligion.NONE, attributes.getReligion());
-		assertEquals(TypeRpgSize.MEDIUM, attributes.getSize());
-		assertEquals(30, attributes.getAge().intValue());
-		assertEquals(TypeGender.MEN, attributes.getGender());
-		assertEquals(169, attributes.getHeight().intValue());
-		assertEquals(83, attributes.getWeight().intValue());
-		assertEquals(TypeEyeColor.Brown, attributes.getEye());
-		assertEquals(TypeHairColor.BROWN, attributes.getHair());
-		assertEquals(TypeSkinColor.BROWN, attributes.getSkin());
+		assertEquals("Blob", characteristics.getName());
+		assertEquals(TypeRpgRace.HUMAN, characteristics.getRace());
+		assertEquals(TypeRpgAlignment.TRUE_NEUTRAL, characteristics.getAlignment());
+		assertEquals(TypeRpgReligion.NONE, characteristics.getReligion());
+		assertEquals(TypeRpgSize.MEDIUM, characteristics.getSize());
+		assertEquals(30, characteristics.getAge().intValue());
+		assertEquals(TypeGender.MEN, characteristics.getGender());
+		assertEquals(169, characteristics.getHeight().intValue());
+		assertEquals(83, characteristics.getWeight().intValue());
+		assertEquals(TypeEyeColor.Brown, characteristics.getEye());
+		assertEquals(TypeHairColor.BROWN, characteristics.getHair());
+		assertEquals(TypeSkinColor.BROWN, characteristics.getSkin());
 	}
 }

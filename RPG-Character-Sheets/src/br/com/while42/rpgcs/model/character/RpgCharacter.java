@@ -18,7 +18,7 @@ public class RpgCharacter implements Serializable {
 	private Long id;
 	private String image;
 	
-	private Attributes attributes;
+	private Characteristics characteristics;
 	
 	private RpgClass classes;
 	private Abilities abilities;
@@ -38,9 +38,9 @@ public class RpgCharacter implements Serializable {
 
 	// TODO: Imutability
 	
-	public RpgCharacter(Attributes attributes) {
+	public RpgCharacter(Characteristics characteristics) {
 		
-		this.attributes = attributes;
+		this.characteristics = characteristics;
 		
 		this.id = 0L;
 		this.image = "";
@@ -110,12 +110,12 @@ public class RpgCharacter implements Serializable {
 		return defences;
 	}
 	
-	public void setAttributes(Attributes attributes) {
-		this.attributes = attributes;
+	public void setAttributes(Characteristics attributes) {
+		this.characteristics = attributes;
 	}
 	
-	public Attributes getAttributes() {
-		return attributes;
+	public Characteristics getAttributes() {
+		return characteristics;
 	}
 	
 	public void setSavingThrows(SavingThrows savingThrows) {
@@ -224,7 +224,7 @@ public class RpgCharacter implements Serializable {
 				image.equals(rc.image) &&
 				
 				classes.equals(rc.classes) &&
-				attributes.equals(rc.attributes) &&
+				characteristics.equals(rc.characteristics) &&
 				abilities.equals(rc.abilities) &&
 				defences.equals(rc.defences) &&
 				savingThrows.equals(rc.savingThrows) &&
@@ -248,7 +248,7 @@ public class RpgCharacter implements Serializable {
 		sb.append(" id: ").append(id);
 		
 		sb.append(" classes: ").append(classes);
-		sb.append(" attributes: ").append(attributes);
+		sb.append(" characteristics: ").append(characteristics);
 		sb.append(" abilities: ").append(abilities);
 		sb.append(" defences: ").append(defences);
 		sb.append(" savingThrows: ").append(savingThrows);

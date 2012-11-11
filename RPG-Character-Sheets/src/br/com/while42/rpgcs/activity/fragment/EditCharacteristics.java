@@ -14,7 +14,7 @@ import android.widget.Spinner;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.activity.Element;
 import br.com.while42.rpgcs.model.TypeCode;
-import br.com.while42.rpgcs.model.character.Attributes;
+import br.com.while42.rpgcs.model.character.Characteristics;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
@@ -25,7 +25,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 
 public class EditCharacteristics extends Fragment {
 
-	private Attributes attributes;
+	private Characteristics characteristics;
 
 	private EditText nameEditText;
 	private Spinner raceSpinner;
@@ -42,8 +42,8 @@ public class EditCharacteristics extends Fragment {
 	public EditCharacteristics() {
 	}
 
-	public EditCharacteristics(Attributes attributes) {
-		this.attributes = attributes;
+	public EditCharacteristics(Characteristics characteristics) {
+		this.characteristics = characteristics;
 	}
 
 	@Override
@@ -71,25 +71,25 @@ public class EditCharacteristics extends Fragment {
 		setOptionsSpinner(hairSpinner, TypeHairColor.values());
 		setOptionsSpinner(skinSpinner, TypeSkinColor.values());
 
-		loadCharacteristics(attributes);
+		loadCharacteristics(characteristics);
 
 		return layout;
 	}
 
-	private void loadCharacteristics(Attributes attributes) {
+	private void loadCharacteristics(Characteristics characteristics) {
 		
-		if (attributes == null)
+		if (characteristics == null)
 			return;
 
-		nameEditText.setText(attributes.getName());
+		nameEditText.setText(characteristics.getName());
 		// TODO: Race
 		// TODO: Aligment
 		// TODO: Gender
 		// TODO: Religion
 		// TODO: Vision
-		ageEditText.setText(attributes.getAge().toString());
-		heightEditText.setText(attributes.getHeight().toString());
-		weightEditText.setText(attributes.getWeight().toString());
+		ageEditText.setText(characteristics.getAge().toString());
+		heightEditText.setText(characteristics.getHeight().toString());
+		weightEditText.setText(characteristics.getWeight().toString());
 		// TODO: Hair
 		// TODO: Skin
 	}

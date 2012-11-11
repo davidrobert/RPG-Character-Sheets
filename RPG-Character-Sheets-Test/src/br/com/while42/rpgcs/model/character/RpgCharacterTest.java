@@ -32,8 +32,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 		List<RpgCharacter> rpgCharacterSheets = new ArrayList<RpgCharacter>();
 		
 		{
-			BuilderAttributes builder = new BuilderAttributes();
-			Attributes attributes = builder.setName("Snarf")
+			BuilderCharacteristics builder = new BuilderCharacteristics();
+			Characteristics characteristics = builder.setName("Snarf")
 					.setRace(TypeRpgRace.HUMAN)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.NONE)
@@ -48,7 +48,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
-			RpgCharacter rc = new RpgCharacter(attributes);
+			RpgCharacter rc = new RpgCharacter(characteristics);
 			
 			Equipments equip = rc.getEquipments();			
 			equip.addWeapon(new Dart(), SizeWeapon.MEDIUM);;
@@ -57,8 +57,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 		}
 
 		{
-			BuilderAttributes builder = new BuilderAttributes();
-			Attributes attributes = builder.setName("Blob")
+			BuilderCharacteristics builder = new BuilderCharacteristics();
+			Characteristics characteristics = builder.setName("Blob")
 					.setRace(TypeRpgRace.HUMAN)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.NONE)
@@ -73,7 +73,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
-			RpgCharacter rc = new RpgCharacter(attributes);
+			RpgCharacter rc = new RpgCharacter(characteristics);
 
 			AbstractRpgClass barbarian = new Barbarian();
 			barbarian.setClassLevel(1);
@@ -122,8 +122,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 		}
 
 		{
-			BuilderAttributes builder = new BuilderAttributes();
-			Attributes attributes = builder.setName("Deltorei")
+			BuilderCharacteristics builder = new BuilderCharacteristics();
+			Characteristics characteristics = builder.setName("Deltorei")
 					.setRace(TypeRpgRace.HUMAN)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.NONE)
@@ -138,7 +138,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
-			RpgCharacter rc = new RpgCharacter(attributes);
+			RpgCharacter rc = new RpgCharacter(characteristics);
 			
 			AbstractRpgClass monk = new Monk();
 			monk.setClassLevel(20);
@@ -204,8 +204,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 		}
 
 		{
-			BuilderAttributes builder = new BuilderAttributes();
-			Attributes attributes = builder.setName("Galadriel")
+			BuilderCharacteristics builder = new BuilderCharacteristics();
+			Characteristics characteristics = builder.setName("Galadriel")
 					.setRace(TypeRpgRace.ELF)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.OTHER)
@@ -220,7 +220,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
-			RpgCharacter rc = new RpgCharacter(attributes);
+			RpgCharacter rc = new RpgCharacter(characteristics);
 
 			AbstractRpgClass sorcerer = new Sorcerer();
 			sorcerer.setClassLevel(ExperienceAndLevel.MAX_LEVEL);
@@ -292,8 +292,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 	public void testIsPersistent() {
 		
-		BuilderAttributes builder = new BuilderAttributes();
-		Attributes attributes = builder.setName("Stark")
+		BuilderCharacteristics builder = new BuilderCharacteristics();
+		Characteristics characteristics = builder.setName("Stark")
 				.setRace(TypeRpgRace.HUMAN)
                 .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
                 .setReligion(TypeRpgReligion.NONE)
@@ -308,7 +308,7 @@ public class RpgCharacterTest extends AndroidTestCase {
                 .setVision(TypeVision.NORMAL)
                 .toAttributes();
 		
-		RpgCharacter rc = new RpgCharacter(attributes);
+		RpgCharacter rc = new RpgCharacter(characteristics);
 		
 		assertFalse(rc.isPersistent());
 	}

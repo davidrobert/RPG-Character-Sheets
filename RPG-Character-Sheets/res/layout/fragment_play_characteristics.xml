@@ -6,7 +6,7 @@
     android:gravity="top">
 
     <TextView
-        android:id="@+id_frag_play_header/textview_name"
+        android:id="@+id_frag_play_characteristics/textview_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -17,7 +17,7 @@
         android:typeface="serif" />
 
     <TableLayout
-        android:id="@+id_frag_play_header/subTitle"
+        android:id="@+id_frag_play_characteristics/subTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp" >
@@ -27,7 +27,7 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:id="@+id_frag_play_header/imageview_gender"
+                android:id="@+id_frag_play_characteristics/imageview_gender"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_gravity="center"
@@ -36,7 +36,7 @@
                 android:paddingTop="10dp" />
 
             <TextView
-                android:id="@+id_frag_play_header/textview_race"
+                android:id="@+id_frag_play_characteristics/textview_race"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:paddingLeft="10dp"
@@ -46,27 +46,7 @@
                 android:typeface="serif" />
 
             <TextView
-                android:id="@+id_frag_play_header/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="@string/bar"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#000"
-                android:typeface="serif" />
-
-            <TextView
-                android:id="@+id_frag_play_header/textview_alignment"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#000"
-                android:typeface="serif" />
-
-            <TextView
-                android:id="@+id_frag_play_header/textView3"
+                android:id="@+id_frag_play_characteristics/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:paddingLeft="10dp"
@@ -77,7 +57,7 @@
                 android:typeface="serif" />
 
             <TextView
-                android:id="@+id_frag_play_header/textview_experience"
+                android:id="@+id_frag_play_characteristics/textview_alignment"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text=""
@@ -86,7 +66,27 @@
                 android:typeface="serif" />
 
             <TextView
-                android:id="@+id_frag_play_header/textView6"
+                android:id="@+id_frag_play_characteristics/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/bar"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_characteristics/textview_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id_frag_play_characteristics/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:paddingLeft="10dp"
@@ -98,7 +98,7 @@
     </TableLayout>
 
     <TableLayout
-        android:id="@+id_frag_play_header/subTitle2"
+        android:id="@+id_frag_play_characteristics/subTitle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp" >
@@ -109,7 +109,7 @@
 
             <!--
 				    <TextView
-				        android:id="@+id_frag_play_header/textView3"
+				        android:id="@+id_frag_play_characteristics/textView3"
 				        android:layout_width="wrap_content"
 				        android:layout_height="fill_parent"
 				        android:textColor="#000"
@@ -120,7 +120,7 @@
             -->
 
             <TextView
-                android:id="@+id_frag_play_header/textview_classes_level"
+                android:id="@+id_frag_play_characteristics/textview_classes_level"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text=""

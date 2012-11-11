@@ -15,8 +15,8 @@ import android.widget.Spinner;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.TypeCode;
 import br.com.while42.rpgcs.model.character.Abilities;
-import br.com.while42.rpgcs.model.character.Attributes;
-import br.com.while42.rpgcs.model.character.BuilderAttributes;
+import br.com.while42.rpgcs.model.character.Characteristics;
+import br.com.while42.rpgcs.model.character.BuilderCharacteristics;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
@@ -222,8 +222,8 @@ public class EditRpgCharacter_OLD extends SherlockActivity {
 					ab.setCharisma(Integer.parseInt(etCharisma.getText().toString()));
 				}
 				
-				BuilderAttributes builder = new BuilderAttributes();
-				Attributes attributes = builder.setName(name)
+				BuilderCharacteristics builder = new BuilderCharacteristics();
+				Characteristics characteristics = builder.setName(name)
 						                       .setRace(race)
 											   .setAlignment(alignment)
 											   .setReligion(religion)
@@ -238,7 +238,7 @@ public class EditRpgCharacter_OLD extends SherlockActivity {
 											   .setVision(vision)
 											   .toAttributes();
 				
-				RpgCharacter cs = new RpgCharacter(attributes);
+				RpgCharacter cs = new RpgCharacter(characteristics);
 				cs.getRpgClasses().add(clazz);
 				cs.setAbilities(ab);
 				

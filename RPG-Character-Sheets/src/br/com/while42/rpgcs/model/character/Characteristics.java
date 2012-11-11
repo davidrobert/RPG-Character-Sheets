@@ -13,7 +13,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 
 
-public class Attributes implements Serializable {
+public class Characteristics implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private String name;
@@ -32,7 +32,7 @@ public class Attributes implements Serializable {
 	private TypeSkinColor skin;
 	private TypeVision vision;
 
-	protected Attributes() {		
+	protected Characteristics() {		
 	}
 	
 	public String getName() {
@@ -145,10 +145,10 @@ public class Attributes implements Serializable {
 		if (this == attributes)
 			return true;
 
-		if (!(attributes instanceof Attributes))
+		if (!(attributes instanceof Characteristics))
 			return false;
 
-		Attributes attr = (Attributes) attributes;
+		Characteristics attr = (Characteristics) attributes;
 
 		return name.equals(attr.name) &&
 				race.equals(attr.race) && 

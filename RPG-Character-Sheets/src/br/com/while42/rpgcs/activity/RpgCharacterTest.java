@@ -6,8 +6,8 @@ import android.util.Log;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.Abilities;
-import br.com.while42.rpgcs.model.character.Attributes;
-import br.com.while42.rpgcs.model.character.BuilderAttributes;
+import br.com.while42.rpgcs.model.character.Characteristics;
+import br.com.while42.rpgcs.model.character.BuilderCharacteristics;
 import br.com.while42.rpgcs.model.character.Defences;
 import br.com.while42.rpgcs.model.character.Languages;
 import br.com.while42.rpgcs.model.character.Money;
@@ -70,8 +70,8 @@ public class RpgCharacterTest extends SherlockActivity {
 	}
 
 	private RpgCharacter createRpgCharacterSheet() {
-		BuilderAttributes builder = new BuilderAttributes();
-		Attributes attributes = builder.setName("Blob")
+		BuilderCharacteristics builder = new BuilderCharacteristics();
+		Characteristics characteristics = builder.setName("Blob")
 				.setRace(TypeRpgRace.HUMAN)
                 .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
                 .setReligion(TypeRpgReligion.NONE)
@@ -86,7 +86,7 @@ public class RpgCharacterTest extends SherlockActivity {
                 .setVision(TypeVision.DARKVISION)
                 .toAttributes();
 		
-		RpgCharacter rc = new RpgCharacter(attributes);
+		RpgCharacter rc = new RpgCharacter(characteristics);
 		
 		rc.setId(100L);
 
