@@ -15,7 +15,8 @@ public class BuilderAttributesTest extends AndroidTestCase {
 
 	public void testBuilder() throws Throwable {
 		BuilderAttributes builder = new BuilderAttributes();
-		Attributes attributes = builder.setRace(TypeRpgRace.HUMAN)
+		Attributes attributes = builder.setName("Blob")
+				                       .setRace(TypeRpgRace.HUMAN)
 				                       .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 				                       .setReligion(TypeRpgReligion.NONE)
 				                       .setSize(TypeRpgSize.MEDIUM)
@@ -29,6 +30,7 @@ public class BuilderAttributesTest extends AndroidTestCase {
 				                       .setVision(TypeVision.NORMAL)
 				                       .toAttributes();
 		
+		assertEquals("Blob", attributes.getName());
 		assertEquals(TypeRpgRace.HUMAN, attributes.getRace());
 		assertEquals(TypeRpgAlignment.TRUE_NEUTRAL, attributes.getAlignment());
 		assertEquals(TypeRpgReligion.NONE, attributes.getReligion());

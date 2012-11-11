@@ -17,7 +17,6 @@ public class RpgCharacter implements Serializable {
 
 	private Long id;
 	private String image;
-	private String name;
 	
 	private Attributes attributes;
 	
@@ -39,8 +38,8 @@ public class RpgCharacter implements Serializable {
 
 	// TODO: Imutability
 	
-	public RpgCharacter(String name, Attributes attributes) {
-		this.name = name;
+	public RpgCharacter(Attributes attributes) {
+		
 		this.attributes = attributes;
 		
 		this.id = 0L;
@@ -85,14 +84,6 @@ public class RpgCharacter implements Serializable {
 
 	public void setImage(String image) {
 		this.image = image;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 	
 	public void setRpgClasses(RpgClass classes) {
@@ -231,7 +222,6 @@ public class RpgCharacter implements Serializable {
 
 		return (id.equals(rc.id) &&
 				image.equals(rc.image) &&
-				name.equals(rc.name) &&
 				
 				classes.equals(rc.classes) &&
 				attributes.equals(rc.attributes) &&
@@ -256,7 +246,6 @@ public class RpgCharacter implements Serializable {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append(" id: ").append(id);
-		sb.append(" name: ").append(name);
 		
 		sb.append(" classes: ").append(classes);
 		sb.append(" attributes: ").append(attributes);

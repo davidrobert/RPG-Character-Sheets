@@ -8,19 +8,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.model.character.Attributes;
-import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.model.character.RpgClass;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.classes.AbstractRpgClass;
 
 public class PlayHeader extends Fragment {
 
-	private RpgCharacter rpgCharacter;
+	private Attributes attributes;
+	private RpgClass classes;
 
 	public PlayHeader() {
 	}
 	
-	public PlayHeader(RpgCharacter rpgCharacter) {
-		this.rpgCharacter = rpgCharacter;
+	public PlayHeader(Attributes attributes, RpgClass classes) {
+		this.attributes = attributes;
+		this.classes = classes;
 	}
 
 	@Override
@@ -28,7 +30,7 @@ public class PlayHeader extends Fragment {
 
 		View layout = inflater.inflate(R.layout.fragment_play_header, container, false);
 
-		if (rpgCharacter == null)
+		if (attributes == null || classes == null)
 			return layout;
 		
 		TextView tvName = (TextView) layout.findViewById(R.id_frag_play_header.textview_name);
@@ -38,23 +40,21 @@ public class PlayHeader extends Fragment {
 		TextView tvClassesLevel = (TextView) layout.findViewById(R.id_frag_play_header.textview_classes_level);
 		TextView tvExperience = (TextView) layout.findViewById(R.id_frag_play_header.textview_experience);
 		
-		tvName.setText(rpgCharacter.getName());
+		tvName.setText(attributes.getName());
 
-		Attributes attr = rpgCharacter.getAttributes();
-
-		TypeGender gender = attr.getGender();
+		TypeGender gender = attributes.getGender();
 		if (TypeGender.MEN.equals(gender)) {
 			ivGender.setBackgroundResource(R.drawable.gender_m20);
 		} else if (TypeGender.WOMAN.equals(gender)) {
 			ivGender.setBackgroundResource(R.drawable.gender_f20);
 		}
 
-		tvRace.setText(getString(attr.getRace().getCodeName()));
+		tvRace.setText(getString(attributes.getRace().getCodeName()));
 
-		tvAlignment.setText(getString(attr.getAlignment().getCodeName()));
+		tvAlignment.setText(getString(attributes.getAlignment().getCodeName()));
 
 		StringBuilder sbClassLevel = new StringBuilder();
-		for (AbstractRpgClass clazz : rpgCharacter.getRpgClasses().getAll()) {
+		for (AbstractRpgClass clazz : classes.getAll()) {
 			if (sbClassLevel.length() > 0) {
 				sbClassLevel.append(" / ");
 			}
@@ -66,7 +66,7 @@ public class PlayHeader extends Fragment {
 
 		tvClassesLevel.setText(sbClassLevel.toString());
 
-		tvExperience.setText(rpgCharacter.getRpgClasses().getExperience().toString());
+		tvExperience.setText(classes.getExperience().toString());
 
 		return layout;
 	}

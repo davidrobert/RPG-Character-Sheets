@@ -33,7 +33,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 		
 		{
 			BuilderAttributes builder = new BuilderAttributes();
-			Attributes attributes = builder.setRace(TypeRpgRace.HUMAN)
+			Attributes attributes = builder.setName("Snarf")
+					.setRace(TypeRpgRace.HUMAN)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.NONE)
 	                .setSize(TypeRpgSize.MEDIUM)
@@ -47,7 +48,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
-			RpgCharacter rc = new RpgCharacter("Snarf", attributes);
+			RpgCharacter rc = new RpgCharacter(attributes);
 			
 			Equipments equip = rc.getEquipments();			
 			equip.addWeapon(new Dart(), SizeWeapon.MEDIUM);;
@@ -57,7 +58,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 		{
 			BuilderAttributes builder = new BuilderAttributes();
-			Attributes attributes = builder.setRace(TypeRpgRace.HUMAN)
+			Attributes attributes = builder.setName("Blob")
+					.setRace(TypeRpgRace.HUMAN)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.NONE)
 	                .setSize(TypeRpgSize.MEDIUM)
@@ -71,7 +73,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
-			RpgCharacter rc = new RpgCharacter("Blob", attributes);
+			RpgCharacter rc = new RpgCharacter(attributes);
 
 			AbstractRpgClass barbarian = new Barbarian();
 			barbarian.setClassLevel(1);
@@ -121,7 +123,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 		{
 			BuilderAttributes builder = new BuilderAttributes();
-			Attributes attributes = builder.setRace(TypeRpgRace.HUMAN)
+			Attributes attributes = builder.setName("Deltorei")
+					.setRace(TypeRpgRace.HUMAN)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.NONE)
 	                .setSize(TypeRpgSize.MEDIUM)
@@ -135,7 +138,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
-			RpgCharacter rc = new RpgCharacter("Deltorei", attributes);
+			RpgCharacter rc = new RpgCharacter(attributes);
 			
 			AbstractRpgClass monk = new Monk();
 			monk.setClassLevel(20);
@@ -202,7 +205,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 		{
 			BuilderAttributes builder = new BuilderAttributes();
-			Attributes attributes = builder.setRace(TypeRpgRace.ELF)
+			Attributes attributes = builder.setName("Galadriel")
+					.setRace(TypeRpgRace.ELF)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.OTHER)
 	                .setSize(TypeRpgSize.MEDIUM)
@@ -216,7 +220,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setVision(TypeVision.NORMAL)
 	                .toAttributes();
 			
-			RpgCharacter rc = new RpgCharacter("Galadriel", attributes);
+			RpgCharacter rc = new RpgCharacter(attributes);
 
 			AbstractRpgClass sorcerer = new Sorcerer();
 			sorcerer.setClassLevel(ExperienceAndLevel.MAX_LEVEL);
@@ -289,7 +293,8 @@ public class RpgCharacterTest extends AndroidTestCase {
 	public void testIsPersistent() {
 		
 		BuilderAttributes builder = new BuilderAttributes();
-		Attributes attributes = builder.setRace(TypeRpgRace.HUMAN)
+		Attributes attributes = builder.setName("Stark")
+				.setRace(TypeRpgRace.HUMAN)
                 .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
                 .setReligion(TypeRpgReligion.NONE)
                 .setSize(TypeRpgSize.MEDIUM)
@@ -303,7 +308,7 @@ public class RpgCharacterTest extends AndroidTestCase {
                 .setVision(TypeVision.NORMAL)
                 .toAttributes();
 		
-		RpgCharacter rc = new RpgCharacter("Stark", attributes);
+		RpgCharacter rc = new RpgCharacter(attributes);
 		
 		assertFalse(rc.isPersistent());
 	}

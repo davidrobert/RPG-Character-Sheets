@@ -25,6 +25,7 @@ import br.com.while42.rpgcs.model.character.Attributes;
 import br.com.while42.rpgcs.model.character.Defences;
 import br.com.while42.rpgcs.model.character.Languages;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.model.character.RpgClass;
 import br.com.while42.rpgcs.model.character.SavingThrows;
 import br.com.while42.rpgcs.model.character.Skills;
 import br.com.while42.rpgcs.model.equip.Equipments;
@@ -54,12 +55,13 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		Skills skills = rpgCharacter.getSkills();
 		Languages languages = rpgCharacter.getLanguages();
 		Attributes attr = rpgCharacter.getAttributes();
+		RpgClass rpgClasses = rpgCharacter.getRpgClasses();
 		Equipments equipments = rpgCharacter.getEquipments();
 		Defences defences = rpgCharacter.getDefences();
 		SavingThrows savingThrows = rpgCharacter.getSavingThrows();
 
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-		transaction.replace(R.id_play.fragment_header, new PlayHeader(rpgCharacter), PlayHeader.class.getCanonicalName());
+		transaction.replace(R.id_play.fragment_header, new PlayHeader(attr, rpgClasses), PlayHeader.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_abilities, new PlayAbilities(abilities), PlayAbilities.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_defences, new PlayDefences(defences), PlayDefences.class.getCanonicalName());
 		transaction.replace(R.id_play.fragment_savingthrows, new PlaySavingThrows(savingThrows), PlaySavingThrows.class.getCanonicalName());

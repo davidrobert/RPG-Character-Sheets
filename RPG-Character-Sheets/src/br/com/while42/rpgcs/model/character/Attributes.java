@@ -16,6 +16,8 @@ import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 public class Attributes implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
+	private String name;
+	
 	private TypeRpgRace race;
 	private TypeRpgAlignment alignment;
 	private TypeRpgReligion religion;
@@ -31,6 +33,14 @@ public class Attributes implements Serializable {
 	private TypeVision vision;
 
 	protected Attributes() {		
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	public TypeRpgRace getRace() {
@@ -140,7 +150,8 @@ public class Attributes implements Serializable {
 
 		Attributes attr = (Attributes) attributes;
 
-		return race.equals(attr.race) && 
+		return name.equals(attr.name) &&
+				race.equals(attr.race) && 
 				alignment.equals(attr.alignment) && 
 				religion.equals(attr.religion) && 
 				size.equals(attr.size) && 
@@ -157,6 +168,7 @@ public class Attributes implements Serializable {
 	public String toString() {
 		StringBuilder sb = new StringBuilder("");
 		
+		sb.append(" name: ").append(name);
 		sb.append(" race: ").append(race);
 		sb.append(" alignment: ").append(alignment);
 		sb.append(" religion: ").append(religion);

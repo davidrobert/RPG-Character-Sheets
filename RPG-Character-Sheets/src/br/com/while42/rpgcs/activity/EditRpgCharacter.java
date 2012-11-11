@@ -28,7 +28,7 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 		EditClasses editClasses;
 		
 		if (rpgCharacter != null) {
-			editCharacteristics = new EditCharacteristics(rpgCharacter);
+			editCharacteristics = new EditCharacteristics(rpgCharacter.getAttributes());
 			editClasses = new EditClasses(rpgCharacter.getRpgClasses());
 		} else {
 			editCharacteristics = new EditCharacteristics();

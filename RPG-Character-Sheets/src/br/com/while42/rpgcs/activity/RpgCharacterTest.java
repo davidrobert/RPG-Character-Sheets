@@ -71,7 +71,8 @@ public class RpgCharacterTest extends SherlockActivity {
 
 	private RpgCharacter createRpgCharacterSheet() {
 		BuilderAttributes builder = new BuilderAttributes();
-		Attributes attributes = builder.setRace(TypeRpgRace.HUMAN)
+		Attributes attributes = builder.setName("Blob")
+				.setRace(TypeRpgRace.HUMAN)
                 .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
                 .setReligion(TypeRpgReligion.NONE)
                 .setSize(TypeRpgSize.MEDIUM)
@@ -85,7 +86,7 @@ public class RpgCharacterTest extends SherlockActivity {
                 .setVision(TypeVision.DARKVISION)
                 .toAttributes();
 		
-		RpgCharacter rc = new RpgCharacter("Blob", attributes);
+		RpgCharacter rc = new RpgCharacter(attributes);
 		
 		rc.setId(100L);
 

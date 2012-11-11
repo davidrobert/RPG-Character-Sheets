@@ -15,7 +15,6 @@ import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.activity.Element;
 import br.com.while42.rpgcs.model.TypeCode;
 import br.com.while42.rpgcs.model.character.Attributes;
-import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
@@ -26,7 +25,7 @@ import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 
 public class EditCharacteristics extends Fragment {
 
-	private RpgCharacter rpgCharacter;
+	private Attributes attributes;
 
 	private EditText nameEditText;
 	private Spinner raceSpinner;
@@ -43,8 +42,8 @@ public class EditCharacteristics extends Fragment {
 	public EditCharacteristics() {
 	}
 
-	public EditCharacteristics(RpgCharacter rpgCharacter) {
-		this.rpgCharacter = rpgCharacter;
+	public EditCharacteristics(Attributes attributes) {
+		this.attributes = attributes;
 	}
 
 	@Override
@@ -72,19 +71,17 @@ public class EditCharacteristics extends Fragment {
 		setOptionsSpinner(hairSpinner, TypeHairColor.values());
 		setOptionsSpinner(skinSpinner, TypeSkinColor.values());
 
-		loadCharacteristics(rpgCharacter);
+		loadCharacteristics(attributes);
 
 		return layout;
 	}
 
-	private void loadCharacteristics(RpgCharacter rpgCharacter) {
+	private void loadCharacteristics(Attributes attributes) {
 		
-		if (rpgCharacter == null)
+		if (attributes == null)
 			return;
 
-		Attributes attributes = rpgCharacter.getAttributes();
-
-		nameEditText.setText(rpgCharacter.getName());
+		nameEditText.setText(attributes.getName());
 		// TODO: Race
 		// TODO: Aligment
 		// TODO: Gender

@@ -223,7 +223,8 @@ public class EditRpgCharacter_OLD extends SherlockActivity {
 				}
 				
 				BuilderAttributes builder = new BuilderAttributes();
-				Attributes attributes = builder.setRace(race)
+				Attributes attributes = builder.setName(name)
+						                       .setRace(race)
 											   .setAlignment(alignment)
 											   .setReligion(religion)
 											   .setSize(size)
@@ -237,7 +238,7 @@ public class EditRpgCharacter_OLD extends SherlockActivity {
 											   .setVision(vision)
 											   .toAttributes();
 				
-				RpgCharacter cs = new RpgCharacter(name, attributes);
+				RpgCharacter cs = new RpgCharacter(attributes);
 				cs.getRpgClasses().add(clazz);
 				cs.setAbilities(ab);
 				

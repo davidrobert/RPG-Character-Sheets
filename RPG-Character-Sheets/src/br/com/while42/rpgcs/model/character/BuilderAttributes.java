@@ -12,6 +12,8 @@ import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 
 public class BuilderAttributes {
 
+	private String name;
+	
 	private TypeRpgRace race;
 	private TypeRpgAlignment alignment;
 	private TypeRpgReligion religion;
@@ -26,10 +28,19 @@ public class BuilderAttributes {
 	private TypeSkinColor skin;
 	private TypeVision vision;
 	
-	public BuilderAttributesWithRace setRace(TypeRpgRace race) {
-		return new BuilderAttributesWithRace(race);
+	public BuilderAttributesWithName setName(String name) {
+		return new BuilderAttributesWithName(name);
 	}
-
+	
+	public class BuilderAttributesWithName {
+		private BuilderAttributesWithName(String n) {
+			name = n;
+		}
+		public BuilderAttributesWithRace setRace(TypeRpgRace race) {
+			return new BuilderAttributesWithRace(race);
+		}
+	}
+	
 	public class BuilderAttributesWithRace {
 		private BuilderAttributesWithRace(TypeRpgRace r) {
 			race = r;
@@ -137,6 +148,7 @@ public class BuilderAttributes {
 		public Attributes toAttributes() {
 			Attributes attr = new Attributes();
 
+			attr.setName(name);
 			attr.setRace(race);
 			attr.setAlignment(alignment);
 			attr.setReligion(religion);
