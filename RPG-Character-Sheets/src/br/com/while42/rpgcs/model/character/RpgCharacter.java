@@ -39,10 +39,6 @@ public class RpgCharacter implements Serializable {
 
 	// TODO: Imutability
 	
-	public RpgCharacter() {
-		this("", new Attributes());
-	}
-	
 	public RpgCharacter(String name, Attributes attributes) {
 		this.name = name;
 		this.attributes = attributes;

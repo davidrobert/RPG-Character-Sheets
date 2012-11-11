@@ -7,7 +7,6 @@ import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.activity.fragment.EditCharacteristics;
 import br.com.while42.rpgcs.activity.fragment.EditClasses;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
-import br.com.while42.rpgcs.model.character.RpgClass;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
@@ -24,14 +23,21 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 		Log.d("ACTIVITY", "EditRpgCharacter");
 		
 		rpgCharacter = new RpgCharacterIntentUtils().getSerializeRpgCharacter(getIntent());
-		if (rpgCharacter == null)
-			rpgCharacter = new RpgCharacter();
 		
-		RpgClass rpgClasses = rpgCharacter.getRpgClasses();
+		EditCharacteristics editCharacteristics;
+		EditClasses editClasses;
 		
+		if (rpgCharacter != null) {
+			editCharacteristics = new EditCharacteristics(rpgCharacter);
+			editClasses = new EditClasses(rpgCharacter.getRpgClasses());
+		} else {
+			editCharacteristics = new EditCharacteristics();
+			editClasses = new EditClasses();
+		}
+
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-		transaction.replace(R.id_edit.fragment_characteristics, new EditCharacteristics(rpgCharacter), EditCharacteristics.class.getCanonicalName());
-		transaction.replace(R.id_edit.fragment_classes, new EditClasses(rpgClasses), EditClasses.class.getCanonicalName());
+		transaction.replace(R.id_edit.fragment_characteristics, editCharacteristics, EditCharacteristics.class.getCanonicalName());
+		transaction.replace(R.id_edit.fragment_classes, editClasses, EditClasses.class.getCanonicalName());
 		transaction.commit();
 	}
 

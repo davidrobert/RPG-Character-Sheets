@@ -13,12 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
+        <!-- Name -->
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
             <TextView
-                android:id="@+id_frag_edit_caract/textview_name"
+                android:id="@+id_frag_edit_characteristics/textview_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/edit_label_name"
@@ -26,10 +28,155 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id_frag_edit_caract/edittext_name"
+                android:id="@+id_frag_edit_characteristics/edittext_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_span="3"
                 android:inputType="textPersonName" >
+            </EditText>
+        </TableRow>
+
+        <!-- Race & Alignment -->
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id_frag_edit_characteristics/textview_race"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_label_race"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id_frag_edit_characteristics/spinner_race"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </Spinner>
+
+            <TextView
+                android:id="@+id_frag_edit_characteristics/textview_alignment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_label_alignment"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id_frag_edit_characteristics/spinner_alignment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </Spinner>
+        </TableRow>
+
+        <!-- Gender & Religion -->
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id_frag_edit_characteristics/textview_gender"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_label_gender"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id_frag_edit_characteristics/spinner_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true" >
+            </Spinner>
+
+            <TextView
+                android:id="@+id_frag_edit_characteristics/textview_religion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_label_religion"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id_frag_edit_characteristics/spinner_religion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </Spinner>
+        </TableRow>
+
+        <!-- Vision & Age -->
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id_frag_edit_characteristics/textview_vision"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Visão"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id_frag_edit_characteristics/spinner_vision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </Spinner>
+
+            <TextView
+                android:id="@+id_frag_edit_characteristics/textview_age"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_label_age"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id_frag_edit_characteristics/edittext_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" >
+            </EditText>
+        </TableRow>
+
+        <!-- Height & Weight -->
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id_frag_edit_characteristics/textview_height"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_label_height"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id_frag_edit_characteristics/edittext_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" >
+            </EditText>
+
+            <TextView
+                android:id="@+id_frag_edit_characteristics/textview_weight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_label_weight"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id_frag_edit_characteristics/edittext_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" >
             </EditText>
         </TableRow>
     </TableLayout>
