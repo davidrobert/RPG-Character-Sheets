@@ -34,6 +34,7 @@ import com.actionbarsherlock.app.ActionBar.Tab;
 import com.actionbarsherlock.app.ActionBar.TabListener;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
 
 public class PlayRpgCharacter extends SherlockFragmentActivity {
 
@@ -47,7 +48,7 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 
 		Log.d("ACTIVITY", "PlayRpgCharacter");
 
-		getSerializeRpgCharacter();
+		rpgCharacter = new RpgCharacterIntentUtils().getSerializeRpgCharacter(getIntent());
 
 		Abilities abilities = rpgCharacter.getAbilities();
 		Skills skills = rpgCharacter.getSkills();
@@ -134,7 +135,7 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		getSerializeRpgCharacter();
+		rpgCharacter = new RpgCharacterIntentUtils().getSerializeRpgCharacter(getIntent());
 	}
 
 	@Override
@@ -148,7 +149,7 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getSupportMenuInflater().inflate(R.menu.inicio, menu);
+		getSupportMenuInflater().inflate(R.menu.play_options, menu);
 		ActionBar actionBar = getSupportActionBar();
 
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -167,6 +168,15 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		// builder.addTab(NotesRpgCharacter.class,
 		// R.string.notes_title_activity);
 
+		MenuItem itemNew = menu.findItem(R.id_menu_play.new_character);
+		Intent intentForNew = new Intent(PlayRpgCharacter.this, EditRpgCharacter.class);
+		itemNew.setIntent(intentForNew);
+		
+		MenuItem itemEdit = menu.findItem(R.id_menu_play.edit_character);
+		Intent intentForEdit = new Intent(PlayRpgCharacter.this, EditRpgCharacter.class);
+		new RpgCharacterIntentUtils().putSerializeRpgCharacter(intentForEdit, rpgCharacter);
+		itemEdit.setIntent(intentForEdit);
+		
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -213,25 +223,11 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		}
 	}
 
-	private void getSerializeRpgCharacter() {
-		Bundle bn = new Bundle();
-		bn = getIntent().getExtras();
-		rpgCharacter = (RpgCharacter) bn.getSerializable(RpgCharacter.class.getName());
-
-		Log.d("PLAY - ID: ", rpgCharacter.getId().toString());
-	}
-
 	private void startActivity(Class<? extends Activity> clazz) {
 		Intent intent = new Intent(PlayRpgCharacter.this, clazz);
 
-		putSerializeRpgCharacter(intent);
+		new RpgCharacterIntentUtils().putSerializeRpgCharacter(intent, rpgCharacter);
 		startActivity(intent);
-	}
-
-	private void putSerializeRpgCharacter(Intent intent) {
-		Bundle b = new Bundle();
-		b.putSerializable(RpgCharacter.class.getName(), rpgCharacter);
-		intent.putExtras(b);
 	}
 
 }

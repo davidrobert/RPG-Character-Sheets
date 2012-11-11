@@ -13,12 +13,12 @@
                 android:id="@+ordenacao/itens"
                 android:checkableBehavior="single" >
                 <item
-                    android:id="@+id_play/novo"
+                    android:id="@+id_menu_play/new_character"
                     android:showAsAction="always"
                     android:title="Novo">
                 </item>
                 <item
-                    android:id="@+id_play/editar"
+                    android:id="@+id_menu_play/edit_character"
                     android:showAsAction="always"
                     android:title="Editar"/>
             </group>

@@ -37,6 +37,11 @@ public class RpgCharacter implements Serializable {
 	private Integer baseAttackBonus;
 	private Integer grapple;
 
+	// TODO: Imutability
+	
+	public RpgCharacter() {
+		this("", new Attributes());
+	}
 	
 	public RpgCharacter(String name, Attributes attributes) {
 		this.name = name;
