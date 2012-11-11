@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.activity.Element;
 import br.com.while42.rpgcs.model.TypeCode;
@@ -82,16 +83,19 @@ public class EditCharacteristics extends Fragment {
 			return;
 
 		nameEditText.setText(characteristics.getName());
-		// TODO: Race
-		// TODO: Aligment
-		// TODO: Gender
-		// TODO: Religion
-		// TODO: Vision
+
+		setSelectionOptionsSpinner(raceSpinner, characteristics.getRace());
+		setSelectionOptionsSpinner(alignmentSpinner, characteristics.getAlignment());
+		setSelectionOptionsSpinner(genderSpinner, characteristics.getGender());
+		setSelectionOptionsSpinner(religionSpinner, characteristics.getReligion());
+		setSelectionOptionsSpinner(visionSpinner, characteristics.getVision());
+
 		ageEditText.setText(characteristics.getAge().toString());
 		heightEditText.setText(characteristics.getHeight().toString());
 		weightEditText.setText(characteristics.getWeight().toString());
-		// TODO: Hair
-		// TODO: Skin
+
+		setSelectionOptionsSpinner(hairSpinner, characteristics.getHair());
+		setSelectionOptionsSpinner(skinSpinner, characteristics.getSkin());
 	}
 
 	public void saveCharacteristics() {
@@ -147,6 +151,18 @@ public class EditCharacteristics extends Fragment {
 		item = (Element) skinSpinner.getSelectedItem();
 		TypeSkinColor skin = (TypeSkinColor) item.getType();
 		characteristics.setSkin(skin);
+	}
+
+	private void setSelectionOptionsSpinner(Spinner spinner, TypeCode type) {
+
+		SpinnerAdapter adapter = spinner.getAdapter();
+		for (int pos = 0; pos < adapter.getCount(); pos++) {
+			Element item = (Element) adapter.getItem(pos);
+			if (type.equals(item.getType())) {
+				spinner.setSelection(pos);
+				break;
+			}
+		}
 	}
 
 	private void setOptionsSpinner(Spinner spinner, TypeCode[] types) {
