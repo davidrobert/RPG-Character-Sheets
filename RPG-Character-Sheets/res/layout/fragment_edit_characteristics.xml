@@ -179,6 +179,43 @@
                 android:inputType="number" >
             </EditText>
         </TableRow>
+
+        <!-- Skin & Hair -->
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id_frag_edit_characteristics/textview_skin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_label_skin"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id_frag_edit_characteristics/spinner_skin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true" >
+            </Spinner>
+
+            <TextView
+                android:id="@+id_frag_edit_characteristics/textview_hair"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_label_hair"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id_frag_edit_characteristics/spinner_hair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true" >
+            </Spinner>
+        </TableRow>
     </TableLayout>
 
 </LinearLayout>
