@@ -8,7 +8,9 @@ import br.com.while42.rpgcs.activity.fragment.EditCharacteristics;
 import br.com.while42.rpgcs.activity.fragment.EditClasses;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
 
 public class EditRpgCharacter extends SherlockFragmentActivity {
 
@@ -46,5 +48,12 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 		super.onResume();
 		rpgCharacter = new RpgCharacterIntentUtils().getSerializeRpgCharacter(getIntent());
 	}
-	
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getSupportMenuInflater().inflate(R.menu.edit_options, menu);
+		ActionBar actionBar = getSupportActionBar();
+		
+		return super.onCreateOptionsMenu(menu);
+	}
 }
