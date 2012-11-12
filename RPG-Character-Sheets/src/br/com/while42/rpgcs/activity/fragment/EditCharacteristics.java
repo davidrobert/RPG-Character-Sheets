@@ -72,12 +72,12 @@ public class EditCharacteristics extends Fragment {
 		setOptionsSpinner(hairSpinner, TypeHairColor.values());
 		setOptionsSpinner(skinSpinner, TypeSkinColor.values());
 
-		loadCharacteristics(characteristics);
+		loadCharacteristics();
 
 		return layout;
 	}
 
-	private void loadCharacteristics(Characteristics characteristics) {
+	public void loadCharacteristics() {
 
 		if (characteristics == null)
 			return;
@@ -98,7 +98,7 @@ public class EditCharacteristics extends Fragment {
 		setSelectionOptionsSpinner(skinSpinner, characteristics.getSkin());
 	}
 
-	public void saveCharacteristics() {
+	public Characteristics saveCharacteristics() {
 		Element item;
 
 		// Name
@@ -151,6 +151,8 @@ public class EditCharacteristics extends Fragment {
 		item = (Element) skinSpinner.getSelectedItem();
 		TypeSkinColor skin = (TypeSkinColor) item.getType();
 		characteristics.setSkin(skin);
+
+		return characteristics;
 	}
 
 	private void setSelectionOptionsSpinner(Spinner spinner, TypeCode type) {

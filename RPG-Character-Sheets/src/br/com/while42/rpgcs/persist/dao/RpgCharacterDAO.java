@@ -38,7 +38,7 @@ public class RpgCharacterDAO implements Dao<RpgCharacter> {
 			//db.insert(RpgCharacterTable.NAME, nullColumnHack, values)
 			insertStatement.clearBindings();
 			
-			insertStatement.bindString(1, rpgCharacter.getAttributes().getName());
+			insertStatement.bindString(1, rpgCharacter.getCharacteristics().getName());
 			insertStatement.bindLong(2, RpgCharacter.getSerialVersionUID());
 			insertStatement.bindBlob(3, RpgCharacter.serialize(rpgCharacter));
 			

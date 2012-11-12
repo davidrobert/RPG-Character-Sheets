@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteException;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.persist.dao.RpgCharacterDAO;
 
-
 public class DataManager {
 
 	public static final int DATABASE_VERSION = 25;
@@ -23,7 +22,7 @@ public class DataManager {
 	public DataManager(Context context) {
 		this(context, false);
 	}
-	
+
 	public DataManager(Context context, boolean useDebugDb) {
 		this.context = context;
 		this.useDebugDb = useDebugDb;
@@ -65,11 +64,16 @@ public class DataManager {
 
 	public Long saveRpgCharacter(RpgCharacter rpgCharacter) {
 		long matchId = 0L;
+
+		if (rpgCharacter == null) {
+			return matchId;
+		}
+
 		try {
 			db.beginTransaction();
 			matchId = rpgCharacterDao.save(rpgCharacter);
-
 			db.setTransactionSuccessful();
+
 		} catch (SQLException e) {
 			// Log.e(context.getResources().getString(R.string.app_name),
 			// "Error saving match (transaction rolled back)", e);
@@ -91,13 +95,16 @@ public class DataManager {
 
 	public boolean deleteRpgCharacter(RpgCharacter rpgCharacter) {
 		boolean result = false;
+
+		if (rpgCharacter == null) {
+			return result;
+		}
+
 		try {
 			db.beginTransaction();
-			if (rpgCharacter != null) {
-
-				rpgCharacterDao.delete(rpgCharacter);
-			}
+			rpgCharacterDao.delete(rpgCharacter);
 			db.setTransactionSuccessful();
+
 			result = true;
 		} catch (SQLException e) {
 			// Log.e(context.getResources().getString(R.string.app_name),
@@ -110,4 +117,3 @@ public class DataManager {
 	}
 
 }
-

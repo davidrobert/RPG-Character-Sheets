@@ -53,6 +53,14 @@ public class DataManagerTest extends AndroidTestCase {
 		assertEquals(id.longValue(), rpgCharacter.getId().longValue());
 	}
 
+	public void testSaveRpgCharacterNull() {
+
+		Long id = dataManager.saveRpgCharacter(null);
+
+		// match
+		assertEquals(new Long(0L), id);
+	}
+	
 	public void testRetrieveRpgCharacter() throws Exception {
 		
 		RpgCharacter rpgCharacter = RpgCharacterTest.getList().get(0);
@@ -100,5 +108,10 @@ public class DataManagerTest extends AndroidTestCase {
 		}
 		
 		assertTrue(dataManager.retrieveAllRpgCharacters().isEmpty());
+	}
+	
+	public void testDeleteRpgCharacterNull() {
+		boolean status = dataManager.deleteRpgCharacter(null);
+		assertFalse(status);
 	}
 }

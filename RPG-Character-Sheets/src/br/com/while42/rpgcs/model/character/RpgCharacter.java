@@ -110,11 +110,11 @@ public class RpgCharacter implements Serializable {
 		return defences;
 	}
 	
-	public void setAttributes(Characteristics attributes) {
-		this.characteristics = attributes;
+	public void setCharacteristics(Characteristics characteristics) {
+		this.characteristics = characteristics;
 	}
 	
-	public Characteristics getAttributes() {
+	public Characteristics getCharacteristics() {
 		return characteristics;
 	}
 	

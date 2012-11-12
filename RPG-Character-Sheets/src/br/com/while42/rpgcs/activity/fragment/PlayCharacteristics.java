@@ -1,4 +1,5 @@
 package br.com.while42.rpgcs.activity.fragment;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -17,9 +18,16 @@ public class PlayCharacteristics extends Fragment {
 	private Characteristics characteristics;
 	private RpgClass classes;
 
+	private TextView nameTextView;
+	private ImageView genderImageView;
+	private TextView raceTextView;
+	private TextView alignmentTextView;
+	private TextView classesLevelTextView;
+	private TextView experienceTextView;
+
 	public PlayCharacteristics() {
 	}
-	
+
 	public PlayCharacteristics(Characteristics characteristics, RpgClass classes) {
 		this.characteristics = characteristics;
 		this.classes = classes;
@@ -30,28 +38,40 @@ public class PlayCharacteristics extends Fragment {
 
 		View layout = inflater.inflate(R.layout.fragment_play_characteristics, container, false);
 
-		if (characteristics == null || classes == null)
-			return layout;
-		
-		TextView tvName = (TextView) layout.findViewById(R.id_frag_play_characteristics.textview_name);
-		ImageView ivGender = (ImageView) layout.findViewById(R.id_frag_play_characteristics.imageview_gender);
-		TextView tvRace = (TextView) layout.findViewById(R.id_frag_play_characteristics.textview_race);
-		TextView tvAlignment = (TextView) layout.findViewById(R.id_frag_play_characteristics.textview_alignment);
-		TextView tvClassesLevel = (TextView) layout.findViewById(R.id_frag_play_characteristics.textview_classes_level);
-		TextView tvExperience = (TextView) layout.findViewById(R.id_frag_play_characteristics.textview_experience);
-		
-		tvName.setText(characteristics.getName());
+		nameTextView = (TextView) layout.findViewById(R.id_frag_play_characteristics.textview_name);
+		genderImageView = (ImageView) layout.findViewById(R.id_frag_play_characteristics.imageview_gender);
+		raceTextView = (TextView) layout.findViewById(R.id_frag_play_characteristics.textview_race);
+		alignmentTextView = (TextView) layout.findViewById(R.id_frag_play_characteristics.textview_alignment);
+		classesLevelTextView = (TextView) layout.findViewById(R.id_frag_play_characteristics.textview_classes_level);
+		experienceTextView = (TextView) layout.findViewById(R.id_frag_play_characteristics.textview_experience);
+
+		loadCharacteristics();
+		loadRpgClasses();
+
+		return layout;
+	}
+
+	private void loadCharacteristics() {
+		if (characteristics == null)
+			return;
+
+		nameTextView.setText(characteristics.getName());
 
 		TypeGender gender = characteristics.getGender();
 		if (TypeGender.MEN.equals(gender)) {
-			ivGender.setBackgroundResource(R.drawable.gender_m20);
+			genderImageView.setBackgroundResource(R.drawable.gender_m20);
 		} else if (TypeGender.WOMAN.equals(gender)) {
-			ivGender.setBackgroundResource(R.drawable.gender_f20);
+			genderImageView.setBackgroundResource(R.drawable.gender_f20);
 		}
 
-		tvRace.setText(getString(characteristics.getRace().getCodeName()));
+		raceTextView.setText(getString(characteristics.getRace().getCodeName()));
 
-		tvAlignment.setText(getString(characteristics.getAlignment().getCodeName()));
+		alignmentTextView.setText(getString(characteristics.getAlignment().getCodeName()));
+	}
+
+	private void loadRpgClasses() {
+		if (classes == null)
+			return;
 
 		StringBuilder sbClassLevel = new StringBuilder();
 		for (AbstractRpgClass clazz : classes.getAll()) {
@@ -64,10 +84,9 @@ public class PlayCharacteristics extends Fragment {
 			sbClassLevel.append(")");
 		}
 
-		tvClassesLevel.setText(sbClassLevel.toString());
+		classesLevelTextView.setText(sbClassLevel.toString());
 
-		tvExperience.setText(classes.getExperience().toString());
-
-		return layout;
+		experienceTextView.setText(classes.getExperience().toString());
 	}
+
 }

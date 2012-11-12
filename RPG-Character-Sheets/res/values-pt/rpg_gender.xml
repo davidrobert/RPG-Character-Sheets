@@ -3,5 +3,6 @@
     
     <string name="gender_men">Homem</string>
     <string name="gender_woman">Mulher</string>
+    <string name="gender_undefined">Indefinido</string>
     
 </resources>

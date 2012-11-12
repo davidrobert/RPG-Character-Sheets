@@ -31,7 +31,7 @@ public final class RpgCharacterTable {
 
 		// values.put("id", a.getId()); // WRONG!
 		
-		values.put(RpgCharacterColumns.NAME, rpgCharacter.getAttributes().getName());
+		values.put(RpgCharacterColumns.NAME, rpgCharacter.getCharacteristics().getName());
 		values.put(RpgCharacterColumns.SERIAL_VERSION, RpgCharacter.getSerialVersionUID());
 		values.put(RpgCharacterColumns.SERIALIZE, RpgCharacter.serialize(rpgCharacter));
 

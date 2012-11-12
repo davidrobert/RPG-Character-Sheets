@@ -5,7 +5,8 @@ import br.com.while42.rpgcs.model.TypeCode;
 
 public enum TypeGender implements TypeCode {
 	MEN(R.string.gender_men),
-	WOMAN(R.string.gender_woman);
+	WOMAN(R.string.gender_woman),
+	UNDEFINED(R.string.gender_undefined);
 
 	private int nameCode;
 	
