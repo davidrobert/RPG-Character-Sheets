@@ -54,9 +54,6 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 			public boolean onMenuItemClick(MenuItem item) {
 				save();
 
-				DataManager dataManager = new DataManager(EditRpgCharacter.this.getBaseContext());
-				dataManager.saveRpgCharacter(rpgCharacter);
-
 				Intent intent = EditRpgCharacter.this.getIntent();
 				new RpgCharacterIntentUtils().putSerializeRpgCharacter(intent, rpgCharacter);
 
@@ -71,10 +68,13 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 	}
 
 	private void createFragments() {
+
 		if (rpgCharacter != null) {
+			// Edit character sheet
 			editCharacteristics = new EditCharacteristics(rpgCharacter.getCharacteristics());
 			editClasses = new EditClasses(rpgCharacter.getRpgClasses());
 		} else {
+			// New character sheet
 			editCharacteristics = new EditCharacteristics();
 			editClasses = new EditClasses();
 		}
@@ -91,13 +91,17 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 		// de todos os fragments.
 
 		Characteristics characteristics = editCharacteristics.saveCharacteristics();
-		if (characteristics != null) {
-			rpgCharacter.setCharacteristics(characteristics);
+		RpgClass rpgClasses = editClasses.saveClasses();
+
+		if (rpgCharacter == null) {
+			rpgCharacter = new RpgCharacter(characteristics);
 		}
 
-		RpgClass rpgClasses = editClasses.saveClasses();
-		if (rpgClasses != null) {
-			rpgCharacter.setRpgClasses(rpgClasses);
-		}
+		rpgCharacter.setCharacteristics(characteristics);
+		rpgCharacter.setRpgClasses(rpgClasses);
+
+		// Persist in database
+		DataManager dataManager = new DataManager(EditRpgCharacter.this.getBaseContext());
+		dataManager.saveRpgCharacter(rpgCharacter);
 	}
 }
