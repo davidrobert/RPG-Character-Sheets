@@ -80,11 +80,11 @@ public class RpgCharacterTest extends SherlockActivity {
                 .setGender(TypeGender.MEN)
                 .setHeight(169)
                 .setWeight(83)
-                .setEye(TypeEyeColor.Brown)
+                .setEye(TypeEyeColor.BROWN)
                 .setHair(TypeHairColor.BROWN)
                 .setSkin(TypeSkinColor.BROWN)
                 .setVision(TypeVision.DARKVISION)
-                .toAttributes();
+                .toCharacteristics();
 		
 		RpgCharacter rc = new RpgCharacter(characteristics);
 		
