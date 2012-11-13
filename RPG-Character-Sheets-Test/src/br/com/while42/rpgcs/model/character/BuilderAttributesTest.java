@@ -24,11 +24,11 @@ public class BuilderAttributesTest extends AndroidTestCase {
 				                       .setGender(TypeGender.MEN)
 				                       .setHeight(169)
 				                       .setWeight(83)
-				                       .setEye(TypeEyeColor.Brown)
+				                       .setEye(TypeEyeColor.BROWN)
 				                       .setHair(TypeHairColor.BROWN)
 				                       .setSkin(TypeSkinColor.BROWN)
 				                       .setVision(TypeVision.NORMAL)
-				                       .toAttributes();
+				                       .toCharacteristics();
 		
 		assertEquals("Blob", characteristics.getName());
 		assertEquals(TypeRpgRace.HUMAN, characteristics.getRace());
@@ -39,7 +39,7 @@ public class BuilderAttributesTest extends AndroidTestCase {
 		assertEquals(TypeGender.MEN, characteristics.getGender());
 		assertEquals(169, characteristics.getHeight().intValue());
 		assertEquals(83, characteristics.getWeight().intValue());
-		assertEquals(TypeEyeColor.Brown, characteristics.getEye());
+		assertEquals(TypeEyeColor.BROWN, characteristics.getEye());
 		assertEquals(TypeHairColor.BROWN, characteristics.getHair());
 		assertEquals(TypeSkinColor.BROWN, characteristics.getSkin());
 	}

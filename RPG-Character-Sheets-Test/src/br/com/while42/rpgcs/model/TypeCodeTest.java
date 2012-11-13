@@ -25,8 +25,8 @@ public class TypeCodeTest extends AndroidTestCase {
 	}
 	
 	public void testGetEnglishCodeNameOnInstaceOfTypeCode() {
-		TypeCode tc = TypeEyeColor.Emerald_Green;
-		TypeEyeColor tec = TypeEyeColor.Emerald_Green;
+		TypeCode tc = TypeEyeColor.EMERALD_GREEN;
+		TypeEyeColor tec = TypeEyeColor.EMERALD_GREEN;
 
 		Context context = getContextByLocale("en");
 
@@ -38,8 +38,8 @@ public class TypeCodeTest extends AndroidTestCase {
 	}
 
 	public void testGetPortugueseCodeNameOnInstaceOfTypeCode() {
-		TypeCode tc = TypeEyeColor.Emerald_Green;
-		TypeEyeColor tec = TypeEyeColor.Emerald_Green;
+		TypeCode tc = TypeEyeColor.EMERALD_GREEN;
+		TypeEyeColor tec = TypeEyeColor.EMERALD_GREEN;
 
 		Context context = getContextByLocale("pt");
 		

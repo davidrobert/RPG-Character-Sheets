@@ -42,11 +42,11 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setGender(TypeGender.MEN)
 	                .setHeight(169)
 	                .setWeight(83)
-	                .setEye(TypeEyeColor.Brown)
+	                .setEye(TypeEyeColor.BROWN)
 	                .setHair(TypeHairColor.BROWN)
 	                .setSkin(TypeSkinColor.BROWN)
 	                .setVision(TypeVision.NORMAL)
-	                .toAttributes();
+	                .toCharacteristics();
 			
 			RpgCharacter rc = new RpgCharacter(characteristics);
 			
@@ -67,11 +67,11 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setGender(TypeGender.MEN)
 	                .setHeight(169)
 	                .setWeight(83)
-	                .setEye(TypeEyeColor.Brown)
+	                .setEye(TypeEyeColor.BROWN)
 	                .setHair(TypeHairColor.BROWN)
 	                .setSkin(TypeSkinColor.BROWN)
 	                .setVision(TypeVision.NORMAL)
-	                .toAttributes();
+	                .toCharacteristics();
 			
 			RpgCharacter rc = new RpgCharacter(characteristics);
 
@@ -132,11 +132,11 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setGender(TypeGender.MEN)
 	                .setHeight(169)
 	                .setWeight(83)
-	                .setEye(TypeEyeColor.Brown)
+	                .setEye(TypeEyeColor.BROWN)
 	                .setHair(TypeHairColor.BROWN)
 	                .setSkin(TypeSkinColor.BROWN)
 	                .setVision(TypeVision.NORMAL)
-	                .toAttributes();
+	                .toCharacteristics();
 			
 			RpgCharacter rc = new RpgCharacter(characteristics);
 			
@@ -214,11 +214,11 @@ public class RpgCharacterTest extends AndroidTestCase {
 	                .setGender(TypeGender.WOMAN)
 	                .setHeight(169)
 	                .setWeight(83)
-	                .setEye(TypeEyeColor.Deep_Blue)
+	                .setEye(TypeEyeColor.DEEP_BLUE)
 	                .setHair(TypeHairColor.WHITE)
 	                .setSkin(TypeSkinColor.WHITE)
 	                .setVision(TypeVision.NORMAL)
-	                .toAttributes();
+	                .toCharacteristics();
 			
 			RpgCharacter rc = new RpgCharacter(characteristics);
 
@@ -302,11 +302,11 @@ public class RpgCharacterTest extends AndroidTestCase {
                 .setGender(TypeGender.MEN)
                 .setHeight(169)
                 .setWeight(83)
-                .setEye(TypeEyeColor.Brown)
+                .setEye(TypeEyeColor.BROWN)
                 .setHair(TypeHairColor.BROWN)
                 .setSkin(TypeSkinColor.BROWN)
                 .setVision(TypeVision.NORMAL)
-                .toAttributes();
+                .toCharacteristics();
 		
 		RpgCharacter rc = new RpgCharacter(characteristics);
 		
