@@ -15,12 +15,15 @@ import android.widget.SpinnerAdapter;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.activity.Element;
 import br.com.while42.rpgcs.model.TypeCode;
+import br.com.while42.rpgcs.model.character.BuilderCharacteristics;
 import br.com.while42.rpgcs.model.character.Characteristics;
+import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeGender;
 import br.com.while42.rpgcs.model.character.attributes.TypeHairColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgAlignment;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgRace;
 import br.com.while42.rpgcs.model.character.attributes.TypeRpgReligion;
+import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 
@@ -103,54 +106,63 @@ public class EditCharacteristics extends Fragment {
 
 		// Name
 		String name = nameEditText.getText().toString();
-		characteristics.setName(name);
 
 		// Race
 		item = (Element) raceSpinner.getSelectedItem();
 		TypeRpgRace race = (TypeRpgRace) item.getType();
-		characteristics.setRace(race);
 
 		// Alignment
 		item = (Element) alignmentSpinner.getSelectedItem();
 		TypeRpgAlignment alignment = (TypeRpgAlignment) item.getType();
-		characteristics.setAlignment(alignment);
 
 		// Gender
 		item = (Element) genderSpinner.getSelectedItem();
 		TypeGender gender = (TypeGender) item.getType();
-		characteristics.setGender(gender);
 
 		// Religion
 		item = (Element) religionSpinner.getSelectedItem();
 		TypeRpgReligion religion = (TypeRpgReligion) item.getType();
-		characteristics.setReligion(religion);
 
 		// Vision
 		item = (Element) visionSpinner.getSelectedItem();
 		TypeVision vision = (TypeVision) item.getType();
-		characteristics.setVision(vision);
 
 		// Age
 		Integer age = Integer.getInteger(ageEditText.getText().toString(), 0);
-		characteristics.setAge(age);
 
 		// Height
 		Integer height = Integer.getInteger(heightEditText.getText().toString(), 0);
-		characteristics.setHeight(height);
 
 		// Weight
 		Integer weight = Integer.getInteger(weightEditText.getText().toString(), 0);
-		characteristics.setWeight(weight);
 
 		// Hair
 		item = (Element) hairSpinner.getSelectedItem();
 		TypeHairColor hair = (TypeHairColor) item.getType();
-		characteristics.setHair(hair);
 
 		// Skin
 		item = (Element) skinSpinner.getSelectedItem();
 		TypeSkinColor skin = (TypeSkinColor) item.getType();
-		characteristics.setSkin(skin);
+
+		// TODO: Falta definir como tratar size e eye
+		TypeRpgSize size = TypeRpgSize.MEDIUM;
+		TypeEyeColor eye = TypeEyeColor.BROWN;
+
+		BuilderCharacteristics builder = new BuilderCharacteristics(characteristics);
+		characteristics = builder.setName(name)
+				.setRace(race)
+				.setAlignment(alignment)
+				.setReligion(religion)
+				.setSize(size)
+				.setAge(age)
+				.setGender(gender)
+				.setHeight(height)
+				.setWeight(weight)
+				.setEye(eye)
+				.setHair(hair)
+				.setSkin(skin)
+				.setVision(vision)
+				.toCharacteristics();
 
 		return characteristics;
 	}
