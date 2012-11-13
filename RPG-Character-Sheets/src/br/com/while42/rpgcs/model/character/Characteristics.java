@@ -12,12 +12,11 @@ import br.com.while42.rpgcs.model.character.attributes.TypeRpgSize;
 import br.com.while42.rpgcs.model.character.attributes.TypeSkinColor;
 import br.com.while42.rpgcs.model.character.attributes.TypeVision;
 
-
 public class Characteristics implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	private String name;
-	
+
 	private TypeRpgRace race;
 	private TypeRpgAlignment alignment;
 	private TypeRpgReligion religion;
@@ -32,9 +31,30 @@ public class Characteristics implements Serializable {
 	private TypeSkinColor skin;
 	private TypeVision vision;
 
-	protected Characteristics() {		
+	protected Characteristics() {
 	}
-	
+
+	protected Characteristics(Characteristics characteristics) {
+		if (characteristics == null)
+			return;
+
+		name = characteristics.name;
+
+		race = characteristics.race;
+		alignment = characteristics.alignment;
+		religion = characteristics.religion;
+
+		size = characteristics.size;
+		age = characteristics.age;
+		gender = characteristics.gender;
+		height = characteristics.height;
+		weight = characteristics.weight;
+		eye = characteristics.eye;
+		hair = characteristics.hair;
+		skin = characteristics.skin;
+		vision = characteristics.vision;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -42,7 +62,7 @@ public class Characteristics implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public TypeRpgRace getRace() {
 		return race;
 	}
@@ -130,7 +150,7 @@ public class Characteristics implements Serializable {
 	public void setSkin(TypeSkinColor skin) {
 		this.skin = skin;
 	}
-	
+
 	public TypeVision getVision() {
 		return vision;
 	}
@@ -140,34 +160,25 @@ public class Characteristics implements Serializable {
 	}
 
 	@Override
-	public boolean equals(Object attributes) {
+	public boolean equals(Object characteristics) {
 
-		if (this == attributes)
+		if (this == characteristics)
 			return true;
 
-		if (!(attributes instanceof Characteristics))
+		if (!(characteristics instanceof Characteristics))
 			return false;
 
-		Characteristics attr = (Characteristics) attributes;
+		Characteristics charact = (Characteristics) characteristics;
 
-		return name.equals(attr.name) &&
-				race.equals(attr.race) && 
-				alignment.equals(attr.alignment) && 
-				religion.equals(attr.religion) && 
-				size.equals(attr.size) && 
-				age.equals(attr.age) && 
-				gender.equals(attr.gender) &&
-				height.equals(attr.height) && 
-				weight.equals(attr.weight) && 
-				eye.equals(attr.eye) &&
-				hair.equals(attr.hair) && 
-				skin.equals(attr.skin);
+		return name.equals(charact.name) && race.equals(charact.race) && alignment.equals(charact.alignment) && religion.equals(charact.religion)
+				&& size.equals(charact.size) && age.equals(charact.age) && gender.equals(charact.gender) && height.equals(charact.height)
+				&& weight.equals(charact.weight) && eye.equals(charact.eye) && hair.equals(charact.hair) && skin.equals(charact.skin);
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder("");
-		
+
 		sb.append(" name: ").append(name);
 		sb.append(" race: ").append(race);
 		sb.append(" alignment: ").append(alignment);
@@ -180,7 +191,7 @@ public class Characteristics implements Serializable {
 		sb.append(" eye: ").append(eye);
 		sb.append(" hair: ").append(hair);
 		sb.append(" skin: ").append(skin);
-		
+
 		return sb.toString();
 	}
 }
