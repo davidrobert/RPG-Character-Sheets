@@ -40,7 +40,8 @@ import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
 
 public class PlayRpgCharacter extends SherlockFragmentActivity {
 
-	private static final int EDIT_CHARACTER_REQUEST = 0;
+	private static final int NEW_CHARACTER_REQUEST = 0;
+	private static final int EDIT_CHARACTER_REQUEST = 1;
 
 	private RpgCharacter rpgCharacter;
 
@@ -111,20 +112,23 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		// R.string.notes_title_activity);
 
 		MenuItem itemNew = menu.findItem(R.id_menu_play.new_character);
-		Intent intentForNew = new Intent(PlayRpgCharacter.this, EditRpgCharacter.class);
-		itemNew.setIntent(intentForNew);
-
 		MenuItem itemEdit = menu.findItem(R.id_menu_play.edit_character);
 
-		// itemEdit.setIntent(intentForEdit);
+		final Intent intent = new Intent(PlayRpgCharacter.this, EditRpgCharacter.class);
 
-		itemEdit.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-
+		itemNew.setOnMenuItemClickListener(new OnMenuItemClickListener() {
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
-				Intent intentForEdit = new Intent(PlayRpgCharacter.this, EditRpgCharacter.class);
-				new RpgCharacterIntentUtils().putSerializeRpgCharacter(intentForEdit, rpgCharacter);
-				startActivityForResult(intentForEdit, EDIT_CHARACTER_REQUEST);
+				startActivityForResult(intent, NEW_CHARACTER_REQUEST);
+				return false;
+			}
+		});
+
+		itemEdit.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				new RpgCharacterIntentUtils().putSerializeRpgCharacter(intent, rpgCharacter);
+				startActivityForResult(intent, EDIT_CHARACTER_REQUEST);
 				return false;
 			}
 		});
@@ -135,17 +139,22 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-		if (requestCode == EDIT_CHARACTER_REQUEST) {
-			if (resultCode == RESULT_OK) {
-				RpgCharacter character = new RpgCharacterIntentUtils().getSerializeRpgCharacter(data);
+		if (requestCode == NEW_CHARACTER_REQUEST || requestCode == EDIT_CHARACTER_REQUEST) {
 
-				if (character != null && !character.equals(rpgCharacter)) {
-					Log.d("onActivityResult", "restart activity");
+			if (resultCode != RESULT_OK) {
+				// TODO: Falta tratar corretamente este caso
+				Log.d("onActivityResult", "resultCode != RESULT_OK (resultCode : " + resultCode + "  requestCode: " + requestCode + ")");
+				return;
+			}
 
-					new RpgCharacterIntentUtils().putSerializeRpgCharacter(getIntent(), character);
-					finish();
-					startActivity(getIntent());
-				}
+			RpgCharacter character = new RpgCharacterIntentUtils().getSerializeRpgCharacter(data);
+
+			if (character != null && !character.equals(rpgCharacter)) {
+				Log.d("onActivityResult", "restart activity");
+
+				new RpgCharacterIntentUtils().putSerializeRpgCharacter(getIntent(), character);
+				finish();
+				startActivity(getIntent());
 			}
 		}
 	}
