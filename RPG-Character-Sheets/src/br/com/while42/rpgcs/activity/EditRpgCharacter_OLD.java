@@ -236,7 +236,7 @@ public class EditRpgCharacter_OLD extends SherlockActivity {
 											   .setHair(hair)
 											   .setSkin(skin)
 											   .setVision(vision)
-											   .toAttributes();
+											   .toCharacteristics();
 				
 				RpgCharacter cs = new RpgCharacter(characteristics);
 				cs.getRpgClasses().add(clazz);
