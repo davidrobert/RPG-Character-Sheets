@@ -30,6 +30,8 @@ public class Splash extends SherlockActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+		// TODO: Renomear arquivo de layout
 		setContentView(R.layout.activity_start);
 
 		Log.d("ACTIVITY", "Splash");
