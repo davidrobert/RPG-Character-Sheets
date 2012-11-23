@@ -33,10 +33,15 @@ public class DataManager {
 		return db;
 	}
 
+	public boolean isOpen() {
+		return (db != null && db.isOpen());
+	}
+
 	public boolean closeDb() {
-		if (db != null && db.isOpen()) {
+		if (isOpen()) {
 			try {
 				db.close();
+				db = null;
 				return true;
 			} catch (SQLiteException e) {
 				// Log.w("DataManager", e.getMessage());
@@ -47,7 +52,7 @@ public class DataManager {
 	}
 
 	public boolean openDb() {
-		if (db == null || !db.isOpen()) {
+		if (!isOpen()) {
 			db = new OpenHelper(context, useDebugDb).getWritableDatabase();
 
 			// since we pass db into DAO, have to recreate DAO if db is
@@ -63,6 +68,7 @@ public class DataManager {
 	// Match operations
 
 	public Long saveRpgCharacter(RpgCharacter rpgCharacter) {
+		openDb();
 		long matchId = 0L;
 
 		if (rpgCharacter == null) {
@@ -86,14 +92,17 @@ public class DataManager {
 	}
 
 	public RpgCharacter retrieveRpgCharacter(Long id) {
+		openDb();
 		return rpgCharacterDao.retrieve(id);
 	}
 
 	public List<RpgCharacter> retrieveAllRpgCharacters() {
+		openDb();
 		return rpgCharacterDao.retrieveAll();
 	}
 
 	public boolean deleteRpgCharacter(RpgCharacter rpgCharacter) {
+		openDb();
 		boolean result = false;
 
 		if (rpgCharacter == null) {
