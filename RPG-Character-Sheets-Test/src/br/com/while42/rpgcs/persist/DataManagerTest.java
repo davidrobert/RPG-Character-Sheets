@@ -11,13 +11,14 @@ import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
 
 public class DataManagerTest extends AndroidTestCase {
 
-	SQLiteDatabase db;
-	DataManager dataManager;
+	private static boolean DEBUGDB = true;
+	private SQLiteDatabase db;
+	private DataManager dataManager;
 
 	protected void setUp() throws Exception {
 		super.setUp();
 
-		dataManager = new DataManager(getContext(), true);
+		dataManager = new DataManager(getContext(), DEBUGDB);
 		db = dataManager.getDb();
 		clearAllTables();
 	}
@@ -52,13 +53,26 @@ public class DataManagerTest extends AndroidTestCase {
 		assertTrue(id > 0);
 		assertEquals(id.longValue(), rpgCharacter.getId().longValue());
 	}
+	
+	public void testSaveRpgCharacterWithNewDataManager() {
+
+		RpgCharacter rpgCharacter = RpgCharacterTest.getList().get(0);
+
+		dataManager.saveRpgCharacter(rpgCharacter);
+
+		List<RpgCharacter> characters = new DataManager(getContext(), DEBUGDB).retrieveAllRpgCharacters();
+		
+		// match
+		assertTrue(characters.size() > 0);
+		assertTrue(characters.contains(rpgCharacter));
+	}
 
 	public void testSaveRpgCharacterNull() {
 
 		Long id = dataManager.saveRpgCharacter(null);
 
 		// match
-		assertEquals(new Long(0L), id);
+		assertEquals(Long.valueOf(0L), id);
 	}
 	
 	public void testRetrieveRpgCharacter() throws Exception {
