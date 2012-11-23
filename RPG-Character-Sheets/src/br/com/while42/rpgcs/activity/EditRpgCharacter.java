@@ -102,6 +102,9 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 
 		// Persist in database
 		DataManager dataManager = new DataManager(EditRpgCharacter.this.getBaseContext());
-		dataManager.saveRpgCharacter(rpgCharacter);
+		Long id = dataManager.saveRpgCharacter(rpgCharacter);
+		Log.d("DEBUG", "Saved Id: " + id);
+
+		dataManager.closeDb();
 	}
 }
