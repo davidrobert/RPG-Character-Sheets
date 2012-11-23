@@ -40,6 +40,9 @@ public class Splash extends SherlockActivity {
 		ListView lvCharacters = (ListView) findViewById(R.id_start.listview_characters);
 
 		ArrayList<HashMap<String, Object>> characs = new ArrayList<HashMap<String, Object>>();
+
+		Log.d("DEBUG", "Size: " + characters.size());
+
 		for (RpgCharacter character : characters) {
 			HashMap<String, Object> map = new HashMap<String, Object>();
 
@@ -74,17 +77,19 @@ public class Splash extends SherlockActivity {
 			characs.add(map);
 		}
 
-		SimpleAdapter adapterAttacks = new SimpleAdapter(this, characs, R.layout.list_characters, new String[] { "name", "race", "alignment",
+		SimpleAdapter adapterCharacters = new SimpleAdapter(this, characs, R.layout.list_characters, new String[] { "name", "race", "alignment",
 				"experience", "classes" }, new int[] { R.id.name, R.id.race, R.id.alignment, R.id.experience, R.id.classes, R.id.range, R.id.type,
 				R.id.notes });
 
-		lvCharacters.setAdapter(adapterAttacks);
+		lvCharacters.setAdapter(adapterCharacters);
 
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
+
+		// if (new DataManager(this).retrieveAllRpgCharacters().size() == 0)
 		new LoadViewTask(this, RpgCharacterTest.class).execute();
 	}
 
