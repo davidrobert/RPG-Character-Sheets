@@ -1,53 +1,74 @@
 package br.com.while42.rpgcs.activity;
 
+import java.util.List;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.adapter.ListCharacterAdapter;
+import br.com.while42.rpgcs.model.character.RpgCharacter;
+import br.com.while42.rpgcs.persist.DataManager;
 
 import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
 
 public class MainMenu extends SherlockActivity {
 	
-	private Button newCharacter;
-	private Button loadCharacter;
-	private Button exit;
+	private ListCharacterAdapter listCharacterAdapter;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
 		
-		newCharacter = (Button) findViewById(R.id_menu.button_newcharacter);
-		loadCharacter = (Button) findViewById(R.id_menu.button_loadcharacter);
-		exit = (Button) findViewById(R.id_menu.button_exit);
+		List<RpgCharacter> characters = new DataManager(this).retrieveAllRpgCharacters();
+		ListView lvCharacters = (ListView) findViewById(R.id_start.listview_characters);
+
+		Log.d("DEBUG", "new DataManager(this).retrieveAllRpgCharacters().size(): " + new DataManager(this).retrieveAllRpgCharacters().size());
 		
-		newCharacter.setOnClickListener(new OnClickListener() {
-			
+		listCharacterAdapter = new ListCharacterAdapter(this, characters);
+		
+		lvCharacters.setAdapter(listCharacterAdapter);
+		lvCharacters.setOnItemClickListener(new OnItemClickListener() {
+
 			@Override
-			public void onClick(View v) {
-				Intent edit = new Intent(MainMenu.this, EditRpgCharacter_OLD.class);
-				startActivity(edit);
+			public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
+				Intent intent = new Intent(MainMenu.this, PlayRpgCharacter.class);
+				new RpgCharacterIntentUtils().putSerializeRpgCharacter(intent, (RpgCharacter) listCharacterAdapter.getItem(position));
+				startActivity(intent);
 			}
 		});
-		
-		loadCharacter.setOnClickListener(new OnClickListener() {
-			
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+
+		listCharacterAdapter.notifyDataSetChanged();
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getSupportMenuInflater().inflate(R.menu.main_options, menu);
+
+		MenuItem itemNew = menu.findItem(R.id_main_menu.new_character);
+		itemNew.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+
 			@Override
-			public void onClick(View v) {
-				// TODO: Falta implementar
+			public boolean onMenuItemClick(MenuItem item) {
+				startActivity(new Intent(MainMenu.this, EditRpgCharacter.class));
+				return false;
 			}
+
 		});
-		
-		exit.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				finish();
-			}
-		});
-		
+
+		return super.onCreateOptionsMenu(menu);
 	}
 }
