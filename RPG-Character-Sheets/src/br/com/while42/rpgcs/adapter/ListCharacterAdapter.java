@@ -22,6 +22,10 @@ public class ListCharacterAdapter extends BaseAdapter {
 		this.context = context;
 		this.rpgCharacters = rpgCharacters;
 	}
+	
+	public void setList(List<RpgCharacter> rpgCharacters) {
+		this.rpgCharacters = rpgCharacters;
+	}
 
 	@Override
 	public int getCount() {
