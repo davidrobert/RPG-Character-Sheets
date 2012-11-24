@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id_main_menu/new_character"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_save"
+        android:title="Salvar">
+    </item>
+
+</menu>
