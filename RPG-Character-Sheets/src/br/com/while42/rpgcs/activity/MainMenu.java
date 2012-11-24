@@ -22,7 +22,8 @@ import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
 
 public class MainMenu extends SherlockActivity {
 	
-	private ListCharacterAdapter listCharacterAdapter;
+	private ListCharacterAdapter adapter;
+	private List<RpgCharacter> characters;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class MainMenu extends SherlockActivity {
 		setContentView(R.layout.activity_main_menu);
 		
 		DataManager dataManager = new DataManager(this);
-		List<RpgCharacter> characters = dataManager.retrieveAllRpgCharacters();
+		characters = dataManager.retrieveAllRpgCharacters();
 		
 		// Add example by list is empty TODO: Verify if necessary
 		if (characters.isEmpty()) {
@@ -43,15 +44,15 @@ public class MainMenu extends SherlockActivity {
 
 		Log.d("DEBUG", "new DataManager(this).retrieveAllRpgCharacters().size(): " + dataManager.retrieveAllRpgCharacters().size());
 		
-		listCharacterAdapter = new ListCharacterAdapter(this, characters);
+		adapter = new ListCharacterAdapter(this, characters);
 		
-		lvCharacters.setAdapter(listCharacterAdapter);
+		lvCharacters.setAdapter(adapter);
 		lvCharacters.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
-			public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
+			public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 				Intent intent = new Intent(MainMenu.this, PlayRpgCharacter.class);
-				new RpgCharacterIntentUtils().putSerializeRpgCharacter(intent, (RpgCharacter) listCharacterAdapter.getItem(position));
+				new RpgCharacterIntentUtils().putSerializeRpgCharacter(intent, (RpgCharacter) adapter.getItem(position));
 				startActivity(intent);
 			}
 		});
@@ -61,7 +62,9 @@ public class MainMenu extends SherlockActivity {
 	protected void onResume() {
 		super.onResume();
 
-		listCharacterAdapter.notifyDataSetChanged();
+		characters = new DataManager(this).retrieveAllRpgCharacters();
+		adapter.setList(characters);
+		adapter.notifyDataSetChanged();
 	}
 	
 	@Override
