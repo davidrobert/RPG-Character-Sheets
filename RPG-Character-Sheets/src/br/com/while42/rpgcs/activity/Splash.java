@@ -39,6 +39,8 @@ public class Splash extends SherlockActivity {
 		List<RpgCharacter> characters = new DataManager(this).retrieveAllRpgCharacters();
 		ListView lvCharacters = (ListView) findViewById(R.id_start.listview_characters);
 
+		
+		// TODO: Transformar esse codigo em uma activity externa a esse arquivo
 		ArrayList<HashMap<String, Object>> characs = new ArrayList<HashMap<String, Object>>();
 
 		Log.d("DEBUG", "Size: " + characters.size());
@@ -116,8 +118,8 @@ public class Splash extends SherlockActivity {
 		protected void onPostExecute(Long result) {
 			Log.d("SPLASH", "Time to Load: " + result);
 
-			startActivity(new Intent(context, activity));
-			finish();
+			//startActivity(new Intent(context, activity));
+			//finish();
 		}
 	}
 

@@ -105,6 +105,5 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 		Long id = dataManager.saveRpgCharacter(rpgCharacter);
 		Log.d("DEBUG", "Saved Id: " + id);
 
-		dataManager.closeDb();
 	}
 }

@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.persist.dao.RpgCharacterDAO;
+import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
 
 public class DataManager {
 
@@ -26,19 +27,18 @@ public class DataManager {
 	public DataManager(Context context, boolean useDebugDb) {
 		this.context = context;
 		this.useDebugDb = useDebugDb;
-		openDb();
 	}
 
-	public SQLiteDatabase getDb() {
+	private SQLiteDatabase getDb() {
 		return db;
 	}
 
-	public boolean isOpen() {
+	private boolean isOpenDb() {
 		return (db != null && db.isOpen());
 	}
 
-	public boolean closeDb() {
-		if (isOpen()) {
+	private boolean closeDb() {
+		if (isOpenDb()) {
 			try {
 				db.close();
 				db = null;
@@ -51,8 +51,8 @@ public class DataManager {
 		return false;
 	}
 
-	public boolean openDb() {
-		if (!isOpen()) {
+	private boolean openDb() {
+		if (!isOpenDb()) {
 			db = new OpenHelper(context, useDebugDb).getWritableDatabase();
 
 			// since we pass db into DAO, have to recreate DAO if db is
@@ -68,7 +68,6 @@ public class DataManager {
 	// Match operations
 
 	public Long saveRpgCharacter(RpgCharacter rpgCharacter) {
-		openDb();
 		long matchId = 0L;
 
 		if (rpgCharacter == null) {
@@ -76,6 +75,7 @@ public class DataManager {
 		}
 
 		try {
+			openDb();
 			db.beginTransaction();
 			matchId = rpgCharacterDao.save(rpgCharacter);
 			db.setTransactionSuccessful();
@@ -86,6 +86,7 @@ public class DataManager {
 			matchId = 0L;
 		} finally {
 			db.endTransaction();
+			closeDb();
 		}
 
 		return matchId;
@@ -93,16 +94,21 @@ public class DataManager {
 
 	public RpgCharacter retrieveRpgCharacter(Long id) {
 		openDb();
-		return rpgCharacterDao.retrieve(id);
+		RpgCharacter character = rpgCharacterDao.retrieve(id);
+		closeDb();
+
+		return character;
 	}
 
 	public List<RpgCharacter> retrieveAllRpgCharacters() {
 		openDb();
-		return rpgCharacterDao.retrieveAll();
+		List<RpgCharacter> character = rpgCharacterDao.retrieveAll();
+		closeDb();
+
+		return character;
 	}
 
 	public boolean deleteRpgCharacter(RpgCharacter rpgCharacter) {
-		openDb();
 		boolean result = false;
 
 		if (rpgCharacter == null) {
@@ -110,6 +116,7 @@ public class DataManager {
 		}
 
 		try {
+			openDb();
 			db.beginTransaction();
 			rpgCharacterDao.delete(rpgCharacter);
 			db.setTransactionSuccessful();
@@ -120,9 +127,18 @@ public class DataManager {
 			// "Error deleting match (transaction rolled back)", e);
 		} finally {
 			db.endTransaction();
+			closeDb();
 		}
 
 		return result;
 	}
 
+	public void deleteAllRpgCharacter() {
+		try {
+			openDb();
+			RpgCharacterTable.clear(db);
+		} finally {
+			closeDb();
+		}
+	}
 }

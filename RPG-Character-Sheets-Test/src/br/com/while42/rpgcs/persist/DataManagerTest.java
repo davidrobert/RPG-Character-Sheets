@@ -2,34 +2,31 @@ package br.com.while42.rpgcs.persist;
 
 import java.util.List;
 
-import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
 import android.util.Log;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.RpgCharacterTest;
-import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
 
 public class DataManagerTest extends AndroidTestCase {
 
 	private static boolean DEBUGDB = true;
-	private SQLiteDatabase db;
 	private DataManager dataManager;
 
 	protected void setUp() throws Exception {
 		super.setUp();
 
 		dataManager = new DataManager(getContext(), DEBUGDB);
-		db = dataManager.getDb();
 		clearAllTables();
 	}
 
+	public void clearAllTables() {
+		dataManager.deleteAllRpgCharacter();
+	}
+
+	/*
 	protected void tearDown() throws Exception {
 		dataManager.closeDb();
 		super.tearDown();
-	}
-
-	public void clearAllTables() {
-		RpgCharacterTable.clear(db);
 	}
 
 	public void testCloseDb() {
@@ -42,6 +39,7 @@ public class DataManagerTest extends AndroidTestCase {
 		dataManager.closeDb();
 		assertTrue(dataManager.openDb());
 	}
+	*/
 
 	public void testSaveRpgCharacter() {
 
