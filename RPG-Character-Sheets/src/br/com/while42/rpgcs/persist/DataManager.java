@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
+import android.util.Log;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.persist.dao.RpgCharacterDAO;
 import br.com.while42.rpgcs.persist.table.RpgCharacterTable;
@@ -29,10 +30,6 @@ public class DataManager {
 		this.useDebugDb = useDebugDb;
 	}
 
-	private SQLiteDatabase getDb() {
-		return db;
-	}
-
 	private boolean isOpenDb() {
 		return (db != null && db.isOpen());
 	}
@@ -41,7 +38,10 @@ public class DataManager {
 		if (isOpenDb()) {
 			try {
 				db.close();
+				
 				db = null;
+				rpgCharacterDao = null;
+				
 				return true;
 			} catch (SQLiteException e) {
 				// Log.w("DataManager", e.getMessage());
@@ -81,8 +81,7 @@ public class DataManager {
 			db.setTransactionSuccessful();
 
 		} catch (SQLException e) {
-			// Log.e(context.getResources().getString(R.string.app_name),
-			// "Error saving match (transaction rolled back)", e);
+			Log.e("ERROR", "DataManager - saveRpgCharacter - Error saving match (" + rpgCharacter.toString() + ")", e);
 			matchId = 0L;
 		} finally {
 			db.endTransaction();
@@ -123,8 +122,8 @@ public class DataManager {
 
 			result = true;
 		} catch (SQLException e) {
-			// Log.e(context.getResources().getString(R.string.app_name),
-			// "Error deleting match (transaction rolled back)", e);
+			Log.e("ERROR", "DataManager - deleteRpgCharacter - Error deleting match (" + rpgCharacter.toString() + ")", e);
+			result = false;
 		} finally {
 			db.endTransaction();
 			closeDb();
