@@ -22,6 +22,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activity.MainMenu"
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar" >
+        </activity>
+        <activity
             android:name=".activity.RpgCharacterTest"
             android:theme="@style/Theme.Sherlock.NoActionBar" >
         </activity>
@@ -41,11 +45,6 @@
         <activity
             android:name=".activity.EditRpgCharacter"
             android:label="@string/edit_title_activity"
-            android:theme="@style/Theme.Sherlock.Light.DarkActionBar" >
-        </activity>
-        <activity
-            android:name=".activity.ListRpgCharacters"
-            android:label="@string/list_title_activity"
             android:theme="@style/Theme.Sherlock.Light.DarkActionBar" >
         </activity>
         <activity
