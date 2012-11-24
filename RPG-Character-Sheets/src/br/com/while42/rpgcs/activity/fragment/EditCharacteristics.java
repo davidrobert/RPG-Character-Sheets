@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import br.com.while42.rpgcs.R;
-import br.com.while42.rpgcs.activity.Element;
+import br.com.while42.rpgcs.activity.support.Element;
 import br.com.while42.rpgcs.model.TypeCode;
 import br.com.while42.rpgcs.model.character.BuilderCharacteristics;
 import br.com.while42.rpgcs.model.character.Characteristics;

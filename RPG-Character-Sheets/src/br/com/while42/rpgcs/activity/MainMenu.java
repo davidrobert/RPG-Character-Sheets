@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.activity.support.ExampleRpgCharacter;
 import br.com.while42.rpgcs.adapter.ListCharacterAdapter;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.persist.DataManager;
@@ -28,10 +29,19 @@ public class MainMenu extends SherlockActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
 		
-		List<RpgCharacter> characters = new DataManager(this).retrieveAllRpgCharacters();
+		DataManager dataManager = new DataManager(this);
+		List<RpgCharacter> characters = dataManager.retrieveAllRpgCharacters();
+		
+		// Add example by list is empty TODO: Verify if necessary
+		if (characters.isEmpty()) {
+			RpgCharacter example = ExampleRpgCharacter.create();
+			dataManager.saveRpgCharacter(example);
+			characters.add(example);
+		}
+		
 		ListView lvCharacters = (ListView) findViewById(R.id_start.listview_characters);
 
-		Log.d("DEBUG", "new DataManager(this).retrieveAllRpgCharacters().size(): " + new DataManager(this).retrieveAllRpgCharacters().size());
+		Log.d("DEBUG", "new DataManager(this).retrieveAllRpgCharacters().size(): " + dataManager.retrieveAllRpgCharacters().size());
 		
 		listCharacterAdapter = new ListCharacterAdapter(this, characters);
 		
