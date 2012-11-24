@@ -12,6 +12,7 @@ public class DataManagerTest extends AndroidTestCase {
 	private static boolean DEBUGDB = true;
 	private DataManager dataManager;
 
+	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
 
@@ -19,16 +20,17 @@ public class DataManagerTest extends AndroidTestCase {
 		clearAllTables();
 	}
 
+	@Override
+	protected void tearDown() throws Exception {
+		clearAllTables();
+		super.tearDown();
+	}
+	
 	public void clearAllTables() {
 		dataManager.deleteAllRpgCharacter();
 	}
 
 	/*
-	protected void tearDown() throws Exception {
-		dataManager.closeDb();
-		super.tearDown();
-	}
-
 	public void testCloseDb() {
 		assertTrue(dataManager.closeDb());
 		assertFalse(dataManager.closeDb());

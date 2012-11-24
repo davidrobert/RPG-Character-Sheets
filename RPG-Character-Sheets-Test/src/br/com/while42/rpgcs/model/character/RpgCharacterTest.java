@@ -30,35 +30,10 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 	public static List<RpgCharacter> getList() {
 		List<RpgCharacter> rpgCharacterSheets = new ArrayList<RpgCharacter>();
-		
-		{
-			BuilderCharacteristics builder = new BuilderCharacteristics();
-			Characteristics characteristics = builder.setName("Snarf")
-					.setRace(TypeRpgRace.HUMAN)
-	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
-	                .setReligion(TypeRpgReligion.NONE)
-	                .setSize(TypeRpgSize.MEDIUM)
-	                .setAge(30)
-	                .setGender(TypeGender.MEN)
-	                .setHeight(169)
-	                .setWeight(83)
-	                .setEye(TypeEyeColor.BROWN)
-	                .setHair(TypeHairColor.BROWN)
-	                .setSkin(TypeSkinColor.BROWN)
-	                .setVision(TypeVision.NORMAL)
-	                .toCharacteristics();
-			
-			RpgCharacter rc = new RpgCharacter(characteristics);
-			
-			Equipments equip = rc.getEquipments();			
-			equip.addWeapon(new Dart(), SizeWeapon.MEDIUM);;
-
-			rpgCharacterSheets.add(rc);
-		}
 
 		{
 			BuilderCharacteristics builder = new BuilderCharacteristics();
-			Characteristics characteristics = builder.setName("Blob")
+			Characteristics characteristics = builder.setName("Test Blob")
 					.setRace(TypeRpgRace.HUMAN)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.NONE)
@@ -123,7 +98,32 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 		{
 			BuilderCharacteristics builder = new BuilderCharacteristics();
-			Characteristics characteristics = builder.setName("Deltorei")
+			Characteristics characteristics = builder.setName("Test Snarf")
+					.setRace(TypeRpgRace.HUMAN)
+					.setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
+					.setReligion(TypeRpgReligion.NONE)
+					.setSize(TypeRpgSize.MEDIUM)
+					.setAge(30)
+					.setGender(TypeGender.MEN)
+					.setHeight(169)
+					.setWeight(83)
+					.setEye(TypeEyeColor.BROWN)
+					.setHair(TypeHairColor.BROWN)
+					.setSkin(TypeSkinColor.BROWN)
+					.setVision(TypeVision.NORMAL)
+					.toCharacteristics();
+			
+			RpgCharacter rc = new RpgCharacter(characteristics);
+			
+			Equipments equip = rc.getEquipments();			
+			equip.addWeapon(new Dart(), SizeWeapon.MEDIUM);;
+			
+			rpgCharacterSheets.add(rc);
+		}
+
+		{
+			BuilderCharacteristics builder = new BuilderCharacteristics();
+			Characteristics characteristics = builder.setName("Test Deltorei")
 					.setRace(TypeRpgRace.HUMAN)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.NONE)
@@ -205,7 +205,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 
 		{
 			BuilderCharacteristics builder = new BuilderCharacteristics();
-			Characteristics characteristics = builder.setName("Galadriel")
+			Characteristics characteristics = builder.setName("Test Galadriel")
 					.setRace(TypeRpgRace.ELF)
 	                .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
 	                .setReligion(TypeRpgReligion.OTHER)
@@ -293,7 +293,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	public void testIsPersistent() {
 		
 		BuilderCharacteristics builder = new BuilderCharacteristics();
-		Characteristics characteristics = builder.setName("Stark")
+		Characteristics characteristics = builder.setName("Test Stark")
 				.setRace(TypeRpgRace.HUMAN)
                 .setAlignment(TypeRpgAlignment.TRUE_NEUTRAL)
                 .setReligion(TypeRpgReligion.NONE)
@@ -332,7 +332,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	}
 	
 	public void testAbilitiesDefault() {
-		RpgCharacter rc = getList().get(0);
+		RpgCharacter rc = getList().get(1);
 		
 		Abilities ab = rc.getAbilities();
 		
@@ -345,7 +345,7 @@ public class RpgCharacterTest extends AndroidTestCase {
 	}
 	
 	public void testAbilities() {
-		RpgCharacter rc = getList().get(1);
+		RpgCharacter rc = getList().get(0);
 		
 		Abilities ab = rc.getAbilities();
 		
