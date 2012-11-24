@@ -67,8 +67,6 @@ public class ExampleRpgCharacter {
 		
 		RpgCharacter rc = new RpgCharacter(characteristics);
 		
-		rc.setId(100L);
-
 		AbstractRpgClass fighter = new Fighter();
 		fighter.setClassLevel(1);
 		rc.getRpgClasses().add(fighter);
