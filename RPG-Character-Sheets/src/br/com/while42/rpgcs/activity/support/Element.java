@@ -1,4 +1,4 @@
-package br.com.while42.rpgcs.activity;
+package br.com.while42.rpgcs.activity.support;
 
 import br.com.while42.rpgcs.model.TypeCode;
 

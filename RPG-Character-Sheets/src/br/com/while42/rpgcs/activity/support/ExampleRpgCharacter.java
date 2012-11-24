@@ -1,13 +1,10 @@
-package br.com.while42.rpgcs.activity;
+package br.com.while42.rpgcs.activity.support;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
 import br.com.while42.rpgcs.model.HitDice;
 import br.com.while42.rpgcs.model.HitDiceType;
 import br.com.while42.rpgcs.model.character.Abilities;
-import br.com.while42.rpgcs.model.character.Characteristics;
 import br.com.while42.rpgcs.model.character.BuilderCharacteristics;
+import br.com.while42.rpgcs.model.character.Characteristics;
 import br.com.while42.rpgcs.model.character.Defences;
 import br.com.while42.rpgcs.model.character.Languages;
 import br.com.while42.rpgcs.model.character.Money;
@@ -49,27 +46,9 @@ import br.com.while42.rpgcs.model.equip.weapons.simple.ranged.CrossbowLight;
 import br.com.while42.rpgcs.model.equip.weapons.simple.ranged.Dart;
 import br.com.while42.rpgcs.model.equip.weapons.simple.twohandedmelee.Spear;
 
-import com.actionbarsherlock.app.SherlockActivity;
-
-public class RpgCharacterTest extends SherlockActivity {
-
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
-		Log.d("ACTIVITY", "RpgCharacterTest");
-		
-		Intent play = new Intent(RpgCharacterTest.this, PlayRpgCharacter.class);
-		
-		Bundle b = new Bundle();
-		b.putSerializable(RpgCharacter.class.getName(), createRpgCharacterSheet());
-		play.putExtras(b);
-
-		startActivity(play);
-		finish();
-	}
-
-	private RpgCharacter createRpgCharacterSheet() {
+public class ExampleRpgCharacter {
+	
+	public static RpgCharacter create() {
 		BuilderCharacteristics builder = new BuilderCharacteristics();
 		Characteristics characteristics = builder.setName("Blob")
 				.setRace(TypeRpgRace.HUMAN)
@@ -192,5 +171,4 @@ public class RpgCharacterTest extends SherlockActivity {
 		
 		return rc;
 	}
-
 }

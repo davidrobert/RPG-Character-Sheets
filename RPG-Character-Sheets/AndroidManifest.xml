@@ -25,10 +25,6 @@
             android:name=".activity.MainMenu"
             android:theme="@style/Theme.Sherlock.Light.DarkActionBar" >
         </activity>
-        <activity
-            android:name=".activity.RpgCharacterTest"
-            android:theme="@style/Theme.Sherlock.NoActionBar" >
-        </activity>
 
         <!-- Activity de Teste da Nova Tela da Play -->
         <activity
