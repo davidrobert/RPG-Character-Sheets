@@ -11,6 +11,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.activity.support.ExampleRpgCharacter;
+import br.com.while42.rpgcs.activity.support.RequestCode;
 import br.com.while42.rpgcs.adapter.ListCharacterAdapter;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.persist.DataManager;
@@ -76,12 +77,32 @@ public class MainMenu extends SherlockActivity {
 
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
-				startActivity(new Intent(MainMenu.this, EditRpgCharacter.class));
+				startActivityForResult(new Intent(MainMenu.this, EditRpgCharacter.class), RequestCode.NEW_CHARACTER_REQUEST.getValue());
 				return false;
 			}
 
 		});
 
 		return super.onCreateOptionsMenu(menu);
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		
+		if (requestCode == RequestCode.NEW_CHARACTER_REQUEST.getValue()) {
+
+			if (resultCode != RESULT_OK) {
+				// TODO: Falta tratar corretamente este caso
+				Log.d("onActivityResult", "resultCode != RESULT_OK (resultCode : " + resultCode + "  requestCode: " + requestCode + ")");
+				return;
+			}
+
+			RpgCharacter character = new RpgCharacterIntentUtils().getSerializeRpgCharacter(data);
+			
+			// Caso tenha acabado de adicionar um contato novo, repassa para a activity de Play
+			Intent intent = new Intent(MainMenu.this, PlayRpgCharacter.class);
+			new RpgCharacterIntentUtils().putSerializeRpgCharacter(intent, character);
+			startActivity(intent);
+		}
 	}
 }
