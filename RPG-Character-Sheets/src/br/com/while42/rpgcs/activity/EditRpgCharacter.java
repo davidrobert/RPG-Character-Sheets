@@ -38,8 +38,6 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		// rpgCharacter = new
-		// RpgCharacterIntentUtils().getSerializeRpgCharacter(getIntent());
 	}
 
 	@Override
@@ -56,7 +54,7 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 
 				Intent intent = EditRpgCharacter.this.getIntent();
 				new RpgCharacterIntentUtils().putSerializeRpgCharacter(intent, rpgCharacter);
-
+				
 				setResult(RESULT_OK, intent);
 				finish();
 				return false;
@@ -101,7 +99,7 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 		rpgCharacter.setRpgClasses(rpgClasses);
 
 		// Persist in database
-		DataManager dataManager = new DataManager(EditRpgCharacter.this.getBaseContext());
+		DataManager dataManager = new DataManager(this);
 		Long id = dataManager.saveRpgCharacter(rpgCharacter);
 		Log.d("DEBUG", "Saved Id: " + id);
 

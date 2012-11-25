@@ -1,6 +1,8 @@
 package br.com.while42.rpgcs.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -20,6 +22,7 @@ import br.com.while42.rpgcs.activity.fragment.PlayLanguages;
 import br.com.while42.rpgcs.activity.fragment.PlaySavingThrows;
 import br.com.while42.rpgcs.activity.fragment.PlaySkills;
 import br.com.while42.rpgcs.activity.fragment.PlayVisionAndDeity;
+import br.com.while42.rpgcs.activity.support.TypeRequestCode;
 import br.com.while42.rpgcs.model.character.Abilities;
 import br.com.while42.rpgcs.model.character.Characteristics;
 import br.com.while42.rpgcs.model.character.Defences;
@@ -29,6 +32,7 @@ import br.com.while42.rpgcs.model.character.RpgClass;
 import br.com.while42.rpgcs.model.character.SavingThrows;
 import br.com.while42.rpgcs.model.character.Skills;
 import br.com.while42.rpgcs.model.equip.Equipments;
+import br.com.while42.rpgcs.persist.DataManager;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
@@ -40,8 +44,6 @@ import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
 
 public class PlayRpgCharacter extends SherlockFragmentActivity {
 
-	private static final int NEW_CHARACTER_REQUEST = 0;
-	private static final int EDIT_CHARACTER_REQUEST = 1;
 
 	private RpgCharacter rpgCharacter;
 
@@ -74,8 +76,6 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		super.onResume();
 
 		Log.d("ACTIVITY", "PlayRpgCharacter - onResume");
-		// rpgCharacter = new
-		// RpgCharacterIntentUtils().getSerializeRpgCharacter(getIntent());
 	}
 
 	@Override
@@ -111,15 +111,31 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		// builder.addTab(NotesRpgCharacter.class,
 		// R.string.notes_title_activity);
 
-		MenuItem itemNew = menu.findItem(R.id_menu_play.new_character);
+		MenuItem itemDel = menu.findItem(R.id_menu_play.del_character);
 		MenuItem itemEdit = menu.findItem(R.id_menu_play.edit_character);
 
-		final Intent intent = new Intent(PlayRpgCharacter.this, EditRpgCharacter.class);
-
-		itemNew.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+		itemDel.setOnMenuItemClickListener(new OnMenuItemClickListener() {
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
-				startActivityForResult(intent, NEW_CHARACTER_REQUEST);
+
+				new AlertDialog.Builder(PlayRpgCharacter.this)
+					.setIcon(android.R.drawable.ic_dialog_alert).setTitle("Atenção")
+					.setMessage("Deseja realmente apagar esta ficha?")
+					.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+
+								DataManager dataManager = new DataManager(PlayRpgCharacter.this);
+								dataManager.deleteRpgCharacter(rpgCharacter);
+
+								finish();
+							}
+
+						})
+					.setNegativeButton("Não", null)
+					.show();
+
 				return false;
 			}
 		});
@@ -127,8 +143,9 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 		itemEdit.setOnMenuItemClickListener(new OnMenuItemClickListener() {
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
+				Intent intent = new Intent(PlayRpgCharacter.this, EditRpgCharacter.class);
 				new RpgCharacterIntentUtils().putSerializeRpgCharacter(intent, rpgCharacter);
-				startActivityForResult(intent, EDIT_CHARACTER_REQUEST);
+				startActivityForResult(intent, TypeRequestCode.EDIT_CHARACTER_REQUEST.getValue());
 				return false;
 			}
 		});
@@ -139,7 +156,7 @@ public class PlayRpgCharacter extends SherlockFragmentActivity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-		if (requestCode == NEW_CHARACTER_REQUEST || requestCode == EDIT_CHARACTER_REQUEST) {
+		if (requestCode == TypeRequestCode.NEW_CHARACTER_REQUEST.getValue() || requestCode == TypeRequestCode.EDIT_CHARACTER_REQUEST.getValue()) {
 
 			if (resultCode != RESULT_OK) {
 				// TODO: Falta tratar corretamente este caso
