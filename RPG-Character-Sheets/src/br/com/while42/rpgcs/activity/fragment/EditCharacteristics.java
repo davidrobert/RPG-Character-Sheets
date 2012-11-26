@@ -63,7 +63,7 @@ public class EditCharacteristics extends Fragment {
 		skinSpinner = (Spinner) layout.findViewById(R.id_frag_edit_characteristics.spinner_skin);
 
 		ViewTools tool = new ViewTools(getActivity());
-		
+
 		tool.setOptionsSpinner(raceSpinner, TypeRpgRace.values());
 		tool.setOptionsSpinner(alignmentSpinner, TypeRpgAlignment.values());
 		tool.setOptionsSpinner(genderSpinner, TypeGender.values());
@@ -77,7 +77,7 @@ public class EditCharacteristics extends Fragment {
 		return layout;
 	}
 
-	public void loadCharacteristics() {
+	private void loadCharacteristics() {
 
 		if (characteristics == null)
 			return;
@@ -85,7 +85,7 @@ public class EditCharacteristics extends Fragment {
 		nameEditText.setText(characteristics.getName());
 
 		ViewTools tool = new ViewTools(getActivity());
-		
+
 		tool.setSelectionOptionsSpinner(raceSpinner, characteristics.getRace());
 		tool.setSelectionOptionsSpinner(alignmentSpinner, characteristics.getAlignment());
 		tool.setSelectionOptionsSpinner(genderSpinner, characteristics.getGender());
@@ -148,23 +148,10 @@ public class EditCharacteristics extends Fragment {
 		TypeEyeColor eye = TypeEyeColor.BROWN;
 
 		BuilderCharacteristics builder = new BuilderCharacteristics(characteristics);
-		characteristics = builder.setName(name)
-				.setRace(race)
-				.setAlignment(alignment)
-				.setReligion(religion)
-				.setSize(size)
-				.setAge(age)
-				.setGender(gender)
-				.setHeight(height)
-				.setWeight(weight)
-				.setEye(eye)
-				.setHair(hair)
-				.setSkin(skin)
-				.setVision(vision)
-				.toCharacteristics();
+		characteristics = builder.setName(name).setRace(race).setAlignment(alignment).setReligion(religion).setSize(size).setAge(age)
+				.setGender(gender).setHeight(height).setWeight(weight).setEye(eye).setHair(hair).setSkin(skin).setVision(vision).toCharacteristics();
 
 		return characteristics;
 	}
 
-	
 }

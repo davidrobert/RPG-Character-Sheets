@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import br.com.while42.rpgcs.R;
+import br.com.while42.rpgcs.activity.fragment.EditAbilities;
 import br.com.while42.rpgcs.activity.fragment.EditCharacteristics;
 import br.com.while42.rpgcs.activity.fragment.EditClasses;
+import br.com.while42.rpgcs.model.character.Abilities;
 import br.com.while42.rpgcs.model.character.Characteristics;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.RpgClass;
@@ -23,6 +25,7 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 
 	private EditCharacteristics editCharacteristics;
 	private EditClasses editClasses;
+	private EditAbilities editAbilities;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -54,7 +57,7 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 
 				Intent intent = EditRpgCharacter.this.getIntent();
 				new RpgCharacterIntentUtils().putSerializeRpgCharacter(intent, rpgCharacter);
-				
+
 				setResult(RESULT_OK, intent);
 				finish();
 				return false;
@@ -71,15 +74,18 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 			// Edit character sheet
 			editCharacteristics = new EditCharacteristics(rpgCharacter.getCharacteristics());
 			editClasses = new EditClasses(rpgCharacter.getRpgClasses());
+			editAbilities = new EditAbilities(rpgCharacter.getAbilities());
 		} else {
 			// New character sheet
 			editCharacteristics = new EditCharacteristics();
 			editClasses = new EditClasses();
+			editAbilities = new EditAbilities();
 		}
 
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 		transaction.replace(R.id_edit.fragment_characteristics, editCharacteristics, EditCharacteristics.class.getCanonicalName());
 		transaction.replace(R.id_edit.fragment_classes, editClasses, EditClasses.class.getCanonicalName());
+		transaction.replace(R.id_edit.fragment_abilities, editAbilities, EditAbilities.class.getCanonicalName());
 		transaction.commit();
 	}
 
@@ -90,6 +96,7 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 
 		Characteristics characteristics = editCharacteristics.saveCharacteristics();
 		RpgClass rpgClasses = editClasses.saveClasses();
+		Abilities abilities = editAbilities.saveAbilities();
 
 		if (rpgCharacter == null) {
 			rpgCharacter = new RpgCharacter(characteristics);
@@ -97,6 +104,7 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 
 		rpgCharacter.setCharacteristics(characteristics);
 		rpgCharacter.setRpgClasses(rpgClasses);
+		rpgCharacter.setAbilities(abilities);
 
 		// Persist in database
 		DataManager dataManager = new DataManager(this);

@@ -29,7 +29,7 @@ public class EditClasses extends Fragment {
 	private TableLayout classesTableLayout;
 	private List<TableRow> rows = new ArrayList<TableRow>();
 	private List<CharacterClass> listClasses;
-	
+
 	private static int POS_VIEW_CLASS = 0;
 	private static int POS_VIEW_LEVEL = 1;
 
@@ -53,7 +53,7 @@ public class EditClasses extends Fragment {
 		return layout;
 	}
 
-	public void loadClasses() {
+	private void loadClasses() {
 
 		listClasses = ClassByReflection.getAll(context, AbstractRpgClass.class);
 		rows.clear();
@@ -68,6 +68,12 @@ public class EditClasses extends Fragment {
 	}
 
 	public RpgClass saveClasses() {
+
+		// TODO: Deveria sutilizar um construtor com copia na classe RpgClass
+		if (rpgClasses == null) {
+			rpgClasses = new RpgClass();
+		}
+
 		rpgClasses.removeAllRpgClass();
 
 		ViewTools tools = new ViewTools(context);

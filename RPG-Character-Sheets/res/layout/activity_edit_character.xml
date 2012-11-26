@@ -10,22 +10,35 @@
     android:scrollbarStyle="outsideInset"
     android:scrollbars="vertical" >
 
-    <!-- Characteristics -->
-
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
+
+        <!-- Characteristics -->
 
         <FrameLayout
             android:id="@+id_edit/fragment_characteristics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-    <!-- Classes -->
+        <!-- Classes -->
 
         <FrameLayout
             android:id="@+id_edit/fragment_classes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- Abilities -->
+
+        <FrameLayout
+            android:id="@+id_edit/fragment_abilities"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </TableRow>
