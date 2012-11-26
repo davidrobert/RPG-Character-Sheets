@@ -1,6 +1,7 @@
 package br.com.while42.rpgcs.model.classes.bonuses;
 
 public class ExperienceAndLevel {
+	public static final int EMPTY_LEVEL = 0;
 	public static final int MAX_LEVEL = 20;
 	public static final int MIN_LEVEL = 1;
 	

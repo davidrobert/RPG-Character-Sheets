@@ -21,14 +21,8 @@
             android:id="@+id_edit/fragment_characteristics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </TableRow>
 
     <!-- Classes -->
-
-    <TableRow
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
 
         <FrameLayout
             android:id="@+id_edit/fragment_classes"

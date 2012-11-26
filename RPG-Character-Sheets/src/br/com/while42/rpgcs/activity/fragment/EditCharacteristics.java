@@ -1,20 +1,15 @@
 package br.com.while42.rpgcs.activity.fragment;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import br.com.while42.rpgcs.R;
 import br.com.while42.rpgcs.activity.support.Element;
-import br.com.while42.rpgcs.model.TypeCode;
+import br.com.while42.rpgcs.activity.support.ViewTools;
 import br.com.while42.rpgcs.model.character.BuilderCharacteristics;
 import br.com.while42.rpgcs.model.character.Characteristics;
 import br.com.while42.rpgcs.model.character.attributes.TypeEyeColor;
@@ -67,13 +62,15 @@ public class EditCharacteristics extends Fragment {
 		hairSpinner = (Spinner) layout.findViewById(R.id_frag_edit_characteristics.spinner_hair);
 		skinSpinner = (Spinner) layout.findViewById(R.id_frag_edit_characteristics.spinner_skin);
 
-		setOptionsSpinner(raceSpinner, TypeRpgRace.values());
-		setOptionsSpinner(alignmentSpinner, TypeRpgAlignment.values());
-		setOptionsSpinner(genderSpinner, TypeGender.values());
-		setOptionsSpinner(religionSpinner, TypeRpgReligion.values());
-		setOptionsSpinner(visionSpinner, TypeVision.values());
-		setOptionsSpinner(hairSpinner, TypeHairColor.values());
-		setOptionsSpinner(skinSpinner, TypeSkinColor.values());
+		ViewTools tool = new ViewTools(getActivity());
+		
+		tool.setOptionsSpinner(raceSpinner, TypeRpgRace.values());
+		tool.setOptionsSpinner(alignmentSpinner, TypeRpgAlignment.values());
+		tool.setOptionsSpinner(genderSpinner, TypeGender.values());
+		tool.setOptionsSpinner(religionSpinner, TypeRpgReligion.values());
+		tool.setOptionsSpinner(visionSpinner, TypeVision.values());
+		tool.setOptionsSpinner(hairSpinner, TypeHairColor.values());
+		tool.setOptionsSpinner(skinSpinner, TypeSkinColor.values());
 
 		loadCharacteristics();
 
@@ -87,18 +84,20 @@ public class EditCharacteristics extends Fragment {
 
 		nameEditText.setText(characteristics.getName());
 
-		setSelectionOptionsSpinner(raceSpinner, characteristics.getRace());
-		setSelectionOptionsSpinner(alignmentSpinner, characteristics.getAlignment());
-		setSelectionOptionsSpinner(genderSpinner, characteristics.getGender());
-		setSelectionOptionsSpinner(religionSpinner, characteristics.getReligion());
-		setSelectionOptionsSpinner(visionSpinner, characteristics.getVision());
+		ViewTools tool = new ViewTools(getActivity());
+		
+		tool.setSelectionOptionsSpinner(raceSpinner, characteristics.getRace());
+		tool.setSelectionOptionsSpinner(alignmentSpinner, characteristics.getAlignment());
+		tool.setSelectionOptionsSpinner(genderSpinner, characteristics.getGender());
+		tool.setSelectionOptionsSpinner(religionSpinner, characteristics.getReligion());
+		tool.setSelectionOptionsSpinner(visionSpinner, characteristics.getVision());
 
 		ageEditText.setText(characteristics.getAge().toString());
 		heightEditText.setText(characteristics.getHeight().toString());
 		weightEditText.setText(characteristics.getWeight().toString());
 
-		setSelectionOptionsSpinner(hairSpinner, characteristics.getHair());
-		setSelectionOptionsSpinner(skinSpinner, characteristics.getSkin());
+		tool.setSelectionOptionsSpinner(hairSpinner, characteristics.getHair());
+		tool.setSelectionOptionsSpinner(skinSpinner, characteristics.getSkin());
 	}
 
 	public Characteristics saveCharacteristics() {
@@ -167,27 +166,5 @@ public class EditCharacteristics extends Fragment {
 		return characteristics;
 	}
 
-	private void setSelectionOptionsSpinner(Spinner spinner, TypeCode type) {
-
-		SpinnerAdapter adapter = spinner.getAdapter();
-		for (int pos = 0; pos < adapter.getCount(); pos++) {
-			Element item = (Element) adapter.getItem(pos);
-			if (type.equals(item.getType())) {
-				spinner.setSelection(pos);
-				break;
-			}
-		}
-	}
-
-	private void setOptionsSpinner(Spinner spinner, TypeCode[] types) {
-
-		List<Element> items = new ArrayList<Element>();
-		for (TypeCode g : types) {
-			items.add(new Element(g, getString(g.getCodeName())));
-		}
-
-		ArrayAdapter<Element> adapter = new ArrayAdapter<Element>(getActivity(), android.R.layout.simple_spinner_dropdown_item, items);
-
-		spinner.setAdapter(adapter);
-	}
+	
 }

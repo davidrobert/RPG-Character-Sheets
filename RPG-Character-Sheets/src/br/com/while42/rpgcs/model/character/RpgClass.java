@@ -27,7 +27,7 @@ public class RpgClass implements Serializable {
 		this.rpgClass.add(rpgClass);
 	}
 
-	public void clear() {
+	public void removeAllRpgClass() {
 		rpgClass.clear();
 	}
 	
