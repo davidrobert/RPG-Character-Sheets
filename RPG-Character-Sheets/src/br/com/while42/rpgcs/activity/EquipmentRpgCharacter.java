@@ -76,7 +76,7 @@ public class EquipmentRpgCharacter extends SherlockActivity {
 		Comparator<Map<String, Object>> mapComparator = new MapComparator().builderComparatorWithCast("name");
 		Collections.sort(strWeapons, mapComparator);
 
-		SimpleAdapter adapterEquipments = new SimpleAdapter(this, strWeapons, R.layout.list_weapons, new String[] { "image",
+		SimpleAdapter adapterEquipments = new SimpleAdapter(this, strWeapons, R.layout.part_play_list_weapons, new String[] { "image",
 				"name", "categorie", "critical", "range", "cost", "weight", "categorie_usefulness", "categorie_encumbrance",
 				"damage" }, new int[] { R.id.image, R.id.name, R.id.categorie, R.id.critical, R.id.range, R.id.cost, R.id.weight,
 				R.id.categorie_usefulness, R.id.categorie_encumbrance, R.id.damage });

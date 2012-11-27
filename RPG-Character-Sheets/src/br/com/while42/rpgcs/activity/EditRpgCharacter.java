@@ -12,6 +12,7 @@ import br.com.while42.rpgcs.model.character.Abilities;
 import br.com.while42.rpgcs.model.character.Characteristics;
 import br.com.while42.rpgcs.model.character.RpgCharacter;
 import br.com.while42.rpgcs.model.character.RpgClass;
+import br.com.while42.rpgcs.model.character.Skills;
 import br.com.while42.rpgcs.persist.DataManager;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -26,6 +27,8 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 	private EditCharacteristics editCharacteristics;
 	private EditClasses editClasses;
 	private EditAbilities editAbilities;
+
+	private EditSkills editSkills;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -75,17 +78,20 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 			editCharacteristics = new EditCharacteristics(rpgCharacter.getCharacteristics());
 			editClasses = new EditClasses(rpgCharacter.getRpgClasses());
 			editAbilities = new EditAbilities(rpgCharacter.getAbilities());
+			editSkills = new EditSkills(rpgCharacter.getSkills());
 		} else {
 			// New character sheet
 			editCharacteristics = new EditCharacteristics();
 			editClasses = new EditClasses();
 			editAbilities = new EditAbilities();
+			editSkills = new EditSkills();
 		}
 
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 		transaction.replace(R.id_edit.fragment_characteristics, editCharacteristics, EditCharacteristics.class.getCanonicalName());
 		transaction.replace(R.id_edit.fragment_classes, editClasses, EditClasses.class.getCanonicalName());
 		transaction.replace(R.id_edit.fragment_abilities, editAbilities, EditAbilities.class.getCanonicalName());
+		transaction.replace(R.id_edit.fragment_skills, editSkills, EditSkills.class.getCanonicalName());
 		transaction.commit();
 	}
 
@@ -97,6 +103,7 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 		Characteristics characteristics = editCharacteristics.saveCharacteristics();
 		RpgClass rpgClasses = editClasses.saveClasses();
 		Abilities abilities = editAbilities.saveAbilities();
+		Skills skills = editSkills.saveSkills();
 
 		if (rpgCharacter == null) {
 			rpgCharacter = new RpgCharacter(characteristics);
@@ -105,6 +112,7 @@ public class EditRpgCharacter extends SherlockFragmentActivity {
 		rpgCharacter.setCharacteristics(characteristics);
 		rpgCharacter.setRpgClasses(rpgClasses);
 		rpgCharacter.setAbilities(abilities);
+		rpgCharacter.setSkills(skills);
 
 		// Persist in database
 		DataManager dataManager = new DataManager(this);
