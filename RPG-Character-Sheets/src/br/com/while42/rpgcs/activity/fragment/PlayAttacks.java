@@ -92,7 +92,7 @@ public class PlayAttacks extends Fragment {
 		Comparator<Map<String, Object>> mapComparator = new MapComparator().builderComparatorWithCast("attack");
 		Collections.sort(attks, mapComparator);
 
-		SimpleAdapter adapterAttacks = new SimpleAdapter(getActivity(), attks, R.layout.list_attacks, new String[] { "image", "attack", "bonus",
+		SimpleAdapter adapterAttacks = new SimpleAdapter(getActivity(), attks, R.layout.part_play_list_attacks, new String[] { "image", "attack", "bonus",
 				"damage", "critical", "range", "type", "notes" }, new int[] { R.id.image, R.id.attack, R.id.bonus, R.id.damage, R.id.critical,
 				R.id.range, R.id.type, R.id.notes });
 

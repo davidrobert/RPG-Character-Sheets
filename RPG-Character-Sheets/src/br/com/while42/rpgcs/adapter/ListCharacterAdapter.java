@@ -45,7 +45,7 @@ public class ListCharacterAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 
-		View row = View.inflate(context, R.layout.list_characters, null);
+		View row = View.inflate(context, R.layout.part_play_list_characters, null);
 
 		RpgCharacter character = rpgCharacters.get(position);
 

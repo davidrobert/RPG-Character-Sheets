@@ -46,7 +46,7 @@ public class PlayLanguages extends Fragment {
 
 		Arrays.sort(lgs);
 
-		ArrayAdapter<String> adapterLanguages = new ArrayAdapter<String>(getActivity(), R.layout.list_languages,
+		ArrayAdapter<String> adapterLanguages = new ArrayAdapter<String>(getActivity(), R.layout.part_play_list_languages,
 				android.R.id.text1, lgs);
 
 		lvLanguages.setAdapter(adapterLanguages);

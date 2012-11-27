@@ -77,7 +77,7 @@ public class PlaySkills extends Fragment {
 		Comparator<Map<String, String>> mapComparator = new MapComparator().builderComparator("name");
 		Collections.sort(sklls, mapComparator);
 
-		SimpleAdapter adapterSkills = new SimpleAdapter(getActivity(), sklls, R.layout.list_skills, 
+		SimpleAdapter adapterSkills = new SimpleAdapter(getActivity(), sklls, R.layout.part_play_list_skills, 
 				new String[] { "name", "modifier", "ability" }, new int[] { R.id.name, R.id.modifier, R.id.ability });
 
 		lvSkills.setAdapter(adapterSkills);
