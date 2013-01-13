@@ -16,6 +16,8 @@ RPG-Character-Sheets/bin/
 RPG-Character-Sheets/gen/
 RPG-Character-Sheets-Test/bin/
 RPG-Character-Sheets-Test/gen/
+library/bin/
+library/gen/
 
 # Local configuration file (sdk path, etc)
 local.properties
